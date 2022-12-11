@@ -1,4 +1,4 @@
-package io.spectralpowered.mixin.annotation.injection.callback;
+package io.spectralpowered.injector.annotation.injection.callback;
 
 public class CallbackInfo {
 

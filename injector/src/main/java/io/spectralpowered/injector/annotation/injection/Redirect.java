@@ -1,4 +1,4 @@
-package io.spectralpowered.mixin.annotation.injection;
+package io.spectralpowered.injector.annotation.injection;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -7,15 +7,13 @@ import java.lang.annotation.Target;
 
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface Inject {
+public @interface Redirect {
 
     String[] method();
 
-    At[] at();
+    At at();
 
     Slice slice() default @Slice;
-
-    boolean cancellable() default false;
 
     /**
      * Require is partially supported as it gets remapped to {@code optional = (require <= 0)}<br>
@@ -23,8 +21,5 @@ public @interface Inject {
      */
     @Deprecated
     int require() default -1;
-
-    @Deprecated
-    boolean remap() default true;
 
 }

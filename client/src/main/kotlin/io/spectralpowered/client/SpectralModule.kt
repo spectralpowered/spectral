@@ -16,7 +16,10 @@
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package io.spectralpowered.logger
+package io.spectralpowered.client
 
-object Logger {
+import org.koin.dsl.module
+
+val SpectralModule = module {
+    single { Spectral() }
 }

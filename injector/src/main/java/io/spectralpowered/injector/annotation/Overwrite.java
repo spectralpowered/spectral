@@ -1,4 +1,4 @@
-package io.spectralpowered.mixin.annotation.injection;
+package io.spectralpowered.injector.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -7,16 +7,7 @@ import java.lang.annotation.Target;
 
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface ModifyConstant {
-
-    String[] method();
-
-    Slice slice() default @Slice;
-
-    Constant constant();
-
-    @Deprecated
-    int require() default -1;
+public @interface Overwrite {
 
     @Deprecated
     boolean remap() default true;

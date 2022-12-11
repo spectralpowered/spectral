@@ -8,8 +8,8 @@ import org.objectweb.asm.tree.AbstractInsnNode;
 import org.objectweb.asm.tree.InsnNode;
 import org.objectweb.asm.tree.MethodInsnNode;
 import org.objectweb.asm.tree.MethodNode;
-import io.spectralpowered.mixin.annotation.injection.callback.CallbackInfo;
-import io.spectralpowered.mixin.annotation.injection.callback.CallbackInfoReturnable;
+import io.spectralpowered.injector.annotation.injection.callback.CallbackInfo;
+import io.spectralpowered.injector.annotation.injection.callback.CallbackInfoReturnable;
 
 class CallbackRewriter {
 

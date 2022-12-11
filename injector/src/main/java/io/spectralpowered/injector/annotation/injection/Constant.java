@@ -1,4 +1,4 @@
-package io.spectralpowered.mixin.annotation.injection;
+package io.spectralpowered.injector.annotation.injection;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
