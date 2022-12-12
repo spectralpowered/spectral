@@ -19,6 +19,7 @@
 package io.spectralpowered.client.ui
 
 import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatAtomOneDarkContrastIJTheme
+import io.spectralpowered.commons.inject
 import org.tinylog.kotlin.Logger
 import javax.swing.ImageIcon
 import javax.swing.JDialog
@@ -26,21 +27,37 @@ import javax.swing.JFrame
 
 object UI {
 
-    internal lateinit var splashScreen: SplashScreen
-
     init {
         JFrame.setDefaultLookAndFeelDecorated(true)
         JDialog.setDefaultLookAndFeelDecorated(true)
         FlatAtomOneDarkContrastIJTheme.setup()
     }
 
+
+    internal val splashScreen = SplashScreen()
+    private val spectralWindow: SpectralWindow by inject()
+
     fun openSplashScreen() {
         Logger.debug("Opening splash-screen UI.")
 
-        splashScreen = SplashScreen()
         SplashScreen.progress = 0
         SplashScreen.status = ""
         splashScreen.open()
+    }
+
+    fun closeSplashScreen() {
+        Logger.debug("Closing splash-screen UI.")
+        splashScreen.isVisible = false
+    }
+
+    fun openSpectralWindow() {
+        Logger.debug("Opening Spectral client UI.")
+        spectralWindow.isVisible = true
+    }
+
+    fun closeSpectralWindow() {
+        Logger.debug("Closing Spectral client UI.")
+        spectralWindow.isVisible = false
     }
 
     internal val windowIcons = listOf(

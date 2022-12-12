@@ -127,5 +127,10 @@ class SplashScreen : JFrame("Spectral") {
                     UI.splashScreen.progressLabel.text = value
                 }
             }
+
+        fun update(status: String, progress: Int) {
+            this.progress = progress
+            this.status = status
+        }
     }
 }

@@ -16,15 +16,37 @@
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package io.spectralpowered.client
+package io.spectralpowered.client.ui
 
 import io.spectralpowered.client.rs.ClientLoader
-import io.spectralpowered.client.ui.SpectralWindow
-import org.koin.dsl.module
+import io.spectralpowered.commons.inject
+import net.miginfocom.swing.MigLayout
+import java.awt.Dimension
+import javax.swing.JFrame
+import javax.swing.JPanel
 
-val SpectralModule = module {
-    single { Spectral() }
-    single { Bootstrap() }
-    single { ClientLoader() }
-    single { SpectralWindow() }
+class SpectralWindow : JFrame("Spectral") {
+
+    private val clientLoader: ClientLoader by inject()
+
+    init {
+        defaultCloseOperation = EXIT_ON_CLOSE
+        iconImages = UI.windowIcons
+        size = Dimension(1000, 100)
+        setLocationRelativeTo(null)
+        initComponents()
+    }
+
+    private fun initComponents() {
+        val panel = JPanel(MigLayout("insets 0", "[fill,100%]"))
+        add(panel)
+
+        /*
+         * === CLIENT APPLET ===
+         */
+        panel.add(clientLoader.applet, "grow")
+        pack()
+        preferredSize = size
+        minimumSize = size
+    }
 }
