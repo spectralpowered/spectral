@@ -1,9 +1,12 @@
 plugins {
+    java
     kotlin("jvm")
+    id("com.github.gmazzo.buildconfig") version "3.1.0"
+    id("com.google.devtools.ksp") version "1.7.20-1.0.8"
 }
 
-object Spectral {
-
+tasks.wrapper {
+    gradleVersion = "7.6"
 }
 
 allprojects {
@@ -15,6 +18,7 @@ allprojects {
     repositories {
         mavenLocal()
         mavenCentral()
+        maven(url = "https://jitpack.io")
     }
 
     dependencies {
@@ -23,9 +27,13 @@ allprojects {
         testImplementation(kotlin("test"))
     }
 
-    tasks {
-        compileKotlin {
-            kotlinOptions.jvmTarget = "17"
-        }
+    tasks.test {
+        useJUnitPlatform()
+    }
+}
+
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(17))
     }
 }

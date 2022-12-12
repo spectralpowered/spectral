@@ -4,15 +4,22 @@ plugins {
 
 rootProject.name = "spectral"
 
-include(":logger")
-include(":runescape")
-include(":asm")
-include(":api")
-include(":cache")
-include(":client")
-include(":commons")
-include(":deobfuscator")
-include(":injector")
-include(":mixins")
-include(":plugins")
-include(":util")
+module("client")
+module("logger")
+module("commons")
+module("api")
+module("util")
+
+fun module(path: String) {
+    val split = path.split(":")
+    val moduleName = split.lastOrNull() ?: path
+
+    include(moduleName)
+
+    if(split.size > 1) {
+        val projectPath = path.replace(":", "/")
+        project(":$moduleName").projectDir = file(projectPath)
+    }
+
+    project(":$moduleName").name = "spectral-$moduleName"
+}

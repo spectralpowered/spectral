@@ -16,11 +16,25 @@
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package io.spectralpowered.client
+package io.spectralpowered.commons
 
-import org.koin.dsl.module
+import java.io.File
 
-val SpectralModule = module {
-    single { Spectral() }
-    single { Bootstrap() }
+object SpectralPaths {
+
+    val BASE_DIR = File(System.getProperty("user.home")).resolve(".spectral/")
+    val PLUGINS_DIR = BASE_DIR.resolve("plugins/")
+    val LOGS_DIR = BASE_DIR.resolve("logs/")
+    val GAMEPACKS_DIR = BASE_DIR.resolve("gamepacks/")
+    val CONFIGS_DIR = BASE_DIR.resolve("configs/")
+    val CACHE_DIR = BASE_DIR.resolve("cache/")
+
+    fun allDirs() = arrayOf(
+        BASE_DIR,
+        PLUGINS_DIR,
+        LOGS_DIR,
+        GAMEPACKS_DIR,
+        CONFIGS_DIR,
+        CACHE_DIR,
+    )
 }

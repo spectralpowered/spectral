@@ -18,50 +18,26 @@
 
 package io.spectralpowered.client
 
-import io.spectralpowered.commons.get
-import io.spectralpowered.commons.inject
-import org.koin.core.context.startKoin
+import io.spectralpowered.client.ui.UI
 import org.tinylog.kotlin.Logger
 
-private val DI_MODULES = listOf(
-    SpectralModule
-)
+class Bootstrap {
 
-fun main() {
-    Logger.info("Initializing.")
-
-    /*
-     * Start Dependency injector.
-     */
-    startKoin {
-        modules(DI_MODULES)
-    }
-
-    /*
-     * Start Spectral main.
-     */
-    get<Spectral>().start()
-}
-
-class Spectral {
-
-    private val bootstrap: Bootstrap by inject()
-
-    fun start() {
-        Logger.info("Starting Spectral client.")
+    fun run() {
+        Logger.info("Bootstrapping Spectral client.")
 
         /*
-         * Run Spectral client bootstrapper.
+         * Open the launcher
          */
-        bootstrap.run()
+        UI.openSplashScreen()
 
         /*
-         * Spectral client is now running.
+         * Run all of the client's startup / bootstrap steps.
          */
-        Logger.info("Spectral client is now running.")
+        checkDirs()
     }
 
-    fun stop() {
+    private fun checkDirs() {
 
     }
 }
