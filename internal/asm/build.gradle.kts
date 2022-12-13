@@ -7,4 +7,5 @@ dependencies {
     api("com.google.guava:guava:_")
     api("com.github.LLVM-but-worse.maple-ir:ir:1.0.0-SNAPSHOT-1")
     api("com.github.LLVM-but-worse.maple-ir:main:1.0.0-SNAPSHOT-1")
+    api("org.jgrapht:jgrapht-core:_")
 }

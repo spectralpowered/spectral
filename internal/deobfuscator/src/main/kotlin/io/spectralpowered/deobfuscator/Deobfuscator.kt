@@ -24,8 +24,30 @@ import io.spectralpowered.asm.tree.ignored
 import io.spectralpowered.deobfuscator.transformer.ControlFlowFixer
 import io.spectralpowered.deobfuscator.transformer.DeadCodeRemover
 import io.spectralpowered.deobfuscator.transformer.RuntimeExceptionRemover
+import org.mapleir.DefaultInvocationResolver
+import org.mapleir.app.client.SimpleApplicationContext
+import org.mapleir.app.service.ApplicationClassSource
+import org.mapleir.app.service.CompleteResolvingJarDumper
+import org.mapleir.app.service.InstalledRuntimeClassSource
+import org.mapleir.asm.ClassNode
+import org.mapleir.context.AnalysisContext
+import org.mapleir.context.BasicAnalysisContext
+import org.mapleir.context.IRCache
+import org.mapleir.deob.PassContext
+import org.mapleir.deob.PassGroup
+import org.mapleir.deob.dataflow.LiveDataFlowAnalysisImpl
+import org.mapleir.deob.passes.DemoteRangesPass
+import org.mapleir.deob.passes.FieldRSADecryptionPass
+import org.mapleir.deob.passes.fixer.ExceptionFixerPass
+import org.mapleir.ir.algorithms.BoissinotDestructor
+import org.mapleir.ir.algorithms.LocalsReallocator
+import org.mapleir.ir.cfg.builder.ControlFlowGraphBuilder
+import org.mapleir.ir.codegen.ControlFlowGraphDumper
 import org.tinylog.kotlin.Logger
+import org.topdank.byteengineer.commons.data.JarInfo
+import org.topdank.byteio.`in`.SingleJarDownloader
 import java.io.File
+import java.util.jar.JarOutputStream
 import kotlin.reflect.full.createInstance
 
 fun main(args: Array<String>) {
@@ -45,6 +67,7 @@ class Deobfuscator(private val inputJar: File, val outputJar: File, private val 
     private lateinit var pool: ClassPool
 
     private val transformers = mutableListOf<Transformer>()
+
 
     fun run() {
         Logger.info("Starting deobfuscator.")
@@ -68,8 +91,8 @@ class Deobfuscator(private val inputJar: File, val outputJar: File, private val 
          */
         transformers.clear()
 
-        //register<RuntimeExceptionRemover>()
-        //register<DeadCodeRemover>()
+        register<RuntimeExceptionRemover>()
+        register<DeadCodeRemover>()
         register<ControlFlowFixer>()
 
         Logger.info("Found ${transformers.size} registered transformers.")
@@ -78,13 +101,13 @@ class Deobfuscator(private val inputJar: File, val outputJar: File, private val 
          * Run transformers.
          */
         Logger.info("Running transformers.")
+
         transformers.forEach { transformer ->
             val start = System.currentTimeMillis()
             Logger.info("Running transformer: ${transformer::class.simpleName}.")
             transformer.run(pool)
             Logger.info("Finished transformer in ${System.currentTimeMillis() - start}ms.")
         }
-        Logger.info("Completed all transformers.")
 
         Logger.info("Writing transformed classes to jar: ${outputJar.path}.")
         Asm.toJar(outputJar, pool)

@@ -18,42 +18,38 @@
 
 package io.spectralpowered.deobfuscator.transformer
 
+import io.spectralpowered.asm.LabelMap
+import io.spectralpowered.asm.graph.ControlFlowGraph
 import io.spectralpowered.asm.tree.ClassPool
-import io.spectralpowered.asm.tree.ir
-import io.spectralpowered.asm.tree.owner
+
 import io.spectralpowered.deobfuscator.Transformer
-import org.mapleir.context.IRCache
-import org.mapleir.ir.algorithms.BoissinotDestructor
-import org.mapleir.ir.algorithms.LocalsReallocator
-import org.mapleir.ir.codegen.ControlFlowGraphDumper
-import org.objectweb.asm.tree.ClassNode
+import org.objectweb.asm.tree.InsnList
 import org.objectweb.asm.tree.MethodNode
 import org.tinylog.kotlin.Logger
 
 class ControlFlowFixer : Transformer() {
 
     private var count = 0
-    private lateinit var irCache: IRCache
-
-    override fun transformClass(cls: ClassNode) {
-        irCache = IRCache()
-    }
 
     override fun transformCode(method: MethodNode) {
-        if(method.tryCatchBlocks.isNotEmpty()) return
-        val irMethod = method.owner.ir.methods.firstOrNull { it.name == method.name && it.desc == method.desc }
-        val cfg = irCache.getFor(irMethod)
+        //if(method.tryCatchBlocks.isNotEmpty()) return
+        val cfg = ControlFlowGraph(method)
+        val blocks = cfg.build()
+        val newInsns = InsnList()
 
-        val insns = method.instructions.toArray()
-        method.instructions.clear()
-
-        cfg.allExprStream().forEach {
-
+        if(blocks.isNotEmpty()) {
+            val labelMap = LabelMap()
+            blocks.forEach { block ->
+                for(i in block.startIndex until block.endIndex) {
+                    newInsns.add(method.instructions[i].clone(labelMap))
+                }
+            }
+            method.instructions = newInsns
+            count += blocks.size
         }
-        count += cfg.size()
     }
 
     override fun postTransform(pool: ClassPool) {
-        Logger.info("Reordered $count methdo control-flow blocks.")
+        Logger.info("Reordered $count method control-flows.")
     }
 }
