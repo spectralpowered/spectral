@@ -16,23 +16,27 @@
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package io.spectralpowered.asm.tree
+package io.spectralpowered.deobfuscator.transformer
 
-import io.spectralpowered.util.field
-import org.objectweb.asm.Type
-import org.objectweb.asm.tree.ClassNode
-import org.objectweb.asm.tree.FieldNode
-import java.lang.reflect.Modifier
+import io.spectralpowered.asm.tree.ClassPool
+import io.spectralpowered.asm.tree.owner
+import io.spectralpowered.asm.tree.removeDeadCode
+import io.spectralpowered.deobfuscator.Transformer
+import org.objectweb.asm.tree.MethodNode
+import org.tinylog.kotlin.Logger
 
-internal fun FieldNode.init(owner: ClassNode) {
-    this.owner = owner
+class DeadCodeRemover : Transformer() {
+
+    private var count = 0
+
+    override fun transformCode(method: MethodNode) {
+        val origSize = method.instructions.size()
+        method.removeDeadCode(method.owner.name)
+        val newSize = method.instructions.size()
+        count += (origSize - newSize)
+    }
+
+    override fun postTransform(pool: ClassPool) {
+        Logger.info("Removed $count dead method instructions.")
+    }
 }
-
-var FieldNode.owner: ClassNode by field()
-val FieldNode.pool get() = owner.pool
-
-val FieldNode.id get() = "${owner.id}.$name"
-val FieldNode.type get() = Type.getType(desc)
-
-fun FieldNode.isStatic() = Modifier.isStatic(access)
-fun FieldNode.isPrivate() = Modifier.isPrivate(access)

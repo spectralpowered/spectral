@@ -36,6 +36,7 @@ internal fun MethodNode.init(owner: ClassNode) {
 }
 
 var MethodNode.owner: ClassNode by field()
+val MethodNode.pool get() = owner.pool
 
 val MethodNode.id get() = "${owner.id}.$name$desc"
 val MethodNode.type get() = Type.getMethodType(desc)
