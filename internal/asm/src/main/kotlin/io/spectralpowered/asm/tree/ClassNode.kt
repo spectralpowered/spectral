@@ -18,8 +18,8 @@
 
 package io.spectralpowered.asm.tree
 
-import io.disassemble.asm.ClassFactory
 import io.spectralpowered.util.field
+import org.mapleir.asm.ClassHelper
 import org.objectweb.asm.Type
 import org.objectweb.asm.tree.ClassNode
 import org.objectweb.asm.tree.FieldNode
@@ -36,8 +36,7 @@ var ClassNode.ignored: Boolean by field { false }
 
 val ClassNode.id get() = name
 val ClassNode.type get() = Type.getObjectType(name)
-
-val ClassNode.info get() = ClassFactory(this)
+val ClassNode.ir get() = ClassHelper.create(this)
 
 fun ClassNode.getMethod(name: String, desc: String): MethodNode? {
     return methods.firstOrNull { it.name == name && it.desc == desc }

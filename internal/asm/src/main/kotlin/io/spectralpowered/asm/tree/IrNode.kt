@@ -18,20 +18,12 @@
 
 package io.spectralpowered.asm.tree
 
-import io.spectralpowered.util.field
-import org.objectweb.asm.Type
-import org.objectweb.asm.tree.ClassNode
-import org.objectweb.asm.tree.FieldNode
-import java.lang.reflect.Modifier
+import org.mapleir.asm.ClassNode
+import org.mapleir.asm.FieldNode
+import org.mapleir.asm.MethodNode
 
-internal fun FieldNode.init(owner: ClassNode) {
-    this.owner = owner
-}
+typealias IrClassNode = ClassNode
 
-var FieldNode.owner: ClassNode by field()
+typealias IrMethodNode = MethodNode
 
-val FieldNode.id get() = "${owner.id}.$name"
-val FieldNode.type get() = Type.getType(desc)
-
-fun FieldNode.isStatic() = Modifier.isStatic(access)
-fun FieldNode.isPrivate() = Modifier.isPrivate(access)
+typealias IrFieldNode = FieldNode

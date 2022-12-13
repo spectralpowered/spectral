@@ -18,7 +18,6 @@
 
 package io.spectralpowered.asm.tree
 
-import io.disassemble.asm.ClassMethod
 import io.spectralpowered.util.field
 import org.objectweb.asm.Opcodes
 import org.objectweb.asm.Type
@@ -40,9 +39,6 @@ var MethodNode.owner: ClassNode by field()
 
 val MethodNode.id get() = "${owner.id}.$name$desc"
 val MethodNode.type get() = Type.getMethodType(desc)
-
-val MethodNode.info get() = ClassMethod(owner.info, this)
-val MethodNode.exprTree get() = info.tree().get()
 
 fun MethodNode.isStatic() = Modifier.isStatic(access)
 fun MethodNode.isAbstract() = Modifier.isAbstract(access)

@@ -21,6 +21,7 @@ package io.spectralpowered.deobfuscator
 import io.spectralpowered.asm.Asm
 import io.spectralpowered.asm.tree.ClassPool
 import io.spectralpowered.asm.tree.ignored
+import io.spectralpowered.deobfuscator.transformer.RuntimeExceptionRemover
 import org.tinylog.kotlin.Logger
 import java.io.File
 import kotlin.reflect.full.createInstance
@@ -64,6 +65,8 @@ class Deobfuscator(private val inputJar: File, val outputJar: File, private val 
          * Load transformers
          */
         transformers.clear()
+
+        register<RuntimeExceptionRemover>()
 
         Logger.info("Found ${transformers.size} registered transformers.")
 
