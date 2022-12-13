@@ -9,6 +9,8 @@ module("logger")
 module("commons")
 module("api")
 module("util")
+module("internal:asm")
+module("internal:deobfuscator")
 
 fun module(path: String) {
     val split = path.split(":")
