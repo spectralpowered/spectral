@@ -23,6 +23,7 @@ import io.spectralpowered.asm.tree.ClassPool
 import io.spectralpowered.asm.tree.ignored
 import io.spectralpowered.deobfuscator.transformer.ControlFlowFixer
 import io.spectralpowered.deobfuscator.transformer.DeadCodeRemover
+import io.spectralpowered.deobfuscator.transformer.OpaquePredicateRemover
 import io.spectralpowered.deobfuscator.transformer.RuntimeExceptionRemover
 import org.mapleir.DefaultInvocationResolver
 import org.mapleir.app.client.SimpleApplicationContext
@@ -94,6 +95,7 @@ class Deobfuscator(private val inputJar: File, val outputJar: File, private val 
         register<RuntimeExceptionRemover>()
         register<DeadCodeRemover>()
         register<ControlFlowFixer>()
+        register<OpaquePredicateRemover>()
 
         Logger.info("Found ${transformers.size} registered transformers.")
 

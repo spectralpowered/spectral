@@ -24,9 +24,11 @@ import org.objectweb.asm.tree.InsnList
 import org.objectweb.asm.tree.MethodNode
 import org.objectweb.asm.util.Printer
 public class InsnMatcher private constructor(private val regex: Regex) {
+
     public fun match(method: MethodNode): Sequence<List<AbstractInsnNode>> {
         return match(method.instructions)
     }
+
     public fun match(list: InsnList): Sequence<List<AbstractInsnNode>> {
         val insns = ArrayList<AbstractInsnNode>(list.size())
         val builder = StringBuilder(list.size())
@@ -40,6 +42,7 @@ public class InsnMatcher private constructor(private val regex: Regex) {
             insns.subList(it.range.first, it.range.last + 1)
         }
     }
+
     public companion object {
         private const val PRIVATE_USE_AREA = 0xE000
         private val OPCODE_GROUPS = mapOf(
