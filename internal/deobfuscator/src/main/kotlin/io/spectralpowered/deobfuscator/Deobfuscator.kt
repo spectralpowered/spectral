@@ -23,7 +23,9 @@ import io.spectralpowered.asm.ignored
 import io.spectralpowered.deobfuscator.transformer.ControlFlowFixer
 import io.spectralpowered.deobfuscator.transformer.DeadCodeRemover
 import io.spectralpowered.deobfuscator.transformer.IllegalStateExceptionRemover
+import io.spectralpowered.deobfuscator.transformer.RedundantGotoRemover
 import io.spectralpowered.deobfuscator.transformer.RuntimeExceptionRemover
+import io.spectralpowered.deobfuscator.transformer.UnusedArgumentRemover
 import org.tinylog.kotlin.Logger
 import java.io.File
 import kotlin.reflect.full.createInstance
@@ -57,6 +59,8 @@ class Deobfuscator(
         register<IllegalStateExceptionRemover>()
         register<DeadCodeRemover>()
         register<ControlFlowFixer>()
+        register<UnusedArgumentRemover>()
+        register<RedundantGotoRemover>()
 
         Logger.info("Found ${transformers.size} registered transformers.")
     }
@@ -88,6 +92,13 @@ class Deobfuscator(
     }
 
     companion object {
+
+        fun String.isObfuscatedName(): Boolean {
+            if(this.length <= 3) {
+                return this != "run" && this != "add"
+            }
+            return arrayOf("class", "method", "field").any { this.startsWith(it) }
+        }
 
         @JvmStatic
         fun main(args: Array<String>) {

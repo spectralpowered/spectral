@@ -18,6 +18,7 @@
 
 package io.spectralpowered.asm
 
+import io.spectralpowered.asm.util.InheritanceGraph
 import org.mapleir.context.IRCache
 import org.mapleir.ir.cfg.builder.ControlFlowGraphBuilder
 import org.objectweb.asm.ClassReader
@@ -85,4 +86,5 @@ class ClassPool {
             }
         }
     }
+
 }
