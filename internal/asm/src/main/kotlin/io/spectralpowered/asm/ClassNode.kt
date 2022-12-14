@@ -20,8 +20,11 @@ package io.spectralpowered.asm
 
 import io.spectralpowered.asm.util.IrClass
 import io.spectralpowered.util.field
+import io.spectralpowered.util.nullField
 import org.mapleir.asm.ClassHelper
+import org.objectweb.asm.Type
 import org.objectweb.asm.tree.ClassNode
+import java.lang.reflect.Modifier
 
 internal fun ClassNode.init(pool: ClassPool) {
     this.pool = pool
@@ -31,8 +34,29 @@ internal fun ClassNode.init(pool: ClassPool) {
 
 fun ClassNode.build() {
     irNode = ClassHelper.create(this)
+    methods.forEach { it.build() }
+    fields.forEach { it.build() }
+
+    superClass = pool.findClass(superName, true)
+    superClass?.children?.add(this)
+    interfaces.mapNotNull { pool.findClass(it, true) }.forEach {
+        it.children.add(this)
+    }
 }
 
 var ClassNode.pool: ClassPool by field()
 var ClassNode.ignored: Boolean by field { false }
 var ClassNode.irNode: IrClass by field()
+
+var ClassNode.superClass: ClassNode? by nullField()
+val ClassNode.interfaceClasses: HashSet<ClassNode> by field { hashSetOf() }
+val ClassNode.children: HashSet<ClassNode> by field { hashSetOf() }
+
+val ClassNode.identifier get() = name
+val ClassNode.type get() = Type.getObjectType(name)
+
+fun ClassNode.isAbstract() = Modifier.isAbstract(access)
+fun ClassNode.isInterface() = Modifier.isInterface(access)
+
+fun ClassNode.findMethod(name: String, desc: String) = methods.firstOrNull { it.name == name && it.desc == desc }
+fun ClassNode.findField(name: String, desc: String) = fields.firstOrNull { it.name == name && it.desc == desc }

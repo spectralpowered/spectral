@@ -19,6 +19,7 @@
 package io.spectralpowered.asm
 
 import org.mapleir.context.IRCache
+import org.mapleir.ir.cfg.builder.ControlFlowGraphBuilder
 import org.objectweb.asm.ClassReader
 import org.objectweb.asm.ClassWriter
 import org.objectweb.asm.tree.ClassNode
@@ -32,7 +33,7 @@ class ClassPool {
 
     private val classSet = hashSetOf<ClassNode>()
 
-    val irCache = IRCache()
+    val irCache = IRCache { ControlFlowGraphBuilder(it, false).buildImpl() }
 
     val classes get() = classSet.filter { !it.ignored }.toSet()
     val ignoredClasses get() = classSet.filter { it.ignored }.toSet()
@@ -51,7 +52,9 @@ class ClassPool {
         classSet.remove(node)
     }
 
-    fun findClass(name: String) = classes.firstOrNull { it.name == name }
+    fun findClass(name: String, includeIgnored: Boolean = false) = allClasses
+        .filter { !it.ignored || includeIgnored }
+        .firstOrNull { it.name == name }
 
     fun build() {
         irCache.clear()

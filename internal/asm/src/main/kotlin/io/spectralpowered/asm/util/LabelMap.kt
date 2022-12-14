@@ -16,27 +16,12 @@
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package io.spectralpowered.asm
+package io.spectralpowered.asm.util
 
-import io.spectralpowered.asm.util.IrField
-import io.spectralpowered.util.field
-import org.objectweb.asm.Type
-import org.objectweb.asm.tree.ClassNode
-import org.objectweb.asm.tree.FieldNode
-import java.lang.reflect.Modifier
+import org.objectweb.asm.tree.LabelNode
 
-internal fun FieldNode.init(owner: ClassNode) {
-    this.owner = owner
+class LabelMap : AbstractMap<LabelNode, LabelNode>() {
+    private val map = hashMapOf<LabelNode, LabelNode>()
+    override val entries get() = throw IllegalStateException()
+    override fun get(key: LabelNode) = map.getOrPut(key) { LabelNode() }
 }
-
-fun FieldNode.build() {
-    irNode = IrField(this, owner.irNode)
-}
-
-var FieldNode.owner: ClassNode by field()
-var FieldNode.irNode: IrField by field()
-
-val FieldNode.identifier get() = "${owner.identifier}.$name"
-val FieldNode.type get() = Type.getType(desc)
-
-fun FieldNode.isStatic() = Modifier.isStatic(access)
