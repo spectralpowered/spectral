@@ -16,23 +16,23 @@
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package io.spectralpowered.adm
+package io.spectralpowered.asm
 
-import io.spectralpowered.asm.Asm
-import io.spectralpowered.asm.tree.getMethod
-import io.spectralpowered.asm.tree.info
-import java.io.File
+import io.spectralpowered.asm.util.IrClass
+import io.spectralpowered.util.field
+import org.mapleir.asm.ClassHelper
+import org.objectweb.asm.tree.ClassNode
 
-object JarTest {
-
-    @JvmStatic
-    fun main(args: Array<String>) {
-        val pool = Asm.fromJar(File("gamepack.jar"))
-
-        val cls = pool.findClass("client")!!
-        val method = cls.getMethod("init", "()V")!!
-
-        val exprs = method.info.tree().get()
-        println()
-    }
+internal fun ClassNode.init(pool: ClassPool) {
+    this.pool = pool
+    methods.forEach { it.init(this) }
+    fields.forEach { it.init(this) }
 }
+
+fun ClassNode.build() {
+    irNode = ClassHelper.create(this)
+}
+
+var ClassNode.pool: ClassPool by field()
+var ClassNode.ignored: Boolean by field { false }
+var ClassNode.irNode: IrClass by field()

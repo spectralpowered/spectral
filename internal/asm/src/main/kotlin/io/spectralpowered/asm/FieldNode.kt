@@ -16,14 +16,20 @@
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package io.spectralpowered.asm.tree
+package io.spectralpowered.asm
 
-import org.mapleir.asm.ClassNode
-import org.mapleir.asm.FieldNode
-import org.mapleir.asm.MethodNode
+import io.spectralpowered.asm.util.IrField
+import io.spectralpowered.util.field
+import org.objectweb.asm.tree.ClassNode
+import org.objectweb.asm.tree.FieldNode
 
-typealias IrClassNode = ClassNode
+internal fun FieldNode.init(owner: ClassNode) {
+    this.owner = owner
+}
 
-typealias IrMethodNode = MethodNode
+fun FieldNode.build() {
+    irNode = IrField(this, owner.irNode)
+}
 
-typealias IrFieldNode = FieldNode
+var FieldNode.owner: ClassNode by field()
+var FieldNode.irNode: IrField by field()

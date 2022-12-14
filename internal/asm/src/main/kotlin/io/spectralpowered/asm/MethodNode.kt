@@ -16,32 +16,23 @@
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package io.spectralpowered.asm.tree
+package io.spectralpowered.asm
 
+import io.spectralpowered.asm.util.IrMethod
 import io.spectralpowered.util.field
-import org.mapleir.asm.ClassHelper
-import org.objectweb.asm.Type
 import org.objectweb.asm.tree.ClassNode
-import org.objectweb.asm.tree.FieldNode
 import org.objectweb.asm.tree.MethodNode
 
-internal fun ClassNode.init(pool: ClassPool) {
-    this.pool = pool
-    methods.forEach { it.init(this) }
-    fields.forEach { it.init(this) }
+internal fun MethodNode.init(owner: ClassNode) {
+    this.owner = owner
 }
 
-var ClassNode.pool: ClassPool by field()
-var ClassNode.ignored: Boolean by field { false }
-
-val ClassNode.id get() = name
-val ClassNode.type get() = Type.getObjectType(name)
-val ClassNode.ir get() = ClassHelper.create(this)
-
-fun ClassNode.getMethod(name: String, desc: String): MethodNode? {
-    return methods.firstOrNull { it.name == name && it.desc == desc }
+fun MethodNode.build() {
+    irNode = IrMethod(this, owner.irNode)
 }
 
-fun ClassNode.getField(name: String, desc: String): FieldNode? {
-    return fields.firstOrNull { it.name == name && it.desc == desc }
-}
+var MethodNode.owner: ClassNode by field()
+var MethodNode.irNode: IrMethod by field()
+
+val MethodNode.pool get() = owner.pool
+fun MethodNode.cfg() = pool.irCache.getFor(irNode)

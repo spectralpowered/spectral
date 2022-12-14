@@ -18,8 +18,7 @@
 
 package io.spectralpowered.asm
 
-import io.spectralpowered.asm.tree.ClassPool
-import io.spectralpowered.asm.tree.pool
+import org.mapleir.context.IRCache
 import org.objectweb.asm.ClassReader
 import org.objectweb.asm.ClassWriter
 import org.objectweb.asm.tree.ClassNode
@@ -29,45 +28,58 @@ import java.util.jar.JarEntry
 import java.util.jar.JarFile
 import java.util.jar.JarOutputStream
 
-object Asm {
+class ClassPool {
 
-    fun fromBytes(data: ByteArray): ClassNode {
-        val node = ClassNode()
-        val reader = ClassReader(data)
-        reader.accept(node, ClassReader.SKIP_FRAMES)
-        return node
+    private val classSet = hashSetOf<ClassNode>()
+
+    val irCache = IRCache()
+
+    val classes get() = classSet.filter { !it.ignored }.toSet()
+    val ignoredClasses get() = classSet.filter { it.ignored }.toSet()
+    val allClasses get() = classSet.toSet()
+
+    fun clear() {
+        classSet.clear()
     }
 
-    fun toBytes(node: ClassNode): ByteArray {
-        val writer = AsmClassWriter(node.pool, ClassWriter.COMPUTE_FRAMES)
-        node.accept(writer)
-        return writer.toByteArray()
+    fun addClass(node: ClassNode) {
+        classSet.add(node)
+        node.init(this)
     }
 
-    fun fromJar(file: File): ClassPool {
-        val pool = ClassPool()
+    fun removeClass(node: ClassNode) {
+        classSet.remove(node)
+    }
+
+    fun findClass(name: String) = classes.firstOrNull { it.name == name }
+
+    fun build() {
+        irCache.clear()
+        classes.forEach { it.build() }
+    }
+
+    fun addJar(file: File) {
         JarFile(file).use { jar ->
             jar.entries().asSequence().forEach { entry ->
                 if(!entry.name.endsWith(".class")) return@forEach
-                val node = fromBytes(jar.getInputStream(entry).readAllBytes())
-                pool.addClass(node)
+                val node = ClassNode()
+                val reader = ClassReader(jar.getInputStream(entry).readAllBytes())
+                reader.accept(node, ClassReader.SKIP_FRAMES)
+                addClass(node)
             }
         }
-        return pool
     }
 
-    fun toJar(file: File, pool: ClassPool) {
-        if(file.exists()) {
-            file.deleteRecursively()
-        }
-
+    fun writeJar(file: File) {
+        if(file.exists()) file.deleteRecursively()
         JarOutputStream(FileOutputStream(file)).use { jos ->
-            pool.allClasses.forEach { cls ->
-                jos.putNextEntry(JarEntry("${cls.name}.class"))
-                jos.write(toBytes(cls))
+            allClasses.forEach { cls ->
+                val writer = ClassWriter(ClassWriter.COMPUTE_MAXS)
+                cls.accept(writer)
+                jos.putNextEntry(JarEntry("${cls.name.replace(".", "/")}.class"))
+                jos.write(writer.toByteArray())
                 jos.closeEntry()
             }
         }
     }
-
 }
