@@ -23,6 +23,8 @@ import org.mapleir.context.IRCache
 import org.mapleir.ir.cfg.builder.ControlFlowGraphBuilder
 import org.objectweb.asm.ClassReader
 import org.objectweb.asm.ClassWriter
+import org.objectweb.asm.commons.ClassRemapper
+import org.objectweb.asm.commons.Remapper
 import org.objectweb.asm.tree.ClassNode
 import java.io.File
 import java.io.FileOutputStream
@@ -87,4 +89,17 @@ class ClassPool {
         }
     }
 
+    fun remap(remapper: Remapper) {
+        val newClasses = hashSetOf<ClassNode>()
+        allClasses.forEach { cls ->
+            val newNode = ClassNode()
+            cls.accept(ClassRemapper(newNode, remapper))
+            newNode.ignored = cls.ignored
+            newClasses.add(newNode)
+        }
+
+        clear()
+        newClasses.forEach { addClass(it) }
+        build()
+    }
 }

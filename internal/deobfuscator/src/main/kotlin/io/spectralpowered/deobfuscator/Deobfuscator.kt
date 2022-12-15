@@ -24,6 +24,7 @@ import io.spectralpowered.deobfuscator.transformer.ControlFlowFixer
 import io.spectralpowered.deobfuscator.transformer.DeadCodeRemover
 import io.spectralpowered.deobfuscator.transformer.IllegalStateExceptionRemover
 import io.spectralpowered.deobfuscator.transformer.RedundantGotoRemover
+import io.spectralpowered.deobfuscator.transformer.Renamer
 import io.spectralpowered.deobfuscator.transformer.RuntimeExceptionRemover
 import io.spectralpowered.deobfuscator.transformer.UnusedArgumentRemover
 import org.tinylog.kotlin.Logger
@@ -59,8 +60,9 @@ class Deobfuscator(
         register<IllegalStateExceptionRemover>()
         register<DeadCodeRemover>()
         register<ControlFlowFixer>()
-        register<UnusedArgumentRemover>()
         register<RedundantGotoRemover>()
+        register<Renamer>()
+        register<UnusedArgumentRemover>()
 
         Logger.info("Found ${transformers.size} registered transformers.")
     }

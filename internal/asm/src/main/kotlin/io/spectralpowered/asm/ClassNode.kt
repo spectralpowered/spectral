@@ -40,6 +40,7 @@ fun ClassNode.build() {
     superClass = pool.findClass(superName, true)
     superClass?.children?.add(this)
     interfaces.mapNotNull { pool.findClass(it, true) }.forEach {
+        interfaceClasses.add(it)
         it.children.add(this)
     }
 }
@@ -60,3 +61,54 @@ fun ClassNode.isInterface() = Modifier.isInterface(access)
 
 fun ClassNode.findMethod(name: String, desc: String) = methods.firstOrNull { it.name == name && it.desc == desc }
 fun ClassNode.findField(name: String, desc: String) = fields.firstOrNull { it.name == name && it.desc == desc }
+
+val ClassNode.superClassAndInterfaceClasses: List<ClassNode> get() {
+    val cls = superClass
+    return if(cls != null) {
+        listOf(cls).plus(interfaceClasses)
+    } else {
+        interfaceClasses.toList()
+    }
+}
+
+fun ClassNode.isOverride(name: String, desc: String): Boolean {
+    val superClass = this.superClass
+    if(superClass != null) {
+        if(superClass.findMethod(name, desc) != null) {
+            return true
+        }
+        if(superClass.isOverride(name, desc)) {
+            return true
+        }
+    }
+    for(superInterfaceClass in interfaceClasses) {
+        if(superInterfaceClass.findMethod(name, desc) != null) {
+            return true
+        }
+        if(superInterfaceClass.isOverride(name, desc)) {
+            return true
+        }
+    }
+    return false
+}
+
+fun ClassNode.isAssignableFrom(other: ClassNode): Boolean {
+    return this == other || this.isSuperClassOf(other) || this.isSuperInterfaceOf(other)
+}
+
+private tailrec fun ClassNode.isSuperClassOf(other: ClassNode): Boolean {
+    val superClass = other.superClass ?: return false
+    if(superClass == this) {
+        return true
+    }
+    return this.isSuperClassOf(superClass)
+}
+
+private fun ClassNode.isSuperInterfaceOf(other: ClassNode): Boolean {
+    for(superInterface in other.interfaceClasses) {
+        if(superInterface == this || this.isSuperInterfaceOf(superInterface)) {
+            return true
+        }
+    }
+    return false
+}

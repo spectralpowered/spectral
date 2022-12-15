@@ -41,10 +41,6 @@ class RedundantGotoRemover : Transformer() {
                             method.instructions.remove(insn)
                             count++
                         }
-
-                        thread {
-
-                        }
                     }
                 }
             }
