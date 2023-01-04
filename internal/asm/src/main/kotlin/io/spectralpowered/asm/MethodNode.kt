@@ -45,6 +45,9 @@ fun MethodNode.cfg() = pool.irCache.getFor(irNode)
 fun MethodNode.isStatic() = Modifier.isStatic(access)
 fun MethodNode.isAbstract() = Modifier.isAbstract(access)
 
+fun MethodNode.isConstructor() = name == "<init>"
+fun MethodNode.isInitializer() = name == "<clinit>"
+
 val MethodNode.virtualMethods: List<MethodNode> get() {
     val ret = mutableListOf<MethodNode>()
     if(isStatic()) {

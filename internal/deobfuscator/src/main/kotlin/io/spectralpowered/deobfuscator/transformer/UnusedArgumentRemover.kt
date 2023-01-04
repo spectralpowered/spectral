@@ -28,6 +28,7 @@ import io.spectralpowered.asm.isStatic
 import io.spectralpowered.asm.owner
 import io.spectralpowered.asm.type
 import io.spectralpowered.asm.virtualMethods
+import io.spectralpowered.deobfuscator.Deobfuscator
 import io.spectralpowered.deobfuscator.Deobfuscator.Companion.isObfuscatedName
 import io.spectralpowered.deobfuscator.Transformer
 import org.objectweb.asm.Opcodes.BIPUSH
@@ -45,6 +46,7 @@ import org.objectweb.asm.Type.BYTE_TYPE
 import org.objectweb.asm.Type.INT_TYPE
 import org.objectweb.asm.Type.SHORT_TYPE
 import org.objectweb.asm.tree.AbstractInsnNode
+import org.objectweb.asm.tree.AnnotationNode
 import org.objectweb.asm.tree.ClassNode
 import org.objectweb.asm.tree.IntInsnNode
 import org.objectweb.asm.tree.LdcInsnNode
@@ -106,7 +108,8 @@ class UnusedArgumentRemover : Transformer() {
             val insns = method.instructions
             for(insn in insns) {
                 if(insn !is MethodInsnNode) continue
-                if(findOverride(insn.owner, insn.name, insn.desc, opaqueMethods.keys, classNames) != null) {
+                val found = findOverride(insn.owner, insn.name, insn.desc, opaqueMethods.keys, classNames)
+                if(found != null) {
                     insn.desc = insn.desc.dropLastArg()
                     val prev = insn.previous
                     insns.remove(prev)

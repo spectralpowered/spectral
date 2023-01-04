@@ -18,26 +18,28 @@
 
 package io.spectralpowered.deobfuscator
 
-import dev.reimer.progressbar.ktx.progressBar
 import io.spectralpowered.asm.ClassPool
-import me.tongfei.progressbar.ProgressBarStyle
+import me.tongfei.progressbar.ProgressBarBuilder
 import org.objectweb.asm.tree.ClassNode
 import org.objectweb.asm.tree.FieldNode
 import org.objectweb.asm.tree.MethodNode
 
 abstract class Transformer {
 
-    fun run(pool: ClassPool) {
+    open fun run(pool: ClassPool) {
         /*
          * Setup CLI progress
          */
 
         preTransform(pool)
 
-        pool.classes.progressBar {
-            updateIntervalMillis = 100
-            style = ProgressBarStyle.COLORFUL_UNICODE_BLOCK
-        }.forEach { cls ->
+        val progress = ProgressBarBuilder()
+            .setTaskName("Deobfuscating")
+            .setInitialMax(pool.classes.size.toLong())
+            .setUpdateIntervalMillis(10)
+            .build()
+
+        pool.classes.forEach { cls ->
             transformClass(cls)
             cls.methods.forEach { method ->
                 transformMethod(method)
@@ -45,7 +47,10 @@ abstract class Transformer {
             cls.fields.forEach { field ->
                 transformField(field)
             }
+            progress.step()
         }
+
+        progress.close()
 
         postTransform(pool)
     }

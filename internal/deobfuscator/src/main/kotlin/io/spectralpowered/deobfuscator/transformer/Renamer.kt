@@ -22,11 +22,13 @@ import io.spectralpowered.asm.ClassPool
 import io.spectralpowered.asm.identifier
 import io.spectralpowered.asm.owner
 import io.spectralpowered.asm.util.InheritanceGraph
-import io.spectralpowered.asm.virtualFields
-import io.spectralpowered.asm.virtualMethods
+import io.spectralpowered.deobfuscator.Deobfuscator
 import io.spectralpowered.deobfuscator.Deobfuscator.Companion.isObfuscatedName
 import io.spectralpowered.deobfuscator.Transformer
+import io.spectralpowered.deobfuscator.include.ObfInfo
+import org.objectweb.asm.Type
 import org.objectweb.asm.commons.SimpleRemapper
+import org.objectweb.asm.tree.AnnotationNode
 import org.tinylog.kotlin.Logger
 
 class Renamer : Transformer() {
@@ -88,5 +90,31 @@ class Renamer : Transformer() {
     private fun applyMappings(pool: ClassPool) {
         Logger.info("Applying mappings.")
         pool.remap(SimpleRemapper(mappings))
+    }
+
+    private fun createClassAnnotation(name: String): AnnotationNode {
+        val node = AnnotationNode(Type.getDescriptor(ObfInfo::class.java))
+        node.values = listOf(
+            "name", name
+        )
+        return node
+    }
+
+    private fun createMemberAnnotation(owner: String, name: String, desc: String): AnnotationNode {
+        val node = AnnotationNode(Type.getDescriptor(ObfInfo::class.java))
+        node.values = listOf(
+            "owner", owner,
+            "name", name,
+            "desc", desc
+        )
+        return node
+    }
+
+    private fun createArgAnnotation(index: Int): AnnotationNode {
+        val node = AnnotationNode(Type.getDescriptor(ObfInfo::class.java))
+        node.values = listOf(
+            "arg", index
+        )
+        return node
     }
 }

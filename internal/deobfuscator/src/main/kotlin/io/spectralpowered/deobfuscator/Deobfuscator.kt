@@ -21,12 +21,17 @@ package io.spectralpowered.deobfuscator
 import io.spectralpowered.asm.ClassPool
 import io.spectralpowered.asm.ignored
 import io.spectralpowered.deobfuscator.transformer.ControlFlowFixer
+import io.spectralpowered.deobfuscator.transformer.CopyPropagationFixer
 import io.spectralpowered.deobfuscator.transformer.DeadCodeRemover
+import io.spectralpowered.deobfuscator.transformer.FieldSorter
 import io.spectralpowered.deobfuscator.transformer.IllegalStateExceptionRemover
+import io.spectralpowered.deobfuscator.transformer.MethodSorter
 import io.spectralpowered.deobfuscator.transformer.RedundantGotoRemover
 import io.spectralpowered.deobfuscator.transformer.Renamer
 import io.spectralpowered.deobfuscator.transformer.RuntimeExceptionRemover
 import io.spectralpowered.deobfuscator.transformer.UnusedArgumentRemover
+import io.spectralpowered.deobfuscator.transformer.UnusedFieldRemover
+import io.spectralpowered.deobfuscator.transformer.UnusedMethodRemover
 import org.tinylog.kotlin.Logger
 import java.io.File
 import kotlin.reflect.full.createInstance
@@ -34,7 +39,8 @@ import kotlin.reflect.full.createInstance
 class Deobfuscator(
     val inputJar: File,
     val outputJar: File,
-    val runTestClient: Boolean = false
+    val addObfAnnotations: Boolean = false,
+    val runTestClient: Boolean = false,
 ) {
 
     private val pool = ClassPool()
@@ -61,8 +67,13 @@ class Deobfuscator(
         register<DeadCodeRemover>()
         register<ControlFlowFixer>()
         register<RedundantGotoRemover>()
+        register<UnusedFieldRemover>()
+        register<UnusedMethodRemover>()
+        register<MethodSorter>()
+        register<FieldSorter>()
         register<Renamer>()
         register<UnusedArgumentRemover>()
+        register<CopyPropagationFixer>()
 
         Logger.info("Found ${transformers.size} registered transformers.")
     }
@@ -95,6 +106,8 @@ class Deobfuscator(
 
     companion object {
 
+        internal lateinit var INSTANCE: Deobfuscator private set
+
         fun String.isObfuscatedName(): Boolean {
             if(this.length <= 3) {
                 return this != "run" && this != "add"
@@ -108,10 +121,11 @@ class Deobfuscator(
 
             val inputJar = File(args[0])
             val outputJar = File(args[1])
-            val runTestClient = args.size == 3 && args[2] == "-t"
+            val addObfAnnotations = args.size > 2 && args.any { it == "-a" }
+            val runTestClient = args.size > 2 && args.any { it == "-t" }
 
-            val deobfuscator = Deobfuscator(inputJar, outputJar, runTestClient)
-            deobfuscator.run()
+            INSTANCE = Deobfuscator(inputJar, outputJar, addObfAnnotations, runTestClient)
+            INSTANCE.run()
         }
     }
 }
