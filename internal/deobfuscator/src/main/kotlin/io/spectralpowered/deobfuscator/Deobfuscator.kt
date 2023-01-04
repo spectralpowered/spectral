@@ -23,6 +23,7 @@ import io.spectralpowered.asm.ignored
 import io.spectralpowered.deobfuscator.transformer.ControlFlowFixer
 import io.spectralpowered.deobfuscator.transformer.CopyPropagationFixer
 import io.spectralpowered.deobfuscator.transformer.DeadCodeRemover
+import io.spectralpowered.deobfuscator.transformer.LocalVariableExprFixer
 import io.spectralpowered.deobfuscator.transformer.FieldSorter
 import io.spectralpowered.deobfuscator.transformer.IllegalStateExceptionRemover
 import io.spectralpowered.deobfuscator.transformer.MethodSorter
@@ -69,11 +70,12 @@ class Deobfuscator(
         register<RedundantGotoRemover>()
         register<UnusedFieldRemover>()
         register<UnusedMethodRemover>()
-        register<MethodSorter>()
-        register<FieldSorter>()
         register<Renamer>()
         register<UnusedArgumentRemover>()
         register<CopyPropagationFixer>()
+        register<MethodSorter>()
+        register<FieldSorter>()
+        register<LocalVariableExprFixer>()
 
         Logger.info("Found ${transformers.size} registered transformers.")
     }

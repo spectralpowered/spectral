@@ -38,17 +38,26 @@ class IllegalStateExceptionRemover : Transformer() {
 
     override fun transformMethod(method: MethodNode) {
         for(match in EXCEPTION_PATTERN.match(method).filter { checkExceptionPattern(method, it) }) {
-            val jump = match[2] as JumpInsnNode
-            val goto = JumpInsnNode(GOTO, jump.label)
-            method.instructions.insert(match.last(), goto)
-            match.forEach(method.instructions::remove)
-            count++
+            method.removeMatchedInsns(match)
+            continue
+        }
+
+        for(match in RETURN_PATTERN.match(method).filter { checkReturnPattern(method, it) }) {
+            method.removeMatchedInsns(match)
             continue
         }
     }
 
     override fun postTransform(pool: ClassPool) {
         Logger.info("Removed $count 'IllegalStateException' try-catch blocks.")
+    }
+
+    private fun MethodNode.removeMatchedInsns(insns: List<AbstractInsnNode>) {
+        val jump = insns[2] as JumpInsnNode
+        val goto = JumpInsnNode(GOTO, jump.label)
+        instructions.insert(insns.last(), goto)
+        insns.forEach(instructions::remove)
+        count++
     }
 
     private fun checkExceptionPattern(method: MethodNode, insns: List<AbstractInsnNode>): Boolean {
@@ -58,6 +67,14 @@ class IllegalStateExceptionRemover : Transformer() {
         if(load.`var` != method.lastArgIndex) return false
         if(cst.intConstant == null) return false
         if(new.desc == "java/lang/IllegalStateMachine") return false
+        return true
+    }
+
+    private fun checkReturnPattern(method: MethodNode, insns: List<AbstractInsnNode>): Boolean {
+        val load = insns[0] as VarInsnNode
+        val cst = insns[1]
+        if(load.`var` != method.lastArgIndex) return false
+        if(cst.intConstant == null) return false
         return true
     }
 
@@ -77,6 +94,15 @@ class IllegalStateExceptionRemover : Transformer() {
                 (DUP)
                 (INVOKESPECIAL)
                 (ATHROW)
+            """.trimIndent()
+        )
+
+        private val RETURN_PATTERN = InsnMatcher.compile(
+            """
+                (ILOAD)
+                ([ICONST_0-LDC])
+                ([IF_ICMPEQ-IF_ACMPNE])
+                ([IRETURN-RETURN])
             """.trimIndent()
         )
     }

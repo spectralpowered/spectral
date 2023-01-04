@@ -61,6 +61,7 @@ class ClassPool {
 
     fun build() {
         irCache.clear()
+        classes.forEach { it.clean() }
         classes.forEach { it.build() }
     }
 
@@ -101,5 +102,11 @@ class ClassPool {
         clear()
         newClasses.forEach { addClass(it) }
         build()
+    }
+
+    fun replaceClass(old: ClassNode, new: ClassNode) {
+        removeClass(old)
+        addClass(new)
+        new.build()
     }
 }

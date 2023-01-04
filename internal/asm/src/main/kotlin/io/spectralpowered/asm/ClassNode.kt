@@ -22,6 +22,8 @@ import io.spectralpowered.asm.util.IrClass
 import io.spectralpowered.util.field
 import io.spectralpowered.util.nullField
 import org.mapleir.asm.ClassHelper
+import org.objectweb.asm.ClassReader
+import org.objectweb.asm.ClassWriter
 import org.objectweb.asm.Type
 import org.objectweb.asm.tree.ClassNode
 import java.lang.reflect.Modifier
@@ -43,6 +45,14 @@ fun ClassNode.build() {
         interfaceClasses.add(it)
         it.children.add(this)
     }
+}
+
+internal fun ClassNode.clean() {
+    superClass = null
+    children.clear()
+    interfaceClasses.clear()
+    methods.forEach { it.clean() }
+    fields.forEach { it.clean() }
 }
 
 var ClassNode.pool: ClassPool by field()
@@ -94,6 +104,17 @@ fun ClassNode.isOverride(name: String, desc: String): Boolean {
 
 fun ClassNode.isAssignableFrom(other: ClassNode): Boolean {
     return this == other || this.isSuperClassOf(other) || this.isSuperInterfaceOf(other)
+}
+
+fun ClassNode.toByteArray(): ByteArray {
+    val writer = ClassWriter(ClassWriter.COMPUTE_MAXS)
+    this.accept(writer)
+    return writer.toByteArray()
+}
+
+fun ClassNode.fromByteArray(bytes: ByteArray) {
+    val reader = ClassReader(bytes)
+    reader.accept(this, ClassReader.SKIP_FRAMES)
 }
 
 private tailrec fun ClassNode.isSuperClassOf(other: ClassNode): Boolean {

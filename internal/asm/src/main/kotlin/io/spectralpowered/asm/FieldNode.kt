@@ -33,6 +33,8 @@ fun FieldNode.build() {
     irNode = IrField(this, owner.irNode)
 }
 
+internal fun FieldNode.clean() {}
+
 var FieldNode.owner: ClassNode by field()
 var FieldNode.irNode: IrField by field()
 

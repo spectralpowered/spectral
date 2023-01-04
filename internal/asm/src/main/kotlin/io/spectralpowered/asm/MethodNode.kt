@@ -20,6 +20,7 @@ package io.spectralpowered.asm
 
 import io.spectralpowered.asm.util.IrMethod
 import io.spectralpowered.util.field
+import org.mapleir.ir.cfg.builder.ControlFlowGraphBuilder
 import org.objectweb.asm.Type
 import org.objectweb.asm.tree.ClassNode
 import org.objectweb.asm.tree.MethodNode
@@ -33,6 +34,8 @@ fun MethodNode.build() {
     irNode = IrMethod(this, owner.irNode)
 }
 
+internal fun MethodNode.clean() {}
+
 var MethodNode.owner: ClassNode by field()
 var MethodNode.irNode: IrMethod by field()
 
@@ -40,7 +43,7 @@ val MethodNode.pool get() = owner.pool
 val MethodNode.identifier get() = "${owner.identifier}.$name$desc"
 val MethodNode.type get() = Type.getMethodType(desc)
 
-fun MethodNode.cfg() = pool.irCache.getFor(irNode)
+fun MethodNode.cfg() = ControlFlowGraphBuilder(irNode, false).buildImpl()
 
 fun MethodNode.isStatic() = Modifier.isStatic(access)
 fun MethodNode.isAbstract() = Modifier.isAbstract(access)

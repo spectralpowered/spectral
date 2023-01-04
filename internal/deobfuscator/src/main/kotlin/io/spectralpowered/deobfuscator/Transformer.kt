@@ -39,6 +39,8 @@ abstract class Transformer {
             .setUpdateIntervalMillis(10)
             .build()
 
+        transformPool(pool)
+
         pool.classes.forEach { cls ->
             transformClass(cls)
             cls.methods.forEach { method ->
@@ -58,6 +60,8 @@ abstract class Transformer {
     open fun preTransform(pool: ClassPool) {}
 
     open fun postTransform(pool: ClassPool) {}
+
+    open fun transformPool(pool: ClassPool) {}
 
     open fun transformClass(cls: ClassNode) {}
 
