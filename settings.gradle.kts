@@ -11,6 +11,7 @@ module("api")
 module("util")
 module("internal:asm")
 module("internal:deobfuscator")
+module("runescape")
 
 fun module(path: String) {
     val split = path.split(":")
