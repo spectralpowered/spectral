@@ -26,7 +26,7 @@ import org.objectweb.asm.tree.ClassNode
 import org.objectweb.asm.tree.MethodNode
 import java.lang.reflect.Modifier
 
-internal fun MethodNode.init(owner: ClassNode) {
+fun MethodNode.init(owner: ClassNode) {
     this.owner = owner
 }
 

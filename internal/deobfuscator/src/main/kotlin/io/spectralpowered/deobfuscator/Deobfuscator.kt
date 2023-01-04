@@ -23,14 +23,20 @@ import io.spectralpowered.asm.ignored
 import io.spectralpowered.deobfuscator.transformer.ControlFlowFixer
 import io.spectralpowered.deobfuscator.transformer.CopyPropagationFixer
 import io.spectralpowered.deobfuscator.transformer.DeadCodeRemover
+import io.spectralpowered.deobfuscator.transformer.ErrorConstructorRemover
+import io.spectralpowered.deobfuscator.transformer.FernflowerExceptionFixer
 import io.spectralpowered.deobfuscator.transformer.LocalVariableExprFixer
 import io.spectralpowered.deobfuscator.transformer.FieldSorter
+import io.spectralpowered.deobfuscator.transformer.GetPathFixer
 import io.spectralpowered.deobfuscator.transformer.IllegalStateExceptionRemover
 import io.spectralpowered.deobfuscator.transformer.MethodSorter
 import io.spectralpowered.deobfuscator.transformer.MultiplierRemover
 import io.spectralpowered.deobfuscator.transformer.RedundantGotoRemover
 import io.spectralpowered.deobfuscator.transformer.Renamer
 import io.spectralpowered.deobfuscator.transformer.RuntimeExceptionRemover
+import io.spectralpowered.deobfuscator.transformer.StackFrameFixer
+import io.spectralpowered.deobfuscator.transformer.StaticFieldMover
+import io.spectralpowered.deobfuscator.transformer.StaticMethodMover
 import io.spectralpowered.deobfuscator.transformer.UnusedArgumentRemover
 import io.spectralpowered.deobfuscator.transformer.UnusedFieldRemover
 import io.spectralpowered.deobfuscator.transformer.UnusedMethodRemover
@@ -78,6 +84,13 @@ class Deobfuscator(
         register<FieldSorter>()
         register<LocalVariableExprFixer>()
         register<MultiplierRemover>()
+        register<StackFrameFixer>()
+        register<ErrorConstructorRemover>()
+        register<FernflowerExceptionFixer>()
+        register<StaticFieldMover>()
+        register<StaticMethodMover>()
+        register<GetPathFixer>()
+        register<StackFrameFixer>()
 
         Logger.info("Found ${transformers.size} registered transformers.")
     }
