@@ -30,20 +30,17 @@ internal fun MethodNode.init(owner: ClassNode) {
     this.owner = owner
 }
 
-fun MethodNode.build() {
-    irNode = IrMethod(this, owner.irNode)
-}
-
+fun MethodNode.build() {}
 internal fun MethodNode.clean() {}
 
 var MethodNode.owner: ClassNode by field()
-var MethodNode.irNode: IrMethod by field()
 
 val MethodNode.pool get() = owner.pool
 val MethodNode.identifier get() = "${owner.identifier}.$name$desc"
 val MethodNode.type get() = Type.getMethodType(desc)
+val MethodNode.irNode get() = IrMethod(this, owner.irNode)
 
-fun MethodNode.cfg() = ControlFlowGraphBuilder(irNode, false).buildImpl()
+fun MethodNode.cfg() = ControlFlowGraphBuilder(irNode, false)
 
 fun MethodNode.isStatic() = Modifier.isStatic(access)
 fun MethodNode.isAbstract() = Modifier.isAbstract(access)

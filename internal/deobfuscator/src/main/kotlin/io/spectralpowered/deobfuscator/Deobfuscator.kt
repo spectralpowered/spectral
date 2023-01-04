@@ -27,6 +27,7 @@ import io.spectralpowered.deobfuscator.transformer.LocalVariableExprFixer
 import io.spectralpowered.deobfuscator.transformer.FieldSorter
 import io.spectralpowered.deobfuscator.transformer.IllegalStateExceptionRemover
 import io.spectralpowered.deobfuscator.transformer.MethodSorter
+import io.spectralpowered.deobfuscator.transformer.MultiplierRemover
 import io.spectralpowered.deobfuscator.transformer.RedundantGotoRemover
 import io.spectralpowered.deobfuscator.transformer.Renamer
 import io.spectralpowered.deobfuscator.transformer.RuntimeExceptionRemover
@@ -76,6 +77,7 @@ class Deobfuscator(
         register<MethodSorter>()
         register<FieldSorter>()
         register<LocalVariableExprFixer>()
+        register<MultiplierRemover>()
 
         Logger.info("Found ${transformers.size} registered transformers.")
     }

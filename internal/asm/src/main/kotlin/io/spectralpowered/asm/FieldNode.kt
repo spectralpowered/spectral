@@ -29,17 +29,14 @@ internal fun FieldNode.init(owner: ClassNode) {
     this.owner = owner
 }
 
-fun FieldNode.build() {
-    irNode = IrField(this, owner.irNode)
-}
-
+fun FieldNode.build() {}
 internal fun FieldNode.clean() {}
 
 var FieldNode.owner: ClassNode by field()
-var FieldNode.irNode: IrField by field()
 
 val FieldNode.identifier get() = "${owner.identifier}.$name"
 val FieldNode.type get() = Type.getType(desc)
+val FieldNode.irNode get() = IrField(this, owner.irNode)
 
 fun FieldNode.isStatic() = Modifier.isStatic(access)
 fun FieldNode.isPrivate() = Modifier.isPrivate(access)

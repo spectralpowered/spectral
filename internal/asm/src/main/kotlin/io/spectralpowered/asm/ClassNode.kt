@@ -35,7 +35,6 @@ internal fun ClassNode.init(pool: ClassPool) {
 }
 
 fun ClassNode.build() {
-    irNode = ClassHelper.create(this)
     methods.forEach { it.build() }
     fields.forEach { it.build() }
 
@@ -57,7 +56,6 @@ internal fun ClassNode.clean() {
 
 var ClassNode.pool: ClassPool by field()
 var ClassNode.ignored: Boolean by field { false }
-var ClassNode.irNode: IrClass by field()
 
 var ClassNode.superClass: ClassNode? by nullField()
 val ClassNode.interfaceClasses: HashSet<ClassNode> by field { hashSetOf() }
@@ -65,6 +63,8 @@ val ClassNode.children: HashSet<ClassNode> by field { hashSetOf() }
 
 val ClassNode.identifier get() = name
 val ClassNode.type get() = Type.getObjectType(name)
+
+val ClassNode.irNode: IrClass get() = ClassHelper.create(this)
 
 fun ClassNode.isAbstract() = Modifier.isAbstract(access)
 fun ClassNode.isInterface() = Modifier.isInterface(access)

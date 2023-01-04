@@ -40,9 +40,9 @@ class MethodSorter : Transformer() {
         cls.methods = cls.methods.sortedWith(compareBy<MethodNode> { !it.isInitializer() }
             .thenBy { !it.isConstructor() }
             .thenBy { it.isStatic() }
+            .thenBy { it.lineNumber }
             .thenBy { Modifier.toString(it.access and Modifier.methodModifiers()) }
             .thenBy { Type.getMethodType(it.desc).returnType.className }
-            .thenBy { it.lineNumber }
             .thenBy { it.name }
         )
     }
