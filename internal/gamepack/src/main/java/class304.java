@@ -2,14 +2,52 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.HashMap;
 
+@ObfInfo(
+   name = "od"
+)
 public abstract class class304 {
+   @ObfInfo(
+      owner = "od",
+      name = "j",
+      desc = "[Lov;"
+   )
    class368[] field2441;
+   @ObfInfo(
+      owner = "od",
+      name = "b",
+      desc = "I"
+   )
    int field2439 = 0;
+   @ObfInfo(
+      owner = "od",
+      name = "o",
+      desc = "Ljava/util/Comparator;"
+   )
    Comparator field2438 = null;
+   @ObfInfo(
+      owner = "od",
+      name = "i",
+      desc = "Ljava/util/HashMap;"
+   )
    HashMap field2440;
+   @ObfInfo(
+      owner = "od",
+      name = "g",
+      desc = "Ljava/util/HashMap;"
+   )
    HashMap field2443;
+   @ObfInfo(
+      owner = "od",
+      name = "u",
+      desc = "I"
+   )
    final int field2442;
 
+   @ObfInfo(
+      owner = "od",
+      name = "<init>",
+      desc = "(I)V"
+   )
    class304(int var1) {
       this.field2442 = var1;
       this.field2441 = this.method1485(var1);
@@ -17,10 +55,25 @@ public abstract class class304 {
       this.field2440 = new HashMap(var1 / 8);
    }
 
+   @ObfInfo(
+      owner = "od",
+      name = "h",
+      desc = "(B)Lov;"
+   )
    abstract class368 method1482();
 
+   @ObfInfo(
+      owner = "od",
+      name = "e",
+      desc = "(II)[Lov;"
+   )
    abstract class368[] method1485(int var1);
 
+   @ObfInfo(
+      owner = "od",
+      name = "ar",
+      desc = "(S)V"
+   )
    public void method1466() {
       this.field2439 = 0;
       Arrays.fill(this.field2441, (Object)null);
@@ -28,14 +81,29 @@ public abstract class class304 {
       this.field2440.clear();
    }
 
+   @ObfInfo(
+      owner = "od",
+      name = "at",
+      desc = "(I)I"
+   )
    public int method1467() {
       return this.field2439;
    }
 
+   @ObfInfo(
+      owner = "od",
+      name = "ay",
+      desc = "(I)Z"
+   )
    public boolean method1468() {
       return this.field2442 == this.field2439;
    }
 
+   @ObfInfo(
+      owner = "od",
+      name = "an",
+      desc = "(Lrp;B)Z"
+   )
    public boolean method1469(class257 var1) {
       if (!var1.method1103()) {
          return false;
@@ -44,19 +112,39 @@ public abstract class class304 {
       }
    }
 
+   @ObfInfo(
+      owner = "od",
+      name = "ab",
+      desc = "(Lrp;B)Lov;"
+   )
    public class368 method1484(class257 var1) {
       class368 var3 = this.method1483(var1);
       return var3 != null ? var3 : this.method1471(var1);
    }
 
+   @ObfInfo(
+      owner = "od",
+      name = "al",
+      desc = "(Lrp;B)Lov;"
+   )
    class368 method1483(class257 var1) {
       return !var1.method1103() ? null : (class368)this.field2443.get(var1);
    }
 
+   @ObfInfo(
+      owner = "od",
+      name = "ag",
+      desc = "(Lrp;I)Lov;"
+   )
    class368 method1471(class257 var1) {
       return !var1.method1103() ? null : (class368)this.field2440.get(var1);
    }
 
+   @ObfInfo(
+      owner = "od",
+      name = "az",
+      desc = "(Lrp;B)Z"
+   )
    public final boolean method1488(class257 var1) {
       class368 var3 = this.method1483(var1);
       if (null == var3) {
@@ -67,6 +155,11 @@ public abstract class class304 {
       }
    }
 
+   @ObfInfo(
+      owner = "od",
+      name = "ak",
+      desc = "(Lov;I)V"
+   )
    final void method1472(class368 var1) {
       int var3 = this.method1477(var1);
       if (var3 != -1) {
@@ -75,10 +168,20 @@ public abstract class class304 {
       }
    }
 
+   @ObfInfo(
+      owner = "od",
+      name = "af",
+      desc = "(Lrp;B)Lov;"
+   )
    class368 method1473(class257 var1) {
       return this.method1474(var1, (class257)null);
    }
 
+   @ObfInfo(
+      owner = "od",
+      name = "ai",
+      desc = "(Lrp;Lrp;B)Lov;"
+   )
    class368 method1474(class257 var1, class257 var2) {
       if (this.method1483(var1) != null) {
          throw new IllegalStateException();
@@ -91,6 +194,11 @@ public abstract class class304 {
       }
    }
 
+   @ObfInfo(
+      owner = "od",
+      name = "ax",
+      desc = "(II)Lov;"
+   )
    public final class368 method1475(int var1) {
       if (var1 >= 0 && var1 < this.field2439) {
          return this.field2441[var1];
@@ -99,6 +207,11 @@ public abstract class class304 {
       }
    }
 
+   @ObfInfo(
+      owner = "od",
+      name = "ah",
+      desc = "(I)V"
+   )
    public final void method1487() {
       if (this.field2438 == null) {
          Arrays.sort(this.field2441, 0, this.field2439);
@@ -108,12 +221,22 @@ public abstract class class304 {
 
    }
 
+   @ObfInfo(
+      owner = "od",
+      name = "aw",
+      desc = "(Lov;Lrp;Lrp;I)V"
+   )
    final void method1476(class368 var1, class257 var2, class257 var3) {
       this.method1478(var1);
       var1.method1815(var2, var3);
       this.method1480(var1);
    }
 
+   @ObfInfo(
+      owner = "od",
+      name = "aj",
+      desc = "(Lov;I)I"
+   )
    final int method1477(class368 var1) {
       for(int var3 = 0; var3 < this.field2439; ++var3) {
          if (this.field2441[var3] == var1) {
@@ -124,6 +247,11 @@ public abstract class class304 {
       return -1;
    }
 
+   @ObfInfo(
+      owner = "od",
+      name = "aq",
+      desc = "(Lov;B)V"
+   )
    final void method1478(class368 var1) {
       if (this.field2443.remove(var1.field3127) == null) {
          throw new IllegalStateException();
@@ -135,10 +263,20 @@ public abstract class class304 {
       }
    }
 
+   @ObfInfo(
+      owner = "od",
+      name = "ap",
+      desc = "(Lov;I)V"
+   )
    final void method1479(class368 var1) {
       this.field2441[++this.field2439 - 1] = var1;
    }
 
+   @ObfInfo(
+      owner = "od",
+      name = "aa",
+      desc = "(Lov;I)V"
+   )
    final void method1480(class368 var1) {
       this.field2443.put(var1.field3127, var1);
       if (null != var1.field3128) {
@@ -150,6 +288,11 @@ public abstract class class304 {
 
    }
 
+   @ObfInfo(
+      owner = "od",
+      name = "ae",
+      desc = "(IB)V"
+   )
    final void method1481(int var1) {
       --this.field2439;
       if (var1 < this.field2439) {
@@ -158,10 +301,20 @@ public abstract class class304 {
 
    }
 
+   @ObfInfo(
+      owner = "od",
+      name = "ac",
+      desc = "(I)V"
+   )
    public final void method1470() {
       this.field2438 = null;
    }
 
+   @ObfInfo(
+      owner = "od",
+      name = "bh",
+      desc = "(Ljava/util/Comparator;I)V"
+   )
    public final void method1489(Comparator var1) {
       if (null == this.field2438) {
          this.field2438 = var1;
@@ -171,6 +324,11 @@ public abstract class class304 {
 
    }
 
+   @ObfInfo(
+      owner = "od",
+      name = "v",
+      desc = "(CI)C"
+   )
    public static char method1486(char var0) {
       switch(var0) {
       case ' ':

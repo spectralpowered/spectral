@@ -3,24 +3,62 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
+@ObfInfo(
+   name = "bb"
+)
 public class class63 {
+   @ObfInfo(
+      owner = "bb",
+      name = "bp",
+      desc = "Lqi;"
+   )
    static class194 field619;
+   @ObfInfo(
+      owner = "bb",
+      name = "h",
+      desc = "Ljava/util/concurrent/ExecutorService;"
+   )
    ExecutorService field620 = Executors.newSingleThreadExecutor();
+   @ObfInfo(
+      owner = "bb",
+      name = "e",
+      desc = "Ljava/util/concurrent/Future;"
+   )
    Future field618;
 
+   @ObfInfo(
+      owner = "bb",
+      name = "<init>",
+      desc = "()V"
+   )
    class63() {
       this.field618 = this.field620.submit(new class287());
    }
 
+   @ObfInfo(
+      owner = "bb",
+      name = "h",
+      desc = "(B)V"
+   )
    void method290() {
       this.field620.shutdown();
       this.field620 = null;
    }
 
+   @ObfInfo(
+      owner = "bb",
+      name = "e",
+      desc = "(I)Z"
+   )
    boolean method291() {
       return this.field618.isDone();
    }
 
+   @ObfInfo(
+      owner = "bb",
+      name = "v",
+      desc = "(I)Ljava/security/SecureRandom;"
+   )
    SecureRandom method292() {
       try {
          return (SecureRandom)this.field618.get();
@@ -31,6 +69,11 @@ public class class63 {
       }
    }
 
+   @ObfInfo(
+      owner = "bb",
+      name = "e",
+      desc = "([FIFI)F"
+   )
    static float method295(float[] var0, int var1, float var2) {
       float var4 = var0[var1];
 
@@ -41,6 +84,11 @@ public class class63 {
       return var4;
    }
 
+   @ObfInfo(
+      owner = "bb",
+      name = "v",
+      desc = "(ILbm;ZI)I"
+   )
    static int method294(int var0, class461 var1, boolean var2) {
       if (var0 < 1000) {
          return class288.method1425(var0, var1, var2);
@@ -143,6 +191,11 @@ public class class63 {
       }
    }
 
+   @ObfInfo(
+      owner = "bb",
+      name = "ie",
+      desc = "(B)I"
+   )
    static final int method293() {
       if (class50.field574.method2202()) {
          return class347.field2878;

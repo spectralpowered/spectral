@@ -1,9 +1,27 @@
 import java.util.Comparator;
 
+@ObfInfo(
+   name = "bg"
+)
 public class class290 implements Comparator {
+   @ObfInfo(
+      owner = "bg",
+      name = "cc",
+      desc = "[Lrx;"
+   )
    static class266[] field2370;
+   @ObfInfo(
+      owner = "bg",
+      name = "h",
+      desc = "Z"
+   )
    boolean field2371;
 
+   @ObfInfo(
+      owner = "bg",
+      name = "h",
+      desc = "(Lmg;Lmg;B)I"
+   )
    int method1431(class258 var1, class258 var2) {
       if (var1.field2106 == var2.field2106) {
          return 0;
@@ -22,22 +40,47 @@ public class class290 implements Comparator {
       }
    }
 
+   @ObfInfo(
+      owner = "bg",
+      name = "compare",
+      desc = "(Ljava/lang/Object;Ljava/lang/Object;)I"
+   )
    public int compare(Object var1, Object var2) {
       return this.method1431((class258)var1, (class258)var2);
    }
 
+   @ObfInfo(
+      owner = "bg",
+      name = "equals",
+      desc = "(Ljava/lang/Object;)Z"
+   )
    public boolean equals(Object var1) {
       return super.equals(var1);
    }
 
+   @ObfInfo(
+      owner = "bg",
+      name = "h",
+      desc = "(I)[Ljh;"
+   )
    static class41[] method1430() {
       return new class41[]{class41.field208, class41.field212, class41.field209, class41.field213, class41.field211, class41.field216};
    }
 
+   @ObfInfo(
+      owner = "bg",
+      name = "e",
+      desc = "(CB)Z"
+   )
    public static final boolean method1427(char var0) {
       return var0 == 160 || var0 == ' ' || var0 == '_' || var0 == '-';
    }
 
+   @ObfInfo(
+      owner = "bg",
+      name = "f",
+      desc = "(ILbm;ZI)I"
+   )
    static int method1429(int var0, class461 var1, boolean var2) {
       class120 var4;
       if (var0 >= 2000) {
@@ -91,6 +134,11 @@ public class class290 implements Comparator {
       }
    }
 
+   @ObfInfo(
+      owner = "bg",
+      name = "jz",
+      desc = "(I)V"
+   )
    static final void method1428() {
       int var1 = class198.field1745;
       int var2 = class267.field2215;

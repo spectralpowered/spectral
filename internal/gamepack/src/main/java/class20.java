@@ -1,13 +1,46 @@
 import java.io.EOFException;
 import java.io.IOException;
 
+@ObfInfo(
+   name = "oi"
+)
 public final class class20 {
+   @ObfInfo(
+      owner = "oi",
+      name = "h",
+      desc = "[B"
+   )
    static byte[] field102 = new byte[520];
+   @ObfInfo(
+      owner = "oi",
+      name = "e",
+      desc = "Lqa;"
+   )
    class435 field100 = null;
+   @ObfInfo(
+      owner = "oi",
+      name = "v",
+      desc = "Lqa;"
+   )
    class435 field101 = null;
+   @ObfInfo(
+      owner = "oi",
+      name = "m",
+      desc = "I"
+   )
    int field103 = 65000;
+   @ObfInfo(
+      owner = "oi",
+      name = "x",
+      desc = "I"
+   )
    int field99;
 
+   @ObfInfo(
+      owner = "oi",
+      name = "<init>",
+      desc = "(ILqa;Lqa;I)V"
+   )
    public class20(int var1, class435 var2, class435 var3, int var4) {
       this.field99 = var1;
       this.field100 = var2;
@@ -15,6 +48,11 @@ public final class class20 {
       this.field103 = var4;
    }
 
+   @ObfInfo(
+      owner = "oi",
+      name = "h",
+      desc = "(II)[B"
+   )
    public byte[] method93(int var1) {
       class435 var3 = this.field100;
       synchronized(this.field100) {
@@ -110,6 +148,11 @@ public final class class20 {
       }
    }
 
+   @ObfInfo(
+      owner = "oi",
+      name = "e",
+      desc = "(I[BII)Z"
+   )
    public boolean method95(int var1, byte[] var2, int var3) {
       class435 var5 = this.field100;
       synchronized(this.field100) {
@@ -126,6 +169,11 @@ public final class class20 {
       }
    }
 
+   @ObfInfo(
+      owner = "oi",
+      name = "v",
+      desc = "(I[BIZI)Z"
+   )
    boolean method94(int var1, byte[] var2, int var3, boolean var4) {
       class435 var6 = this.field100;
       synchronized(this.field100) {
@@ -282,6 +330,11 @@ public final class class20 {
       }
    }
 
+   @ObfInfo(
+      owner = "oi",
+      name = "toString",
+      desc = "()Ljava/lang/String;"
+   )
    public String toString() {
       return "" + this.field99;
    }

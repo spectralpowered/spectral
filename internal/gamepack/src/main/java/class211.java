@@ -1,20 +1,103 @@
+@ObfInfo(
+   name = "hp"
+)
 public final class class211 {
+   @ObfInfo(
+      owner = "hp",
+      name = "sb",
+      desc = "Lrx;"
+   )
    static class266 field1833;
+   @ObfInfo(
+      owner = "hp",
+      name = "g",
+      desc = "I"
+   )
    int field1820;
+   @ObfInfo(
+      owner = "hp",
+      name = "e",
+      desc = "I"
+   )
    int field1821;
+   @ObfInfo(
+      owner = "hp",
+      name = "x",
+      desc = "I"
+   )
    int field1823;
+   @ObfInfo(
+      owner = "hp",
+      name = "j",
+      desc = "I"
+   )
    int field1824;
+   @ObfInfo(
+      owner = "hp",
+      name = "h",
+      desc = "I"
+   )
    int field1825;
+   @ObfInfo(
+      owner = "hp",
+      name = "r",
+      desc = "I"
+   )
    int field1826;
+   @ObfInfo(
+      owner = "hp",
+      name = "u",
+      desc = "I"
+   )
    int field1827;
+   @ObfInfo(
+      owner = "hp",
+      name = "b",
+      desc = "I"
+   )
    int field1828;
+   @ObfInfo(
+      owner = "hp",
+      name = "f",
+      desc = "I"
+   )
    int field1829;
+   @ObfInfo(
+      owner = "hp",
+      name = "m",
+      desc = "I"
+   )
    int field1830;
+   @ObfInfo(
+      owner = "hp",
+      name = "o",
+      desc = "I"
+   )
    int field1832 = 0;
+   @ObfInfo(
+      owner = "hp",
+      name = "v",
+      desc = "I"
+   )
    int field1834;
+   @ObfInfo(
+      owner = "hp",
+      name = "q",
+      desc = "Lhr;"
+   )
    public class295 field1822;
+   @ObfInfo(
+      owner = "hp",
+      name = "i",
+      desc = "J"
+   )
    public long field1831 = 0L;
 
+   @ObfInfo(
+      owner = "hp",
+      name = "x",
+      desc = "(I)V"
+   )
    static void method913() {
       if (null == class359.field3071 || class359.field3071.length() <= 0) {
          if (class50.field574.method2215() != null) {
@@ -27,6 +110,11 @@ public final class class211 {
       }
    }
 
+   @ObfInfo(
+      owner = "hp",
+      name = "jt",
+      desc = "(Lcg;B)V"
+   )
    static void method914(class267 var0) {
       var0.field2611 = var0.field2213.field3470;
       var0.field2679 = var0.field2213.field3499;

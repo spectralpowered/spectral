@@ -1,10 +1,43 @@
+@ObfInfo(
+   name = "ii"
+)
 public class class23 {
+   @ObfInfo(
+      owner = "ii",
+      name = "i",
+      desc = "Lra;"
+   )
    static class344 field110;
+   @ObfInfo(
+      owner = "ii",
+      name = "x",
+      desc = "Liq;"
+   )
    class221 field109;
+   @ObfInfo(
+      owner = "ii",
+      name = "v",
+      desc = "I"
+   )
    int field106;
+   @ObfInfo(
+      owner = "ii",
+      name = "e",
+      desc = "I"
+   )
    int field107;
+   @ObfInfo(
+      owner = "ii",
+      name = "h",
+      desc = "Ljava/lang/String;"
+   )
    String field108;
 
+   @ObfInfo(
+      owner = "ii",
+      name = "<init>",
+      desc = "(Ljava/lang/String;IILiq;)V"
+   )
    class23(String var1, int var2, int var3, class221 var4) {
       this.field108 = var1;
       this.field107 = var2;
@@ -12,6 +45,11 @@ public class class23 {
       this.field109 = var4;
    }
 
+   @ObfInfo(
+      owner = "ii",
+      name = "x",
+      desc = "(CLmb;B)I"
+   )
    static int method97(char var0, class476 var1) {
       int var3 = var0 << 4;
       if (Character.isUpperCase(var0) || Character.isTitleCase(var0)) {
@@ -26,6 +64,11 @@ public class class23 {
       return var3;
    }
 
+   @ObfInfo(
+      owner = "ii",
+      name = "lp",
+      desc = "([Lkd;II)V"
+   )
    static final void method98(class120[] var0, int var1) {
       for(int var3 = 0; var3 < var0.length; ++var3) {
          class120 var4 = var0[var3];

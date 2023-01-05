@@ -1,14 +1,37 @@
 import java.util.Arrays;
 
+@ObfInfo(
+   name = "ao"
+)
 public class class109 {
+   @ObfInfo(
+      owner = "ao",
+      name = "f",
+      desc = "[I"
+   )
    int[] field823 = new int[112];
+   @ObfInfo(
+      owner = "ao",
+      name = "r",
+      desc = "[I"
+   )
    int[] field824 = new int[192];
 
+   @ObfInfo(
+      owner = "ao",
+      name = "<init>",
+      desc = "()V"
+   )
    public class109() {
       Arrays.fill(this.field823, 3);
       Arrays.fill(this.field824, 3);
    }
 
+   @ObfInfo(
+      owner = "ao",
+      name = "h",
+      desc = "(III)V"
+   )
    public void method431(int var1, int var2) {
       if (this.method433(var1) && this.method434(var2)) {
          this.field823[var1] = var2;
@@ -16,6 +39,11 @@ public class class109 {
 
    }
 
+   @ObfInfo(
+      owner = "ao",
+      name = "e",
+      desc = "(CII)V"
+   )
    public void method428(char var1, int var2) {
       if (this.method435(var1, (byte)-1) && this.method434(var2)) {
          this.field824[var1] = var2;
@@ -23,30 +51,65 @@ public class class109 {
 
    }
 
+   @ObfInfo(
+      owner = "ao",
+      name = "v",
+      desc = "(IB)I"
+   )
    public int method427(int var1) {
       return this.method433(var1) ? this.field823[var1] : 0;
    }
 
+   @ObfInfo(
+      owner = "ao",
+      name = "x",
+      desc = "(CI)I"
+   )
    public int method429(char var1) {
       return this.method435(var1, (byte)-1) ? this.field824[var1] : 0;
    }
 
+   @ObfInfo(
+      owner = "ao",
+      name = "m",
+      desc = "(II)Z"
+   )
    public boolean method437(int var1) {
       return this.method433(var1) && (1 == this.field823[var1] || this.field823[var1] == 3);
    }
 
+   @ObfInfo(
+      owner = "ao",
+      name = "q",
+      desc = "(CI)Z"
+   )
    public boolean method430(char var1) {
       return this.method435(var1, (byte)-1) && (1 == this.field824[var1] || 3 == this.field824[var1]);
    }
 
+   @ObfInfo(
+      owner = "ao",
+      name = "f",
+      desc = "(II)Z"
+   )
    public boolean method432(int var1) {
       return this.method433(var1) && (2 == this.field823[var1] || this.field823[var1] == 3);
    }
 
+   @ObfInfo(
+      owner = "ao",
+      name = "r",
+      desc = "(CB)Z"
+   )
    public boolean method436(char var1) {
       return this.method435(var1, (byte)-1) && (2 == this.field824[var1] || 3 == this.field824[var1]);
    }
 
+   @ObfInfo(
+      owner = "ao",
+      name = "u",
+      desc = "(IB)Z"
+   )
    boolean method433(int var1) {
       if (var1 >= 0 && var1 < 112) {
          return true;
@@ -56,6 +119,11 @@ public class class109 {
       }
    }
 
+   @ObfInfo(
+      owner = "ao",
+      name = "b",
+      desc = "(CB)Z"
+   )
    boolean method435(char var1, byte var2) {
       if (var1 >= 0) {
          if (var2 != -1) {
@@ -75,6 +143,11 @@ public class class109 {
       return false;
    }
 
+   @ObfInfo(
+      owner = "ao",
+      name = "j",
+      desc = "(II)Z"
+   )
    boolean method434(int var1) {
       if (var1 >= 0 && var1 < 4) {
          return true;
@@ -84,6 +157,11 @@ public class class109 {
       }
    }
 
+   @ObfInfo(
+      owner = "ao",
+      name = "e",
+      desc = "(Ldu;FI)F"
+   )
    static float method438(class84 var0, float var1) {
       if (var0 == null) {
          return 0.0F;

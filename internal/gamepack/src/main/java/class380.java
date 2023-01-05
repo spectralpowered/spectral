@@ -1,34 +1,187 @@
+@ObfInfo(
+   name = "cj"
+)
 public final class class380 extends class334 {
+   @ObfInfo(
+      owner = "cj",
+      name = "ad",
+      desc = "Z"
+   )
    boolean field3205;
+   @ObfInfo(
+      owner = "cj",
+      name = "t",
+      desc = "Z"
+   )
    boolean field3211;
+   @ObfInfo(
+      owner = "cj",
+      name = "p",
+      desc = "Z"
+   )
    boolean field3213;
+   @ObfInfo(
+      owner = "cj",
+      name = "h",
+      desc = "Lrp;"
+   )
    class257 field3207;
+   @ObfInfo(
+      owner = "cj",
+      name = "e",
+      desc = "Lko;"
+   )
    class284 field3194;
+   @ObfInfo(
+      owner = "cj",
+      name = "n",
+      desc = "Lhh;"
+   )
    class470 field3206;
+   @ObfInfo(
+      owner = "cj",
+      name = "w",
+      desc = "Loh;"
+   )
    class90 field3210;
+   @ObfInfo(
+      owner = "cj",
+      name = "as",
+      desc = "Loh;"
+   )
    class90 field3212;
+   @ObfInfo(
+      owner = "cj",
+      name = "z",
+      desc = "Loh;"
+   )
    class90 field3216;
+   @ObfInfo(
+      owner = "cj",
+      name = "i",
+      desc = "I"
+   )
    int field3193;
+   @ObfInfo(
+      owner = "cj",
+      name = "v",
+      desc = "I"
+   )
    int field3195 = -1;
+   @ObfInfo(
+      owner = "cj",
+      name = "x",
+      desc = "I"
+   )
    int field3196 = -1;
+   @ObfInfo(
+      owner = "cj",
+      name = "c",
+      desc = "I"
+   )
    int field3197;
+   @ObfInfo(
+      owner = "cj",
+      name = "f",
+      desc = "I"
+   )
    int field3198;
+   @ObfInfo(
+      owner = "cj",
+      name = "r",
+      desc = "I"
+   )
    int field3199;
+   @ObfInfo(
+      owner = "cj",
+      name = "l",
+      desc = "I"
+   )
    int field3200;
+   @ObfInfo(
+      owner = "cj",
+      name = "u",
+      desc = "I"
+   )
    int field3201;
+   @ObfInfo(
+      owner = "cj",
+      name = "j",
+      desc = "I"
+   )
    int field3202;
+   @ObfInfo(
+      owner = "cj",
+      name = "g",
+      desc = "I"
+   )
    int field3203;
+   @ObfInfo(
+      owner = "cj",
+      name = "s",
+      desc = "I"
+   )
    int field3204;
+   @ObfInfo(
+      owner = "cj",
+      name = "a",
+      desc = "I"
+   )
    int field3208;
+   @ObfInfo(
+      owner = "cj",
+      name = "o",
+      desc = "I"
+   )
    int field3209;
+   @ObfInfo(
+      owner = "cj",
+      name = "d",
+      desc = "I"
+   )
    int field3214;
+   @ObfInfo(
+      owner = "cj",
+      name = "y",
+      desc = "I"
+   )
    int field3215;
+   @ObfInfo(
+      owner = "cj",
+      name = "b",
+      desc = "I"
+   )
    int field3218;
+   @ObfInfo(
+      owner = "cj",
+      name = "ao",
+      desc = "I"
+   )
    int field3219;
+   @ObfInfo(
+      owner = "cj",
+      name = "k",
+      desc = "I"
+   )
    int field3220;
+   @ObfInfo(
+      owner = "cj",
+      name = "am",
+      desc = "I"
+   )
    int field3221;
+   @ObfInfo(
+      owner = "cj",
+      name = "q",
+      desc = "[Ljava/lang/String;"
+   )
    String[] field3217 = new String[3];
 
+   @ObfInfo(
+      owner = "cj",
+      name = "<init>",
+      desc = "()V"
+   )
    class380() {
       for(int var1 = 0; var1 < 3; ++var1) {
          this.field3217[var1] = "";
@@ -47,6 +200,11 @@ public final class class380 extends class334 {
       this.field3205 = false;
    }
 
+   @ObfInfo(
+      owner = "cj",
+      name = "h",
+      desc = "(Lqy;B)V"
+   )
    final void method1882(class127 var1) {
       var1.field1070 = 0;
       int var3 = var1.method547();
@@ -214,6 +372,11 @@ public final class class380 extends class334 {
       this.field3194.method1405(var6, var27, var28, var26, var3, var5, var4);
    }
 
+   @ObfInfo(
+      owner = "cj",
+      name = "m",
+      desc = "(I)Z"
+   )
    boolean method1869() {
       if (class90.field766 == this.field3216) {
          this.method1871();
@@ -222,14 +385,29 @@ public final class class380 extends class334 {
       return class90.field767 == this.field3216;
    }
 
+   @ObfInfo(
+      owner = "cj",
+      name = "q",
+      desc = "(I)V"
+   )
    void method1870() {
       this.field3216 = class90.field766;
    }
 
+   @ObfInfo(
+      owner = "cj",
+      name = "f",
+      desc = "(I)V"
+   )
    void method1871() {
       this.field3216 = class240.field2021.method54(this.field3207) ? class90.field767 : class90.field768;
    }
 
+   @ObfInfo(
+      owner = "cj",
+      name = "r",
+      desc = "(I)Z"
+   )
    boolean method1884() {
       if (this.field3210 == class90.field766) {
          this.method1873();
@@ -238,14 +416,29 @@ public final class class380 extends class334 {
       return this.field3210 == class90.field767;
    }
 
+   @ObfInfo(
+      owner = "cj",
+      name = "u",
+      desc = "(I)V"
+   )
    void method1877() {
       this.field3210 = class90.field766;
    }
 
+   @ObfInfo(
+      owner = "cj",
+      name = "b",
+      desc = "(I)V"
+   )
    void method1873() {
       this.field3210 = null != class228.field1933 && class228.field1933.method1469(this.field3207) ? class90.field767 : class90.field768;
    }
 
+   @ObfInfo(
+      owner = "cj",
+      name = "j",
+      desc = "(I)V"
+   )
    void method1874() {
       for(int var2 = 0; var2 < 4; ++var2) {
          if (client.field466[var2] != null && client.field466[var2].method2099(this.field3207.method1101()) != -1 && var2 != 2) {
@@ -257,10 +450,20 @@ public final class class380 extends class334 {
       this.field3212 = class90.field768;
    }
 
+   @ObfInfo(
+      owner = "cj",
+      name = "g",
+      desc = "(B)V"
+   )
    void method1875() {
       this.field3212 = class90.field766;
    }
 
+   @ObfInfo(
+      owner = "cj",
+      name = "i",
+      desc = "(I)Z"
+   )
    boolean method1876() {
       if (class90.field766 == this.field3212) {
          this.method1874();
@@ -269,10 +472,20 @@ public final class class380 extends class334 {
       return class90.field767 == this.field3212;
    }
 
+   @ObfInfo(
+      owner = "cj",
+      name = "o",
+      desc = "(B)I"
+   )
    int method1881() {
       return this.field3194 != null && this.field3194.field2344 != -1 ? class421.method2049(this.field3194.field2344, (byte)35).field3470 : 1;
    }
 
+   @ObfInfo(
+      owner = "cj",
+      name = "e",
+      desc = "(I)Lhh;"
+   )
    protected final class470 method1438() {
       if (null == this.field3194) {
          return null;
@@ -349,6 +562,11 @@ public final class class380 extends class334 {
       }
    }
 
+   @ObfInfo(
+      owner = "cj",
+      name = "n",
+      desc = "(IILgs;B)V"
+   )
    final void method1878(int var1, int var2, class294 var3) {
       if (-1 != super.field2649 && class271.method1277(super.field2649).field2034 == 1) {
          super.field2649 = -1;
@@ -383,6 +601,11 @@ public final class class380 extends class334 {
 
    }
 
+   @ObfInfo(
+      owner = "cj",
+      name = "k",
+      desc = "(IIB)V"
+   )
    void method1879(int var1, int var2) {
       super.field2607 = 0;
       super.field2682 = 0;
@@ -394,6 +617,11 @@ public final class class380 extends class334 {
       super.field2608 = var4 * 64 + super.field2681[0] * 128;
    }
 
+   @ObfInfo(
+      owner = "cj",
+      name = "a",
+      desc = "(IILgs;I)V"
+   )
    final void method1880(int var1, int var2, class294 var3) {
       if (super.field2607 < 9) {
          ++super.field2607;
@@ -410,14 +638,29 @@ public final class class380 extends class334 {
       super.field2661[0] = var3;
    }
 
+   @ObfInfo(
+      owner = "cj",
+      name = "s",
+      desc = "(I)Z"
+   )
    final boolean method1678() {
       return this.field3194 != null;
    }
 
+   @ObfInfo(
+      owner = "cj",
+      name = "e",
+      desc = "(II)V"
+   )
    public static void method1888(int var0) {
       class466.field3871 = var0;
    }
 
+   @ObfInfo(
+      owner = "cj",
+      name = "q",
+      desc = "(IB)I"
+   )
    public static int method1883(int var0) {
       int var2 = 0;
       if (var0 < 0 || var0 >= 65536) {
@@ -448,11 +691,21 @@ public final class class380 extends class334 {
       return var2 + var0;
    }
 
+   @ObfInfo(
+      owner = "cj",
+      name = "b",
+      desc = "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;B)V"
+   )
    static void method1886(String var0, String var1, String var2) {
       class286.method1419(7);
       class300.method1452(var0, var1, var2);
    }
 
+   @ObfInfo(
+      owner = "cj",
+      name = "gk",
+      desc = "(I)V"
+   )
    static final void method1887() {
       client.field279.method2382();
       class10.method60();
@@ -471,6 +724,11 @@ public final class class380 extends class334 {
       class261.method1113(10);
    }
 
+   @ObfInfo(
+      owner = "cj",
+      name = "ap",
+      desc = "(ILbm;ZI)I"
+   )
    static int method1889(int var0, class461 var1, boolean var2) {
       if (var0 == 7108) {
          class386.field3248[++class161.field1227 - 1] = class313.method1512() ? 1 : 0;
@@ -480,6 +738,11 @@ public final class class380 extends class334 {
       }
    }
 
+   @ObfInfo(
+      owner = "cj",
+      name = "ki",
+      desc = "(Lkd;IIZI)V"
+   )
    static void method1885(class120 var0, int var1, int var2, boolean var3) {
       int var5 = var0.field908;
       int var6 = var0.field967;
@@ -524,6 +787,11 @@ public final class class380 extends class334 {
 
    }
 
+   @ObfInfo(
+      owner = "cj",
+      name = "mt",
+      desc = "(Lkd;IIII)V"
+   )
    static final void method1872(class120 var0, int var1, int var2, int var3) {
       client.method189();
       class226 var5 = var0.method483(false);

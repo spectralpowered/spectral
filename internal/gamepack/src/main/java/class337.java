@@ -1,22 +1,90 @@
 import java.util.Iterator;
 
+@ObfInfo(
+   name = "nh"
+)
 public class class337 {
+   @ObfInfo(
+      owner = "nh",
+      name = "vx",
+      desc = "Ljava/util/Iterator;"
+   )
    static Iterator field2701;
+   @ObfInfo(
+      owner = "nh",
+      name = "u",
+      desc = "I"
+   )
    int field2692 = 0;
+   @ObfInfo(
+      owner = "nh",
+      name = "f",
+      desc = "I"
+   )
    int field2694 = 0;
+   @ObfInfo(
+      owner = "nh",
+      name = "r",
+      desc = "I"
+   )
    int field2698 = 0;
+   @ObfInfo(
+      owner = "nh",
+      name = "b",
+      desc = "I"
+   )
    int field2700 = 0;
+   @ObfInfo(
+      owner = "nh",
+      name = "x",
+      desc = "J"
+   )
    long field2691 = 0L;
+   @ObfInfo(
+      owner = "nh",
+      name = "m",
+      desc = "J"
+   )
    long field2695 = 0L;
+   @ObfInfo(
+      owner = "nh",
+      name = "q",
+      desc = "J"
+   )
    long field2696 = 0L;
+   @ObfInfo(
+      owner = "nh",
+      name = "e",
+      desc = "J"
+   )
    long field2697 = -1L;
+   @ObfInfo(
+      owner = "nh",
+      name = "h",
+      desc = "J"
+   )
    long field2699 = -1L;
+   @ObfInfo(
+      owner = "nh",
+      name = "v",
+      desc = "Z"
+   )
    public boolean field2693 = false;
 
+   @ObfInfo(
+      owner = "nh",
+      name = "h",
+      desc = "(S)V"
+   )
    public void method1694() {
       this.field2699 = class152.method711();
    }
 
+   @ObfInfo(
+      owner = "nh",
+      name = "e",
+      desc = "(B)V"
+   )
    public void method1689() {
       if (-1L != this.field2699) {
          this.field2695 = class152.method711() - this.field2699;
@@ -25,11 +93,21 @@ public class class337 {
 
    }
 
+   @ObfInfo(
+      owner = "nh",
+      name = "v",
+      desc = "(IB)V"
+   )
    public void method1690(int var1) {
       this.field2697 = class152.method711();
       this.field2694 = var1;
    }
 
+   @ObfInfo(
+      owner = "nh",
+      name = "x",
+      desc = "(I)V"
+   )
    public void method1691() {
       if (this.field2697 != -1L) {
          this.field2691 = class152.method711() - this.field2697;
@@ -40,15 +118,30 @@ public class class337 {
       this.field2693 = true;
    }
 
+   @ObfInfo(
+      owner = "nh",
+      name = "m",
+      desc = "(I)V"
+   )
    public void method1692() {
       this.field2693 = false;
       this.field2698 = 0;
    }
 
+   @ObfInfo(
+      owner = "nh",
+      name = "q",
+      desc = "(I)V"
+   )
    public void method1688() {
       this.method1691();
    }
 
+   @ObfInfo(
+      owner = "nh",
+      name = "f",
+      desc = "(Lqy;B)V"
+   )
    public void method1693(class127 var1) {
       long var3 = this.field2695;
       var3 /= 10L;
@@ -83,6 +176,11 @@ public class class337 {
       var1.method533(this.field2700);
    }
 
+   @ObfInfo(
+      owner = "nh",
+      name = "ag",
+      desc = "([BIIS)I"
+   )
    static int method1695(byte[] var0, int var1, int var2) {
       int var4 = -1;
 
@@ -94,6 +192,11 @@ public class class337 {
       return var4;
    }
 
+   @ObfInfo(
+      owner = "nh",
+      name = "x",
+      desc = "(Lly;Lly;III)Lnv;"
+   )
    public static class58 method1696(class274 var0, class274 var1, int var2, int var3) {
       byte[] var6 = var0.method1365(var2, var3);
       boolean var5;

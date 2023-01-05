@@ -4,17 +4,40 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
 
+@ObfInfo(
+   name = "pn"
+)
 public class class59 implements class373 {
+   @ObfInfo(
+      owner = "pn",
+      name = "e",
+      desc = "Ljava/util/Map;"
+   )
    final Map field598;
 
+   @ObfInfo(
+      owner = "pn",
+      name = "<init>",
+      desc = "(Ljava/util/Map;)V"
+   )
    public class59(Map var1) {
       this.field598 = var1;
    }
 
+   @ObfInfo(
+      owner = "pn",
+      name = "h",
+      desc = "(B)[B"
+   )
    public byte[] method1841() throws UnsupportedEncodingException {
       return this.method277().getBytes("UTF-8");
    }
 
+   @ObfInfo(
+      owner = "pn",
+      name = "v",
+      desc = "(I)Ljava/lang/String;"
+   )
    public String method277() throws UnsupportedEncodingException {
       StringBuilder var2 = new StringBuilder();
       Iterator var3 = this.field598.entrySet().iterator();

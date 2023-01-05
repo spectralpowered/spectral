@@ -1,17 +1,70 @@
 import java.io.IOException;
 import java.io.OutputStream;
 
+@ObfInfo(
+   name = "ox"
+)
 public class class454 implements Runnable {
+   @ObfInfo(
+      owner = "ox",
+      name = "sn",
+      desc = "Z"
+   )
    static boolean field3773;
+   @ObfInfo(
+      owner = "ox",
+      name = "r",
+      desc = "Z"
+   )
    boolean field3772;
+   @ObfInfo(
+      owner = "ox",
+      name = "x",
+      desc = "[B"
+   )
    byte[] field3768;
+   @ObfInfo(
+      owner = "ox",
+      name = "q",
+      desc = "I"
+   )
    int field3767 = 0;
+   @ObfInfo(
+      owner = "ox",
+      name = "v",
+      desc = "I"
+   )
    int field3769;
+   @ObfInfo(
+      owner = "ox",
+      name = "m",
+      desc = "I"
+   )
    int field3770 = 0;
+   @ObfInfo(
+      owner = "ox",
+      name = "f",
+      desc = "Ljava/io/IOException;"
+   )
    IOException field3771;
+   @ObfInfo(
+      owner = "ox",
+      name = "e",
+      desc = "Ljava/io/OutputStream;"
+   )
    OutputStream field3766;
+   @ObfInfo(
+      owner = "ox",
+      name = "h",
+      desc = "Ljava/lang/Thread;"
+   )
    Thread field3765;
 
+   @ObfInfo(
+      owner = "ox",
+      name = "<init>",
+      desc = "(Ljava/io/OutputStream;I)V"
+   )
    class454(OutputStream var1, int var2) {
       this.field3766 = var1;
       this.field3769 = var2 + 1;
@@ -21,6 +74,11 @@ public class class454 implements Runnable {
       this.field3765.start();
    }
 
+   @ObfInfo(
+      owner = "ox",
+      name = "h",
+      desc = "(I)Z"
+   )
    boolean method2243() {
       if (this.field3772) {
          try {
@@ -40,6 +98,11 @@ public class class454 implements Runnable {
       }
    }
 
+   @ObfInfo(
+      owner = "ox",
+      name = "run",
+      desc = "()V"
+   )
    public void run() {
       do {
          int var1;
@@ -101,6 +164,11 @@ public class class454 implements Runnable {
 
    }
 
+   @ObfInfo(
+      owner = "ox",
+      name = "e",
+      desc = "([BIII)V"
+   )
    void method2245(byte[] var1, int var2, int var3) throws IOException {
       if (var3 >= 0 && var2 >= 0 && var2 + var3 <= var1.length) {
          synchronized(this) {
@@ -135,6 +203,11 @@ public class class454 implements Runnable {
       }
    }
 
+   @ObfInfo(
+      owner = "ox",
+      name = "v",
+      desc = "(B)V"
+   )
    void method2244() {
       synchronized(this) {
          this.field3772 = true;

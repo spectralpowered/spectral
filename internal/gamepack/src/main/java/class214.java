@@ -21,41 +21,214 @@ import java.awt.event.WindowListener;
 import java.awt.image.ImageObserver;
 import java.net.URL;
 
+@ObfInfo(
+   name = "an"
+)
 public abstract class class214 extends Applet implements Runnable, FocusListener, WindowListener {
+   @ObfInfo(
+      owner = "an",
+      name = "j",
+      desc = "I"
+   )
    protected static int field1849 = 0;
+   @ObfInfo(
+      owner = "an",
+      name = "vo",
+      desc = "Lms;"
+   )
    public static class426 field1874;
+   @ObfInfo(
+      owner = "an",
+      name = "q",
+      desc = "Z"
+   )
    static boolean field1846 = false;
+   @ObfInfo(
+      owner = "an",
+      name = "e",
+      desc = "Lan;"
+   )
    static class214 field1845 = null;
+   @ObfInfo(
+      owner = "an",
+      name = "aj",
+      desc = "Las;"
+   )
    static class433 field1861 = new class433();
+   @ObfInfo(
+      owner = "an",
+      name = "v",
+      desc = "I"
+   )
    static int field1844 = 0;
+   @ObfInfo(
+      owner = "an",
+      name = "u",
+      desc = "I"
+   )
    static int field1847 = 20;
+   @ObfInfo(
+      owner = "an",
+      name = "b",
+      desc = "I"
+   )
    static int field1848 = 1;
+   @ObfInfo(
+      owner = "an",
+      name = "an",
+      desc = "I"
+   )
    static int field1863 = 500;
+   @ObfInfo(
+      owner = "an",
+      name = "m",
+      desc = "J"
+   )
    static long field1853 = 0L;
+   @ObfInfo(
+      owner = "an",
+      name = "ap",
+      desc = "J"
+   )
    static long field1871 = -1L;
+   @ObfInfo(
+      owner = "an",
+      name = "aa",
+      desc = "J"
+   )
    static long field1873 = -1L;
+   @ObfInfo(
+      owner = "an",
+      name = "k",
+      desc = "[J"
+   )
    static long[] field1855 = new long[32];
+   @ObfInfo(
+      owner = "an",
+      name = "o",
+      desc = "[J"
+   )
    static long[] field1857 = new long[32];
+   @ObfInfo(
+      owner = "an",
+      name = "ah",
+      desc = "Z"
+   )
    static volatile boolean field1870 = true;
+   @ObfInfo(
+      owner = "an",
+      name = "ab",
+      desc = "Z"
+   )
    boolean field1864 = false;
+   @ObfInfo(
+      owner = "an",
+      name = "f",
+      desc = "Z"
+   )
    boolean field1872 = false;
+   @ObfInfo(
+      owner = "an",
+      name = "af",
+      desc = "Ld;"
+   )
    class390 field1867;
+   @ObfInfo(
+      owner = "an",
+      name = "as",
+      desc = "I"
+   )
    int field1843;
+   @ObfInfo(
+      owner = "an",
+      name = "t",
+      desc = "I"
+   )
    int field1854 = 0;
+   @ObfInfo(
+      owner = "an",
+      name = "z",
+      desc = "I"
+   )
    int field1856;
+   @ObfInfo(
+      owner = "an",
+      name = "ad",
+      desc = "I"
+   )
    int field1858;
+   @ObfInfo(
+      owner = "an",
+      name = "ao",
+      desc = "I"
+   )
    int field1859;
+   @ObfInfo(
+      owner = "an",
+      name = "c",
+      desc = "I"
+   )
    int field1875 = 0;
+   @ObfInfo(
+      owner = "an",
+      name = "ar",
+      desc = "Ljava/awt/Canvas;"
+   )
    Canvas field1868;
+   @ObfInfo(
+      owner = "an",
+      name = "au",
+      desc = "Ljava/awt/Frame;"
+   )
    Frame field1860;
+   @ObfInfo(
+      owner = "an",
+      name = "ai",
+      desc = "Ljava/awt/datatransfer/Clipboard;"
+   )
    Clipboard field1850;
+   @ObfInfo(
+      owner = "an",
+      name = "ax",
+      desc = "Ljava/awt/EventQueue;"
+   )
    final EventQueue field1869;
+   @ObfInfo(
+      owner = "an",
+      name = "l",
+      desc = "I"
+   )
    protected int field1851;
+   @ObfInfo(
+      owner = "an",
+      name = "s",
+      desc = "I"
+   )
    protected int field1852;
+   @ObfInfo(
+      owner = "an",
+      name = "at",
+      desc = "Z"
+   )
    volatile boolean field1862 = true;
+   @ObfInfo(
+      owner = "an",
+      name = "al",
+      desc = "Z"
+   )
    volatile boolean field1865 = false;
+   @ObfInfo(
+      owner = "an",
+      name = "ag",
+      desc = "J"
+   )
    volatile long field1866 = 0L;
 
+   @ObfInfo(
+      owner = "an",
+      name = "<init>",
+      desc = "()V"
+   )
    protected class214() {
       EventQueue var1 = null;
 
@@ -70,20 +243,60 @@ public abstract class class214 extends Applet implements Runnable, FocusListener
       class91.field772 = var2;
    }
 
+   @ObfInfo(
+      owner = "an",
+      name = "an",
+      desc = "(B)V"
+   )
    protected abstract void method941();
 
+   @ObfInfo(
+      owner = "an",
+      name = "ab",
+      desc = "(ZI)V"
+   )
    protected abstract void method942(boolean var1);
 
+   @ObfInfo(
+      owner = "an",
+      name = "aw",
+      desc = "(I)V"
+   )
    protected abstract void method946();
 
+   @ObfInfo(
+      owner = "an",
+      name = "k",
+      desc = "(B)V"
+   )
    protected abstract void method950();
 
+   @ObfInfo(
+      owner = "an",
+      name = "ay",
+      desc = "(B)V"
+   )
    protected abstract void method951();
 
+   @ObfInfo(
+      owner = "an",
+      name = "al",
+      desc = "(I)V"
+   )
    protected abstract void method955();
 
+   @ObfInfo(
+      owner = "an",
+      name = "init",
+      desc = "()V"
+   )
    public abstract void init();
 
+   @ObfInfo(
+      owner = "an",
+      name = "x",
+      desc = "(III)V"
+   )
    protected final void method922(int var1, int var2) {
       if (this.field1858 != var1 || var2 != this.field1859) {
          this.method938();
@@ -93,6 +306,11 @@ public abstract class class214 extends Applet implements Runnable, FocusListener
       this.field1859 = var2;
    }
 
+   @ObfInfo(
+      owner = "an",
+      name = "m",
+      desc = "(Ljava/lang/Object;I)V"
+   )
    final void method923(Object var1) {
       if (null != this.field1869) {
          for(int var3 = 0; var3 < 50 && this.field1869.peekEvent() != null; ++var3) {
@@ -106,6 +324,11 @@ public abstract class class214 extends Applet implements Runnable, FocusListener
       }
    }
 
+   @ObfInfo(
+      owner = "an",
+      name = "q",
+      desc = "(I)Lff;"
+   )
    protected class217 method924() {
       if (this.field1867 == null) {
          this.field1867 = new class390();
@@ -115,18 +338,38 @@ public abstract class class214 extends Applet implements Runnable, FocusListener
       return this.field1867;
    }
 
+   @ObfInfo(
+      owner = "an",
+      name = "f",
+      desc = "(B)V"
+   )
    protected void method925() {
       this.field1850 = this.getToolkit().getSystemClipboard();
    }
 
+   @ObfInfo(
+      owner = "an",
+      name = "r",
+      desc = "(Ljava/lang/String;S)V"
+   )
    protected void method926(String var1) {
       this.field1850.setContents(new StringSelection(var1), (ClipboardOwner)null);
    }
 
+   @ObfInfo(
+      owner = "an",
+      name = "u",
+      desc = "(B)Ljava/awt/datatransfer/Clipboard;"
+   )
    public Clipboard method927() {
       return this.field1850;
    }
 
+   @ObfInfo(
+      owner = "an",
+      name = "b",
+      desc = "(I)V"
+   )
    protected final void method928() {
       if (class300.field2408.toLowerCase().indexOf("microsoft") != -1) {
          class74.field660[186] = 57;
@@ -159,14 +402,29 @@ public abstract class class214 extends Applet implements Runnable, FocusListener
       field1861.method2141(this.field1868);
    }
 
+   @ObfInfo(
+      owner = "an",
+      name = "g",
+      desc = "(I)V"
+   )
    protected final void method929() {
       field1861.method2143();
    }
 
+   @ObfInfo(
+      owner = "an",
+      name = "i",
+      desc = "(Lav;IB)V"
+   )
    protected void method930(class310 var1, int var2) {
       field1861.method2139(var1, var2);
    }
 
+   @ObfInfo(
+      owner = "an",
+      name = "o",
+      desc = "(I)V"
+   )
    protected final void method947() {
       Canvas var2 = this.field1868;
       var2.addMouseListener(class466.field3857);
@@ -174,6 +432,11 @@ public abstract class class214 extends Applet implements Runnable, FocusListener
       var2.addFocusListener(class466.field3857);
    }
 
+   @ObfInfo(
+      owner = "an",
+      name = "n",
+      desc = "(I)V"
+   )
    final void method952() {
       Container var2 = this.method953();
       if (var2 != null) {
@@ -206,6 +469,11 @@ public abstract class class214 extends Applet implements Runnable, FocusListener
       }
    }
 
+   @ObfInfo(
+      owner = "an",
+      name = "a",
+      desc = "(I)V"
+   )
    void method931() {
       int var2 = this.field1854;
       int var3 = this.field1875;
@@ -246,6 +514,11 @@ public abstract class class214 extends Applet implements Runnable, FocusListener
 
    }
 
+   @ObfInfo(
+      owner = "an",
+      name = "s",
+      desc = "(I)V"
+   )
    final void method932() {
       field1861.method2138(this.field1868);
       class483.method2374(this.field1868);
@@ -266,6 +539,11 @@ public abstract class class214 extends Applet implements Runnable, FocusListener
       this.method938();
    }
 
+   @ObfInfo(
+      owner = "an",
+      name = "l",
+      desc = "(IIIIB)V"
+   )
    protected final void method933(int var1, int var2, int var3, int var4) {
       try {
          if (field1845 != null) {
@@ -297,6 +575,11 @@ public abstract class class214 extends Applet implements Runnable, FocusListener
 
    }
 
+   @ObfInfo(
+      owner = "an",
+      name = "as",
+      desc = "(B)V"
+   )
    final synchronized void method934() {
       Container var2 = this.method953();
       if (this.field1868 != null) {
@@ -341,6 +624,11 @@ public abstract class class214 extends Applet implements Runnable, FocusListener
       this.field1866 = class152.method711();
    }
 
+   @ObfInfo(
+      owner = "an",
+      name = "ad",
+      desc = "(B)Z"
+   )
    protected final boolean method935() {
       String var2 = this.getDocumentBase().getHost().toLowerCase();
       if (!var2.equals("jagex.com") && !var2.endsWith(".jagex.com")) {
@@ -367,6 +655,11 @@ public abstract class class214 extends Applet implements Runnable, FocusListener
       }
    }
 
+   @ObfInfo(
+      owner = "an",
+      name = "run",
+      desc = "()V"
+   )
    public void run() {
       try {
          if (class300.field2408 != null) {
@@ -426,6 +719,11 @@ public abstract class class214 extends Applet implements Runnable, FocusListener
       this.method939();
    }
 
+   @ObfInfo(
+      owner = "an",
+      name = "ao",
+      desc = "(B)V"
+   )
    void method954() {
       long var2 = class152.method711();
       long var4 = field1855[class338.field2704];
@@ -442,6 +740,11 @@ public abstract class class214 extends Applet implements Runnable, FocusListener
       this.method941();
    }
 
+   @ObfInfo(
+      owner = "an",
+      name = "am",
+      desc = "(I)V"
+   )
    void method936() {
       Container var2 = this.method953();
       long var3 = class152.method711();
@@ -479,6 +782,11 @@ public abstract class class214 extends Applet implements Runnable, FocusListener
       this.field1862 = false;
    }
 
+   @ObfInfo(
+      owner = "an",
+      name = "av",
+      desc = "(I)V"
+   )
    final void method937() {
       class376 var2 = this.method956();
       if (this.field1852 != var2.field3185 || this.field1851 != var2.field3182 || this.field1864) {
@@ -488,10 +796,20 @@ public abstract class class214 extends Applet implements Runnable, FocusListener
 
    }
 
+   @ObfInfo(
+      owner = "an",
+      name = "au",
+      desc = "(S)V"
+   )
    final void method938() {
       this.field1864 = true;
    }
 
+   @ObfInfo(
+      owner = "an",
+      name = "ar",
+      desc = "(I)V"
+   )
    final synchronized void method939() {
       if (!field1846) {
          field1846 = true;
@@ -528,18 +846,33 @@ public abstract class class214 extends Applet implements Runnable, FocusListener
       }
    }
 
+   @ObfInfo(
+      owner = "an",
+      name = "start",
+      desc = "()V"
+   )
    public final void start() {
       if (this == field1845 && !field1846) {
          field1853 = 0L;
       }
    }
 
+   @ObfInfo(
+      owner = "an",
+      name = "stop",
+      desc = "()V"
+   )
    public final void stop() {
       if (this == field1845 && !field1846) {
          field1853 = class152.method711() + 4000L;
       }
    }
 
+   @ObfInfo(
+      owner = "an",
+      name = "destroy",
+      desc = "()V"
+   )
    public final void destroy() {
       if (this == field1845 && !field1846) {
          field1853 = class152.method711();
@@ -548,10 +881,20 @@ public abstract class class214 extends Applet implements Runnable, FocusListener
       }
    }
 
+   @ObfInfo(
+      owner = "an",
+      name = "update",
+      desc = "(Ljava/awt/Graphics;)V"
+   )
    public final void update(Graphics var1) {
       this.paint(var1);
    }
 
+   @ObfInfo(
+      owner = "an",
+      name = "paint",
+      desc = "(Ljava/awt/Graphics;)V"
+   )
    public final synchronized void paint(Graphics var1) {
       if (field1845 == this && !field1846) {
          this.field1862 = true;
@@ -565,37 +908,87 @@ public abstract class class214 extends Applet implements Runnable, FocusListener
       }
    }
 
+   @ObfInfo(
+      owner = "an",
+      name = "focusGained",
+      desc = "(Ljava/awt/event/FocusEvent;)V"
+   )
    public final void focusGained(FocusEvent var1) {
       field1870 = true;
       this.field1862 = true;
    }
 
+   @ObfInfo(
+      owner = "an",
+      name = "focusLost",
+      desc = "(Ljava/awt/event/FocusEvent;)V"
+   )
    public final void focusLost(FocusEvent var1) {
       field1870 = false;
    }
 
+   @ObfInfo(
+      owner = "an",
+      name = "windowActivated",
+      desc = "(Ljava/awt/event/WindowEvent;)V"
+   )
    public final void windowActivated(WindowEvent var1) {
    }
 
+   @ObfInfo(
+      owner = "an",
+      name = "windowClosed",
+      desc = "(Ljava/awt/event/WindowEvent;)V"
+   )
    public final void windowClosed(WindowEvent var1) {
    }
 
+   @ObfInfo(
+      owner = "an",
+      name = "windowClosing",
+      desc = "(Ljava/awt/event/WindowEvent;)V"
+   )
    public final void windowClosing(WindowEvent var1) {
       this.destroy();
    }
 
+   @ObfInfo(
+      owner = "an",
+      name = "windowDeactivated",
+      desc = "(Ljava/awt/event/WindowEvent;)V"
+   )
    public final void windowDeactivated(WindowEvent var1) {
    }
 
+   @ObfInfo(
+      owner = "an",
+      name = "windowDeiconified",
+      desc = "(Ljava/awt/event/WindowEvent;)V"
+   )
    public final void windowDeiconified(WindowEvent var1) {
    }
 
+   @ObfInfo(
+      owner = "an",
+      name = "windowIconified",
+      desc = "(Ljava/awt/event/WindowEvent;)V"
+   )
    public final void windowIconified(WindowEvent var1) {
    }
 
+   @ObfInfo(
+      owner = "an",
+      name = "windowOpened",
+      desc = "(Ljava/awt/event/WindowEvent;)V"
+   )
    public final void windowOpened(WindowEvent var1) {
    }
 
+   @ObfInfo(
+      owner = "an",
+      name = "ag",
+      desc = "(ILjava/lang/String;ZI)V"
+   )
    protected final void method943(int var1, String var2, boolean var3) {
       try {
          Graphics var5 = this.field1868.getGraphics();
@@ -646,12 +1039,22 @@ public abstract class class214 extends Applet implements Runnable, FocusListener
 
    }
 
+   @ObfInfo(
+      owner = "an",
+      name = "az",
+      desc = "(I)V"
+   )
    protected final void method944() {
       class184.field1685 = null;
       class91.field771 = null;
       class100.field796 = null;
    }
 
+   @ObfInfo(
+      owner = "an",
+      name = "ak",
+      desc = "(Ljava/lang/String;I)V"
+   )
    protected void method959(String var1) {
       if (!this.field1872) {
          this.field1872 = true;
@@ -666,10 +1069,20 @@ public abstract class class214 extends Applet implements Runnable, FocusListener
       }
    }
 
+   @ObfInfo(
+      owner = "an",
+      name = "af",
+      desc = "(I)Ljava/awt/Container;"
+   )
    Container method953() {
       return (Container)(null != this.field1860 ? this.field1860 : this);
    }
 
+   @ObfInfo(
+      owner = "an",
+      name = "ai",
+      desc = "(I)Lok;"
+   )
    class376 method956() {
       Container var2 = this.method953();
       int var3 = Math.max(var2.getWidth(), this.field1856);
@@ -683,10 +1096,20 @@ public abstract class class214 extends Applet implements Runnable, FocusListener
       return new class376(var3, var4);
    }
 
+   @ObfInfo(
+      owner = "an",
+      name = "ax",
+      desc = "(I)Z"
+   )
    protected final boolean method945() {
       return null != this.field1860;
    }
 
+   @ObfInfo(
+      owner = "an",
+      name = "r",
+      desc = "(IIIZIB)J"
+   )
    public static long method949(int var0, int var1, int var2, boolean var3, int var4) {
       long var6 = (long)((var0 & 127) << 0 | (var1 & 127) << 7 | (var2 & 3) << 14) | ((long)var4 & 4294967295L) << 17;
       if (var3) {
@@ -696,6 +1119,11 @@ public abstract class class214 extends Applet implements Runnable, FocusListener
       return var6;
    }
 
+   @ObfInfo(
+      owner = "an",
+      name = "hj",
+      desc = "(I)V"
+   )
    static void method957() {
       class299 var1 = class480.method2370(class356.field2940, client.field279.field4042);
       var1.field2403.method544(class152.method713());
@@ -704,6 +1132,11 @@ public abstract class class214 extends Applet implements Runnable, FocusListener
       client.field279.method2389(var1);
    }
 
+   @ObfInfo(
+      owner = "an",
+      name = "ig",
+      desc = "(B)V"
+   )
    static final void method958() {
       class460.method2267(false);
       client.field314 = 0;
@@ -950,6 +1383,11 @@ public abstract class class214 extends Applet implements Runnable, FocusListener
       }
    }
 
+   @ObfInfo(
+      owner = "an",
+      name = "mz",
+      desc = "(IIIILrx;Lkv;I)V"
+   )
    static final void method940(int var0, int var1, int var2, int var3, class266 var4, class226 var5) {
       int var7 = var2 * var2 + var3 * var3;
       if (var7 > 4225 && var7 < 90000) {
@@ -970,6 +1408,11 @@ public abstract class class214 extends Applet implements Runnable, FocusListener
 
    }
 
+   @ObfInfo(
+      owner = "an",
+      name = "ml",
+      desc = "(I)V"
+   )
    static final void method948() {
       client.field430 = client.field418;
       class454.field3773 = true;

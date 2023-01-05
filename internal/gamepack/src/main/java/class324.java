@@ -1,14 +1,57 @@
+@ObfInfo(
+   name = "mz"
+)
 public class class324 {
+   @ObfInfo(
+      owner = "mz",
+      name = "h",
+      desc = "B"
+   )
    byte field2570;
+   @ObfInfo(
+      owner = "mz",
+      name = "q",
+      desc = "I"
+   )
    public int field2566;
+   @ObfInfo(
+      owner = "mz",
+      name = "e",
+      desc = "I"
+   )
    public int field2567;
+   @ObfInfo(
+      owner = "mz",
+      name = "v",
+      desc = "I"
+   )
    public int field2568;
+   @ObfInfo(
+      owner = "mz",
+      name = "x",
+      desc = "I"
+   )
    public int field2569;
+   @ObfInfo(
+      owner = "mz",
+      name = "m",
+      desc = "I"
+   )
    public int field2571;
 
+   @ObfInfo(
+      owner = "mz",
+      name = "<init>",
+      desc = "()V"
+   )
    public class324() {
    }
 
+   @ObfInfo(
+      owner = "mz",
+      name = "<init>",
+      desc = "(Lqy;Z)V"
+   )
    public class324(class127 var1, boolean var2) {
       this.field2570 = var1.method548();
       this.field2567 = var1.method549();
@@ -55,22 +98,47 @@ public class class324 {
 
    }
 
+   @ObfInfo(
+      owner = "mz",
+      name = "h",
+      desc = "(Ljava/lang/Integer;I)V"
+   )
    void method1655(Integer var1) {
    }
 
+   @ObfInfo(
+      owner = "mz",
+      name = "e",
+      desc = "(B)I"
+   )
    public int method1656() {
       return this.field2570 & 7;
    }
 
+   @ObfInfo(
+      owner = "mz",
+      name = "v",
+      desc = "(I)I"
+   )
    public int method1658() {
       return (this.field2570 & 8) == 8 ? 1 : 0;
    }
 
+   @ObfInfo(
+      owner = "mz",
+      name = "x",
+      desc = "(IB)V"
+   )
    void method1659(int var1) {
       this.field2570 &= -8;
       this.field2570 = (byte)(this.field2570 | var1 & 7);
    }
 
+   @ObfInfo(
+      owner = "mz",
+      name = "m",
+      desc = "(II)V"
+   )
    void method1657(int var1) {
       this.field2570 &= -9;
       if (var1 == 1) {

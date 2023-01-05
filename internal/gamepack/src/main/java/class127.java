@@ -1,9 +1,32 @@
 import java.math.BigInteger;
 
+@ObfInfo(
+   name = "qy"
+)
 public class class127 extends class139 {
+   @ObfInfo(
+      owner = "qy",
+      name = "b",
+      desc = "[I"
+   )
    static int[] field1071 = new int[256];
+   @ObfInfo(
+      owner = "qy",
+      name = "g",
+      desc = "[J"
+   )
    static long[] field1069;
+   @ObfInfo(
+      owner = "qy",
+      name = "r",
+      desc = "[B"
+   )
    public byte[] field1072;
+   @ObfInfo(
+      owner = "qy",
+      name = "u",
+      desc = "I"
+   )
    public int field1070;
 
    static {
@@ -40,20 +63,40 @@ public class class127 extends class139 {
 
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "<init>",
+      desc = "(I)V"
+   )
    public class127(int var1) {
       this.field1072 = class201.method884(var1);
       this.field1070 = 0;
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "<init>",
+      desc = "(IZ)V"
+   )
    public class127(int var1, boolean var2) {
       this.field1072 = class355.method1775(var1, var2);
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "<init>",
+      desc = "([B)V"
+   )
    public class127(byte[] var1) {
       this.field1072 = var1;
       this.field1070 = 0;
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "ak",
+      desc = "(I)V"
+   )
    public void method532() {
       if (null != this.field1072) {
          class70.method308(this.field1072);
@@ -62,21 +105,41 @@ public class class127 extends class139 {
       this.field1072 = null;
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "af",
+      desc = "(II)V"
+   )
    public void method544(int var1) {
       this.field1072[++this.field1070 - 1] = (byte)var1;
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "ai",
+      desc = "(II)V"
+   )
    public void method533(int var1) {
       this.field1072[++this.field1070 - 1] = (byte)(var1 >> 8);
       this.field1072[++this.field1070 - 1] = (byte)var1;
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "ax",
+      desc = "(IB)V"
+   )
    public void method602(int var1) {
       this.field1072[++this.field1070 - 1] = (byte)(var1 >> 16);
       this.field1072[++this.field1070 - 1] = (byte)(var1 >> 8);
       this.field1072[++this.field1070 - 1] = (byte)var1;
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "ah",
+      desc = "(IB)V"
+   )
    public void method534(int var1) {
       this.field1072[++this.field1070 - 1] = (byte)(var1 >> 24);
       this.field1072[++this.field1070 - 1] = (byte)(var1 >> 16);
@@ -84,6 +147,11 @@ public class class127 extends class139 {
       this.field1072[++this.field1070 - 1] = (byte)var1;
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "aw",
+      desc = "(J)V"
+   )
    public void method535(long var1) {
       this.field1072[++this.field1070 - 1] = (byte)((int)(var1 >> 40));
       this.field1072[++this.field1070 - 1] = (byte)((int)(var1 >> 32));
@@ -93,6 +161,11 @@ public class class127 extends class139 {
       this.field1072[++this.field1070 - 1] = (byte)((int)var1);
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "aj",
+      desc = "(J)V"
+   )
    public void method536(long var1) {
       this.field1072[++this.field1070 - 1] = (byte)((int)(var1 >> 56));
       this.field1072[++this.field1070 - 1] = (byte)((int)(var1 >> 48));
@@ -104,10 +177,20 @@ public class class127 extends class139 {
       this.field1072[++this.field1070 - 1] = (byte)((int)var1);
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "aq",
+      desc = "(ZI)V"
+   )
    public void method537(boolean var1) {
       this.method544(var1 ? 1 : 0);
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "aa",
+      desc = "(Ljava/lang/String;B)V"
+   )
    public void method538(String var1, byte var2) {
       int var3 = var1.indexOf(0);
       if (var3 >= 0) {
@@ -122,6 +205,11 @@ public class class127 extends class139 {
       }
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "ac",
+      desc = "(Ljava/lang/String;I)V"
+   )
    public void method604(String var1) {
       int var3 = var1.indexOf(0);
       if (var3 >= 0) {
@@ -133,6 +221,11 @@ public class class127 extends class139 {
       }
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "bh",
+      desc = "(Ljava/lang/CharSequence;B)V"
+   )
    public void method539(CharSequence var1) {
       int var3 = class492.method2435(var1);
       this.field1072[++this.field1070 - 1] = 0;
@@ -140,6 +233,11 @@ public class class127 extends class139 {
       this.field1070 += class50.method255(this.field1072, this.field1070, var1);
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "by",
+      desc = "([BIIB)V"
+   )
    public void method540(byte[] var1, int var2, int var3) {
       for(int var5 = var2; var5 < var2 + var3; ++var5) {
          this.field1072[++this.field1070 - 1] = var1[var5];
@@ -147,10 +245,20 @@ public class class127 extends class139 {
 
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "bw",
+      desc = "(Lqy;B)V"
+   )
    public void method541(class127 var1) {
       this.method540(var1.field1072, 0, var1.field1070);
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "bp",
+      desc = "(IB)V"
+   )
    public void method542(int var1) {
       if (var1 < 0) {
          throw new IllegalArgumentException();
@@ -162,6 +270,11 @@ public class class127 extends class139 {
       }
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "bc",
+      desc = "(II)V"
+   )
    public void method543(int var1) {
       if (var1 >= 0 && var1 <= 65535) {
          this.field1072[this.field1070 - var1 - 2] = (byte)(var1 >> 8);
@@ -171,6 +284,11 @@ public class class127 extends class139 {
       }
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "bl",
+      desc = "(II)V"
+   )
    public void method586(int var1) {
       if (var1 >= 0 && var1 <= 255) {
          this.field1072[this.field1070 - var1 - 1] = (byte)var1;
@@ -179,6 +297,11 @@ public class class127 extends class139 {
       }
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "bv",
+      desc = "(IB)V"
+   )
    public void method545(int var1) {
       if (var1 >= 0 && var1 < 128) {
          this.method544(var1);
@@ -189,6 +312,11 @@ public class class127 extends class139 {
       }
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "bx",
+      desc = "(II)V"
+   )
    public void method589(int var1) {
       if (0 != (var1 & -128)) {
          if ((var1 & -16384) != 0) {
@@ -209,19 +337,39 @@ public class class127 extends class139 {
       this.method544(var1 & 127);
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "bg",
+      desc = "(B)I"
+   )
    public int method547() {
       return this.field1072[++this.field1070 - 1] & 255;
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "bz",
+      desc = "(I)B"
+   )
    public byte method548() {
       return this.field1072[++this.field1070 - 1];
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "bi",
+      desc = "(B)I"
+   )
    public int method549() {
       this.field1070 += 2;
       return (this.field1072[this.field1070 - 1] & 255) + ((this.field1072[this.field1070 - 2] & 255) << 8);
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "br",
+      desc = "(I)I"
+   )
    public int method550() {
       this.field1070 += 2;
       int var2 = ((this.field1072[this.field1070 - 2] & 255) << 8) + (this.field1072[this.field1070 - 1] & 255);
@@ -232,30 +380,60 @@ public class class127 extends class139 {
       return var2;
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "bq",
+      desc = "(I)I"
+   )
    public int method551() {
       this.field1070 += 3;
       return (this.field1072[this.field1070 - 1] & 255) + ((this.field1072[this.field1070 - 2] & 255) << 8) + ((this.field1072[this.field1070 - 3] & 255) << 16);
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "bn",
+      desc = "(B)I"
+   )
    public int method595() {
       this.field1070 += 4;
       return ((this.field1072[this.field1070 - 2] & 255) << 8) + ((this.field1072[this.field1070 - 4] & 255) << 24) + ((this.field1072[this.field1070 - 3] & 255) << 16) + (this.field1072[this.field1070 - 1] & 255);
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "ba",
+      desc = "(B)J"
+   )
    public long method598() {
       long var2 = (long)this.method595() & 4294967295L;
       long var4 = (long)this.method595() & 4294967295L;
       return (var2 << 32) + var4;
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "bs",
+      desc = "(I)F"
+   )
    public float method552() {
       return Float.intBitsToFloat(this.method595());
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "bt",
+      desc = "(I)Z"
+   )
    public boolean method553() {
       return (this.method547() & 1) == 1;
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "bu",
+      desc = "(I)Ljava/lang/String;"
+   )
    public String method554() {
       if (0 == this.field1072[this.field1070]) {
          ++this.field1070;
@@ -265,6 +443,11 @@ public class class127 extends class139 {
       }
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "bj",
+      desc = "(I)Ljava/lang/String;"
+   )
    public String method555() {
       int var2 = this.field1070;
 
@@ -276,6 +459,11 @@ public class class127 extends class139 {
       return var3 == 0 ? "" : class356.method1777(this.field1072, var2, var3);
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "bb",
+      desc = "(I)Ljava/lang/String;"
+   )
    public String method556() {
       byte var2 = this.field1072[++this.field1070 - 1];
       if (var2 != 0) {
@@ -292,6 +480,11 @@ public class class127 extends class139 {
       }
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "bm",
+      desc = "(I)Ljava/lang/String;"
+   )
    public String method596() {
       byte var2 = this.field1072[++this.field1070 - 1];
       if (var2 != 0) {
@@ -359,6 +552,11 @@ public class class127 extends class139 {
       }
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "bk",
+      desc = "([BIII)V"
+   )
    public void method557(byte[] var1, int var2, int var3) {
       for(int var5 = var2; var5 < var3 + var2; ++var5) {
          var1[var5] = this.field1072[++this.field1070 - 1];
@@ -366,21 +564,41 @@ public class class127 extends class139 {
 
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "bd",
+      desc = "(B)I"
+   )
    public int method558() {
       int var2 = this.field1072[this.field1070] & 255;
       return var2 < 128 ? this.method547() - 64 : this.method549() - '쀀';
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "cf",
+      desc = "(I)I"
+   )
    public int method559() {
       int var2 = this.field1072[this.field1070] & 255;
       return var2 < 128 ? this.method547() : this.method549() - '耀';
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "cl",
+      desc = "(I)I"
+   )
    public int method605() {
       int var2 = this.field1072[this.field1070] & 255;
       return var2 < 128 ? this.method547() - 1 : this.method549() - '老';
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "cq",
+      desc = "(I)I"
+   )
    public int method601() {
       int var2 = 0;
 
@@ -393,10 +611,20 @@ public class class127 extends class139 {
       return var2;
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "cc",
+      desc = "(I)I"
+   )
    public int method585() {
       return this.field1072[this.field1070] < 0 ? this.method595() & Integer.MAX_VALUE : this.method549();
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "cw",
+      desc = "(I)I"
+   )
    public int method560() {
       if (this.field1072[this.field1070] < 0) {
          return this.method595() & Integer.MAX_VALUE;
@@ -406,6 +634,11 @@ public class class127 extends class139 {
       }
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "cx",
+      desc = "(I)I"
+   )
    public int method588() {
       byte var2 = this.field1072[++this.field1070 - 1];
 
@@ -417,6 +650,11 @@ public class class127 extends class139 {
       return var3 | var2;
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "cb",
+      desc = "(B)I"
+   )
    public int method561() {
       int var3 = 0;
       int var4 = 0;
@@ -431,6 +669,11 @@ public class class127 extends class139 {
       return var3;
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "cs",
+      desc = "([II)V"
+   )
    public void method591(int[] var1) {
       int var3 = this.field1070 / 8;
       this.field1070 = 0;
@@ -453,6 +696,11 @@ public class class127 extends class139 {
 
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "cy",
+      desc = "([IB)V"
+   )
    public void method562(int[] var1) {
       int var3 = this.field1070 / 8;
       this.field1070 = 0;
@@ -475,6 +723,11 @@ public class class127 extends class139 {
 
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "cp",
+      desc = "([IIII)V"
+   )
    public void method600(int[] var1, int var2, int var3) {
       int var5 = this.field1070;
       this.field1070 = var2;
@@ -499,6 +752,11 @@ public class class127 extends class139 {
       this.field1070 = var5;
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "cj",
+      desc = "([IIII)V"
+   )
    public void method597(int[] var1, int var2, int var3) {
       int var5 = this.field1070;
       this.field1070 = var2;
@@ -523,6 +781,11 @@ public class class127 extends class139 {
       this.field1070 = var5;
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "cn",
+      desc = "(Ljava/math/BigInteger;Ljava/math/BigInteger;I)V"
+   )
    public void method563(BigInteger var1, BigInteger var2) {
       int var4 = this.field1070;
       this.field1070 = 0;
@@ -536,12 +799,22 @@ public class class127 extends class139 {
       this.method540(var8, 0, var8.length);
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "cm",
+      desc = "(IB)I"
+   )
    public int method564(int var1) {
       int var3 = class337.method1695(this.field1072, var1, this.field1070);
       this.method534(var3);
       return var3;
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "ct",
+      desc = "(I)Z"
+   )
    public boolean method565() {
       this.field1070 -= 4;
       byte[] var3 = this.field1072;
@@ -558,72 +831,152 @@ public class class127 extends class139 {
       return var5 == var6;
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "cu",
+      desc = "(II)V"
+   )
    public void method566(int var1) {
       this.field1072[++this.field1070 - 1] = (byte)(var1 + 128);
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "co",
+      desc = "(IS)V"
+   )
    public void method567(int var1) {
       this.field1072[++this.field1070 - 1] = (byte)(0 - var1);
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "ch",
+      desc = "(II)V"
+   )
    public void method568(int var1) {
       this.field1072[++this.field1070 - 1] = (byte)(128 - var1);
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "ce",
+      desc = "(B)I"
+   )
    public int method569() {
       return this.field1072[++this.field1070 - 1] - 128 & 255;
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "cg",
+      desc = "(I)I"
+   )
    public int method594() {
       return 0 - this.field1072[++this.field1070 - 1] & 255;
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "ca",
+      desc = "(I)I"
+   )
    public int method592() {
       return 128 - this.field1072[++this.field1070 - 1] & 255;
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "cv",
+      desc = "(I)B"
+   )
    public byte method570() {
       return (byte)(this.field1072[++this.field1070 - 1] - 128);
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "cz",
+      desc = "(B)B"
+   )
    public byte method599() {
       return (byte)(0 - this.field1072[++this.field1070 - 1]);
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "cr",
+      desc = "(I)B"
+   )
    public byte method593() {
       return (byte)(128 - this.field1072[++this.field1070 - 1]);
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "cd",
+      desc = "(II)V"
+   )
    public void method584(int var1) {
       this.field1072[++this.field1070 - 1] = (byte)var1;
       this.field1072[++this.field1070 - 1] = (byte)(var1 >> 8);
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "ck",
+      desc = "(IB)V"
+   )
    public void method572(int var1) {
       this.field1072[++this.field1070 - 1] = (byte)(var1 >> 8);
       this.field1072[++this.field1070 - 1] = (byte)(var1 + 128);
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "ci",
+      desc = "(II)V"
+   )
    public void method573(int var1) {
       this.field1072[++this.field1070 - 1] = (byte)(var1 + 128);
       this.field1072[++this.field1070 - 1] = (byte)(var1 >> 8);
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "dh",
+      desc = "(I)I"
+   )
    public int method531() {
       this.field1070 += 2;
       return (this.field1072[this.field1070 - 2] & 255) + ((this.field1072[this.field1070 - 1] & 255) << 8);
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "dn",
+      desc = "(I)I"
+   )
    public int method574() {
       this.field1070 += 2;
       return (this.field1072[this.field1070 - 1] - 128 & 255) + ((this.field1072[this.field1070 - 2] & 255) << 8);
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "da",
+      desc = "(I)I"
+   )
    public int method575() {
       this.field1070 += 2;
       return ((this.field1072[this.field1070 - 1] & 255) << 8) + (this.field1072[this.field1070 - 2] - 128 & 255);
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "de",
+      desc = "(I)I"
+   )
    public int method576() {
       this.field1070 += 2;
       int var2 = (this.field1072[this.field1070 - 1] - 128 & 255) + ((this.field1072[this.field1070 - 2] & 255) << 8);
@@ -634,21 +987,41 @@ public class class127 extends class139 {
       return var2;
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "dl",
+      desc = "(I)I"
+   )
    public int method577() {
       this.field1070 += 3;
       return (this.field1072[this.field1070 - 3] & 255) + ((this.field1072[this.field1070 - 1] & 255) << 16) + ((this.field1072[this.field1070 - 2] & 255) << 8);
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "dw",
+      desc = "(S)I"
+   )
    public int method578() {
       this.field1070 += 3;
       return ((this.field1072[this.field1070 - 1] & 255) << 8) + ((this.field1072[this.field1070 - 3] & 255) << 16) + (this.field1072[this.field1070 - 2] & 255);
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "dm",
+      desc = "(I)I"
+   )
    public int method587() {
       this.field1070 += 3;
       return (this.field1072[this.field1070 - 1] & 255) + ((this.field1072[this.field1070 - 2] & 255) << 16) + ((this.field1072[this.field1070 - 3] & 255) << 8);
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "dv",
+      desc = "(I)I"
+   )
    public int method546() {
       this.field1070 += 3;
       int var2 = ((this.field1072[this.field1070 - 3] & 255) << 16) + ((this.field1072[this.field1070 - 1] & 255) << 8) + (this.field1072[this.field1070 - 2] & 255);
@@ -659,6 +1032,11 @@ public class class127 extends class139 {
       return var2;
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "ds",
+      desc = "(I)I"
+   )
    public int method590() {
       this.field1070 += 3;
       int var2 = ((this.field1072[this.field1070 - 3] & 255) << 8) + ((this.field1072[this.field1070 - 2] & 255) << 16) + (this.field1072[this.field1070 - 1] & 255);
@@ -669,6 +1047,11 @@ public class class127 extends class139 {
       return var2;
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "dc",
+      desc = "(IS)V"
+   )
    public void method579(int var1) {
       this.field1072[++this.field1070 - 1] = (byte)var1;
       this.field1072[++this.field1070 - 1] = (byte)(var1 >> 8);
@@ -676,6 +1059,11 @@ public class class127 extends class139 {
       this.field1072[++this.field1070 - 1] = (byte)(var1 >> 24);
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "dk",
+      desc = "(II)V"
+   )
    public void method580(int var1) {
       this.field1072[++this.field1070 - 1] = (byte)(var1 >> 8);
       this.field1072[++this.field1070 - 1] = (byte)var1;
@@ -683,6 +1071,11 @@ public class class127 extends class139 {
       this.field1072[++this.field1070 - 1] = (byte)(var1 >> 16);
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "df",
+      desc = "(II)V"
+   )
    public void method581(int var1) {
       this.field1072[++this.field1070 - 1] = (byte)(var1 >> 16);
       this.field1072[++this.field1070 - 1] = (byte)(var1 >> 24);
@@ -690,21 +1083,41 @@ public class class127 extends class139 {
       this.field1072[++this.field1070 - 1] = (byte)(var1 >> 8);
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "dy",
+      desc = "(B)I"
+   )
    public int method603() {
       this.field1070 += 4;
       return ((this.field1072[this.field1070 - 2] & 255) << 16) + ((this.field1072[this.field1070 - 1] & 255) << 24) + ((this.field1072[this.field1070 - 3] & 255) << 8) + (this.field1072[this.field1070 - 4] & 255);
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "dx",
+      desc = "(I)I"
+   )
    public int method571() {
       this.field1070 += 4;
       return (this.field1072[this.field1070 - 3] & 255) + ((this.field1072[this.field1070 - 1] & 255) << 16) + ((this.field1072[this.field1070 - 2] & 255) << 24) + ((this.field1072[this.field1070 - 4] & 255) << 8);
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "dr",
+      desc = "(I)I"
+   )
    public int method582() {
       this.field1070 += 4;
       return ((this.field1072[this.field1070 - 1] & 255) << 8) + ((this.field1072[this.field1070 - 3] & 255) << 24) + ((this.field1072[this.field1070 - 4] & 255) << 16) + (this.field1072[this.field1070 - 2] & 255);
    }
 
+   @ObfInfo(
+      owner = "qy",
+      name = "dd",
+      desc = "([BIII)V"
+   )
    public void method583(byte[] var1, int var2, int var3) {
       for(int var5 = var3 + var2 - 1; var5 >= var2; --var5) {
          var1[var5] = this.field1072[++this.field1070 - 1];

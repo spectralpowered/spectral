@@ -1,24 +1,57 @@
 import java.util.Comparator;
 
+@ObfInfo(
+   name = "dv"
+)
 public class class443 implements Comparator {
+   @ObfInfo(
+      owner = "dv",
+      name = "h",
+      desc = "Z"
+   )
    final boolean field3667;
 
+   @ObfInfo(
+      owner = "dv",
+      name = "<init>",
+      desc = "(Z)V"
+   )
    public class443(boolean var1) {
       this.field3667 = var1;
    }
 
+   @ObfInfo(
+      owner = "dv",
+      name = "h",
+      desc = "(Loa;Loa;I)I"
+   )
    int method2196(class69 var1, class69 var2) {
       return this.field3667 ? var1.field629 - var2.field629 : var2.field629 - var1.field629;
    }
 
+   @ObfInfo(
+      owner = "dv",
+      name = "compare",
+      desc = "(Ljava/lang/Object;Ljava/lang/Object;)I"
+   )
    public int compare(Object var1, Object var2) {
       return this.method2196((class69)var1, (class69)var2);
    }
 
+   @ObfInfo(
+      owner = "dv",
+      name = "equals",
+      desc = "(Ljava/lang/Object;)Z"
+   )
    public boolean equals(Object var1) {
       return super.equals(var1);
    }
 
+   @ObfInfo(
+      owner = "dv",
+      name = "ju",
+      desc = "(Lcm;B)V"
+   )
    static final void method2197(class138 var0) {
       long var2 = 0L;
       int var4 = -1;

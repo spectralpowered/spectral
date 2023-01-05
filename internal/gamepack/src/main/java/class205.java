@@ -1,11 +1,49 @@
+@ObfInfo(
+   name = "rg"
+)
 public final class class205 {
+   @ObfInfo(
+      owner = "rg",
+      name = "f",
+      desc = "I"
+   )
    int field1774;
+   @ObfInfo(
+      owner = "rg",
+      name = "x",
+      desc = "I"
+   )
    int field1775;
+   @ObfInfo(
+      owner = "rg",
+      name = "u",
+      desc = "I"
+   )
    int field1778;
+   @ObfInfo(
+      owner = "rg",
+      name = "r",
+      desc = "I"
+   )
    int field1779;
+   @ObfInfo(
+      owner = "rg",
+      name = "m",
+      desc = "[I"
+   )
    int[] field1776 = new int[256];
+   @ObfInfo(
+      owner = "rg",
+      name = "q",
+      desc = "[I"
+   )
    int[] field1777 = new int[256];
 
+   @ObfInfo(
+      owner = "rg",
+      name = "<init>",
+      desc = "([I)V"
+   )
    public class205(int[] var1) {
       for(int var2 = 0; var2 < var1.length; ++var2) {
          this.field1776[var2] = var1[var2];
@@ -14,6 +52,11 @@ public final class class205 {
       this.method898();
    }
 
+   @ObfInfo(
+      owner = "rg",
+      name = "h",
+      desc = "(B)I"
+   )
    public final int method896() {
       if (0 == this.field1775) {
          this.method895();
@@ -23,6 +66,11 @@ public final class class205 {
       return this.field1776[--this.field1775];
    }
 
+   @ObfInfo(
+      owner = "rg",
+      name = "e",
+      desc = "(I)I"
+   )
    public final int method897() {
       if (this.field1775 == 0) {
          this.method895();
@@ -32,6 +80,11 @@ public final class class205 {
       return this.field1776[this.field1775 - 1];
    }
 
+   @ObfInfo(
+      owner = "rg",
+      name = "v",
+      desc = "(B)V"
+   )
    final void method895() {
       this.field1779 += ++this.field1778;
 
@@ -57,6 +110,11 @@ public final class class205 {
 
    }
 
+   @ObfInfo(
+      owner = "rg",
+      name = "x",
+      desc = "(I)V"
+   )
    final void method898() {
       int var10 = -1640531527;
       int var9 = -1640531527;

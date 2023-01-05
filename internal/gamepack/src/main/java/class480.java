@@ -1,12 +1,35 @@
+@ObfInfo(
+   name = "ev"
+)
 public abstract class class480 extends class139 {
+   @ObfInfo(
+      owner = "ev",
+      name = "h",
+      desc = "(Lqy;I)V"
+   )
    abstract void method2367(class127 var1);
 
+   @ObfInfo(
+      owner = "ev",
+      name = "e",
+      desc = "(Lep;I)V"
+   )
    abstract void method2368(class429 var1);
 
+   @ObfInfo(
+      owner = "ev",
+      name = "v",
+      desc = "(II)Z"
+   )
    public static boolean method2371(int var0) {
       return (var0 >> 20 & 1) != 0;
    }
 
+   @ObfInfo(
+      owner = "ev",
+      name = "e",
+      desc = "(Ljp;Lrg;B)Ljx;"
+   )
    public static class299 method2370(class356 var0, class205 var1) {
       class299 var3 = class342.method1739();
       var3.field2405 = var0;
@@ -29,6 +52,11 @@ public abstract class class480 extends class139 {
       return var3;
    }
 
+   @ObfInfo(
+      owner = "ev",
+      name = "lh",
+      desc = "(S)V"
+   )
    static void method2369() {
       for(class415 var1 = (class415)client.field394.method789(); null != var1; var1 = (class415)client.field394.method790()) {
          int var2 = var1.field3426;

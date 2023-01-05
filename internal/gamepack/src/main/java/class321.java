@@ -1,32 +1,105 @@
 import java.util.ArrayList;
 
+@ObfInfo(
+   name = "nu"
+)
 public class class321 {
+   @ObfInfo(
+      owner = "nu",
+      name = "lz",
+      desc = "Lkd;"
+   )
    static class120 field2562;
+   @ObfInfo(
+      owner = "nu",
+      name = "i",
+      desc = "Z"
+   )
    boolean field2556 = true;
+   @ObfInfo(
+      owner = "nu",
+      name = "o",
+      desc = "Z"
+   )
    boolean field2557 = true;
+   @ObfInfo(
+      owner = "nu",
+      name = "n",
+      desc = "Lne;"
+   )
    class420 field2558;
+   @ObfInfo(
+      owner = "nu",
+      name = "j",
+      desc = "I"
+   )
    int field2554 = Integer.MAX_VALUE;
+   @ObfInfo(
+      owner = "nu",
+      name = "g",
+      desc = "I"
+   )
    int field2555 = 0;
+   @ObfInfo(
+      owner = "nu",
+      name = "a",
+      desc = "I"
+   )
    int field2560 = 0;
+   @ObfInfo(
+      owner = "nu",
+      name = "s",
+      desc = "I"
+   )
    int field2561 = 0;
+   @ObfInfo(
+      owner = "nu",
+      name = "k",
+      desc = "Ljava/util/ArrayList;"
+   )
    ArrayList field2559 = new ArrayList();
 
+   @ObfInfo(
+      owner = "nu",
+      name = "h",
+      desc = "(II)Lnp;"
+   )
    public class45 method1617(int var1) {
       return (class45)this.field2559.get(var1);
    }
 
+   @ObfInfo(
+      owner = "nu",
+      name = "e",
+      desc = "(B)Lnp;"
+   )
    class45 method1618() {
       return this.field2559.size() == 0 ? null : (class45)this.field2559.get(this.field2559.size() - 1);
    }
 
+   @ObfInfo(
+      owner = "nu",
+      name = "v",
+      desc = "(I)Z"
+   )
    public boolean method1642() {
       return this.field2559.size() == 0;
    }
 
+   @ObfInfo(
+      owner = "nu",
+      name = "x",
+      desc = "(I)I"
+   )
    public int method1620() {
       return this.field2559.size();
    }
 
+   @ObfInfo(
+      owner = "nu",
+      name = "m",
+      desc = "(B)Ljava/lang/String;"
+   )
    public String method1640() {
       if (this.method1642()) {
          return "";
@@ -42,6 +115,11 @@ public class class321 {
       }
    }
 
+   @ObfInfo(
+      owner = "nu",
+      name = "q",
+      desc = "(IZI)V"
+   )
    public void method1621(int var1, boolean var2) {
       if (null != this.field2558 && var1 < this.field2558.field3442 * 2) {
          var1 = Integer.MAX_VALUE;
@@ -55,6 +133,11 @@ public class class321 {
 
    }
 
+   @ObfInfo(
+      owner = "nu",
+      name = "f",
+      desc = "(IB)V"
+   )
    public void method1622(int var1) {
       if (this.field2561 != var1) {
          this.field2561 = var1;
@@ -63,6 +146,11 @@ public class class321 {
 
    }
 
+   @ObfInfo(
+      owner = "nu",
+      name = "r",
+      desc = "(Lne;I)V"
+   )
    public void method1644(class420 var1) {
       if (var1 != this.field2558) {
          this.field2558 = var1;
@@ -79,6 +167,11 @@ public class class321 {
 
    }
 
+   @ObfInfo(
+      owner = "nu",
+      name = "u",
+      desc = "(IS)V"
+   )
    public void method1646(int var1) {
       if (this.field2560 != var1) {
          this.field2560 = var1;
@@ -87,6 +180,11 @@ public class class321 {
 
    }
 
+   @ObfInfo(
+      owner = "nu",
+      name = "b",
+      desc = "(II)V"
+   )
    public void method1645(int var1) {
       if (var1 != this.field2555) {
          this.field2555 = var1;
@@ -95,6 +193,11 @@ public class class321 {
 
    }
 
+   @ObfInfo(
+      owner = "nu",
+      name = "j",
+      desc = "(IIB)Lna;"
+   )
    public class239 method1641(int var1, int var2) {
       if (var2 == var1) {
          return new class239(this, 0, 0);
@@ -105,10 +208,20 @@ public class class321 {
       }
    }
 
+   @ObfInfo(
+      owner = "nu",
+      name = "g",
+      desc = "(CIIII)Lny;"
+   )
    public class77 method1624(char var1, int var2, int var3, int var4) {
       return this.method1625(Character.toString(var1), var2, var3, var4);
    }
 
+   @ObfInfo(
+      owner = "nu",
+      name = "i",
+      desc = "(Ljava/lang/String;IIII)Lny;"
+   )
    public class77 method1625(String var1, int var2, int var3, int var4) {
       if (var3 == 0) {
          var3 = Integer.MAX_VALUE;
@@ -168,23 +281,48 @@ public class class321 {
       }
    }
 
+   @ObfInfo(
+      owner = "nu",
+      name = "o",
+      desc = "(Ljava/lang/String;III)Lny;"
+   )
    class77 method1626(String var1, int var2, int var3) {
       return this.method1625(var1, this.field2559.size(), var2, var3);
    }
 
+   @ObfInfo(
+      owner = "nu",
+      name = "n",
+      desc = "(Ljava/lang/String;B)Lny;"
+   )
    public class77 method1627(String var1) {
       this.method1628();
       return this.method1626(var1, 0, 0);
    }
 
+   @ObfInfo(
+      owner = "nu",
+      name = "k",
+      desc = "(B)V"
+   )
    void method1628() {
       this.field2559.clear();
    }
 
+   @ObfInfo(
+      owner = "nu",
+      name = "a",
+      desc = "(II)I"
+   )
    public int method1629(int var1) {
       return this.method1623(var1, var1 + 1);
    }
 
+   @ObfInfo(
+      owner = "nu",
+      name = "s",
+      desc = "(III)I"
+   )
    public int method1623(int var1, int var2) {
       int var4;
       if (var2 < var1) {
@@ -217,6 +355,11 @@ public class class321 {
       return var1;
    }
 
+   @ObfInfo(
+      owner = "nu",
+      name = "l",
+      desc = "(III)I"
+   )
    public int method1630(int var1, int var2) {
       if (null != this.field2558 && var1 >= 0 && var2 >= 0) {
          if (this.field2556 && var1 > this.field2554) {
@@ -260,6 +403,11 @@ public class class321 {
       }
    }
 
+   @ObfInfo(
+      owner = "nu",
+      name = "t",
+      desc = "(III)I"
+   )
    public int method1631(int var1, int var2) {
       if (null != this.field2558 && !this.method1642() && var1 <= this.field2559.size()) {
          byte var4;
@@ -321,6 +469,11 @@ public class class321 {
       }
    }
 
+   @ObfInfo(
+      owner = "nu",
+      name = "c",
+      desc = "(I)I"
+   )
    public int method1632() {
       if (!this.field2559.isEmpty() && this.method1648() == 1) {
          return this.field2559.isEmpty() ? 0 : ((class45)this.field2559.get(this.field2559.size() - 1)).field546 + this.method1633();
@@ -341,34 +494,74 @@ public class class321 {
       }
    }
 
+   @ObfInfo(
+      owner = "nu",
+      name = "p",
+      desc = "(S)I"
+   )
    public int method1649() {
       return this.method1642() ? 0 : this.field2558.field3442 + ((class45)this.field2559.get(this.field2559.size() - 1)).field545;
    }
 
+   @ObfInfo(
+      owner = "nu",
+      name = "d",
+      desc = "(I)I"
+   )
    public int method1647() {
       return this.field2555;
    }
 
+   @ObfInfo(
+      owner = "nu",
+      name = "y",
+      desc = "(I)I"
+   )
    public int method1648() {
       return this.method1649() / this.field2558.field3442;
    }
 
+   @ObfInfo(
+      owner = "nu",
+      name = "z",
+      desc = "(I)I"
+   )
    int method1633() {
       return this.method1642() ? 0 : this.method1639((class45)this.field2559.get(this.field2559.size() - 1), false);
    }
 
+   @ObfInfo(
+      owner = "nu",
+      name = "w",
+      desc = "(I)I"
+   )
    public int method1634() {
       return this.field2554;
    }
 
+   @ObfInfo(
+      owner = "nu",
+      name = "as",
+      desc = "(I)I"
+   )
    public int method1635() {
       return this.field2560;
    }
 
+   @ObfInfo(
+      owner = "nu",
+      name = "ad",
+      desc = "(I)I"
+   )
    public int method1643() {
       return this.field2561;
    }
 
+   @ObfInfo(
+      owner = "nu",
+      name = "ao",
+      desc = "(IIZI)V"
+   )
    void method1619(int var1, int var2, boolean var3) {
       if (!this.method1642() && null != this.field2558) {
          class45 var5 = this.method1637(var1);
@@ -437,6 +630,11 @@ public class class321 {
       }
    }
 
+   @ObfInfo(
+      owner = "nu",
+      name = "am",
+      desc = "(II)Lnp;"
+   )
    class45 method1637(int var1) {
       if (var1 > 0 && !this.field2559.isEmpty()) {
          return var1 >= this.field2559.size() ? (class45)this.field2559.get(this.field2559.size() - 1) : (class45)this.field2559.get(var1 - 1);
@@ -445,6 +643,11 @@ public class class321 {
       }
    }
 
+   @ObfInfo(
+      owner = "nu",
+      name = "av",
+      desc = "(II)I"
+   )
    int method1638(int var1) {
       if (var1 > 0 && !this.field2559.isEmpty()) {
          return var1 >= this.field2559.size() ? this.method1636(this.field2559.size() - 1) : this.method1636(var1 - 1);
@@ -453,10 +656,20 @@ public class class321 {
       }
    }
 
+   @ObfInfo(
+      owner = "nu",
+      name = "au",
+      desc = "(II)I"
+   )
    int method1636(int var1) {
       return var1 < this.field2559.size() ? this.method1639((class45)this.field2559.get(var1), false) : 0;
    }
 
+   @ObfInfo(
+      owner = "nu",
+      name = "ar",
+      desc = "(Lnp;ZB)I"
+   )
    int method1639(class45 var1, boolean var2) {
       if (var1.field544 == '\n') {
          return 0;

@@ -2,17 +2,55 @@ import java.awt.FontMetrics;
 import java.util.HashMap;
 import java.util.Map;
 
+@ObfInfo(
+   name = "da"
+)
 public class class100 {
+   @ObfInfo(
+      owner = "da",
+      name = "x",
+      desc = "I"
+   )
    static int field794 = 0;
+   @ObfInfo(
+      owner = "da",
+      name = "av",
+      desc = "Ljava/awt/FontMetrics;"
+   )
    static FontMetrics field796;
+   @ObfInfo(
+      owner = "da",
+      name = "e",
+      desc = "Lql;"
+   )
    static final class385 field795 = new class385(1024);
+   @ObfInfo(
+      owner = "da",
+      name = "v",
+      desc = "Lmm;"
+   )
    static final class477 field793 = new class477();
+   @ObfInfo(
+      owner = "da",
+      name = "h",
+      desc = "Ljava/util/Map;"
+   )
    static final Map field792 = new HashMap();
 
+   @ObfInfo(
+      owner = "da",
+      name = "h",
+      desc = "(Lly;B)V"
+   )
    public static void method398(class274 var0) {
       class169.field1268 = var0;
    }
 
+   @ObfInfo(
+      owner = "da",
+      name = "f",
+      desc = "(Lqy;IIIIIII)V"
+   )
    static final void method397(class127 var0, int var1, int var2, int var3, int var4, int var5, int var6) {
       boolean var8 = var1 >= 0 && var1 < 4 && var2 >= 0 && var2 < 104 && var3 >= 0 && var3 < 104;
       int var9;

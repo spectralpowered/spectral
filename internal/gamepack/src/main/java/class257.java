@@ -1,7 +1,25 @@
+@ObfInfo(
+   name = "rp"
+)
 public class class257 implements Comparable {
+   @ObfInfo(
+      owner = "rp",
+      name = "e",
+      desc = "Ljava/lang/String;"
+   )
    String field2102;
+   @ObfInfo(
+      owner = "rp",
+      name = "h",
+      desc = "Ljava/lang/String;"
+   )
    String field2103;
 
+   @ObfInfo(
+      owner = "rp",
+      name = "<init>",
+      desc = "(Ljava/lang/String;)V"
+   )
    public class257(String var1) {
       this.field2103 = var1;
       class194 var4 = class194.field1726;
@@ -69,6 +87,11 @@ public class class257 implements Comparable {
       this.field2102 = var3;
    }
 
+   @ObfInfo(
+      owner = "rp",
+      name = "<init>",
+      desc = "(Ljava/lang/String;Lqi;)V"
+   )
    public class257(String var1, class194 var2) {
       this.field2103 = var1;
       String var4;
@@ -135,18 +158,38 @@ public class class257 implements Comparable {
       this.field2102 = var4;
    }
 
+   @ObfInfo(
+      owner = "rp",
+      name = "h",
+      desc = "(I)Ljava/lang/String;"
+   )
    public String method1101() {
       return this.field2103;
    }
 
+   @ObfInfo(
+      owner = "rp",
+      name = "e",
+      desc = "(B)Ljava/lang/String;"
+   )
    public String method1102() {
       return this.field2102;
    }
 
+   @ObfInfo(
+      owner = "rp",
+      name = "v",
+      desc = "(B)Z"
+   )
    public boolean method1103() {
       return this.field2102 != null;
    }
 
+   @ObfInfo(
+      owner = "rp",
+      name = "equals",
+      desc = "(Ljava/lang/Object;)Z"
+   )
    public boolean equals(Object var1) {
       if (var1 instanceof class257) {
          class257 var2 = (class257)var1;
@@ -162,14 +205,29 @@ public class class257 implements Comparable {
       }
    }
 
+   @ObfInfo(
+      owner = "rp",
+      name = "hashCode",
+      desc = "()I"
+   )
    public int hashCode() {
       return null == this.field2102 ? 0 : this.field2102.hashCode();
    }
 
+   @ObfInfo(
+      owner = "rp",
+      name = "toString",
+      desc = "()Ljava/lang/String;"
+   )
    public String toString() {
       return this.method1101();
    }
 
+   @ObfInfo(
+      owner = "rp",
+      name = "x",
+      desc = "(Lrp;B)I"
+   )
    public int method1104(class257 var1) {
       if (this.field2102 == null) {
          return null == var1.field2102 ? 0 : 1;
@@ -178,6 +236,11 @@ public class class257 implements Comparable {
       }
    }
 
+   @ObfInfo(
+      owner = "rp",
+      name = "compareTo",
+      desc = "(Ljava/lang/Object;)I"
+   )
    public int compareTo(Object var1) {
       return this.method1104((class257)var1);
    }

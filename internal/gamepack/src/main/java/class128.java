@@ -1,11 +1,39 @@
 import java.applet.Applet;
 
+@ObfInfo(
+   name = "ar"
+)
 public class class128 {
+   @ObfInfo(
+      owner = "ar",
+      name = "h",
+      desc = "Ljava/applet/Applet;"
+   )
    public static Applet field1073 = null;
+   @ObfInfo(
+      owner = "ar",
+      name = "e",
+      desc = "Ljava/lang/String;"
+   )
    public static String field1074 = "";
+   @ObfInfo(
+      owner = "ar",
+      name = "ib",
+      desc = "[Lra;"
+   )
    static class344[] field1075;
+   @ObfInfo(
+      owner = "ar",
+      name = "u",
+      desc = "I"
+   )
    static int field1076;
 
+   @ObfInfo(
+      owner = "ar",
+      name = "h",
+      desc = "(Ljava/lang/CharSequence;I)J"
+   )
    public static long method607(CharSequence var0) {
       long var2 = 0L;
       int var4 = var0.length();
@@ -33,6 +61,11 @@ public class class128 {
       return var2;
    }
 
+   @ObfInfo(
+      owner = "ar",
+      name = "v",
+      desc = "(II)V"
+   )
    public static void method610(int var0) {
       if (class40.field201 != 0) {
          class489.field4078 = var0;
@@ -42,10 +75,20 @@ public class class128 {
 
    }
 
+   @ObfInfo(
+      owner = "ar",
+      name = "f",
+      desc = "(I)V"
+   )
    static void method606() {
       class201.field1755 = new class170(32);
    }
 
+   @ObfInfo(
+      owner = "ar",
+      name = "r",
+      desc = "(ILbm;ZI)I"
+   )
    static int method609(int var0, class461 var1, boolean var2) {
       boolean var4 = true;
       class120 var5;
@@ -181,6 +224,11 @@ public class class128 {
       }
    }
 
+   @ObfInfo(
+      owner = "ar",
+      name = "gr",
+      desc = "(II)V"
+   )
    static void method611(int var0) {
       int var2 = class339.method1701();
       if (var0 == -3) {
@@ -310,6 +358,11 @@ public class class128 {
 
    }
 
+   @ObfInfo(
+      owner = "ar",
+      name = "jg",
+      desc = "(IIIII)V"
+   )
    static void method608(int var0, int var1, int var2, int var3) {
       class120 var5 = class483.method2375(var0, var1);
       if (null != var5 && null != var5.field984) {

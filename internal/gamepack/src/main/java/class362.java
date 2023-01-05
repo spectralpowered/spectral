@@ -1,27 +1,65 @@
 import java.util.Comparator;
 import java.util.Map.Entry;
 
+@ObfInfo(
+   name = "l"
+)
 class class362 implements Comparator {
+   @ObfInfo(
+      owner = "l",
+      name = "h",
+      desc = "Lly;"
+   )
    public static class274 field3086;
    // $FF: synthetic field
+   @ObfInfo(
+      owner = "l",
+      name = "this$0",
+      desc = "Lj;"
+   )
    final class192 this$0;
 
+   @ObfInfo(
+      owner = "l",
+      name = "<init>",
+      desc = "(Lj;)V"
+   )
    class362(class192 var1) {
       this.this$0 = var1;
    }
 
+   @ObfInfo(
+      owner = "l",
+      name = "h",
+      desc = "(Ljava/util/Map$Entry;Ljava/util/Map$Entry;B)I"
+   )
    int method1801(Entry var1, Entry var2) {
       return ((Float)var2.getValue()).compareTo((Float)var1.getValue());
    }
 
+   @ObfInfo(
+      owner = "l",
+      name = "compare",
+      desc = "(Ljava/lang/Object;Ljava/lang/Object;)I"
+   )
    public int compare(Object var1, Object var2) {
       return this.method1801((Entry)var1, (Entry)var2);
    }
 
+   @ObfInfo(
+      owner = "l",
+      name = "equals",
+      desc = "(Ljava/lang/Object;)Z"
+   )
    public boolean equals(Object var1) {
       return super.equals(var1);
    }
 
+   @ObfInfo(
+      owner = "l",
+      name = "h",
+      desc = "(IIIB)I"
+   )
    public static int method1803(int var0, int var1, int var2) {
       var2 &= 3;
       if (var2 == 0) {
@@ -33,10 +71,20 @@ class class362 implements Comparator {
       }
    }
 
+   @ObfInfo(
+      owner = "l",
+      name = "h",
+      desc = "(IB)I"
+   )
    public static int method1806(int var0) {
       return var0 != 0 && var0 != 1 ? -1 : 0;
    }
 
+   @ObfInfo(
+      owner = "l",
+      name = "h",
+      desc = "(III)I"
+   )
    static int method1804(int var0, int var1) {
       class201 var3 = (class201)class201.field1755.method791((long)var0);
       if (null == var3) {
@@ -46,6 +94,11 @@ class class362 implements Comparator {
       }
    }
 
+   @ObfInfo(
+      owner = "l",
+      name = "u",
+      desc = "(Lkd;I[B[BB)V"
+   )
    static final void method1805(class120 var0, int var1, byte[] var2, byte[] var3) {
       if (null == var0.field973) {
          if (null == var2) {
@@ -75,12 +128,22 @@ class class362 implements Comparator {
       var0.field974[var1] = var3;
    }
 
+   @ObfInfo(
+      owner = "l",
+      name = "gh",
+      desc = "(Lln;Ljava/lang/String;I)V"
+   )
    static void method1802(class38 var0, String var1) {
       class193 var3 = new class193(var0, var1);
       client.field515.add(var3);
       client.field517 += var3.field1723;
    }
 
+   @ObfInfo(
+      owner = "l",
+      name = "lg",
+      desc = "(Lkd;III)V"
+   )
    static final void method1800(class120 var0, int var1, int var2) {
       if (client.field406 == null && !client.field368) {
          if (var0 != null && class328.method1669(var0) != null) {
@@ -99,6 +162,11 @@ class class362 implements Comparator {
       }
    }
 
+   @ObfInfo(
+      owner = "l",
+      name = "ly",
+      desc = "(II)V"
+   )
    static final void method1807(int var0) {
       var0 = Math.min(Math.max(var0, 0), 127);
       class50.field574.method2212(var0);

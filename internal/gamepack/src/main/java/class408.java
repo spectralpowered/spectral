@@ -1,17 +1,70 @@
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
+@ObfInfo(
+   name = "ag"
+)
 public class class408 extends class139 {
+   @ObfInfo(
+      owner = "ag",
+      name = "io",
+      desc = "Lhc;"
+   )
    static class318 field3415;
+   @ObfInfo(
+      owner = "ag",
+      name = "m",
+      desc = "[[[B"
+   )
    byte[][][] field3407;
+   @ObfInfo(
+      owner = "ag",
+      name = "h",
+      desc = "I"
+   )
    int field3409;
+   @ObfInfo(
+      owner = "ag",
+      name = "e",
+      desc = "I"
+   )
    int field3413;
+   @ObfInfo(
+      owner = "ag",
+      name = "f",
+      desc = "[I"
+   )
    int[] field3408;
+   @ObfInfo(
+      owner = "ag",
+      name = "x",
+      desc = "[I"
+   )
    int[] field3410;
+   @ObfInfo(
+      owner = "ag",
+      name = "v",
+      desc = "[I"
+   )
    int[] field3412;
+   @ObfInfo(
+      owner = "ag",
+      name = "q",
+      desc = "[Ljava/lang/reflect/Field;"
+   )
    Field[] field3411;
+   @ObfInfo(
+      owner = "ag",
+      name = "r",
+      desc = "[Ljava/lang/reflect/Method;"
+   )
    Method[] field3414;
 
+   @ObfInfo(
+      owner = "ag",
+      name = "jw",
+      desc = "(IIIII)V"
+   )
    static final void method2001(int var0, int var1, int var2, int var3) {
       for(int var5 = 0; var5 < client.field442; ++var5) {
          if (client.field447[var5] + client.field435[var5] > var0 && client.field447[var5] < var0 + var2 && client.field448[var5] + client.field247[var5] > var1 && client.field448[var5] < var1 + var3) {
@@ -21,6 +74,11 @@ public class class408 extends class139 {
 
    }
 
+   @ObfInfo(
+      owner = "ag",
+      name = "kg",
+      desc = "(Lcg;IIIB)V"
+   )
    static final void method2000(class267 var0, int var1, int var2, int var3) {
       class423 var5 = var0.field2213;
       if (client.field369 < 400) {
@@ -129,6 +187,11 @@ public class class408 extends class139 {
       }
    }
 
+   @ObfInfo(
+      owner = "ag",
+      name = "lz",
+      desc = "(II)V"
+   )
    static void method1998(int var0) {
       class138.field1119 = new class365();
       class138.field1119.field3100 = client.field370[var0];
@@ -140,6 +203,11 @@ public class class408 extends class139 {
       class138.field1119.field3093 = client.field256[var0];
    }
 
+   @ObfInfo(
+      owner = "ag",
+      name = "mb",
+      desc = "(Ljava/lang/String;S)V"
+   )
    static final void method1999(String var0) {
       if (null != class228.field1933) {
          class299 var2 = class480.method2370(class356.field2973, client.field279.field4042);

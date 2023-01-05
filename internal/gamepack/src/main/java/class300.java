@@ -3,15 +3,58 @@ import java.net.InetAddress;
 import java.net.Socket;
 import java.net.URL;
 
+@ObfInfo(
+   name = "fp"
+)
 public class class300 implements Runnable {
+   @ObfInfo(
+      owner = "fp",
+      name = "e",
+      desc = "Ljava/lang/String;"
+   )
    public static String field2406;
+   @ObfInfo(
+      owner = "fp",
+      name = "h",
+      desc = "Ljava/lang/String;"
+   )
    public static String field2408;
+   @ObfInfo(
+      owner = "fp",
+      name = "ha",
+      desc = "Ldl;"
+   )
    static class434 field2410;
+   @ObfInfo(
+      owner = "fp",
+      name = "q",
+      desc = "Z"
+   )
    boolean field2411 = false;
+   @ObfInfo(
+      owner = "fp",
+      name = "x",
+      desc = "Lfl;"
+   )
    class92 field2407 = null;
+   @ObfInfo(
+      owner = "fp",
+      name = "v",
+      desc = "Lfl;"
+   )
    class92 field2412 = null;
+   @ObfInfo(
+      owner = "fp",
+      name = "m",
+      desc = "Ljava/lang/Thread;"
+   )
    Thread field2409;
 
+   @ObfInfo(
+      owner = "fp",
+      name = "<init>",
+      desc = "()V"
+   )
    public class300() {
       field2408 = "Unknown";
       field2406 = "1.6";
@@ -30,6 +73,11 @@ public class class300 implements Runnable {
       this.field2409.start();
    }
 
+   @ObfInfo(
+      owner = "fp",
+      name = "h",
+      desc = "(I)V"
+   )
    public final void method1447() {
       synchronized(this) {
          this.field2411 = true;
@@ -44,6 +92,11 @@ public class class300 implements Runnable {
 
    }
 
+   @ObfInfo(
+      owner = "fp",
+      name = "run",
+      desc = "()V"
+   )
    public final void run() {
       while(true) {
          class92 var1;
@@ -93,6 +146,11 @@ public class class300 implements Runnable {
       }
    }
 
+   @ObfInfo(
+      owner = "fp",
+      name = "e",
+      desc = "(IIILjava/lang/Object;B)Lfl;"
+   )
    final class92 method1450(int var1, int var2, int var3, Object var4) {
       class92 var6 = new class92();
       var6.field774 = var1;
@@ -111,24 +169,49 @@ public class class300 implements Runnable {
       }
    }
 
+   @ObfInfo(
+      owner = "fp",
+      name = "v",
+      desc = "(Ljava/lang/String;IB)Lfl;"
+   )
    public final class92 method1448(String var1, int var2) {
       return this.method1450(1, var2, 0, var1);
    }
 
+   @ObfInfo(
+      owner = "fp",
+      name = "x",
+      desc = "(Ljava/lang/Runnable;IS)Lfl;"
+   )
    public final class92 method1449(Runnable var1, int var2) {
       return this.method1450(2, var2, 0, var1);
    }
 
+   @ObfInfo(
+      owner = "fp",
+      name = "k",
+      desc = "(Ljava/lang/CharSequence;B)Ljava/lang/String;"
+   )
    public static String method1453(CharSequence var0) {
       return class431.method2126('*', var0.length());
    }
 
+   @ObfInfo(
+      owner = "fp",
+      name = "n",
+      desc = "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V"
+   )
    static void method1452(String var0, String var1, String var2) {
       class359.field3051 = var0;
       class359.field3064 = var1;
       class359.field3084 = var2;
    }
 
+   @ObfInfo(
+      owner = "fp",
+      name = "mf",
+      desc = "(I)Z"
+   )
    public static boolean method1451() {
       return client.field481 >= 2;
    }

@@ -2,22 +2,100 @@ import java.lang.management.GarbageCollectorMXBean;
 import java.lang.management.ManagementFactory;
 import java.util.Iterator;
 
+@ObfInfo(
+   name = "jn"
+)
 public class class204 {
+   @ObfInfo(
+      owner = "jn",
+      name = "b",
+      desc = "Ljn;"
+   )
    public static final class204 field1760 = new class204();
+   @ObfInfo(
+      owner = "jn",
+      name = "e",
+      desc = "Ljn;"
+   )
    public static final class204 field1761 = new class204();
+   @ObfInfo(
+      owner = "jn",
+      name = "v",
+      desc = "Ljn;"
+   )
    public static final class204 field1762 = new class204();
+   @ObfInfo(
+      owner = "jn",
+      name = "g",
+      desc = "Ljn;"
+   )
    public static final class204 field1763 = new class204();
+   @ObfInfo(
+      owner = "jn",
+      name = "m",
+      desc = "Ljn;"
+   )
    public static final class204 field1764 = new class204();
+   @ObfInfo(
+      owner = "jn",
+      name = "o",
+      desc = "Ljn;"
+   )
    public static final class204 field1765 = new class204();
+   @ObfInfo(
+      owner = "jn",
+      name = "r",
+      desc = "Ljn;"
+   )
    public static final class204 field1766 = new class204();
+   @ObfInfo(
+      owner = "jn",
+      name = "u",
+      desc = "Ljn;"
+   )
    public static final class204 field1767 = new class204();
+   @ObfInfo(
+      owner = "jn",
+      name = "q",
+      desc = "Ljn;"
+   )
    public static final class204 field1768 = new class204();
+   @ObfInfo(
+      owner = "jn",
+      name = "j",
+      desc = "Ljn;"
+   )
    public static final class204 field1769 = new class204();
+   @ObfInfo(
+      owner = "jn",
+      name = "f",
+      desc = "Ljn;"
+   )
    public static final class204 field1770 = new class204();
+   @ObfInfo(
+      owner = "jn",
+      name = "i",
+      desc = "Ljn;"
+   )
    public static final class204 field1771 = new class204();
+   @ObfInfo(
+      owner = "jn",
+      name = "h",
+      desc = "Ljn;"
+   )
    public static final class204 field1772 = new class204();
+   @ObfInfo(
+      owner = "jn",
+      name = "x",
+      desc = "Ljn;"
+   )
    public static final class204 field1773 = new class204();
 
+   @ObfInfo(
+      owner = "jn",
+      name = "ah",
+      desc = "(I)I"
+   )
    protected static int method894() {
       int var1 = 0;
       if (class208.field1814 == null || !class208.field1814.isValid()) {
@@ -55,6 +133,11 @@ public class class204 {
       return var1;
    }
 
+   @ObfInfo(
+      owner = "jn",
+      name = "jf",
+      desc = "(Lbs;IIB)V"
+   )
    static final void method893(class365 var0, int var1, int var2) {
       if (var0 != null) {
          class35.method147(var0.field3100, var0.field3096, var0.field3094, var0.field3095, var0.field3098, var0.field3097, var0.field3093, var1, var2);

@@ -1,21 +1,59 @@
+@ObfInfo(
+   name = "ng"
+)
 public class class27 extends class304 {
+   @ObfInfo(
+      owner = "ng",
+      name = "x",
+      desc = "I"
+   )
    int field161 = 1;
+   @ObfInfo(
+      owner = "ng",
+      name = "v",
+      desc = "Lqi;"
+   )
    final class194 field160;
+   @ObfInfo(
+      owner = "ng",
+      name = "m",
+      desc = "Lma;"
+   )
    public class12 field159 = new class12();
 
+   @ObfInfo(
+      owner = "ng",
+      name = "<init>",
+      desc = "(Lqi;)V"
+   )
    public class27(class194 var1) {
       super(400);
       this.field160 = var1;
    }
 
+   @ObfInfo(
+      owner = "ng",
+      name = "h",
+      desc = "(B)Lov;"
+   )
    class368 method1482() {
       return new class336();
    }
 
+   @ObfInfo(
+      owner = "ng",
+      name = "e",
+      desc = "(II)[Lov;"
+   )
    class368[] method1485(int var1) {
       return new class336[var1];
    }
 
+   @ObfInfo(
+      owner = "ng",
+      name = "v",
+      desc = "(Lrp;ZS)Z"
+   )
    public boolean method131(class257 var1, boolean var2) {
       class336 var4 = (class336)this.method1484(var1);
       if (null == var4) {
@@ -25,6 +63,11 @@ public class class27 extends class304 {
       }
    }
 
+   @ObfInfo(
+      owner = "ng",
+      name = "g",
+      desc = "(Lqy;IB)V"
+   )
    public void method129(class127 var1, int var2) {
       while(true) {
          if (var1.field1070 < var2) {

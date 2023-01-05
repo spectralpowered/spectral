@@ -1,21 +1,54 @@
 import java.util.Comparator;
 
+@ObfInfo(
+   name = "mx"
+)
 final class class375 implements Comparator {
+   @ObfInfo(
+      owner = "mx",
+      name = "x",
+      desc = "Z"
+   )
    static boolean field3180;
+   @ObfInfo(
+      owner = "mx",
+      name = "c",
+      desc = "Ljk;"
+   )
    static class413 field3181;
 
+   @ObfInfo(
+      owner = "mx",
+      name = "h",
+      desc = "(Lmg;Lmg;I)I"
+   )
    int method1850(class258 var1, class258 var2) {
       return var1.field2108.field2568 < var2.field2108.field2568 ? -1 : (var2.field2108.field2568 == var1.field2108.field2568 ? 0 : 1);
    }
 
+   @ObfInfo(
+      owner = "mx",
+      name = "compare",
+      desc = "(Ljava/lang/Object;Ljava/lang/Object;)I"
+   )
    public int compare(Object var1, Object var2) {
       return this.method1850((class258)var1, (class258)var2);
    }
 
+   @ObfInfo(
+      owner = "mx",
+      name = "equals",
+      desc = "(Ljava/lang/Object;)Z"
+   )
    public boolean equals(Object var1) {
       return super.equals(var1);
    }
 
+   @ObfInfo(
+      owner = "mx",
+      name = "w",
+      desc = "(ILbm;ZI)I"
+   )
    static int method1852(int var0, class461 var1, boolean var2) {
       if (var0 == 3300) {
          class386.field3248[++class161.field1227 - 1] = client.field231;
@@ -156,6 +189,11 @@ final class class375 implements Comparator {
       }
    }
 
+   @ObfInfo(
+      owner = "mx",
+      name = "hd",
+      desc = "(B)V"
+   )
    static void method1851() {
       if (class113.field846.field2672 >> 7 == client.field473 && class113.field846.field2608 >> 7 == client.field219) {
          client.field473 = 0;

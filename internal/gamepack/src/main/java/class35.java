@@ -1,4 +1,12 @@
+@ObfInfo(
+   name = "hd"
+)
 public class class35 extends class400 {
+   @ObfInfo(
+      owner = "hd",
+      name = "h",
+      desc = "(Lqy;I)V"
+   )
    void method145(class127 var1) {
       int var3 = var1.method547();
       if (var3 != class167.field1259.field1260) {
@@ -15,6 +23,11 @@ public class class35 extends class400 {
       }
    }
 
+   @ObfInfo(
+      owner = "hd",
+      name = "e",
+      desc = "(Lqy;I)V"
+   )
    void method1978(class127 var1) {
       super.field3365 = Math.min(super.field3365, 4);
       super.field3369 = new short[1][64][64];
@@ -41,6 +54,11 @@ public class class35 extends class400 {
       }
    }
 
+   @ObfInfo(
+      owner = "hd",
+      name = "equals",
+      desc = "(Ljava/lang/Object;)Z"
+   )
    public boolean equals(Object var1) {
       if (!(var1 instanceof class35)) {
          return false;
@@ -50,10 +68,20 @@ public class class35 extends class400 {
       }
    }
 
+   @ObfInfo(
+      owner = "hd",
+      name = "hashCode",
+      desc = "()I"
+   )
    public int hashCode() {
       return super.field3362 | super.field3368 << 8;
    }
 
+   @ObfInfo(
+      owner = "hd",
+      name = "jh",
+      desc = "(IIIIILjava/lang/String;Ljava/lang/String;III)V"
+   )
    static final void method147(int var0, int var1, int var2, int var3, int var4, String var5, String var6, int var7, int var8) {
       if (var2 >= 2000) {
          var2 -= 2000;
@@ -911,6 +939,11 @@ public class class35 extends class400 {
       }
    }
 
+   @ObfInfo(
+      owner = "hd",
+      name = "nu",
+      desc = "(I)V"
+   )
    static void method148() {
       class50.field574.method2216(client.field224);
    }

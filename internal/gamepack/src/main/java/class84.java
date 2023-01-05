@@ -1,29 +1,157 @@
+@ObfInfo(
+   name = "du"
+)
 public class class84 {
+   @ObfInfo(
+      owner = "du",
+      name = "ir",
+      desc = "I"
+   )
    static int field697;
+   @ObfInfo(
+      owner = "du",
+      name = "e",
+      desc = "Z"
+   )
    boolean field675;
+   @ObfInfo(
+      owner = "du",
+      name = "h",
+      desc = "Z"
+   )
    boolean field684;
+   @ObfInfo(
+      owner = "du",
+      name = "a",
+      desc = "Z"
+   )
    boolean field690 = true;
+   @ObfInfo(
+      owner = "du",
+      name = "q",
+      desc = "Z"
+   )
    boolean field694;
+   @ObfInfo(
+      owner = "du",
+      name = "m",
+      desc = "[Ldq;"
+   )
    class293[] field678;
+   @ObfInfo(
+      owner = "du",
+      name = "v",
+      desc = "Ldp;"
+   )
    class301 field676;
+   @ObfInfo(
+      owner = "du",
+      name = "x",
+      desc = "Ldp;"
+   )
    class301 field677;
+   @ObfInfo(
+      owner = "du",
+      name = "j",
+      desc = "F"
+   )
    float field674;
+   @ObfInfo(
+      owner = "du",
+      name = "f",
+      desc = "F"
+   )
    float field680;
+   @ObfInfo(
+      owner = "du",
+      name = "r",
+      desc = "F"
+   )
    float field681;
+   @ObfInfo(
+      owner = "du",
+      name = "u",
+      desc = "F"
+   )
    float field682;
+   @ObfInfo(
+      owner = "du",
+      name = "g",
+      desc = "F"
+   )
    float field685;
+   @ObfInfo(
+      owner = "du",
+      name = "i",
+      desc = "F"
+   )
    float field686;
+   @ObfInfo(
+      owner = "du",
+      name = "o",
+      desc = "F"
+   )
    float field687;
+   @ObfInfo(
+      owner = "du",
+      name = "n",
+      desc = "F"
+   )
    float field688;
+   @ObfInfo(
+      owner = "du",
+      name = "k",
+      desc = "F"
+   )
    float field689;
+   @ObfInfo(
+      owner = "du",
+      name = "d",
+      desc = "F"
+   )
    float field691;
+   @ObfInfo(
+      owner = "du",
+      name = "p",
+      desc = "F"
+   )
    float field695;
+   @ObfInfo(
+      owner = "du",
+      name = "b",
+      desc = "F"
+   )
    float field696;
+   @ObfInfo(
+      owner = "du",
+      name = "l",
+      desc = "[F"
+   )
    float[] field683;
+   @ObfInfo(
+      owner = "du",
+      name = "t",
+      desc = "I"
+   )
    int field679;
+   @ObfInfo(
+      owner = "du",
+      name = "c",
+      desc = "I"
+   )
    int field692;
+   @ObfInfo(
+      owner = "du",
+      name = "s",
+      desc = "I"
+   )
    int field693 = 0;
 
+   @ObfInfo(
+      owner = "du",
+      name = "h",
+      desc = "(Lqy;II)I"
+   )
    int method343(class127 var1, int var2) {
       int var4 = var1.method549();
       class34.method144(var1.method547());
@@ -71,6 +199,11 @@ public class class84 {
       return var4;
    }
 
+   @ObfInfo(
+      owner = "du",
+      name = "e",
+      desc = "(IB)F"
+   )
    public float method349(int var1) {
       if (var1 < this.method346()) {
          return this.field695;
@@ -79,18 +212,38 @@ public class class84 {
       }
    }
 
+   @ObfInfo(
+      owner = "du",
+      name = "v",
+      desc = "(B)I"
+   )
    int method346() {
       return this.field679;
    }
 
+   @ObfInfo(
+      owner = "du",
+      name = "x",
+      desc = "(I)I"
+   )
    int method342() {
       return this.field692;
    }
 
+   @ObfInfo(
+      owner = "du",
+      name = "m",
+      desc = "(I)I"
+   )
    int method344() {
       return this.method342() - this.method346();
    }
 
+   @ObfInfo(
+      owner = "du",
+      name = "q",
+      desc = "(FI)I"
+   )
    int method345(float var1) {
       if (this.field693 < 0 || (float)this.field678[this.field693].field2383 > var1 || null != this.field678[this.field693].field2382 && (float)this.field678[this.field693].field2382.field2383 <= var1) {
          if (var1 >= (float)this.method346() && var1 <= (float)this.method342()) {
@@ -139,15 +292,30 @@ public class class84 {
       }
    }
 
+   @ObfInfo(
+      owner = "du",
+      name = "f",
+      desc = "(FI)Ldq;"
+   )
    class293 method348(float var1) {
       int var3 = this.method345(var1);
       return var3 >= 0 && var3 < this.field678.length ? this.field678[var3] : null;
    }
 
+   @ObfInfo(
+      owner = "du",
+      name = "r",
+      desc = "(I)I"
+   )
    int method347() {
       return this.field678 == null ? 0 : this.field678.length;
    }
 
+   @ObfInfo(
+      owner = "du",
+      name = "v",
+      desc = "(Lly;III)Lrx;"
+   )
    public static class266 method341(class274 var0, int var1, int var2) {
       byte[] var5 = var0.method1365(var1, var2);
       boolean var4;
@@ -161,6 +329,11 @@ public class class84 {
       return !var4 ? null : class37.method149();
    }
 
+   @ObfInfo(
+      owner = "du",
+      name = "e",
+      desc = "(Lcb;III)V"
+   )
    static void method350(class488 var0, int var1, int var2) {
       Object[] var4 = var0.field4069;
       class461 var5;
@@ -559,6 +732,11 @@ public class class84 {
       }
    }
 
+   @ObfInfo(
+      owner = "du",
+      name = "q",
+      desc = "(Lqy;II)V"
+   )
    public static void method340(class127 var0, int var1) {
       if (null != class25.field115) {
          try {
@@ -571,6 +749,11 @@ public class class84 {
 
    }
 
+   @ObfInfo(
+      owner = "du",
+      name = "kx",
+      desc = "(IIB)Ljava/lang/String;"
+   )
    static final String method351(int var0, int var1) {
       int var3 = var1 - var0;
       if (var3 < -9) {

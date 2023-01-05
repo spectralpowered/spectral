@@ -1,15 +1,38 @@
+@ObfInfo(
+   name = "y"
+)
 public class class297 implements class289 {
+   @ObfInfo(
+      owner = "y",
+      name = "ty",
+      desc = "Lby;"
+   )
    static class129 field2393;
 
+   @ObfInfo(
+      owner = "y",
+      name = "h",
+      desc = "(I)Lax;"
+   )
    public class233 method1426() {
       return new class260();
    }
 
+   @ObfInfo(
+      owner = "y",
+      name = "a",
+      desc = "(IB)V"
+   )
    static void method1443(int var0) {
       class286.method1419(14);
       class359.field3055 = var0;
    }
 
+   @ObfInfo(
+      owner = "y",
+      name = "hi",
+      desc = "(Lkd;IIB)V"
+   )
    static final void method1441(class120 var0, int var1, int var2) {
       if (client.field296 == 0 || client.field296 == 3) {
          if (!client.field368 && (class466.field3869 == 1 || !class151.field1180 && 4 == class466.field3869)) {
@@ -54,6 +77,11 @@ public class class297 implements class289 {
       }
    }
 
+   @ObfInfo(
+      owner = "y",
+      name = "iu",
+      desc = "(ZS)V"
+   )
    static final void method1442(boolean var0) {
       for(int var2 = 0; var2 < client.field275; ++var2) {
          class267 var3 = client.field465[client.field431[var2]];
@@ -78,6 +106,11 @@ public class class297 implements class289 {
 
    }
 
+   @ObfInfo(
+      owner = "y",
+      name = "ih",
+      desc = "(Ljn;I)V"
+   )
    static final void method1440(class204 var0) {
       class6 var2 = client.field279.field4043;
       int var3;

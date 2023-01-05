@@ -1,17 +1,55 @@
+@ObfInfo(
+   name = "az"
+)
 public class class244 extends class437 {
+   @ObfInfo(
+      owner = "az",
+      name = "e",
+      desc = "Lmq;"
+   )
    class141 field2054 = new class141();
+   @ObfInfo(
+      owner = "az",
+      name = "h",
+      desc = "Lmq;"
+   )
    class141 field2055 = new class141();
+   @ObfInfo(
+      owner = "az",
+      name = "v",
+      desc = "I"
+   )
    int field2053 = 0;
+   @ObfInfo(
+      owner = "az",
+      name = "x",
+      desc = "I"
+   )
    int field2056 = -1;
 
+   @ObfInfo(
+      owner = "az",
+      name = "h",
+      desc = "(Laa;)V"
+   )
    public final synchronized void method1065(class437 var1) {
       this.field2055.method643(var1);
    }
 
+   @ObfInfo(
+      owner = "az",
+      name = "e",
+      desc = "(Laa;)V"
+   )
    public final synchronized void method1066(class437 var1) {
       var1.method637();
    }
 
+   @ObfInfo(
+      owner = "az",
+      name = "v",
+      desc = "()V"
+   )
    void method1074() {
       if (this.field2053 > 0) {
          for(class320 var1 = (class320)this.field2054.method646(); var1 != null; var1 = (class320)this.field2054.method648()) {
@@ -24,6 +62,11 @@ public class class244 extends class437 {
 
    }
 
+   @ObfInfo(
+      owner = "az",
+      name = "x",
+      desc = "(Lpl;Lbo;)V"
+   )
    void method1068(class139 var1, class320 var2) {
       while(var1 != this.field2054.field1141 && ((class320)var1).field2553 <= var2.field2553) {
          var1 = var1.field1132;
@@ -33,6 +76,11 @@ public class class244 extends class437 {
       this.field2056 = ((class320)this.field2054.field1141.field1132).field2553;
    }
 
+   @ObfInfo(
+      owner = "az",
+      name = "m",
+      desc = "(Lbo;)V"
+   )
    void method1069(class320 var1) {
       var1.method637();
       var1.method1615();
@@ -45,18 +93,38 @@ public class class244 extends class437 {
 
    }
 
+   @ObfInfo(
+      owner = "az",
+      name = "q",
+      desc = "()Laa;"
+   )
    protected class437 method2168() {
       return (class437)this.field2055.method646();
    }
 
+   @ObfInfo(
+      owner = "az",
+      name = "f",
+      desc = "()Laa;"
+   )
    protected class437 method2171() {
       return (class437)this.field2055.method648();
    }
 
+   @ObfInfo(
+      owner = "az",
+      name = "r",
+      desc = "()I"
+   )
    protected int method2173() {
       return 0;
    }
 
+   @ObfInfo(
+      owner = "az",
+      name = "u",
+      desc = "([III)V"
+   )
    public final synchronized void method2169(int[] var1, int var2, int var3) {
       do {
          if (this.field2056 < 0) {
@@ -91,6 +159,11 @@ public class class244 extends class437 {
 
    }
 
+   @ObfInfo(
+      owner = "az",
+      name = "b",
+      desc = "([III)V"
+   )
    void method1072(int[] var1, int var2, int var3) {
       for(class437 var4 = (class437)this.field2055.method646(); var4 != null; var4 = (class437)this.field2055.method648()) {
          var4.method2170(var1, var2, var3);
@@ -98,6 +171,11 @@ public class class244 extends class437 {
 
    }
 
+   @ObfInfo(
+      owner = "az",
+      name = "j",
+      desc = "(I)V"
+   )
    public final synchronized void method2172(int var1) {
       do {
          if (this.field2056 < 0) {
@@ -131,6 +209,11 @@ public class class244 extends class437 {
 
    }
 
+   @ObfInfo(
+      owner = "az",
+      name = "g",
+      desc = "(I)V"
+   )
    void method1075(int var1) {
       for(class437 var2 = (class437)this.field2055.method646(); var2 != null; var2 = (class437)this.field2055.method648()) {
          var2.method2172(var1);

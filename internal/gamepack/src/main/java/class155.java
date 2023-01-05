@@ -1,4 +1,12 @@
+@ObfInfo(
+   name = "lb"
+)
 public class class155 {
+   @ObfInfo(
+      owner = "lb",
+      name = "jq",
+      desc = "(ZLqx;B)V"
+   )
    static final void method718(boolean var0, class6 var1) {
       client.field492 = 0;
       client.field277 = 0;

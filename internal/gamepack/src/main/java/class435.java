@@ -1,19 +1,82 @@
 import java.io.EOFException;
 import java.io.IOException;
 
+@ObfInfo(
+   name = "qa"
+)
 public class class435 {
+   @ObfInfo(
+      owner = "qa",
+      name = "q",
+      desc = "[B"
+   )
    byte[] field3605;
+   @ObfInfo(
+      owner = "qa",
+      name = "v",
+      desc = "[B"
+   )
    byte[] field3607;
+   @ObfInfo(
+      owner = "qa",
+      name = "e",
+      desc = "Lqq;"
+   )
    class455 field3602;
+   @ObfInfo(
+      owner = "qa",
+      name = "m",
+      desc = "I"
+   )
    int field3603;
+   @ObfInfo(
+      owner = "qa",
+      name = "r",
+      desc = "I"
+   )
    int field3606 = 0;
+   @ObfInfo(
+      owner = "qa",
+      name = "f",
+      desc = "J"
+   )
    long field3601 = -1L;
+   @ObfInfo(
+      owner = "qa",
+      name = "x",
+      desc = "J"
+   )
    long field3604 = -1L;
+   @ObfInfo(
+      owner = "qa",
+      name = "u",
+      desc = "J"
+   )
    long field3608;
+   @ObfInfo(
+      owner = "qa",
+      name = "b",
+      desc = "J"
+   )
    long field3609;
+   @ObfInfo(
+      owner = "qa",
+      name = "j",
+      desc = "J"
+   )
    long field3610;
+   @ObfInfo(
+      owner = "qa",
+      name = "g",
+      desc = "J"
+   )
    long field3611;
 
+   @ObfInfo(
+      owner = "qa",
+      name = "<init>",
+      desc = "(Lqq;II)V"
+   )
    public class435(class455 var1, int var2, int var3) throws IOException {
       this.field3602 = var1;
       this.field3610 = this.field3609 = var1.method2251();
@@ -22,11 +85,21 @@ public class class435 {
       this.field3608 = 0L;
    }
 
+   @ObfInfo(
+      owner = "qa",
+      name = "h",
+      desc = "(I)V"
+   )
    public void method2163() throws IOException {
       this.method2161();
       this.field3602.method2248();
    }
 
+   @ObfInfo(
+      owner = "qa",
+      name = "e",
+      desc = "(J)V"
+   )
    public void method2164(long var1) throws IOException {
       if (var1 < 0L) {
          throw new IOException("");
@@ -35,14 +108,29 @@ public class class435 {
       }
    }
 
+   @ObfInfo(
+      owner = "qa",
+      name = "v",
+      desc = "(B)J"
+   )
    public long method2158() {
       return this.field3610;
    }
 
+   @ObfInfo(
+      owner = "qa",
+      name = "x",
+      desc = "([BB)V"
+   )
    public void method2159(byte[] var1) throws IOException {
       this.method2157(var1, 0, var1.length);
    }
 
+   @ObfInfo(
+      owner = "qa",
+      name = "m",
+      desc = "([BIII)V"
+   )
    public void method2157(byte[] var1, int var2, int var3) throws IOException {
       try {
          if (var2 + var3 > var1.length) {
@@ -143,6 +231,11 @@ public class class435 {
       }
    }
 
+   @ObfInfo(
+      owner = "qa",
+      name = "q",
+      desc = "(I)V"
+   )
    void method2160() throws IOException {
       this.field3603 = 0;
       if (this.field3611 != this.field3608) {
@@ -167,6 +260,11 @@ public class class435 {
 
    }
 
+   @ObfInfo(
+      owner = "qa",
+      name = "f",
+      desc = "([BIII)V"
+   )
    public void method2162(byte[] var1, int var2, int var3) throws IOException {
       try {
          if ((long)var3 + this.field3608 > this.field3610) {
@@ -239,6 +337,11 @@ public class class435 {
       }
    }
 
+   @ObfInfo(
+      owner = "qa",
+      name = "r",
+      desc = "(I)V"
+   )
    void method2161() throws IOException {
       if (this.field3601 != -1L) {
          if (this.field3601 != this.field3611) {

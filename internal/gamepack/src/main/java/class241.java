@@ -1,16 +1,49 @@
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
+@ObfInfo(
+   name = "bl"
+)
 public class class241 {
+   @ObfInfo(
+      owner = "bl",
+      name = "h",
+      desc = "Lbm;"
+   )
    class461 field2024;
+   @ObfInfo(
+      owner = "bl",
+      name = "e",
+      desc = "I"
+   )
    int field2023 = -1;
+   @ObfInfo(
+      owner = "bl",
+      name = "v",
+      desc = "[I"
+   )
    int[] field2022;
+   @ObfInfo(
+      owner = "bl",
+      name = "x",
+      desc = "[Ljava/lang/String;"
+   )
    String[] field2025;
 
+   @ObfInfo(
+      owner = "bl",
+      name = "x",
+      desc = "(B)V"
+   )
    public static void method1050() {
       class85.field700.method395();
    }
 
+   @ObfInfo(
+      owner = "bl",
+      name = "ao",
+      desc = "(Lfp;IIB)Lax;"
+   )
    public static final class233 method1044(class300 var0, int var1, int var2) {
       if (0 == class233.field1985) {
          throw new IllegalStateException();
@@ -53,10 +86,20 @@ public class class241 {
       }
    }
 
+   @ObfInfo(
+      owner = "bl",
+      name = "r",
+      desc = "(I)V"
+   )
    public static void method1049() {
       class164.field1240.method395();
    }
 
+   @ObfInfo(
+      owner = "bl",
+      name = "q",
+      desc = "(IIII)V"
+   )
    static final void method1046(int var0, int var1, int var2) {
       int var4;
       for(var4 = 0; var4 < 8; ++var4) {
@@ -87,6 +130,11 @@ public class class241 {
 
    }
 
+   @ObfInfo(
+      owner = "bl",
+      name = "ir",
+      desc = "(IIIB)V"
+   )
    static final void method1043(int var0, int var1, int var2) {
       if (var0 >= 128 && var1 >= 128 && var0 <= 13056 && var1 <= 13056) {
          int var4 = class327.method1666(var0, var1, class347.field2878) - var2;
@@ -116,10 +164,20 @@ public class class241 {
       }
    }
 
+   @ObfInfo(
+      owner = "bl",
+      name = "kn",
+      desc = "(Ljava/lang/String;Ljava/lang/String;IIIIIB)V"
+   )
    static final void method1048(String var0, String var1, int var2, int var3, int var4, int var5, int var6) {
       class323.method1653(var0, var1, var2, var3, var4, var5, var6, false);
    }
 
+   @ObfInfo(
+      owner = "bl",
+      name = "md",
+      desc = "(III)V"
+   )
    static final void method1047(int var0, int var1) {
       class57 var3 = var0 >= 0 ? client.field345[var0] : class198.field1746;
       if (var3 != null && var1 >= 0 && var1 < var3.method270()) {
@@ -136,6 +194,11 @@ public class class241 {
       }
    }
 
+   @ObfInfo(
+      owner = "bl",
+      name = "mj",
+      desc = "(Ljava/lang/String;ZI)Ljava/lang/String;"
+   )
    static String method1045(String var0, boolean var1) {
       String var3 = var1 ? "https://" : "http://";
       if (1 == client.field221) {

@@ -1,12 +1,40 @@
+@ObfInfo(
+   name = "ed"
+)
 public class class302 {
+   @ObfInfo(
+      owner = "ed",
+      name = "v",
+      desc = "Lmv;"
+   )
    class395 field2421 = new class395();
+   @ObfInfo(
+      owner = "ed",
+      name = "e",
+      desc = "J"
+   )
    long field2420 = -1L;
+   @ObfInfo(
+      owner = "ed",
+      name = "h",
+      desc = "J"
+   )
    long field2422;
 
+   @ObfInfo(
+      owner = "ed",
+      name = "<init>",
+      desc = "(Lqy;)V"
+   )
    public class302(class127 var1) {
       this.method1457(var1);
    }
 
+   @ObfInfo(
+      owner = "ed",
+      name = "h",
+      desc = "(Lqy;I)V"
+   )
    void method1457(class127 var1) {
       this.field2422 = var1.method598();
       this.field2420 = var1.method598();
@@ -35,6 +63,11 @@ public class class302 {
 
    }
 
+   @ObfInfo(
+      owner = "ed",
+      name = "e",
+      desc = "(Lfn;I)V"
+   )
    public void method1455(class57 var1) {
       if (var1.field1134 == this.field2422 && this.field2420 == var1.field591) {
          for(class410 var3 = (class410)this.field2421.method1941(); var3 != null; var3 = (class410)this.field2421.method1935()) {
@@ -47,6 +80,11 @@ public class class302 {
       }
    }
 
+   @ObfInfo(
+      owner = "ed",
+      name = "v",
+      desc = "(Lqy;I)Ljava/lang/String;"
+   )
    public static String method1456(class127 var0) {
       String var2;
       try {

@@ -1,12 +1,40 @@
+@ObfInfo(
+   name = "dr"
+)
 public class class309 extends class392 {
+   @ObfInfo(
+      owner = "dr",
+      name = "ac",
+      desc = "Lclient;"
+   )
    public static client field2461;
+   @ObfInfo(
+      owner = "dr",
+      name = "x",
+      desc = "Lly;"
+   )
    static class274 field2462;
+   @ObfInfo(
+      owner = "dr",
+      name = "h",
+      desc = "Z"
+   )
    final boolean field2463;
 
+   @ObfInfo(
+      owner = "dr",
+      name = "<init>",
+      desc = "(Z)V"
+   )
    public class309(boolean var1) {
       this.field2463 = var1;
    }
 
+   @ObfInfo(
+      owner = "dr",
+      name = "h",
+      desc = "(Loa;Loa;B)I"
+   )
    int method1497(class69 var1, class69 var2) {
       if (var2.field628 != var1.field628) {
          return this.field2463 ? var1.field628 - var2.field628 : var2.field628 - var1.field628;
@@ -15,10 +43,20 @@ public class class309 extends class392 {
       }
    }
 
+   @ObfInfo(
+      owner = "dr",
+      name = "compare",
+      desc = "(Ljava/lang/Object;Ljava/lang/Object;)I"
+   )
    public int compare(Object var1, Object var2) {
       return this.method1497((class69)var1, (class69)var2);
    }
 
+   @ObfInfo(
+      owner = "dr",
+      name = "jm",
+      desc = "(IIIIIIIB)V"
+   )
    static final void method1498(int var0, int var1, int var2, int var3, int var4, int var5, int var6) {
       if (var2 >= 1 && var3 >= 1 && var2 <= 102 && var3 <= 102) {
          if (client.field274 && var0 != class347.field2878) {

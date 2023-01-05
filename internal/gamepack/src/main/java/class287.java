@@ -1,12 +1,30 @@
 import java.util.concurrent.Callable;
 
+@ObfInfo(
+   name = "cl"
+)
 public class class287 implements Callable {
+   @ObfInfo(
+      owner = "cl",
+      name = "u",
+      desc = "Lrx;"
+   )
    static class266 field2366;
 
+   @ObfInfo(
+      owner = "cl",
+      name = "call",
+      desc = "()Ljava/lang/Object;"
+   )
    public Object call() {
       return class184.method837();
    }
 
+   @ObfInfo(
+      owner = "cl",
+      name = "o",
+      desc = "(IB)Lha;"
+   )
    static class298 method1422(int var0) {
       class298 var2 = (class298)class242.field2030.method394((long)var0);
       if (null != var2) {

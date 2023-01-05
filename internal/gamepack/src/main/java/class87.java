@@ -1,56 +1,319 @@
+@ObfInfo(
+   name = "gn"
+)
 public class class87 extends class195 {
+   @ObfInfo(
+      owner = "gn",
+      name = "x",
+      desc = "Ljv;"
+   )
    public static class99 field707 = new class99(4096);
+   @ObfInfo(
+      owner = "gn",
+      name = "q",
+      desc = "Ljv;"
+   )
    public static class99 field709 = new class99(30);
+   @ObfInfo(
+      owner = "gn",
+      name = "f",
+      desc = "Ljv;"
+   )
    public static class99 field710 = new class99(30);
+   @ObfInfo(
+      owner = "gn",
+      name = "m",
+      desc = "Ljv;"
+   )
    public static class99 field736 = new class99(500);
+   @ObfInfo(
+      owner = "gn",
+      name = "h",
+      desc = "Z"
+   )
    static boolean field718 = false;
+   @ObfInfo(
+      owner = "gn",
+      name = "r",
+      desc = "[Lgi;"
+   )
    static class26[] field711 = new class26[4];
+   @ObfInfo(
+      owner = "gn",
+      name = "e",
+      desc = "Lly;"
+   )
    static class274 field706;
+   @ObfInfo(
+      owner = "gn",
+      name = "d",
+      desc = "Z"
+   )
    boolean field726;
+   @ObfInfo(
+      owner = "gn",
+      name = "au",
+      desc = "Z"
+   )
    boolean field735;
+   @ObfInfo(
+      owner = "gn",
+      name = "ak",
+      desc = "Z"
+   )
    boolean field740;
+   @ObfInfo(
+      owner = "gn",
+      name = "ac",
+      desc = "Lql;"
+   )
    class385 field731;
+   @ObfInfo(
+      owner = "gn",
+      name = "p",
+      desc = "I"
+   )
    int field705;
+   @ObfInfo(
+      owner = "gn",
+      name = "al",
+      desc = "I"
+   )
    int field708;
+   @ObfInfo(
+      owner = "gn",
+      name = "ab",
+      desc = "I"
+   )
    int field722;
+   @ObfInfo(
+      owner = "gn",
+      name = "as",
+      desc = "I"
+   )
    int field723;
+   @ObfInfo(
+      owner = "gn",
+      name = "ay",
+      desc = "I"
+   )
    int field738;
+   @ObfInfo(
+      owner = "gn",
+      name = "an",
+      desc = "I"
+   )
    int field739;
+   @ObfInfo(
+      owner = "gn",
+      name = "ag",
+      desc = "I"
+   )
    int field742;
+   @ObfInfo(
+      owner = "gn",
+      name = "ax",
+      desc = "I"
+   )
    int field746;
+   @ObfInfo(
+      owner = "gn",
+      name = "ah",
+      desc = "I"
+   )
    int field747;
+   @ObfInfo(
+      owner = "gn",
+      name = "ad",
+      desc = "I"
+   )
    int field753;
+   @ObfInfo(
+      owner = "gn",
+      name = "at",
+      desc = "I"
+   )
    int field755;
+   @ObfInfo(
+      owner = "gn",
+      name = "j",
+      desc = "[I"
+   )
    int[] field714;
+   @ObfInfo(
+      owner = "gn",
+      name = "b",
+      desc = "[I"
+   )
    int[] field754;
+   @ObfInfo(
+      owner = "gn",
+      name = "i",
+      desc = "[S"
+   )
    short[] field716;
+   @ObfInfo(
+      owner = "gn",
+      name = "k",
+      desc = "[S"
+   )
    short[] field719;
+   @ObfInfo(
+      owner = "gn",
+      name = "o",
+      desc = "[S"
+   )
    short[] field727;
+   @ObfInfo(
+      owner = "gn",
+      name = "n",
+      desc = "[S"
+   )
    short[] field748;
+   @ObfInfo(
+      owner = "gn",
+      name = "t",
+      desc = "Z"
+   )
    public boolean field730;
+   @ObfInfo(
+      owner = "gn",
+      name = "ae",
+      desc = "Z"
+   )
    public boolean field737;
+   @ObfInfo(
+      owner = "gn",
+      name = "y",
+      desc = "Z"
+   )
    public boolean field741;
+   @ObfInfo(
+      owner = "gn",
+      name = "az",
+      desc = "Z"
+   )
    public boolean field743;
+   @ObfInfo(
+      owner = "gn",
+      name = "ar",
+      desc = "Z"
+   )
    public boolean field749;
+   @ObfInfo(
+      owner = "gn",
+      name = "u",
+      desc = "I"
+   )
    public int field712;
+   @ObfInfo(
+      owner = "gn",
+      name = "l",
+      desc = "I"
+   )
    public int field717;
+   @ObfInfo(
+      owner = "gn",
+      name = "a",
+      desc = "I"
+   )
    public int field720;
+   @ObfInfo(
+      owner = "gn",
+      name = "s",
+      desc = "I"
+   )
    public int field721;
+   @ObfInfo(
+      owner = "gn",
+      name = "c",
+      desc = "I"
+   )
    public int field724;
+   @ObfInfo(
+      owner = "gn",
+      name = "av",
+      desc = "I"
+   )
    public int field725;
+   @ObfInfo(
+      owner = "gn",
+      name = "z",
+      desc = "I"
+   )
    public int field728;
+   @ObfInfo(
+      owner = "gn",
+      name = "w",
+      desc = "I"
+   )
    public int field729;
+   @ObfInfo(
+      owner = "gn",
+      name = "am",
+      desc = "I"
+   )
    public int field733;
+   @ObfInfo(
+      owner = "gn",
+      name = "aj",
+      desc = "I"
+   )
    public int field734;
+   @ObfInfo(
+      owner = "gn",
+      name = "af",
+      desc = "I"
+   )
    public int field744;
+   @ObfInfo(
+      owner = "gn",
+      name = "aq",
+      desc = "I"
+   )
    public int field750;
+   @ObfInfo(
+      owner = "gn",
+      name = "ap",
+      desc = "I"
+   )
    public int field751;
+   @ObfInfo(
+      owner = "gn",
+      name = "aw",
+      desc = "I"
+   )
    public int field752;
+   @ObfInfo(
+      owner = "gn",
+      name = "aa",
+      desc = "[I"
+   )
    public int[] field713;
+   @ObfInfo(
+      owner = "gn",
+      name = "ai",
+      desc = "[I"
+   )
    public int[] field745;
+   @ObfInfo(
+      owner = "gn",
+      name = "g",
+      desc = "Ljava/lang/String;"
+   )
    public String field715;
+   @ObfInfo(
+      owner = "gn",
+      name = "ao",
+      desc = "[Ljava/lang/String;"
+   )
    public String[] field732;
 
+   @ObfInfo(
+      owner = "gn",
+      name = "<init>",
+      desc = "()V"
+   )
    class87() {
       this.field715 = class177.field1325;
       this.field720 = 1;
@@ -88,6 +351,11 @@ public class class87 extends class195 {
       this.field737 = true;
    }
 
+   @ObfInfo(
+      owner = "gn",
+      name = "v",
+      desc = "(I)V"
+   )
    void method365() {
       if (this.field724 == -1) {
          this.field724 = 0;
@@ -108,6 +376,11 @@ public class class87 extends class195 {
 
    }
 
+   @ObfInfo(
+      owner = "gn",
+      name = "x",
+      desc = "(Lqy;I)V"
+   )
    void method362(class127 var1) {
       while(true) {
          int var3 = var1.method547();
@@ -119,6 +392,11 @@ public class class87 extends class195 {
       }
    }
 
+   @ObfInfo(
+      owner = "gn",
+      name = "m",
+      desc = "(Lqy;IB)V"
+   )
    void method363(class127 var1, int var2) {
       int var4;
       int var5;
@@ -291,6 +569,11 @@ public class class87 extends class195 {
 
    }
 
+   @ObfInfo(
+      owner = "gn",
+      name = "q",
+      desc = "(II)Z"
+   )
    public final boolean method364(int var1) {
       if (null != this.field714) {
          for(int var5 = 0; var5 < this.field714.length; ++var5) {
@@ -315,6 +598,11 @@ public class class87 extends class195 {
       }
    }
 
+   @ObfInfo(
+      owner = "gn",
+      name = "f",
+      desc = "(I)Z"
+   )
    public final boolean method373() {
       if (null == this.field754) {
          return true;
@@ -329,6 +617,11 @@ public class class87 extends class195 {
       }
    }
 
+   @ObfInfo(
+      owner = "gn",
+      name = "r",
+      desc = "(II[[IIIIS)Lhr;"
+   )
    public final class295 method366(int var1, int var2, int[][] var3, int var4, int var5, int var6) {
       long var8;
       if (null == this.field714) {
@@ -371,6 +664,11 @@ public class class87 extends class195 {
       return (class295)var10;
    }
 
+   @ObfInfo(
+      owner = "gn",
+      name = "u",
+      desc = "(II[[IIIII)Lhh;"
+   )
    public final class470 method367(int var1, int var2, int[][] var3, int var4, int var5, int var6) {
       long var8;
       if (this.field714 == null) {
@@ -397,6 +695,11 @@ public class class87 extends class195 {
       return var10;
    }
 
+   @ObfInfo(
+      owner = "gn",
+      name = "b",
+      desc = "(II[[IIIILga;II)Lhh;"
+   )
    public final class470 method361(int var1, int var2, int[][] var3, int var4, int var5, int var6, class242 var7, int var8) {
       long var10;
       if (this.field714 == null) {
@@ -433,6 +736,11 @@ public class class87 extends class195 {
       }
    }
 
+   @ObfInfo(
+      owner = "gn",
+      name = "j",
+      desc = "(III)Lgi;"
+   )
    final class26 method368(int var1, int var2) {
       class26 var4 = null;
       boolean var5;
@@ -568,6 +876,11 @@ public class class87 extends class195 {
       return var12;
    }
 
+   @ObfInfo(
+      owner = "gn",
+      name = "g",
+      desc = "(B)Lgn;"
+   )
    public final class87 method372() {
       int var2 = -1;
       if (-1 != this.field746) {
@@ -586,10 +899,20 @@ public class class87 extends class195 {
       return var3 != -1 ? class85.method356(var3) : null;
    }
 
+   @ObfInfo(
+      owner = "gn",
+      name = "i",
+      desc = "(III)I"
+   )
    public int method369(int var1, int var2) {
       return class288.method1424(this.field731, var1, var2);
    }
 
+   @ObfInfo(
+      owner = "gn",
+      name = "o",
+      desc = "(ILjava/lang/String;I)Ljava/lang/String;"
+   )
    public String method370(int var1, String var2) {
       class385 var5 = this.field731;
       String var4;
@@ -607,6 +930,11 @@ public class class87 extends class195 {
       return var4;
    }
 
+   @ObfInfo(
+      owner = "gn",
+      name = "n",
+      desc = "(B)Z"
+   )
    public boolean method371() {
       if (null == this.field745) {
          return this.field752 != -1 || this.field713 != null;
@@ -624,6 +952,11 @@ public class class87 extends class195 {
       }
    }
 
+   @ObfInfo(
+      owner = "gn",
+      name = "g",
+      desc = "(CI)Z"
+   )
    public static boolean method374(char var0) {
       return var0 >= '0' && var0 <= '9' || var0 >= 'A' && var0 <= 'Z' || var0 >= 'a' && var0 <= 'z';
    }

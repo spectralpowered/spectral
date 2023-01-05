@@ -1,16 +1,59 @@
+@ObfInfo(
+   name = "ex"
+)
 public class class60 extends class480 {
+   @ObfInfo(
+      owner = "ex",
+      name = "bb",
+      desc = "Ljava/lang/String;"
+   )
    static String field603;
+   @ObfInfo(
+      owner = "ex",
+      name = "x",
+      desc = "I"
+   )
    int field599;
+   @ObfInfo(
+      owner = "ex",
+      name = "v",
+      desc = "I"
+   )
    int field600;
+   @ObfInfo(
+      owner = "ex",
+      name = "e",
+      desc = "I"
+   )
    int field601;
+   @ObfInfo(
+      owner = "ex",
+      name = "h",
+      desc = "I"
+   )
    int field602;
    // $FF: synthetic field
+   @ObfInfo(
+      owner = "ex",
+      name = "this$0",
+      desc = "Lem;"
+   )
    final class182 this$0;
 
+   @ObfInfo(
+      owner = "ex",
+      name = "<init>",
+      desc = "(Lem;)V"
+   )
    class60(class182 var1) {
       this.this$0 = var1;
    }
 
+   @ObfInfo(
+      owner = "ex",
+      name = "h",
+      desc = "(Lqy;I)V"
+   )
    void method2367(class127 var1) {
       this.field602 = var1.method595();
       this.field599 = var1.method595();
@@ -18,10 +61,20 @@ public class class60 extends class480 {
       this.field600 = var1.method547();
    }
 
+   @ObfInfo(
+      owner = "ex",
+      name = "e",
+      desc = "(Lep;I)V"
+   )
    void method2368(class429 var1) {
       var1.method2111(this.field602, this.field599, this.field601, this.field600);
    }
 
+   @ObfInfo(
+      owner = "ex",
+      name = "ai",
+      desc = "(ILbm;ZB)I"
+   )
    static int method278(int var0, class461 var1, boolean var2) {
       if (var0 == 6500) {
          class386.field3248[++class161.field1227 - 1] = class74.method326() ? 1 : 0;

@@ -1,11 +1,49 @@
+@ObfInfo(
+   name = "bh"
+)
 public class class136 {
+   @ObfInfo(
+      owner = "bh",
+      name = "m",
+      desc = "[[F"
+   )
    float[][] field1116;
+   @ObfInfo(
+      owner = "bh",
+      name = "h",
+      desc = "I"
+   )
    int field1113;
+   @ObfInfo(
+      owner = "bh",
+      name = "e",
+      desc = "I"
+   )
    int field1114;
+   @ObfInfo(
+      owner = "bh",
+      name = "v",
+      desc = "[I"
+   )
    int[] field1112;
+   @ObfInfo(
+      owner = "bh",
+      name = "x",
+      desc = "[I"
+   )
    int[] field1115;
+   @ObfInfo(
+      owner = "bh",
+      name = "q",
+      desc = "[I"
+   )
    int[] field1117;
 
+   @ObfInfo(
+      owner = "bh",
+      name = "<init>",
+      desc = "()V"
+   )
    class136() {
       class370.method1826(24);
       this.field1113 = class370.method1826(16);
@@ -98,6 +136,11 @@ public class class136 {
 
    }
 
+   @ObfInfo(
+      owner = "bh",
+      name = "e",
+      desc = "()V"
+   )
    void method630() {
       int[] var1 = new int[this.field1114];
       int[] var2 = new int[33];
@@ -191,6 +234,11 @@ public class class136 {
 
    }
 
+   @ObfInfo(
+      owner = "bh",
+      name = "v",
+      desc = "()I"
+   )
    int method631() {
       int var1;
       for(var1 = 0; this.field1117[var1] >= 0; var1 = class370.method1832() != 0 ? this.field1117[var1] : var1 + 1) {
@@ -200,10 +248,20 @@ public class class136 {
       return ~this.field1117[var1];
    }
 
+   @ObfInfo(
+      owner = "bh",
+      name = "x",
+      desc = "()[F"
+   )
    float[] method632() {
       return this.field1116[this.method631()];
    }
 
+   @ObfInfo(
+      owner = "bh",
+      name = "h",
+      desc = "(II)I"
+   )
    static int method633(int var0, int var1) {
       int var2 = (int)Math.pow((double)var0, 1.0D / (double)var1) + 1;
 

@@ -1,26 +1,84 @@
+@ObfInfo(
+   name = "nc"
+)
 public class class17 extends class304 {
+   @ObfInfo(
+      owner = "nc",
+      name = "r",
+      desc = "I"
+   )
    int field88 = 1;
+   @ObfInfo(
+      owner = "nc",
+      name = "e",
+      desc = "Lqi;"
+   )
    final class194 field83;
+   @ObfInfo(
+      owner = "nc",
+      name = "v",
+      desc = "Lnn;"
+   )
    final class234 field84;
+   @ObfInfo(
+      owner = "nc",
+      name = "q",
+      desc = "B"
+   )
    public byte field87;
+   @ObfInfo(
+      owner = "nc",
+      name = "f",
+      desc = "I"
+   )
    public int field86;
+   @ObfInfo(
+      owner = "nc",
+      name = "x",
+      desc = "Ljava/lang/String;"
+   )
    public String field85 = null;
+   @ObfInfo(
+      owner = "nc",
+      name = "m",
+      desc = "Ljava/lang/String;"
+   )
    public String field89 = null;
 
+   @ObfInfo(
+      owner = "nc",
+      name = "<init>",
+      desc = "(Lqi;Lnn;)V"
+   )
    public class17(class194 var1, class234 var2) {
       super(500);
       this.field83 = var1;
       this.field84 = var2;
    }
 
+   @ObfInfo(
+      owner = "nc",
+      name = "h",
+      desc = "(B)Lov;"
+   )
    class368 method1482() {
       return new class469();
    }
 
+   @ObfInfo(
+      owner = "nc",
+      name = "e",
+      desc = "(II)[Lov;"
+   )
    class368[] method1485(int var1) {
       return new class469[var1];
    }
 
+   @ObfInfo(
+      owner = "nc",
+      name = "v",
+      desc = "(Ljava/lang/String;I)V"
+   )
    final void method76(String var1) {
       String var4 = class10.method61(class128.method607(var1));
       if (null == var4) {
@@ -30,6 +88,11 @@ public class class17 extends class304 {
       this.field85 = var4;
    }
 
+   @ObfInfo(
+      owner = "nc",
+      name = "g",
+      desc = "(Ljava/lang/String;B)V"
+   )
    final void method77(String var1) {
       String var4 = class10.method61(class128.method607(var1));
       if (var4 == null) {
@@ -39,6 +102,11 @@ public class class17 extends class304 {
       this.field89 = var4;
    }
 
+   @ObfInfo(
+      owner = "nc",
+      name = "i",
+      desc = "(Lqy;II)V"
+   )
    public final void method82(class127 var1, int var2) {
       this.method77(var1.method555());
       long var4 = var1.method598();
@@ -100,6 +168,11 @@ public class class17 extends class304 {
       }
    }
 
+   @ObfInfo(
+      owner = "nc",
+      name = "o",
+      desc = "(Lqy;B)V"
+   )
    public final void method79(class127 var1) {
       class257 var3 = new class257(var1.method555(), this.field83);
       int var4 = var1.method549();
@@ -137,6 +210,11 @@ public class class17 extends class304 {
 
    }
 
+   @ObfInfo(
+      owner = "nc",
+      name = "n",
+      desc = "(I)V"
+   )
    public final void method80() {
       for(int var2 = 0; var2 < this.method1467(); ++var2) {
          ((class469)this.method1475(var2)).method2295();
@@ -144,6 +222,11 @@ public class class17 extends class304 {
 
    }
 
+   @ObfInfo(
+      owner = "nc",
+      name = "k",
+      desc = "(B)V"
+   )
    public final void method83() {
       for(int var2 = 0; var2 < this.method1467(); ++var2) {
          ((class469)this.method1475(var2)).method2292();
@@ -151,6 +234,11 @@ public class class17 extends class304 {
 
    }
 
+   @ObfInfo(
+      owner = "nc",
+      name = "a",
+      desc = "(Log;I)V"
+   )
    final void method81(class469 var1) {
       if (var1.method1817().equals(this.field84.method1021())) {
          this.field86 = var1.field628;
@@ -158,6 +246,11 @@ public class class17 extends class304 {
 
    }
 
+   @ObfInfo(
+      owner = "nc",
+      name = "gy",
+      desc = "(Lga;IIIB)V"
+   )
    static void method84(class242 var0, int var1, int var2, int var3) {
       if (client.field478 < 50 && class50.field574.method2230() != 0) {
          if (var0.field2038 != null && var1 < var0.field2038.length) {
@@ -180,6 +273,11 @@ public class class17 extends class304 {
       }
    }
 
+   @ObfInfo(
+      owner = "nc",
+      name = "jd",
+      desc = "(I)V"
+   )
    static void method86() {
       class212.method915();
       client.field375[0] = class177.field1406;

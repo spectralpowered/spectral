@@ -1,14 +1,42 @@
+@ObfInfo(
+   name = "fs"
+)
 public class class459 {
    // $FF: synthetic field
+   @ObfInfo(
+      owner = "fs",
+      name = "this$0",
+      desc = "Lfk;"
+   )
    final class277 this$0;
+   @ObfInfo(
+      owner = "fs",
+      name = "h",
+      desc = "Ldm;"
+   )
    public class140 field3805;
+   @ObfInfo(
+      owner = "fs",
+      name = "e",
+      desc = "[F"
+   )
    public float[] field3806;
 
+   @ObfInfo(
+      owner = "fs",
+      name = "<init>",
+      desc = "(Lfk;)V"
+   )
    class459(class277 var1) {
       this.this$0 = var1;
       this.field3806 = new float[4];
    }
 
+   @ObfInfo(
+      owner = "fs",
+      name = "e",
+      desc = "(CLmb;I)C"
+   )
    static char method2265(char var0, class476 var1) {
       if (var0 >= 192 && var0 <= 255) {
          if (var0 >= 192 && var0 <= 198) {
@@ -89,10 +117,20 @@ public class class459 {
       }
    }
 
+   @ObfInfo(
+      owner = "fs",
+      name = "j",
+      desc = "(S)I"
+   )
    protected static final int method2264() {
       return class214.field1861.method2140();
    }
 
+   @ObfInfo(
+      owner = "fs",
+      name = "aq",
+      desc = "(ILbm;ZI)I"
+   )
    static int method2263(int var0, class461 var1, boolean var2) {
       return 2;
    }

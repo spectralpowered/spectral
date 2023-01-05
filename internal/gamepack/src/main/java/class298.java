@@ -1,10 +1,43 @@
+@ObfInfo(
+   name = "ha"
+)
 public class class298 extends class195 {
+   @ObfInfo(
+      owner = "ha",
+      name = "a",
+      desc = "[I"
+   )
    public static int[] field2394;
+   @ObfInfo(
+      owner = "ha",
+      name = "q",
+      desc = "Lra;"
+   )
    static class344 field2395;
+   @ObfInfo(
+      owner = "ha",
+      name = "ez",
+      desc = "Lln;"
+   )
    static class38 field2397;
+   @ObfInfo(
+      owner = "ha",
+      name = "td",
+      desc = "I"
+   )
    static int field2398;
+   @ObfInfo(
+      owner = "ha",
+      name = "h",
+      desc = "[Lho;"
+   )
    class216[] field2396;
 
+   @ObfInfo(
+      owner = "ha",
+      name = "<init>",
+      desc = "(Lly;Lly;IZ)V"
+   )
    public class298(class274 var1, class274 var2, int var3, boolean var4) {
       class141 var5 = new class141();
       int var6 = var1.method1360(var3);
@@ -40,10 +73,20 @@ public class class298 extends class195 {
 
    }
 
+   @ObfInfo(
+      owner = "ha",
+      name = "h",
+      desc = "(II)Z"
+   )
    public boolean method1444(int var1) {
       return this.field2396[var1].field1886;
    }
 
+   @ObfInfo(
+      owner = "ha",
+      name = "h",
+      desc = "(Ljava/lang/Object;ZI)[B"
+   )
    public static byte[] method1445(Object var0, boolean var1) {
       if (null == var0) {
          return null;

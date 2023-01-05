@@ -1,31 +1,139 @@
 import java.util.Iterator;
 
+@ObfInfo(
+   name = "co"
+)
 public class class397 {
+   @ObfInfo(
+      owner = "co",
+      name = "qk",
+      desc = "Lob;"
+   )
    static class110 field3352;
+   @ObfInfo(
+      owner = "co",
+      name = "ri",
+      desc = "Lrt;"
+   )
    static class352 field3353;
+   @ObfInfo(
+      owner = "co",
+      name = "tn",
+      desc = "I"
+   )
    static int field3350;
+   @ObfInfo(
+      owner = "co",
+      name = "h",
+      desc = "[Lra;"
+   )
    class344[] field3338;
+   @ObfInfo(
+      owner = "co",
+      name = "l",
+      desc = "I"
+   )
    int field3335 = 0;
+   @ObfInfo(
+      owner = "co",
+      name = "r",
+      desc = "I"
+   )
    int field3337 = 0;
+   @ObfInfo(
+      owner = "co",
+      name = "c",
+      desc = "I"
+   )
    int field3341 = 0;
+   @ObfInfo(
+      owner = "co",
+      name = "o",
+      desc = "I"
+   )
    int field3342 = 0;
+   @ObfInfo(
+      owner = "co",
+      name = "t",
+      desc = "I"
+   )
    int field3348 = 0;
+   @ObfInfo(
+      owner = "co",
+      name = "i",
+      desc = "I"
+   )
    int field3351 = 0;
+   @ObfInfo(
+      owner = "co",
+      name = "g",
+      desc = "[I"
+   )
    int[] field3336;
+   @ObfInfo(
+      owner = "co",
+      name = "j",
+      desc = "[I"
+   )
    int[] field3339;
+   @ObfInfo(
+      owner = "co",
+      name = "f",
+      desc = "[I"
+   )
    int[] field3340 = new int[256];
+   @ObfInfo(
+      owner = "co",
+      name = "n",
+      desc = "[I"
+   )
    int[] field3343;
+   @ObfInfo(
+      owner = "co",
+      name = "b",
+      desc = "[I"
+   )
    int[] field3344;
+   @ObfInfo(
+      owner = "co",
+      name = "a",
+      desc = "[I"
+   )
    int[] field3345;
+   @ObfInfo(
+      owner = "co",
+      name = "s",
+      desc = "[I"
+   )
    int[] field3346;
+   @ObfInfo(
+      owner = "co",
+      name = "k",
+      desc = "[I"
+   )
    int[] field3347;
+   @ObfInfo(
+      owner = "co",
+      name = "u",
+      desc = "[I"
+   )
    int[] field3349;
 
+   @ObfInfo(
+      owner = "co",
+      name = "<init>",
+      desc = "([Lra;)V"
+   )
    class397(class344[] var1) {
       this.field3338 = var1;
       this.method1952();
    }
 
+   @ObfInfo(
+      owner = "co",
+      name = "h",
+      desc = "(B)V"
+   )
    void method1952() {
       this.field3344 = new int[256];
 
@@ -91,6 +199,11 @@ public class class397 {
       this.field3347 = new int['耀'];
    }
 
+   @ObfInfo(
+      owner = "co",
+      name = "e",
+      desc = "(B)V"
+   )
    void method1959() {
       this.field3344 = null;
       this.field3339 = null;
@@ -104,6 +217,11 @@ public class class397 {
       this.field3348 = 0;
    }
 
+   @ObfInfo(
+      owner = "co",
+      name = "v",
+      desc = "(III)V"
+   )
    void method1954(int var1, int var2) {
       if (this.field3343 == null) {
          this.method1952();
@@ -126,6 +244,11 @@ public class class397 {
       this.method1953(var1);
    }
 
+   @ObfInfo(
+      owner = "co",
+      name = "x",
+      desc = "(II)V"
+   )
    final void method1955(int var1) {
       this.field3335 += var1 * 128;
       int var3;
@@ -255,11 +378,21 @@ public class class397 {
 
    }
 
+   @ObfInfo(
+      owner = "co",
+      name = "m",
+      desc = "(IIIS)I"
+   )
    final int method1962(int var1, int var2, int var3) {
       int var5 = 256 - var3;
       return (var5 * (var1 & 16711935) + (var2 & 16711935) * var3 & -16711936) + (var3 * (var2 & '\uff00') + (var1 & '\uff00') * var5 & 16711680) >> 8;
    }
 
+   @ObfInfo(
+      owner = "co",
+      name = "q",
+      desc = "(II)V"
+   )
    final void method1953(int var1) {
       int var3 = this.field3349.length;
       if (this.field3351 > 0) {
@@ -275,6 +408,11 @@ public class class397 {
       this.method1961(var1);
    }
 
+   @ObfInfo(
+      owner = "co",
+      name = "f",
+      desc = "(I[II)V"
+   )
    final void method1956(int var1, int[] var2) {
       int var4 = this.field3349.length;
 
@@ -290,6 +428,11 @@ public class class397 {
 
    }
 
+   @ObfInfo(
+      owner = "co",
+      name = "r",
+      desc = "(IB)V"
+   )
    final void method1961(int var1) {
       int var3 = 0;
 
@@ -329,6 +472,11 @@ public class class397 {
 
    }
 
+   @ObfInfo(
+      owner = "co",
+      name = "u",
+      desc = "(Lra;B)V"
+   )
    final void method1957(class344 var1) {
       int var3;
       for(var3 = 0; var3 < this.field3345.length; ++var3) {
@@ -373,6 +521,11 @@ public class class397 {
 
    }
 
+   @ObfInfo(
+      owner = "co",
+      name = "b",
+      desc = "(I)Ljava/lang/String;"
+   )
    static String method1960() {
       StringBuilder var1 = new StringBuilder();
 
@@ -387,6 +540,11 @@ public class class397 {
       return var1.toString();
    }
 
+   @ObfInfo(
+      owner = "co",
+      name = "a",
+      desc = "(Lkd;I)I"
+   )
    static int method1958(class120 var0) {
       if (var0.field1026 != 11) {
          class386.field3249[class386.field3250 - 1] = "";
@@ -398,6 +556,11 @@ public class class397 {
       }
    }
 
+   @ObfInfo(
+      owner = "co",
+      name = "na",
+      desc = "(II)Lqf;"
+   )
    static class213 method1963(int var0) {
       class213 var2 = (class213)client.field437.method394((long)var0);
       if (null == var2) {

@@ -9,16 +9,44 @@ import org.bouncycastle.crypto.tls.CertificateRequest;
 import org.bouncycastle.crypto.tls.TlsAuthentication;
 import org.bouncycastle.crypto.tls.TlsCredentials;
 
+@ObfInfo(
+   name = "g"
+)
 class class418 implements TlsAuthentication {
+   @ObfInfo(
+      owner = "g",
+      name = "q",
+      desc = "[I"
+   )
    public static int[] field3431;
+   @ObfInfo(
+      owner = "g",
+      name = "r",
+      desc = "Ljava/util/concurrent/ScheduledExecutorService;"
+   )
    static ScheduledExecutorService field3432;
    // $FF: synthetic field
+   @ObfInfo(
+      owner = "g",
+      name = "this$2",
+      desc = "Lo;"
+   )
    final class319 this$2;
 
+   @ObfInfo(
+      owner = "g",
+      name = "<init>",
+      desc = "(Lo;)V"
+   )
    class418(class319 var1) {
       this.this$2 = var1;
    }
 
+   @ObfInfo(
+      owner = "g",
+      name = "notifyServerCertificate",
+      desc = "(Lorg/bouncycastle/crypto/tls/Certificate;)V"
+   )
    public void notifyServerCertificate(Certificate var1) throws IOException {
       try {
          CertificateFactory var2 = CertificateFactory.getInstance("X.509");
@@ -36,10 +64,20 @@ class class418 implements TlsAuthentication {
       }
    }
 
+   @ObfInfo(
+      owner = "g",
+      name = "getClientCredentials",
+      desc = "(Lorg/bouncycastle/crypto/tls/CertificateRequest;)Lorg/bouncycastle/crypto/tls/TlsCredentials;"
+   )
    public TlsCredentials getClientCredentials(CertificateRequest var1) throws IOException {
       return null;
    }
 
+   @ObfInfo(
+      owner = "g",
+      name = "jk",
+      desc = "(IIIIIIIIIII)V"
+   )
    static final void method2018(int var0, int var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8, int var9) {
       class138 var11 = null;
 

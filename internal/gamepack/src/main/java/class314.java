@@ -1,19 +1,47 @@
+@ObfInfo(
+   name = "nj"
+)
 public class class314 extends class304 {
+   @ObfInfo(
+      owner = "nj",
+      name = "v",
+      desc = "Lqi;"
+   )
    final class194 field2475;
 
+   @ObfInfo(
+      owner = "nj",
+      name = "<init>",
+      desc = "(Lqi;)V"
+   )
    public class314(class194 var1) {
       super(400);
       this.field2475 = var1;
    }
 
+   @ObfInfo(
+      owner = "nj",
+      name = "h",
+      desc = "(B)Lov;"
+   )
    class368 method1482() {
       return new class187();
    }
 
+   @ObfInfo(
+      owner = "nj",
+      name = "e",
+      desc = "(II)[Lov;"
+   )
    class368[] method1485(int var1) {
       return new class187[var1];
    }
 
+   @ObfInfo(
+      owner = "nj",
+      name = "v",
+      desc = "(Lqy;II)V"
+   )
    public void method1513(class127 var1, int var2) {
       while(true) {
          if (var1.field1070 < var2) {

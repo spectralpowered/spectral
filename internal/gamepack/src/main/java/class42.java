@@ -1,9 +1,37 @@
+@ObfInfo(
+   name = "lt"
+)
 public class class42 extends class139 {
+   @ObfInfo(
+      owner = "lt",
+      name = "h",
+      desc = "I"
+   )
    int field525;
+   @ObfInfo(
+      owner = "lt",
+      name = "e",
+      desc = "[B"
+   )
    public byte[] field523;
+   @ObfInfo(
+      owner = "lt",
+      name = "v",
+      desc = "Loi;"
+   )
    public class20 field524;
+   @ObfInfo(
+      owner = "lt",
+      name = "x",
+      desc = "Lln;"
+   )
    public class38 field522;
 
+   @ObfInfo(
+      owner = "lt",
+      name = "q",
+      desc = "(Lqx;II)Z"
+   )
    static boolean method198(class6 var0, int var1) {
       int var3 = var0.method35(2);
       int var4;

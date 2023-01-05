@@ -1,5 +1,18 @@
+@ObfInfo(
+   name = "py"
+)
 public class class307 {
+   @ObfInfo(
+      owner = "py",
+      name = "b",
+      desc = "[I"
+   )
    static final int[] field2459 = new int[2048];
+   @ObfInfo(
+      owner = "py",
+      name = "j",
+      desc = "[I"
+   )
    static final int[] field2460 = new int[2048];
 
    static {

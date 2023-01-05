@@ -2,19 +2,57 @@ import java.awt.Font;
 import java.io.IOException;
 import java.util.concurrent.Callable;
 
+@ObfInfo(
+   name = "c"
+)
 public class class91 implements Callable {
+   @ObfInfo(
+      owner = "c",
+      name = "i",
+      desc = "Lac;"
+   )
    public static class289 field772;
+   @ObfInfo(
+      owner = "c",
+      name = "sr",
+      desc = "Lep;"
+   )
    static class429 field770;
+   @ObfInfo(
+      owner = "c",
+      name = "am",
+      desc = "Ljava/awt/Font;"
+   )
    static Font field771;
    // $FF: synthetic field
+   @ObfInfo(
+      owner = "c",
+      name = "this$0",
+      desc = "Ln;"
+   )
    final class19 this$0;
+   @ObfInfo(
+      owner = "c",
+      name = "h",
+      desc = "Lj;"
+   )
    final class192 field773;
 
+   @ObfInfo(
+      owner = "c",
+      name = "<init>",
+      desc = "(Ln;Lj;)V"
+   )
    class91(class19 var1, class192 var2) {
       this.this$0 = var1;
       this.field773 = var2;
    }
 
+   @ObfInfo(
+      owner = "c",
+      name = "call",
+      desc = "()Ljava/lang/Object;"
+   )
    public Object call() throws Exception {
       try {
          while(this.field773.method864()) {
@@ -27,10 +65,20 @@ public class class91 implements Callable {
       return this.field773.method865();
    }
 
+   @ObfInfo(
+      owner = "c",
+      name = "am",
+      desc = "(ILbm;ZI)I"
+   )
    static int method382(int var0, class461 var1, boolean var2) {
       return 2;
    }
 
+   @ObfInfo(
+      owner = "c",
+      name = "gi",
+      desc = "(Lga;IIIS)V"
+   )
    static void method383(class242 var0, int var1, int var2, int var3) {
       if (client.field478 < 50 && class50.field574.method2230() != 0) {
          if (var0.field2033 != null && var0.field2033.containsKey(var1)) {
@@ -53,6 +101,11 @@ public class class91 implements Callable {
       }
    }
 
+   @ObfInfo(
+      owner = "c",
+      name = "ay",
+      desc = "(ILbm;ZB)I"
+   )
    static int method384(int var0, class461 var1, boolean var2) {
       int var4;
       if (var0 == 4200) {

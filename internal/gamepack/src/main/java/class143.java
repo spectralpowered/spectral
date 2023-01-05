@@ -1,14 +1,52 @@
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
+@ObfInfo(
+   name = "fy"
+)
 public class class143 extends class203 {
+   @ObfInfo(
+      owner = "fy",
+      name = "e",
+      desc = "I"
+   )
    int field1144 = 256;
+   @ObfInfo(
+      owner = "fy",
+      name = "q",
+      desc = "I"
+   )
    int field1145;
+   @ObfInfo(
+      owner = "fy",
+      name = "m",
+      desc = "I"
+   )
    int field1147 = 0;
+   @ObfInfo(
+      owner = "fy",
+      name = "v",
+      desc = "I"
+   )
    int field1148 = 1;
+   @ObfInfo(
+      owner = "fy",
+      name = "x",
+      desc = "J"
+   )
    long field1146 = class152.method711();
+   @ObfInfo(
+      owner = "fy",
+      name = "h",
+      desc = "[J"
+   )
    long[] field1143 = new long[10];
 
+   @ObfInfo(
+      owner = "fy",
+      name = "<init>",
+      desc = "()V"
+   )
    public class143() {
       for(int var1 = 0; var1 < 10; ++var1) {
          this.field1143[var1] = this.field1146;
@@ -16,6 +54,11 @@ public class class143 extends class203 {
 
    }
 
+   @ObfInfo(
+      owner = "fy",
+      name = "h",
+      desc = "(I)V"
+   )
    public void method889() {
       for(int var2 = 0; var2 < 10; ++var2) {
          this.field1143[var2] = 0L;
@@ -23,6 +66,11 @@ public class class143 extends class203 {
 
    }
 
+   @ObfInfo(
+      owner = "fy",
+      name = "e",
+      desc = "(III)I"
+   )
    public int method890(int var1, int var2) {
       int var4 = this.field1144;
       int var5 = this.field1148;
@@ -74,6 +122,11 @@ public class class143 extends class203 {
       return var6;
    }
 
+   @ObfInfo(
+      owner = "fy",
+      name = "e",
+      desc = "(Lqy;II)V"
+   )
    public static void method654(class127 var0, int var1) {
       class408 var3 = new class408();
       var3.field3413 = var0.method547();
@@ -183,6 +236,11 @@ public class class143 extends class203 {
       class323.field2565.method1939(var3);
    }
 
+   @ObfInfo(
+      owner = "fy",
+      name = "v",
+      desc = "(Ljava/lang/String;S)Ljava/lang/Class;"
+   )
    static Class method652(String var0) throws ClassNotFoundException {
       if (var0.equals("B")) {
          return Byte.TYPE;

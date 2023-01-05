@@ -1,13 +1,61 @@
+@ObfInfo(
+   name = "ra"
+)
 public final class class344 extends class162 {
+   @ObfInfo(
+      owner = "ra",
+      name = "h",
+      desc = "[B"
+   )
    public byte[] field2752;
+   @ObfInfo(
+      owner = "ra",
+      name = "m",
+      desc = "I"
+   )
    public int field2754;
+   @ObfInfo(
+      owner = "ra",
+      name = "x",
+      desc = "I"
+   )
    public int field2755;
+   @ObfInfo(
+      owner = "ra",
+      name = "f",
+      desc = "I"
+   )
    public int field2756;
+   @ObfInfo(
+      owner = "ra",
+      name = "q",
+      desc = "I"
+   )
    public int field2757;
+   @ObfInfo(
+      owner = "ra",
+      name = "v",
+      desc = "I"
+   )
    public int field2758;
+   @ObfInfo(
+      owner = "ra",
+      name = "r",
+      desc = "I"
+   )
    public int field2759;
+   @ObfInfo(
+      owner = "ra",
+      name = "e",
+      desc = "[I"
+   )
    public int[] field2753;
 
+   @ObfInfo(
+      owner = "ra",
+      name = "h",
+      desc = "()V"
+   )
    public void method1749() {
       if (this.field2758 != this.field2756 || this.field2755 != this.field2759) {
          byte[] var1 = new byte[this.field2756 * this.field2759];
@@ -27,6 +75,11 @@ public final class class344 extends class162 {
       }
    }
 
+   @ObfInfo(
+      owner = "ra",
+      name = "e",
+      desc = "(III)V"
+   )
    public void method1747(int var1, int var2, int var3) {
       for(int var4 = 0; var4 < this.field2753.length; ++var4) {
          int var5 = this.field2753[var4] >> 16 & 255;
@@ -58,6 +111,11 @@ public final class class344 extends class162 {
 
    }
 
+   @ObfInfo(
+      owner = "ra",
+      name = "v",
+      desc = "(II)V"
+   )
    public void method1745(int var1, int var2) {
       var1 += this.field2754;
       var2 += this.field2757;
@@ -102,6 +160,11 @@ public final class class344 extends class162 {
       }
    }
 
+   @ObfInfo(
+      owner = "ra",
+      name = "m",
+      desc = "(IIII)V"
+   )
    public void method1750(int var1, int var2, int var3, int var4) {
       int var5 = this.field2758;
       int var6 = this.field2755;
@@ -163,6 +226,11 @@ public final class class344 extends class162 {
       method1748(class162.field1233, this.field2752, this.field2753, var7, var8, var13, var14, var3, var4, var11, var12, var5);
    }
 
+   @ObfInfo(
+      owner = "ra",
+      name = "x",
+      desc = "([I[B[IIIIIII)V"
+   )
    static void method1746(int[] var0, byte[] var1, int[] var2, int var3, int var4, int var5, int var6, int var7, int var8) {
       int var9 = -(var5 >> 2);
       var5 = -(var5 & 3);
@@ -215,6 +283,11 @@ public final class class344 extends class162 {
 
    }
 
+   @ObfInfo(
+      owner = "ra",
+      name = "q",
+      desc = "([I[B[IIIIIIIIII)V"
+   )
    static void method1748(int[] var0, byte[] var1, int[] var2, int var3, int var4, int var5, int var6, int var7, int var8, int var9, int var10, int var11) {
       int var12 = var3;
 

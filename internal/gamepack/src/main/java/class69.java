@@ -1,21 +1,59 @@
+@ObfInfo(
+   name = "oa"
+)
 public class class69 extends class368 {
+   @ObfInfo(
+      owner = "oa",
+      name = "m",
+      desc = "I"
+   )
    public int field627 = -1;
+   @ObfInfo(
+      owner = "oa",
+      name = "f",
+      desc = "I"
+   )
    public int field628;
+   @ObfInfo(
+      owner = "oa",
+      name = "q",
+      desc = "I"
+   )
    public int field629;
 
+   @ObfInfo(
+      owner = "oa",
+      name = "aj",
+      desc = "(III)V"
+   )
    void method303(int var1, int var2) {
       this.field627 = var1;
       this.field629 = var2;
    }
 
+   @ObfInfo(
+      owner = "oa",
+      name = "aq",
+      desc = "(I)I"
+   )
    public int method305() {
       return this.field627;
    }
 
+   @ObfInfo(
+      owner = "oa",
+      name = "ap",
+      desc = "(I)Z"
+   )
    public boolean method304() {
       return this.field627 > 0;
    }
 
+   @ObfInfo(
+      owner = "oa",
+      name = "ks",
+      desc = "(IIIIIII)V"
+   )
    static final void method306(int var0, int var1, int var2, int var3, int var4, int var5) {
       int var7 = var2 - var0;
       int var8 = var3 - var1;

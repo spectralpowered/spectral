@@ -1,7 +1,25 @@
+@ObfInfo(
+   name = "kc"
+)
 public class class86 extends class139 {
+   @ObfInfo(
+      owner = "kc",
+      name = "e",
+      desc = "[B"
+   )
    byte[] field704;
+   @ObfInfo(
+      owner = "kc",
+      name = "h",
+      desc = "Lqp;"
+   )
    class170 field703;
 
+   @ObfInfo(
+      owner = "kc",
+      name = "<init>",
+      desc = "(Lqy;)V"
+   )
    class86(class127 var1) {
       var1.field1070 = var1.field1072.length - 3;
       int var2 = var1.method547();
@@ -318,6 +336,11 @@ public class class86 extends class139 {
 
    }
 
+   @ObfInfo(
+      owner = "kc",
+      name = "e",
+      desc = "()V"
+   )
    void method358() {
       if (this.field703 == null) {
          this.field703 = new class170(16);
@@ -398,10 +421,20 @@ public class class86 extends class139 {
       }
    }
 
+   @ObfInfo(
+      owner = "kc",
+      name = "v",
+      desc = "()V"
+   )
    void method360() {
       this.field703 = null;
    }
 
+   @ObfInfo(
+      owner = "kc",
+      name = "h",
+      desc = "(Lly;II)Lkc;"
+   )
    static class86 method359(class274 var0, int var1, int var2) {
       byte[] var3 = var0.method1365(var1, var2);
       return var3 == null ? null : new class86(new class127(var3));

@@ -1,12 +1,50 @@
+@ObfInfo(
+   name = "gg"
+)
 public abstract class class39 {
+   @ObfInfo(
+      owner = "gg",
+      name = "ak",
+      desc = "Lrm;"
+   )
    public static class54 field199;
+   @ObfInfo(
+      owner = "gg",
+      name = "h",
+      desc = "I"
+   )
    public int field195;
+   @ObfInfo(
+      owner = "gg",
+      name = "v",
+      desc = "I"
+   )
    public int field196;
+   @ObfInfo(
+      owner = "gg",
+      name = "x",
+      desc = "I"
+   )
    public int field197;
+   @ObfInfo(
+      owner = "gg",
+      name = "e",
+      desc = "I"
+   )
    public int field198;
 
+   @ObfInfo(
+      owner = "gg",
+      name = "h",
+      desc = "(IIILgw;I)Z"
+   )
    protected abstract boolean method165(int var1, int var2, int var3, class427 var4);
 
+   @ObfInfo(
+      owner = "gg",
+      name = "h",
+      desc = "(CB)Z"
+   )
    public static final boolean method167(char var0) {
       if (Character.isISOControl(var0)) {
          return false;
@@ -37,6 +75,11 @@ public abstract class class39 {
       }
    }
 
+   @ObfInfo(
+      owner = "gg",
+      name = "ij",
+      desc = "(IIB)V"
+   )
    static final void method166(int var0, int var1) {
       if (client.field238 == 2) {
          class241.method1043((client.field241 - class312.field2465 << 7) + client.field244, (client.field282 - class325.field2575 << 7) + client.field339, client.field243 * 2);

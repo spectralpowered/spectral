@@ -1,34 +1,172 @@
 import java.util.HashMap;
 import java.util.Map;
 
+@ObfInfo(
+   name = "ga"
+)
 public class class242 extends class195 {
+   @ObfInfo(
+      owner = "ga",
+      name = "m",
+      desc = "Ljv;"
+   )
    public static class99 field2029 = new class99(64);
+   @ObfInfo(
+      owner = "ga",
+      name = "q",
+      desc = "Ljv;"
+   )
    public static class99 field2030 = new class99(100);
+   @ObfInfo(
+      owner = "ga",
+      name = "f",
+      desc = "Ljv;"
+   )
    public static class99 field2042 = new class99(100);
+   @ObfInfo(
+      owner = "ga",
+      name = "h",
+      desc = "Z"
+   )
    static boolean field2051 = false;
+   @ObfInfo(
+      owner = "ga",
+      name = "e",
+      desc = "Lly;"
+   )
    static class274 field2027;
+   @ObfInfo(
+      owner = "ga",
+      name = "v",
+      desc = "Lly;"
+   )
    static class274 field2028;
+   @ObfInfo(
+      owner = "ga",
+      name = "s",
+      desc = "[Z"
+   )
    boolean[] field2041;
+   @ObfInfo(
+      owner = "ga",
+      name = "j",
+      desc = "I"
+   )
    int field2035 = 0;
+   @ObfInfo(
+      owner = "ga",
+      name = "b",
+      desc = "I"
+   )
    int field2048 = 0;
+   @ObfInfo(
+      owner = "ga",
+      name = "i",
+      desc = "[I"
+   )
    int[] field2036;
+   @ObfInfo(
+      owner = "ga",
+      name = "a",
+      desc = "[I"
+   )
    int[] field2040;
+   @ObfInfo(
+      owner = "ga",
+      name = "l",
+      desc = "Z"
+   )
    public boolean field2031 = false;
+   @ObfInfo(
+      owner = "ga",
+      name = "y",
+      desc = "Z"
+   )
    public boolean field2047 = false;
+   @ObfInfo(
+      owner = "ga",
+      name = "as",
+      desc = "I"
+   )
    public int field2026 = 2;
+   @ObfInfo(
+      owner = "ga",
+      name = "r",
+      desc = "I"
+   )
    public int field2032 = -1;
+   @ObfInfo(
+      owner = "ga",
+      name = "w",
+      desc = "I"
+   )
    public int field2034 = -1;
+   @ObfInfo(
+      owner = "ga",
+      name = "z",
+      desc = "I"
+   )
    public int field2039 = -1;
+   @ObfInfo(
+      owner = "ga",
+      name = "c",
+      desc = "I"
+   )
    public int field2044 = -1;
+   @ObfInfo(
+      owner = "ga",
+      name = "p",
+      desc = "I"
+   )
    public int field2045 = -1;
+   @ObfInfo(
+      owner = "ga",
+      name = "k",
+      desc = "I"
+   )
    public int field2046 = -1;
+   @ObfInfo(
+      owner = "ga",
+      name = "t",
+      desc = "I"
+   )
    public int field2049 = 5;
+   @ObfInfo(
+      owner = "ga",
+      name = "d",
+      desc = "I"
+   )
    public int field2050 = 99;
+   @ObfInfo(
+      owner = "ga",
+      name = "o",
+      desc = "[I"
+   )
    public int[] field2037;
+   @ObfInfo(
+      owner = "ga",
+      name = "n",
+      desc = "[I"
+   )
    public int[] field2038;
+   @ObfInfo(
+      owner = "ga",
+      name = "g",
+      desc = "[I"
+   )
    public int[] field2043;
+   @ObfInfo(
+      owner = "ga",
+      name = "u",
+      desc = "Ljava/util/Map;"
+   )
    public Map field2033;
 
+   @ObfInfo(
+      owner = "ga",
+      name = "v",
+      desc = "(Lqy;I)V"
+   )
    void method1051(class127 var1) {
       while(true) {
          int var3 = var1.method547();
@@ -40,6 +178,11 @@ public class class242 extends class195 {
       }
    }
 
+   @ObfInfo(
+      owner = "ga",
+      name = "x",
+      desc = "(Lqy;II)V"
+   )
    void method1061(class127 var1, int var2) {
       int var4;
       int var5;
@@ -136,6 +279,11 @@ public class class242 extends class195 {
 
    }
 
+   @ObfInfo(
+      owner = "ga",
+      name = "m",
+      desc = "(I)V"
+   )
    void method1052() {
       if (-1 == this.field2039) {
          if (null == this.field2040 && this.field2041 == null) {
@@ -155,6 +303,11 @@ public class class242 extends class195 {
 
    }
 
+   @ObfInfo(
+      owner = "ga",
+      name = "q",
+      desc = "(Lhh;II)Lhh;"
+   )
    public class470 method1053(class470 var1, int var2) {
       class470 var5;
       if (!this.method1056()) {
@@ -180,6 +333,11 @@ public class class242 extends class195 {
       }
    }
 
+   @ObfInfo(
+      owner = "ga",
+      name = "f",
+      desc = "(Lhh;III)Lhh;"
+   )
    class470 method1054(class470 var1, int var2, int var3) {
       class470 var6;
       if (!this.method1056()) {
@@ -239,6 +397,11 @@ public class class242 extends class195 {
       }
    }
 
+   @ObfInfo(
+      owner = "ga",
+      name = "r",
+      desc = "(Lhh;II)Lhh;"
+   )
    class470 method1055(class470 var1, int var2) {
       class470 var5;
       if (!this.method1056()) {
@@ -264,6 +427,11 @@ public class class242 extends class195 {
       }
    }
 
+   @ObfInfo(
+      owner = "ga",
+      name = "u",
+      desc = "(Lhh;ILga;IB)Lhh;"
+   )
    public class470 method1062(class470 var1, int var2, class242 var3, int var4) {
       if (field2051 && !this.method1056() && !var3.method1056()) {
          return this.method1060(var1, var2, var3, var4);
@@ -341,6 +509,11 @@ public class class242 extends class195 {
       }
    }
 
+   @ObfInfo(
+      owner = "ga",
+      name = "b",
+      desc = "(Lhh;ILga;II)Lhh;"
+   )
    class470 method1060(class470 var1, int var2, class242 var3, int var4) {
       var2 = this.field2043[var2];
       class298 var6 = class287.method1422(var2 >> 16);
@@ -364,6 +537,11 @@ public class class242 extends class195 {
       }
    }
 
+   @ObfInfo(
+      owner = "ga",
+      name = "j",
+      desc = "(Lhh;II)Lhh;"
+   )
    public class470 method1057(class470 var1, int var2) {
       if (!this.method1056()) {
          int var4 = this.field2043[var2];
@@ -397,18 +575,38 @@ public class class242 extends class195 {
       }
    }
 
+   @ObfInfo(
+      owner = "ga",
+      name = "g",
+      desc = "(I)Z"
+   )
    public boolean method1056() {
       return this.field2032 >= 0;
    }
 
+   @ObfInfo(
+      owner = "ga",
+      name = "i",
+      desc = "(B)I"
+   )
    public int method1058() {
       return this.field2035 - this.field2048;
    }
 
+   @ObfInfo(
+      owner = "ga",
+      name = "n",
+      desc = "(I)Lew;"
+   )
    class357 method1059() {
       return this.method1056() ? class359.method1791(this.field2032) : null;
    }
 
+   @ObfInfo(
+      owner = "ga",
+      name = "e",
+      desc = "(Lly;III)[Lrx;"
+   )
    public static class266[] method1064(class274 var0, int var1, int var2) {
       byte[] var5 = var0.method1365(var1, var2);
       boolean var4;
@@ -422,6 +620,11 @@ public class class242 extends class195 {
       return !var4 ? null : class232.method1005();
    }
 
+   @ObfInfo(
+      owner = "ga",
+      name = "h",
+      desc = "(Lly;Lly;Lly;Lly;I)V"
+   )
    public static void method1063(class274 var0, class274 var1, class274 var2, class274 var3) {
       class126.field1066 = var0;
       class120.field884 = var1;

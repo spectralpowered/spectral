@@ -1,13 +1,46 @@
+@ObfInfo(
+   name = "pc"
+)
 public class class222 {
+   @ObfInfo(
+      owner = "pc",
+      name = "r",
+      desc = "Z"
+   )
    boolean field1908 = false;
+   @ObfInfo(
+      owner = "pc",
+      name = "q",
+      desc = "Lly;"
+   )
    class274 field1909;
+   @ObfInfo(
+      owner = "pc",
+      name = "f",
+      desc = "I"
+   )
    int field1911 = 0;
+   @ObfInfo(
+      owner = "pc",
+      name = "m",
+      desc = "Ljava/lang/String;"
+   )
    String field1910;
 
+   @ObfInfo(
+      owner = "pc",
+      name = "<init>",
+      desc = "(Lly;)V"
+   )
    class222(class274 var1) {
       this.field1909 = var1;
    }
 
+   @ObfInfo(
+      owner = "pc",
+      name = "h",
+      desc = "(Ljava/lang/String;B)V"
+   )
    void method983(String var1) {
       if (null != var1 && !var1.isEmpty()) {
          if (var1 != this.field1910) {
@@ -19,6 +52,11 @@ public class class222 {
       }
    }
 
+   @ObfInfo(
+      owner = "pc",
+      name = "e",
+      desc = "(I)I"
+   )
    int method985() {
       if (this.field1911 < 33) {
          if (!this.field1909.method1358(class430.field3569.field3571, this.field1910)) {
@@ -48,14 +86,29 @@ public class class222 {
       return this.field1911;
    }
 
+   @ObfInfo(
+      owner = "pc",
+      name = "v",
+      desc = "(I)Z"
+   )
    boolean method984() {
       return this.field1908;
    }
 
+   @ObfInfo(
+      owner = "pc",
+      name = "x",
+      desc = "(I)I"
+   )
    int method982() {
       return this.field1911;
    }
 
+   @ObfInfo(
+      owner = "pc",
+      name = "h",
+      desc = "([FIFZFZ[FB)I"
+   )
    public static int method986(float[] var0, int var1, float var2, boolean var3, float var4, boolean var5, float[] var6) {
       float var8 = 0.0F;
 

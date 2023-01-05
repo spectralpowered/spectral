@@ -1,13 +1,46 @@
+@ObfInfo(
+   name = "kg"
+)
 public class class101 extends class437 {
+   @ObfInfo(
+      owner = "kg",
+      name = "lp",
+      desc = "Lkd;"
+   )
    static class120 field800;
+   @ObfInfo(
+      owner = "kg",
+      name = "e",
+      desc = "Lmq;"
+   )
    class141 field797 = new class141();
+   @ObfInfo(
+      owner = "kg",
+      name = "v",
+      desc = "Laz;"
+   )
    class244 field799 = new class244();
+   @ObfInfo(
+      owner = "kg",
+      name = "h",
+      desc = "Lka;"
+   )
    class491 field798;
 
+   @ObfInfo(
+      owner = "kg",
+      name = "<init>",
+      desc = "(Lka;)V"
+   )
    class101(class491 var1) {
       this.field798 = var1;
    }
 
+   @ObfInfo(
+      owner = "kg",
+      name = "q",
+      desc = "()Laa;"
+   )
    protected class437 method2168() {
       class458 var1 = (class458)this.field797.method646();
       if (null == var1) {
@@ -17,6 +50,11 @@ public class class101 extends class437 {
       }
    }
 
+   @ObfInfo(
+      owner = "kg",
+      name = "f",
+      desc = "()Laa;"
+   )
    protected class437 method2171() {
       class458 var1;
       do {
@@ -29,10 +67,20 @@ public class class101 extends class437 {
       return var1.field3802;
    }
 
+   @ObfInfo(
+      owner = "kg",
+      name = "r",
+      desc = "()I"
+   )
    protected int method2173() {
       return 0;
    }
 
+   @ObfInfo(
+      owner = "kg",
+      name = "u",
+      desc = "([III)V"
+   )
    protected void method2169(int[] var1, int var2, int var3) {
       this.field799.method2169(var1, var2, var3);
 
@@ -57,6 +105,11 @@ public class class101 extends class437 {
 
    }
 
+   @ObfInfo(
+      owner = "kg",
+      name = "j",
+      desc = "(I)V"
+   )
    protected void method2172(int var1) {
       this.field799.method2172(var1);
 
@@ -79,6 +132,11 @@ public class class101 extends class437 {
 
    }
 
+   @ObfInfo(
+      owner = "kg",
+      name = "h",
+      desc = "(Lkx;[IIIII)V"
+   )
    void method406(class458 var1, int[] var2, int var3, int var4, int var5) {
       if ((this.field798.field4083[var1.field3797] & 4) != 0 && var1.field3785 < 0) {
          int var7 = this.field798.field4099[var1.field3797] / class233.field1985;
@@ -124,6 +182,11 @@ public class class101 extends class437 {
       var1.field3802.method2169(var2, var3, var4);
    }
 
+   @ObfInfo(
+      owner = "kg",
+      name = "e",
+      desc = "(Lkx;II)V"
+   )
    void method404(class458 var1, int var2) {
       if ((this.field798.field4083[var1.field3797] & 4) != 0 && var1.field3785 < 0) {
          int var4 = this.field798.field4099[var1.field3797] / class233.field1985;
@@ -148,6 +211,11 @@ public class class101 extends class437 {
       var1.field3802.method2172(var2);
    }
 
+   @ObfInfo(
+      owner = "kg",
+      name = "e",
+      desc = "(IIS)I"
+   )
    static int method407(int var0, int var1) {
       if (var0 == -2) {
          return 12345678;
@@ -172,6 +240,11 @@ public class class101 extends class437 {
       }
    }
 
+   @ObfInfo(
+      owner = "kg",
+      name = "n",
+      desc = "(ILbm;ZI)I"
+   )
    static int method401(int var0, class461 var1, boolean var2) {
       class120 var4 = var2 ? class108.field822 : class37.field183;
       if (var0 == 1700) {

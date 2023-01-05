@@ -1,25 +1,98 @@
+@ObfInfo(
+   name = "oc"
+)
 public class class43 {
+   @ObfInfo(
+      owner = "oc",
+      name = "u",
+      desc = "F"
+   )
    float field526;
+   @ObfInfo(
+      owner = "oc",
+      name = "e",
+      desc = "F"
+   )
    float field527;
+   @ObfInfo(
+      owner = "oc",
+      name = "v",
+      desc = "F"
+   )
    float field528;
+   @ObfInfo(
+      owner = "oc",
+      name = "g",
+      desc = "F"
+   )
    float field529;
+   @ObfInfo(
+      owner = "oc",
+      name = "m",
+      desc = "F"
+   )
    float field530;
+   @ObfInfo(
+      owner = "oc",
+      name = "q",
+      desc = "F"
+   )
    float field531;
+   @ObfInfo(
+      owner = "oc",
+      name = "f",
+      desc = "F"
+   )
    float field532;
+   @ObfInfo(
+      owner = "oc",
+      name = "r",
+      desc = "F"
+   )
    float field533;
+   @ObfInfo(
+      owner = "oc",
+      name = "h",
+      desc = "F"
+   )
    float field534;
+   @ObfInfo(
+      owner = "oc",
+      name = "x",
+      desc = "F"
+   )
    float field535;
+   @ObfInfo(
+      owner = "oc",
+      name = "j",
+      desc = "F"
+   )
    float field536;
+   @ObfInfo(
+      owner = "oc",
+      name = "b",
+      desc = "F"
+   )
    float field537;
 
    static {
       new class43();
    }
 
+   @ObfInfo(
+      owner = "oc",
+      name = "<init>",
+      desc = "()V"
+   )
    class43() {
       this.method201();
    }
 
+   @ObfInfo(
+      owner = "oc",
+      name = "h",
+      desc = "(B)V"
+   )
    void method201() {
       this.field529 = 0.0F;
       this.field536 = 0.0F;
@@ -35,6 +108,11 @@ public class class43 {
       this.field534 = 1.0F;
    }
 
+   @ObfInfo(
+      owner = "oc",
+      name = "e",
+      desc = "(FB)V"
+   )
    void method199(float var1) {
       float var3 = (float)Math.cos((double)var1);
       float var4 = (float)Math.sin((double)var1);
@@ -52,6 +130,11 @@ public class class43 {
       this.field529 = var3 * this.field529 + var4 * var8;
    }
 
+   @ObfInfo(
+      owner = "oc",
+      name = "v",
+      desc = "(FB)V"
+   )
    void method200(float var1) {
       float var3 = (float)Math.cos((double)var1);
       float var4 = (float)Math.sin((double)var1);
@@ -69,6 +152,11 @@ public class class43 {
       this.field529 = this.field529 * var3 - var8 * var4;
    }
 
+   @ObfInfo(
+      owner = "oc",
+      name = "x",
+      desc = "(FI)V"
+   )
    void method203(float var1) {
       float var3 = (float)Math.cos((double)var1);
       float var4 = (float)Math.sin((double)var1);
@@ -86,12 +174,22 @@ public class class43 {
       this.field536 = var8 * var4 + this.field536 * var3;
    }
 
+   @ObfInfo(
+      owner = "oc",
+      name = "m",
+      desc = "(FFFB)V"
+   )
    void method202(float var1, float var2, float var3) {
       this.field537 += var1;
       this.field536 += var2;
       this.field529 += var3;
    }
 
+   @ObfInfo(
+      owner = "oc",
+      name = "toString",
+      desc = "()Ljava/lang/String;"
+   )
    public String toString() {
       return this.field534 + "," + this.field535 + "," + this.field532 + "," + this.field537 + "\n" + this.field527 + "," + this.field530 + "," + this.field533 + "," + this.field536 + "\n" + this.field528 + "," + this.field531 + "," + this.field526 + "," + this.field529;
    }

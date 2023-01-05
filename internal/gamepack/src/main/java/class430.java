@@ -1,15 +1,58 @@
+@ObfInfo(
+   name = "ic"
+)
 public class class430 {
+   @ObfInfo(
+      owner = "ic",
+      name = "m",
+      desc = "Lic;"
+   )
    public static final class430 field3568 = new class430("labels");
+   @ObfInfo(
+      owner = "ic",
+      name = "e",
+      desc = "Lic;"
+   )
    public static final class430 field3569 = new class430("compositemap");
+   @ObfInfo(
+      owner = "ic",
+      name = "v",
+      desc = "Lic;"
+   )
    public static final class430 field3572 = new class430("compositetexture");
+   @ObfInfo(
+      owner = "ic",
+      name = "h",
+      desc = "Lic;"
+   )
    public static final class430 field3573 = new class430("details");
+   @ObfInfo(
+      owner = "ic",
+      name = "x",
+      desc = "Lic;"
+   )
    static final class430 field3570 = new class430("area");
+   @ObfInfo(
+      owner = "ic",
+      name = "q",
+      desc = "Ljava/lang/String;"
+   )
    public final String field3571;
 
+   @ObfInfo(
+      owner = "ic",
+      name = "<init>",
+      desc = "(Ljava/lang/String;)V"
+   )
    class430(String var1) {
       this.field3571 = var1;
    }
 
+   @ObfInfo(
+      owner = "ic",
+      name = "ba",
+      desc = "([BI)[B"
+   )
    static final byte[] method2120(byte[] var0) {
       class127 var2 = new class127(var0);
       int var3 = var2.method547();
@@ -39,6 +82,11 @@ public class class430 {
       }
    }
 
+   @ObfInfo(
+      owner = "ic",
+      name = "ao",
+      desc = "(ILbm;ZI)I"
+   )
    static int method2121(int var0, class461 var1, boolean var2) {
       if (var0 == 3600) {
          if (0 == class240.field2021.field40) {

@@ -1,13 +1,61 @@
+@ObfInfo(
+   name = "ht"
+)
 public class class251 implements class308 {
+   @ObfInfo(
+      owner = "ht",
+      name = "fx",
+      desc = "I"
+   )
    static int field2068;
+   @ObfInfo(
+      owner = "ht",
+      name = "e",
+      desc = "Lmq;"
+   )
    class141 field2062 = new class141();
+   @ObfInfo(
+      owner = "ht",
+      name = "f",
+      desc = "Lly;"
+   )
    class274 field2061;
+   @ObfInfo(
+      owner = "ht",
+      name = "h",
+      desc = "[Lhx;"
+   )
    class29[] field2066;
+   @ObfInfo(
+      owner = "ht",
+      name = "m",
+      desc = "D"
+   )
    double field2065 = 1.0D;
+   @ObfInfo(
+      owner = "ht",
+      name = "q",
+      desc = "I"
+   )
    int field2063 = 128;
+   @ObfInfo(
+      owner = "ht",
+      name = "x",
+      desc = "I"
+   )
    int field2064 = 0;
+   @ObfInfo(
+      owner = "ht",
+      name = "v",
+      desc = "I"
+   )
    int field2067;
 
+   @ObfInfo(
+      owner = "ht",
+      name = "<init>",
+      desc = "(Lly;Lly;IDI)V"
+   )
    public class251(class274 var1, class274 var2, int var3, double var4, int var6) {
       this.field2061 = var2;
       this.field2067 = var3;
@@ -25,6 +73,11 @@ public class class251 implements class308 {
 
    }
 
+   @ObfInfo(
+      owner = "ht",
+      name = "h",
+      desc = "(B)I"
+   )
    public int method1084() {
       int var2 = 0;
       int var3 = 0;
@@ -52,11 +105,21 @@ public class class251 implements class308 {
       }
    }
 
+   @ObfInfo(
+      owner = "ht",
+      name = "e",
+      desc = "(D)V"
+   )
    public void method1085(double var1) {
       this.field2065 = var1;
       this.method1083();
    }
 
+   @ObfInfo(
+      owner = "ht",
+      name = "v",
+      desc = "(II)[I"
+   )
    public int[] method1495(int var1) {
       class29 var3 = this.field2066[var1];
       if (var3 != null) {
@@ -84,18 +147,38 @@ public class class251 implements class308 {
       return null;
    }
 
+   @ObfInfo(
+      owner = "ht",
+      name = "x",
+      desc = "(IB)I"
+   )
    public int method1496(int var1) {
       return this.field2066[var1] != null ? this.field2066[var1].field165 : 0;
    }
 
+   @ObfInfo(
+      owner = "ht",
+      name = "m",
+      desc = "(II)Z"
+   )
    public boolean method1494(int var1) {
       return this.field2066[var1].field170;
    }
 
+   @ObfInfo(
+      owner = "ht",
+      name = "q",
+      desc = "(II)Z"
+   )
    public boolean method1493(int var1) {
       return this.field2063 == 64;
    }
 
+   @ObfInfo(
+      owner = "ht",
+      name = "f",
+      desc = "(I)V"
+   )
    public void method1083() {
       for(int var2 = 0; var2 < this.field2066.length; ++var2) {
          if (null != this.field2066[var2]) {
@@ -107,6 +190,11 @@ public class class251 implements class308 {
       this.field2064 = this.field2067;
    }
 
+   @ObfInfo(
+      owner = "ht",
+      name = "r",
+      desc = "(IB)V"
+   )
    public void method1090(int var1) {
       for(int var3 = 0; var3 < this.field2066.length; ++var3) {
          class29 var4 = this.field2066[var3];
@@ -118,6 +206,11 @@ public class class251 implements class308 {
 
    }
 
+   @ObfInfo(
+      owner = "ht",
+      name = "lb",
+      desc = "(I)Z"
+   )
    static boolean method1091() {
       return client.field380;
    }

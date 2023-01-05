@@ -1,19 +1,72 @@
+@ObfInfo(
+   name = "rx"
+)
 public final class class266 extends class162 {
+   @ObfInfo(
+      owner = "rx",
+      name = "m",
+      desc = "I"
+   )
    int field2202;
+   @ObfInfo(
+      owner = "rx",
+      name = "v",
+      desc = "I"
+   )
    public int field2199;
+   @ObfInfo(
+      owner = "rx",
+      name = "e",
+      desc = "I"
+   )
    public int field2200;
+   @ObfInfo(
+      owner = "rx",
+      name = "x",
+      desc = "I"
+   )
    public int field2201;
+   @ObfInfo(
+      owner = "rx",
+      name = "q",
+      desc = "I"
+   )
    public int field2203;
+   @ObfInfo(
+      owner = "rx",
+      name = "f",
+      desc = "I"
+   )
    public int field2204;
+   @ObfInfo(
+      owner = "rx",
+      name = "h",
+      desc = "[I"
+   )
    public int[] field2205;
 
+   @ObfInfo(
+      owner = "rx",
+      name = "<init>",
+      desc = "()V"
+   )
    class266() {
    }
 
+   @ObfInfo(
+      owner = "rx",
+      name = "<init>",
+      desc = "(II)V"
+   )
    public class266(int var1, int var2) {
       this(new int[var1 * var2], var1, var2);
    }
 
+   @ObfInfo(
+      owner = "rx",
+      name = "<init>",
+      desc = "([III)V"
+   )
    public class266(int[] var1, int var2, int var3) {
       this.field2205 = var1;
       this.field2200 = this.field2203 = var2;
@@ -22,6 +75,11 @@ public final class class266 extends class162 {
       this.field2201 = 0;
    }
 
+   @ObfInfo(
+      owner = "rx",
+      name = "h",
+      desc = "()Lrx;"
+   )
    public class266 method1222() {
       class266 var1 = new class266(this.field2200, this.field2199);
       var1.field2203 = this.field2203;
@@ -38,6 +96,11 @@ public final class class266 extends class162 {
       return var1;
    }
 
+   @ObfInfo(
+      owner = "rx",
+      name = "e",
+      desc = "()Lrx;"
+   )
    public class266 method1223() {
       class266 var1 = new class266(this.field2200, this.field2199);
       var1.field2203 = this.field2203;
@@ -53,6 +116,11 @@ public final class class266 extends class162 {
       return var1;
    }
 
+   @ObfInfo(
+      owner = "rx",
+      name = "v",
+      desc = "()Lrx;"
+   )
    public class266 method1254() {
       class266 var1 = new class266(this.field2203, this.field2204);
 
@@ -65,10 +133,20 @@ public final class class266 extends class162 {
       return var1;
    }
 
+   @ObfInfo(
+      owner = "rx",
+      name = "x",
+      desc = "()V"
+   )
    public void method1233() {
       method748(this.field2205, this.field2200, this.field2199);
    }
 
+   @ObfInfo(
+      owner = "rx",
+      name = "m",
+      desc = "()V"
+   )
    public void method1225() {
       if (this.field2200 != this.field2203 || this.field2199 != this.field2204) {
          int[] var1 = new int[this.field2203 * this.field2204];
@@ -87,6 +165,11 @@ public final class class266 extends class162 {
       }
    }
 
+   @ObfInfo(
+      owner = "rx",
+      name = "q",
+      desc = "(I)V"
+   )
    public void method1226(int var1) {
       if (this.field2200 != this.field2203 || this.field2199 != this.field2204) {
          int var2 = var1;
@@ -127,6 +210,11 @@ public final class class266 extends class162 {
       }
    }
 
+   @ObfInfo(
+      owner = "rx",
+      name = "f",
+      desc = "()V"
+   )
    public void method1227() {
       int[] var1 = new int[this.field2200 * this.field2199];
       int var2 = 0;
@@ -141,6 +229,11 @@ public final class class266 extends class162 {
       this.field2201 = this.field2203 - this.field2200 - this.field2201;
    }
 
+   @ObfInfo(
+      owner = "rx",
+      name = "r",
+      desc = "()V"
+   )
    public void method1251() {
       int[] var1 = new int[this.field2200 * this.field2199];
       int var2 = 0;
@@ -155,6 +248,11 @@ public final class class266 extends class162 {
       this.field2202 = this.field2204 - this.field2199 - this.field2202;
    }
 
+   @ObfInfo(
+      owner = "rx",
+      name = "u",
+      desc = "(I)V"
+   )
    public void method1228(int var1) {
       int[] var2 = new int[this.field2200 * this.field2199];
       int var3 = 0;
@@ -181,6 +279,11 @@ public final class class266 extends class162 {
       this.field2205 = var2;
    }
 
+   @ObfInfo(
+      owner = "rx",
+      name = "b",
+      desc = "(I)V"
+   )
    public void method1253(int var1) {
       for(int var2 = this.field2199 - 1; var2 > 0; --var2) {
          int var3 = var2 * this.field2200;
@@ -194,6 +297,11 @@ public final class class266 extends class162 {
 
    }
 
+   @ObfInfo(
+      owner = "rx",
+      name = "j",
+      desc = "(II)V"
+   )
    public void method1229(int var1, int var2) {
       var1 += this.field2201;
       var2 += this.field2202;
@@ -238,6 +346,11 @@ public final class class266 extends class162 {
       }
    }
 
+   @ObfInfo(
+      owner = "rx",
+      name = "i",
+      desc = "(II)V"
+   )
    public void method1240(int var1, int var2) {
       var1 += this.field2201;
       var2 += this.field2202;
@@ -282,6 +395,11 @@ public final class class266 extends class162 {
       }
    }
 
+   @ObfInfo(
+      owner = "rx",
+      name = "n",
+      desc = "(IIII)V"
+   )
    public void method1231(int var1, int var2, int var3, int var4) {
       if (var3 > 0 && var4 > 0) {
          int var5 = this.field2200;
@@ -345,6 +463,11 @@ public final class class266 extends class162 {
       }
    }
 
+   @ObfInfo(
+      owner = "rx",
+      name = "a",
+      desc = "(IIII)V"
+   )
    public void method1221(int var1, int var2, int var3, int var4) {
       if (var3 == 256) {
          this.method1240(var1, var2);
@@ -393,6 +516,11 @@ public final class class266 extends class162 {
       }
    }
 
+   @ObfInfo(
+      owner = "rx",
+      name = "l",
+      desc = "(III)V"
+   )
    public void method1245(int var1, int var2, int var3) {
       var1 += this.field2201;
       var2 += this.field2202;
@@ -437,6 +565,11 @@ public final class class266 extends class162 {
       }
    }
 
+   @ObfInfo(
+      owner = "rx",
+      name = "c",
+      desc = "(IIIII)V"
+   )
    public void method1244(int var1, int var2, int var3, int var4, int var5) {
       if (var3 > 0 && var4 > 0) {
          int var6 = this.field2200;
@@ -500,6 +633,11 @@ public final class class266 extends class162 {
       }
    }
 
+   @ObfInfo(
+      owner = "rx",
+      name = "d",
+      desc = "(III)V"
+   )
    public void method1235(int var1, int var2, int var3) {
       var1 += this.field2201;
       var2 += this.field2202;
@@ -549,6 +687,11 @@ public final class class266 extends class162 {
       }
    }
 
+   @ObfInfo(
+      owner = "rx",
+      name = "w",
+      desc = "(IIIII)V"
+   )
    public void method1237(int var1, int var2, int var3, int var4, int var5) {
       if (var3 > 0 && var4 > 0) {
          int var6 = this.field2200;
@@ -617,6 +760,11 @@ public final class class266 extends class162 {
       }
    }
 
+   @ObfInfo(
+      owner = "rx",
+      name = "ao",
+      desc = "(IIIIII[I[I)V"
+   )
    public void method1239(int var1, int var2, int var3, int var4, int var5, int var6, int[] var7, int[] var8) {
       int var9 = var2 < 0 ? -var2 : 0;
       int var10 = var2 + this.field2199 <= var6 ? this.field2199 : var6 - var2;
@@ -664,6 +812,11 @@ public final class class266 extends class162 {
 
    }
 
+   @ObfInfo(
+      owner = "rx",
+      name = "am",
+      desc = "(IIIIIIII[I[I)V"
+   )
    public void method1236(int var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8, int[] var9, int[] var10) {
       try {
          int var11 = -var3 / 2;
@@ -698,6 +851,11 @@ public final class class266 extends class162 {
 
    }
 
+   @ObfInfo(
+      owner = "rx",
+      name = "av",
+      desc = "(IIIIIIDI)V"
+   )
    public void method1246(int var1, int var2, int var3, int var4, int var5, int var6, double var7, int var9) {
       try {
          int var10 = -var3 / 2;
@@ -737,10 +895,20 @@ public final class class266 extends class162 {
 
    }
 
+   @ObfInfo(
+      owner = "rx",
+      name = "au",
+      desc = "(IIII)V"
+   )
    public void method1241(int var1, int var2, int var3, int var4) {
       this.method1242(this.field2203 << 3, this.field2204 << 3, var1 << 4, var2 << 4, var3, var4);
    }
 
+   @ObfInfo(
+      owner = "rx",
+      name = "ar",
+      desc = "(IIIIII)V"
+   )
    void method1242(int var1, int var2, int var3, int var4, int var5, int var6) {
       if (var6 != 0) {
          var1 -= this.field2201 << 4;
@@ -1209,6 +1377,11 @@ public final class class266 extends class162 {
       }
    }
 
+   @ObfInfo(
+      owner = "rx",
+      name = "at",
+      desc = "(IIII)V"
+   )
    public void method1243(int var1, int var2, int var3, int var4) {
       if (var3 <= this.field2203 && var4 <= this.field2204) {
          int var5 = var1 + this.field2201 * var3 / this.field2203;
@@ -1330,6 +1503,11 @@ public final class class266 extends class162 {
       }
    }
 
+   @ObfInfo(
+      owner = "rx",
+      name = "g",
+      desc = "([I[IIIIIII)V"
+   )
    static void method1252(int[] var0, int[] var1, int var2, int var3, int var4, int var5, int var6, int var7) {
       for(int var8 = -var5; var8 < 0; ++var8) {
          int var9;
@@ -1349,6 +1527,11 @@ public final class class266 extends class162 {
 
    }
 
+   @ObfInfo(
+      owner = "rx",
+      name = "o",
+      desc = "([I[IIIIIIII)V"
+   )
    static void method1249(int[] var0, int[] var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8) {
       int var9 = -(var5 >> 2);
       var5 = -(var5 & 3);
@@ -1400,6 +1583,11 @@ public final class class266 extends class162 {
 
    }
 
+   @ObfInfo(
+      owner = "rx",
+      name = "k",
+      desc = "([I[IIIIIIIIIII)V"
+   )
    static void method1224(int[] var0, int[] var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8, int var9, int var10, int var11) {
       int var12 = var3;
 
@@ -1424,6 +1612,11 @@ public final class class266 extends class162 {
 
    }
 
+   @ObfInfo(
+      owner = "rx",
+      name = "s",
+      desc = "([I[IIIIIIIIII)V"
+   )
    static void method1247(int[] var0, int[] var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8, int var9, int var10) {
       int var11 = 256 - var9;
       int var12 = (var10 & 16711935) * var11 & -16711936;
@@ -1448,6 +1641,11 @@ public final class class266 extends class162 {
 
    }
 
+   @ObfInfo(
+      owner = "rx",
+      name = "t",
+      desc = "([I[IIIIIIIII)V"
+   )
    static void method1234(int[] var0, int[] var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8, int var9) {
       int var10 = 256 - var9;
 
@@ -1468,6 +1666,11 @@ public final class class266 extends class162 {
 
    }
 
+   @ObfInfo(
+      owner = "rx",
+      name = "p",
+      desc = "([I[IIIIIIIIIIII)V"
+   )
    static void method1232(int[] var0, int[] var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8, int var9, int var10, int var11, int var12) {
       int var13 = 256 - var12;
       int var14 = var3;
@@ -1494,6 +1697,11 @@ public final class class266 extends class162 {
 
    }
 
+   @ObfInfo(
+      owner = "rx",
+      name = "y",
+      desc = "(III[I[IIIIIIIII)V"
+   )
    static void method1250(int var0, int var1, int var2, int[] var3, int[] var4, int var5, int var6, int var7, int var8, int var9, int var10, int var11, int var12) {
       for(var8 = -var10; var8 < 0; ++var8) {
          for(var6 = -var9; var6 < 0; ++var6) {
@@ -1515,6 +1723,11 @@ public final class class266 extends class162 {
 
    }
 
+   @ObfInfo(
+      owner = "rx",
+      name = "z",
+      desc = "(III[I[IIIIIIIIII)V"
+   )
    static void method1230(int var0, int var1, int var2, int[] var3, int[] var4, int var5, int var6, int var7, int var8, int var9, int var10, int var11, int var12, int var13) {
       for(var8 = -var10; var8 < 0; ++var8) {
          for(var6 = -var9; var6 < 0; ++var6) {
@@ -1538,6 +1751,11 @@ public final class class266 extends class162 {
 
    }
 
+   @ObfInfo(
+      owner = "rx",
+      name = "as",
+      desc = "(IIII[I[IIIIIIIIIII)V"
+   )
    static void method1248(int var0, int var1, int var2, int var3, int[] var4, int[] var5, int var6, int var7, int var8, int var9, int var10, int var11, int var12, int var13, int var14, int var15) {
       for(int var16 = var3; var8 < 0; ++var8) {
          var7 = (var9 >> 16) * var15;
@@ -1564,6 +1782,11 @@ public final class class266 extends class162 {
 
    }
 
+   @ObfInfo(
+      owner = "rx",
+      name = "ad",
+      desc = "(IIII[I[IIIIIIIIIIII)V"
+   )
    static void method1238(int var0, int var1, int var2, int var3, int[] var4, int[] var5, int var6, int var7, int var8, int var9, int var10, int var11, int var12, int var13, int var14, int var15, int var16) {
       for(int var17 = var3; var8 < 0; ++var8) {
          var7 = (var9 >> 16) * var15;

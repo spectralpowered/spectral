@@ -1,25 +1,83 @@
+@ObfInfo(
+   name = "bw"
+)
 public class class428 {
+   @ObfInfo(
+      owner = "bw",
+      name = "r",
+      desc = "F"
+   )
    static float field3541;
+   @ObfInfo(
+      owner = "bw",
+      name = "q",
+      desc = "[[F"
+   )
    static float[][] field3539 = new float[2][8];
+   @ObfInfo(
+      owner = "bw",
+      name = "u",
+      desc = "I"
+   )
    static int field3535;
+   @ObfInfo(
+      owner = "bw",
+      name = "f",
+      desc = "[[I"
+   )
    static int[][] field3536 = new int[2][8];
+   @ObfInfo(
+      owner = "bw",
+      name = "m",
+      desc = "[I"
+   )
    int[] field3538 = new int[2];
+   @ObfInfo(
+      owner = "bw",
+      name = "h",
+      desc = "[I"
+   )
    int[] field3540 = new int[2];
+   @ObfInfo(
+      owner = "bw",
+      name = "x",
+      desc = "[[[I"
+   )
    int[][][] field3537 = new int[2][2][4];
+   @ObfInfo(
+      owner = "bw",
+      name = "v",
+      desc = "[[[I"
+   )
    int[][][] field3542 = new int[2][2][4];
 
+   @ObfInfo(
+      owner = "bw",
+      name = "h",
+      desc = "(IIF)F"
+   )
    float method2094(int var1, int var2, float var3) {
       float var4 = (float)this.field3537[var1][0][var2] + var3 * (float)(this.field3537[var1][1][var2] - this.field3537[var1][0][var2]);
       var4 *= 0.0015258789F;
       return 1.0F - (float)Math.pow(10.0D, (double)(-var4 / 20.0F));
    }
 
+   @ObfInfo(
+      owner = "bw",
+      name = "v",
+      desc = "(IIF)F"
+   )
    float method2098(int var1, int var2, float var3) {
       float var4 = (float)this.field3542[var1][0][var2] + var3 * (float)(this.field3542[var1][1][var2] - this.field3542[var1][0][var2]);
       var4 *= 1.2207031E-4F;
       return method2096(var4);
    }
 
+   @ObfInfo(
+      owner = "bw",
+      name = "x",
+      desc = "(IF)I"
+   )
    int method2095(int var1, float var2) {
       float var3;
       if (var1 == 0) {
@@ -66,6 +124,11 @@ public class class428 {
       }
    }
 
+   @ObfInfo(
+      owner = "bw",
+      name = "m",
+      desc = "(Lqy;Lah;)V"
+   )
    final void method2097(class127 var1, class487 var2) {
       int var3 = var1.method547();
       this.field3540[0] = var3 >> 4;
@@ -107,6 +170,11 @@ public class class428 {
 
    }
 
+   @ObfInfo(
+      owner = "bw",
+      name = "e",
+      desc = "(F)F"
+   )
    static float method2096(float var0) {
       float var1 = 32.703197F * (float)Math.pow(2.0D, (double)var0);
       return var1 * 3.1415927F / 11025.0F;

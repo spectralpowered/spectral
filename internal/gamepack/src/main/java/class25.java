@@ -1,13 +1,46 @@
 import java.io.File;
 import java.util.Date;
 
+@ObfInfo(
+   name = "fg"
+)
 public class class25 {
+   @ObfInfo(
+      owner = "fg",
+      name = "i",
+      desc = "Lqa;"
+   )
    public static class435 field112 = null;
+   @ObfInfo(
+      owner = "fg",
+      name = "o",
+      desc = "Lqa;"
+   )
    public static class435 field113 = null;
+   @ObfInfo(
+      owner = "fg",
+      name = "g",
+      desc = "Lqa;"
+   )
    public static class435 field115 = null;
+   @ObfInfo(
+      owner = "fg",
+      name = "n",
+      desc = "[Lqa;"
+   )
    public static class435[] field116;
+   @ObfInfo(
+      owner = "fg",
+      name = "x",
+      desc = "Ljava/io/File;"
+   )
    static File field114;
 
+   @ObfInfo(
+      owner = "fg",
+      name = "h",
+      desc = "(J)Ljava/lang/String;"
+   )
    public static String method101(long var0) {
       class482.field4019.setTime(new Date(var0));
       int var2 = class482.field4019.get(7);
@@ -20,10 +53,20 @@ public class class25 {
       return class482.field4021[var2 - 1] + ", " + var3 / 10 + var3 % 10 + "-" + class482.field4020[0][var4] + "-" + var5 + " " + var6 / 10 + var6 % 10 + ":" + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + " GMT";
    }
 
+   @ObfInfo(
+      owner = "fg",
+      name = "h",
+      desc = "(II)Lfm;"
+   )
    public static class396 method100(int var0) {
       return var0 >= 0 && var0 < class396.field3312.length && class396.field3312[var0] != null ? class396.field3312[var0] : new class396(var0);
    }
 
+   @ObfInfo(
+      owner = "fg",
+      name = "u",
+      desc = "(Ljava/lang/CharSequence;B)I"
+   )
    public static int method102(CharSequence var0) {
       int var2 = var0.length();
       int var3 = 0;

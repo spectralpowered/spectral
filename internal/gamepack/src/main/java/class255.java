@@ -2,19 +2,67 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
 
+@ObfInfo(
+   name = "ni"
+)
 public final class class255 {
+   @ObfInfo(
+      owner = "ni",
+      name = "q",
+      desc = "Lns;"
+   )
    final class237 field2096;
+   @ObfInfo(
+      owner = "ni",
+      name = "x",
+      desc = "Lnm;"
+   )
    final class335 field2097;
+   @ObfInfo(
+      owner = "ni",
+      name = "v",
+      desc = "Lnm;"
+   )
    final class335 field2099;
+   @ObfInfo(
+      owner = "ni",
+      name = "f",
+      desc = "I"
+   )
    final int field2100;
+   @ObfInfo(
+      owner = "ni",
+      name = "h",
+      desc = "Ljava/util/Comparator;"
+   )
    final Comparator field2101;
+   @ObfInfo(
+      owner = "ni",
+      name = "e",
+      desc = "Ljava/util/Map;"
+   )
    final Map field2095;
+   @ObfInfo(
+      owner = "ni",
+      name = "m",
+      desc = "J"
+   )
    final long field2098;
 
+   @ObfInfo(
+      owner = "ni",
+      name = "<init>",
+      desc = "(ILns;)V"
+   )
    public class255(int var1, class237 var2) {
       this(-1L, var1, var2);
    }
 
+   @ObfInfo(
+      owner = "ni",
+      name = "<init>",
+      desc = "(JILns;)V"
+   )
    class255(long var1, int var3, class237 var4) {
       this.field2101 = new class347(this);
       this.field2098 = var1;
@@ -36,10 +84,20 @@ public final class class255 {
 
    }
 
+   @ObfInfo(
+      owner = "ni",
+      name = "h",
+      desc = "(I)Z"
+   )
    boolean method1095() {
       return -1 != this.field2100;
    }
 
+   @ObfInfo(
+      owner = "ni",
+      name = "e",
+      desc = "(Ljava/lang/Object;I)Ljava/lang/Object;"
+   )
    public Object method1098(Object var1) {
       synchronized(this) {
          if (this.field2098 != -1L) {
@@ -56,6 +114,11 @@ public final class class255 {
       }
    }
 
+   @ObfInfo(
+      owner = "ni",
+      name = "v",
+      desc = "(Ljava/lang/Object;Ljava/lang/Object;I)Ljava/lang/Object;"
+   )
    public Object method1096(Object var1, Object var2) {
       synchronized(this) {
          if (this.field2098 != -1L) {
@@ -84,6 +147,11 @@ public final class class255 {
       }
    }
 
+   @ObfInfo(
+      owner = "ni",
+      name = "x",
+      desc = "(Lnz;ZI)V"
+   )
    void method1097(class382 var1, boolean var2) {
       if (!var2) {
          this.field2099.remove(var1);
@@ -108,6 +176,11 @@ public final class class255 {
       this.field2099.add(var1);
    }
 
+   @ObfInfo(
+      owner = "ni",
+      name = "m",
+      desc = "(I)V"
+   )
    void method1100() {
       if (this.field2098 == -1L) {
          throw new IllegalStateException("");
@@ -130,6 +203,11 @@ public final class class255 {
       }
    }
 
+   @ObfInfo(
+      owner = "ni",
+      name = "q",
+      desc = "(I)V"
+   )
    public void method1099() {
       synchronized(this) {
          this.field2095.clear();
@@ -141,6 +219,11 @@ public final class class255 {
       }
    }
 
+   @ObfInfo(
+      owner = "ni",
+      name = "m",
+      desc = "(II)V"
+   )
    public static void method1093(int var0) {
       class40.field201 = 1;
       class253.field2089 = null;
@@ -151,6 +234,11 @@ public final class class255 {
       class40.field203 = var0;
    }
 
+   @ObfInfo(
+      owner = "ni",
+      name = "e",
+      desc = "(I)V"
+   )
    static void method1094() {
       class71.field638 = (short[][][])null;
       class419.field3433 = (short[][][])null;

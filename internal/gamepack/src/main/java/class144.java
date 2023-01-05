@@ -5,18 +5,76 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map.Entry;
 
+@ObfInfo(
+   name = "iy"
+)
 public class class144 {
+   @ObfInfo(
+      owner = "iy",
+      name = "m",
+      desc = "Ljj;"
+   )
    public static class111 field1152 = new class111(37748736, 256);
+   @ObfInfo(
+      owner = "iy",
+      name = "r",
+      desc = "Lhd;"
+   )
    class35 field1153;
+   @ObfInfo(
+      owner = "iy",
+      name = "j",
+      desc = "I"
+   )
    int field1149;
+   @ObfInfo(
+      owner = "iy",
+      name = "q",
+      desc = "I"
+   )
    int field1150;
+   @ObfInfo(
+      owner = "iy",
+      name = "b",
+      desc = "I"
+   )
    int field1155;
+   @ObfInfo(
+      owner = "iy",
+      name = "f",
+      desc = "I"
+   )
    int field1157;
+   @ObfInfo(
+      owner = "iy",
+      name = "i",
+      desc = "Ljava/util/HashMap;"
+   )
    HashMap field1151;
+   @ObfInfo(
+      owner = "iy",
+      name = "u",
+      desc = "Ljava/util/LinkedList;"
+   )
    LinkedList field1154;
+   @ObfInfo(
+      owner = "iy",
+      name = "g",
+      desc = "Ljava/util/List;"
+   )
    List field1156;
+   @ObfInfo(
+      owner = "iy",
+      name = "o",
+      desc = "Ljava/util/HashMap;"
+   )
    final HashMap field1158;
 
+   @ObfInfo(
+      owner = "iy",
+      name = "<init>",
+      desc = "(IIILjava/util/HashMap;)V"
+   )
    class144(int var1, int var2, int var3, HashMap var4) {
       this.field1150 = var1;
       this.field1157 = var2;
@@ -27,6 +85,11 @@ public class class144 {
       this.field1158 = var4;
    }
 
+   @ObfInfo(
+      owner = "iy",
+      name = "v",
+      desc = "(IIIB)V"
+   )
    void method656(int var1, int var2, int var3) {
       class266 var5 = class447.method2233(this.field1150, this.field1157, this.field1149);
       if (null != var5) {
@@ -39,12 +102,22 @@ public class class144 {
       }
    }
 
+   @ObfInfo(
+      owner = "iy",
+      name = "x",
+      desc = "(Lhd;Ljava/util/List;I)V"
+   )
    void method657(class35 var1, List var2) {
       this.field1151.clear();
       this.field1153 = var1;
       this.method660(var2);
    }
 
+   @ObfInfo(
+      owner = "iy",
+      name = "m",
+      desc = "(Ljava/util/HashSet;Ljava/util/List;B)V"
+   )
    void method685(HashSet var1, List var2) {
       this.field1151.clear();
       Iterator var4 = var1.iterator();
@@ -59,6 +132,11 @@ public class class144 {
       this.method660(var2);
    }
 
+   @ObfInfo(
+      owner = "iy",
+      name = "q",
+      desc = "(IIIILin;I)V"
+   )
    void method658(int var1, int var2, int var3, int var4, class400 var5) {
       for(int var7 = var1; var7 < var3 + var1; ++var7) {
          label44:
@@ -83,6 +161,11 @@ public class class144 {
 
    }
 
+   @ObfInfo(
+      owner = "iy",
+      name = "f",
+      desc = "(Lgn;IIILin;I)V"
+   )
    void method659(class87 var1, int var2, int var3, int var4, class400 var5) {
       class464 var7 = new class464(var2, var3 + this.field1150 * 64, var4 + this.field1157 * 64);
       class464 var8 = null;
@@ -109,6 +192,11 @@ public class class144 {
 
    }
 
+   @ObfInfo(
+      owner = "iy",
+      name = "r",
+      desc = "(I)V"
+   )
    void method665() {
       Iterator var2 = this.field1151.values().iterator();
 
@@ -121,6 +209,11 @@ public class class144 {
 
    }
 
+   @ObfInfo(
+      owner = "iy",
+      name = "u",
+      desc = "(Ljava/util/List;B)V"
+   )
    void method660(List var1) {
       Iterator var3 = var1.iterator();
 
@@ -134,6 +227,11 @@ public class class144 {
 
    }
 
+   @ObfInfo(
+      owner = "iy",
+      name = "b",
+      desc = "(I)V"
+   )
    void method688() {
       if (this.field1153 != null) {
          this.field1153.method1980();
@@ -148,6 +246,11 @@ public class class144 {
 
    }
 
+   @ObfInfo(
+      owner = "iy",
+      name = "j",
+      desc = "(Lly;B)Z"
+   )
    boolean method661(class274 var1, byte var2) {
       this.field1151.clear();
       if (null != this.field1153) {
@@ -201,6 +304,11 @@ public class class144 {
       }
    }
 
+   @ObfInfo(
+      owner = "iy",
+      name = "g",
+      desc = "(ILih;[Lra;Lly;Lly;B)V"
+   )
    void method662(int var1, class393 var2, class344[] var3, class274 var4, class274 var5) {
       this.field1149 = var1;
       if (this.field1153 != null || !this.field1154.isEmpty()) {
@@ -239,6 +347,11 @@ public class class144 {
       }
    }
 
+   @ObfInfo(
+      owner = "iy",
+      name = "i",
+      desc = "(IIILjava/util/HashSet;S)V"
+   )
    void method663(int var1, int var2, int var3, HashSet var4) {
       if (var4 == null) {
          var4 = new HashSet();
@@ -248,6 +361,11 @@ public class class144 {
       this.method675(var1, var2, var4, var3);
    }
 
+   @ObfInfo(
+      owner = "iy",
+      name = "o",
+      desc = "(Ljava/util/HashSet;III)V"
+   )
    void method676(HashSet var1, int var2, int var3) {
       Iterator var5 = this.field1151.values().iterator();
 
@@ -265,6 +383,11 @@ public class class144 {
       this.method682(var1, var2, var3);
    }
 
+   @ObfInfo(
+      owner = "iy",
+      name = "n",
+      desc = "(Lih;[Lra;Lir;B)V"
+   )
    void method664(class393 var1, class344[] var2, class104 var3) {
       int var5;
       int var6;
@@ -283,6 +406,11 @@ public class class144 {
 
    }
 
+   @ObfInfo(
+      owner = "iy",
+      name = "k",
+      desc = "(Lih;[Lra;Lir;B)V"
+   )
    void method681(class393 var1, class344[] var2, class104 var3) {
       Iterator var5 = this.field1154.iterator();
 
@@ -314,11 +442,21 @@ public class class144 {
 
    }
 
+   @ObfInfo(
+      owner = "iy",
+      name = "a",
+      desc = "(IILin;Lih;[Lra;I)V"
+   )
    void method666(int var1, int var2, class400 var3, class393 var4, class344[] var5) {
       this.method670(var1, var2, var3);
       this.method678(var1, var2, var3, var5);
    }
 
+   @ObfInfo(
+      owner = "iy",
+      name = "s",
+      desc = "(IILin;Lih;Lir;I)V"
+   )
    void method667(int var1, int var2, class400 var3, class393 var4, class104 var5) {
       int var7 = var3.field3369[0][var1][var2] - 1;
       int var8 = var3.field3363[0][var1][var2] - 1;
@@ -343,6 +481,11 @@ public class class144 {
       }
    }
 
+   @ObfInfo(
+      owner = "iy",
+      name = "l",
+      desc = "(IILin;Lih;I)V"
+   )
    void method668(int var1, int var2, class400 var3, class393 var4) {
       for(int var6 = 1; var6 < var3.field3365; ++var6) {
          int var7 = var3.field3363[var6][var1][var2] - 1;
@@ -358,10 +501,20 @@ public class class144 {
 
    }
 
+   @ObfInfo(
+      owner = "iy",
+      name = "t",
+      desc = "(IILin;Lir;I)I"
+   )
    int method669(int var1, int var2, class400 var3, class104 var4) {
       return 0 == var3.field3369[0][var1][var2] ? this.field1155 : var4.method416(var1, var2);
    }
 
+   @ObfInfo(
+      owner = "iy",
+      name = "c",
+      desc = "(IILin;[Lra;B)V"
+   )
    void method678(int var1, int var2, class400 var3, class344[] var4) {
       for(int var6 = 0; var6 < var3.field3365; ++var6) {
          class387[] var7 = var3.field3366[var6][var1][var2];
@@ -388,6 +541,11 @@ public class class144 {
 
    }
 
+   @ObfInfo(
+      owner = "iy",
+      name = "p",
+      desc = "(IILin;I)V"
+   )
    void method670(int var1, int var2, class400 var3) {
       for(int var5 = 0; var5 < var3.field3365; ++var5) {
          class387[] var6 = var3.field3366[var5][var1][var2];
@@ -448,6 +606,11 @@ public class class144 {
 
    }
 
+   @ObfInfo(
+      owner = "iy",
+      name = "d",
+      desc = "(IILjava/util/HashSet;II)V"
+   )
    void method671(int var1, int var2, HashSet var3, int var4) {
       float var6 = (float)var4 / 64.0F;
       float var7 = var6 / 2.0F;
@@ -471,6 +634,11 @@ public class class144 {
 
    }
 
+   @ObfInfo(
+      owner = "iy",
+      name = "y",
+      desc = "(Ljava/util/HashSet;III)V"
+   )
    void method682(HashSet var1, int var2, int var3) {
       Iterator var5 = this.field1156.iterator();
 
@@ -486,6 +654,11 @@ public class class144 {
 
    }
 
+   @ObfInfo(
+      owner = "iy",
+      name = "z",
+      desc = "(Lfm;IIIIB)V"
+   )
    void method673(class396 var1, int var2, int var3, int var4, int var5) {
       class266 var7 = var1.method1946(false);
       if (null != var7) {
@@ -498,12 +671,22 @@ public class class144 {
       }
    }
 
+   @ObfInfo(
+      owner = "iy",
+      name = "w",
+      desc = "(Lix;IIFI)V"
+   )
    void method684(class389 var1, int var2, int var3, float var4) {
       class396 var6 = class25.method100(var1.method1910());
       this.method687(var6, var2, var3);
       this.method674(var1, var6, var2, var3, var4);
    }
 
+   @ObfInfo(
+      owner = "iy",
+      name = "as",
+      desc = "(Lfm;III)V"
+   )
    void method687(class396 var1, int var2, int var3) {
       class266 var5 = var1.method1946(false);
       if (null != var5) {
@@ -514,6 +697,11 @@ public class class144 {
 
    }
 
+   @ObfInfo(
+      owner = "iy",
+      name = "ad",
+      desc = "(Lix;Lfm;IIFI)V"
+   )
    void method674(class389 var1, class396 var2, int var3, int var4, float var5) {
       class23 var7 = var1.method1911();
       if (null != var7) {
@@ -524,6 +712,11 @@ public class class144 {
       }
    }
 
+   @ObfInfo(
+      owner = "iy",
+      name = "ao",
+      desc = "(IILjava/util/HashSet;IB)V"
+   )
    void method675(int var1, int var2, HashSet var3, int var4) {
       float var6 = (float)var4 / 64.0F;
       Iterator var7 = this.field1156.iterator();
@@ -543,6 +736,11 @@ public class class144 {
 
    }
 
+   @ObfInfo(
+      owner = "iy",
+      name = "am",
+      desc = "(Lrx;Lgj;I)I"
+   )
    int method686(class266 var1, class265 var2) {
       switch(var2.field2196) {
       case 1:
@@ -554,6 +752,11 @@ public class class144 {
       }
    }
 
+   @ObfInfo(
+      owner = "iy",
+      name = "av",
+      desc = "(Lrx;Lgl;B)I"
+   )
    int method672(class266 var1, class1 var2) {
       switch(var2.field2) {
       case 0:
@@ -565,11 +768,21 @@ public class class144 {
       }
    }
 
+   @ObfInfo(
+      owner = "iy",
+      name = "ar",
+      desc = "(II)Lii;"
+   )
    class23 method677(int var1) {
       class396 var3 = class25.method100(var1);
       return this.method689(var3);
    }
 
+   @ObfInfo(
+      owner = "iy",
+      name = "at",
+      desc = "(Lfm;I)Lii;"
+   )
    class23 method689(class396 var1) {
       if (var1.field3318 != null && this.field1158 != null && this.field1158.get(class221.field1903) != null) {
          int var4 = var1.field3321;
@@ -622,6 +835,11 @@ public class class144 {
       }
    }
 
+   @ObfInfo(
+      owner = "iy",
+      name = "ay",
+      desc = "(IIIIIS)Ljava/util/List;"
+   )
    List method683(int var1, int var2, int var3, int var4, int var5) {
       LinkedList var7 = new LinkedList();
       if (var4 >= var1 && var5 >= var2) {
@@ -654,6 +872,11 @@ public class class144 {
       }
    }
 
+   @ObfInfo(
+      owner = "iy",
+      name = "an",
+      desc = "(B)Ljava/util/List;"
+   )
    List method679() {
       LinkedList var2 = new LinkedList();
       var2.addAll(this.field1156);
@@ -661,6 +884,11 @@ public class class144 {
       return var2;
    }
 
+   @ObfInfo(
+      owner = "iy",
+      name = "ab",
+      desc = "(IIIII)V"
+   )
    void method680(int var1, int var2, int var3, int var4) {
       var3 %= 4;
       if (var3 == 0) {

@@ -1,10 +1,37 @@
-@Deprecated
+@ObfInfo(
+   name = "lf"
+)
 public class class254 implements Runnable {
+   @ObfInfo(
+      owner = "lf",
+      name = "e",
+      desc = "Lmq;"
+   )
    public static class141 field2091 = new class141();
+   @ObfInfo(
+      owner = "lf",
+      name = "h",
+      desc = "Lmq;"
+   )
    public static class141 field2094 = new class141();
+   @ObfInfo(
+      owner = "lf",
+      name = "v",
+      desc = "I"
+   )
    static int field2092 = 0;
+   @ObfInfo(
+      owner = "lf",
+      name = "x",
+      desc = "Ljava/lang/Object;"
+   )
    static Object field2093 = new Object();
 
+   @ObfInfo(
+      owner = "lf",
+      name = "run",
+      desc = "()V"
+   )
    public void run() {
       try {
          while(true) {

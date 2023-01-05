@@ -1,45 +1,258 @@
+@ObfInfo(
+   name = "gi"
+)
 public class class26 extends class295 {
+   @ObfInfo(
+      owner = "gi",
+      name = "ai",
+      desc = "I"
+   )
    static int field156 = 0;
+   @ObfInfo(
+      owner = "gi",
+      name = "ah",
+      desc = "[I"
+   )
    static int[] field130;
+   @ObfInfo(
+      owner = "gi",
+      name = "ak",
+      desc = "[I"
+   )
    static int[] field139 = new int[10000];
+   @ObfInfo(
+      owner = "gi",
+      name = "af",
+      desc = "[I"
+   )
    static int[] field155 = new int[10000];
+   @ObfInfo(
+      owner = "gi",
+      name = "ax",
+      desc = "[I"
+   )
    static int[] field157;
+   @ObfInfo(
+      owner = "gi",
+      name = "ay",
+      desc = "Z"
+   )
    boolean field148 = false;
+   @ObfInfo(
+      owner = "gi",
+      name = "s",
+      desc = "B"
+   )
    byte field132 = 0;
+   @ObfInfo(
+      owner = "gi",
+      name = "g",
+      desc = "[B"
+   )
    byte[] field126;
+   @ObfInfo(
+      owner = "gi",
+      name = "o",
+      desc = "[B"
+   )
    byte[] field128;
+   @ObfInfo(
+      owner = "gi",
+      name = "n",
+      desc = "[B"
+   )
    byte[] field129;
+   @ObfInfo(
+      owner = "gi",
+      name = "t",
+      desc = "[B"
+   )
    byte[] field147;
+   @ObfInfo(
+      owner = "gi",
+      name = "i",
+      desc = "[B"
+   )
    byte[] field152;
+   @ObfInfo(
+      owner = "gi",
+      name = "am",
+      desc = "[Lhz;"
+   )
    class149[] field143;
+   @ObfInfo(
+      owner = "gi",
+      name = "av",
+      desc = "[Lhl;"
+   )
    class270[] field144;
+   @ObfInfo(
+      owner = "gi",
+      name = "au",
+      desc = "[Lhl;"
+   )
    class270[] field145;
+   @ObfInfo(
+      owner = "gi",
+      name = "l",
+      desc = "I"
+   )
    int field118;
+   @ObfInfo(
+      owner = "gi",
+      name = "r",
+      desc = "I"
+   )
    int field122 = 0;
+   @ObfInfo(
+      owner = "gi",
+      name = "x",
+      desc = "I"
+   )
    int field134 = 0;
+   @ObfInfo(
+      owner = "gi",
+      name = "an",
+      desc = "I"
+   )
    int field142;
+   @ObfInfo(
+      owner = "gi",
+      name = "ag",
+      desc = "I"
+   )
    int field150;
+   @ObfInfo(
+      owner = "gi",
+      name = "al",
+      desc = "I"
+   )
    int field151;
+   @ObfInfo(
+      owner = "gi",
+      name = "az",
+      desc = "I"
+   )
    int field153;
+   @ObfInfo(
+      owner = "gi",
+      name = "ab",
+      desc = "I"
+   )
    int field158;
+   @ObfInfo(
+      owner = "gi",
+      name = "u",
+      desc = "[I"
+   )
    int[] field117;
+   @ObfInfo(
+      owner = "gi",
+      name = "q",
+      desc = "[I"
+   )
    int[] field120;
+   @ObfInfo(
+      owner = "gi",
+      name = "y",
+      desc = "[I"
+   )
    int[] field121;
+   @ObfInfo(
+      owner = "gi",
+      name = "m",
+      desc = "[I"
+   )
    int[] field123;
+   @ObfInfo(
+      owner = "gi",
+      name = "b",
+      desc = "[I"
+   )
    int[] field124;
+   @ObfInfo(
+      owner = "gi",
+      name = "j",
+      desc = "[I"
+   )
    int[] field125;
+   @ObfInfo(
+      owner = "gi",
+      name = "z",
+      desc = "[I"
+   )
    int[] field138;
+   @ObfInfo(
+      owner = "gi",
+      name = "f",
+      desc = "[I"
+   )
    int[] field149;
+   @ObfInfo(
+      owner = "gi",
+      name = "w",
+      desc = "[[I"
+   )
    int[][] field127;
+   @ObfInfo(
+      owner = "gi",
+      name = "ao",
+      desc = "[[I"
+   )
    int[][] field133;
+   @ObfInfo(
+      owner = "gi",
+      name = "as",
+      desc = "[[I"
+   )
    int[][] field140;
+   @ObfInfo(
+      owner = "gi",
+      name = "ad",
+      desc = "[[I"
+   )
    int[][] field141;
+   @ObfInfo(
+      owner = "gi",
+      name = "k",
+      desc = "[S"
+   )
    short[] field119;
+   @ObfInfo(
+      owner = "gi",
+      name = "a",
+      desc = "[S"
+   )
    short[] field131;
+   @ObfInfo(
+      owner = "gi",
+      name = "c",
+      desc = "[S"
+   )
    short[] field135;
+   @ObfInfo(
+      owner = "gi",
+      name = "p",
+      desc = "[S"
+   )
    short[] field136;
+   @ObfInfo(
+      owner = "gi",
+      name = "d",
+      desc = "[S"
+   )
    short[] field137;
+   @ObfInfo(
+      owner = "gi",
+      name = "ar",
+      desc = "S"
+   )
    public short field146;
+   @ObfInfo(
+      owner = "gi",
+      name = "at",
+      desc = "S"
+   )
    public short field154;
 
    static {
@@ -47,9 +260,19 @@ public class class26 extends class295 {
       field130 = class341.field2744;
    }
 
+   @ObfInfo(
+      owner = "gi",
+      name = "<init>",
+      desc = "()V"
+   )
    class26() {
    }
 
+   @ObfInfo(
+      owner = "gi",
+      name = "<init>",
+      desc = "([B)V"
+   )
    class26(byte[] var1) {
       class127 var2 = new class127(10);
       var2.method533(-2);
@@ -65,6 +288,11 @@ public class class26 extends class295 {
 
    }
 
+   @ObfInfo(
+      owner = "gi",
+      name = "<init>",
+      desc = "([Lgi;I)V"
+   )
    public class26(class26[] var1, int var2) {
       boolean var3 = false;
       boolean var4 = false;
@@ -218,6 +446,11 @@ public class class26 extends class295 {
 
    }
 
+   @ObfInfo(
+      owner = "gi",
+      name = "<init>",
+      desc = "(Lgi;ZZZZ)V"
+   )
    public class26(class26 var1, boolean var2, boolean var3, boolean var4, boolean var5) {
       this.field134 = var1.field134;
       this.field122 = var1.field122;
@@ -298,6 +531,11 @@ public class class26 extends class295 {
       this.field154 = var1.field154;
    }
 
+   @ObfInfo(
+      owner = "gi",
+      name = "m",
+      desc = "([B)V"
+   )
    void method104(byte[] var1) {
       class127 var2 = new class127(var1);
       class127 var3 = new class127(var1);
@@ -620,6 +858,11 @@ public class class26 extends class295 {
 
    }
 
+   @ObfInfo(
+      owner = "gi",
+      name = "q",
+      desc = "([B)V"
+   )
    void method125(byte[] var1) {
       boolean var2 = false;
       boolean var3 = false;
@@ -913,6 +1156,11 @@ public class class26 extends class295 {
 
    }
 
+   @ObfInfo(
+      owner = "gi",
+      name = "f",
+      desc = "([B)V"
+   )
    void method127(byte[] var1) {
       class127 var2 = new class127(var1);
       class127 var3 = new class127(var1);
@@ -1218,6 +1466,11 @@ public class class26 extends class295 {
 
    }
 
+   @ObfInfo(
+      owner = "gi",
+      name = "r",
+      desc = "([B)V"
+   )
    void method126(byte[] var1) {
       boolean var2 = false;
       boolean var3 = false;
@@ -1494,6 +1747,11 @@ public class class26 extends class295 {
 
    }
 
+   @ObfInfo(
+      owner = "gi",
+      name = "u",
+      desc = "(Lgi;I)I"
+   )
    final int method106(class26 var1, int var2) {
       int var3 = -1;
       int var4 = var1.field123[var2];
@@ -1526,6 +1784,11 @@ public class class26 extends class295 {
       return var3;
    }
 
+   @ObfInfo(
+      owner = "gi",
+      name = "b",
+      desc = "()Lgi;"
+   )
    public class26 method105() {
       class26 var1 = new class26();
       if (this.field126 != null) {
@@ -1566,6 +1829,11 @@ public class class26 extends class295 {
       return var1;
    }
 
+   @ObfInfo(
+      owner = "gi",
+      name = "j",
+      desc = "([[IIIIZI)Lgi;"
+   )
    public class26 method107(int[][] var1, int var2, int var3, int var4, boolean var5, int var6) {
       this.method119();
       int var7 = var2 + this.field158;
@@ -1662,6 +1930,11 @@ public class class26 extends class295 {
       }
    }
 
+   @ObfInfo(
+      owner = "gi",
+      name = "g",
+      desc = "()V"
+   )
    void method108() {
       int[] var1;
       int var2;
@@ -1721,6 +1994,11 @@ public class class26 extends class295 {
 
    }
 
+   @ObfInfo(
+      owner = "gi",
+      name = "i",
+      desc = "()V"
+   )
    public void method109() {
       for(int var1 = 0; var1 < this.field134; ++var1) {
          int var2 = this.field123[var1];
@@ -1731,6 +2009,11 @@ public class class26 extends class295 {
       this.method118();
    }
 
+   @ObfInfo(
+      owner = "gi",
+      name = "o",
+      desc = "()V"
+   )
    public void method124() {
       for(int var1 = 0; var1 < this.field134; ++var1) {
          this.field123[var1] = -this.field123[var1];
@@ -1740,6 +2023,11 @@ public class class26 extends class295 {
       this.method118();
    }
 
+   @ObfInfo(
+      owner = "gi",
+      name = "n",
+      desc = "()V"
+   )
    public void method110() {
       for(int var1 = 0; var1 < this.field134; ++var1) {
          int var2 = this.field149[var1];
@@ -1750,6 +2038,11 @@ public class class26 extends class295 {
       this.method118();
    }
 
+   @ObfInfo(
+      owner = "gi",
+      name = "k",
+      desc = "(I)V"
+   )
    public void method111(int var1) {
       int var2 = field157[var1];
       int var3 = field130[var1];
@@ -1763,6 +2056,11 @@ public class class26 extends class295 {
       this.method118();
    }
 
+   @ObfInfo(
+      owner = "gi",
+      name = "a",
+      desc = "(III)V"
+   )
    public void method112(int var1, int var2, int var3) {
       for(int var4 = 0; var4 < this.field134; ++var4) {
          this.field123[var4] += var1;
@@ -1773,6 +2071,11 @@ public class class26 extends class295 {
       this.method118();
    }
 
+   @ObfInfo(
+      owner = "gi",
+      name = "s",
+      desc = "(SS)V"
+   )
    public void method113(short var1, short var2) {
       for(int var3 = 0; var3 < this.field122; ++var3) {
          if (this.field119[var3] == var1) {
@@ -1782,6 +2085,11 @@ public class class26 extends class295 {
 
    }
 
+   @ObfInfo(
+      owner = "gi",
+      name = "l",
+      desc = "(SS)V"
+   )
    public void method114(short var1, short var2) {
       if (this.field131 != null) {
          for(int var3 = 0; var3 < this.field122; ++var3) {
@@ -1793,6 +2101,11 @@ public class class26 extends class295 {
       }
    }
 
+   @ObfInfo(
+      owner = "gi",
+      name = "t",
+      desc = "()V"
+   )
    public void method115() {
       int var1;
       for(var1 = 0; var1 < this.field134; ++var1) {
@@ -1808,6 +2121,11 @@ public class class26 extends class295 {
       this.method118();
    }
 
+   @ObfInfo(
+      owner = "gi",
+      name = "c",
+      desc = "(III)V"
+   )
    public void method116(int var1, int var2, int var3) {
       for(int var4 = 0; var4 < this.field134; ++var4) {
          this.field123[var4] = this.field123[var4] * var1 / 128;
@@ -1818,6 +2136,11 @@ public class class26 extends class295 {
       this.method118();
    }
 
+   @ObfInfo(
+      owner = "gi",
+      name = "p",
+      desc = "()V"
+   )
    public void method117() {
       if (this.field144 == null) {
          this.field144 = new class270[this.field134];
@@ -1892,6 +2215,11 @@ public class class26 extends class295 {
       }
    }
 
+   @ObfInfo(
+      owner = "gi",
+      name = "d",
+      desc = "()V"
+   )
    void method118() {
       this.field144 = null;
       this.field145 = null;
@@ -1899,6 +2227,11 @@ public class class26 extends class295 {
       this.field148 = false;
    }
 
+   @ObfInfo(
+      owner = "gi",
+      name = "y",
+      desc = "()V"
+   )
    void method119() {
       if (!this.field148) {
          super.field2390 = 0;
@@ -1941,6 +2274,11 @@ public class class26 extends class295 {
       }
    }
 
+   @ObfInfo(
+      owner = "gi",
+      name = "w",
+      desc = "(IIIII)Lhh;"
+   )
    public final class470 method121(int var1, int var2, int var3, int var4, int var5) {
       this.method117();
       int var6 = (int)Math.sqrt((double)(var3 * var3 + var4 * var4 + var5 * var5));
@@ -2125,11 +2463,21 @@ public class class26 extends class295 {
       return var8;
    }
 
+   @ObfInfo(
+      owner = "gi",
+      name = "h",
+      desc = "(Lly;II)Lgi;"
+   )
    public static class26 method103(class274 var0, int var1, int var2) {
       byte[] var3 = var0.method1365(var1, var2);
       return var3 == null ? null : new class26(var3);
    }
 
+   @ObfInfo(
+      owner = "gi",
+      name = "z",
+      desc = "(Lgi;Lgi;IIIZ)V"
+   )
    static void method120(class26 var0, class26 var1, int var2, int var3, int var4, boolean var5) {
       var0.method119();
       var0.method117();
@@ -2214,6 +2562,11 @@ public class class26 extends class295 {
       }
    }
 
+   @ObfInfo(
+      owner = "gi",
+      name = "as",
+      desc = "(II)I"
+   )
    static final int method122(int var0, int var1) {
       var1 = var1 * (var0 & 127) >> 7;
       if (var1 < 2) {
@@ -2225,6 +2578,11 @@ public class class26 extends class295 {
       return (var0 & 'ﾀ') + var1;
    }
 
+   @ObfInfo(
+      owner = "gi",
+      name = "ad",
+      desc = "(I)I"
+   )
    static final int method123(int var0) {
       if (var0 < 2) {
          var0 = 2;

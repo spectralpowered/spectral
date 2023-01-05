@@ -1,14 +1,37 @@
 import java.util.LinkedList;
 import java.util.List;
 
+@ObfInfo(
+   name = "pv"
+)
 public abstract class class379 implements class412 {
+   @ObfInfo(
+      owner = "pv",
+      name = "h",
+      desc = "Lqr;"
+   )
    class185 field3192;
 
+   @ObfInfo(
+      owner = "pv",
+      name = "<init>",
+      desc = "(I)V"
+   )
    class379(int var1) {
    }
 
+   @ObfInfo(
+      owner = "pv",
+      name = "h",
+      desc = "(Lqy;II)V"
+   )
    abstract void method1865(class127 var1, int var2);
 
+   @ObfInfo(
+      owner = "pv",
+      name = "x",
+      desc = "(Lqy;B)V"
+   )
    public void method1864(class127 var1) {
       while(true) {
          int var3 = var1.method547();
@@ -43,10 +66,20 @@ public abstract class class379 implements class412 {
       }
    }
 
+   @ObfInfo(
+      owner = "pv",
+      name = "m",
+      desc = "(S)Z"
+   )
    boolean method1866() {
       return null != this.field3192;
    }
 
+   @ObfInfo(
+      owner = "pv",
+      name = "q",
+      desc = "(B)Ljava/lang/Object;"
+   )
    Object method1867() {
       if (class185.field1690 == this.field3192) {
          return Integer.valueOf(0);
@@ -57,6 +90,11 @@ public abstract class class379 implements class412 {
       }
    }
 
+   @ObfInfo(
+      owner = "pv",
+      name = "ac",
+      desc = "(ILbm;ZI)I"
+   )
    static int method1868(int var0, class461 var1, boolean var2) {
       int var4;
       Object var5;

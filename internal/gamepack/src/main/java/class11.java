@@ -1,10 +1,43 @@
+@ObfInfo(
+   name = "qm"
+)
 public class class11 extends class195 {
+   @ObfInfo(
+      owner = "qm",
+      name = "h",
+      desc = "Lly;"
+   )
    static class274 field59;
+   @ObfInfo(
+      owner = "qm",
+      name = "e",
+      desc = "Ljv;"
+   )
    static class99 field60 = new class99(64);
+   @ObfInfo(
+      owner = "qm",
+      name = "x",
+      desc = "[[I"
+   )
    int[][] field62;
+   @ObfInfo(
+      owner = "qm",
+      name = "v",
+      desc = "[[Ljava/lang/Object;"
+   )
    Object[][] field63;
+   @ObfInfo(
+      owner = "qm",
+      name = "m",
+      desc = "I"
+   )
    public int field61 = -1;
 
+   @ObfInfo(
+      owner = "qm",
+      name = "v",
+      desc = "(Lqy;I)V"
+   )
    void method63(class127 var1) {
       while(true) {
          int var3 = var1.method547();
@@ -16,10 +49,20 @@ public class class11 extends class195 {
       }
    }
 
+   @ObfInfo(
+      owner = "qm",
+      name = "x",
+      desc = "(II)[Ljava/lang/Object;"
+   )
    public Object[] method66(int var1) {
       return this.field63 == null ? null : this.field63[var1];
    }
 
+   @ObfInfo(
+      owner = "qm",
+      name = "m",
+      desc = "(Lqy;IB)V"
+   )
    void method65(class127 var1, int var2) {
       if (var2 == 3) {
          int var4 = var1.method547();
@@ -57,6 +100,11 @@ public class class11 extends class195 {
 
    }
 
+   @ObfInfo(
+      owner = "qm",
+      name = "q",
+      desc = "(I)V"
+   )
    void method64() {
    }
 }

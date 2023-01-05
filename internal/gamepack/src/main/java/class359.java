@@ -3,42 +3,225 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+@ObfInfo(
+   name = "bu"
+)
 public class class359 {
+   @ObfInfo(
+      owner = "bu",
+      name = "bm",
+      desc = "Z"
+   )
    static boolean field3061;
+   @ObfInfo(
+      owner = "bu",
+      name = "e",
+      desc = "Z"
+   )
    static boolean field3066;
+   @ObfInfo(
+      owner = "bu",
+      name = "bt",
+      desc = "Z"
+   )
    static boolean field3070;
+   @ObfInfo(
+      owner = "bu",
+      name = "cq",
+      desc = "Z"
+   )
    static boolean field3076;
+   @ObfInfo(
+      owner = "bu",
+      name = "bu",
+      desc = "Z"
+   )
    static boolean field3085;
+   @ObfInfo(
+      owner = "bu",
+      name = "j",
+      desc = "Lra;"
+   )
    static class344 field3054;
+   @ObfInfo(
+      owner = "bu",
+      name = "k",
+      desc = "Lra;"
+   )
    static class344 field3058;
+   @ObfInfo(
+      owner = "bu",
+      name = "o",
+      desc = "Lra;"
+   )
    static class344 field3080;
+   @ObfInfo(
+      owner = "bu",
+      name = "x",
+      desc = "[Lra;"
+   )
    static class344[] field3053;
+   @ObfInfo(
+      owner = "bu",
+      name = "v",
+      desc = "I"
+   )
    static int field3052 = 0;
+   @ObfInfo(
+      owner = "bu",
+      name = "ah",
+      desc = "I"
+   )
    static int field3055;
+   @ObfInfo(
+      owner = "bu",
+      name = "y",
+      desc = "I"
+   )
    static int field3056;
+   @ObfInfo(
+      owner = "bu",
+      name = "aq",
+      desc = "I"
+   )
    static int field3059;
+   @ObfInfo(
+      owner = "bu",
+      name = "bc",
+      desc = "I"
+   )
    static int field3069;
+   @ObfInfo(
+      owner = "bu",
+      name = "p",
+      desc = "I"
+   )
    static int field3072;
+   @ObfInfo(
+      owner = "bu",
+      name = "bk",
+      desc = "I"
+   )
    static int field3073;
+   @ObfInfo(
+      owner = "bu",
+      name = "ac",
+      desc = "I"
+   )
    static int field3075;
+   @ObfInfo(
+      owner = "bu",
+      name = "cj",
+      desc = "I"
+   )
    static int field3077;
+   @ObfInfo(
+      owner = "bu",
+      name = "cn",
+      desc = "I"
+   )
    static int field3078;
+   @ObfInfo(
+      owner = "bu",
+      name = "cm",
+      desc = "I"
+   )
    static int field3079;
+   @ObfInfo(
+      owner = "bu",
+      name = "be",
+      desc = "Ljava/lang/String;"
+   )
    static String field3051;
+   @ObfInfo(
+      owner = "bu",
+      name = "z",
+      desc = "Ljava/lang/String;"
+   )
    static String field3057;
+   @ObfInfo(
+      owner = "bu",
+      name = "ap",
+      desc = "Ljava/lang/String;"
+   )
    static String field3060;
+   @ObfInfo(
+      owner = "bu",
+      name = "bh",
+      desc = "Ljava/lang/String;"
+   )
    static String field3062;
+   @ObfInfo(
+      owner = "bu",
+      name = "bf",
+      desc = "Ljava/lang/String;"
+   )
    static String field3064;
+   @ObfInfo(
+      owner = "bu",
+      name = "bw",
+      desc = "Ljava/lang/String;"
+   )
    static String field3067;
+   @ObfInfo(
+      owner = "bu",
+      name = "by",
+      desc = "Ljava/lang/String;"
+   )
    static String field3071;
+   @ObfInfo(
+      owner = "bu",
+      name = "bd",
+      desc = "Ljava/lang/String;"
+   )
    static String field3074;
+   @ObfInfo(
+      owner = "bu",
+      name = "cf",
+      desc = "Ljava/lang/String;"
+   )
    static String field3082;
+   @ObfInfo(
+      owner = "bu",
+      name = "bo",
+      desc = "Ljava/lang/String;"
+   )
    static String field3084;
+   @ObfInfo(
+      owner = "bu",
+      name = "bl",
+      desc = "[Ljava/lang/String;"
+   )
    static String[] field3050;
+   @ObfInfo(
+      owner = "bu",
+      name = "ce",
+      desc = "[Ljava/lang/String;"
+   )
    static String[] field3063;
+   @ObfInfo(
+      owner = "bu",
+      name = "ch",
+      desc = "[Ljava/lang/String;"
+   )
    static String[] field3065;
+   @ObfInfo(
+      owner = "bu",
+      name = "cg",
+      desc = "[Ljava/lang/String;"
+   )
    static String[] field3083;
+   @ObfInfo(
+      owner = "bu",
+      name = "cu",
+      desc = "J"
+   )
    static long field3068;
+   @ObfInfo(
+      owner = "bu",
+      name = "co",
+      desc = "J"
+   )
    static long field3081;
 
    static {
@@ -75,6 +258,11 @@ public class class359 {
       field3083 = new String[]{"logo_speedrunning"};
    }
 
+   @ObfInfo(
+      owner = "bu",
+      name = "e",
+      desc = "(III)V"
+   )
    public static void method1789(int var0, int var1) {
       class457 var4 = (class457)class457.field3779.method394((long)var0);
       class457 var3;
@@ -103,6 +291,11 @@ public class class359 {
       class291.field2373[var9] = class291.field2373[var9] & ~var8 | var1 << var6 & var8;
    }
 
+   @ObfInfo(
+      owner = "bu",
+      name = "a",
+      desc = "(Lorg/json/JSONObject;Ljava/lang/String;I)[F"
+   )
    static float[] method1790(JSONObject var0, String var1) throws JSONException {
       float[] var3 = new float[4];
 
@@ -122,6 +315,11 @@ public class class359 {
       return var3;
    }
 
+   @ObfInfo(
+      owner = "bu",
+      name = "k",
+      desc = "(II)Lew;"
+   )
    public static class357 method1791(int var0) {
       class357 var2 = (class357)class242.field2042.method394((long)var0);
       if (null != var2) {

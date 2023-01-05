@@ -4,24 +4,112 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
+@ObfInfo(
+   name = "ie"
+)
 public final class class181 {
+   @ObfInfo(
+      owner = "ie",
+      name = "h",
+      desc = "Z"
+   )
    boolean field1665 = false;
+   @ObfInfo(
+      owner = "ie",
+      name = "e",
+      desc = "Z"
+   )
    boolean field1673 = false;
+   @ObfInfo(
+      owner = "ie",
+      name = "q",
+      desc = "[[Liy;"
+   )
    class144[][] field1666;
+   @ObfInfo(
+      owner = "ie",
+      name = "v",
+      desc = "Lil;"
+   )
    class200 field1663;
+   @ObfInfo(
+      owner = "ie",
+      name = "x",
+      desc = "Lrx;"
+   )
    class266 field1664;
+   @ObfInfo(
+      owner = "ie",
+      name = "r",
+      desc = "[Lra;"
+   )
    class344[] field1661;
+   @ObfInfo(
+      owner = "ie",
+      name = "i",
+      desc = "I"
+   )
    int field1670;
+   @ObfInfo(
+      owner = "ie",
+      name = "g",
+      desc = "I"
+   )
    int field1672;
+   @ObfInfo(
+      owner = "ie",
+      name = "o",
+      desc = "I"
+   )
    int field1674;
+   @ObfInfo(
+      owner = "ie",
+      name = "n",
+      desc = "I"
+   )
    int field1675;
+   @ObfInfo(
+      owner = "ie",
+      name = "f",
+      desc = "Ljava/util/HashMap;"
+   )
    HashMap field1667 = new HashMap();
+   @ObfInfo(
+      owner = "ie",
+      name = "m",
+      desc = "Ljava/util/HashMap;"
+   )
    HashMap field1668;
+   @ObfInfo(
+      owner = "ie",
+      name = "b",
+      desc = "Lly;"
+   )
    final class274 field1662;
+   @ObfInfo(
+      owner = "ie",
+      name = "u",
+      desc = "Lly;"
+   )
    final class274 field1669;
+   @ObfInfo(
+      owner = "ie",
+      name = "j",
+      desc = "Ljava/util/HashMap;"
+   )
    final HashMap field1671;
+   @ObfInfo(
+      owner = "ie",
+      name = "k",
+      desc = "I"
+   )
    public int field1676 = 0;
 
+   @ObfInfo(
+      owner = "ie",
+      name = "<init>",
+      desc = "([Lra;Ljava/util/HashMap;Lly;Lly;)V"
+   )
    public class181(class344[] var1, HashMap var2, class274 var3, class274 var4) {
       this.field1661 = var1;
       this.field1671 = var2;
@@ -29,6 +117,11 @@ public final class class181 {
       this.field1662 = var4;
    }
 
+   @ObfInfo(
+      owner = "ie",
+      name = "h",
+      desc = "(Lly;Ljava/lang/String;ZB)V"
+   )
    public void method829(class274 var1, String var2, boolean var3) {
       if (!this.field1673) {
          this.field1665 = false;
@@ -96,10 +189,20 @@ public final class class181 {
       }
    }
 
+   @ObfInfo(
+      owner = "ie",
+      name = "e",
+      desc = "(I)V"
+   )
    public final void method819() {
       this.field1668 = null;
    }
 
+   @ObfInfo(
+      owner = "ie",
+      name = "v",
+      desc = "(IIIIIIIII)V"
+   )
    public final void method820(int var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8) {
       int[] var10 = class162.field1233;
       int var11 = class162.field1232;
@@ -141,6 +244,11 @@ public final class class181 {
 
    }
 
+   @ObfInfo(
+      owner = "ie",
+      name = "x",
+      desc = "(IIIIIIIILjava/util/HashSet;Ljava/util/HashSet;IIZB)V"
+   )
    public final void method821(int var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8, HashSet var9, HashSet var10, int var11, int var12, boolean var13) {
       class75 var15 = this.method824(var1, var2, var3, var4);
       float var16 = this.method828(var7 - var5, var3 - var1);
@@ -170,6 +278,11 @@ public final class class181 {
 
    }
 
+   @ObfInfo(
+      owner = "ie",
+      name = "m",
+      desc = "(IIIILjava/util/HashSet;IIB)V"
+   )
    public void method822(int var1, int var2, int var3, int var4, HashSet var5, int var6, int var7) {
       if (null != this.field1664) {
          this.field1664.method1231(var1, var2, var3, var4);
@@ -204,6 +317,11 @@ public final class class181 {
       }
    }
 
+   @ObfInfo(
+      owner = "ie",
+      name = "q",
+      desc = "(IIIIIIIIIIB)Ljava/util/List;"
+   )
    public List method823(int var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8, int var9, int var10) {
       LinkedList var12 = new LinkedList();
       if (!this.field1665) {
@@ -228,6 +346,11 @@ public final class class181 {
       }
    }
 
+   @ObfInfo(
+      owner = "ie",
+      name = "f",
+      desc = "(IIIII)Lif;"
+   )
    class75 method824(int var1, int var2, int var3, int var4) {
       class75 var6 = new class75(this);
       int var7 = this.field1672 + var1;
@@ -265,15 +388,30 @@ public final class class181 {
       return var6;
    }
 
+   @ObfInfo(
+      owner = "ie",
+      name = "r",
+      desc = "(B)Z"
+   )
    public boolean method825() {
       return this.field1665;
    }
 
+   @ObfInfo(
+      owner = "ie",
+      name = "u",
+      desc = "(B)Ljava/util/HashMap;"
+   )
    public HashMap method826() {
       this.method827();
       return this.field1668;
    }
 
+   @ObfInfo(
+      owner = "ie",
+      name = "b",
+      desc = "(I)V"
+   )
    void method827() {
       if (null == this.field1668) {
          this.field1668 = new HashMap();
@@ -305,6 +443,11 @@ public final class class181 {
 
    }
 
+   @ObfInfo(
+      owner = "ie",
+      name = "j",
+      desc = "(III)F"
+   )
    float method828(int var1, int var2) {
       float var4 = (float)var1 / (float)var2;
       if (var4 > 8.0F) {

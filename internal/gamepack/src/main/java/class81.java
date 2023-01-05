@@ -1,10 +1,28 @@
+@ObfInfo(
+   name = "dx"
+)
 public class class81 extends class392 {
+   @ObfInfo(
+      owner = "dx",
+      name = "h",
+      desc = "Z"
+   )
    final boolean field666;
 
+   @ObfInfo(
+      owner = "dx",
+      name = "<init>",
+      desc = "(Z)V"
+   )
    public class81(boolean var1) {
       this.field666 = var1;
    }
 
+   @ObfInfo(
+      owner = "dx",
+      name = "h",
+      desc = "(Loa;Loa;I)I"
+   )
    int method336(class69 var1, class69 var2) {
       if (var1.field627 == client.field395 && var2.field627 == client.field395) {
          return this.field666 ? var1.field629 - var2.field629 : var2.field629 - var1.field629;
@@ -13,14 +31,29 @@ public class class81 extends class392 {
       }
    }
 
+   @ObfInfo(
+      owner = "dx",
+      name = "compare",
+      desc = "(Ljava/lang/Object;Ljava/lang/Object;)I"
+   )
    public int compare(Object var1, Object var2) {
       return this.method336((class69)var1, (class69)var2);
    }
 
+   @ObfInfo(
+      owner = "dx",
+      name = "m",
+      desc = "(IB)Z"
+   )
    public static boolean method338(int var0) {
       return 0 != (var0 >> 31 & 1);
    }
 
+   @ObfInfo(
+      owner = "dx",
+      name = "le",
+      desc = "([Lkd;II)V"
+   )
    static final void method337(class120[] var0, int var1) {
       for(int var3 = 0; var3 < var0.length; ++var3) {
          class120 var4 = var0[var3];

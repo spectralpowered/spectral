@@ -1,17 +1,85 @@
+@ObfInfo(
+   name = "gk"
+)
 public class class179 extends class195 {
+   @ObfInfo(
+      owner = "gk",
+      name = "h",
+      desc = "Lly;"
+   )
    public static class274 field1646;
+   @ObfInfo(
+      owner = "gk",
+      name = "e",
+      desc = "Ljv;"
+   )
    public static class99 field1647 = new class99(64);
+   @ObfInfo(
+      owner = "gk",
+      name = "m",
+      desc = "Z"
+   )
    public boolean field1650 = true;
+   @ObfInfo(
+      owner = "gk",
+      name = "v",
+      desc = "I"
+   )
    public int field1648 = 0;
+   @ObfInfo(
+      owner = "gk",
+      name = "x",
+      desc = "I"
+   )
    public int field1649 = -1;
+   @ObfInfo(
+      owner = "gk",
+      name = "q",
+      desc = "I"
+   )
    public int field1651 = -1;
+   @ObfInfo(
+      owner = "gk",
+      name = "r",
+      desc = "I"
+   )
    public int field1652;
+   @ObfInfo(
+      owner = "gk",
+      name = "u",
+      desc = "I"
+   )
    public int field1653;
+   @ObfInfo(
+      owner = "gk",
+      name = "f",
+      desc = "I"
+   )
    public int field1654;
+   @ObfInfo(
+      owner = "gk",
+      name = "b",
+      desc = "I"
+   )
    public int field1655;
+   @ObfInfo(
+      owner = "gk",
+      name = "j",
+      desc = "I"
+   )
    public int field1656;
+   @ObfInfo(
+      owner = "gk",
+      name = "g",
+      desc = "I"
+   )
    public int field1657;
 
+   @ObfInfo(
+      owner = "gk",
+      name = "h",
+      desc = "(I)V"
+   )
    public void method814() {
       if (-1 != this.field1651) {
          this.method817(this.field1651);
@@ -23,6 +91,11 @@ public class class179 extends class195 {
       this.method817(this.field1648);
    }
 
+   @ObfInfo(
+      owner = "gk",
+      name = "e",
+      desc = "(Lqy;II)V"
+   )
    public void method815(class127 var1, int var2) {
       while(true) {
          int var4 = var1.method547();
@@ -34,6 +107,11 @@ public class class179 extends class195 {
       }
    }
 
+   @ObfInfo(
+      owner = "gk",
+      name = "v",
+      desc = "(Lqy;III)V"
+   )
    void method816(class127 var1, int var2, int var3) {
       if (var2 == 1) {
          this.field1648 = var1.method551();
@@ -49,6 +127,11 @@ public class class179 extends class195 {
 
    }
 
+   @ObfInfo(
+      owner = "gk",
+      name = "x",
+      desc = "(II)V"
+   )
    void method817(int var1) {
       double var3 = (double)(var1 >> 16 & 255) / 256.0D;
       double var5 = (double)(var1 >> 8 & 255) / 256.0D;
@@ -110,6 +193,11 @@ public class class179 extends class195 {
 
    }
 
+   @ObfInfo(
+      owner = "gk",
+      name = "h",
+      desc = "(Ldu;FI)F"
+   )
    static float method813(class84 var0, float var1) {
       if (var0 != null && var0.method347() != 0) {
          if (var1 < (float)var0.field678[0].field2383) {

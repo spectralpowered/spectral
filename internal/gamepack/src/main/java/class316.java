@@ -1,20 +1,103 @@
+@ObfInfo(
+   name = "ap"
+)
 public class class316 extends class437 {
+   @ObfInfo(
+      owner = "ap",
+      name = "j",
+      desc = "Z"
+   )
    boolean field2488;
+   @ObfInfo(
+      owner = "ap",
+      name = "h",
+      desc = "I"
+   )
    int field2478;
+   @ObfInfo(
+      owner = "ap",
+      name = "e",
+      desc = "I"
+   )
    int field2479;
+   @ObfInfo(
+      owner = "ap",
+      name = "x",
+      desc = "I"
+   )
    int field2480;
+   @ObfInfo(
+      owner = "ap",
+      name = "q",
+      desc = "I"
+   )
    int field2481;
+   @ObfInfo(
+      owner = "ap",
+      name = "m",
+      desc = "I"
+   )
    int field2482;
+   @ObfInfo(
+      owner = "ap",
+      name = "b",
+      desc = "I"
+   )
    int field2483;
+   @ObfInfo(
+      owner = "ap",
+      name = "f",
+      desc = "I"
+   )
    int field2484;
+   @ObfInfo(
+      owner = "ap",
+      name = "r",
+      desc = "I"
+   )
    int field2485;
+   @ObfInfo(
+      owner = "ap",
+      name = "u",
+      desc = "I"
+   )
    int field2486;
+   @ObfInfo(
+      owner = "ap",
+      name = "n",
+      desc = "I"
+   )
    int field2487;
+   @ObfInfo(
+      owner = "ap",
+      name = "g",
+      desc = "I"
+   )
    int field2489;
+   @ObfInfo(
+      owner = "ap",
+      name = "i",
+      desc = "I"
+   )
    int field2490;
+   @ObfInfo(
+      owner = "ap",
+      name = "o",
+      desc = "I"
+   )
    int field2491;
+   @ObfInfo(
+      owner = "ap",
+      name = "v",
+      desc = "I"
+   )
    int field2492;
 
+   @ObfInfo(
+      owner = "ap",
+      name = "<init>",
+      desc = "(Laf;II)V"
+   )
    class316(class82 var1, int var2, int var3) {
       super.field3618 = var1;
       this.field2486 = var1.field669;
@@ -27,6 +110,11 @@ public class class316 extends class437 {
       this.method1517();
    }
 
+   @ObfInfo(
+      owner = "ap",
+      name = "<init>",
+      desc = "(Laf;III)V"
+   )
    class316(class82 var1, int var2, int var3, int var4) {
       super.field3618 = var1;
       this.field2486 = var1.field669;
@@ -39,6 +127,11 @@ public class class316 extends class437 {
       this.method1517();
    }
 
+   @ObfInfo(
+      owner = "ap",
+      name = "af",
+      desc = "()I"
+   )
    int method2167() {
       int var1 = this.field2482 * 3 >> 6;
       var1 = (var1 ^ var1 >> 31) + (var1 >>> 31);
@@ -51,24 +144,49 @@ public class class316 extends class437 {
       return var1 > 255 ? 255 : var1;
    }
 
+   @ObfInfo(
+      owner = "ap",
+      name = "m",
+      desc = "()V"
+   )
    void method1517() {
       this.field2482 = this.field2492;
       this.field2481 = method1551(this.field2492, this.field2480);
       this.field2484 = method1555(this.field2492, this.field2480);
    }
 
+   @ObfInfo(
+      owner = "ap",
+      name = "b",
+      desc = "(I)V"
+   )
    public synchronized void method1518(int var1) {
       this.field2485 = var1;
    }
 
+   @ObfInfo(
+      owner = "ap",
+      name = "g",
+      desc = "(I)V"
+   )
    public synchronized void method1519(int var1) {
       this.method1520(var1 << 6, this.method1531());
    }
 
+   @ObfInfo(
+      owner = "ap",
+      name = "i",
+      desc = "(I)V"
+   )
    synchronized void method1557(int var1) {
       this.method1520(var1, this.method1531());
    }
 
+   @ObfInfo(
+      owner = "ap",
+      name = "o",
+      desc = "(II)V"
+   )
    synchronized void method1520(int var1, int var2) {
       this.field2492 = var1;
       this.field2480 = var2;
@@ -76,14 +194,29 @@ public class class316 extends class437 {
       this.method1517();
    }
 
+   @ObfInfo(
+      owner = "ap",
+      name = "n",
+      desc = "()I"
+   )
    public synchronized int method1552() {
       return this.field2492 == Integer.MIN_VALUE ? 0 : this.field2492;
    }
 
+   @ObfInfo(
+      owner = "ap",
+      name = "k",
+      desc = "()I"
+   )
    public synchronized int method1531() {
       return this.field2480 < 0 ? -1 : this.field2480;
    }
 
+   @ObfInfo(
+      owner = "ap",
+      name = "a",
+      desc = "(I)V"
+   )
    public synchronized void method1523(int var1) {
       int var2 = ((class82)super.field3618).field668.length << 8;
       if (var1 < -1) {
@@ -97,6 +230,11 @@ public class class316 extends class437 {
       this.field2478 = var1;
    }
 
+   @ObfInfo(
+      owner = "ap",
+      name = "s",
+      desc = "(Z)V"
+   )
    public synchronized void method1524(boolean var1) {
       this.field2479 = (this.field2479 ^ this.field2479 >> 31) + (this.field2479 >>> 31);
       if (var1) {
@@ -105,6 +243,11 @@ public class class316 extends class437 {
 
    }
 
+   @ObfInfo(
+      owner = "ap",
+      name = "l",
+      desc = "()V"
+   )
    void method1550() {
       if (this.field2489 != 0) {
          if (this.field2492 == Integer.MIN_VALUE) {
@@ -117,10 +260,20 @@ public class class316 extends class437 {
 
    }
 
+   @ObfInfo(
+      owner = "ap",
+      name = "t",
+      desc = "(II)V"
+   )
    public synchronized void method1525(int var1, int var2) {
       this.method1526(var1, var2, this.method1531());
    }
 
+   @ObfInfo(
+      owner = "ap",
+      name = "c",
+      desc = "(III)V"
+   )
    public synchronized void method1526(int var1, int var2, int var3) {
       if (var1 == 0) {
          this.method1520(var2, var3);
@@ -165,6 +318,11 @@ public class class316 extends class437 {
       }
    }
 
+   @ObfInfo(
+      owner = "ap",
+      name = "ay",
+      desc = "(I)V"
+   )
    public synchronized void method1527(int var1) {
       if (var1 == 0) {
          this.method1557(0);
@@ -208,6 +366,11 @@ public class class316 extends class437 {
       }
    }
 
+   @ObfInfo(
+      owner = "ap",
+      name = "an",
+      desc = "(I)V"
+   )
    public synchronized void method1528(int var1) {
       if (this.field2479 < 0) {
          this.field2479 = -var1;
@@ -217,30 +380,65 @@ public class class316 extends class437 {
 
    }
 
+   @ObfInfo(
+      owner = "ap",
+      name = "ab",
+      desc = "()I"
+   )
    public synchronized int method1529() {
       return this.field2479 < 0 ? -this.field2479 : this.field2479;
    }
 
+   @ObfInfo(
+      owner = "ap",
+      name = "al",
+      desc = "()Z"
+   )
    public boolean method1530() {
       return this.field2478 < 0 || this.field2478 >= ((class82)super.field3618).field668.length << 8;
    }
 
+   @ObfInfo(
+      owner = "ap",
+      name = "az",
+      desc = "()Z"
+   )
    public boolean method1554() {
       return this.field2489 != 0;
    }
 
+   @ObfInfo(
+      owner = "ap",
+      name = "q",
+      desc = "()Laa;"
+   )
    protected class437 method2168() {
       return null;
    }
 
+   @ObfInfo(
+      owner = "ap",
+      name = "f",
+      desc = "()Laa;"
+   )
    protected class437 method2171() {
       return null;
    }
 
+   @ObfInfo(
+      owner = "ap",
+      name = "r",
+      desc = "()I"
+   )
    protected int method2173() {
       return this.field2492 == 0 && this.field2489 == 0 ? 0 : 1;
    }
 
+   @ObfInfo(
+      owner = "ap",
+      name = "u",
+      desc = "([III)V"
+   )
    public synchronized void method2169(int[] var1, int var2, int var3) {
       if (this.field2492 == 0 && this.field2489 == 0) {
          this.method2172(var3);
@@ -421,6 +619,11 @@ public class class316 extends class437 {
       }
    }
 
+   @ObfInfo(
+      owner = "ap",
+      name = "j",
+      desc = "(I)V"
+   )
    public synchronized void method2172(int var1) {
       if (this.field2489 > 0) {
          if (var1 >= this.field2489) {
@@ -599,6 +802,11 @@ public class class316 extends class437 {
       }
    }
 
+   @ObfInfo(
+      owner = "ap",
+      name = "ak",
+      desc = "([IIIII)I"
+   )
    int method1535(int[] var1, int var2, int var3, int var4, int var5) {
       while(true) {
          if (this.field2489 > 0) {
@@ -648,6 +856,11 @@ public class class316 extends class437 {
       }
    }
 
+   @ObfInfo(
+      owner = "ap",
+      name = "ai",
+      desc = "([IIIII)I"
+   )
    int method1536(int[] var1, int var2, int var3, int var4, int var5) {
       while(true) {
          if (this.field2489 > 0) {
@@ -697,6 +910,11 @@ public class class316 extends class437 {
       }
    }
 
+   @ObfInfo(
+      owner = "ap",
+      name = "ax",
+      desc = "()Z"
+   )
    boolean method1558() {
       int var1 = this.field2492;
       int var2;
@@ -765,22 +983,47 @@ public class class316 extends class437 {
       }
    }
 
+   @ObfInfo(
+      owner = "ap",
+      name = "h",
+      desc = "(II)I"
+   )
    static int method1551(int var0, int var1) {
       return var1 < 0 ? var0 : (int)((double)var0 * Math.sqrt((double)(16384 - var1) * 1.220703125E-4D) + 0.5D);
    }
 
+   @ObfInfo(
+      owner = "ap",
+      name = "e",
+      desc = "(II)I"
+   )
    static int method1555(int var0, int var1) {
       return var1 < 0 ? -var0 : (int)((double)var0 * Math.sqrt((double)var1 * 1.220703125E-4D) + 0.5D);
    }
 
+   @ObfInfo(
+      owner = "ap",
+      name = "v",
+      desc = "(Laf;II)Lap;"
+   )
    public static class316 method1516(class82 var0, int var1, int var2) {
       return var0.field668 != null && var0.field668.length != 0 ? new class316(var0, (int)((long)var0.field670 * 256L * (long)var1 / (long)(class233.field1985 * 100)), var2 << 6) : null;
    }
 
+   @ObfInfo(
+      owner = "ap",
+      name = "x",
+      desc = "(Laf;III)Lap;"
+   )
    public static class316 method1560(class82 var0, int var1, int var2, int var3) {
       return var0.field668 != null && var0.field668.length != 0 ? new class316(var0, var1, var2, var3) : null;
    }
 
+   @ObfInfo(
+      owner = "ap",
+      name = "ah",
+      desc = "([B[IIIIIIILap;)I"
+   )
    static int method1521(byte[] var0, int[] var1, int var2, int var3, int var4, int var5, int var6, int var7, class316 var8) {
       var2 >>= 8;
       var7 >>= 8;
@@ -808,6 +1051,11 @@ public class class316 extends class437 {
       return var3;
    }
 
+   @ObfInfo(
+      owner = "ap",
+      name = "aw",
+      desc = "(I[B[IIIIIIIILap;)I"
+   )
    static int method1537(int var0, byte[] var1, int[] var2, int var3, int var4, int var5, int var6, int var7, int var8, int var9, class316 var10) {
       var3 >>= 8;
       var9 >>= 8;
@@ -855,6 +1103,11 @@ public class class316 extends class437 {
       return var4 >> 1;
    }
 
+   @ObfInfo(
+      owner = "ap",
+      name = "aj",
+      desc = "([B[IIIIIIILap;)I"
+   )
    static int method1556(byte[] var0, int[] var1, int var2, int var3, int var4, int var5, int var6, int var7, class316 var8) {
       var2 >>= 8;
       var7 >>= 8;
@@ -882,6 +1135,11 @@ public class class316 extends class437 {
       return var3;
    }
 
+   @ObfInfo(
+      owner = "ap",
+      name = "aq",
+      desc = "(I[B[IIIIIIIILap;)I"
+   )
    static int method1538(int var0, byte[] var1, int[] var2, int var3, int var4, int var5, int var6, int var7, int var8, int var9, class316 var10) {
       var3 >>= 8;
       var9 >>= 8;
@@ -929,6 +1187,11 @@ public class class316 extends class437 {
       return var4 >> 1;
    }
 
+   @ObfInfo(
+      owner = "ap",
+      name = "ap",
+      desc = "(II[B[IIIIIIILap;II)I"
+   )
    static int method1559(int var0, int var1, byte[] var2, int[] var3, int var4, int var5, int var6, int var7, int var8, int var9, class316 var10, int var11, int var12) {
       if (var11 == 0 || (var7 = var5 + (var9 - var4 + var11 - 257) / var11) > var8) {
          var7 = var8;
@@ -958,6 +1221,11 @@ public class class316 extends class437 {
       return var5;
    }
 
+   @ObfInfo(
+      owner = "ap",
+      name = "aa",
+      desc = "(II[B[IIIIIIIILap;II)I"
+   )
    static int method1539(int var0, int var1, byte[] var2, int[] var3, int var4, int var5, int var6, int var7, int var8, int var9, int var10, class316 var11, int var12, int var13) {
       if (var12 == 0 || (var8 = var5 + (var10 - var4 + var12 - 257) / var12) > var9) {
          var8 = var9;
@@ -996,6 +1264,11 @@ public class class316 extends class437 {
       return var5 >> 1;
    }
 
+   @ObfInfo(
+      owner = "ap",
+      name = "ae",
+      desc = "(II[B[IIIIIIILap;II)I"
+   )
    static int method1540(int var0, int var1, byte[] var2, int[] var3, int var4, int var5, int var6, int var7, int var8, int var9, class316 var10, int var11, int var12) {
       if (var11 == 0 || (var7 = var5 + (var9 + 256 - var4 + var11) / var11) > var8) {
          var7 = var8;
@@ -1025,6 +1298,11 @@ public class class316 extends class437 {
       return var5;
    }
 
+   @ObfInfo(
+      owner = "ap",
+      name = "ac",
+      desc = "(II[B[IIIIIIIILap;II)I"
+   )
    static int method1541(int var0, int var1, byte[] var2, int[] var3, int var4, int var5, int var6, int var7, int var8, int var9, int var10, class316 var11, int var12, int var13) {
       if (var12 == 0 || (var8 = var5 + (var10 + 256 - var4 + var12) / var12) > var9) {
          var8 = var9;
@@ -1061,6 +1339,11 @@ public class class316 extends class437 {
       return var5 >> 1;
    }
 
+   @ObfInfo(
+      owner = "ap",
+      name = "bh",
+      desc = "([B[IIIIIIIILap;)I"
+   )
    static int method1542(byte[] var0, int[] var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8, class316 var9) {
       var2 >>= 8;
       var8 >>= 8;
@@ -1098,6 +1381,11 @@ public class class316 extends class437 {
       return var3;
    }
 
+   @ObfInfo(
+      owner = "ap",
+      name = "by",
+      desc = "(I[B[IIIIIIIIIILap;)I"
+   )
    static int method1553(int var0, byte[] var1, int[] var2, int var3, int var4, int var5, int var6, int var7, int var8, int var9, int var10, int var11, class316 var12) {
       var3 >>= 8;
       var11 >>= 8;
@@ -1160,6 +1448,11 @@ public class class316 extends class437 {
       return var4 >> 1;
    }
 
+   @ObfInfo(
+      owner = "ap",
+      name = "bw",
+      desc = "([B[IIIIIIIILap;)I"
+   )
    static int method1543(byte[] var0, int[] var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8, class316 var9) {
       var2 >>= 8;
       var8 >>= 8;
@@ -1197,6 +1490,11 @@ public class class316 extends class437 {
       return var3;
    }
 
+   @ObfInfo(
+      owner = "ap",
+      name = "bp",
+      desc = "(I[B[IIIIIIIIIILap;)I"
+   )
    static int method1544(int var0, byte[] var1, int[] var2, int var3, int var4, int var5, int var6, int var7, int var8, int var9, int var10, int var11, class316 var12) {
       var3 >>= 8;
       var11 >>= 8;
@@ -1259,6 +1557,11 @@ public class class316 extends class437 {
       return var4 >> 1;
    }
 
+   @ObfInfo(
+      owner = "ap",
+      name = "bc",
+      desc = "(II[B[IIIIIIIILap;II)I"
+   )
    static int method1545(int var0, int var1, byte[] var2, int[] var3, int var4, int var5, int var6, int var7, int var8, int var9, int var10, class316 var11, int var12, int var13) {
       var11.field2481 -= var11.field2491 * var5;
       var11.field2484 -= var11.field2487 * var5;
@@ -1295,6 +1598,11 @@ public class class316 extends class437 {
       return var5;
    }
 
+   @ObfInfo(
+      owner = "ap",
+      name = "bl",
+      desc = "(II[B[IIIIIIIIIILap;II)I"
+   )
    static int method1533(int var0, int var1, byte[] var2, int[] var3, int var4, int var5, int var6, int var7, int var8, int var9, int var10, int var11, int var12, class316 var13, int var14, int var15) {
       var13.field2482 -= var13.field2490 * var5;
       if (var14 == 0 || (var10 = var5 + (var12 - var4 + var14 - 257) / var14) > var11) {
@@ -1342,6 +1650,11 @@ public class class316 extends class437 {
       return var5;
    }
 
+   @ObfInfo(
+      owner = "ap",
+      name = "bv",
+      desc = "(II[B[IIIIIIIILap;II)I"
+   )
    static int method1546(int var0, int var1, byte[] var2, int[] var3, int var4, int var5, int var6, int var7, int var8, int var9, int var10, class316 var11, int var12, int var13) {
       var11.field2481 -= var11.field2491 * var5;
       var11.field2484 -= var11.field2487 * var5;
@@ -1378,6 +1691,11 @@ public class class316 extends class437 {
       return var5;
    }
 
+   @ObfInfo(
+      owner = "ap",
+      name = "bx",
+      desc = "(II[B[IIIIIIIIIILap;II)I"
+   )
    static int method1547(int var0, int var1, byte[] var2, int[] var3, int var4, int var5, int var6, int var7, int var8, int var9, int var10, int var11, int var12, class316 var13, int var14, int var15) {
       var13.field2482 -= var13.field2490 * var5;
       if (var14 == 0 || (var10 = var5 + (var12 + 256 - var4 + var14) / var14) > var11) {

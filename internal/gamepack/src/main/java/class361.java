@@ -1,14 +1,27 @@
+@ObfInfo(
+   name = "lg"
+)
 public class class361 {
    static {
       Math.sqrt(8192.0D);
    }
 
+   @ObfInfo(
+      owner = "lg",
+      name = "h",
+      desc = "(DDD)D"
+   )
    public static double method1798(double var0, double var2, double var4) {
       double var8 = (var0 - var2) / var4;
       double var6 = Math.exp(-var8 * var8 / 2.0D) / Math.sqrt(6.283185307179586D);
       return var6 / var4;
    }
 
+   @ObfInfo(
+      owner = "lg",
+      name = "q",
+      desc = "(Ljava/lang/CharSequence;IZB)I"
+   )
    static int method1799(CharSequence var0, int var1, boolean var2) {
       if (var1 >= 2 && var1 <= 36) {
          boolean var4 = false;

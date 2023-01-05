@@ -1,23 +1,66 @@
 import java.util.concurrent.Callable;
 
+@ObfInfo(
+   name = "e"
+)
 public class class338 implements Callable {
+   @ObfInfo(
+      owner = "e",
+      name = "b",
+      desc = "Ldm;"
+   )
    static class140 field2702;
+   @ObfInfo(
+      owner = "e",
+      name = "a",
+      desc = "I"
+   )
    static int field2704;
+   @ObfInfo(
+      owner = "e",
+      name = "h",
+      desc = "Lqy;"
+   )
    final class127 field2705;
+   @ObfInfo(
+      owner = "e",
+      name = "e",
+      desc = "Lx;"
+   )
    final class269 field2703;
    // $FF: synthetic field
+   @ObfInfo(
+      owner = "e",
+      name = "this$0",
+      desc = "Lr;"
+   )
    final class472 this$0;
 
+   @ObfInfo(
+      owner = "e",
+      name = "<init>",
+      desc = "(Lr;Lqy;Lx;)V"
+   )
    class338(class472 var1, class127 var2, class269 var3) {
       this.this$0 = var1;
       this.field2705 = var2;
       this.field2703 = var3;
    }
 
+   @ObfInfo(
+      owner = "e",
+      name = "call",
+      desc = "()Ljava/lang/Object;"
+   )
    public Object call() {
       return this.field2703.method1276(this.field2705);
    }
 
+   @ObfInfo(
+      owner = "e",
+      name = "u",
+      desc = "(Ljava/lang/String;I)V"
+   )
    static final void method1698(String var0) {
       StringBuilder var10000 = (new StringBuilder()).append(var0);
       class177 var10001 = (class177)null;
@@ -25,6 +68,11 @@ public class class338 implements Callable {
       class164.method765(30, "", var2);
    }
 
+   @ObfInfo(
+      owner = "e",
+      name = "hs",
+      desc = "(IIII)V"
+   )
    static void method1699(int var0, int var1, int var2) {
       if (class50.field574.method2211() != 0 && var1 != 0 && client.field478 < 50) {
          client.field479[client.field478] = var0;
@@ -37,6 +85,11 @@ public class class338 implements Callable {
 
    }
 
+   @ObfInfo(
+      owner = "e",
+      name = "jj",
+      desc = "(Lqx;B)V"
+   )
    static final void method1697(class6 var0) {
       for(int var2 = 0; var2 < client.field277; ++var2) {
          int var3 = client.field278[var2];

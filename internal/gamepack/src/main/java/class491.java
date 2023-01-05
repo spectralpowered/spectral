@@ -1,44 +1,202 @@
+@ObfInfo(
+   name = "ka"
+)
 public class class491 extends class437 {
+   @ObfInfo(
+      owner = "ka",
+      name = "ao",
+      desc = "Z"
+   )
    boolean field4082;
+   @ObfInfo(
+      owner = "ka",
+      name = "at",
+      desc = "Lkg;"
+   )
    class101 field4103 = new class101(this);
+   @ObfInfo(
+      owner = "ka",
+      name = "h",
+      desc = "Lqp;"
+   )
    class170 field4087 = new class170(128);
+   @ObfInfo(
+      owner = "ka",
+      name = "ad",
+      desc = "Lkm;"
+   )
    class441 field4102 = new class441();
+   @ObfInfo(
+      owner = "ka",
+      name = "w",
+      desc = "[[Lkx;"
+   )
    class458[][] field4084 = new class458[16][128];
+   @ObfInfo(
+      owner = "ka",
+      name = "as",
+      desc = "[[Lkx;"
+   )
    class458[][] field4101 = new class458[16][128];
+   @ObfInfo(
+      owner = "ka",
+      name = "e",
+      desc = "I"
+   )
    int field4089 = 256;
+   @ObfInfo(
+      owner = "ka",
+      name = "v",
+      desc = "I"
+   )
    int field4097 = 1000000;
+   @ObfInfo(
+      owner = "ka",
+      name = "am",
+      desc = "I"
+   )
    int field4104;
+   @ObfInfo(
+      owner = "ka",
+      name = "av",
+      desc = "I"
+   )
    int field4105;
+   @ObfInfo(
+      owner = "ka",
+      name = "t",
+      desc = "[I"
+   )
    int[] field4083 = new int[16];
+   @ObfInfo(
+      owner = "ka",
+      name = "d",
+      desc = "[I"
+   )
    int[] field4085 = new int[16];
+   @ObfInfo(
+      owner = "ka",
+      name = "x",
+      desc = "[I"
+   )
    int[] field4086 = new int[16];
+   @ObfInfo(
+      owner = "ka",
+      name = "f",
+      desc = "[I"
+   )
    int[] field4088 = new int[16];
+   @ObfInfo(
+      owner = "ka",
+      name = "m",
+      desc = "[I"
+   )
    int[] field4090 = new int[16];
+   @ObfInfo(
+      owner = "ka",
+      name = "b",
+      desc = "[I"
+   )
    int[] field4091 = new int[16];
+   @ObfInfo(
+      owner = "ka",
+      name = "j",
+      desc = "[I"
+   )
    int[] field4092 = new int[16];
+   @ObfInfo(
+      owner = "ka",
+      name = "g",
+      desc = "[I"
+   )
    int[] field4093 = new int[16];
+   @ObfInfo(
+      owner = "ka",
+      name = "q",
+      desc = "[I"
+   )
    int[] field4094 = new int[16];
+   @ObfInfo(
+      owner = "ka",
+      name = "c",
+      desc = "[I"
+   )
    int[] field4095 = new int[16];
+   @ObfInfo(
+      owner = "ka",
+      name = "p",
+      desc = "[I"
+   )
    int[] field4096 = new int[16];
+   @ObfInfo(
+      owner = "ka",
+      name = "y",
+      desc = "[I"
+   )
    int[] field4098 = new int[16];
+   @ObfInfo(
+      owner = "ka",
+      name = "z",
+      desc = "[I"
+   )
    int[] field4099 = new int[16];
+   @ObfInfo(
+      owner = "ka",
+      name = "u",
+      desc = "[I"
+   )
    int[] field4100 = new int[16];
+   @ObfInfo(
+      owner = "ka",
+      name = "r",
+      desc = "[I"
+   )
    int[] field4108 = new int[16];
+   @ObfInfo(
+      owner = "ka",
+      name = "au",
+      desc = "J"
+   )
    long field4106;
+   @ObfInfo(
+      owner = "ka",
+      name = "ar",
+      desc = "J"
+   )
    long field4107;
 
+   @ObfInfo(
+      owner = "ka",
+      name = "<init>",
+      desc = "()V"
+   )
    public class491() {
       this.method2431();
    }
 
+   @ObfInfo(
+      owner = "ka",
+      name = "h",
+      desc = "(IB)V"
+   )
    synchronized void method2427(int var1) {
       this.field4089 = var1;
    }
 
+   @ObfInfo(
+      owner = "ka",
+      name = "e",
+      desc = "(I)I"
+   )
    int method2428() {
       return this.field4089;
    }
 
+   @ObfInfo(
+      owner = "ka",
+      name = "v",
+      desc = "(Lkc;Lly;Laj;II)Z"
+   )
    synchronized boolean method2402(class86 var1, class274 var2, class73 var3, int var4) {
       var1.method358();
       boolean var6 = true;
@@ -72,6 +230,11 @@ public class class491 extends class437 {
       return var6;
    }
 
+   @ObfInfo(
+      owner = "ka",
+      name = "x",
+      desc = "(B)V"
+   )
    synchronized void method2403() {
       for(class401 var2 = (class401)this.field4087.method789(); null != var2; var2 = (class401)this.field4087.method790()) {
          var2.method1984();
@@ -79,6 +242,11 @@ public class class491 extends class437 {
 
    }
 
+   @ObfInfo(
+      owner = "ka",
+      name = "m",
+      desc = "(S)V"
+   )
    synchronized void method2404() {
       for(class401 var2 = (class401)this.field4087.method789(); var2 != null; var2 = (class401)this.field4087.method790()) {
          var2.method637();
@@ -86,6 +254,11 @@ public class class491 extends class437 {
 
    }
 
+   @ObfInfo(
+      owner = "ka",
+      name = "b",
+      desc = "(Lkc;ZI)V"
+   )
    synchronized void method2429(class86 var1, boolean var2) {
       this.method2405();
       this.field4102.method2181(var1.field704);
@@ -104,25 +277,50 @@ public class class491 extends class437 {
       this.field4107 = this.field4102.method2193(this.field4105);
    }
 
+   @ObfInfo(
+      owner = "ka",
+      name = "g",
+      desc = "(B)V"
+   )
    synchronized void method2405() {
       this.field4102.method2182();
       this.method2431();
    }
 
+   @ObfInfo(
+      owner = "ka",
+      name = "i",
+      desc = "(B)Z"
+   )
    synchronized boolean method2406() {
       return this.field4102.method2183();
    }
 
+   @ObfInfo(
+      owner = "ka",
+      name = "o",
+      desc = "(IIB)V"
+   )
    public synchronized void method2407(int var1, int var2) {
       this.method2408(var1, var2);
    }
 
+   @ObfInfo(
+      owner = "ka",
+      name = "n",
+      desc = "(IIB)V"
+   )
    void method2408(int var1, int var2) {
       this.field4088[var1] = var2;
       this.field4100[var1] = var2 & -128;
       this.method2409(var1, var2);
    }
 
+   @ObfInfo(
+      owner = "ka",
+      name = "k",
+      desc = "(III)V"
+   )
    void method2409(int var1, int var2) {
       if (var2 != this.field4108[var1]) {
          this.field4108[var1] = var2;
@@ -134,6 +332,11 @@ public class class491 extends class437 {
 
    }
 
+   @ObfInfo(
+      owner = "ka",
+      name = "a",
+      desc = "(IIII)V"
+   )
    void method2410(int var1, int var2, int var3) {
       this.method2423(var1, var2, 64);
       if (0 != (this.field4083[var1] & 2)) {
@@ -197,6 +400,11 @@ public class class491 extends class437 {
       }
    }
 
+   @ObfInfo(
+      owner = "ka",
+      name = "s",
+      desc = "(Lkx;ZI)V"
+   )
    void method2425(class458 var1, boolean var2) {
       int var4 = var1.field3796.field668.length;
       int var5;
@@ -215,6 +423,11 @@ public class class491 extends class437 {
       var1.field3802.method1523(var5);
    }
 
+   @ObfInfo(
+      owner = "ka",
+      name = "l",
+      desc = "(IIII)V"
+   )
    void method2423(int var1, int var2, int var3) {
       class458 var5 = this.field4084[var1][var2];
       if (null != var5) {
@@ -233,16 +446,36 @@ public class class491 extends class437 {
       }
    }
 
+   @ObfInfo(
+      owner = "ka",
+      name = "t",
+      desc = "(IIII)V"
+   )
    void method2424(int var1, int var2, int var3) {
    }
 
+   @ObfInfo(
+      owner = "ka",
+      name = "c",
+      desc = "(III)V"
+   )
    void method2430(int var1, int var2) {
    }
 
+   @ObfInfo(
+      owner = "ka",
+      name = "ay",
+      desc = "(III)V"
+   )
    void method2411(int var1, int var2) {
       this.field4091[var1] = var2;
    }
 
+   @ObfInfo(
+      owner = "ka",
+      name = "an",
+      desc = "(II)V"
+   )
    void method2415(int var1) {
       for(class458 var3 = (class458)this.field4103.field797.method646(); null != var3; var3 = (class458)this.field4103.field797.method648()) {
          if (var1 < 0 || var3.field3797 == var1) {
@@ -265,6 +498,11 @@ public class class491 extends class437 {
 
    }
 
+   @ObfInfo(
+      owner = "ka",
+      name = "ab",
+      desc = "(II)V"
+   )
    void method2412(int var1) {
       if (var1 >= 0) {
          this.field4086[var1] = 12800;
@@ -288,6 +526,11 @@ public class class491 extends class437 {
       }
    }
 
+   @ObfInfo(
+      owner = "ka",
+      name = "al",
+      desc = "(II)V"
+   )
    void method2413(int var1) {
       for(class458 var3 = (class458)this.field4103.field797.method646(); var3 != null; var3 = (class458)this.field4103.field797.method648()) {
          if ((var1 < 0 || var3.field3797 == var1) && var3.field3785 < 0) {
@@ -298,6 +541,11 @@ public class class491 extends class437 {
 
    }
 
+   @ObfInfo(
+      owner = "ka",
+      name = "az",
+      desc = "(B)V"
+   )
    void method2431() {
       this.method2415(-1);
       this.method2412(-1);
@@ -313,6 +561,11 @@ public class class491 extends class437 {
 
    }
 
+   @ObfInfo(
+      owner = "ka",
+      name = "ak",
+      desc = "(II)V"
+   )
    void method2433(int var1) {
       if ((this.field4083[var1] & 2) != 0) {
          for(class458 var3 = (class458)this.field4103.field797.method646(); var3 != null; var3 = (class458)this.field4103.field797.method648()) {
@@ -324,6 +577,11 @@ public class class491 extends class437 {
 
    }
 
+   @ObfInfo(
+      owner = "ka",
+      name = "ai",
+      desc = "(II)V"
+   )
    void method2414(int var1) {
       if (0 != (this.field4083[var1] & 4)) {
          for(class458 var3 = (class458)this.field4103.field797.method646(); var3 != null; var3 = (class458)this.field4103.field797.method648()) {
@@ -335,6 +593,11 @@ public class class491 extends class437 {
 
    }
 
+   @ObfInfo(
+      owner = "ka",
+      name = "ax",
+      desc = "(IB)V"
+   )
    void method2419(int var1) {
       int var3 = var1 & 240;
       int var4;
@@ -517,11 +780,21 @@ public class class491 extends class437 {
       }
    }
 
+   @ObfInfo(
+      owner = "ka",
+      name = "ah",
+      desc = "(III)V"
+   )
    void method2432(int var1, int var2) {
       this.field4098[var1] = var2;
       this.field4099[var1] = (int)(2097152.0D * Math.pow(2.0D, (double)var2 * 5.4931640625E-4D) + 0.5D);
    }
 
+   @ObfInfo(
+      owner = "ka",
+      name = "aw",
+      desc = "(Lkx;I)I"
+   )
    int method2416(class458 var1) {
       int var3 = var1.field3792 + (var1.field3784 * var1.field3794 >> 12);
       var3 += (this.field4091[var1.field3797] - 8192) * this.field4096[var1.field3797] >> 12;
@@ -543,6 +816,11 @@ public class class491 extends class437 {
       return var5 < 1 ? 1 : var5;
    }
 
+   @ObfInfo(
+      owner = "ka",
+      name = "aj",
+      desc = "(Lkx;I)I"
+   )
    int method2417(class458 var1) {
       class132 var3 = var1.field3798;
       int var4 = this.field4086[var1.field3797] * this.field4094[var1.field3797] + 4096 >> 13;
@@ -584,23 +862,48 @@ public class class491 extends class437 {
       return var4;
    }
 
+   @ObfInfo(
+      owner = "ka",
+      name = "aq",
+      desc = "(Lkx;I)I"
+   )
    int method2418(class458 var1) {
       int var3 = this.field4090[var1.field3797];
       return var3 < 8192 ? var1.field3791 * var3 + 32 >> 6 : 16384 - ((16384 - var3) * (128 - var1.field3791) + 32 >> 6);
    }
 
+   @ObfInfo(
+      owner = "ka",
+      name = "q",
+      desc = "()Laa;"
+   )
    protected synchronized class437 method2168() {
       return this.field4103;
    }
 
+   @ObfInfo(
+      owner = "ka",
+      name = "f",
+      desc = "()Laa;"
+   )
    protected synchronized class437 method2171() {
       return null;
    }
 
+   @ObfInfo(
+      owner = "ka",
+      name = "r",
+      desc = "()I"
+   )
    protected synchronized int method2173() {
       return 0;
    }
 
+   @ObfInfo(
+      owner = "ka",
+      name = "u",
+      desc = "([III)V"
+   )
    protected synchronized void method2169(int[] var1, int var2, int var3) {
       if (this.field4102.method2183()) {
          int var4 = this.field4102.field3650 * this.field4097 / class233.field1985;
@@ -624,6 +927,11 @@ public class class491 extends class437 {
       this.field4103.method2169(var1, var2, var3);
    }
 
+   @ObfInfo(
+      owner = "ka",
+      name = "j",
+      desc = "(I)V"
+   )
    protected synchronized void method2172(int var1) {
       if (this.field4102.method2183()) {
          int var2 = this.field4102.field3650 * this.field4097 / class233.field1985;
@@ -646,6 +954,11 @@ public class class491 extends class437 {
       this.field4103.method2172(var1);
    }
 
+   @ObfInfo(
+      owner = "ka",
+      name = "ap",
+      desc = "(I)V"
+   )
    void method2420() {
       int var2 = this.field4104;
       int var3 = this.field4105;
@@ -687,6 +1000,11 @@ public class class491 extends class437 {
       this.field4107 = var4;
    }
 
+   @ObfInfo(
+      owner = "ka",
+      name = "aa",
+      desc = "(Lkx;B)Z"
+   )
    boolean method2421(class458 var1) {
       if (null == var1.field3802) {
          if (var1.field3785 >= 0) {
@@ -702,6 +1020,11 @@ public class class491 extends class437 {
       }
    }
 
+   @ObfInfo(
+      owner = "ka",
+      name = "ae",
+      desc = "(Lkx;[IIIB)Z"
+   )
    boolean method2422(class458 var1, int[] var2, int var3, int var4) {
       var1.field3803 = class233.field1985 / 100;
       if (var1.field3785 < 0 || var1.field3802 != null && !var1.field3802.method1530()) {
@@ -797,6 +1120,11 @@ public class class491 extends class437 {
       }
    }
 
+   @ObfInfo(
+      owner = "ka",
+      name = "h",
+      desc = "(I)[Ldp;"
+   )
    static class301[] method2426() {
       return new class301[]{class301.field2418, class301.field2413, class301.field2414, class301.field2419, class301.field2416};
    }

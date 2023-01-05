@@ -2,15 +2,58 @@ import java.io.EOFException;
 import java.io.IOException;
 import java.io.InputStream;
 
+@ObfInfo(
+   name = "ol"
+)
 public class class157 implements Runnable {
+   @ObfInfo(
+      owner = "ol",
+      name = "x",
+      desc = "[B"
+   )
    byte[] field1208;
+   @ObfInfo(
+      owner = "ol",
+      name = "m",
+      desc = "I"
+   )
    int field1205 = 0;
+   @ObfInfo(
+      owner = "ol",
+      name = "v",
+      desc = "I"
+   )
    int field1207;
+   @ObfInfo(
+      owner = "ol",
+      name = "q",
+      desc = "I"
+   )
    int field1211 = 0;
+   @ObfInfo(
+      owner = "ol",
+      name = "f",
+      desc = "Ljava/io/IOException;"
+   )
    IOException field1210;
+   @ObfInfo(
+      owner = "ol",
+      name = "e",
+      desc = "Ljava/io/InputStream;"
+   )
    InputStream field1206;
+   @ObfInfo(
+      owner = "ol",
+      name = "h",
+      desc = "Ljava/lang/Thread;"
+   )
    Thread field1209;
 
+   @ObfInfo(
+      owner = "ol",
+      name = "<init>",
+      desc = "(Ljava/io/InputStream;I)V"
+   )
    class157(InputStream var1, int var2) {
       this.field1206 = var1;
       this.field1207 = var2 + 1;
@@ -20,6 +63,11 @@ public class class157 implements Runnable {
       this.field1209.start();
    }
 
+   @ObfInfo(
+      owner = "ol",
+      name = "run",
+      desc = "()V"
+   )
    public void run() {
       while(true) {
          int var1;
@@ -69,6 +117,11 @@ public class class157 implements Runnable {
       }
    }
 
+   @ObfInfo(
+      owner = "ol",
+      name = "h",
+      desc = "(IB)Z"
+   )
    boolean method722(int var1) throws IOException {
       if (var1 == 0) {
          return true;
@@ -97,6 +150,11 @@ public class class157 implements Runnable {
       }
    }
 
+   @ObfInfo(
+      owner = "ol",
+      name = "e",
+      desc = "(B)I"
+   )
    int method724() throws IOException {
       synchronized(this) {
          int var3;
@@ -115,6 +173,11 @@ public class class157 implements Runnable {
       }
    }
 
+   @ObfInfo(
+      owner = "ol",
+      name = "v",
+      desc = "(I)I"
+   )
    int method723() throws IOException {
       synchronized(this) {
          if (this.field1205 == this.field1211) {
@@ -132,6 +195,11 @@ public class class157 implements Runnable {
       }
    }
 
+   @ObfInfo(
+      owner = "ol",
+      name = "x",
+      desc = "([BIII)I"
+   )
    int method726(byte[] var1, int var2, int var3) throws IOException {
       if (var3 >= 0 && var2 >= 0 && var3 + var2 <= var1.length) {
          synchronized(this) {
@@ -167,6 +235,11 @@ public class class157 implements Runnable {
       }
    }
 
+   @ObfInfo(
+      owner = "ol",
+      name = "m",
+      desc = "(I)V"
+   )
    void method725() {
       synchronized(this) {
          if (this.field1210 == null) {
@@ -184,6 +257,11 @@ public class class157 implements Runnable {
 
    }
 
+   @ObfInfo(
+      owner = "ol",
+      name = "e",
+      desc = "(Lqy;Ljava/lang/String;I)I"
+   )
    public static int method727(class127 var0, String var1) {
       int var3 = var0.field1070;
       int var5 = var1.length();

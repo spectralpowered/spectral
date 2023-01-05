@@ -1,12 +1,55 @@
+@ObfInfo(
+   name = "rj"
+)
 public class class162 extends class195 {
+   @ObfInfo(
+      owner = "rj",
+      name = "am",
+      desc = "I"
+   )
    public static int field1231;
+   @ObfInfo(
+      owner = "rj",
+      name = "ao",
+      desc = "I"
+   )
    public static int field1232;
+   @ObfInfo(
+      owner = "rj",
+      name = "av",
+      desc = "I"
+   )
    public static int field1234 = 0;
+   @ObfInfo(
+      owner = "rj",
+      name = "au",
+      desc = "I"
+   )
    public static int field1235 = 0;
+   @ObfInfo(
+      owner = "rj",
+      name = "ar",
+      desc = "I"
+   )
    public static int field1236 = 0;
+   @ObfInfo(
+      owner = "rj",
+      name = "at",
+      desc = "I"
+   )
    public static int field1237 = 0;
+   @ObfInfo(
+      owner = "rj",
+      name = "ad",
+      desc = "[I"
+   )
    public static int[] field1233;
 
+   @ObfInfo(
+      owner = "rj",
+      name = "cr",
+      desc = "([III)V"
+   )
    public static void method748(int[] var0, int var1, int var2) {
       field1233 = var0;
       field1232 = var1;
@@ -14,6 +57,11 @@ public class class162 extends class195 {
       method742(0, 0, var1, var2);
    }
 
+   @ObfInfo(
+      owner = "rj",
+      name = "cd",
+      desc = "()V"
+   )
    public static void method758() {
       field1236 = 0;
       field1234 = 0;
@@ -21,6 +69,11 @@ public class class162 extends class195 {
       field1235 = field1231;
    }
 
+   @ObfInfo(
+      owner = "rj",
+      name = "ck",
+      desc = "(IIII)V"
+   )
    public static void method742(int var0, int var1, int var2, int var3) {
       if (var0 < 0) {
          var0 = 0;
@@ -44,6 +97,11 @@ public class class162 extends class195 {
       field1235 = var3;
    }
 
+   @ObfInfo(
+      owner = "rj",
+      name = "ci",
+      desc = "(IIII)V"
+   )
    public static void method743(int var0, int var1, int var2, int var3) {
       if (field1236 < var0) {
          field1236 = var0;
@@ -63,6 +121,11 @@ public class class162 extends class195 {
 
    }
 
+   @ObfInfo(
+      owner = "rj",
+      name = "dh",
+      desc = "([I)V"
+   )
    public static void method744(int[] var0) {
       var0[0] = field1236;
       var0[1] = field1234;
@@ -70,6 +133,11 @@ public class class162 extends class195 {
       var0[3] = field1235;
    }
 
+   @ObfInfo(
+      owner = "rj",
+      name = "dn",
+      desc = "([I)V"
+   )
    public static void method745(int[] var0) {
       field1236 = var0[0];
       field1234 = var0[1];
@@ -77,6 +145,11 @@ public class class162 extends class195 {
       field1235 = var0[3];
    }
 
+   @ObfInfo(
+      owner = "rj",
+      name = "da",
+      desc = "()V"
+   )
    public static void method746() {
       int var0 = 0;
 
@@ -97,6 +170,11 @@ public class class162 extends class195 {
 
    }
 
+   @ObfInfo(
+      owner = "rj",
+      name = "de",
+      desc = "(IIII)V"
+   )
    static void method747(int var0, int var1, int var2, int var3) {
       if (var2 == 0) {
          method761(var0, var1, var3);
@@ -190,6 +268,11 @@ public class class162 extends class195 {
       }
    }
 
+   @ObfInfo(
+      owner = "rj",
+      name = "dl",
+      desc = "(IIIII)V"
+   )
    public static void method740(int var0, int var1, int var2, int var3, int var4) {
       if (var4 != 0) {
          if (var4 == 256) {
@@ -301,6 +384,11 @@ public class class162 extends class195 {
       }
    }
 
+   @ObfInfo(
+      owner = "rj",
+      name = "dw",
+      desc = "(IIIIII)V"
+   )
    public static void method762(int var0, int var1, int var2, int var3, int var4, int var5) {
       if (var0 < field1236) {
          var2 -= field1236 - var0;
@@ -337,6 +425,11 @@ public class class162 extends class195 {
 
    }
 
+   @ObfInfo(
+      owner = "rj",
+      name = "dm",
+      desc = "(IIIII)V"
+   )
    public static void method749(int var0, int var1, int var2, int var3, int var4) {
       if (var0 < field1236) {
          var2 -= field1236 - var0;
@@ -369,6 +462,11 @@ public class class162 extends class195 {
 
    }
 
+   @ObfInfo(
+      owner = "rj",
+      name = "dv",
+      desc = "(IIIIII)V"
+   )
    public static void method750(int var0, int var1, int var2, int var3, int var4, int var5) {
       if (var2 > 0 && var3 > 0) {
          int var6 = 0;
@@ -411,6 +509,11 @@ public class class162 extends class195 {
       }
    }
 
+   @ObfInfo(
+      owner = "rj",
+      name = "ds",
+      desc = "(IIIIIIII)V"
+   )
    public static void method751(int var0, int var1, int var2, int var3, int var4, int var5, int var6, int var7) {
       if (var2 > 0 && var3 > 0) {
          int var8 = 0;
@@ -467,6 +570,11 @@ public class class162 extends class195 {
       }
    }
 
+   @ObfInfo(
+      owner = "rj",
+      name = "dc",
+      desc = "(IIIIII[BIZ)V"
+   )
    public static void method757(int var0, int var1, int var2, int var3, int var4, int var5, byte[] var6, int var7, boolean var8) {
       if (var0 + var2 >= 0 && var1 + var3 >= 0) {
          if (var0 < field1232 && var1 < field1231) {
@@ -542,6 +650,11 @@ public class class162 extends class195 {
       }
    }
 
+   @ObfInfo(
+      owner = "rj",
+      name = "dk",
+      desc = "(IIIII)V"
+   )
    public static void method741(int var0, int var1, int var2, int var3, int var4) {
       method752(var0, var1, var2, var4);
       method752(var0, var1 + var3 - 1, var2, var4);
@@ -549,6 +662,11 @@ public class class162 extends class195 {
       method753(var0 + var2 - 1, var1, var3, var4);
    }
 
+   @ObfInfo(
+      owner = "rj",
+      name = "df",
+      desc = "(IIIIII)V"
+   )
    public static void method756(int var0, int var1, int var2, int var3, int var4, int var5) {
       method760(var0, var1, var2, var4, var5);
       method760(var0, var1 + var3 - 1, var2, var4, var5);
@@ -559,6 +677,11 @@ public class class162 extends class195 {
 
    }
 
+   @ObfInfo(
+      owner = "rj",
+      name = "dy",
+      desc = "(IIII)V"
+   )
    public static void method752(int var0, int var1, int var2, int var3) {
       if (var1 >= field1234 && var1 < field1235) {
          if (var0 < field1236) {
@@ -579,6 +702,11 @@ public class class162 extends class195 {
       }
    }
 
+   @ObfInfo(
+      owner = "rj",
+      name = "dx",
+      desc = "(IIIII)V"
+   )
    static void method760(int var0, int var1, int var2, int var3, int var4) {
       if (var1 >= field1234 && var1 < field1235) {
          if (var0 < field1236) {
@@ -607,6 +735,11 @@ public class class162 extends class195 {
       }
    }
 
+   @ObfInfo(
+      owner = "rj",
+      name = "dr",
+      desc = "(IIII)V"
+   )
    public static void method753(int var0, int var1, int var2, int var3) {
       if (var0 >= field1236 && var0 < field1237) {
          if (var1 < field1234) {
@@ -627,6 +760,11 @@ public class class162 extends class195 {
       }
    }
 
+   @ObfInfo(
+      owner = "rj",
+      name = "dd",
+      desc = "(IIIII)V"
+   )
    static void method754(int var0, int var1, int var2, int var3, int var4) {
       if (var0 >= field1236 && var0 < field1237) {
          if (var1 < field1234) {
@@ -656,6 +794,11 @@ public class class162 extends class195 {
       }
    }
 
+   @ObfInfo(
+      owner = "rj",
+      name = "dg",
+      desc = "(IIIII)V"
+   )
    public static void method759(int var0, int var1, int var2, int var3, int var4) {
       var2 -= var0;
       var3 -= var1;
@@ -736,12 +879,22 @@ public class class162 extends class195 {
       }
    }
 
+   @ObfInfo(
+      owner = "rj",
+      name = "dq",
+      desc = "(III)V"
+   )
    static void method761(int var0, int var1, int var2) {
       if (var0 >= field1236 && var1 >= field1234 && var0 < field1237 && var1 < field1235) {
          field1233[var0 + var1 * field1232] = var2;
       }
    }
 
+   @ObfInfo(
+      owner = "rj",
+      name = "db",
+      desc = "(III[I[I)V"
+   )
    public static void method755(int var0, int var1, int var2, int[] var3, int[] var4) {
       int var5 = var0 + var1 * field1232;
 

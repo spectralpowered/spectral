@@ -1,20 +1,103 @@
+@ObfInfo(
+   name = "br"
+)
 public final class class156 extends class139 {
+   @ObfInfo(
+      owner = "br",
+      name = "h",
+      desc = "Lmq;"
+   )
    static class141 field1200 = new class141();
+   @ObfInfo(
+      owner = "br",
+      name = "b",
+      desc = "Lap;"
+   )
    class316 field1198;
+   @ObfInfo(
+      owner = "br",
+      name = "n",
+      desc = "Lap;"
+   )
    class316 field1203;
+   @ObfInfo(
+      owner = "br",
+      name = "r",
+      desc = "Lgn;"
+   )
    class87 field1204;
+   @ObfInfo(
+      owner = "br",
+      name = "x",
+      desc = "I"
+   )
    int field1190;
+   @ObfInfo(
+      owner = "br",
+      name = "g",
+      desc = "I"
+   )
    int field1191;
+   @ObfInfo(
+      owner = "br",
+      name = "v",
+      desc = "I"
+   )
    int field1192;
+   @ObfInfo(
+      owner = "br",
+      name = "m",
+      desc = "I"
+   )
    int field1193;
+   @ObfInfo(
+      owner = "br",
+      name = "j",
+      desc = "I"
+   )
    int field1194;
+   @ObfInfo(
+      owner = "br",
+      name = "q",
+      desc = "I"
+   )
    int field1195;
+   @ObfInfo(
+      owner = "br",
+      name = "e",
+      desc = "I"
+   )
    int field1196;
+   @ObfInfo(
+      owner = "br",
+      name = "u",
+      desc = "I"
+   )
    int field1197;
+   @ObfInfo(
+      owner = "br",
+      name = "f",
+      desc = "I"
+   )
    int field1199;
+   @ObfInfo(
+      owner = "br",
+      name = "o",
+      desc = "I"
+   )
    int field1202;
+   @ObfInfo(
+      owner = "br",
+      name = "i",
+      desc = "[I"
+   )
    int[] field1201;
 
+   @ObfInfo(
+      owner = "br",
+      name = "v",
+      desc = "(I)V"
+   )
    void method719() {
       int var2 = this.field1197;
       class87 var3 = this.field1204.method372();
@@ -39,6 +122,11 @@ public final class class156 extends class139 {
 
    }
 
+   @ObfInfo(
+      owner = "br",
+      name = "e",
+      desc = "(CI)Z"
+   )
    public static boolean method720(char var0) {
       if ((var0 < ' ' || var0 >= 127) && (var0 <= 127 || var0 >= 160) && (var0 <= 160 || var0 > 255)) {
          if (var0 != 0) {
@@ -58,6 +146,11 @@ public final class class156 extends class139 {
       }
    }
 
+   @ObfInfo(
+      owner = "br",
+      name = "jy",
+      desc = "(Ljava/lang/String;Ljava/lang/String;IIIIB)V"
+   )
    public static final void method721(String var0, String var1, int var2, int var3, int var4, int var5) {
       class323.method1653(var0, var1, var2, var3, var4, var5, -1, false);
    }

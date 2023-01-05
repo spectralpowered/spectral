@@ -1,5 +1,18 @@
+@ObfInfo(
+   name = "lk"
+)
 public class class150 {
+   @ObfInfo(
+      owner = "lk",
+      name = "v",
+      desc = "[I"
+   )
    public static int[] field1171 = new int[99];
+   @ObfInfo(
+      owner = "lk",
+      name = "e",
+      desc = "[Z"
+   )
    public static final boolean[] field1170 = new boolean[]{true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, false};
 
    static {
@@ -14,6 +27,11 @@ public class class150 {
 
    }
 
+   @ObfInfo(
+      owner = "lk",
+      name = "h",
+      desc = "(I)[Lf;"
+   )
    public static class403[] method700() {
       return new class403[]{class403.field3390};
    }

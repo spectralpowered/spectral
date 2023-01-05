@@ -1,15 +1,47 @@
-import netscape.js.JSObject;
-
 import java.applet.Applet;
 import java.net.URL;
+import netscape.js.JSObject;
 
+@ObfInfo(
+   name = "cu"
+)
 public class class121 extends class139 {
+   @ObfInfo(
+      owner = "cu",
+      name = "iz",
+      desc = "I"
+   )
    static int field1046;
+   @ObfInfo(
+      owner = "cu",
+      name = "v",
+      desc = "I"
+   )
    int field1045;
+   @ObfInfo(
+      owner = "cu",
+      name = "e",
+      desc = "I"
+   )
    int field1047;
+   @ObfInfo(
+      owner = "cu",
+      name = "h",
+      desc = "I"
+   )
    int field1048;
+   @ObfInfo(
+      owner = "cu",
+      name = "x",
+      desc = "I"
+   )
    int field1049;
 
+   @ObfInfo(
+      owner = "cu",
+      name = "<init>",
+      desc = "(IIII)V"
+   )
    class121(int var1, int var2, int var3, int var4) {
       this.field1048 = var1;
       this.field1047 = var2;
@@ -17,6 +49,11 @@ public class class121 extends class139 {
       this.field1049 = var4;
    }
 
+   @ObfInfo(
+      owner = "cu",
+      name = "h",
+      desc = "(IIIII)V"
+   )
    void method514(int var1, int var2, int var3, int var4) {
       this.field1048 = var1;
       this.field1047 = var2;
@@ -24,6 +61,11 @@ public class class121 extends class139 {
       this.field1049 = var4;
    }
 
+   @ObfInfo(
+      owner = "cu",
+      name = "e",
+      desc = "(IB)Lqm;"
+   )
    public static class11 method515(int var0) {
       class11 var2 = (class11)class11.field60.method394((long)var0);
       if (null != var2) {
@@ -41,6 +83,11 @@ public class class121 extends class139 {
       }
    }
 
+   @ObfInfo(
+      owner = "cu",
+      name = "v",
+      desc = "(Ljava/lang/String;ILjava/lang/String;I)Z"
+   )
    static boolean method513(String var0, int var1, String var2) {
       if (var1 == 0) {
          try {
@@ -67,7 +114,7 @@ public class class121 extends class139 {
          try {
             Applet var5 = class128.field1073;
             Object[] var6 = new Object[]{(new URL(class128.field1073.getCodeBase(), var0)).toString()};
-            Object var4 = JSObject.getWindow(var5).call(var2, var6);
+            Object var4 = JSObject.Companion.getWindow(var5).call(var2, var6);
             return var4 != null;
          } catch (Throwable var9) {
             return false;
@@ -97,6 +144,11 @@ public class class121 extends class139 {
       }
    }
 
+   @ObfInfo(
+      owner = "cu",
+      name = "bh",
+      desc = "(ILbm;ZB)I"
+   )
    static int method516(int var0, class461 var1, boolean var2) {
       return 2;
    }

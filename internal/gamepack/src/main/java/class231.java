@@ -1,30 +1,158 @@
 import java.util.Random;
 
+@ObfInfo(
+   name = "bp"
+)
 public class class231 {
+   @ObfInfo(
+      owner = "bp",
+      name = "y",
+      desc = "[I"
+   )
    static int[] field1944;
+   @ObfInfo(
+      owner = "bp",
+      name = "l",
+      desc = "[I"
+   )
    static int[] field1949 = new int['耀'];
+   @ObfInfo(
+      owner = "bp",
+      name = "s",
+      desc = "[I"
+   )
    static int[] field1954;
+   @ObfInfo(
+      owner = "bp",
+      name = "t",
+      desc = "[I"
+   )
    static int[] field1962;
+   @ObfInfo(
+      owner = "bp",
+      name = "p",
+      desc = "[I"
+   )
    static int[] field1964;
+   @ObfInfo(
+      owner = "bp",
+      name = "d",
+      desc = "[I"
+   )
    static int[] field1965;
+   @ObfInfo(
+      owner = "bp",
+      name = "z",
+      desc = "[I"
+   )
    static int[] field1966;
+   @ObfInfo(
+      owner = "bp",
+      name = "w",
+      desc = "[I"
+   )
    static int[] field1968;
+   @ObfInfo(
+      owner = "bp",
+      name = "o",
+      desc = "Lbw;"
+   )
    class428 field1956;
+   @ObfInfo(
+      owner = "bp",
+      name = "e",
+      desc = "Lah;"
+   )
    class487 field1945;
+   @ObfInfo(
+      owner = "bp",
+      name = "v",
+      desc = "Lah;"
+   )
    class487 field1946;
+   @ObfInfo(
+      owner = "bp",
+      name = "x",
+      desc = "Lah;"
+   )
    class487 field1947;
+   @ObfInfo(
+      owner = "bp",
+      name = "m",
+      desc = "Lah;"
+   )
    class487 field1948;
+   @ObfInfo(
+      owner = "bp",
+      name = "f",
+      desc = "Lah;"
+   )
    class487 field1950;
+   @ObfInfo(
+      owner = "bp",
+      name = "n",
+      desc = "Lah;"
+   )
    class487 field1957;
+   @ObfInfo(
+      owner = "bp",
+      name = "q",
+      desc = "Lah;"
+   )
    class487 field1960;
+   @ObfInfo(
+      owner = "bp",
+      name = "h",
+      desc = "Lah;"
+   )
    class487 field1961;
+   @ObfInfo(
+      owner = "bp",
+      name = "r",
+      desc = "Lah;"
+   )
    class487 field1963;
+   @ObfInfo(
+      owner = "bp",
+      name = "g",
+      desc = "I"
+   )
    int field1955 = 0;
+   @ObfInfo(
+      owner = "bp",
+      name = "k",
+      desc = "I"
+   )
    int field1958 = 500;
+   @ObfInfo(
+      owner = "bp",
+      name = "a",
+      desc = "I"
+   )
    int field1959 = 0;
+   @ObfInfo(
+      owner = "bp",
+      name = "i",
+      desc = "I"
+   )
    int field1967 = 100;
+   @ObfInfo(
+      owner = "bp",
+      name = "u",
+      desc = "[I"
+   )
    int[] field1951 = new int[]{0, 0, 0, 0, 0};
+   @ObfInfo(
+      owner = "bp",
+      name = "b",
+      desc = "[I"
+   )
    int[] field1952 = new int[]{0, 0, 0, 0, 0};
+   @ObfInfo(
+      owner = "bp",
+      name = "j",
+      desc = "[I"
+   )
    int[] field1953 = new int[]{0, 0, 0, 0, 0};
 
    static {
@@ -49,6 +177,11 @@ public class class231 {
       field1968 = new int[5];
    }
 
+   @ObfInfo(
+      owner = "bp",
+      name = "h",
+      desc = "(II)[I"
+   )
    final int[] method1002(int var1, int var2) {
       class165.method772(field1954, 0, var1);
       if (var2 < 10) {
@@ -251,6 +384,11 @@ public class class231 {
       }
    }
 
+   @ObfInfo(
+      owner = "bp",
+      name = "e",
+      desc = "(III)I"
+   )
    final int method1000(int var1, int var2, int var3) {
       if (var3 == 1) {
          return (var1 & 32767) < 16384 ? var2 : -var2;
@@ -263,6 +401,11 @@ public class class231 {
       }
    }
 
+   @ObfInfo(
+      owner = "bp",
+      name = "v",
+      desc = "(Lqy;)V"
+   )
    final void method1001(class127 var1) {
       this.field1961 = new class487();
       this.field1961.method2393(var1);

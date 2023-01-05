@@ -1,8 +1,21 @@
+@ObfInfo(
+   name = "jw"
+)
 public class class424 {
+   @ObfInfo(
+      owner = "jw",
+      name = "f",
+      desc = "(I)V"
+   )
    public static void method2071() {
       class50.field572.method395();
    }
 
+   @ObfInfo(
+      owner = "jw",
+      name = "ht",
+      desc = "(Lct;I)V"
+   )
    static final void method2070(class334 var0) {
       int var2 = Math.max(1, var0.field2663 - client.field231);
       int var3 = var0.field2611 * -31241280 + var0.field2626 * -600195968;
@@ -13,6 +26,11 @@ public class class424 {
       var0.field2674 = var0.field2665;
    }
 
+   @ObfInfo(
+      owner = "jw",
+      name = "kj",
+      desc = "(Lkd;IIB)V"
+   )
    static final void method2068(class120 var0, int var1, int var2) {
       if (var0.field897 == 1) {
          class241.method1048(var0.field1025, "", 24, 0, 0, var0.field985, var0.field898);
@@ -198,6 +216,11 @@ public class class424 {
 
    }
 
+   @ObfInfo(
+      owner = "jw",
+      name = "lt",
+      desc = "(I)I"
+   )
    static final int method2069() {
       float var1 = 200.0F * ((float)class50.field574.method2208() - 0.5F);
       return 100 - Math.round(var1);

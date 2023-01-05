@@ -1,6 +1,19 @@
+@ObfInfo(
+   name = "jc"
+)
 public final class class196 {
+   @ObfInfo(
+      owner = "jc",
+      name = "e",
+      desc = "J"
+   )
    static long field1738;
 
+   @ObfInfo(
+      owner = "jc",
+      name = "q",
+      desc = "(I)[Lra;"
+   )
    static class344[] method873() {
       class344[] var1 = new class344[class18.field91];
 
@@ -25,6 +38,11 @@ public final class class196 {
       return var1;
    }
 
+   @ObfInfo(
+      owner = "jc",
+      name = "ab",
+      desc = "(ILbm;ZI)I"
+   )
    static int method872(int var0, class461 var1, boolean var2) {
       if (var0 == 5306) {
          class386.field3248[++class161.field1227 - 1] = class152.method713();
@@ -59,6 +77,11 @@ public final class class196 {
       }
    }
 
+   @ObfInfo(
+      owner = "jc",
+      name = "mx",
+      desc = "(IIIILrx;Lkv;I)V"
+   )
    static final void method874(int var0, int var1, int var2, int var3, class266 var4, class226 var5) {
       if (var4 != null) {
          int var7 = client.field301 & 2047;
@@ -78,6 +101,11 @@ public final class class196 {
       }
    }
 
+   @ObfInfo(
+      owner = "jc",
+      name = "nm",
+      desc = "(Ljava/lang/String;I)Ljava/lang/String;"
+   )
    static String method871(String var0) {
       class425[] var2 = class283.method1394();
 

@@ -1,17 +1,65 @@
+@ObfInfo(
+   name = "ec"
+)
 public class class398 extends class480 {
+   @ObfInfo(
+      owner = "ec",
+      name = "bj",
+      desc = "I"
+   )
    static int field3358;
+   @ObfInfo(
+      owner = "ec",
+      name = "h",
+      desc = "Z"
+   )
    boolean field3359;
+   @ObfInfo(
+      owner = "ec",
+      name = "m",
+      desc = "B"
+   )
    byte field3354;
+   @ObfInfo(
+      owner = "ec",
+      name = "x",
+      desc = "B"
+   )
    byte field3355;
+   @ObfInfo(
+      owner = "ec",
+      name = "v",
+      desc = "B"
+   )
    byte field3356;
+   @ObfInfo(
+      owner = "ec",
+      name = "e",
+      desc = "B"
+   )
    byte field3357;
    // $FF: synthetic field
+   @ObfInfo(
+      owner = "ec",
+      name = "this$0",
+      desc = "Lem;"
+   )
    final class182 this$0;
 
+   @ObfInfo(
+      owner = "ec",
+      name = "<init>",
+      desc = "(Lem;)V"
+   )
    class398(class182 var1) {
       this.this$0 = var1;
    }
 
+   @ObfInfo(
+      owner = "ec",
+      name = "h",
+      desc = "(Lqy;I)V"
+   )
    void method2367(class127 var1) {
       this.field3359 = var1.method547() == 1;
       this.field3357 = var1.method548();
@@ -20,6 +68,11 @@ public class class398 extends class480 {
       this.field3354 = var1.method548();
    }
 
+   @ObfInfo(
+      owner = "ec",
+      name = "e",
+      desc = "(Lep;I)V"
+   )
    void method2368(class429 var1) {
       var1.field3550 = this.field3359;
       var1.field3551 = this.field3357;
@@ -28,10 +81,20 @@ public class class398 extends class480 {
       var1.field3553 = this.field3354;
    }
 
+   @ObfInfo(
+      owner = "ec",
+      name = "f",
+      desc = "(I)V"
+   )
    public static void method1966() {
       class123.field1056.method395();
    }
 
+   @ObfInfo(
+      owner = "ec",
+      name = "q",
+      desc = "(Lbz;Lbz;IZIZI)I"
+   )
    static int method1969(class2 var0, class2 var1, int var2, boolean var3, int var4, boolean var5) {
       int var7 = class342.method1741(var0, var1, var2, var3);
       if (var7 != 0) {
@@ -44,10 +107,20 @@ public class class398 extends class480 {
       }
    }
 
+   @ObfInfo(
+      owner = "ec",
+      name = "v",
+      desc = "(ZZI)Lra;"
+   )
    static class344 method1968(boolean var0, boolean var1) {
       return var0 ? (var1 ? class359.field3058 : class306.field2455) : (var1 ? class359.field3080 : class23.field110);
    }
 
+   @ObfInfo(
+      owner = "ec",
+      name = "k",
+      desc = "(III)I"
+   )
    static final int method1967(int var0, int var1) {
       int var3 = class450.method2238(var0 - 1, var1 - 1) + class450.method2238(var0 + 1, var1 - 1) + class450.method2238(var0 - 1, var1 + 1) + class450.method2238(var0 + 1, var1 + 1);
       int var4 = class450.method2238(var0 - 1, var1) + class450.method2238(var0 + 1, var1) + class450.method2238(var0, var1 - 1) + class450.method2238(var0, var1 + 1);
@@ -55,6 +128,11 @@ public class class398 extends class480 {
       return var3 / 16 + var4 / 8 + var5 / 4;
    }
 
+   @ObfInfo(
+      owner = "ec",
+      name = "hp",
+      desc = "(IIIIZI)V"
+   )
    static final void method1970(int var0, int var1, int var2, int var3, boolean var4) {
       if (var2 < 1) {
          var2 = 1;

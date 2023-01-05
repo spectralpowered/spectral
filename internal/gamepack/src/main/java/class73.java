@@ -1,15 +1,53 @@
+@ObfInfo(
+   name = "aj"
+)
 public class class73 {
+   @ObfInfo(
+      owner = "aj",
+      name = "g",
+      desc = "I"
+   )
    static int field653;
+   @ObfInfo(
+      owner = "aj",
+      name = "x",
+      desc = "Lqp;"
+   )
    class170 field656 = new class170(256);
+   @ObfInfo(
+      owner = "aj",
+      name = "v",
+      desc = "Lqp;"
+   )
    class170 field657 = new class170(256);
+   @ObfInfo(
+      owner = "aj",
+      name = "e",
+      desc = "Lly;"
+   )
    class274 field654;
+   @ObfInfo(
+      owner = "aj",
+      name = "h",
+      desc = "Lly;"
+   )
    class274 field655;
 
+   @ObfInfo(
+      owner = "aj",
+      name = "<init>",
+      desc = "(Lly;Lly;)V"
+   )
    public class73(class274 var1, class274 var2) {
       this.field655 = var1;
       this.field654 = var2;
    }
 
+   @ObfInfo(
+      owner = "aj",
+      name = "h",
+      desc = "(II[IB)Laf;"
+   )
    class82 method316(int var1, int var2, int[] var3) {
       int var5 = var2 ^ (var1 << 4 & '\uffff' | var1 >>> 12);
       var5 |= var1 << 16;
@@ -35,6 +73,11 @@ public class class73 {
       }
    }
 
+   @ObfInfo(
+      owner = "aj",
+      name = "e",
+      desc = "(II[II)Laf;"
+   )
    class82 method318(int var1, int var2, int[] var3) {
       int var5 = var2 ^ (var1 << 4 & '\uffff' | var1 >>> 12);
       var5 |= var1 << 16;
@@ -66,6 +109,11 @@ public class class73 {
       }
    }
 
+   @ObfInfo(
+      owner = "aj",
+      name = "v",
+      desc = "(I[II)Laf;"
+   )
    public class82 method317(int var1, int[] var2) {
       if (this.field655.method1353() == 1) {
          return this.method316(0, var1, var2);
@@ -76,6 +124,11 @@ public class class73 {
       }
    }
 
+   @ObfInfo(
+      owner = "aj",
+      name = "x",
+      desc = "(I[II)Laf;"
+   )
    public class82 method319(int var1, int[] var2) {
       if (this.field654.method1353() == 1) {
          return this.method318(0, var1, var2);
@@ -86,6 +139,11 @@ public class class73 {
       }
    }
 
+   @ObfInfo(
+      owner = "aj",
+      name = "as",
+      desc = "(ILbm;ZI)I"
+   )
    static int method321(int var0, class461 var1, boolean var2) {
       int var4;
       int var5;
@@ -163,6 +221,11 @@ public class class73 {
       }
    }
 
+   @ObfInfo(
+      owner = "aj",
+      name = "io",
+      desc = "(B)Z"
+   )
    static boolean method320(byte var0) {
       boolean var10000;
       if ((client.field449 & 1) != 0) {
@@ -178,6 +241,11 @@ public class class73 {
       return var10000;
    }
 
+   @ObfInfo(
+      owner = "aj",
+      name = "mg",
+      desc = "(Lkd;IIII)V"
+   )
    static final void method322(class120 var0, int var1, int var2, int var3) {
       class226 var5 = var0.method483(false);
       if (null != var5) {

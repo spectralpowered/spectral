@@ -2,27 +2,70 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
+@ObfInfo(
+   name = "r"
+)
 public class class472 {
+   @ObfInfo(
+      owner = "r",
+      name = "h",
+      desc = "Ljava/util/concurrent/ExecutorService;"
+   )
    ExecutorService field3964 = Executors.newSingleThreadExecutor();
+   @ObfInfo(
+      owner = "r",
+      name = "e",
+      desc = "Ljava/util/concurrent/Future;"
+   )
    Future field3965;
+   @ObfInfo(
+      owner = "r",
+      name = "v",
+      desc = "Lqy;"
+   )
    final class127 field3966;
+   @ObfInfo(
+      owner = "r",
+      name = "x",
+      desc = "Lx;"
+   )
    final class269 field3967;
 
+   @ObfInfo(
+      owner = "r",
+      name = "<init>",
+      desc = "(Lqy;Lx;)V"
+   )
    public class472(class127 var1, class269 var2) {
       this.field3966 = var1;
       this.field3967 = var2;
       this.method2334();
    }
 
+   @ObfInfo(
+      owner = "r",
+      name = "h",
+      desc = "(B)Z"
+   )
    public boolean method2337() {
       return this.field3965.isDone();
    }
 
+   @ObfInfo(
+      owner = "r",
+      name = "e",
+      desc = "(B)V"
+   )
    public void method2333() {
       this.field3964.shutdown();
       this.field3964 = null;
    }
 
+   @ObfInfo(
+      owner = "r",
+      name = "v",
+      desc = "(I)Lqy;"
+   )
    public class127 method2336() {
       try {
          return (class127)this.field3965.get();
@@ -31,10 +74,20 @@ public class class472 {
       }
    }
 
+   @ObfInfo(
+      owner = "r",
+      name = "x",
+      desc = "(B)V"
+   )
    void method2334() {
       this.field3965 = this.field3964.submit(new class338(this, this.field3966, this.field3967));
    }
 
+   @ObfInfo(
+      owner = "r",
+      name = "c",
+      desc = "(ILbm;ZI)I"
+   )
    static int method2335(int var0, class461 var1, boolean var2) {
       class120 var4 = class67.method299(class386.field3248[--class161.field1227]);
       if (var0 == 2600) {
@@ -174,11 +227,21 @@ public class class472 {
       }
    }
 
+   @ObfInfo(
+      owner = "r",
+      name = "ld",
+      desc = "(IS)V"
+   )
    static final void method2331(int var0) {
       var0 = Math.min(Math.max(var0, 0), 127);
       class50.field574.method2227(var0);
    }
 
+   @ObfInfo(
+      owner = "r",
+      name = "la",
+      desc = "(IIII)Lcx;"
+   )
    static final class415 method2332(int var0, int var1, int var2) {
       class415 var4 = new class415();
       var4.field3426 = var1;
@@ -201,6 +264,11 @@ public class class472 {
       return var4;
    }
 
+   @ObfInfo(
+      owner = "r",
+      name = "mi",
+      desc = "(I)V"
+   )
    static final void method2338() {
       class299 var1 = class480.method2370(class356.field3028, client.field279.field4042);
       var1.field2403.method544(0);

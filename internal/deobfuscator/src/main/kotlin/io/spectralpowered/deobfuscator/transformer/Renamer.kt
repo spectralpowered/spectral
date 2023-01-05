@@ -20,6 +20,7 @@ package io.spectralpowered.deobfuscator.transformer
 
 import io.spectralpowered.asm.ClassPool
 import io.spectralpowered.asm.identifier
+import io.spectralpowered.asm.isInitializer
 import io.spectralpowered.asm.owner
 import io.spectralpowered.asm.util.InheritanceGraph
 import io.spectralpowered.deobfuscator.Deobfuscator
@@ -57,8 +58,13 @@ class Renamer : Transformer() {
         pool.classes.forEach { cls ->
             cls.visibleAnnotations = listOf(createClassAnnotation(cls.name))
 
-            cls.methods.forEach { method ->
-                method.visibleAnnotations = listOf(createMemberAnnotation(method.owner.name, method.name, method.desc))
+            cls.methods.forEach methodLoop@ { method ->
+                if(method.isInitializer()) {
+                    method.visibleAnnotations = listOf()
+                    return@methodLoop
+                } else {
+                    method.visibleAnnotations = listOf(createMemberAnnotation(method.owner.name, method.name, method.desc))
+                }
             }
 
             cls.fields.forEach { field ->
@@ -110,7 +116,7 @@ class Renamer : Transformer() {
     }
 
     private fun createClassAnnotation(name: String): AnnotationNode {
-        val node = AnnotationNode(Type.getDescriptor(ObfInfo::class.java))
+        val node = AnnotationNode("LObfInfo;")
         node.values = listOf(
             "name", name
         )
@@ -118,7 +124,7 @@ class Renamer : Transformer() {
     }
 
     private fun createMemberAnnotation(owner: String, name: String, desc: String): AnnotationNode {
-        val node = AnnotationNode(Type.getDescriptor(ObfInfo::class.java))
+        val node = AnnotationNode("LObfInfo;")
         node.values = listOf(
             "owner", owner,
             "name", name,
@@ -128,7 +134,7 @@ class Renamer : Transformer() {
     }
 
     private fun createArgAnnotation(index: Int): AnnotationNode {
-        val node = AnnotationNode(Type.getDescriptor(ObfInfo::class.java))
+        val node = AnnotationNode("LObfInfo;")
         node.values = listOf(
             "arg", index
         )

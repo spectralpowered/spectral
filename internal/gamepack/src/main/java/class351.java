@@ -1,8 +1,31 @@
+@ObfInfo(
+   name = "ak"
+)
 public class class351 {
+   @ObfInfo(
+      owner = "ak",
+      name = "e",
+      desc = "[Lbp;"
+   )
    class231[] field2892 = new class231[10];
+   @ObfInfo(
+      owner = "ak",
+      name = "v",
+      desc = "I"
+   )
    int field2891;
+   @ObfInfo(
+      owner = "ak",
+      name = "x",
+      desc = "I"
+   )
    int field2893;
 
+   @ObfInfo(
+      owner = "ak",
+      name = "<init>",
+      desc = "(Lqy;)V"
+   )
    class351(class127 var1) {
       for(int var2 = 0; var2 < 10; ++var2) {
          int var3 = var1.method547();
@@ -17,11 +40,21 @@ public class class351 {
       this.field2893 = var1.method549();
    }
 
+   @ObfInfo(
+      owner = "ak",
+      name = "e",
+      desc = "()Laf;"
+   )
    public class82 method1768() {
       byte[] var1 = this.method1770();
       return new class82(22050, var1, this.field2891 * 22050 / 1000, this.field2893 * 22050 / 1000);
    }
 
+   @ObfInfo(
+      owner = "ak",
+      name = "v",
+      desc = "()I"
+   )
    public final int method1769() {
       int var1 = 9999999;
 
@@ -54,6 +87,11 @@ public class class351 {
       }
    }
 
+   @ObfInfo(
+      owner = "ak",
+      name = "x",
+      desc = "()[B"
+   )
    final byte[] method1770() {
       int var1 = 0;
 
@@ -91,6 +129,11 @@ public class class351 {
       }
    }
 
+   @ObfInfo(
+      owner = "ak",
+      name = "h",
+      desc = "(Lly;II)Lak;"
+   )
    public static class351 method1767(class274 var0, int var1, int var2) {
       byte[] var3 = var0.method1365(var1, var2);
       return var3 == null ? null : new class351(new class127(var3));

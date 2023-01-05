@@ -1,16 +1,44 @@
 import java.util.HashMap;
 
+@ObfInfo(
+   name = "pz"
+)
 public class class180 {
+   @ObfInfo(
+      owner = "pz",
+      name = "e",
+      desc = "Lly;"
+   )
    class274 field1659;
+   @ObfInfo(
+      owner = "pz",
+      name = "h",
+      desc = "Lly;"
+   )
    class274 field1660;
+   @ObfInfo(
+      owner = "pz",
+      name = "v",
+      desc = "Ljava/util/HashMap;"
+   )
    HashMap field1658;
 
+   @ObfInfo(
+      owner = "pz",
+      name = "<init>",
+      desc = "(Lly;Lly;)V"
+   )
    public class180(class274 var1, class274 var2) {
       this.field1660 = var1;
       this.field1659 = var2;
       this.field1658 = new HashMap();
    }
 
+   @ObfInfo(
+      owner = "pz",
+      name = "h",
+      desc = "([Lpt;I)Ljava/util/HashMap;"
+   )
    public HashMap method818(class460[] var1) {
       HashMap var3 = new HashMap();
       class460[] var4 = var1;

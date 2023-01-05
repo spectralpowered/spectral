@@ -1,10 +1,33 @@
+@ObfInfo(
+   name = "fz"
+)
 public abstract class class203 {
+   @ObfInfo(
+      owner = "fz",
+      name = "r",
+      desc = "Z"
+   )
    static boolean field1759;
 
+   @ObfInfo(
+      owner = "fz",
+      name = "e",
+      desc = "(III)I"
+   )
    public abstract int method890(int var1, int var2);
 
+   @ObfInfo(
+      owner = "fz",
+      name = "h",
+      desc = "(I)V"
+   )
    public abstract void method889();
 
+   @ObfInfo(
+      owner = "fz",
+      name = "h",
+      desc = "(IIILgg;Lgw;Z[I[II)I"
+   )
    public static int method891(int var0, int var1, int var2, class39 var3, class427 var4, boolean var5, int[] var6, int[] var7) {
       int var10;
       for(int var9 = 0; var9 < 128; ++var9) {
@@ -235,6 +258,11 @@ public abstract class class203 {
       }
    }
 
+   @ObfInfo(
+      owner = "fz",
+      name = "ma",
+      desc = "(Lkd;B)I"
+   )
    static int method892(class120 var0) {
       class245 var2 = (class245)client.field271.method791((long)var0.field895 + ((long)var0.field985 << 32));
       return null != var2 ? var2.field2057 : var0.field971;

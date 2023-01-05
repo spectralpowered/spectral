@@ -1,15 +1,63 @@
+@ObfInfo(
+   name = "gv"
+)
 public class class123 extends class195 {
+   @ObfInfo(
+      owner = "gv",
+      name = "du",
+      desc = "Z"
+   )
    static boolean field1061;
+   @ObfInfo(
+      owner = "gv",
+      name = "h",
+      desc = "Lly;"
+   )
    static class274 field1060;
+   @ObfInfo(
+      owner = "gv",
+      name = "e",
+      desc = "Ljv;"
+   )
    static class99 field1056 = new class99(64);
+   @ObfInfo(
+      owner = "gv",
+      name = "q",
+      desc = "Z"
+   )
    boolean field1058 = true;
+   @ObfInfo(
+      owner = "gv",
+      name = "v",
+      desc = "C"
+   )
    char field1055;
+   @ObfInfo(
+      owner = "gv",
+      name = "x",
+      desc = "I"
+   )
    public int field1059;
+   @ObfInfo(
+      owner = "gv",
+      name = "m",
+      desc = "Ljava/lang/String;"
+   )
    public String field1057;
 
+   @ObfInfo(
+      owner = "gv",
+      name = "v",
+      desc = "(B)V"
+   )
    void method525() {
    }
 
+   @ObfInfo(
+      owner = "gv",
+      name = "x",
+      desc = "(Lqy;B)V"
+   )
    void method522(class127 var1) {
       while(true) {
          int var3 = var1.method547();
@@ -21,6 +69,11 @@ public class class123 extends class195 {
       }
    }
 
+   @ObfInfo(
+      owner = "gv",
+      name = "m",
+      desc = "(Lqy;II)V"
+   )
    void method523(class127 var1, int var2) {
       if (var2 == 1) {
          byte var5 = var1.method548();
@@ -50,10 +103,20 @@ public class class123 extends class195 {
 
    }
 
+   @ObfInfo(
+      owner = "gv",
+      name = "q",
+      desc = "(I)Z"
+   )
    public boolean method524() {
       return this.field1055 == 's';
    }
 
+   @ObfInfo(
+      owner = "gv",
+      name = "ar",
+      desc = "(ILbm;ZI)I"
+   )
    static int method526(int var0, class461 var1, boolean var2) {
       int var4;
       int var5;

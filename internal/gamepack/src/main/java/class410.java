@@ -1,8 +1,26 @@
+@ObfInfo(
+   name = "ei"
+)
 public abstract class class410 extends class139 {
+   @ObfInfo(
+      owner = "ei",
+      name = "h",
+      desc = "(Lqy;I)V"
+   )
    abstract void method2007(class127 var1);
 
+   @ObfInfo(
+      owner = "ei",
+      name = "e",
+      desc = "(Lfn;I)V"
+   )
    abstract void method2008(class57 var1);
 
+   @ObfInfo(
+      owner = "ei",
+      name = "hn",
+      desc = "(Ljava/lang/String;I)V"
+   )
    static final void method2009(String var0) {
       if (var0.equalsIgnoreCase("toggleroof")) {
          class50.field574.method2229(!class50.field574.method2202());

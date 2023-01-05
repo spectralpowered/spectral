@@ -1,18 +1,91 @@
+@ObfInfo(
+   name = "ci"
+)
 public class class268 {
+   @ObfInfo(
+      owner = "ci",
+      name = "v",
+      desc = "[B"
+   )
    static byte[] field2217 = new byte[2048];
+   @ObfInfo(
+      owner = "ci",
+      name = "n",
+      desc = "Lqy;"
+   )
    static class127 field2228 = new class127(new byte[5000]);
+   @ObfInfo(
+      owner = "ci",
+      name = "m",
+      desc = "[Lqy;"
+   )
    static class127[] field2218 = new class127[2048];
+   @ObfInfo(
+      owner = "ci",
+      name = "x",
+      desc = "[Lgs;"
+   )
    static class294[] field2225 = new class294[2048];
+   @ObfInfo(
+      owner = "ci",
+      name = "r",
+      desc = "I"
+   )
    static int field2216 = 0;
+   @ObfInfo(
+      owner = "ci",
+      name = "q",
+      desc = "I"
+   )
    static int field2221 = 0;
+   @ObfInfo(
+      owner = "ci",
+      name = "i",
+      desc = "I"
+   )
    static int field2223 = 0;
+   @ObfInfo(
+      owner = "ci",
+      name = "b",
+      desc = "[I"
+   )
    static int[] field2219 = new int[2048];
+   @ObfInfo(
+      owner = "ci",
+      name = "f",
+      desc = "[I"
+   )
    static int[] field2220 = new int[2048];
+   @ObfInfo(
+      owner = "ci",
+      name = "u",
+      desc = "[I"
+   )
    static int[] field2222 = new int[2048];
+   @ObfInfo(
+      owner = "ci",
+      name = "j",
+      desc = "[I"
+   )
    static int[] field2224 = new int[2048];
+   @ObfInfo(
+      owner = "ci",
+      name = "g",
+      desc = "[I"
+   )
    static int[] field2226 = new int[2048];
+   @ObfInfo(
+      owner = "ci",
+      name = "o",
+      desc = "[I"
+   )
    static int[] field2227 = new int[2048];
 
+   @ObfInfo(
+      owner = "ci",
+      name = "x",
+      desc = "(II)Z"
+   )
    public static boolean method1275(int var0) {
       if (class476.field4009[var0]) {
          return true;

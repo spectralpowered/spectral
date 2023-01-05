@@ -1,8 +1,31 @@
+@ObfInfo(
+   name = "kq"
+)
 public class class364 {
+   @ObfInfo(
+      owner = "kq",
+      name = "e",
+      desc = "[B"
+   )
    byte[] field3090;
+   @ObfInfo(
+      owner = "kq",
+      name = "h",
+      desc = "[I"
+   )
    int[] field3091;
+   @ObfInfo(
+      owner = "kq",
+      name = "v",
+      desc = "[I"
+   )
    int[] field3092;
 
+   @ObfInfo(
+      owner = "kq",
+      name = "<init>",
+      desc = "([B)V"
+   )
    public class364(byte[] var1) {
       int var2 = var1.length;
       this.field3091 = new int[var2];
@@ -86,6 +109,11 @@ public class class364 {
 
    }
 
+   @ObfInfo(
+      owner = "kq",
+      name = "h",
+      desc = "([BII[BIB)I"
+   )
    int method1808(byte[] var1, int var2, int var3, byte[] var4, int var5) {
       int var7 = 0;
       int var8 = var5 << 3;
@@ -131,6 +159,11 @@ public class class364 {
       return (var8 + 7 >> 3) - var5;
    }
 
+   @ObfInfo(
+      owner = "kq",
+      name = "e",
+      desc = "([BI[BIII)I"
+   )
    int method1809(byte[] var1, int var2, byte[] var3, int var4, int var5) {
       if (var5 == 0) {
          return 0;
@@ -269,6 +302,11 @@ public class class364 {
       }
    }
 
+   @ObfInfo(
+      owner = "kq",
+      name = "f",
+      desc = "(IZS)Ljava/lang/String;"
+   )
    public static String method1810(int var0, boolean var1) {
       return var1 && var0 >= 0 ? class120.method511(var0, 10, var1) : Integer.toString(var0);
    }

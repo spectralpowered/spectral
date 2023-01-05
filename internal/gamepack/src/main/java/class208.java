@@ -1,33 +1,171 @@
 import java.lang.management.GarbageCollectorMXBean;
 
+@ObfInfo(
+   name = "bj"
+)
 public final class class208 extends class295 {
+   @ObfInfo(
+      owner = "bj",
+      name = "aq",
+      desc = "Ljava/lang/management/GarbageCollectorMXBean;"
+   )
    static GarbageCollectorMXBean field1814;
+   @ObfInfo(
+      owner = "bj",
+      name = "g",
+      desc = "Z"
+   )
    boolean field1798 = false;
+   @ObfInfo(
+      owner = "bj",
+      name = "d",
+      desc = "Lga;"
+   )
    class242 field1811;
+   @ObfInfo(
+      owner = "bj",
+      name = "s",
+      desc = "D"
+   )
    double field1793;
+   @ObfInfo(
+      owner = "bj",
+      name = "n",
+      desc = "D"
+   )
    double field1797;
+   @ObfInfo(
+      owner = "bj",
+      name = "i",
+      desc = "D"
+   )
    double field1801;
+   @ObfInfo(
+      owner = "bj",
+      name = "o",
+      desc = "D"
+   )
    double field1802;
+   @ObfInfo(
+      owner = "bj",
+      name = "k",
+      desc = "D"
+   )
    double field1804;
+   @ObfInfo(
+      owner = "bj",
+      name = "a",
+      desc = "D"
+   )
    double field1805;
+   @ObfInfo(
+      owner = "bj",
+      name = "l",
+      desc = "D"
+   )
    double field1807;
+   @ObfInfo(
+      owner = "bj",
+      name = "t",
+      desc = "D"
+   )
    double field1808;
+   @ObfInfo(
+      owner = "bj",
+      name = "b",
+      desc = "I"
+   )
    int field1789;
+   @ObfInfo(
+      owner = "bj",
+      name = "q",
+      desc = "I"
+   )
    int field1790;
+   @ObfInfo(
+      owner = "bj",
+      name = "v",
+      desc = "I"
+   )
    int field1791;
+   @ObfInfo(
+      owner = "bj",
+      name = "x",
+      desc = "I"
+   )
    int field1792;
+   @ObfInfo(
+      owner = "bj",
+      name = "m",
+      desc = "I"
+   )
    int field1794;
+   @ObfInfo(
+      owner = "bj",
+      name = "y",
+      desc = "I"
+   )
    int field1795 = 0;
+   @ObfInfo(
+      owner = "bj",
+      name = "r",
+      desc = "I"
+   )
    int field1796;
+   @ObfInfo(
+      owner = "bj",
+      name = "j",
+      desc = "I"
+   )
    int field1799;
+   @ObfInfo(
+      owner = "bj",
+      name = "f",
+      desc = "I"
+   )
    int field1800;
+   @ObfInfo(
+      owner = "bj",
+      name = "h",
+      desc = "I"
+   )
    int field1803;
+   @ObfInfo(
+      owner = "bj",
+      name = "u",
+      desc = "I"
+   )
    int field1806;
+   @ObfInfo(
+      owner = "bj",
+      name = "c",
+      desc = "I"
+   )
    int field1809;
+   @ObfInfo(
+      owner = "bj",
+      name = "p",
+      desc = "I"
+   )
    int field1810;
+   @ObfInfo(
+      owner = "bj",
+      name = "e",
+      desc = "I"
+   )
    int field1812;
+   @ObfInfo(
+      owner = "bj",
+      name = "z",
+      desc = "I"
+   )
    int field1813 = 0;
 
+   @ObfInfo(
+      owner = "bj",
+      name = "<init>",
+      desc = "(IIIIIIIIIII)V"
+   )
    class208(int var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8, int var9, int var10, int var11) {
       this.field1803 = var1;
       this.field1812 = var2;
@@ -50,6 +188,11 @@ public final class class208 extends class295 {
 
    }
 
+   @ObfInfo(
+      owner = "bj",
+      name = "h",
+      desc = "(IIIII)V"
+   )
    final void method901(int var1, int var2, int var3, int var4) {
       double var6;
       if (!this.field1798) {
@@ -72,6 +215,11 @@ public final class class208 extends class295 {
       this.field1808 = 2.0D * ((double)var3 - this.field1797 - var6 * this.field1807) / (var6 * var6);
    }
 
+   @ObfInfo(
+      owner = "bj",
+      name = "m",
+      desc = "(II)V"
+   )
    final void method902(int var1) {
       this.field1798 = true;
       this.field1801 += (double)var1 * this.field1804;
@@ -111,6 +259,11 @@ public final class class208 extends class295 {
 
    }
 
+   @ObfInfo(
+      owner = "bj",
+      name = "e",
+      desc = "(I)Lhh;"
+   )
    protected final class470 method1438() {
       class327 var2 = class429.method2119(this.field1803);
       class470 var3 = var2.method1663(this.field1795);
@@ -122,10 +275,20 @@ public final class class208 extends class295 {
       }
    }
 
+   @ObfInfo(
+      owner = "bj",
+      name = "q",
+      desc = "(IB)I"
+   )
    public static int method905(int var0) {
       return class174.method803(class105.field814[var0]);
    }
 
+   @ObfInfo(
+      owner = "bj",
+      name = "m",
+      desc = "(Lly;Ljava/lang/String;Ljava/lang/String;I)Lra;"
+   )
    public static class344 method906(class274 var0, String var1, String var2) {
       int var4 = var0.method1356(var1);
       int var5 = var0.method1359(var4, var2);
@@ -163,6 +326,11 @@ public final class class208 extends class295 {
       return var6;
    }
 
+   @ObfInfo(
+      owner = "bj",
+      name = "hb",
+      desc = "(IIIII)V"
+   )
    static final void method904(int var0, int var1, int var2, int var3) {
       ++client.field329;
       class375.method1851();

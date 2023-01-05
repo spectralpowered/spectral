@@ -1,9 +1,22 @@
 import java.io.File;
 import java.io.RandomAccessFile;
 
+@ObfInfo(
+   name = "kf"
+)
 public class class328 {
+   @ObfInfo(
+      owner = "kf",
+      name = "f",
+      desc = "Lly;"
+   )
    static class274 field2595;
 
+   @ObfInfo(
+      owner = "kf",
+      name = "e",
+      desc = "(Ljava/lang/String;I)Ljava/io/File;"
+   )
    public static File method1668(String var0) {
       if (!class229.field1936) {
          throw new RuntimeException("");
@@ -45,6 +58,11 @@ public class class328 {
       }
    }
 
+   @ObfInfo(
+      owner = "kf",
+      name = "lj",
+      desc = "(Lkd;I)Lkd;"
+   )
    static class120 method1669(class120 var0) {
       class120 var3 = var0;
       int var5 = class203.method892(var0);

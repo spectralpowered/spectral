@@ -1,22 +1,60 @@
+@ObfInfo(
+   name = "fc"
+)
 public class class97 extends class480 {
+   @ObfInfo(
+      owner = "fc",
+      name = "h",
+      desc = "I"
+   )
    int field785;
+   @ObfInfo(
+      owner = "fc",
+      name = "e",
+      desc = "J"
+   )
    long field784;
    // $FF: synthetic field
+   @ObfInfo(
+      owner = "fc",
+      name = "this$0",
+      desc = "Lem;"
+   )
    final class182 this$0;
 
+   @ObfInfo(
+      owner = "fc",
+      name = "<init>",
+      desc = "(Lem;)V"
+   )
    class97(class182 var1) {
       this.this$0 = var1;
    }
 
+   @ObfInfo(
+      owner = "fc",
+      name = "h",
+      desc = "(Lqy;I)V"
+   )
    void method2367(class127 var1) {
       this.field785 = var1.method595();
       this.field784 = var1.method598();
    }
 
+   @ObfInfo(
+      owner = "fc",
+      name = "e",
+      desc = "(Lep;I)V"
+   )
    void method2368(class429 var1) {
       var1.method2112(this.field785, this.field784);
    }
 
+   @ObfInfo(
+      owner = "fc",
+      name = "m",
+      desc = "(Lqx;II)V"
+   )
    static void method392(class6 var0, int var1) {
       boolean var3 = var0.method35(1) == 1;
       if (var3) {

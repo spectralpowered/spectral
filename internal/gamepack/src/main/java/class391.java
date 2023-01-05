@@ -5,105 +5,243 @@ import javax.net.ssl.SSLSession;
 import javax.net.ssl.SSLSessionContext;
 import javax.security.cert.X509Certificate;
 
+@ObfInfo(
+   name = "s"
+)
 class class391 implements SSLSession {
+   @ObfInfo(
+      owner = "s",
+      name = "hw",
+      desc = "I"
+   )
    static int field3279;
+   @ObfInfo(
+      owner = "s",
+      name = "ge",
+      desc = "Ljava/lang/String;"
+   )
    static String field3280;
    // $FF: synthetic field
+   @ObfInfo(
+      owner = "s",
+      name = "this$1",
+      desc = "Li;"
+   )
    final class286 this$1;
 
+   @ObfInfo(
+      owner = "s",
+      name = "<init>",
+      desc = "(Li;)V"
+   )
    class391(class286 var1) {
       this.this$1 = var1;
    }
 
+   @ObfInfo(
+      owner = "s",
+      name = "getApplicationBufferSize",
+      desc = "()I"
+   )
    public int getApplicationBufferSize() {
       return 0;
    }
 
+   @ObfInfo(
+      owner = "s",
+      name = "getCipherSuite",
+      desc = "()Ljava/lang/String;"
+   )
    public String getCipherSuite() {
       throw new UnsupportedOperationException();
    }
 
+   @ObfInfo(
+      owner = "s",
+      name = "getCreationTime",
+      desc = "()J"
+   )
    public long getCreationTime() {
       throw new UnsupportedOperationException();
    }
 
+   @ObfInfo(
+      owner = "s",
+      name = "getId",
+      desc = "()[B"
+   )
    public byte[] getId() {
       throw new UnsupportedOperationException();
    }
 
+   @ObfInfo(
+      owner = "s",
+      name = "getLastAccessedTime",
+      desc = "()J"
+   )
    public long getLastAccessedTime() {
       throw new UnsupportedOperationException();
    }
 
+   @ObfInfo(
+      owner = "s",
+      name = "getLocalCertificates",
+      desc = "()[Ljava/security/cert/Certificate;"
+   )
    public Certificate[] getLocalCertificates() {
       throw new UnsupportedOperationException();
    }
 
+   @ObfInfo(
+      owner = "s",
+      name = "getLocalPrincipal",
+      desc = "()Ljava/security/Principal;"
+   )
    public Principal getLocalPrincipal() {
       throw new UnsupportedOperationException();
    }
 
+   @ObfInfo(
+      owner = "s",
+      name = "getPacketBufferSize",
+      desc = "()I"
+   )
    public int getPacketBufferSize() {
       throw new UnsupportedOperationException();
    }
 
+   @ObfInfo(
+      owner = "s",
+      name = "getPeerCertificateChain",
+      desc = "()[Ljavax/security/cert/X509Certificate;"
+   )
    public X509Certificate[] getPeerCertificateChain() throws SSLPeerUnverifiedException {
       return null;
    }
 
+   @ObfInfo(
+      owner = "s",
+      name = "getPeerCertificates",
+      desc = "()[Ljava/security/cert/Certificate;"
+   )
    public Certificate[] getPeerCertificates() throws SSLPeerUnverifiedException {
       return this.this$1.field2365;
    }
 
+   @ObfInfo(
+      owner = "s",
+      name = "getPeerHost",
+      desc = "()Ljava/lang/String;"
+   )
    public String getPeerHost() {
       throw new UnsupportedOperationException();
    }
 
+   @ObfInfo(
+      owner = "s",
+      name = "getPeerPort",
+      desc = "()I"
+   )
    public int getPeerPort() {
       return 0;
    }
 
+   @ObfInfo(
+      owner = "s",
+      name = "getPeerPrincipal",
+      desc = "()Ljava/security/Principal;"
+   )
    public Principal getPeerPrincipal() throws SSLPeerUnverifiedException {
       return null;
    }
 
+   @ObfInfo(
+      owner = "s",
+      name = "getProtocol",
+      desc = "()Ljava/lang/String;"
+   )
    public String getProtocol() {
       throw new UnsupportedOperationException();
    }
 
+   @ObfInfo(
+      owner = "s",
+      name = "getSessionContext",
+      desc = "()Ljavax/net/ssl/SSLSessionContext;"
+   )
    public SSLSessionContext getSessionContext() {
       throw new UnsupportedOperationException();
    }
 
+   @ObfInfo(
+      owner = "s",
+      name = "getValue",
+      desc = "(Ljava/lang/String;)Ljava/lang/Object;"
+   )
    public Object getValue(String var1) {
       throw new UnsupportedOperationException();
    }
 
+   @ObfInfo(
+      owner = "s",
+      name = "getValueNames",
+      desc = "()[Ljava/lang/String;"
+   )
    public String[] getValueNames() {
       throw new UnsupportedOperationException();
    }
 
+   @ObfInfo(
+      owner = "s",
+      name = "invalidate",
+      desc = "()V"
+   )
    public void invalidate() {
       throw new UnsupportedOperationException();
    }
 
+   @ObfInfo(
+      owner = "s",
+      name = "isValid",
+      desc = "()Z"
+   )
    public boolean isValid() {
       throw new UnsupportedOperationException();
    }
 
+   @ObfInfo(
+      owner = "s",
+      name = "putValue",
+      desc = "(Ljava/lang/String;Ljava/lang/Object;)V"
+   )
    public void putValue(String var1, Object var2) {
       throw new UnsupportedOperationException();
    }
 
+   @ObfInfo(
+      owner = "s",
+      name = "removeValue",
+      desc = "(Ljava/lang/String;)V"
+   )
    public void removeValue(String var1) {
       throw new UnsupportedOperationException();
    }
 
+   @ObfInfo(
+      owner = "s",
+      name = "u",
+      desc = "(S)V"
+   )
    public static final void method1916() {
       class105.field809 = false;
       class105.field816 = 0;
    }
 
+   @ObfInfo(
+      owner = "s",
+      name = "kl",
+      desc = "(IIIII)V"
+   )
    static final void method1915(int var0, int var1, int var2, int var3) {
       if (0 == client.field386 && !client.field388) {
          class156.method721(class177.field1491, "", 23, 0, var0 - var2, var1 - var3);

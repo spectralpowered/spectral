@@ -1,18 +1,61 @@
 import java.security.SecureRandom;
 
+@ObfInfo(
+   name = "ay"
+)
 public class class189 {
+   @ObfInfo(
+      owner = "ay",
+      name = "u",
+      desc = "I"
+   )
    public static int field1707;
+   @ObfInfo(
+      owner = "ay",
+      name = "qv",
+      desc = "Lqk;"
+   )
    static class449 field1706;
+   @ObfInfo(
+      owner = "ay",
+      name = "te",
+      desc = "I"
+   )
    static int field1709;
+   @ObfInfo(
+      owner = "ay",
+      name = "ga",
+      desc = "Ljava/security/SecureRandom;"
+   )
    static SecureRandom field1708;
+   @ObfInfo(
+      owner = "ay",
+      name = "f",
+      desc = "I"
+   )
    int field1704;
+   @ObfInfo(
+      owner = "ay",
+      name = "r",
+      desc = "I"
+   )
    int field1705;
 
+   @ObfInfo(
+      owner = "ay",
+      name = "<init>",
+      desc = "(II)V"
+   )
    class189(int var1, int var2) {
       this.field1704 = var1;
       this.field1705 = var2;
    }
 
+   @ObfInfo(
+      owner = "ay",
+      name = "h",
+      desc = "(Lav;I)Z"
+   )
    boolean method853(class310 var1) {
       if (null == var1) {
          return false;
@@ -32,6 +75,11 @@ public class class189 {
       }
    }
 
+   @ObfInfo(
+      owner = "ay",
+      name = "x",
+      desc = "(II)Ldz;"
+   )
    static class453 method856(int var0) {
       class453 var2 = (class453)class2.method10(class475.method2355(), var0);
       if (var2 == null) {
@@ -41,15 +89,30 @@ public class class189 {
       return var2;
    }
 
+   @ObfInfo(
+      owner = "ay",
+      name = "j",
+      desc = "(S)V"
+   )
    public static void method855() {
       class284.field2354.method395();
    }
 
+   @ObfInfo(
+      owner = "ay",
+      name = "fj",
+      desc = "(I)V"
+   )
    static final void method852() {
       class318.field2525 = false;
       client.field274 = false;
    }
 
+   @ObfInfo(
+      owner = "ay",
+      name = "km",
+      desc = "(II)Ljava/lang/String;"
+   )
    static String method857(int var0) {
       if (var0 < 0) {
          return "";
@@ -58,6 +121,11 @@ public class class189 {
       }
    }
 
+   @ObfInfo(
+      owner = "ay",
+      name = "kv",
+      desc = "([Lkd;IIIIIIIIB)V"
+   )
    static final void method854(class120[] var0, int var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8) {
       class162.method742(var2, var3, var4, var5);
       class341.method1709();

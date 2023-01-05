@@ -1,12 +1,40 @@
+@ObfInfo(
+   name = "ih"
+)
 public class class393 {
+   @ObfInfo(
+      owner = "ih",
+      name = "nt",
+      desc = "Lkd;"
+   )
    static class120 field3284;
+   @ObfInfo(
+      owner = "ih",
+      name = "e",
+      desc = "[[[B"
+   )
    byte[][][] field3283;
+   @ObfInfo(
+      owner = "ih",
+      name = "h",
+      desc = "I"
+   )
    int field3282;
 
+   @ObfInfo(
+      owner = "ih",
+      name = "<init>",
+      desc = "(I)V"
+   )
    class393(int var1) {
       this.field3282 = var1;
    }
 
+   @ObfInfo(
+      owner = "ih",
+      name = "h",
+      desc = "(IIIIIIIII)V"
+   )
    void method1919(int var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8) {
       if (var7 != 0 && this.field3282 != 0 && null != this.field3283) {
          var8 = this.method1920(var8, var7);
@@ -15,6 +43,11 @@ public class class393 {
       }
    }
 
+   @ObfInfo(
+      owner = "ih",
+      name = "e",
+      desc = "(III)I"
+   )
    int method1920(int var1, int var2) {
       if (var2 == 9) {
          var1 = var1 + 1 & 3;
@@ -31,6 +64,11 @@ public class class393 {
       return var1;
    }
 
+   @ObfInfo(
+      owner = "ih",
+      name = "v",
+      desc = "(II)I"
+   )
    int method1927(int var1) {
       if (var1 != 9 && var1 != 10) {
          return var1 == 11 ? 8 : var1;
@@ -39,6 +77,11 @@ public class class393 {
       }
    }
 
+   @ObfInfo(
+      owner = "ih",
+      name = "x",
+      desc = "(I)V"
+   )
    void method1921() {
       if (null == this.field3283) {
          this.field3283 = new byte[8][4][];
@@ -53,6 +96,11 @@ public class class393 {
       }
    }
 
+   @ObfInfo(
+      owner = "ih",
+      name = "m",
+      desc = "(I)V"
+   )
    void method1926() {
       byte[] var2 = new byte[this.field3282 * this.field3282];
       int var3 = 0;
@@ -114,6 +162,11 @@ public class class393 {
       this.field3283[0][3] = var2;
    }
 
+   @ObfInfo(
+      owner = "ih",
+      name = "q",
+      desc = "(I)V"
+   )
    void method1922() {
       byte[] var2 = new byte[this.field3282 * this.field3282];
       int var3 = 0;
@@ -179,6 +232,11 @@ public class class393 {
       this.field3283[1][3] = var2;
    }
 
+   @ObfInfo(
+      owner = "ih",
+      name = "f",
+      desc = "(I)V"
+   )
    void method1930() {
       byte[] var2 = new byte[this.field3282 * this.field3282];
       int var3 = 0;
@@ -240,6 +298,11 @@ public class class393 {
       this.field3283[2][3] = var2;
    }
 
+   @ObfInfo(
+      owner = "ih",
+      name = "r",
+      desc = "(I)V"
+   )
    void method1925() {
       byte[] var2 = new byte[this.field3282 * this.field3282];
       int var3 = 0;
@@ -301,6 +364,11 @@ public class class393 {
       this.field3283[3][3] = var2;
    }
 
+   @ObfInfo(
+      owner = "ih",
+      name = "u",
+      desc = "(B)V"
+   )
    void method1928() {
       byte[] var2 = new byte[this.field3282 * this.field3282];
       int var3 = 0;
@@ -362,6 +430,11 @@ public class class393 {
       this.field3283[4][3] = var2;
    }
 
+   @ObfInfo(
+      owner = "ih",
+      name = "b",
+      desc = "(I)V"
+   )
    void method1929() {
       byte[] var2 = new byte[this.field3282 * this.field3282];
       boolean var3 = false;
@@ -425,6 +498,11 @@ public class class393 {
       this.field3283[5][3] = var2;
    }
 
+   @ObfInfo(
+      owner = "ih",
+      name = "j",
+      desc = "(I)V"
+   )
    void method1923() {
       byte[] var2 = new byte[this.field3282 * this.field3282];
       boolean var3 = false;
@@ -488,6 +566,11 @@ public class class393 {
       this.field3283[6][3] = var2;
    }
 
+   @ObfInfo(
+      owner = "ih",
+      name = "g",
+      desc = "(I)V"
+   )
    void method1924() {
       byte[] var2 = new byte[this.field3282 * this.field3282];
       boolean var3 = false;

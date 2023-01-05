@@ -1,14 +1,52 @@
+@ObfInfo(
+   name = "jj"
+)
 public final class class111 {
+   @ObfInfo(
+      owner = "jj",
+      name = "m",
+      desc = "Ljq;"
+   )
    class163 field832;
+   @ObfInfo(
+      owner = "jj",
+      name = "v",
+      desc = "Lql;"
+   )
    class385 field830;
+   @ObfInfo(
+      owner = "jj",
+      name = "x",
+      desc = "Lmm;"
+   )
    class477 field828;
+   @ObfInfo(
+      owner = "jj",
+      name = "h",
+      desc = "I"
+   )
    int field829;
+   @ObfInfo(
+      owner = "jj",
+      name = "e",
+      desc = "I"
+   )
    int field831;
 
+   @ObfInfo(
+      owner = "jj",
+      name = "<init>",
+      desc = "(I)V"
+   )
    public class111(int var1) {
       this(var1, var1);
    }
 
+   @ObfInfo(
+      owner = "jj",
+      name = "<init>",
+      desc = "(II)V"
+   )
    public class111(int var1, int var2) {
       this.field828 = new class477();
       this.field829 = var1;
@@ -22,6 +60,11 @@ public final class class111 {
       this.field830 = new class385(var3);
    }
 
+   @ObfInfo(
+      owner = "jj",
+      name = "h",
+      desc = "(J)Ljava/lang/Object;"
+   )
    public Object method441(long var1) {
       class88 var3 = (class88)this.field830.method1897(var1);
       if (var3 == null) {
@@ -51,11 +94,21 @@ public final class class111 {
       }
    }
 
+   @ObfInfo(
+      owner = "jj",
+      name = "e",
+      desc = "(J)V"
+   )
    void method446(long var1) {
       class88 var3 = (class88)this.field830.method1897(var1);
       this.method442(var3);
    }
 
+   @ObfInfo(
+      owner = "jj",
+      name = "v",
+      desc = "(Ljd;)V"
+   )
    void method442(class88 var1) {
       if (var1 != null) {
          var1.method637();
@@ -65,10 +118,20 @@ public final class class111 {
 
    }
 
+   @ObfInfo(
+      owner = "jj",
+      name = "x",
+      desc = "(Ljava/lang/Object;J)V"
+   )
    public void method443(Object var1, long var2) {
       this.method444(var1, var2, 1);
    }
 
+   @ObfInfo(
+      owner = "jj",
+      name = "m",
+      desc = "(Ljava/lang/Object;JI)V"
+   )
    public void method444(Object var1, long var2, int var4) {
       if (var4 > this.field829) {
          throw new IllegalStateException();
@@ -99,6 +162,11 @@ public final class class111 {
       }
    }
 
+   @ObfInfo(
+      owner = "jj",
+      name = "q",
+      desc = "(I)V"
+   )
    public void method445(int var1) {
       for(class88 var2 = (class88)this.field828.method2362(); var2 != null; var2 = (class88)this.field828.method2365()) {
          if (var2.method376()) {
@@ -118,6 +186,11 @@ public final class class111 {
 
    }
 
+   @ObfInfo(
+      owner = "jj",
+      name = "f",
+      desc = "()V"
+   )
    public void method440() {
       this.field828.method2359();
       this.field830.method1894();

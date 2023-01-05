@@ -1,10 +1,43 @@
+@ObfInfo(
+   name = "fi"
+)
 public class class85 extends class195 {
+   @ObfInfo(
+      owner = "fi",
+      name = "h",
+      desc = "Lly;"
+   )
    public static class274 field699;
+   @ObfInfo(
+      owner = "fi",
+      name = "e",
+      desc = "I"
+   )
    public static int field701;
+   @ObfInfo(
+      owner = "fi",
+      name = "el",
+      desc = "Lln;"
+   )
    static class38 field702;
+   @ObfInfo(
+      owner = "fi",
+      name = "v",
+      desc = "Ljv;"
+   )
    static class99 field700 = new class99(64);
+   @ObfInfo(
+      owner = "fi",
+      name = "x",
+      desc = "I"
+   )
    public int field698 = 0;
 
+   @ObfInfo(
+      owner = "fi",
+      name = "e",
+      desc = "(Lqy;B)V"
+   )
    void method353(class127 var1) {
       while(true) {
          int var3 = var1.method547();
@@ -16,6 +49,11 @@ public class class85 extends class195 {
       }
    }
 
+   @ObfInfo(
+      owner = "fi",
+      name = "v",
+      desc = "(Lqy;II)V"
+   )
    void method357(class127 var1, int var2) {
       if (var2 == 5) {
          this.field698 = var1.method549();
@@ -23,6 +61,11 @@ public class class85 extends class195 {
 
    }
 
+   @ObfInfo(
+      owner = "fi",
+      name = "e",
+      desc = "(II)Lgn;"
+   )
    public static class87 method356(int var0) {
       class87 var2 = (class87)class87.field707.method394((long)var0);
       if (null != var2) {
@@ -46,6 +89,11 @@ public class class85 extends class195 {
       }
    }
 
+   @ObfInfo(
+      owner = "fi",
+      name = "u",
+      desc = "([BI)V"
+   )
    public static void method354(byte[] var0) {
       class127 var2 = new class127(var0);
       var2.field1070 = var0.length - 2;
@@ -112,6 +160,11 @@ public class class85 extends class195 {
 
    }
 
+   @ObfInfo(
+      owner = "fi",
+      name = "v",
+      desc = "(Lln;IIIBZB)V"
+   )
    static void method352(class38 var0, int var1, int var2, int var3, byte var4, boolean var5) {
       long var7 = (long)(var2 + (var1 << 16));
       class363 var9 = (class363)class462.field3837.method791(var7);
@@ -153,6 +206,11 @@ public class class85 extends class195 {
       }
    }
 
+   @ObfInfo(
+      owner = "fi",
+      name = "mv",
+      desc = "(II)V"
+   )
    static void method355(int var0) {
       for(class245 var2 = (class245)client.field271.method789(); null != var2; var2 = (class245)client.field271.method790()) {
          if ((var2.field1134 >> 48 & 65535L) == (long)var0) {

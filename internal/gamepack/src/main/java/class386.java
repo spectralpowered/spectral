@@ -1,27 +1,115 @@
 import java.util.ArrayList;
 import java.util.Calendar;
 
+@ObfInfo(
+   name = "bq"
+)
 public class class386 {
+   @ObfInfo(
+      owner = "bq",
+      name = "p",
+      desc = "Z"
+   )
    static boolean field3253 = false;
+   @ObfInfo(
+      owner = "bq",
+      name = "d",
+      desc = "Z"
+   )
    static boolean field3256 = false;
+   @ObfInfo(
+      owner = "bq",
+      name = "i",
+      desc = "[Lbl;"
+   )
    static class241[] field3252 = new class241[50];
+   @ObfInfo(
+      owner = "bq",
+      name = "j",
+      desc = "I"
+   )
    static int field3250;
+   @ObfInfo(
+      owner = "bq",
+      name = "g",
+      desc = "I"
+   )
    static int field3251 = 0;
+   @ObfInfo(
+      owner = "bq",
+      name = "z",
+      desc = "I"
+   )
    static int field3259 = 0;
+   @ObfInfo(
+      owner = "bq",
+      name = "q",
+      desc = "[I"
+   )
    static int[] field3246 = new int[5];
+   @ObfInfo(
+      owner = "bq",
+      name = "r",
+      desc = "[I"
+   )
    static int[] field3248 = new int[1000];
+   @ObfInfo(
+      owner = "bq",
+      name = "x",
+      desc = "[I"
+   )
    static int[] field3257;
+   @ObfInfo(
+      owner = "bq",
+      name = "f",
+      desc = "[[I"
+   )
    static int[][] field3247 = new int[5][5000];
+   @ObfInfo(
+      owner = "bq",
+      name = "b",
+      desc = "[Ljava/lang/String;"
+   )
    static String[] field3249 = new String[1000];
+   @ObfInfo(
+      owner = "bq",
+      name = "y",
+      desc = "Ljava/util/ArrayList;"
+   )
    static ArrayList field3255 = new ArrayList();
+   @ObfInfo(
+      owner = "bq",
+      name = "l",
+      desc = "Ljava/util/Calendar;"
+   )
    static Calendar field3245 = Calendar.getInstance();
+   @ObfInfo(
+      owner = "bq",
+      name = "ao",
+      desc = "D"
+   )
    static final double field3258 = Math.log(2.0D);
+   @ObfInfo(
+      owner = "bq",
+      name = "t",
+      desc = "[Ljava/lang/String;"
+   )
    static final String[] field3254 = new String[]{"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
 
+   @ObfInfo(
+      owner = "bq",
+      name = "h",
+      desc = "(Lkq;S)V"
+   )
    public static void method1899(class364 var0) {
       class243.field2052 = var0;
    }
 
+   @ObfInfo(
+      owner = "bq",
+      name = "h",
+      desc = "(III)I"
+   )
    static int method1901(int var0, int var1) {
       class179 var4 = (class179)class179.field1647.method394((long)var0);
       class179 var3;
@@ -74,6 +162,11 @@ public class class386 {
       }
    }
 
+   @ObfInfo(
+      owner = "bq",
+      name = "kf",
+      desc = "(IIIIII)V"
+   )
    static final void method1900(int var0, int var1, int var2, int var3, int var4) {
       class306.field2458[0].method1745(var0, var1);
       class306.field2458[1].method1745(var0, var3 + var1 - 16);

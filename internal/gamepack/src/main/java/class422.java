@@ -1,3 +1,6 @@
+@ObfInfo(
+   name = "lj"
+)
 public class class422 {
    static {
       int var0 = 0;
@@ -17,6 +20,11 @@ public class class422 {
 
    }
 
+   @ObfInfo(
+      owner = "lj",
+      name = "e",
+      desc = "(IB)Lfq;"
+   )
    public static class169 method2050(int var0) {
       class169 var2 = (class169)class169.field1267.method394((long)var0);
       if (null != var2) {

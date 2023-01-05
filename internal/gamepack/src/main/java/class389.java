@@ -1,22 +1,75 @@
+@ObfInfo(
+   name = "ix"
+)
 public abstract class class389 {
+   @ObfInfo(
+      owner = "ix",
+      name = "b",
+      desc = "I"
+   )
    int field3275;
+   @ObfInfo(
+      owner = "ix",
+      name = "u",
+      desc = "I"
+   )
    int field3276;
+   @ObfInfo(
+      owner = "ix",
+      name = "r",
+      desc = "Lky;"
+   )
    public final class464 field3274;
+   @ObfInfo(
+      owner = "ix",
+      name = "f",
+      desc = "Lky;"
+   )
    public final class464 field3277;
 
+   @ObfInfo(
+      owner = "ix",
+      name = "<init>",
+      desc = "(Lky;Lky;)V"
+   )
    class389(class464 var1, class464 var2) {
       this.field3274 = var1;
       this.field3277 = var2;
    }
 
+   @ObfInfo(
+      owner = "ix",
+      name = "v",
+      desc = "(I)Lii;"
+   )
    abstract class23 method1911();
 
+   @ObfInfo(
+      owner = "ix",
+      name = "x",
+      desc = "(I)I"
+   )
    abstract int method1906();
 
+   @ObfInfo(
+      owner = "ix",
+      name = "m",
+      desc = "(I)I"
+   )
    abstract int method1912();
 
+   @ObfInfo(
+      owner = "ix",
+      name = "e",
+      desc = "(I)I"
+   )
    public abstract int method1910();
 
+   @ObfInfo(
+      owner = "ix",
+      name = "a",
+      desc = "(III)Z"
+   )
    boolean method1905(int var1, int var2) {
       if (this.method1908(var1, var2)) {
          return true;
@@ -25,10 +78,20 @@ public abstract class class389 {
       }
    }
 
+   @ObfInfo(
+      owner = "ix",
+      name = "s",
+      desc = "(S)Z"
+   )
    boolean method1909() {
       return this.method1910() >= 0;
    }
 
+   @ObfInfo(
+      owner = "ix",
+      name = "l",
+      desc = "(III)Z"
+   )
    boolean method1908(int var1, int var2) {
       if (!this.method1909()) {
          return false;
@@ -76,6 +139,11 @@ public abstract class class389 {
       }
    }
 
+   @ObfInfo(
+      owner = "ix",
+      name = "t",
+      desc = "(IIB)Z"
+   )
    boolean method1907(int var1, int var2) {
       class23 var4 = this.method1911();
       if (null == var4) {

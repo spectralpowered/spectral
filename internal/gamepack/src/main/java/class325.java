@@ -2,21 +2,59 @@ import java.util.ConcurrentModificationException;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
+@ObfInfo(
+   name = "nx"
+)
 public class class325 implements Iterator {
+   @ObfInfo(
+      owner = "nx",
+      name = "hq",
+      desc = "I"
+   )
    static int field2575;
+   @ObfInfo(
+      owner = "nx",
+      name = "h",
+      desc = "Lnm;"
+   )
    class335 field2572;
+   @ObfInfo(
+      owner = "nx",
+      name = "e",
+      desc = "I"
+   )
    int field2573 = 0;
+   @ObfInfo(
+      owner = "nx",
+      name = "v",
+      desc = "I"
+   )
    int field2574;
 
+   @ObfInfo(
+      owner = "nx",
+      name = "<init>",
+      desc = "(Lnm;)V"
+   )
    class325(class335 var1) {
       this.field2574 = this.field2572.field2687;
       this.field2572 = var1;
    }
 
+   @ObfInfo(
+      owner = "nx",
+      name = "hasNext",
+      desc = "()Z"
+   )
    public boolean hasNext() {
       return this.field2573 < this.field2572.field2685;
    }
 
+   @ObfInfo(
+      owner = "nx",
+      name = "next",
+      desc = "()Ljava/lang/Object;"
+   )
    public Object next() {
       if (this.field2572.field2687 != this.field2574) {
          throw new ConcurrentModificationException();
@@ -29,10 +67,20 @@ public class class325 implements Iterator {
       }
    }
 
+   @ObfInfo(
+      owner = "nx",
+      name = "remove",
+      desc = "()V"
+   )
    public void remove() {
       throw new UnsupportedOperationException();
    }
 
+   @ObfInfo(
+      owner = "nx",
+      name = "l",
+      desc = "(ILbm;ZI)I"
+   )
    static int method1660(int var0, class461 var1, boolean var2) {
       class120 var4;
       if (var0 != 1927 && var0 != 2927) {

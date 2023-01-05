@@ -1,23 +1,91 @@
+@ObfInfo(
+   name = "cg"
+)
 public final class class267 extends class334 {
+   @ObfInfo(
+      owner = "cg",
+      name = "f",
+      desc = "I"
+   )
    static int field2210 = 1;
+   @ObfInfo(
+      owner = "cg",
+      name = "u",
+      desc = "I"
+   )
    static int field2212 = 1;
+   @ObfInfo(
+      owner = "cg",
+      name = "mw",
+      desc = "I"
+   )
    static int field2215;
+   @ObfInfo(
+      owner = "cg",
+      name = "i",
+      desc = "[I"
+   )
    static int[] field2214;
+   @ObfInfo(
+      owner = "cg",
+      name = "q",
+      desc = "Lgp;"
+   )
    class207 field2209;
+   @ObfInfo(
+      owner = "cg",
+      name = "r",
+      desc = "Lgp;"
+   )
    class207 field2211;
+   @ObfInfo(
+      owner = "cg",
+      name = "h",
+      desc = "Lgz;"
+   )
    class423 field2213;
+   @ObfInfo(
+      owner = "cg",
+      name = "m",
+      desc = "Lqz;"
+   )
    class489 field2208;
+   @ObfInfo(
+      owner = "cg",
+      name = "x",
+      desc = "I"
+   )
    int field2207 = 31;
+   @ObfInfo(
+      owner = "cg",
+      name = "e",
+      desc = "Ljava/lang/String;"
+   )
    String field2206 = "";
 
+   @ObfInfo(
+      owner = "cg",
+      name = "h",
+      desc = "(Ljava/lang/String;I)V"
+   )
    void method1272(String var1) {
       this.field2206 = null == var1 ? "" : var1;
    }
 
+   @ObfInfo(
+      owner = "cg",
+      name = "m",
+      desc = "(II)V"
+   )
    void method1256(int var1) {
       this.field2207 = var1;
    }
 
+   @ObfInfo(
+      owner = "cg",
+      name = "q",
+      desc = "(II)Z"
+   )
    boolean method1273(int var1) {
       if (var1 >= 0 && var1 <= 4) {
          return (this.field2207 & 1 << var1) != 0;
@@ -26,6 +94,11 @@ public final class class267 extends class334 {
       }
    }
 
+   @ObfInfo(
+      owner = "cg",
+      name = "f",
+      desc = "(I)Ljava/lang/String;"
+   )
    final String method1259() {
       if (!this.field2206.isEmpty()) {
          return this.field2206;
@@ -42,6 +115,11 @@ public final class class267 extends class334 {
       }
    }
 
+   @ObfInfo(
+      owner = "cg",
+      name = "r",
+      desc = "(ILgs;B)V"
+   )
    final void method1257(int var1, class294 var2) {
       int var4 = super.field2633[0];
       int var5 = super.field2681[0];
@@ -100,6 +178,11 @@ public final class class267 extends class334 {
       super.field2661[0] = var2;
    }
 
+   @ObfInfo(
+      owner = "cg",
+      name = "u",
+      desc = "(IIZI)V"
+   )
    final void method1258(int var1, int var2, boolean var3) {
       if (super.field2649 != -1 && class271.method1277(super.field2649).field2034 == 1) {
          super.field2649 = -1;
@@ -135,6 +218,11 @@ public final class class267 extends class334 {
       super.field2608 = super.field2611 * 64 + super.field2681[0] * 128;
    }
 
+   @ObfInfo(
+      owner = "cg",
+      name = "e",
+      desc = "(I)Lhh;"
+   )
    protected final class470 method1438() {
       if (this.field2213 == null) {
          return null;
@@ -176,18 +264,38 @@ public final class class267 extends class334 {
       }
    }
 
+   @ObfInfo(
+      owner = "cg",
+      name = "s",
+      desc = "(I)Z"
+   )
    final boolean method1678() {
       return null != this.field2213;
    }
 
+   @ObfInfo(
+      owner = "cg",
+      name = "b",
+      desc = "(B)[I"
+   )
    int[] method1267() {
       return null != this.field2208 ? this.field2208.method2397() : this.field2213.method2061();
    }
 
+   @ObfInfo(
+      owner = "cg",
+      name = "j",
+      desc = "(B)[S"
+   )
    short[] method1260() {
       return this.field2208 != null ? this.field2208.method2398() : this.field2213.method2064();
    }
 
+   @ObfInfo(
+      owner = "cg",
+      name = "g",
+      desc = "(IISI)V"
+   )
    void method1261(int var1, int var2, short var3) {
       if (null == this.field2208) {
          this.field2208 = new class489(this.field2213);
@@ -196,6 +304,11 @@ public final class class267 extends class334 {
       this.field2208.method2399(var1, var2, var3);
    }
 
+   @ObfInfo(
+      owner = "cg",
+      name = "i",
+      desc = "([I[SI)V"
+   )
    void method1262(int[] var1, short[] var2) {
       if (this.field2208 == null) {
          this.field2208 = new class489(this.field2213);
@@ -204,30 +317,65 @@ public final class class267 extends class334 {
       this.field2208.method2400(var1, var2);
    }
 
+   @ObfInfo(
+      owner = "cg",
+      name = "o",
+      desc = "(B)V"
+   )
    void method1263() {
       this.field2208 = null;
    }
 
+   @ObfInfo(
+      owner = "cg",
+      name = "n",
+      desc = "(Lgp;I)V"
+   )
    void method1264(class207 var1) {
       this.field2211 = var1;
    }
 
+   @ObfInfo(
+      owner = "cg",
+      name = "k",
+      desc = "(I)Lgp;"
+   )
    class207 method1265() {
       return this.field2211;
    }
 
+   @ObfInfo(
+      owner = "cg",
+      name = "a",
+      desc = "(Lgp;I)V"
+   )
    void method1266(class207 var1) {
       this.field2209 = var1;
    }
 
+   @ObfInfo(
+      owner = "cg",
+      name = "l",
+      desc = "(I)V"
+   )
    void method1268() {
       this.field2211 = null;
    }
 
+   @ObfInfo(
+      owner = "cg",
+      name = "t",
+      desc = "(I)V"
+   )
    void method1269() {
       this.field2209 = null;
    }
 
+   @ObfInfo(
+      owner = "cg",
+      name = "q",
+      desc = "(ILbm;ZI)I"
+   )
    static int method1255(int var0, class461 var1, boolean var2) {
       int var5 = -1;
       class120 var4;
@@ -613,6 +761,11 @@ public final class class267 extends class334 {
       }
    }
 
+   @ObfInfo(
+      owner = "cg",
+      name = "mn",
+      desc = "(Lkd;I)Z"
+   )
    static final boolean method1274(class120 var0) {
       int var2 = var0.field993;
       if (var2 == 205) {

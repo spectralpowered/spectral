@@ -1,22 +1,75 @@
 import java.awt.Component;
 
+@ObfInfo(
+   name = "cz"
+)
 public class class483 implements class78 {
+   @ObfInfo(
+      owner = "cz",
+      name = "mf",
+      desc = "I"
+   )
    static int field4027;
+   @ObfInfo(
+      owner = "cz",
+      name = "e",
+      desc = "Lcz;"
+   )
    static final class483 field4022 = new class483(1);
+   @ObfInfo(
+      owner = "cz",
+      name = "x",
+      desc = "Lcz;"
+   )
    static final class483 field4024 = new class483(3);
+   @ObfInfo(
+      owner = "cz",
+      name = "m",
+      desc = "Lcz;"
+   )
    static final class483 field4025 = new class483(4);
+   @ObfInfo(
+      owner = "cz",
+      name = "v",
+      desc = "Lcz;"
+   )
    static final class483 field4026 = new class483(2);
+   @ObfInfo(
+      owner = "cz",
+      name = "h",
+      desc = "Lcz;"
+   )
    static final class483 field4028 = new class483(0);
+   @ObfInfo(
+      owner = "cz",
+      name = "q",
+      desc = "I"
+   )
    final int field4023;
 
+   @ObfInfo(
+      owner = "cz",
+      name = "<init>",
+      desc = "(I)V"
+   )
    class483(int var1) {
       this.field4023 = var1;
    }
 
+   @ObfInfo(
+      owner = "cz",
+      name = "e",
+      desc = "(B)I"
+   )
    public int method330() {
       return this.field4023;
    }
 
+   @ObfInfo(
+      owner = "cz",
+      name = "h",
+      desc = "(Ljava/awt/Component;B)V"
+   )
    static void method2374(Component var0) {
       var0.removeMouseListener(class466.field3857);
       var0.removeMouseMotionListener(class466.field3857);
@@ -24,6 +77,11 @@ public class class483 implements class78 {
       class466.field3856 = 0;
    }
 
+   @ObfInfo(
+      owner = "cz",
+      name = "v",
+      desc = "(III)Lkd;"
+   )
    public static class120 method2375(int var0, int var1) {
       class120 var3 = class67.method299(var0);
       if (var1 == -1) {
@@ -33,10 +91,20 @@ public class class483 implements class78 {
       }
    }
 
+   @ObfInfo(
+      owner = "cz",
+      name = "az",
+      desc = "(IB)I"
+   )
    static int method2377(int var0) {
       return (int)Math.pow(2.0D, (double)((float)var0 / 256.0F + 7.0F));
    }
 
+   @ObfInfo(
+      owner = "cz",
+      name = "bw",
+      desc = "(ILky;ZB)V"
+   )
    static void method2376(int var0, class464 var1, boolean var2) {
       class46 var4 = client.method197().method1301(var0);
       int var5 = class113.field846.field3214;

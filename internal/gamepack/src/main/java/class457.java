@@ -1,9 +1,42 @@
+@ObfInfo(
+   name = "gu"
+)
 public class class457 extends class195 {
+   @ObfInfo(
+      owner = "gu",
+      name = "h",
+      desc = "Lly;"
+   )
    public static class274 field3778;
+   @ObfInfo(
+      owner = "gu",
+      name = "e",
+      desc = "Ljv;"
+   )
    public static class99 field3779 = new class99(64);
+   @ObfInfo(
+      owner = "gu",
+      name = "q",
+      desc = "[I"
+   )
    static final int[] field3783 = new int[32];
+   @ObfInfo(
+      owner = "gu",
+      name = "v",
+      desc = "I"
+   )
    public int field3780;
+   @ObfInfo(
+      owner = "gu",
+      name = "x",
+      desc = "I"
+   )
    public int field3781;
+   @ObfInfo(
+      owner = "gu",
+      name = "m",
+      desc = "I"
+   )
    public int field3782;
 
    static {
@@ -16,6 +49,11 @@ public class class457 extends class195 {
 
    }
 
+   @ObfInfo(
+      owner = "gu",
+      name = "e",
+      desc = "(Lqy;I)V"
+   )
    public void method2256(class127 var1) {
       while(true) {
          int var3 = var1.method547();
@@ -27,6 +65,11 @@ public class class457 extends class195 {
       }
    }
 
+   @ObfInfo(
+      owner = "gu",
+      name = "v",
+      desc = "(Lqy;II)V"
+   )
    void method2257(class127 var1, int var2) {
       if (var2 == 1) {
          this.field3780 = var1.method549();
@@ -36,6 +79,11 @@ public class class457 extends class195 {
 
    }
 
+   @ObfInfo(
+      owner = "gu",
+      name = "h",
+      desc = "(IB)Lbm;"
+   )
    static class461 method2259(int var0) {
       class461 var2 = (class461)class461.field3821.method394((long)var0);
       if (null != var2) {
@@ -52,6 +100,11 @@ public class class457 extends class195 {
       }
    }
 
+   @ObfInfo(
+      owner = "gu",
+      name = "o",
+      desc = "(Ljava/lang/String;I)Ljava/lang/String;"
+   )
    public static String method2258(String var0) {
       int var2 = var0.length();
       char[] var3 = new char[var2];

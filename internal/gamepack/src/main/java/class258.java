@@ -1,10 +1,43 @@
+@ObfInfo(
+   name = "mg"
+)
 public class class258 {
+   @ObfInfo(
+      owner = "mg",
+      name = "m",
+      desc = "Ljava/lang/String;"
+   )
    String field2104;
+   @ObfInfo(
+      owner = "mg",
+      name = "x",
+      desc = "Ljava/lang/String;"
+   )
    String field2107;
+   @ObfInfo(
+      owner = "mg",
+      name = "v",
+      desc = "Lmz;"
+   )
    public final class324 field2108;
+   @ObfInfo(
+      owner = "mg",
+      name = "h",
+      desc = "I"
+   )
    public final int field2106;
+   @ObfInfo(
+      owner = "mg",
+      name = "e",
+      desc = "J"
+   )
    public final long field2105;
 
+   @ObfInfo(
+      owner = "mg",
+      name = "<init>",
+      desc = "(Lqy;BI)V"
+   )
    class258(class127 var1, byte var2, int var3) {
       this.field2107 = var1.method555();
       this.field2104 = var1.method555();
@@ -22,14 +55,29 @@ public class class258 {
       this.field2108.field2567 = var3;
    }
 
+   @ObfInfo(
+      owner = "mg",
+      name = "h",
+      desc = "(I)Ljava/lang/String;"
+   )
    public String method1107() {
       return this.field2107;
    }
 
+   @ObfInfo(
+      owner = "mg",
+      name = "e",
+      desc = "(B)Ljava/lang/String;"
+   )
    public String method1106() {
       return this.field2104;
    }
 
+   @ObfInfo(
+      owner = "mg",
+      name = "h",
+      desc = "(I)V"
+   )
    static void method1105() {
       class71.field637 = 99;
       class71.field638 = new short[4][104][104];

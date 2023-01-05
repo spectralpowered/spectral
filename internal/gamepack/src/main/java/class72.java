@@ -1,7 +1,25 @@
+@ObfInfo(
+   name = "kp"
+)
 public class class72 {
+   @ObfInfo(
+      owner = "kp",
+      name = "f",
+      desc = "Lra;"
+   )
    static class344 field651;
+   @ObfInfo(
+      owner = "kp",
+      name = "r",
+      desc = "I"
+   )
    static int field652;
 
+   @ObfInfo(
+      owner = "kp",
+      name = "h",
+      desc = "(CI)B"
+   )
    public static byte method315(char var0) {
       byte var2;
       if ((var0 <= 0 || var0 >= 128) && (var0 < 160 || var0 > 255)) {
@@ -69,6 +87,11 @@ public class class72 {
       return var2;
    }
 
+   @ObfInfo(
+      owner = "kp",
+      name = "ln",
+      desc = "(II)V"
+   )
    static final void method314(int var0) {
       var0 = Math.min(Math.max(var0, 0), 255);
       if (var0 != class50.field574.method2210()) {

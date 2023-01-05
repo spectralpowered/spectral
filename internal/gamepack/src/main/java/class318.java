@@ -1,60 +1,348 @@
+@ObfInfo(
+   name = "hc"
+)
 public class class318 {
+   @ObfInfo(
+      owner = "hc",
+      name = "h",
+      desc = "Z"
+   )
    public static boolean field2525 = true;
+   @ObfInfo(
+      owner = "hc",
+      name = "an",
+      desc = "I"
+   )
    public static int field2526 = -1;
+   @ObfInfo(
+      owner = "hc",
+      name = "ab",
+      desc = "I"
+   )
    public static int field2529 = -1;
+   @ObfInfo(
+      owner = "hc",
+      name = "al",
+      desc = "Z"
+   )
    static boolean field2510 = false;
+   @ObfInfo(
+      owner = "hc",
+      name = "au",
+      desc = "Z"
+   )
    static boolean field2522 = false;
+   @ObfInfo(
+      owner = "hc",
+      name = "bl",
+      desc = "[[Z"
+   )
    static boolean[][] field2546;
+   @ObfInfo(
+      owner = "hc",
+      name = "bc",
+      desc = "[[[[Z"
+   )
    static boolean[][][][] field2545;
+   @ObfInfo(
+      owner = "hc",
+      name = "aw",
+      desc = "Lmq;"
+   )
    static class141 field2534;
+   @ObfInfo(
+      owner = "hc",
+      name = "ah",
+      desc = "[Lhv;"
+   )
    static class174[] field2533;
+   @ObfInfo(
+      owner = "hc",
+      name = "ai",
+      desc = "[[Lhv;"
+   )
    static class174[][] field2527;
+   @ObfInfo(
+      owner = "hc",
+      name = "av",
+      desc = "[Lhp;"
+   )
    static class211[] field2495 = new class211[100];
+   @ObfInfo(
+      owner = "hc",
+      name = "bz",
+      desc = "I"
+   )
    static int field2497;
+   @ObfInfo(
+      owner = "hc",
+      name = "as",
+      desc = "I"
+   )
    static int field2499;
+   @ObfInfo(
+      owner = "hc",
+      name = "c",
+      desc = "I"
+   )
    static int field2501;
+   @ObfInfo(
+      owner = "hc",
+      name = "ay",
+      desc = "I"
+   )
    static int field2505 = 0;
+   @ObfInfo(
+      owner = "hc",
+      name = "ak",
+      desc = "I"
+   )
    static int field2506 = 4;
+   @ObfInfo(
+      owner = "hc",
+      name = "n",
+      desc = "I"
+   )
    static int field2507 = 0;
+   @ObfInfo(
+      owner = "hc",
+      name = "k",
+      desc = "I"
+   )
    static int field2508 = 0;
+   @ObfInfo(
+      owner = "hc",
+      name = "a",
+      desc = "I"
+   )
    static int field2509;
+   @ObfInfo(
+      owner = "hc",
+      name = "l",
+      desc = "I"
+   )
    static int field2511;
+   @ObfInfo(
+      owner = "hc",
+      name = "t",
+      desc = "I"
+   )
    static int field2512;
+   @ObfInfo(
+      owner = "hc",
+      name = "d",
+      desc = "I"
+   )
    static int field2513;
+   @ObfInfo(
+      owner = "hc",
+      name = "p",
+      desc = "I"
+   )
    static int field2514;
+   @ObfInfo(
+      owner = "hc",
+      name = "y",
+      desc = "I"
+   )
    static int field2515;
+   @ObfInfo(
+      owner = "hc",
+      name = "z",
+      desc = "I"
+   )
    static int field2516;
+   @ObfInfo(
+      owner = "hc",
+      name = "w",
+      desc = "I"
+   )
    static int field2517;
+   @ObfInfo(
+      owner = "hc",
+      name = "ao",
+      desc = "I"
+   )
    static int field2519;
+   @ObfInfo(
+      owner = "hc",
+      name = "am",
+      desc = "I"
+   )
    static int field2520;
+   @ObfInfo(
+      owner = "hc",
+      name = "ad",
+      desc = "I"
+   )
    static int field2521;
+   @ObfInfo(
+      owner = "hc",
+      name = "ar",
+      desc = "I"
+   )
    static int field2523 = 0;
+   @ObfInfo(
+      owner = "hc",
+      name = "at",
+      desc = "I"
+   )
    static int field2524 = 0;
+   @ObfInfo(
+      owner = "hc",
+      name = "s",
+      desc = "I"
+   )
    static int field2528;
+   @ObfInfo(
+      owner = "hc",
+      name = "br",
+      desc = "I"
+   )
    static int field2531;
+   @ObfInfo(
+      owner = "hc",
+      name = "ax",
+      desc = "I"
+   )
    static int field2532;
+   @ObfInfo(
+      owner = "hc",
+      name = "bv",
+      desc = "I"
+   )
    static int field2547;
+   @ObfInfo(
+      owner = "hc",
+      name = "bx",
+      desc = "I"
+   )
    static int field2548;
+   @ObfInfo(
+      owner = "hc",
+      name = "bg",
+      desc = "I"
+   )
    static int field2549;
+   @ObfInfo(
+      owner = "hc",
+      name = "bi",
+      desc = "I"
+   )
    static int field2551;
+   @ObfInfo(
+      owner = "hc",
+      name = "af",
+      desc = "[I"
+   )
    static int[] field2542;
+   @ObfInfo(
+      owner = "hc",
+      name = "ae",
+      desc = "[I"
+   )
    static final int[] field2518;
+   @ObfInfo(
+      owner = "hc",
+      name = "aj",
+      desc = "[I"
+   )
    static final int[] field2535;
+   @ObfInfo(
+      owner = "hc",
+      name = "aq",
+      desc = "[I"
+   )
    static final int[] field2536;
+   @ObfInfo(
+      owner = "hc",
+      name = "ap",
+      desc = "[I"
+   )
    static final int[] field2537;
+   @ObfInfo(
+      owner = "hc",
+      name = "aa",
+      desc = "[I"
+   )
    static final int[] field2538;
+   @ObfInfo(
+      owner = "hc",
+      name = "ac",
+      desc = "[I"
+   )
    static final int[] field2539;
+   @ObfInfo(
+      owner = "hc",
+      name = "bh",
+      desc = "[I"
+   )
    static final int[] field2540;
+   @ObfInfo(
+      owner = "hc",
+      name = "u",
+      desc = "[Lhp;"
+   )
    class211[] field2550 = new class211[5000];
+   @ObfInfo(
+      owner = "hc",
+      name = "q",
+      desc = "[[[Lhe;"
+   )
    class438[][][] field2500;
+   @ObfInfo(
+      owner = "hc",
+      name = "e",
+      desc = "I"
+   )
    int field2496;
+   @ObfInfo(
+      owner = "hc",
+      name = "x",
+      desc = "I"
+   )
    int field2498;
+   @ObfInfo(
+      owner = "hc",
+      name = "r",
+      desc = "I"
+   )
    int field2502 = 0;
+   @ObfInfo(
+      owner = "hc",
+      name = "f",
+      desc = "I"
+   )
    int field2504 = 0;
+   @ObfInfo(
+      owner = "hc",
+      name = "v",
+      desc = "I"
+   )
    int field2530;
+   @ObfInfo(
+      owner = "hc",
+      name = "bw",
+      desc = "[[I"
+   )
    int[][] field2543 = new int[][]{{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}, {1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1}, {1, 1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0}, {0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1}, {0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}, {1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1}, {1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0}, {1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 0, 1, 1}, {1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1}};
+   @ObfInfo(
+      owner = "hc",
+      name = "bp",
+      desc = "[[I"
+   )
    int[][] field2544 = new int[][]{{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15}, {12, 8, 4, 0, 13, 9, 5, 1, 14, 10, 6, 2, 15, 11, 7, 3}, {15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0}, {3, 7, 11, 15, 2, 6, 10, 14, 1, 5, 9, 13, 0, 4, 8, 12}};
+   @ObfInfo(
+      owner = "hc",
+      name = "b",
+      desc = "[[[I"
+   )
    int[][][] field2503;
+   @ObfInfo(
+      owner = "hc",
+      name = "m",
+      desc = "[[[I"
+   )
    int[][][] field2541;
 
    static {
@@ -73,6 +361,11 @@ public class class318 {
       field2545 = new boolean[8][32][51][51];
    }
 
+   @ObfInfo(
+      owner = "hc",
+      name = "<init>",
+      desc = "(III[[[I)V"
+   )
    public class318(int var1, int var2, int var3, int[][][] var4) {
       this.field2496 = var1;
       this.field2530 = var2;
@@ -83,6 +376,11 @@ public class class318 {
       this.method1561();
    }
 
+   @ObfInfo(
+      owner = "hc",
+      name = "h",
+      desc = "()V"
+   )
    public void method1561() {
       int var1;
       int var2;
@@ -114,6 +412,11 @@ public class class318 {
 
    }
 
+   @ObfInfo(
+      owner = "hc",
+      name = "e",
+      desc = "(I)V"
+   )
    public void method1603(int var1) {
       this.field2504 = var1;
 
@@ -127,6 +430,11 @@ public class class318 {
 
    }
 
+   @ObfInfo(
+      owner = "hc",
+      name = "v",
+      desc = "(II)V"
+   )
    public void method1562(int var1, int var2) {
       class438 var3 = this.field2500[0][var1][var2];
 
@@ -154,6 +462,11 @@ public class class318 {
       this.field2500[3][var1][var2] = null;
    }
 
+   @ObfInfo(
+      owner = "hc",
+      name = "m",
+      desc = "(IIII)V"
+   )
    public void method1563(int var1, int var2, int var3, int var4) {
       class438 var5 = this.field2500[var1][var2][var3];
       if (var5 != null) {
@@ -161,6 +474,11 @@ public class class318 {
       }
    }
 
+   @ObfInfo(
+      owner = "hc",
+      name = "q",
+      desc = "(IIIIIIIIIIIIIIIIIIII)V"
+   )
    public void method1564(int var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8, int var9, int var10, int var11, int var12, int var13, int var14, int var15, int var16, int var17, int var18, int var19, int var20) {
       class151 var21;
       int var22;
@@ -197,6 +515,11 @@ public class class318 {
       }
    }
 
+   @ObfInfo(
+      owner = "hc",
+      name = "f",
+      desc = "(IIIILhr;JI)V"
+   )
    public void method1565(int var1, int var2, int var3, int var4, class295 var5, long var6, int var8) {
       if (var5 != null) {
          class340 var9 = new class340();
@@ -214,6 +537,11 @@ public class class318 {
       }
    }
 
+   @ObfInfo(
+      owner = "hc",
+      name = "r",
+      desc = "(IIIILhr;JLhr;Lhr;)V"
+   )
    public void method1566(int var1, int var2, int var3, int var4, class295 var5, long var6, class295 var8, class295 var9) {
       class447 var10 = new class447();
       var10.field3694 = var5;
@@ -245,6 +573,11 @@ public class class318 {
       this.field2500[var1][var2][var3].field3631 = var10;
    }
 
+   @ObfInfo(
+      owner = "hc",
+      name = "u",
+      desc = "(IIIILhr;Lhr;IIJI)V"
+   )
    public void method1567(int var1, int var2, int var3, int var4, class295 var5, class295 var6, int var7, int var8, long var9, int var11) {
       if (var5 != null || var6 != null) {
          class384 var12 = new class384();
@@ -268,6 +601,11 @@ public class class318 {
       }
    }
 
+   @ObfInfo(
+      owner = "hc",
+      name = "b",
+      desc = "(IIIILhr;Lhr;IIIIJI)V"
+   )
    public void method1568(int var1, int var2, int var3, int var4, class295 var5, class295 var6, int var7, int var8, int var9, int var10, long var11, int var13) {
       if (var5 != null) {
          class173 var14 = new class173();
@@ -293,6 +631,11 @@ public class class318 {
       }
    }
 
+   @ObfInfo(
+      owner = "hc",
+      name = "j",
+      desc = "(IIIIIILhr;IJI)Z"
+   )
    public boolean method1569(int var1, int var2, int var3, int var4, int var5, int var6, class295 var7, int var8, long var9, int var11) {
       if (var7 == null) {
          return true;
@@ -303,6 +646,11 @@ public class class318 {
       }
    }
 
+   @ObfInfo(
+      owner = "hc",
+      name = "g",
+      desc = "(IIIIILhr;IJZ)Z"
+   )
    public boolean method1604(int var1, int var2, int var3, int var4, int var5, class295 var6, int var7, long var8, boolean var10) {
       if (var6 == null) {
          return true;
@@ -337,10 +685,20 @@ public class class318 {
       }
    }
 
+   @ObfInfo(
+      owner = "hc",
+      name = "i",
+      desc = "(IIIIILhr;IJIIII)Z"
+   )
    public boolean method1570(int var1, int var2, int var3, int var4, int var5, class295 var6, int var7, long var8, int var10, int var11, int var12, int var13) {
       return var6 == null ? true : this.method1571(var1, var10, var11, var12 - var10 + 1, var13 - var11 + 1, var2, var3, var4, var6, var7, true, var8, 0);
    }
 
+   @ObfInfo(
+      owner = "hc",
+      name = "o",
+      desc = "(IIIIIIIILhr;IZJI)Z"
+   )
    boolean method1571(int var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8, class295 var9, int var10, boolean var11, long var12, int var14) {
       int var16;
       for(int var15 = var2; var15 < var2 + var4; ++var15) {
@@ -410,6 +768,11 @@ public class class318 {
       return true;
    }
 
+   @ObfInfo(
+      owner = "hc",
+      name = "n",
+      desc = "()V"
+   )
    public void method1572() {
       for(int var1 = 0; var1 < this.field2502; ++var1) {
          class211 var2 = this.field2550[var1];
@@ -420,6 +783,11 @@ public class class318 {
       this.field2502 = 0;
    }
 
+   @ObfInfo(
+      owner = "hc",
+      name = "k",
+      desc = "(Lhp;)V"
+   )
    void method1573(class211 var1) {
       for(int var2 = var1.field1829; var2 <= var1.field1826; ++var2) {
          for(int var3 = var1.field1827; var3 <= var1.field1828; ++var3) {
@@ -451,6 +819,11 @@ public class class318 {
 
    }
 
+   @ObfInfo(
+      owner = "hc",
+      name = "a",
+      desc = "(IIII)V"
+   )
    public void method1574(int var1, int var2, int var3, int var4) {
       class438 var5 = this.field2500[var1][var2][var3];
       if (var5 != null) {
@@ -462,6 +835,11 @@ public class class318 {
       }
    }
 
+   @ObfInfo(
+      owner = "hc",
+      name = "s",
+      desc = "(III)V"
+   )
    public void method1605(int var1, int var2, int var3) {
       class438 var4 = this.field2500[var1][var2][var3];
       if (var4 != null) {
@@ -469,6 +847,11 @@ public class class318 {
       }
    }
 
+   @ObfInfo(
+      owner = "hc",
+      name = "l",
+      desc = "(III)V"
+   )
    public void method1610(int var1, int var2, int var3) {
       class438 var4 = this.field2500[var1][var2][var3];
       if (var4 != null) {
@@ -476,6 +859,11 @@ public class class318 {
       }
    }
 
+   @ObfInfo(
+      owner = "hc",
+      name = "t",
+      desc = "(III)V"
+   )
    public void method1601(int var1, int var2, int var3) {
       class438 var4 = this.field2500[var1][var2][var3];
       if (var4 != null) {
@@ -492,6 +880,11 @@ public class class318 {
       }
    }
 
+   @ObfInfo(
+      owner = "hc",
+      name = "c",
+      desc = "(III)V"
+   )
    public void method1576(int var1, int var2, int var3) {
       class438 var4 = this.field2500[var1][var2][var3];
       if (var4 != null) {
@@ -499,6 +892,11 @@ public class class318 {
       }
    }
 
+   @ObfInfo(
+      owner = "hc",
+      name = "p",
+      desc = "(III)V"
+   )
    public void method1577(int var1, int var2, int var3) {
       class438 var4 = this.field2500[var1][var2][var3];
       if (var4 != null) {
@@ -506,16 +904,31 @@ public class class318 {
       }
    }
 
+   @ObfInfo(
+      owner = "hc",
+      name = "d",
+      desc = "(III)Lhq;"
+   )
    public class384 method1578(int var1, int var2, int var3) {
       class438 var4 = this.field2500[var1][var2][var3];
       return var4 == null ? null : var4.field3628;
    }
 
+   @ObfInfo(
+      owner = "hc",
+      name = "y",
+      desc = "(III)Lhb;"
+   )
    public class173 method1612(int var1, int var2, int var3) {
       class438 var4 = this.field2500[var1][var2][var3];
       return var4 == null ? null : var4.field3629;
    }
 
+   @ObfInfo(
+      owner = "hc",
+      name = "z",
+      desc = "(III)Lhp;"
+   )
    public class211 method1580(int var1, int var2, int var3) {
       class438 var4 = this.field2500[var1][var2][var3];
       if (var4 == null) {
@@ -534,21 +947,41 @@ public class class318 {
       }
    }
 
+   @ObfInfo(
+      owner = "hc",
+      name = "w",
+      desc = "(III)Lhs;"
+   )
    public class340 method1602(int var1, int var2, int var3) {
       class438 var4 = this.field2500[var1][var2][var3];
       return var4 != null && var4.field3630 != null ? var4.field3630 : null;
    }
 
+   @ObfInfo(
+      owner = "hc",
+      name = "as",
+      desc = "(III)J"
+   )
    public long method1613(int var1, int var2, int var3) {
       class438 var4 = this.field2500[var1][var2][var3];
       return var4 != null && var4.field3628 != null ? var4.field3628.field3237 : 0L;
    }
 
+   @ObfInfo(
+      owner = "hc",
+      name = "ad",
+      desc = "(III)J"
+   )
    public long method1608(int var1, int var2, int var3) {
       class438 var4 = this.field2500[var1][var2][var3];
       return var4 != null && var4.field3629 != null ? var4.field3629.field1280 : 0L;
    }
 
+   @ObfInfo(
+      owner = "hc",
+      name = "ao",
+      desc = "(III)J"
+   )
    public long method1611(int var1, int var2, int var3) {
       class438 var4 = this.field2500[var1][var2][var3];
       if (var4 == null) {
@@ -567,11 +1000,21 @@ public class class318 {
       }
    }
 
+   @ObfInfo(
+      owner = "hc",
+      name = "am",
+      desc = "(III)J"
+   )
    public long method1581(int var1, int var2, int var3) {
       class438 var4 = this.field2500[var1][var2][var3];
       return var4 != null && var4.field3630 != null ? var4.field3630.field2719 : 0L;
    }
 
+   @ObfInfo(
+      owner = "hc",
+      name = "av",
+      desc = "(IIIJ)I"
+   )
    public int method1607(int var1, int var2, int var3, long var4) {
       class438 var6 = this.field2500[var1][var2][var3];
       if (var6 == null) {
@@ -593,6 +1036,11 @@ public class class318 {
       }
    }
 
+   @ObfInfo(
+      owner = "hc",
+      name = "au",
+      desc = "(III)V"
+   )
    public void method1582(int var1, int var2, int var3) {
       for(int var4 = 0; var4 < this.field2496; ++var4) {
          for(int var5 = 0; var5 < this.field2530; ++var5) {
@@ -636,6 +1084,11 @@ public class class318 {
 
    }
 
+   @ObfInfo(
+      owner = "hc",
+      name = "ar",
+      desc = "(Lgi;III)V"
+   )
    void method1583(class26 var1, int var2, int var3, int var4) {
       class438 var5;
       class26 var6;
@@ -673,6 +1126,11 @@ public class class318 {
 
    }
 
+   @ObfInfo(
+      owner = "hc",
+      name = "at",
+      desc = "(Lgi;IIIII)V"
+   )
    void method1600(class26 var1, int var2, int var3, int var4, int var5, int var6) {
       boolean var7 = true;
       int var8 = var3;
@@ -725,6 +1183,11 @@ public class class318 {
 
    }
 
+   @ObfInfo(
+      owner = "hc",
+      name = "ay",
+      desc = "([IIIIII)V"
+   )
    public void method1584(int[] var1, int var2, int var3, int var4, int var5, int var6) {
       class438 var7 = this.field2500[var4][var5][var6];
       if (var7 != null) {
@@ -788,6 +1251,11 @@ public class class318 {
       }
    }
 
+   @ObfInfo(
+      owner = "hc",
+      name = "al",
+      desc = "(IIIZ)V"
+   )
    public void method1599(int var1, int var2, int var3, boolean var4) {
       if (!method1587() || var4) {
          field2522 = true;
@@ -800,10 +1268,20 @@ public class class318 {
       }
    }
 
+   @ObfInfo(
+      owner = "hc",
+      name = "ag",
+      desc = "()V"
+   )
    public void method1606() {
       field2510 = true;
    }
 
+   @ObfInfo(
+      owner = "hc",
+      name = "af",
+      desc = "(IIIIII)V"
+   )
    public void method1589(int var1, int var2, int var3, int var4, int var5, int var6) {
       if (var1 < 0) {
          var1 = 0;
@@ -999,6 +1477,11 @@ public class class318 {
       field2522 = false;
    }
 
+   @ObfInfo(
+      owner = "hc",
+      name = "ai",
+      desc = "(Lhe;Z)V"
+   )
    void method1590(class438 var1, boolean var2) {
       field2534.method642(var1);
 
@@ -1524,6 +2007,11 @@ public class class318 {
       }
    }
 
+   @ObfInfo(
+      owner = "hc",
+      name = "ax",
+      desc = "(Lhj;IIIIIII)V"
+   )
    void method1591(class151 var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8) {
       int var9;
       int var10 = var9 = (var7 << 7) - field2515;
@@ -1630,6 +2118,11 @@ public class class318 {
       }
    }
 
+   @ObfInfo(
+      owner = "hc",
+      name = "ah",
+      desc = "(Lhy;IIIIII)V"
+   )
    void method1592(class115 var1, int var2, int var3, int var4, int var5, int var6, int var7) {
       int var8 = var1.field866.length;
 
@@ -1704,6 +2197,11 @@ public class class318 {
 
    }
 
+   @ObfInfo(
+      owner = "hc",
+      name = "aq",
+      desc = "()V"
+   )
    void method1594() {
       int var1 = field2542[field2508];
       class174[] var2 = field2527[field2508];
@@ -1851,6 +2349,11 @@ public class class318 {
 
    }
 
+   @ObfInfo(
+      owner = "hc",
+      name = "ap",
+      desc = "(III)Z"
+   )
    boolean method1595(int var1, int var2, int var3) {
       int var4 = this.field2503[var1][var2][var3];
       if (var4 == -field2509) {
@@ -1870,6 +2373,11 @@ public class class318 {
       }
    }
 
+   @ObfInfo(
+      owner = "hc",
+      name = "aa",
+      desc = "(IIII)Z"
+   )
    boolean method1596(int var1, int var2, int var3, int var4) {
       if (!this.method1595(var1, var2, var3)) {
          return false;
@@ -2026,6 +2534,11 @@ public class class318 {
       }
    }
 
+   @ObfInfo(
+      owner = "hc",
+      name = "ae",
+      desc = "(IIII)Z"
+   )
    boolean method1597(int var1, int var2, int var3, int var4) {
       if (!this.method1595(var1, var2, var3)) {
          return false;
@@ -2036,6 +2549,11 @@ public class class318 {
       }
    }
 
+   @ObfInfo(
+      owner = "hc",
+      name = "ac",
+      desc = "(IIIIII)Z"
+   )
    boolean method1598(int var1, int var2, int var3, int var4, int var5, int var6) {
       int var7;
       int var8;
@@ -2079,6 +2597,11 @@ public class class318 {
       }
    }
 
+   @ObfInfo(
+      owner = "hc",
+      name = "bh",
+      desc = "(III)Z"
+   )
    boolean method1579(int var1, int var2, int var3) {
       for(int var4 = 0; var4 < field2532; ++var4) {
          class174 var5 = field2533[var4];
@@ -2148,6 +2671,11 @@ public class class318 {
       return false;
    }
 
+   @ObfInfo(
+      owner = "hc",
+      name = "x",
+      desc = "(IIIIIIII)V"
+   )
    public static void method1609(int var0, int var1, int var2, int var3, int var4, int var5, int var6, int var7) {
       class174 var8 = new class174();
       var8.field1292 = var2 / 128;
@@ -2164,6 +2692,11 @@ public class class318 {
       field2527[var0][field2542[var0]++] = var8;
    }
 
+   @ObfInfo(
+      owner = "hc",
+      name = "an",
+      desc = "([IIIII)V"
+   )
    public static void method1585(int[] var0, int var1, int var2, int var3, int var4) {
       field2549 = 0;
       field2497 = 0;
@@ -2246,6 +2779,11 @@ public class class318 {
 
    }
 
+   @ObfInfo(
+      owner = "hc",
+      name = "ab",
+      desc = "(III)Z"
+   )
    static boolean method1586(int var0, int var1, int var2) {
       int var3 = var2 * field2519 + var0 * field2520 >> 16;
       int var4 = var2 * field2520 - var0 * field2519 >> 16;
@@ -2260,15 +2798,30 @@ public class class318 {
       }
    }
 
+   @ObfInfo(
+      owner = "hc",
+      name = "az",
+      desc = "()Z"
+   )
    public static boolean method1587() {
       return field2510 && field2526 != -1;
    }
 
+   @ObfInfo(
+      owner = "hc",
+      name = "ak",
+      desc = "()V"
+   )
    public static void method1588() {
       field2526 = -1;
       field2510 = false;
    }
 
+   @ObfInfo(
+      owner = "hc",
+      name = "aw",
+      desc = "(II)I"
+   )
    static final int method1575(int var0, int var1) {
       var1 = var1 * (var0 & 127) >> 7;
       if (var1 < 2) {
@@ -2280,6 +2833,11 @@ public class class318 {
       return (var0 & 'ﾀ') + var1;
    }
 
+   @ObfInfo(
+      owner = "hc",
+      name = "aj",
+      desc = "(IIIIIIII)Z"
+   )
    static boolean method1593(int var0, int var1, int var2, int var3, int var4, int var5, int var6, int var7) {
       if (var1 < var2 && var1 < var3 && var1 < var4) {
          return false;

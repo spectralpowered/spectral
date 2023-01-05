@@ -5,17 +5,55 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
+@ObfInfo(
+   name = "nm"
+)
 public class class335 extends AbstractQueue {
+   @ObfInfo(
+      owner = "nm",
+      name = "h",
+      desc = "[Lnb;"
+   )
    class444[] field2688;
+   @ObfInfo(
+      owner = "nm",
+      name = "v",
+      desc = "I"
+   )
    int field2685;
+   @ObfInfo(
+      owner = "nm",
+      name = "m",
+      desc = "I"
+   )
    int field2687;
+   @ObfInfo(
+      owner = "nm",
+      name = "e",
+      desc = "Ljava/util/Map;"
+   )
    Map field2684;
+   @ObfInfo(
+      owner = "nm",
+      name = "x",
+      desc = "Ljava/util/Comparator;"
+   )
    final Comparator field2686;
 
+   @ObfInfo(
+      owner = "nm",
+      name = "<init>",
+      desc = "(I)V"
+   )
    public class335(int var1) {
       this(var1, (Comparator)null);
    }
 
+   @ObfInfo(
+      owner = "nm",
+      name = "<init>",
+      desc = "(ILjava/util/Comparator;)V"
+   )
    public class335(int var1, Comparator var2) {
       this.field2687 = 0;
       this.field2688 = new class444[var1];
@@ -23,15 +61,30 @@ public class class335 extends AbstractQueue {
       this.field2686 = var2;
    }
 
+   @ObfInfo(
+      owner = "nm",
+      name = "h",
+      desc = "(I)V"
+   )
    void method1684() {
       int var2 = 1 + (this.field2688.length << 1);
       this.field2688 = (class444[])((class444[])Arrays.copyOf(this.field2688, var2));
    }
 
+   @ObfInfo(
+      owner = "nm",
+      name = "size",
+      desc = "()I"
+   )
    public int size() {
       return this.field2685;
    }
 
+   @ObfInfo(
+      owner = "nm",
+      name = "offer",
+      desc = "(Ljava/lang/Object;)Z"
+   )
    public boolean offer(Object var1) {
       if (this.field2684.containsKey(var1)) {
          throw new IllegalArgumentException("");
@@ -56,10 +109,20 @@ public class class335 extends AbstractQueue {
       }
    }
 
+   @ObfInfo(
+      owner = "nm",
+      name = "peek",
+      desc = "()Ljava/lang/Object;"
+   )
    public Object peek() {
       return this.field2685 == 0 ? null : this.field2688[0].field3668;
    }
 
+   @ObfInfo(
+      owner = "nm",
+      name = "poll",
+      desc = "()Ljava/lang/Object;"
+   )
    public Object poll() {
       if (0 == this.field2685) {
          return null;
@@ -81,6 +144,11 @@ public class class335 extends AbstractQueue {
       }
    }
 
+   @ObfInfo(
+      owner = "nm",
+      name = "remove",
+      desc = "(Ljava/lang/Object;)Z"
+   )
    public boolean remove(Object var1) {
       class444 var2 = (class444)this.field2684.remove(var1);
       if (var2 == null) {
@@ -106,6 +174,11 @@ public class class335 extends AbstractQueue {
       }
    }
 
+   @ObfInfo(
+      owner = "nm",
+      name = "e",
+      desc = "(IB)V"
+   )
    void method1682(int var1) {
       class444 var3;
       int var4;
@@ -128,6 +201,11 @@ public class class335 extends AbstractQueue {
       this.field2688[var1].field3669 = var1;
    }
 
+   @ObfInfo(
+      owner = "nm",
+      name = "v",
+      desc = "(IB)V"
+   )
    void method1683(int var1) {
       class444 var3 = this.field2688[var1];
 
@@ -165,10 +243,20 @@ public class class335 extends AbstractQueue {
       this.field2688[var1].field3669 = var1;
    }
 
+   @ObfInfo(
+      owner = "nm",
+      name = "contains",
+      desc = "(Ljava/lang/Object;)Z"
+   )
    public boolean contains(Object var1) {
       return this.field2684.containsKey(var1);
    }
 
+   @ObfInfo(
+      owner = "nm",
+      name = "toArray",
+      desc = "()[Ljava/lang/Object;"
+   )
    public Object[] toArray() {
       Object[] var1 = super.toArray();
       if (null != this.field2686) {
@@ -180,6 +268,11 @@ public class class335 extends AbstractQueue {
       return var1;
    }
 
+   @ObfInfo(
+      owner = "nm",
+      name = "iterator",
+      desc = "()Ljava/util/Iterator;"
+   )
    public Iterator iterator() {
       return new class325(this);
    }

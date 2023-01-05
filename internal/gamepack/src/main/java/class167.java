@@ -1,13 +1,46 @@
+@ObfInfo(
+   name = "iv"
+)
 public class class167 {
+   @ObfInfo(
+      owner = "iv",
+      name = "lw",
+      desc = "Lkd;"
+   )
    static class120 field1257;
+   @ObfInfo(
+      owner = "iv",
+      name = "e",
+      desc = "Liv;"
+   )
    static final class167 field1258 = new class167(1);
+   @ObfInfo(
+      owner = "iv",
+      name = "h",
+      desc = "Liv;"
+   )
    static final class167 field1259 = new class167(0);
+   @ObfInfo(
+      owner = "iv",
+      name = "v",
+      desc = "I"
+   )
    final int field1260;
 
+   @ObfInfo(
+      owner = "iv",
+      name = "<init>",
+      desc = "(I)V"
+   )
    class167(int var1) {
       this.field1260 = var1;
    }
 
+   @ObfInfo(
+      owner = "iv",
+      name = "v",
+      desc = "([Ljava/lang/String;[IIII)V"
+   )
    static void method783(String[] var0, int[] var1, int var2, int var3) {
       if (var2 < var3) {
          int var5 = (var2 + var3) / 2;
@@ -40,6 +73,11 @@ public class class167 {
 
    }
 
+   @ObfInfo(
+      owner = "iv",
+      name = "nv",
+      desc = "(B)V"
+   )
    static void method782() {
       if (class214.field1874 != null) {
          client.field514 = client.field231;

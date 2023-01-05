@@ -1,20 +1,103 @@
+@ObfInfo(
+   name = "fw"
+)
 public class class406 extends class195 {
+   @ObfInfo(
+      owner = "fw",
+      name = "h",
+      desc = "Lly;"
+   )
    public static class274 field3401;
+   @ObfInfo(
+      owner = "fw",
+      name = "v",
+      desc = "Ljv;"
+   )
    public static class99 field3396 = new class99(64);
+   @ObfInfo(
+      owner = "fw",
+      name = "e",
+      desc = "Lly;"
+   )
    static class274 field3393;
+   @ObfInfo(
+      owner = "fw",
+      name = "x",
+      desc = "Ljv;"
+   )
    static class99 field3395 = new class99(64);
+   @ObfInfo(
+      owner = "fw",
+      name = "pj",
+      desc = "I"
+   )
    static int field3406;
+   @ObfInfo(
+      owner = "fw",
+      name = "i",
+      desc = "I"
+   )
    int field3402 = -1;
+   @ObfInfo(
+      owner = "fw",
+      name = "o",
+      desc = "I"
+   )
    int field3403 = -1;
+   @ObfInfo(
+      owner = "fw",
+      name = "g",
+      desc = "I"
+   )
    public int field3392 = 70;
+   @ObfInfo(
+      owner = "fw",
+      name = "j",
+      desc = "I"
+   )
    public int field3394 = 1;
+   @ObfInfo(
+      owner = "fw",
+      name = "r",
+      desc = "I"
+   )
    public int field3397 = 255;
+   @ObfInfo(
+      owner = "fw",
+      name = "u",
+      desc = "I"
+   )
    public int field3398 = 255;
+   @ObfInfo(
+      owner = "fw",
+      name = "b",
+      desc = "I"
+   )
    public int field3399 = -1;
+   @ObfInfo(
+      owner = "fw",
+      name = "m",
+      desc = "I"
+   )
    public int field3400;
+   @ObfInfo(
+      owner = "fw",
+      name = "n",
+      desc = "I"
+   )
    public int field3404 = 30;
+   @ObfInfo(
+      owner = "fw",
+      name = "k",
+      desc = "I"
+   )
    public int field3405 = 0;
 
+   @ObfInfo(
+      owner = "fw",
+      name = "e",
+      desc = "(Lqy;B)V"
+   )
    public void method1995(class127 var1) {
       while(true) {
          int var3 = var1.method547();
@@ -26,6 +109,11 @@ public class class406 extends class195 {
       }
    }
 
+   @ObfInfo(
+      owner = "fw",
+      name = "v",
+      desc = "(Lqy;IB)V"
+   )
    void method1992(class127 var1, int var2) {
       if (var2 == 1) {
          var1.method549();
@@ -53,6 +141,11 @@ public class class406 extends class195 {
 
    }
 
+   @ObfInfo(
+      owner = "fw",
+      name = "x",
+      desc = "(I)Lrx;"
+   )
    public class266 method1993() {
       if (this.field3402 < 0) {
          return null;
@@ -71,6 +164,11 @@ public class class406 extends class195 {
       }
    }
 
+   @ObfInfo(
+      owner = "fw",
+      name = "m",
+      desc = "(I)Lrx;"
+   )
    public class266 method1994() {
       if (this.field3403 < 0) {
          return null;
@@ -89,6 +187,11 @@ public class class406 extends class195 {
       }
    }
 
+   @ObfInfo(
+      owner = "fw",
+      name = "ky",
+      desc = "(Ljava/lang/String;Lkd;I)Ljava/lang/String;"
+   )
    static String method1996(String var0, class120 var1) {
       if (var0.indexOf("%") != -1) {
          for(int var3 = 1; var3 <= 5; ++var3) {

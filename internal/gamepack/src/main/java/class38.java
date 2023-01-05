@@ -1,18 +1,81 @@
 import java.util.zip.CRC32;
 
+@ObfInfo(
+   name = "ln"
+)
 public class class38 extends class274 {
+   @ObfInfo(
+      owner = "ln",
+      name = "g",
+      desc = "Ljava/util/zip/CRC32;"
+   )
    static CRC32 field190 = new CRC32();
+   @ObfInfo(
+      owner = "ln",
+      name = "b",
+      desc = "Z"
+   )
    boolean field184 = false;
+   @ObfInfo(
+      owner = "ln",
+      name = "k",
+      desc = "Z"
+   )
    boolean field194 = false;
+   @ObfInfo(
+      owner = "ln",
+      name = "f",
+      desc = "Loi;"
+   )
    class20 field186;
+   @ObfInfo(
+      owner = "ln",
+      name = "q",
+      desc = "Loi;"
+   )
    class20 field188;
+   @ObfInfo(
+      owner = "ln",
+      name = "o",
+      desc = "I"
+   )
    int field185;
+   @ObfInfo(
+      owner = "ln",
+      name = "r",
+      desc = "I"
+   )
    int field187;
+   @ObfInfo(
+      owner = "ln",
+      name = "i",
+      desc = "I"
+   )
    int field191;
+   @ObfInfo(
+      owner = "ln",
+      name = "n",
+      desc = "I"
+   )
    int field193 = -1;
+   @ObfInfo(
+      owner = "ln",
+      name = "j",
+      desc = "[Z"
+   )
    volatile boolean[] field189;
+   @ObfInfo(
+      owner = "ln",
+      name = "u",
+      desc = "I"
+   )
    volatile int field192 = 0;
 
+   @ObfInfo(
+      owner = "ln",
+      name = "<init>",
+      desc = "(Loi;Loi;IZZZZ)V"
+   )
    public class38(class20 var1, class20 var2, int var3, boolean var4, boolean var5, boolean var6, boolean var7) {
       super(var4, var5);
       this.field188 = var1;
@@ -23,10 +86,20 @@ public class class38 extends class274 {
       class102.method411(this, this.field187);
    }
 
+   @ObfInfo(
+      owner = "ln",
+      name = "h",
+      desc = "(I)Z"
+   )
    public boolean method150() {
       return this.field192 == 1;
    }
 
+   @ObfInfo(
+      owner = "ln",
+      name = "e",
+      desc = "(I)I"
+   )
    public int method151() {
       if (1 != this.field192 && (!this.field194 || this.field192 != 2)) {
          if (super.field2303 != null) {
@@ -53,6 +126,11 @@ public class class38 extends class274 {
       }
    }
 
+   @ObfInfo(
+      owner = "ln",
+      name = "v",
+      desc = "(IB)V"
+   )
    void method1341(int var1) {
       int var3 = this.field187;
       long var4 = (long)(var1 + (var3 << 16));
@@ -63,6 +141,11 @@ public class class38 extends class274 {
 
    }
 
+   @ObfInfo(
+      owner = "ln",
+      name = "x",
+      desc = "(IB)V"
+   )
    void method1350(int var1) {
       if (null != this.field188 && this.field189 != null && this.field189[var1]) {
          class20 var3 = this.field188;
@@ -89,6 +172,11 @@ public class class38 extends class274 {
 
    }
 
+   @ObfInfo(
+      owner = "ln",
+      name = "m",
+      desc = "(I)V"
+   )
    void method154() {
       this.field192 = 2;
       super.field2295 = new int[0];
@@ -100,6 +188,11 @@ public class class38 extends class274 {
       super.field2304 = new Object[0][];
    }
 
+   @ObfInfo(
+      owner = "ln",
+      name = "q",
+      desc = "(III)V"
+   )
    void method164(int var1, int var2) {
       this.field191 = var1;
       this.field185 = var2;
@@ -129,6 +222,11 @@ public class class38 extends class274 {
 
    }
 
+   @ObfInfo(
+      owner = "ln",
+      name = "f",
+      desc = "(I[BZZI)V"
+   )
    void method161(int var1, byte[] var2, boolean var3, boolean var4) {
       if (var3) {
          if (this.field192 == 1) {
@@ -191,6 +289,11 @@ public class class38 extends class274 {
 
    }
 
+   @ObfInfo(
+      owner = "ln",
+      name = "r",
+      desc = "(Loi;I[BZI)V"
+   )
    public void method156(class20 var1, int var2, byte[] var3, boolean var4) {
       int var6;
       if (var1 == this.field186) {
@@ -269,6 +372,11 @@ public class class38 extends class274 {
       }
    }
 
+   @ObfInfo(
+      owner = "ln",
+      name = "u",
+      desc = "(I)V"
+   )
    void method162() {
       this.field189 = new boolean[super.field2303.length];
 
@@ -296,6 +404,11 @@ public class class38 extends class274 {
       }
    }
 
+   @ObfInfo(
+      owner = "ln",
+      name = "b",
+      desc = "(II)I"
+   )
    int method1346(int var1) {
       if (null != super.field2303[var1]) {
          return 100;
@@ -315,14 +428,29 @@ public class class38 extends class274 {
       }
    }
 
+   @ObfInfo(
+      owner = "ln",
+      name = "j",
+      desc = "(II)Z"
+   )
    public boolean method157(int var1) {
       return this.field189[var1];
    }
 
+   @ObfInfo(
+      owner = "ln",
+      name = "g",
+      desc = "(II)Z"
+   )
    public boolean method160(int var1) {
       return this.method1351(var1) != null;
    }
 
+   @ObfInfo(
+      owner = "ln",
+      name = "i",
+      desc = "(B)I"
+   )
    public int method159() {
       int var2 = 0;
       int var3 = 0;
@@ -343,6 +471,11 @@ public class class38 extends class274 {
       }
    }
 
+   @ObfInfo(
+      owner = "ln",
+      name = "c",
+      desc = "(III)Z"
+   )
    static final boolean method158(int var0, int var1) {
       class87 var3 = class85.method356(var0);
       if (var1 == 11) {
@@ -356,6 +489,11 @@ public class class38 extends class274 {
       return var3.method364(var1);
    }
 
+   @ObfInfo(
+      owner = "ln",
+      name = "mq",
+      desc = "(III)V"
+   )
    static final void method163(int var0, int var1) {
       if (null != client.field345[var0]) {
          if (var1 >= 0 && var1 < client.field345[var0].method270()) {

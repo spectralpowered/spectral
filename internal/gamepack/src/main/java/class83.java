@@ -1,5 +1,18 @@
+@ObfInfo(
+   name = "px"
+)
 public class class83 {
+   @ObfInfo(
+      owner = "px",
+      name = "m",
+      desc = "[I"
+   )
    static final int[] field672 = new int[16384];
+   @ObfInfo(
+      owner = "px",
+      name = "q",
+      desc = "[I"
+   )
    static final int[] field673 = new int[16384];
 
    static {

@@ -1,10 +1,23 @@
+@ObfInfo(
+   name = "ge"
+)
 public class class108 extends class195 {
+   @ObfInfo(
+      owner = "ge",
+      name = "n",
+      desc = "Lkd;"
+   )
    static class120 field822;
 
    static {
       new class99(64);
    }
 
+   @ObfInfo(
+      owner = "ge",
+      name = "v",
+      desc = "(Ljava/lang/CharSequence;IZI)Z"
+   )
    static boolean method426(CharSequence var0, int var1, boolean var2) {
       if (var1 >= 2 && var1 <= 36) {
          boolean var4 = false;

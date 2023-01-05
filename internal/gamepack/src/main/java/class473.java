@@ -1,27 +1,145 @@
+@ObfInfo(
+   name = "gm"
+)
 public class class473 extends class195 {
+   @ObfInfo(
+      owner = "gm",
+      name = "v",
+      desc = "Lly;"
+   )
    public static class274 field3969;
+   @ObfInfo(
+      owner = "gm",
+      name = "e",
+      desc = "Lly;"
+   )
    public static class274 field3973;
+   @ObfInfo(
+      owner = "gm",
+      name = "ec",
+      desc = "Lln;"
+   )
    static class38 field3989;
+   @ObfInfo(
+      owner = "gm",
+      name = "m",
+      desc = "Ljv;"
+   )
    static class99 field3971 = new class99(64);
+   @ObfInfo(
+      owner = "gm",
+      name = "x",
+      desc = "Ljv;"
+   )
    static class99 field3981 = new class99(64);
+   @ObfInfo(
+      owner = "gm",
+      name = "q",
+      desc = "Ljv;"
+   )
    static class99 field3986 = new class99(20);
+   @ObfInfo(
+      owner = "gm",
+      name = "g",
+      desc = "I"
+   )
    int field3974 = -1;
+   @ObfInfo(
+      owner = "gm",
+      name = "n",
+      desc = "I"
+   )
    int field3976 = -1;
+   @ObfInfo(
+      owner = "gm",
+      name = "a",
+      desc = "I"
+   )
    int field3978 = -1;
+   @ObfInfo(
+      owner = "gm",
+      name = "s",
+      desc = "I"
+   )
    int field3979 = -1;
+   @ObfInfo(
+      owner = "gm",
+      name = "k",
+      desc = "I"
+   )
    int field3983 = -1;
+   @ObfInfo(
+      owner = "gm",
+      name = "w",
+      desc = "I"
+   )
    int field3987 = -1;
+   @ObfInfo(
+      owner = "gm",
+      name = "as",
+      desc = "I"
+   )
    int field3988 = -1;
+   @ObfInfo(
+      owner = "gm",
+      name = "p",
+      desc = "Ljava/lang/String;"
+   )
    String field3968 = "";
+   @ObfInfo(
+      owner = "gm",
+      name = "i",
+      desc = "I"
+   )
    public int field3970 = 16777215;
+   @ObfInfo(
+      owner = "gm",
+      name = "o",
+      desc = "I"
+   )
    public int field3972 = 70;
+   @ObfInfo(
+      owner = "gm",
+      name = "t",
+      desc = "I"
+   )
    public int field3975 = 0;
+   @ObfInfo(
+      owner = "gm",
+      name = "l",
+      desc = "I"
+   )
    public int field3980 = 0;
+   @ObfInfo(
+      owner = "gm",
+      name = "c",
+      desc = "I"
+   )
    public int field3982 = -1;
+   @ObfInfo(
+      owner = "gm",
+      name = "d",
+      desc = "I"
+   )
    public int field3984 = -1;
+   @ObfInfo(
+      owner = "gm",
+      name = "y",
+      desc = "I"
+   )
    public int field3985 = 0;
+   @ObfInfo(
+      owner = "gm",
+      name = "z",
+      desc = "[I"
+   )
    public int[] field3977;
 
+   @ObfInfo(
+      owner = "gm",
+      name = "e",
+      desc = "(Lqy;I)V"
+   )
    void method2348(class127 var1) {
       while(true) {
          int var3 = var1.method547();
@@ -33,6 +151,11 @@ public class class473 extends class195 {
       }
    }
 
+   @ObfInfo(
+      owner = "gm",
+      name = "v",
+      desc = "(Lqy;IB)V"
+   )
    void method2345(class127 var1, int var2) {
       if (var2 == 1) {
          this.field3974 = var1.method560();
@@ -96,6 +219,11 @@ public class class473 extends class195 {
 
    }
 
+   @ObfInfo(
+      owner = "gm",
+      name = "x",
+      desc = "(B)Lgm;"
+   )
    public final class473 method2340() {
       int var2 = -1;
       if (this.field3987 != -1) {
@@ -114,6 +242,11 @@ public class class473 extends class195 {
       return var3 != -1 ? class444.method2198(var3) : null;
    }
 
+   @ObfInfo(
+      owner = "gm",
+      name = "m",
+      desc = "(II)Ljava/lang/String;"
+   )
    public String method2341(int var1) {
       String var3 = this.field3968;
 
@@ -127,6 +260,11 @@ public class class473 extends class195 {
       }
    }
 
+   @ObfInfo(
+      owner = "gm",
+      name = "q",
+      desc = "(S)Lrx;"
+   )
    public class266 method2342() {
       if (this.field3976 < 0) {
          return null;
@@ -145,6 +283,11 @@ public class class473 extends class195 {
       }
    }
 
+   @ObfInfo(
+      owner = "gm",
+      name = "f",
+      desc = "(S)Lrx;"
+   )
    public class266 method2343() {
       if (this.field3983 < 0) {
          return null;
@@ -163,6 +306,11 @@ public class class473 extends class195 {
       }
    }
 
+   @ObfInfo(
+      owner = "gm",
+      name = "r",
+      desc = "(I)Lrx;"
+   )
    public class266 method2350() {
       if (this.field3978 < 0) {
          return null;
@@ -181,6 +329,11 @@ public class class473 extends class195 {
       }
    }
 
+   @ObfInfo(
+      owner = "gm",
+      name = "u",
+      desc = "(B)Lrx;"
+   )
    public class266 method2344() {
       if (this.field3979 < 0) {
          return null;
@@ -199,6 +352,11 @@ public class class473 extends class195 {
       }
    }
 
+   @ObfInfo(
+      owner = "gm",
+      name = "b",
+      desc = "(B)Lnv;"
+   )
    public class58 method2347() {
       if (-1 == this.field3974) {
          return null;
@@ -217,6 +375,11 @@ public class class473 extends class195 {
       }
    }
 
+   @ObfInfo(
+      owner = "gm",
+      name = "m",
+      desc = "(IB)V"
+   )
    public static void method2346(int var0) {
       if (var0 != -1) {
          if (class476.field4009[var0]) {
@@ -244,6 +407,11 @@ public class class473 extends class195 {
       }
    }
 
+   @ObfInfo(
+      owner = "gm",
+      name = "ge",
+      desc = "(S)Z"
+   )
    static boolean method2339() {
       if (client.field515 != null && client.field443 < client.field515.size()) {
          while(client.field443 < client.field515.size()) {
@@ -261,6 +429,11 @@ public class class473 extends class195 {
       }
    }
 
+   @ObfInfo(
+      owner = "gm",
+      name = "ha",
+      desc = "(I)V"
+   )
    static final void method2349() {
       int var1 = class268.field2221;
       int[] var2 = class268.field2220;

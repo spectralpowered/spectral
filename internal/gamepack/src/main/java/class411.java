@@ -1,4 +1,12 @@
+@ObfInfo(
+   name = "ib"
+)
 public class class411 {
+   @ObfInfo(
+      owner = "ib",
+      name = "hm",
+      desc = "(I)V"
+   )
    static final void method2010() {
       if (class347.field2878 != client.field332) {
          client.field332 = class347.field2878;

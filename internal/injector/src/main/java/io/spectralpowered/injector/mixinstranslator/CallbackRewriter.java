@@ -1,5 +1,7 @@
 package io.spectralpowered.injector.mixinstranslator;
 
+import io.spectralpowered.injector.annotations.callback.CallbackInfo;
+import io.spectralpowered.injector.annotations.callback.CallbackInfoReturnable;
 import io.spectralpowered.injector.utils.parser.StringReader;
 import io.spectralpowered.injector.InjectionCallback;
 import org.objectweb.asm.Opcodes;
@@ -8,8 +10,6 @@ import org.objectweb.asm.tree.AbstractInsnNode;
 import org.objectweb.asm.tree.InsnNode;
 import org.objectweb.asm.tree.MethodInsnNode;
 import org.objectweb.asm.tree.MethodNode;
-import io.spectralpowered.injector.annotation.injection.callback.CallbackInfo;
-import io.spectralpowered.injector.annotation.injection.callback.CallbackInfoReturnable;
 
 class CallbackRewriter {
 

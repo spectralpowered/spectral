@@ -8,10 +8,28 @@ import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
+@ObfInfo(
+   name = "hk"
+)
 public class class119 {
+   @ObfInfo(
+      owner = "hk",
+      name = "s",
+      desc = "[I"
+   )
    public static int[] field879;
+   @ObfInfo(
+      owner = "hk",
+      name = "m",
+      desc = "Lra;"
+   )
    static class344 field878;
 
+   @ObfInfo(
+      owner = "hk",
+      name = "h",
+      desc = "(Lqx;B)V"
+   )
    public static void method472(class6 var0) {
       class408 var2 = (class408)class323.field2565.method1941();
       if (var2 != null) {
@@ -106,6 +124,11 @@ public class class119 {
       }
    }
 
+   @ObfInfo(
+      owner = "hk",
+      name = "js",
+      desc = "(IIIILjava/lang/String;I)V"
+   )
    static void method473(int var0, int var1, int var2, int var3, String var4) {
       class120 var6 = class483.method2375(var1, var2);
       if (null != var6) {

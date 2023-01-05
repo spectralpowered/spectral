@@ -1,21 +1,74 @@
+@ObfInfo(
+   name = "dp"
+)
 public class class301 implements class78 {
+   @ObfInfo(
+      owner = "dp",
+      name = "e",
+      desc = "Ldp;"
+   )
    static final class301 field2413 = new class301(1, 1);
+   @ObfInfo(
+      owner = "dp",
+      name = "v",
+      desc = "Ldp;"
+   )
    static final class301 field2414 = new class301(2, 2);
+   @ObfInfo(
+      owner = "dp",
+      name = "m",
+      desc = "Ldp;"
+   )
    static final class301 field2416 = new class301(4, 4);
+   @ObfInfo(
+      owner = "dp",
+      name = "h",
+      desc = "Ldp;"
+   )
    static final class301 field2418 = new class301(0, 0);
+   @ObfInfo(
+      owner = "dp",
+      name = "x",
+      desc = "Ldp;"
+   )
    static final class301 field2419 = new class301(3, 3);
+   @ObfInfo(
+      owner = "dp",
+      name = "f",
+      desc = "I"
+   )
    final int field2415;
+   @ObfInfo(
+      owner = "dp",
+      name = "q",
+      desc = "I"
+   )
    final int field2417;
 
+   @ObfInfo(
+      owner = "dp",
+      name = "<init>",
+      desc = "(II)V"
+   )
    class301(int var1, int var2) {
       this.field2417 = var1;
       this.field2415 = var2;
    }
 
+   @ObfInfo(
+      owner = "dp",
+      name = "e",
+      desc = "(B)I"
+   )
    public int method330() {
       return this.field2415;
    }
 
+   @ObfInfo(
+      owner = "dp",
+      name = "i",
+      desc = "(ZI)V"
+   )
    static void method1454(boolean var0) {
       byte var2 = 0;
       boolean var3 = class50.field574.method2209() >= client.field224;

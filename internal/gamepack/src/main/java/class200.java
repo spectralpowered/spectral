@@ -2,11 +2,34 @@ import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 
+@ObfInfo(
+   name = "il"
+)
 public class class200 extends class46 {
+   @ObfInfo(
+      owner = "il",
+      name = "i",
+      desc = "Ljava/util/HashSet;"
+   )
    HashSet field1749;
+   @ObfInfo(
+      owner = "il",
+      name = "o",
+      desc = "Ljava/util/HashSet;"
+   )
    HashSet field1750;
+   @ObfInfo(
+      owner = "il",
+      name = "n",
+      desc = "Ljava/util/List;"
+   )
    List field1751;
 
+   @ObfInfo(
+      owner = "il",
+      name = "bn",
+      desc = "(Lqy;Lqy;IZI)V"
+   )
    void method882(class127 var1, class127 var2, int var3, boolean var4) {
       this.method221(var1, var3);
       int var6 = var2.method549();
@@ -43,6 +66,11 @@ public class class200 extends class46 {
       this.method881(var2, var4);
    }
 
+   @ObfInfo(
+      owner = "il",
+      name = "ba",
+      desc = "(Lqy;ZB)V"
+   )
    void method881(class127 var1, boolean var2) {
       this.field1751 = new LinkedList();
       int var4 = var1.method549();
@@ -58,6 +86,11 @@ public class class200 extends class46 {
 
    }
 
+   @ObfInfo(
+      owner = "il",
+      name = "ip",
+      desc = "(Lcj;ZB)V"
+   )
    static void method883(class380 var0, boolean var1) {
       if (null != var0 && var0.method1678() && !var0.field3213) {
          var0.field3211 = false;

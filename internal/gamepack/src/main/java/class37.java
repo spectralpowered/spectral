@@ -1,7 +1,20 @@
+@ObfInfo(
+   name = "mc"
+)
 @class451
 public final class class37 {
+   @ObfInfo(
+      owner = "mc",
+      name = "o",
+      desc = "Lkd;"
+   )
    static class120 field183;
 
+   @ObfInfo(
+      owner = "mc",
+      name = "r",
+      desc = "(I)Lrx;"
+   )
    static class266 method149() {
       class266 var1 = new class266();
       var1.field2203 = class183.field1682;

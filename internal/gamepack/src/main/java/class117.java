@@ -1,10 +1,33 @@
 import java.awt.datatransfer.Clipboard;
 
+@ObfInfo(
+   name = "gb"
+)
 public class class117 implements class310 {
+   @ObfInfo(
+      owner = "gb",
+      name = "e",
+      desc = "Z"
+   )
    boolean field874 = false;
+   @ObfInfo(
+      owner = "gb",
+      name = "v",
+      desc = "Z"
+   )
    boolean field876 = false;
+   @ObfInfo(
+      owner = "gb",
+      name = "h",
+      desc = "Lkd;"
+   )
    class120 field875 = null;
 
+   @ObfInfo(
+      owner = "gb",
+      name = "a",
+      desc = "(Lkd;I)V"
+   )
    public void method454(class120 var1) {
       this.method456();
       if (var1 != null) {
@@ -23,10 +46,20 @@ public class class117 implements class310 {
 
    }
 
+   @ObfInfo(
+      owner = "gb",
+      name = "s",
+      desc = "(B)Lkd;"
+   )
    public class120 method455() {
       return this.field875;
    }
 
+   @ObfInfo(
+      owner = "gb",
+      name = "l",
+      desc = "(B)V"
+   )
    public void method456() {
       if (null != this.field875) {
          class16 var2 = this.field875.method496();
@@ -45,6 +78,11 @@ public class class117 implements class310 {
       }
    }
 
+   @ObfInfo(
+      owner = "gb",
+      name = "h",
+      desc = "(II)Z"
+   )
    public boolean method1501(int var1) {
       if (null == this.field875) {
          return false;
@@ -73,6 +111,11 @@ public class class117 implements class310 {
       }
    }
 
+   @ObfInfo(
+      owner = "gb",
+      name = "e",
+      desc = "(II)Z"
+   )
    public boolean method1502(int var1) {
       switch(var1) {
       case 81:
@@ -86,6 +129,11 @@ public class class117 implements class310 {
       }
    }
 
+   @ObfInfo(
+      owner = "gb",
+      name = "v",
+      desc = "(CI)Z"
+   )
    public boolean method1499(char var1) {
       if (this.field875 == null) {
          return false;
@@ -110,10 +158,20 @@ public class class117 implements class310 {
       }
    }
 
+   @ObfInfo(
+      owner = "gb",
+      name = "x",
+      desc = "(ZI)Z"
+   )
    public boolean method1500(boolean var1) {
       return false;
    }
 
+   @ObfInfo(
+      owner = "gb",
+      name = "t",
+      desc = "(II)Z"
+   )
    boolean method459(int var1) {
       if (null == this.field875) {
          return false;
@@ -256,6 +314,11 @@ public class class117 implements class310 {
       }
    }
 
+   @ObfInfo(
+      owner = "gb",
+      name = "o",
+      desc = "(Lnv;Lnv;Lnv;I)V"
+   )
    static void method463(class58 var0, class58 var1, class58 var2) {
       class359.field3052 = (class427.field3529 - 765) / 2;
       class359.field3072 = 202 + class359.field3052;
@@ -970,6 +1033,11 @@ public class class117 implements class310 {
       }
    }
 
+   @ObfInfo(
+      owner = "gb",
+      name = "aa",
+      desc = "(ILbm;ZI)I"
+   )
    static int method462(int var0, class461 var1, boolean var2) {
       return 2;
    }

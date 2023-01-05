@@ -1,11 +1,49 @@
+@ObfInfo(
+   name = "ew"
+)
 public class class357 extends class195 {
+   @ObfInfo(
+      owner = "ew",
+      name = "q",
+      desc = "Z"
+   )
    boolean field3043;
+   @ObfInfo(
+      owner = "ew",
+      name = "v",
+      desc = "[[Ldu;"
+   )
    class84[][] field3042 = (class84[][])null;
+   @ObfInfo(
+      owner = "ew",
+      name = "h",
+      desc = "I"
+   )
    int field3044;
+   @ObfInfo(
+      owner = "ew",
+      name = "m",
+      desc = "I"
+   )
    int field3045 = 0;
+   @ObfInfo(
+      owner = "ew",
+      name = "x",
+      desc = "Lhn;"
+   )
    public class176 field3040;
+   @ObfInfo(
+      owner = "ew",
+      name = "e",
+      desc = "[[Ldu;"
+   )
    public class84[][] field3041 = (class84[][])null;
 
+   @ObfInfo(
+      owner = "ew",
+      name = "<init>",
+      desc = "(Lly;Lly;IZ)V"
+   )
    public class357(class274 var1, class274 var2, int var3, boolean var4) {
       this.field3044 = var3;
       byte[] var5 = var1.method1365(this.field3044 >> 16 & '\uffff', this.field3044 & '\uffff');
@@ -23,6 +61,11 @@ public class class357 extends class195 {
       this.method1779(var6, var7);
    }
 
+   @ObfInfo(
+      owner = "ew",
+      name = "h",
+      desc = "(Lqy;IS)V"
+   )
    void method1779(class127 var1, int var2) {
       var1.method549();
       var1.method549();
@@ -57,14 +100,29 @@ public class class357 extends class195 {
 
    }
 
+   @ObfInfo(
+      owner = "ew",
+      name = "e",
+      desc = "(I)I"
+   )
    public int method1785() {
       return this.field3045;
    }
 
+   @ObfInfo(
+      owner = "ew",
+      name = "v",
+      desc = "(B)Z"
+   )
    public boolean method1780() {
       return this.field3043;
    }
 
+   @ObfInfo(
+      owner = "ew",
+      name = "x",
+      desc = "(ILdt;III)V"
+   )
    public void method1778(int var1, class130 var2, int var3, int var4) {
       class44 var6 = class282.method1391();
       this.method1781(var6, var3, var2, var1);
@@ -74,6 +132,11 @@ public class class357 extends class195 {
       var6.method217();
    }
 
+   @ObfInfo(
+      owner = "ew",
+      name = "m",
+      desc = "(Loj;ILdt;II)V"
+   )
    void method1781(class44 var1, int var2, class130 var3, int var4) {
       float[] var6 = var3.method620(this.field3045);
       float var7 = var6[0];
@@ -116,6 +179,11 @@ public class class357 extends class195 {
       var14.method217();
    }
 
+   @ObfInfo(
+      owner = "ew",
+      name = "q",
+      desc = "(Loj;ILdt;II)V"
+   )
    void method1782(class44 var1, int var2, class130 var3, int var4) {
       float[] var6 = var3.method621(this.field3045);
       float var7 = var6[0];
@@ -143,6 +211,11 @@ public class class357 extends class195 {
       var1.field541[14] = var9;
    }
 
+   @ObfInfo(
+      owner = "ew",
+      name = "f",
+      desc = "(Loj;ILdt;II)V"
+   )
    void method1783(class44 var1, int var2, class130 var3, int var4) {
       float[] var6 = var3.method622(this.field3045);
       float var7 = var6[0];
@@ -171,11 +244,21 @@ public class class357 extends class195 {
       var13.method217();
    }
 
+   @ObfInfo(
+      owner = "ew",
+      name = "v",
+      desc = "(IIB)Lbv;"
+   )
    static class152 method1784(int var0, int var1) {
       class34 var3 = (class34)class100.field792.get(var0);
       return var3.method141(var1);
    }
 
+   @ObfInfo(
+      owner = "ew",
+      name = "gx",
+      desc = "(I)V"
+   )
    static final void method1786() {
       for(int var1 = 0; var1 < client.field478; ++var1) {
          --client.field508[var1];
@@ -257,6 +340,11 @@ public class class357 extends class195 {
 
    }
 
+   @ObfInfo(
+      owner = "ew",
+      name = "bc",
+      desc = "(II)Ljava/lang/Object;"
+   )
    static Object method1787(int var0) {
       return class154.method716((class185)class2.method10(class185.method841(), var0));
    }

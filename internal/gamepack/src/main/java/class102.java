@@ -1,10 +1,28 @@
 import java.net.MalformedURLException;
 import java.net.URL;
 
+@ObfInfo(
+   name = "ku"
+)
 public class class102 {
+   @ObfInfo(
+      owner = "ku",
+      name = "h",
+      desc = "Ldm;"
+   )
    class140 field802;
+   @ObfInfo(
+      owner = "ku",
+      name = "e",
+      desc = "Lrx;"
+   )
    class266 field801;
 
+   @ObfInfo(
+      owner = "ku",
+      name = "<init>",
+      desc = "(Ljava/lang/String;Ldl;)V"
+   )
    class102(String var1, class434 var2) {
       try {
          this.field802 = var2.method2151(new URL(var1));
@@ -14,10 +32,20 @@ public class class102 {
 
    }
 
+   @ObfInfo(
+      owner = "ku",
+      name = "<init>",
+      desc = "(Ldm;)V"
+   )
    class102(class140 var1) {
       this.field802 = var1;
    }
 
+   @ObfInfo(
+      owner = "ku",
+      name = "h",
+      desc = "(I)Lrx;"
+   )
    class266 method408() {
       if (this.field801 == null && this.field802 != null && this.field802.method640()) {
          if (this.field802.method638() != null) {
@@ -30,10 +58,20 @@ public class class102 {
       return this.field801;
    }
 
+   @ObfInfo(
+      owner = "ku",
+      name = "h",
+      desc = "(IB)I"
+   )
    public static int method413(int var0) {
       return var0 >>> 12;
    }
 
+   @ObfInfo(
+      owner = "ku",
+      name = "e",
+      desc = "(Lln;II)V"
+   )
    static void method411(class38 var0, int var1) {
       if (var0.field194) {
          if (var1 <= class462.field3845) {
@@ -73,6 +111,11 @@ public class class102 {
       }
    }
 
+   @ObfInfo(
+      owner = "ku",
+      name = "f",
+      desc = "(Lqx;I)V"
+   )
    static final void method409(class6 var0) {
       for(int var2 = 0; var2 < class268.field2223; ++var2) {
          int var3 = class268.field2227[var2];
@@ -87,6 +130,11 @@ public class class102 {
 
    }
 
+   @ObfInfo(
+      owner = "ku",
+      name = "k",
+      desc = "(Lkd;I)I"
+   )
    static int method412(class120 var0) {
       if (11 != var0.field1026) {
          --class386.field3250;
@@ -99,6 +147,11 @@ public class class102 {
       }
    }
 
+   @ObfInfo(
+      owner = "ku",
+      name = "aj",
+      desc = "(ILbm;ZB)I"
+   )
    static int method410(int var0, class461 var1, boolean var2) {
       return 2;
    }

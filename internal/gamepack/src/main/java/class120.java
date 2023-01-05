@@ -2,171 +2,999 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 
+@ObfInfo(
+   name = "kd"
+)
 public class class120 extends class139 {
+   @ObfInfo(
+      owner = "kd",
+      name = "ag",
+      desc = "Z"
+   )
    public static boolean field892;
+   @ObfInfo(
+      owner = "kd",
+      name = "ab",
+      desc = "Lni;"
+   )
    static class255 field890;
+   @ObfInfo(
+      owner = "kd",
+      name = "al",
+      desc = "Lni;"
+   )
    static class255 field891;
+   @ObfInfo(
+      owner = "kd",
+      name = "am",
+      desc = "Lly;"
+   )
    static class274 field884;
+   @ObfInfo(
+      owner = "kd",
+      name = "av",
+      desc = "Lly;"
+   )
    static class274 field913;
+   @ObfInfo(
+      owner = "kd",
+      name = "at",
+      desc = "Ljv;"
+   )
    static class99 field1020 = new class99(50);
+   @ObfInfo(
+      owner = "kd",
+      name = "ay",
+      desc = "Ljv;"
+   )
    static class99 field888 = new class99(20);
+   @ObfInfo(
+      owner = "kd",
+      name = "an",
+      desc = "Ljv;"
+   )
    static class99 field889 = new class99(8);
+   @ObfInfo(
+      owner = "kd",
+      name = "ar",
+      desc = "Ljv;"
+   )
    static class99 field943 = new class99(200);
+   @ObfInfo(
+      owner = "kd",
+      name = "dd",
+      desc = "Lkt;"
+   )
    class16 field970;
+   @ObfInfo(
+      owner = "kd",
+      name = "dk",
+      desc = "Lfk;"
+   )
    class277 field966;
+   @ObfInfo(
+      owner = "kd",
+      name = "cy",
+      desc = "I"
+   )
    int field938;
+   @ObfInfo(
+      owner = "kd",
+      name = "df",
+      desc = "I"
+   )
    int field948;
+   @ObfInfo(
+      owner = "kd",
+      name = "cp",
+      desc = "I"
+   )
    int field991;
+   @ObfInfo(
+      owner = "kd",
+      name = "dy",
+      desc = "Ljava/util/HashMap;"
+   )
    HashMap field968;
+   @ObfInfo(
+      owner = "kd",
+      name = "dx",
+      desc = "Ljava/util/HashMap;"
+   )
    HashMap field969;
+   @ObfInfo(
+      owner = "kd",
+      name = "gq",
+      desc = "Z"
+   )
    public boolean field1032;
+   @ObfInfo(
+      owner = "kd",
+      name = "gk",
+      desc = "Z"
+   )
    public boolean field1041;
+   @ObfInfo(
+      owner = "kd",
+      name = "ga",
+      desc = "Z"
+   )
    public boolean field1042;
+   @ObfInfo(
+      owner = "kd",
+      name = "gb",
+      desc = "Z"
+   )
    public boolean field1043;
+   @ObfInfo(
+      owner = "kd",
+      name = "cx",
+      desc = "Z"
+   )
    public boolean field1044;
+   @ObfInfo(
+      owner = "kd",
+      name = "az",
+      desc = "Z"
+   )
    public boolean field893 = false;
+   @ObfInfo(
+      owner = "kd",
+      name = "cl",
+      desc = "Z"
+   )
    public boolean field910;
+   @ObfInfo(
+      owner = "kd",
+      name = "ba",
+      desc = "Z"
+   )
    public boolean field921 = false;
+   @ObfInfo(
+      owner = "kd",
+      name = "bb",
+      desc = "Z"
+   )
    public boolean field926;
+   @ObfInfo(
+      owner = "kd",
+      name = "cw",
+      desc = "Z"
+   )
    public boolean field934;
+   @ObfInfo(
+      owner = "kd",
+      name = "bl",
+      desc = "Z"
+   )
    public boolean field945 = false;
+   @ObfInfo(
+      owner = "kd",
+      name = "cv",
+      desc = "Z"
+   )
    public boolean field950;
+   @ObfInfo(
+      owner = "kd",
+      name = "cz",
+      desc = "Z"
+   )
    public boolean field951;
+   @ObfInfo(
+      owner = "kd",
+      name = "de",
+      desc = "Z"
+   )
    public boolean field959;
+   @ObfInfo(
+      owner = "kd",
+      name = "gh",
+      desc = "Z"
+   )
    public boolean field961;
+   @ObfInfo(
+      owner = "kd",
+      name = "dq",
+      desc = "Z"
+   )
    public boolean field972;
+   @ObfInfo(
+      owner = "kd",
+      name = "eq",
+      desc = "Z"
+   )
    public boolean field977;
+   @ObfInfo(
+      owner = "kd",
+      name = "eh",
+      desc = "Z"
+   )
    public boolean field982;
+   @ObfInfo(
+      owner = "kd",
+      name = "db",
+      desc = "[[B"
+   )
    public byte[][] field973;
+   @ObfInfo(
+      owner = "kd",
+      name = "dt",
+      desc = "[[B"
+   )
    public byte[][] field974;
+   @ObfInfo(
+      owner = "kd",
+      name = "et",
+      desc = "Lkd;"
+   )
    public class120 field979;
+   @ObfInfo(
+      owner = "kd",
+      name = "gl",
+      desc = "[Lkd;"
+   )
    public class120[] field1031;
+   @ObfInfo(
+      owner = "kd",
+      name = "bs",
+      desc = "Lrv;"
+   )
    public class7 field939;
+   @ObfInfo(
+      owner = "kd",
+      name = "cg",
+      desc = "I"
+   )
    public int field1008;
+   @ObfInfo(
+      owner = "kd",
+      name = "bw",
+      desc = "I"
+   )
    public int field1010 = 1;
+   @ObfInfo(
+      owner = "kd",
+      name = "dl",
+      desc = "I"
+   )
    public int field1011;
+   @ObfInfo(
+      owner = "kd",
+      name = "gv",
+      desc = "I"
+   )
    public int field1017;
+   @ObfInfo(
+      owner = "kd",
+      name = "da",
+      desc = "I"
+   )
    public int field1018;
+   @ObfInfo(
+      owner = "kd",
+      name = "fm",
+      desc = "I"
+   )
    public int field1023;
+   @ObfInfo(
+      owner = "kd",
+      name = "bt",
+      desc = "I"
+   )
    public int field1024;
+   @ObfInfo(
+      owner = "kd",
+      name = "ai",
+      desc = "I"
+   )
    public int field1026;
+   @ObfInfo(
+      owner = "kd",
+      name = "gj",
+      desc = "I"
+   )
    public int field1028;
+   @ObfInfo(
+      owner = "kd",
+      name = "gp",
+      desc = "I"
+   )
    public int field1029;
+   @ObfInfo(
+      owner = "kd",
+      name = "gz",
+      desc = "I"
+   )
    public int field1030;
+   @ObfInfo(
+      owner = "kd",
+      name = "ct",
+      desc = "I"
+   )
    public int field1034;
+   @ObfInfo(
+      owner = "kd",
+      name = "br",
+      desc = "I"
+   )
    public int field1035 = 0;
+   @ObfInfo(
+      owner = "kd",
+      name = "aj",
+      desc = "I"
+   )
    public int field1036 = 0;
+   @ObfInfo(
+      owner = "kd",
+      name = "gm",
+      desc = "I"
+   )
    public int field1038;
+   @ObfInfo(
+      owner = "kd",
+      name = "gn",
+      desc = "I"
+   )
    public int field1039;
+   @ObfInfo(
+      owner = "kd",
+      name = "ce",
+      desc = "I"
+   )
    public int field882;
+   @ObfInfo(
+      owner = "kd",
+      name = "cf",
+      desc = "I"
+   )
    public int field883;
+   @ObfInfo(
+      owner = "kd",
+      name = "af",
+      desc = "I"
+   )
    public int field895 = -1;
+   @ObfInfo(
+      owner = "kd",
+      name = "ax",
+      desc = "I"
+   )
    public int field897 = 0;
+   @ObfInfo(
+      owner = "kd",
+      name = "go",
+      desc = "I"
+   )
    public int field898;
+   @ObfInfo(
+      owner = "kd",
+      name = "aq",
+      desc = "I"
+   )
    public int field899 = 0;
+   @ObfInfo(
+      owner = "kd",
+      name = "bq",
+      desc = "I"
+   )
    public int field900 = 0;
+   @ObfInfo(
+      owner = "kd",
+      name = "ap",
+      desc = "I"
+   )
    public int field901 = 0;
+   @ObfInfo(
+      owner = "kd",
+      name = "aa",
+      desc = "I"
+   )
    public int field902 = 0;
+   @ObfInfo(
+      owner = "kd",
+      name = "ae",
+      desc = "I"
+   )
    public int field903 = 0;
+   @ObfInfo(
+      owner = "kd",
+      name = "ac",
+      desc = "I"
+   )
    public int field904 = 0;
+   @ObfInfo(
+      owner = "kd",
+      name = "be",
+      desc = "I"
+   )
    public int field906 = 0;
+   @ObfInfo(
+      owner = "kd",
+      name = "bf",
+      desc = "I"
+   )
    public int field907 = 0;
+   @ObfInfo(
+      owner = "kd",
+      name = "bo",
+      desc = "I"
+   )
    public int field908 = 0;
+   @ObfInfo(
+      owner = "kd",
+      name = "bp",
+      desc = "I"
+   )
    public int field911 = 1;
+   @ObfInfo(
+      owner = "kd",
+      name = "bc",
+      desc = "I"
+   )
    public int field912 = -1;
+   @ObfInfo(
+      owner = "kd",
+      name = "bx",
+      desc = "I"
+   )
    public int field914 = 0;
+   @ObfInfo(
+      owner = "kd",
+      name = "bg",
+      desc = "I"
+   )
    public int field915 = 0;
+   @ObfInfo(
+      owner = "kd",
+      name = "bz",
+      desc = "I"
+   )
    public int field916 = 0;
+   @ObfInfo(
+      owner = "kd",
+      name = "bi",
+      desc = "I"
+   )
    public int field917 = 0;
+   @ObfInfo(
+      owner = "kd",
+      name = "bv",
+      desc = "I"
+   )
    public int field920 = 0;
+   @ObfInfo(
+      owner = "kd",
+      name = "bh",
+      desc = "I"
+   )
    public int field922 = 0;
+   @ObfInfo(
+      owner = "kd",
+      name = "ge",
+      desc = "I"
+   )
    public int field923;
+   @ObfInfo(
+      owner = "kd",
+      name = "bu",
+      desc = "I"
+   )
    public int field924;
+   @ObfInfo(
+      owner = "kd",
+      name = "bj",
+      desc = "I"
+   )
    public int field925;
+   @ObfInfo(
+      owner = "kd",
+      name = "bm",
+      desc = "I"
+   )
    public int field927;
+   @ObfInfo(
+      owner = "kd",
+      name = "cq",
+      desc = "I"
+   )
    public int field932;
+   @ObfInfo(
+      owner = "kd",
+      name = "eo",
+      desc = "I"
+   )
    public int field933;
+   @ObfInfo(
+      owner = "kd",
+      name = "cb",
+      desc = "I"
+   )
    public int field936;
+   @ObfInfo(
+      owner = "kd",
+      name = "aw",
+      desc = "I"
+   )
    public int field940 = 0;
+   @ObfInfo(
+      owner = "kd",
+      name = "cn",
+      desc = "I"
+   )
    public int field941;
+   @ObfInfo(
+      owner = "kd",
+      name = "cm",
+      desc = "I"
+   )
    public int field942;
+   @ObfInfo(
+      owner = "kd",
+      name = "dw",
+      desc = "I"
+   )
    public int field944;
+   @ObfInfo(
+      owner = "kd",
+      name = "ch",
+      desc = "I"
+   )
    public int field946;
+   @ObfInfo(
+      owner = "kd",
+      name = "co",
+      desc = "I"
+   )
    public int field947;
+   @ObfInfo(
+      owner = "kd",
+      name = "ca",
+      desc = "I"
+   )
    public int field949;
+   @ObfInfo(
+      owner = "kd",
+      name = "cr",
+      desc = "I"
+   )
    public int field952;
+   @ObfInfo(
+      owner = "kd",
+      name = "cd",
+      desc = "I"
+   )
    public int field953;
+   @ObfInfo(
+      owner = "kd",
+      name = "cs",
+      desc = "I"
+   )
    public int field955;
+   @ObfInfo(
+      owner = "kd",
+      name = "dh",
+      desc = "I"
+   )
    public int field956;
+   @ObfInfo(
+      owner = "kd",
+      name = "dn",
+      desc = "I"
+   )
    public int field957;
+   @ObfInfo(
+      owner = "kd",
+      name = "bn",
+      desc = "I"
+   )
    public int field958 = 0;
+   @ObfInfo(
+      owner = "kd",
+      name = "cu",
+      desc = "I"
+   )
    public int field960;
+   @ObfInfo(
+      owner = "kd",
+      name = "by",
+      desc = "I"
+   )
    public int field967 = 0;
+   @ObfInfo(
+      owner = "kd",
+      name = "dg",
+      desc = "I"
+   )
    public int field971;
+   @ObfInfo(
+      owner = "kd",
+      name = "cj",
+      desc = "I"
+   )
    public int field975;
+   @ObfInfo(
+      owner = "kd",
+      name = "es",
+      desc = "I"
+   )
    public int field980;
+   @ObfInfo(
+      owner = "kd",
+      name = "ak",
+      desc = "I"
+   )
    public int field985 = -1;
+   @ObfInfo(
+      owner = "kd",
+      name = "gd",
+      desc = "I"
+   )
    public int field988;
+   @ObfInfo(
+      owner = "kd",
+      name = "bk",
+      desc = "I"
+   )
    public int field990;
+   @ObfInfo(
+      owner = "kd",
+      name = "ah",
+      desc = "I"
+   )
    public int field993 = 0;
+   @ObfInfo(
+      owner = "kd",
+      name = "gu",
+      desc = "I"
+   )
    public int field996;
+   @ObfInfo(
+      owner = "kd",
+      name = "cc",
+      desc = "I"
+   )
    public int field997;
+   @ObfInfo(
+      owner = "kd",
+      name = "fq",
+      desc = "[I"
+   )
    public int[] field1021;
+   @ObfInfo(
+      owner = "kd",
+      name = "fi",
+      desc = "[I"
+   )
    public int[] field1022;
+   @ObfInfo(
+      owner = "kd",
+      name = "gr",
+      desc = "[I"
+   )
    public int[] field1040;
+   @ObfInfo(
+      owner = "kd",
+      name = "dv",
+      desc = "[I"
+   )
    public int[] field881;
+   @ObfInfo(
+      owner = "kd",
+      name = "fw",
+      desc = "[I"
+   )
    public int[] field887;
+   @ObfInfo(
+      owner = "kd",
+      name = "el",
+      desc = "[I"
+   )
    public int[] field896;
+   @ObfInfo(
+      owner = "kd",
+      name = "gf",
+      desc = "[I"
+   )
    public int[] field931;
+   @ObfInfo(
+      owner = "kd",
+      name = "ed",
+      desc = "[I"
+   )
    public int[] field937;
+   @ObfInfo(
+      owner = "kd",
+      name = "dm",
+      desc = "[I"
+   )
    public int[] field962;
+   @ObfInfo(
+      owner = "kd",
+      name = "ds",
+      desc = "[I"
+   )
    public int[] field964;
+   @ObfInfo(
+      owner = "kd",
+      name = "du",
+      desc = "[I"
+   )
    public int[] field976;
+   @ObfInfo(
+      owner = "kd",
+      name = "dp",
+      desc = "[I"
+   )
    public int[] field981;
+   @ObfInfo(
+      owner = "kd",
+      name = "ef",
+      desc = "[I"
+   )
    public int[] field998;
+   @ObfInfo(
+      owner = "kd",
+      name = "fx",
+      desc = "[[I"
+   )
    public int[][] field885;
+   @ObfInfo(
+      owner = "kd",
+      name = "fn",
+      desc = "[Ljava/lang/Object;"
+   )
    public Object[] field1001;
+   @ObfInfo(
+      owner = "kd",
+      name = "fk",
+      desc = "[Ljava/lang/Object;"
+   )
    public Object[] field1002;
+   @ObfInfo(
+      owner = "kd",
+      name = "fa",
+      desc = "[Ljava/lang/Object;"
+   )
    public Object[] field1003;
+   @ObfInfo(
+      owner = "kd",
+      name = "fo",
+      desc = "[Ljava/lang/Object;"
+   )
    public Object[] field1004;
+   @ObfInfo(
+      owner = "kd",
+      name = "fc",
+      desc = "[Ljava/lang/Object;"
+   )
    public Object[] field1005;
+   @ObfInfo(
+      owner = "kd",
+      name = "fd",
+      desc = "[Ljava/lang/Object;"
+   )
    public Object[] field1006;
+   @ObfInfo(
+      owner = "kd",
+      name = "fr",
+      desc = "[Ljava/lang/Object;"
+   )
    public Object[] field1007;
+   @ObfInfo(
+      owner = "kd",
+      name = "fp",
+      desc = "[Ljava/lang/Object;"
+   )
    public Object[] field1009;
+   @ObfInfo(
+      owner = "kd",
+      name = "ft",
+      desc = "[Ljava/lang/Object;"
+   )
    public Object[] field1012;
+   @ObfInfo(
+      owner = "kd",
+      name = "fs",
+      desc = "[Ljava/lang/Object;"
+   )
    public Object[] field1013;
+   @ObfInfo(
+      owner = "kd",
+      name = "fh",
+      desc = "[Ljava/lang/Object;"
+   )
    public Object[] field1014;
+   @ObfInfo(
+      owner = "kd",
+      name = "fu",
+      desc = "[Ljava/lang/Object;"
+   )
    public Object[] field1015;
+   @ObfInfo(
+      owner = "kd",
+      name = "fy",
+      desc = "[Ljava/lang/Object;"
+   )
    public Object[] field1016;
+   @ObfInfo(
+      owner = "kd",
+      name = "fz",
+      desc = "[Ljava/lang/Object;"
+   )
    public Object[] field1019;
+   @ObfInfo(
+      owner = "kd",
+      name = "ee",
+      desc = "[Ljava/lang/Object;"
+   )
    public Object[] field1027;
+   @ObfInfo(
+      owner = "kd",
+      name = "eb",
+      desc = "[Ljava/lang/Object;"
+   )
    public Object[] field1033;
+   @ObfInfo(
+      owner = "kd",
+      name = "ej",
+      desc = "[Ljava/lang/Object;"
+   )
    public Object[] field1037;
+   @ObfInfo(
+      owner = "kd",
+      name = "fl",
+      desc = "[Ljava/lang/Object;"
+   )
    public Object[] field880;
+   @ObfInfo(
+      owner = "kd",
+      name = "ei",
+      desc = "[Ljava/lang/Object;"
+   )
    public Object[] field886;
+   @ObfInfo(
+      owner = "kd",
+      name = "ff",
+      desc = "[Ljava/lang/Object;"
+   )
    public Object[] field905;
+   @ObfInfo(
+      owner = "kd",
+      name = "eg",
+      desc = "[Ljava/lang/Object;"
+   )
    public Object[] field909;
+   @ObfInfo(
+      owner = "kd",
+      name = "fv",
+      desc = "[Ljava/lang/Object;"
+   )
    public Object[] field918;
+   @ObfInfo(
+      owner = "kd",
+      name = "em",
+      desc = "[Ljava/lang/Object;"
+   )
    public Object[] field919;
+   @ObfInfo(
+      owner = "kd",
+      name = "ex",
+      desc = "[Ljava/lang/Object;"
+   )
    public Object[] field928;
+   @ObfInfo(
+      owner = "kd",
+      name = "fb",
+      desc = "[Ljava/lang/Object;"
+   )
    public Object[] field930;
+   @ObfInfo(
+      owner = "kd",
+      name = "ez",
+      desc = "[Ljava/lang/Object;"
+   )
    public Object[] field935;
+   @ObfInfo(
+      owner = "kd",
+      name = "fg",
+      desc = "[Ljava/lang/Object;"
+   )
    public Object[] field963;
+   @ObfInfo(
+      owner = "kd",
+      name = "en",
+      desc = "[Ljava/lang/Object;"
+   )
    public Object[] field984;
+   @ObfInfo(
+      owner = "kd",
+      name = "ec",
+      desc = "[Ljava/lang/Object;"
+   )
    public Object[] field986;
+   @ObfInfo(
+      owner = "kd",
+      name = "ea",
+      desc = "[Ljava/lang/Object;"
+   )
    public Object[] field987;
+   @ObfInfo(
+      owner = "kd",
+      name = "er",
+      desc = "[Ljava/lang/Object;"
+   )
    public Object[] field989;
+   @ObfInfo(
+      owner = "kd",
+      name = "ek",
+      desc = "[Ljava/lang/Object;"
+   )
    public Object[] field992;
+   @ObfInfo(
+      owner = "kd",
+      name = "ep",
+      desc = "[Ljava/lang/Object;"
+   )
    public Object[] field994;
+   @ObfInfo(
+      owner = "kd",
+      name = "eu",
+      desc = "[Ljava/lang/Object;"
+   )
    public Object[] field999;
+   @ObfInfo(
+      owner = "kd",
+      name = "fe",
+      desc = "Ljava/lang/String;"
+   )
    public String field1000;
+   @ObfInfo(
+      owner = "kd",
+      name = "fj",
+      desc = "Ljava/lang/String;"
+   )
    public String field1025;
+   @ObfInfo(
+      owner = "kd",
+      name = "ew",
+      desc = "Ljava/lang/String;"
+   )
    public String field894;
+   @ObfInfo(
+      owner = "kd",
+      name = "bd",
+      desc = "Ljava/lang/String;"
+   )
    public String field929;
+   @ObfInfo(
+      owner = "kd",
+      name = "ck",
+      desc = "Ljava/lang/String;"
+   )
    public String field954;
+   @ObfInfo(
+      owner = "kd",
+      name = "ev",
+      desc = "Ljava/lang/String;"
+   )
    public String field983;
+   @ObfInfo(
+      owner = "kd",
+      name = "ci",
+      desc = "Ljava/lang/String;"
+   )
    public String field995;
+   @ObfInfo(
+      owner = "kd",
+      name = "dc",
+      desc = "[Ljava/lang/String;"
+   )
    public String[] field965;
+   @ObfInfo(
+      owner = "kd",
+      name = "ey",
+      desc = "[Ljava/lang/String;"
+   )
    public String[] field978;
 
    static {
@@ -175,6 +1003,11 @@ public class class120 extends class139 {
       field892 = false;
    }
 
+   @ObfInfo(
+      owner = "kd",
+      name = "<init>",
+      desc = "()V"
+   )
    public class120() {
       this.field939 = class7.field32;
       this.field1024 = 0;
@@ -243,6 +1076,11 @@ public class class120 extends class139 {
       this.field1043 = false;
    }
 
+   @ObfInfo(
+      owner = "kd",
+      name = "q",
+      desc = "(Lqy;I)V"
+   )
    void method475(class127 var1) {
       this.field893 = false;
       this.field1026 = var1.method547();
@@ -494,6 +1332,11 @@ public class class120 extends class139 {
 
    }
 
+   @ObfInfo(
+      owner = "kd",
+      name = "f",
+      desc = "(Lqy;I)V"
+   )
    void method494(class127 var1) {
       var1.method547();
       this.field893 = true;
@@ -630,6 +1473,11 @@ public class class120 extends class139 {
       this.field896 = this.method477(var1);
    }
 
+   @ObfInfo(
+      owner = "kd",
+      name = "r",
+      desc = "(Lqy;I)[Ljava/lang/Object;"
+   )
    Object[] method474(class127 var1) {
       int var3 = var1.method547();
       if (var3 == 0) {
@@ -651,6 +1499,11 @@ public class class120 extends class139 {
       }
    }
 
+   @ObfInfo(
+      owner = "kd",
+      name = "u",
+      desc = "(Lqy;I)[I"
+   )
    int[] method477(class127 var1) {
       int var3 = var1.method547();
       if (var3 == 0) {
@@ -666,6 +1519,11 @@ public class class120 extends class139 {
       }
    }
 
+   @ObfInfo(
+      owner = "kd",
+      name = "b",
+      desc = "(IIB)V"
+   )
    public void method499(int var1, int var2) {
       int var4 = this.field887[var2];
       this.field887[var2] = this.field887[var1];
@@ -675,6 +1533,11 @@ public class class120 extends class139 {
       this.field931[var1] = var4;
    }
 
+   @ObfInfo(
+      owner = "kd",
+      name = "j",
+      desc = "(ZLdl;I)Lrx;"
+   )
    public class266 method478(boolean var1, class434 var2) {
       field892 = false;
       if (null != this.field929) {
@@ -712,6 +1575,11 @@ public class class120 extends class139 {
       }
    }
 
+   @ObfInfo(
+      owner = "kd",
+      name = "g",
+      desc = "(Ldl;I)Lrx;"
+   )
    class266 method479(class434 var1) {
       if (!this.method480()) {
          return this.method497(var1);
@@ -731,6 +1599,11 @@ public class class120 extends class139 {
       }
    }
 
+   @ObfInfo(
+      owner = "kd",
+      name = "i",
+      desc = "(Ldl;I)Lrx;"
+   )
    class266 method497(class434 var1) {
       if (this.field929 != null && var1 != null) {
          class102 var3 = (class102)field890.method1098(this.field929);
@@ -745,10 +1618,20 @@ public class class120 extends class139 {
       }
    }
 
+   @ObfInfo(
+      owner = "kd",
+      name = "o",
+      desc = "(I)Z"
+   )
    boolean method480() {
       return this.field934 || this.field1044 || this.field932 != 0 || 0 != this.field997;
    }
 
+   @ObfInfo(
+      owner = "kd",
+      name = "n",
+      desc = "(Lrx;I)V"
+   )
    void method476(class266 var1) {
       if (this.field934) {
          var1.method1251();
@@ -776,6 +1659,11 @@ public class class120 extends class139 {
 
    }
 
+   @ObfInfo(
+      owner = "kd",
+      name = "k",
+      desc = "(I)Lnv;"
+   )
    public class58 method505() {
       field892 = false;
       if (this.field953 == -1) {
@@ -797,6 +1685,11 @@ public class class120 extends class139 {
       }
    }
 
+   @ObfInfo(
+      owner = "kd",
+      name = "a",
+      desc = "(II)Lrx;"
+   )
    public class266 method482(int var1) {
       field892 = false;
       if (var1 >= 0 && var1 < this.field964.length) {
@@ -823,6 +1716,11 @@ public class class120 extends class139 {
       }
    }
 
+   @ObfInfo(
+      owner = "kd",
+      name = "s",
+      desc = "(Lga;IZLko;Lgz;Lgp;I)Lhh;"
+   )
    public class470 method502(class242 var1, int var2, boolean var3, class284 var4, class423 var5, class207 var6) {
       field892 = false;
       int var8;
@@ -897,6 +1795,11 @@ public class class120 extends class139 {
       }
    }
 
+   @ObfInfo(
+      owner = "kd",
+      name = "l",
+      desc = "(ZI)Lkv;"
+   )
    public class226 method483(boolean var1) {
       if (-1 == this.field990) {
          var1 = false;
@@ -950,6 +1853,11 @@ public class class120 extends class139 {
       }
    }
 
+   @ObfInfo(
+      owner = "kd",
+      name = "c",
+      desc = "(ILjava/lang/String;S)V"
+   )
    public void method484(int var1, String var2) {
       if (this.field978 == null || this.field978.length <= var1) {
          String[] var4 = new String[var1 + 1];
@@ -965,14 +1873,29 @@ public class class120 extends class139 {
       this.field978[var1] = var2;
    }
 
+   @ObfInfo(
+      owner = "kd",
+      name = "p",
+      desc = "(B)Z"
+   )
    public boolean method510() {
       return !this.field893 || 0 == this.field1026 || this.field1026 == 11 || this.field977 || this.field993 == 1338 || this.field1026 == 12;
    }
 
+   @ObfInfo(
+      owner = "kd",
+      name = "d",
+      desc = "(I)Z"
+   )
    public boolean method501() {
       return this.field1026 == 11 || 12 == this.field1026;
    }
 
+   @ObfInfo(
+      owner = "kd",
+      name = "y",
+      desc = "(Ljava/lang/String;Ldl;J)V"
+   )
    public void method507(String var1, class434 var2, long var3) {
       if (11 == this.field1026 && -1L != var3) {
          var1 = var1.replaceAll("%userid%", Long.toString(var3));
@@ -988,11 +1911,21 @@ public class class120 extends class139 {
       }
    }
 
+   @ObfInfo(
+      owner = "kd",
+      name = "z",
+      desc = "(I)V"
+   )
    void method500() {
       this.field968 = new HashMap();
       this.field969 = new HashMap();
    }
 
+   @ObfInfo(
+      owner = "kd",
+      name = "w",
+      desc = "(III)V"
+   )
    public void method486(int var1, int var2) {
       if (this.field1026 == 11) {
          if (null == this.field968) {
@@ -1003,6 +1936,11 @@ public class class120 extends class139 {
       }
    }
 
+   @ObfInfo(
+      owner = "kd",
+      name = "as",
+      desc = "(Ljava/lang/String;II)V"
+   )
    public void method481(String var1, int var2) {
       if (11 == this.field1026) {
          if (this.field969 == null) {
@@ -1013,22 +1951,47 @@ public class class120 extends class139 {
       }
    }
 
+   @ObfInfo(
+      owner = "kd",
+      name = "ad",
+      desc = "(I)Z"
+   )
    public boolean method488() {
       return 2 == this.field948;
    }
 
+   @ObfInfo(
+      owner = "kd",
+      name = "ao",
+      desc = "(Ljava/lang/String;B)I"
+   )
    public int method489(String var1) {
       return this.field1026 == 11 && null != this.field966 && this.method488() ? this.field966.method1372(var1) : -1;
    }
 
+   @ObfInfo(
+      owner = "kd",
+      name = "am",
+      desc = "(Ljava/lang/String;B)Ljava/lang/String;"
+   )
    public String method487(String var1) {
       return 11 == this.field1026 && null != this.field966 && this.method488() ? this.field966.method1373(var1) : null;
    }
 
+   @ObfInfo(
+      owner = "kd",
+      name = "av",
+      desc = "(B)I"
+   )
    public int method490() {
       return this.field969 != null && this.field969.size() > 0 ? 1 : 0;
    }
 
+   @ObfInfo(
+      owner = "kd",
+      name = "au",
+      desc = "(B)I"
+   )
    public int method491() {
       if (11 == this.field1026 && this.field966 != null && null != this.field969 && !this.field969.isEmpty()) {
          String var2 = this.field966.method1375();
@@ -1038,6 +2001,11 @@ public class class120 extends class139 {
       }
    }
 
+   @ObfInfo(
+      owner = "kd",
+      name = "ar",
+      desc = "(B)Ljava/lang/String;"
+   )
    public String method492() {
       if (this.field1026 == 11 && this.field966 != null) {
          String var2 = this.field966.method1375();
@@ -1059,6 +2027,11 @@ public class class120 extends class139 {
       }
    }
 
+   @ObfInfo(
+      owner = "kd",
+      name = "at",
+      desc = "(B)[I"
+   )
    public int[] method493() {
       if (11 == this.field1026 && this.field966 != null) {
          int[] var2 = new int[3];
@@ -1085,6 +2058,11 @@ public class class120 extends class139 {
       }
    }
 
+   @ObfInfo(
+      owner = "kd",
+      name = "ay",
+      desc = "(Ldl;B)Z"
+   )
    public boolean method506(class434 var1) {
       if (this.field1026 == 11 && null != this.field966) {
          this.field966.method1370(var1);
@@ -1106,6 +2084,11 @@ public class class120 extends class139 {
       }
    }
 
+   @ObfInfo(
+      owner = "kd",
+      name = "ab",
+      desc = "(I)V"
+   )
    void method495() {
       this.field1041 = true;
       ArrayList var2 = this.field966.method1380();
@@ -1135,6 +2118,11 @@ public class class120 extends class139 {
 
    }
 
+   @ObfInfo(
+      owner = "kd",
+      name = "al",
+      desc = "(I)V"
+   )
    public void method504() {
       this.field970 = new class16();
 
@@ -1152,22 +2140,47 @@ public class class120 extends class139 {
       this.field970.field75.method431(86, 2);
    }
 
+   @ObfInfo(
+      owner = "kd",
+      name = "ag",
+      desc = "(I)Lki;"
+   )
    public class262 method485() {
       return null != this.field970 ? this.field970.field78 : null;
    }
 
+   @ObfInfo(
+      owner = "kd",
+      name = "az",
+      desc = "(B)Lkb;"
+   )
    public class146 method509() {
       return null != this.field970 ? this.field970.field76 : null;
    }
 
+   @ObfInfo(
+      owner = "kd",
+      name = "ak",
+      desc = "(I)Lao;"
+   )
    public class109 method498() {
       return this.field970 != null ? this.field970.field75 : null;
    }
 
+   @ObfInfo(
+      owner = "kd",
+      name = "af",
+      desc = "(I)Lkt;"
+   )
    public class16 method496() {
       return this.field970;
    }
 
+   @ObfInfo(
+      owner = "kd",
+      name = "ai",
+      desc = "(Lki;I)Z"
+   )
    boolean method508(class262 var1) {
       boolean var3 = false;
       if (null != this.field954 && !this.field954.isEmpty()) {
@@ -1183,6 +2196,11 @@ public class class120 extends class139 {
       return var3;
    }
 
+   @ObfInfo(
+      owner = "kd",
+      name = "ax",
+      desc = "(I)Z"
+   )
    public boolean method503() {
       class262 var2 = this.method485();
       if (var2 == null) {
@@ -1210,6 +2228,11 @@ public class class120 extends class139 {
       }
    }
 
+   @ObfInfo(
+      owner = "kd",
+      name = "r",
+      desc = "(IIZB)Ljava/lang/String;"
+   )
    static String method511(int var0, int var1, boolean var2) {
       if (var1 >= 2 && var1 <= 36) {
          if (var2 && var0 >= 0) {
@@ -1242,6 +2265,11 @@ public class class120 extends class139 {
       }
    }
 
+   @ObfInfo(
+      owner = "kd",
+      name = "jc",
+      desc = "(I)V"
+   )
    static void method512() {
       if (client.field388) {
          class120 var1 = class483.method2375(class471.field3960, client.field389);

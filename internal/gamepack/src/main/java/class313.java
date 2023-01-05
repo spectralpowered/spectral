@@ -1,16 +1,64 @@
+@ObfInfo(
+   name = "gh"
+)
 public class class313 extends class195 {
+   @ObfInfo(
+      owner = "gh",
+      name = "e",
+      desc = "Ljv;"
+   )
    public static class99 field2470 = new class99(64);
+   @ObfInfo(
+      owner = "gh",
+      name = "eb",
+      desc = "Lln;"
+   )
    static class38 field2473;
+   @ObfInfo(
+      owner = "gh",
+      name = "v",
+      desc = "I"
+   )
    int field2472 = 0;
+   @ObfInfo(
+      owner = "gh",
+      name = "x",
+      desc = "I"
+   )
    public int field2468;
+   @ObfInfo(
+      owner = "gh",
+      name = "m",
+      desc = "I"
+   )
    public int field2469;
+   @ObfInfo(
+      owner = "gh",
+      name = "q",
+      desc = "I"
+   )
    public int field2471;
+   @ObfInfo(
+      owner = "gh",
+      name = "f",
+      desc = "I"
+   )
    public int field2474;
 
+   @ObfInfo(
+      owner = "gh",
+      name = "v",
+      desc = "(I)V"
+   )
    void method1508() {
       this.method1510(this.field2472);
    }
 
+   @ObfInfo(
+      owner = "gh",
+      name = "x",
+      desc = "(Lqy;IB)V"
+   )
    void method1511(class127 var1, int var2) {
       while(true) {
          int var4 = var1.method547();
@@ -22,6 +70,11 @@ public class class313 extends class195 {
       }
    }
 
+   @ObfInfo(
+      owner = "gh",
+      name = "m",
+      desc = "(Lqy;III)V"
+   )
    void method1509(class127 var1, int var2, int var3) {
       if (var2 == 1) {
          this.field2472 = var1.method551();
@@ -29,6 +82,11 @@ public class class313 extends class195 {
 
    }
 
+   @ObfInfo(
+      owner = "gh",
+      name = "q",
+      desc = "(II)V"
+   )
    void method1510(int var1) {
       double var3 = (double)(var1 >> 16 & 255) / 256.0D;
       double var5 = (double)(var1 >> 8 & 255) / 256.0D;
@@ -100,6 +158,11 @@ public class class313 extends class195 {
       this.field2468 = (int)((double)this.field2474 * var13);
    }
 
+   @ObfInfo(
+      owner = "gh",
+      name = "jb",
+      desc = "(I)Z"
+   )
    static final boolean method1512() {
       return client.field368;
    }

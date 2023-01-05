@@ -1,18 +1,91 @@
+@ObfInfo(
+   name = "rd"
+)
 public class class354 {
+   @ObfInfo(
+      owner = "rd",
+      name = "b",
+      desc = "Z"
+   )
    boolean field2905;
+   @ObfInfo(
+      owner = "rd",
+      name = "q",
+      desc = "I"
+   )
    int field2904;
+   @ObfInfo(
+      owner = "rd",
+      name = "e",
+      desc = "I"
+   )
    int field2906;
+   @ObfInfo(
+      owner = "rd",
+      name = "x",
+      desc = "I"
+   )
    int field2907;
+   @ObfInfo(
+      owner = "rd",
+      name = "m",
+      desc = "I"
+   )
    int field2908;
+   @ObfInfo(
+      owner = "rd",
+      name = "j",
+      desc = "I"
+   )
    int field2909;
+   @ObfInfo(
+      owner = "rd",
+      name = "u",
+      desc = "I"
+   )
    int field2910 = 0;
+   @ObfInfo(
+      owner = "rd",
+      name = "f",
+      desc = "I"
+   )
    int field2911;
+   @ObfInfo(
+      owner = "rd",
+      name = "r",
+      desc = "I"
+   )
    int field2912 = 0;
+   @ObfInfo(
+      owner = "rd",
+      name = "v",
+      desc = "I"
+   )
    int field2913;
+   @ObfInfo(
+      owner = "rd",
+      name = "g",
+      desc = "I"
+   )
    int field2914;
+   @ObfInfo(
+      owner = "rd",
+      name = "i",
+      desc = "I"
+   )
    int field2915;
+   @ObfInfo(
+      owner = "rd",
+      name = "o",
+      desc = "I"
+   )
    int field2916;
 
+   @ObfInfo(
+      owner = "rd",
+      name = "h",
+      desc = "(IIIIIIIIIIZI)V"
+   )
    public void method1773(int var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8, int var9, int var10, boolean var11) {
       this.field2906 = var1;
       this.field2913 = var2;
@@ -25,6 +98,11 @@ public class class354 {
       this.field2905 = var11;
    }
 
+   @ObfInfo(
+      owner = "rd",
+      name = "e",
+      desc = "(IIIII)V"
+   )
    public void method1772(int var1, int var2, int var3, int var4) {
       this.field2909 = var1;
       this.field2914 = var2;
@@ -32,6 +110,11 @@ public class class354 {
       this.field2916 = var4;
    }
 
+   @ObfInfo(
+      owner = "rd",
+      name = "v",
+      desc = "(Lnu;Lnv;B)V"
+   )
    public void method1771(class321 var1, class58 var2) {
       if (null != var2) {
          int var4 = var2.field3442;

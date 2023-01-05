@@ -1,6 +1,19 @@
+@ObfInfo(
+   name = "rc"
+)
 public class class479 {
+   @ObfInfo(
+      owner = "rc",
+      name = "h",
+      desc = "[I"
+   )
    int[] field4018;
 
+   @ObfInfo(
+      owner = "rc",
+      name = "<init>",
+      desc = "([I)V"
+   )
    public class479(int[] var1) {
       int var2;
       for(var2 = 1; var2 <= var1.length + (var1.length >> 1); var2 <<= 1) {
@@ -25,6 +38,11 @@ public class class479 {
 
    }
 
+   @ObfInfo(
+      owner = "rc",
+      name = "h",
+      desc = "(IB)I"
+   )
    public int method2366(int var1) {
       int var3 = (this.field4018.length >> 1) - 1;
       int var4 = var1 & var3;

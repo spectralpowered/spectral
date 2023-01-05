@@ -1,19 +1,87 @@
 import java.io.IOException;
 
+@ObfInfo(
+   name = "hb"
+)
 public final class class173 {
+   @ObfInfo(
+      owner = "hb",
+      name = "bz",
+      desc = "I"
+   )
    static int field1290;
+   @ObfInfo(
+      owner = "hb",
+      name = "e",
+      desc = "I"
+   )
    int field1281;
+   @ObfInfo(
+      owner = "hb",
+      name = "v",
+      desc = "I"
+   )
    int field1282;
+   @ObfInfo(
+      owner = "hb",
+      name = "j",
+      desc = "I"
+   )
    int field1283 = 0;
+   @ObfInfo(
+      owner = "hb",
+      name = "m",
+      desc = "I"
+   )
    int field1284;
+   @ObfInfo(
+      owner = "hb",
+      name = "f",
+      desc = "I"
+   )
    int field1285;
+   @ObfInfo(
+      owner = "hb",
+      name = "x",
+      desc = "I"
+   )
    int field1288;
+   @ObfInfo(
+      owner = "hb",
+      name = "q",
+      desc = "I"
+   )
    int field1289;
+   @ObfInfo(
+      owner = "hb",
+      name = "h",
+      desc = "I"
+   )
    int field1291;
+   @ObfInfo(
+      owner = "hb",
+      name = "r",
+      desc = "Lhr;"
+   )
    public class295 field1286;
+   @ObfInfo(
+      owner = "hb",
+      name = "u",
+      desc = "Lhr;"
+   )
    public class295 field1287;
+   @ObfInfo(
+      owner = "hb",
+      name = "b",
+      desc = "J"
+   )
    public long field1280 = 0L;
 
+   @ObfInfo(
+      owner = "hb",
+      name = "h",
+      desc = "(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Lmb;I)I"
+   )
    public static int method801(CharSequence var0, CharSequence var1, class476 var2) {
       int var4 = var0.length();
       int var5 = var1.length();
@@ -100,6 +168,11 @@ public final class class173 {
       }
    }
 
+   @ObfInfo(
+      owner = "hb",
+      name = "h",
+      desc = "(I)Z"
+   )
    public static boolean method802() {
       long var1 = class152.method711();
       int var3 = (int)(var1 - class462.field3828);
@@ -315,6 +388,11 @@ public final class class173 {
       }
    }
 
+   @ObfInfo(
+      owner = "hb",
+      name = "v",
+      desc = "(Ljava/lang/CharSequence;II[BIB)I"
+   )
    public static int method798(CharSequence var0, int var1, int var2, byte[] var3, int var4) {
       int var6 = var2 - var1;
 
@@ -386,11 +464,21 @@ public final class class173 {
       return var6;
    }
 
+   @ObfInfo(
+      owner = "hb",
+      name = "q",
+      desc = "(I)V"
+   )
    public static void method800() {
       class406.field3396.method395();
       class406.field3395.method395();
    }
 
+   @ObfInfo(
+      owner = "hb",
+      name = "ag",
+      desc = "(ILbm;ZB)I"
+   )
    static int method799(int var0, class461 var1, boolean var2) {
       if (var0 == 5630) {
          client.field280 = 250;

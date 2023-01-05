@@ -1,19 +1,97 @@
+@ObfInfo(
+   name = "dt"
+)
 public class class130 {
+   @ObfInfo(
+      owner = "dt",
+      name = "b",
+      desc = "Z"
+   )
    boolean field1090 = true;
+   @ObfInfo(
+      owner = "dt",
+      name = "r",
+      desc = "Z"
+   )
    boolean field1091 = true;
+   @ObfInfo(
+      owner = "dt",
+      name = "f",
+      desc = "Loj;"
+   )
    class44 field1087 = new class44();
+   @ObfInfo(
+      owner = "dt",
+      name = "j",
+      desc = "Loj;"
+   )
    class44 field1088 = new class44();
+   @ObfInfo(
+      owner = "dt",
+      name = "u",
+      desc = "Loj;"
+   )
    class44 field1093 = new class44();
+   @ObfInfo(
+      owner = "dt",
+      name = "m",
+      desc = "[Loj;"
+   )
    class44[] field1081;
+   @ObfInfo(
+      owner = "dt",
+      name = "q",
+      desc = "[Loj;"
+   )
    class44[] field1086;
+   @ObfInfo(
+      owner = "dt",
+      name = "v",
+      desc = "[[F"
+   )
    float[][] field1083;
+   @ObfInfo(
+      owner = "dt",
+      name = "g",
+      desc = "[[F"
+   )
    float[][] field1089;
+   @ObfInfo(
+      owner = "dt",
+      name = "i",
+      desc = "[[F"
+   )
    float[][] field1092;
+   @ObfInfo(
+      owner = "dt",
+      name = "o",
+      desc = "[[F"
+   )
    float[][] field1094;
+   @ObfInfo(
+      owner = "dt",
+      name = "x",
+      desc = "[Loj;"
+   )
    final class44[] field1084;
+   @ObfInfo(
+      owner = "dt",
+      name = "e",
+      desc = "Ldt;"
+   )
    public class130 field1082;
+   @ObfInfo(
+      owner = "dt",
+      name = "h",
+      desc = "I"
+   )
    public final int field1085;
 
+   @ObfInfo(
+      owner = "dt",
+      name = "<init>",
+      desc = "(ILqy;Z)V"
+   )
    public class130(int var1, class127 var2, boolean var3) {
       this.field1085 = var2.method550();
       this.field1084 = new class44[var1];
@@ -31,6 +109,11 @@ public class class130 {
       this.method615();
    }
 
+   @ObfInfo(
+      owner = "dt",
+      name = "h",
+      desc = "(B)V"
+   )
    void method615() {
       this.field1089 = new float[this.field1084.length][3];
       this.field1092 = new float[this.field1084.length][3];
@@ -51,10 +134,20 @@ public class class130 {
       var2.method217();
    }
 
+   @ObfInfo(
+      owner = "dt",
+      name = "e",
+      desc = "(II)Loj;"
+   )
    class44 method625(int var1) {
       return this.field1084[var1];
    }
 
+   @ObfInfo(
+      owner = "dt",
+      name = "v",
+      desc = "(IB)Loj;"
+   )
    class44 method616(int var1) {
       if (null == this.field1081[var1]) {
          this.field1081[var1] = new class44(this.method625(var1));
@@ -68,6 +161,11 @@ public class class130 {
       return this.field1081[var1];
    }
 
+   @ObfInfo(
+      owner = "dt",
+      name = "x",
+      desc = "(IS)Loj;"
+   )
    class44 method624(int var1) {
       if (null == this.field1086[var1]) {
          this.field1086[var1] = new class44(this.method616(var1));
@@ -77,16 +175,31 @@ public class class130 {
       return this.field1086[var1];
    }
 
+   @ObfInfo(
+      owner = "dt",
+      name = "m",
+      desc = "(Loj;I)V"
+   )
    void method619(class44 var1) {
       this.field1087.method209(var1);
       this.field1091 = true;
       this.field1090 = true;
    }
 
+   @ObfInfo(
+      owner = "dt",
+      name = "q",
+      desc = "(I)Loj;"
+   )
    class44 method618() {
       return this.field1087;
    }
 
+   @ObfInfo(
+      owner = "dt",
+      name = "f",
+      desc = "(I)Loj;"
+   )
    class44 method623() {
       if (this.field1091) {
          this.field1093.method209(this.method618());
@@ -100,6 +213,11 @@ public class class130 {
       return this.field1093;
    }
 
+   @ObfInfo(
+      owner = "dt",
+      name = "r",
+      desc = "(II)Loj;"
+   )
    public class44 method617(int var1) {
       if (this.field1090) {
          this.field1088.method209(this.method624(var1));
@@ -110,14 +228,29 @@ public class class130 {
       return this.field1088;
    }
 
+   @ObfInfo(
+      owner = "dt",
+      name = "u",
+      desc = "(IB)[F"
+   )
    float[] method620(int var1) {
       return this.field1089[var1];
    }
 
+   @ObfInfo(
+      owner = "dt",
+      name = "b",
+      desc = "(II)[F"
+   )
    float[] method621(int var1) {
       return this.field1092[var1];
    }
 
+   @ObfInfo(
+      owner = "dt",
+      name = "j",
+      desc = "(IS)[F"
+   )
    float[] method622(int var1) {
       return this.field1094[var1];
    }

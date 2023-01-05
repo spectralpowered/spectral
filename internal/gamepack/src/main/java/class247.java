@@ -1,6 +1,19 @@
+@ObfInfo(
+   name = "jo"
+)
 public class class247 {
+   @ObfInfo(
+      owner = "jo",
+      name = "cb",
+      desc = "[Lra;"
+   )
    static class344[] field2058;
 
+   @ObfInfo(
+      owner = "jo",
+      name = "h",
+      desc = "(Lqx;I)V"
+   )
    static final void method1077(class6 var0) {
       var0.method33();
       int var2 = client.field348;
@@ -41,6 +54,11 @@ public class class247 {
       var0.method34();
    }
 
+   @ObfInfo(
+      owner = "jo",
+      name = "hf",
+      desc = "(IIIB)V"
+   )
    static final void method1078(int var0, int var1, int var2) {
       if (class463.field3850 < var0) {
          class463.field3850 += class148.field1166 + (var0 - class463.field3850) * class438.field3645 / 1000;

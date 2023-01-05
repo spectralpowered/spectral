@@ -1,13 +1,36 @@
 import java.io.IOException;
 
+@ObfInfo(
+   name = "dk"
+)
 public class class202 extends class392 {
+   @ObfInfo(
+      owner = "dk",
+      name = "fk",
+      desc = "Lon;"
+   )
    static class305 field1758;
+   @ObfInfo(
+      owner = "dk",
+      name = "h",
+      desc = "Z"
+   )
    final boolean field1757;
 
+   @ObfInfo(
+      owner = "dk",
+      name = "<init>",
+      desc = "(Z)V"
+   )
    public class202(boolean var1) {
       this.field1757 = var1;
    }
 
+   @ObfInfo(
+      owner = "dk",
+      name = "h",
+      desc = "(Loa;Loa;I)I"
+   )
    int method888(class69 var1, class69 var2) {
       if (var1.field627 != 0) {
          if (var2.field627 == 0) {
@@ -20,10 +43,20 @@ public class class202 extends class392 {
       return this.method1918(var1, var2);
    }
 
+   @ObfInfo(
+      owner = "dk",
+      name = "compare",
+      desc = "(Ljava/lang/Object;Ljava/lang/Object;)I"
+   )
    public int compare(Object var1, Object var2) {
       return this.method888((class69)var1, (class69)var2);
    }
 
+   @ObfInfo(
+      owner = "dk",
+      name = "e",
+      desc = "(Lly;Lly;ZII)V"
+   )
    static void method887(class274 var0, class274 var1, boolean var2, int var3) {
       if (class359.field3066) {
          if (var3 == 4) {

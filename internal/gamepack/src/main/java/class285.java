@@ -1,15 +1,73 @@
+@ObfInfo(
+   name = "iu"
+)
 public class class285 implements class360 {
+   @ObfInfo(
+      owner = "iu",
+      name = "v",
+      desc = "I"
+   )
    int field2355;
+   @ObfInfo(
+      owner = "iu",
+      name = "e",
+      desc = "I"
+   )
    int field2356;
+   @ObfInfo(
+      owner = "iu",
+      name = "u",
+      desc = "I"
+   )
    int field2357;
+   @ObfInfo(
+      owner = "iu",
+      name = "h",
+      desc = "I"
+   )
    int field2358;
+   @ObfInfo(
+      owner = "iu",
+      name = "m",
+      desc = "I"
+   )
    int field2359;
+   @ObfInfo(
+      owner = "iu",
+      name = "r",
+      desc = "I"
+   )
    int field2360;
+   @ObfInfo(
+      owner = "iu",
+      name = "f",
+      desc = "I"
+   )
    int field2361;
+   @ObfInfo(
+      owner = "iu",
+      name = "x",
+      desc = "I"
+   )
    int field2362;
+   @ObfInfo(
+      owner = "iu",
+      name = "q",
+      desc = "I"
+   )
    int field2363;
+   @ObfInfo(
+      owner = "iu",
+      name = "b",
+      desc = "I"
+   )
    int field2364;
 
+   @ObfInfo(
+      owner = "iu",
+      name = "h",
+      desc = "(Lit;B)V"
+   )
    public void method1797(class46 var1) {
       if (var1.field552 > this.field2361) {
          var1.field552 = this.field2361;
@@ -29,6 +87,11 @@ public class class285 implements class360 {
 
    }
 
+   @ObfInfo(
+      owner = "iu",
+      name = "e",
+      desc = "(IIII)Z"
+   )
    public boolean method1793(int var1, int var2, int var3) {
       if (var1 >= this.field2358 && var1 < this.field2356 + this.field2358) {
          return var2 >> 6 >= this.field2355 && var2 >> 6 <= this.field2359 && var3 >> 6 >= this.field2362 && var3 >> 6 <= this.field2363;
@@ -37,10 +100,20 @@ public class class285 implements class360 {
       }
    }
 
+   @ObfInfo(
+      owner = "iu",
+      name = "v",
+      desc = "(IIS)Z"
+   )
    public boolean method1792(int var1, int var2) {
       return var1 >> 6 >= this.field2361 && var1 >> 6 <= this.field2357 && var2 >> 6 >= this.field2360 && var2 >> 6 <= this.field2364;
    }
 
+   @ObfInfo(
+      owner = "iu",
+      name = "x",
+      desc = "(IIIB)[I"
+   )
    public int[] method1794(int var1, int var2, int var3) {
       if (!this.method1793(var1, var2, var3)) {
          return null;
@@ -50,6 +123,11 @@ public class class285 implements class360 {
       }
    }
 
+   @ObfInfo(
+      owner = "iu",
+      name = "m",
+      desc = "(III)Lky;"
+   )
    public class464 method1796(int var1, int var2) {
       if (!this.method1792(var1, var2)) {
          return null;
@@ -60,6 +138,11 @@ public class class285 implements class360 {
       }
    }
 
+   @ObfInfo(
+      owner = "iu",
+      name = "q",
+      desc = "(Lqy;I)V"
+   )
    public void method1795(class127 var1) {
       this.field2358 = var1.method547();
       this.field2356 = var1.method547();
@@ -74,13 +157,28 @@ public class class285 implements class360 {
       this.method1415();
    }
 
+   @ObfInfo(
+      owner = "iu",
+      name = "f",
+      desc = "(B)V"
+   )
    void method1415() {
    }
 
+   @ObfInfo(
+      owner = "iu",
+      name = "x",
+      desc = "(II)Z"
+   )
    public static boolean method1417(int var0) {
       return (var0 >> 30 & 1) != 0;
    }
 
+   @ObfInfo(
+      owner = "iu",
+      name = "d",
+      desc = "(ILbm;ZI)I"
+   )
    static int method1416(int var0, class461 var1, boolean var2) {
       class120 var4 = class67.method299(class386.field3248[--class161.field1227]);
       if (var0 == 2800) {

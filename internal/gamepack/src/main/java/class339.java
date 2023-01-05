@@ -1,15 +1,73 @@
+@ObfInfo(
+   name = "bn"
+)
 public final class class339 extends class295 {
+   @ObfInfo(
+      owner = "bn",
+      name = "b",
+      desc = "Z"
+   )
    boolean field2710 = false;
+   @ObfInfo(
+      owner = "bn",
+      name = "f",
+      desc = "Lga;"
+   )
    class242 field2713;
+   @ObfInfo(
+      owner = "bn",
+      name = "h",
+      desc = "I"
+   )
    int field2706;
+   @ObfInfo(
+      owner = "bn",
+      name = "e",
+      desc = "I"
+   )
    int field2707;
+   @ObfInfo(
+      owner = "bn",
+      name = "v",
+      desc = "I"
+   )
    int field2708;
+   @ObfInfo(
+      owner = "bn",
+      name = "m",
+      desc = "I"
+   )
    int field2709;
+   @ObfInfo(
+      owner = "bn",
+      name = "q",
+      desc = "I"
+   )
    int field2711;
+   @ObfInfo(
+      owner = "bn",
+      name = "r",
+      desc = "I"
+   )
    int field2712 = 0;
+   @ObfInfo(
+      owner = "bn",
+      name = "u",
+      desc = "I"
+   )
    int field2714 = 0;
+   @ObfInfo(
+      owner = "bn",
+      name = "x",
+      desc = "I"
+   )
    int field2715;
 
+   @ObfInfo(
+      owner = "bn",
+      name = "<init>",
+      desc = "(IIIIIII)V"
+   )
    class339(int var1, int var2, int var3, int var4, int var5, int var6, int var7) {
       this.field2706 = var1;
       this.field2708 = var2;
@@ -27,6 +85,11 @@ public final class class339 extends class295 {
 
    }
 
+   @ObfInfo(
+      owner = "bn",
+      name = "h",
+      desc = "(II)V"
+   )
    final void method1704(int var1) {
       if (!this.field2710) {
          this.field2714 += var1;
@@ -49,6 +112,11 @@ public final class class339 extends class295 {
       }
    }
 
+   @ObfInfo(
+      owner = "bn",
+      name = "e",
+      desc = "(I)Lhh;"
+   )
    protected final class470 method1438() {
       class327 var2 = class429.method2119(this.field2706);
       class470 var3;
@@ -61,10 +129,20 @@ public final class class339 extends class295 {
       return var3 == null ? null : var3;
    }
 
+   @ObfInfo(
+      owner = "bn",
+      name = "h",
+      desc = "(I)[Lom;"
+   )
    static class436[] method1705() {
       return new class436[]{class436.field3614, class436.field3613, class436.field3612, class436.field3616};
    }
 
+   @ObfInfo(
+      owner = "bn",
+      name = "gu",
+      desc = "(B)I"
+   )
    static int method1700() {
       if (null != client.field515 && client.field443 < client.field515.size()) {
          int var1 = 0;
@@ -79,14 +157,29 @@ public final class class339 extends class295 {
       }
    }
 
+   @ObfInfo(
+      owner = "bn",
+      name = "c",
+      desc = "(I)I"
+   )
    static int method1701() {
       return class359.field3075;
    }
 
+   @ObfInfo(
+      owner = "bn",
+      name = "im",
+      desc = "(I)Z"
+   )
    static boolean method1703() {
       return (client.field449 & 8) != 0;
    }
 
+   @ObfInfo(
+      owner = "bn",
+      name = "kk",
+      desc = "(Lkd;II)I"
+   )
    static final int method1702(class120 var0, int var1) {
       if (var0.field885 != null && var1 < var0.field885.length) {
          try {

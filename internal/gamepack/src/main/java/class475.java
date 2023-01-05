@@ -1,12 +1,30 @@
+@ObfInfo(
+   name = "gf"
+)
 public class class475 {
+   @ObfInfo(
+      owner = "gf",
+      name = "h",
+      desc = "(Lly;I)V"
+   )
    public static void method2351(class274 var0) {
       class457.field3778 = var0;
    }
 
+   @ObfInfo(
+      owner = "gf",
+      name = "h",
+      desc = "(B)[Ldz;"
+   )
    static class453[] method2355() {
       return new class453[]{class453.field3759, class453.field3762, class453.field3747, class453.field3751, class453.field3749, class453.field3750, class453.field3746, class453.field3752, class453.field3753, class453.field3754, class453.field3755, class453.field3756, class453.field3757, class453.field3748, class453.field3758, class453.field3760, class453.field3761};
    }
 
+   @ObfInfo(
+      owner = "gf",
+      name = "v",
+      desc = "(B)V"
+   )
    public static void method2353() {
       Object var1 = class254.field2093;
       synchronized(class254.field2093) {
@@ -23,6 +41,11 @@ public class class475 {
       }
    }
 
+   @ObfInfo(
+      owner = "gf",
+      name = "s",
+      desc = "(IIB)I"
+   )
    static final int method2354(int var0, int var1) {
       if (var0 == -1) {
          return 12345678;
@@ -38,6 +61,11 @@ public class class475 {
       }
    }
 
+   @ObfInfo(
+      owner = "gf",
+      name = "ix",
+      desc = "(IIIIII)V"
+   )
    static final void method2352(int var0, int var1, int var2, int var3, int var4) {
       long var6 = class408.field3415.method1613(var0, var1, var2);
       int var8;

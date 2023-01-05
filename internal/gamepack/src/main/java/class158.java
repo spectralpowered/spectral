@@ -1,7 +1,30 @@
+@ObfInfo(
+   name = "mp"
+)
 public class class158 {
+   @ObfInfo(
+      owner = "mp",
+      name = "h",
+      desc = "[C"
+   )
    static char[] field1212 = new char[64];
+   @ObfInfo(
+      owner = "mp",
+      name = "v",
+      desc = "[C"
+   )
    static char[] field1214;
+   @ObfInfo(
+      owner = "mp",
+      name = "e",
+      desc = "[C"
+   )
    static char[] field1215;
+   @ObfInfo(
+      owner = "mp",
+      name = "x",
+      desc = "[I"
+   )
    static int[] field1213;
 
    static {

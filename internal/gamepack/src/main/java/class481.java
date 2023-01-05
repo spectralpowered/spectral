@@ -1,11 +1,29 @@
+@ObfInfo(
+   name = "pe"
+)
 public class class481 extends class379 {
+   @ObfInfo(
+      owner = "pe",
+      name = "<init>",
+      desc = "(I)V"
+   )
    public class481(int var1) {
       super(var1);
    }
 
+   @ObfInfo(
+      owner = "pe",
+      name = "h",
+      desc = "(Lqy;II)V"
+   )
    void method1865(class127 var1, int var2) {
    }
 
+   @ObfInfo(
+      owner = "pe",
+      name = "x",
+      desc = "(IZIZI)V"
+   )
    static void method2372(int var0, boolean var1, int var2, boolean var3) {
       if (null != class2.field12) {
          class349.method1758(0, class2.field12.length - 1, var0, var1, var2, var3);
@@ -13,6 +31,11 @@ public class class481 extends class379 {
 
    }
 
+   @ObfInfo(
+      owner = "pe",
+      name = "v",
+      desc = "(IIILgg;Lgw;I)Z"
+   )
    static final boolean method2373(int var0, int var1, int var2, class39 var3, class427 var4) {
       int var6 = var0;
       int var7 = var1;

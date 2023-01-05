@@ -1,10 +1,43 @@
+@ObfInfo(
+   name = "qp"
+)
 public final class class170 {
+   @ObfInfo(
+      owner = "qp",
+      name = "v",
+      desc = "Lpl;"
+   )
    class139 field1272;
+   @ObfInfo(
+      owner = "qp",
+      name = "x",
+      desc = "Lpl;"
+   )
    class139 field1274;
+   @ObfInfo(
+      owner = "qp",
+      name = "e",
+      desc = "[Lpl;"
+   )
    class139[] field1271;
+   @ObfInfo(
+      owner = "qp",
+      name = "m",
+      desc = "I"
+   )
    int field1270 = 0;
+   @ObfInfo(
+      owner = "qp",
+      name = "h",
+      desc = "I"
+   )
    int field1273;
 
+   @ObfInfo(
+      owner = "qp",
+      name = "<init>",
+      desc = "(I)V"
+   )
    public class170(int var1) {
       this.field1273 = var1;
       this.field1271 = new class139[var1];
@@ -17,6 +50,11 @@ public final class class170 {
 
    }
 
+   @ObfInfo(
+      owner = "qp",
+      name = "h",
+      desc = "(J)Lpl;"
+   )
    public class139 method791(long var1) {
       class139 var3 = this.field1271[(int)(var1 & (long)(this.field1273 - 1))];
 
@@ -32,6 +70,11 @@ public final class class170 {
       return null;
    }
 
+   @ObfInfo(
+      owner = "qp",
+      name = "e",
+      desc = "(Lpl;J)V"
+   )
    public void method788(class139 var1, long var2) {
       if (var1.field1133 != null) {
          var1.method637();
@@ -45,11 +88,21 @@ public final class class170 {
       var1.field1134 = var2;
    }
 
+   @ObfInfo(
+      owner = "qp",
+      name = "v",
+      desc = "()Lpl;"
+   )
    public class139 method789() {
       this.field1270 = 0;
       return this.method790();
    }
 
+   @ObfInfo(
+      owner = "qp",
+      name = "x",
+      desc = "()Lpl;"
+   )
    public class139 method790() {
       class139 var1;
       if (this.field1270 > 0 && this.field1274 != this.field1271[this.field1270 - 1]) {

@@ -1,4 +1,12 @@
+@ObfInfo(
+   name = "do"
+)
 public class class421 {
+   @ObfInfo(
+      owner = "do",
+      name = "e",
+      desc = "(IB)Lgz;"
+   )
    public static class423 method2049(int var0, byte var1) {
       class423 var2 = (class423)class423.field3459.method394((long)var0);
       if (null != var2) {

@@ -1,14 +1,52 @@
 import java.io.File;
 import java.io.IOException;
 
+@ObfInfo(
+   name = "fe"
+)
 public class class198 extends class195 {
+   @ObfInfo(
+      owner = "fe",
+      name = "h",
+      desc = "Lly;"
+   )
    public static class274 field1743;
+   @ObfInfo(
+      owner = "fe",
+      name = "a",
+      desc = "Lfn;"
+   )
    static class57 field1744;
+   @ObfInfo(
+      owner = "fe",
+      name = "sk",
+      desc = "Lfn;"
+   )
    static class57 field1746;
+   @ObfInfo(
+      owner = "fe",
+      name = "e",
+      desc = "Ljv;"
+   )
    static class99 field1741 = new class99(64);
+   @ObfInfo(
+      owner = "fe",
+      name = "mh",
+      desc = "I"
+   )
    static int field1745;
+   @ObfInfo(
+      owner = "fe",
+      name = "v",
+      desc = "Z"
+   )
    public boolean field1742 = false;
 
+   @ObfInfo(
+      owner = "fe",
+      name = "e",
+      desc = "(Lqy;I)V"
+   )
    void method877(class127 var1) {
       while(true) {
          int var3 = var1.method547();
@@ -20,6 +58,11 @@ public class class198 extends class195 {
       }
    }
 
+   @ObfInfo(
+      owner = "fe",
+      name = "v",
+      desc = "(Lqy;II)V"
+   )
    void method878(class127 var1, int var2) {
       if (var2 == 2) {
          this.field1742 = true;
@@ -27,6 +70,11 @@ public class class198 extends class195 {
 
    }
 
+   @ObfInfo(
+      owner = "fe",
+      name = "h",
+      desc = "(Ljava/lang/String;Ljava/lang/String;II)Ljava/io/File;"
+   )
    public static File method876(String var0, String var1, int var2) {
       String var4 = var2 == 0 ? "" : "" + var2;
       class25.field114 = new File(class134.field1109, "jagex_cl_" + var0 + "_" + var1 + var4 + ".dat");

@@ -1,28 +1,126 @@
 import java.util.Arrays;
 
+@ObfInfo(
+   name = "dh"
+)
 public class class252 {
+   @ObfInfo(
+      owner = "dh",
+      name = "tb",
+      desc = "I"
+   )
    static int field2083;
+   @ObfInfo(
+      owner = "dh",
+      name = "ij",
+      desc = "[[I"
+   )
    static int[][] field2084;
+   @ObfInfo(
+      owner = "dh",
+      name = "e",
+      desc = "Ldh;"
+   )
    static final class252 field2069 = new class252(1);
+   @ObfInfo(
+      owner = "dh",
+      name = "v",
+      desc = "Ldh;"
+   )
    static final class252 field2070 = new class252(2);
+   @ObfInfo(
+      owner = "dh",
+      name = "x",
+      desc = "Ldh;"
+   )
    static final class252 field2071 = new class252(3);
+   @ObfInfo(
+      owner = "dh",
+      name = "g",
+      desc = "Ldh;"
+   )
    static final class252 field2072 = new class252(11);
+   @ObfInfo(
+      owner = "dh",
+      name = "q",
+      desc = "Ldh;"
+   )
    static final class252 field2073 = new class252(5);
+   @ObfInfo(
+      owner = "dh",
+      name = "f",
+      desc = "Ldh;"
+   )
    static final class252 field2074 = new class252(6);
+   @ObfInfo(
+      owner = "dh",
+      name = "r",
+      desc = "Ldh;"
+   )
    static final class252 field2075 = new class252(7);
+   @ObfInfo(
+      owner = "dh",
+      name = "m",
+      desc = "Ldh;"
+   )
    static final class252 field2076 = new class252(4);
+   @ObfInfo(
+      owner = "dh",
+      name = "b",
+      desc = "Ldh;"
+   )
    static final class252 field2077 = new class252(9);
+   @ObfInfo(
+      owner = "dh",
+      name = "i",
+      desc = "Ldh;"
+   )
    static final class252 field2078 = new class252(12);
+   @ObfInfo(
+      owner = "dh",
+      name = "j",
+      desc = "Ldh;"
+   )
    static final class252 field2079 = new class252(10);
+   @ObfInfo(
+      owner = "dh",
+      name = "u",
+      desc = "Ldh;"
+   )
    static final class252 field2080 = new class252(8);
+   @ObfInfo(
+      owner = "dh",
+      name = "o",
+      desc = "Ldh;"
+   )
    static final class252 field2081 = new class252(13);
+   @ObfInfo(
+      owner = "dh",
+      name = "h",
+      desc = "Ldh;"
+   )
    static final class252 field2085 = new class252(0);
+   @ObfInfo(
+      owner = "dh",
+      name = "n",
+      desc = "I"
+   )
    int field2082;
 
+   @ObfInfo(
+      owner = "dh",
+      name = "<init>",
+      desc = "(I)V"
+   )
    class252(int var1) {
       this.field2082 = var1;
    }
 
+   @ObfInfo(
+      owner = "dh",
+      name = "gn",
+      desc = "(I)V"
+   )
    static void method1092() {
       client.field451 = -1L;
       class414.field3423.field2015 = 0;

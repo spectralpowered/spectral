@@ -1,12 +1,40 @@
 import java.io.File;
 import java.util.Hashtable;
 
+@ObfInfo(
+   name = "ft"
+)
 public class class229 {
+   @ObfInfo(
+      owner = "ft",
+      name = "h",
+      desc = "Z"
+   )
    static boolean field1936 = false;
+   @ObfInfo(
+      owner = "ft",
+      name = "e",
+      desc = "Ljava/io/File;"
+   )
    static File field1937;
+   @ObfInfo(
+      owner = "ft",
+      name = "v",
+      desc = "Ljava/util/Hashtable;"
+   )
    static Hashtable field1938 = new Hashtable(16);
+   @ObfInfo(
+      owner = "ft",
+      name = "ea",
+      desc = "J"
+   )
    static long field1939;
 
+   @ObfInfo(
+      owner = "ft",
+      name = "ad",
+      desc = "(ILbm;ZI)I"
+   )
    static int method997(int var0, class461 var1, boolean var2) {
       int var4;
       if (var0 == 3500) {
@@ -26,6 +54,11 @@ public class class229 {
       }
    }
 
+   @ObfInfo(
+      owner = "ft",
+      name = "lf",
+      desc = "(D)V"
+   )
    static final void method998(double var0) {
       class341.method1708(var0);
       ((class251)class341.field2728).method1085(var0);

@@ -1,17 +1,55 @@
+@ObfInfo(
+   name = "ph"
+)
 public class class14 {
+   @ObfInfo(
+      owner = "ph",
+      name = "h",
+      desc = "Lph;"
+   )
    public static final class14 field67 = new class14("application/json");
+   @ObfInfo(
+      owner = "ph",
+      name = "fz",
+      desc = "I"
+   )
    static int field70;
+   @ObfInfo(
+      owner = "ph",
+      name = "e",
+      desc = "Lph;"
+   )
    static final class14 field68 = new class14("text/plain");
+   @ObfInfo(
+      owner = "ph",
+      name = "v",
+      desc = "Ljava/lang/String;"
+   )
    String field69;
 
+   @ObfInfo(
+      owner = "ph",
+      name = "<init>",
+      desc = "(Ljava/lang/String;)V"
+   )
    class14(String var1) {
       this.field69 = var1;
    }
 
+   @ObfInfo(
+      owner = "ph",
+      name = "h",
+      desc = "(I)Ljava/lang/String;"
+   )
    public String method71() {
       return this.field69;
    }
 
+   @ObfInfo(
+      owner = "ph",
+      name = "v",
+      desc = "([Lbz;II[I[IB)V"
+   )
    static void method72(class2[] var0, int var1, int var2, int[] var3, int[] var4) {
       if (var1 < var2) {
          int var6 = var1 - 1;
@@ -118,6 +156,11 @@ public class class14 {
 
    }
 
+   @ObfInfo(
+      owner = "ph",
+      name = "f",
+      desc = "(I)V"
+   )
    public static void method70() {
       class11.field60.method395();
    }

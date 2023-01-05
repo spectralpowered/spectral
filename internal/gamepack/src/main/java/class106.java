@@ -1,9 +1,37 @@
+@ObfInfo(
+   name = "qs"
+)
 public class class106 extends class195 {
+   @ObfInfo(
+      owner = "qs",
+      name = "e",
+      desc = "Ljv;"
+   )
    public static class99 field818 = new class99(64);
+   @ObfInfo(
+      owner = "qs",
+      name = "h",
+      desc = "Lly;"
+   )
    static class274 field819;
+   @ObfInfo(
+      owner = "qs",
+      name = "v",
+      desc = "[[I"
+   )
    public int[][] field820;
+   @ObfInfo(
+      owner = "qs",
+      name = "x",
+      desc = "[[Ljava/lang/Object;"
+   )
    public Object[][] field817;
 
+   @ObfInfo(
+      owner = "qs",
+      name = "v",
+      desc = "(Lqy;B)V"
+   )
    void method419(class127 var1) {
       while(true) {
          int var3 = var1.method547();
@@ -15,6 +43,11 @@ public class class106 extends class195 {
       }
    }
 
+   @ObfInfo(
+      owner = "qs",
+      name = "x",
+      desc = "(Lqy;IB)V"
+   )
    void method422(class127 var1, int var2) {
       if (var2 == 1) {
          int var4 = var1.method547();
@@ -56,9 +89,19 @@ public class class106 extends class195 {
 
    }
 
+   @ObfInfo(
+      owner = "qs",
+      name = "m",
+      desc = "(I)V"
+   )
    void method420() {
    }
 
+   @ObfInfo(
+      owner = "qs",
+      name = "h",
+      desc = "(Ljava/lang/CharSequence;I)Ljava/lang/String;"
+   )
    public static String method421(CharSequence var0) {
       int var2 = var0.length();
       StringBuilder var3 = new StringBuilder(var2);
@@ -93,6 +136,11 @@ public class class106 extends class195 {
       return var3.toString();
    }
 
+   @ObfInfo(
+      owner = "qs",
+      name = "e",
+      desc = "(IS)I"
+   )
    public static int method423(int var0) {
       return var0 >>> 4 & class227.field1930;
    }

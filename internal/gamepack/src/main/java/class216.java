@@ -1,16 +1,79 @@
+@ObfInfo(
+   name = "ho"
+)
 public class class216 {
+   @ObfInfo(
+      owner = "ho",
+      name = "e",
+      desc = "[I"
+   )
    static int[] field1877 = new int[500];
+   @ObfInfo(
+      owner = "ho",
+      name = "v",
+      desc = "[I"
+   )
    static int[] field1878 = new int[500];
+   @ObfInfo(
+      owner = "ho",
+      name = "x",
+      desc = "[I"
+   )
    static int[] field1879 = new int[500];
+   @ObfInfo(
+      owner = "ho",
+      name = "h",
+      desc = "[I"
+   )
    static int[] field1883 = new int[500];
+   @ObfInfo(
+      owner = "ho",
+      name = "j",
+      desc = "Z"
+   )
    boolean field1886 = false;
+   @ObfInfo(
+      owner = "ho",
+      name = "m",
+      desc = "Lhn;"
+   )
    class176 field1880 = null;
+   @ObfInfo(
+      owner = "ho",
+      name = "q",
+      desc = "I"
+   )
    int field1881 = -1;
+   @ObfInfo(
+      owner = "ho",
+      name = "r",
+      desc = "[I"
+   )
    int[] field1876;
+   @ObfInfo(
+      owner = "ho",
+      name = "f",
+      desc = "[I"
+   )
    int[] field1882;
+   @ObfInfo(
+      owner = "ho",
+      name = "u",
+      desc = "[I"
+   )
    int[] field1884;
+   @ObfInfo(
+      owner = "ho",
+      name = "b",
+      desc = "[I"
+   )
    int[] field1885;
 
+   @ObfInfo(
+      owner = "ho",
+      name = "<init>",
+      desc = "([BLhn;)V"
+   )
    class216(byte[] var1, class176 var2) {
       this.field1880 = var2;
       class127 var3 = new class127(var1);

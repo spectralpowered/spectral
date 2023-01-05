@@ -4,12 +4,40 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 
+@ObfInfo(
+   name = "p"
+)
 public class class32 {
+   @ObfInfo(
+      owner = "p",
+      name = "ei",
+      desc = "Lln;"
+   )
    static class38 field176;
+   @ObfInfo(
+      owner = "p",
+      name = "ov",
+      desc = "I"
+   )
    static int field177;
+   @ObfInfo(
+      owner = "p",
+      name = "h",
+      desc = "I"
+   )
    final int field174;
+   @ObfInfo(
+      owner = "p",
+      name = "e",
+      desc = "Ljava/lang/String;"
+   )
    final String field175;
 
+   @ObfInfo(
+      owner = "p",
+      name = "<init>",
+      desc = "(Ljava/net/HttpURLConnection;)V"
+   )
    class32(HttpURLConnection var1) throws IOException {
       this.field174 = var1.getResponseCode();
       var1.getResponseMessage();
@@ -31,19 +59,39 @@ public class class32 {
       this.field175 = var2.toString();
    }
 
+   @ObfInfo(
+      owner = "p",
+      name = "<init>",
+      desc = "(Ljava/lang/String;)V"
+   )
    class32(String var1) {
       this.field174 = 400;
       this.field175 = "";
    }
 
+   @ObfInfo(
+      owner = "p",
+      name = "h",
+      desc = "(I)I"
+   )
    public int method138() {
       return this.field174;
    }
 
+   @ObfInfo(
+      owner = "p",
+      name = "e",
+      desc = "(I)Ljava/lang/String;"
+   )
    public String method139() {
       return this.field175;
    }
 
+   @ObfInfo(
+      owner = "p",
+      name = "e",
+      desc = "(IB)Lgh;"
+   )
    public static class313 method140(int var0) {
       class313 var2 = (class313)class313.field2470.method394((long)var0);
       if (null != var2) {

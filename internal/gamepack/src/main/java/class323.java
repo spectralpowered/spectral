@@ -1,6 +1,19 @@
+@ObfInfo(
+   name = "al"
+)
 public class class323 {
+   @ObfInfo(
+      owner = "al",
+      name = "h",
+      desc = "Lmv;"
+   )
    public static class395 field2565 = new class395();
 
+   @ObfInfo(
+      owner = "al",
+      name = "r",
+      desc = "(I)Z"
+   )
    public static boolean method1652() {
       try {
          if (2 == class40.field201) {
@@ -38,6 +51,11 @@ public class class323 {
       return false;
    }
 
+   @ObfInfo(
+      owner = "al",
+      name = "ka",
+      desc = "(Ljava/lang/String;Ljava/lang/String;IIIIIZI)V"
+   )
    static final void method1653(String var0, String var1, int var2, int var3, int var4, int var5, int var6, boolean var7) {
       if (!client.field368) {
          if (client.field369 < 500) {
@@ -55,6 +73,11 @@ public class class323 {
       }
    }
 
+   @ObfInfo(
+      owner = "al",
+      name = "ny",
+      desc = "(IS)V"
+   )
    static void method1654(int var0) {
       if (var0 != client.field220) {
          client.field220 = var0;

@@ -1,23 +1,81 @@
 import java.io.IOException;
 
+@ObfInfo(
+   name = "pt"
+)
 public class class460 {
+   @ObfInfo(
+      owner = "pt",
+      name = "q",
+      desc = "Lpt;"
+   )
    public static final class460 field3807 = new class460("verdana_15pt_regular");
+   @ObfInfo(
+      owner = "pt",
+      name = "e",
+      desc = "Lpt;"
+   )
    public static final class460 field3808 = new class460("p12_full");
+   @ObfInfo(
+      owner = "pt",
+      name = "x",
+      desc = "Lpt;"
+   )
    public static final class460 field3810 = new class460("verdana_11pt_regular");
+   @ObfInfo(
+      owner = "pt",
+      name = "m",
+      desc = "Lpt;"
+   )
    public static final class460 field3811 = new class460("verdana_13pt_regular");
+   @ObfInfo(
+      owner = "pt",
+      name = "h",
+      desc = "Lpt;"
+   )
    public static final class460 field3812 = new class460("p11_full");
+   @ObfInfo(
+      owner = "pt",
+      name = "v",
+      desc = "Lpt;"
+   )
    public static final class460 field3814 = new class460("b12_full");
+   @ObfInfo(
+      owner = "pt",
+      name = "fb",
+      desc = "Lln;"
+   )
    static class38 field3809;
+   @ObfInfo(
+      owner = "pt",
+      name = "f",
+      desc = "Ljava/lang/String;"
+   )
    String field3813;
 
+   @ObfInfo(
+      owner = "pt",
+      name = "<init>",
+      desc = "(Ljava/lang/String;)V"
+   )
    class460(String var1) {
       this.field3813 = var1;
    }
 
+   @ObfInfo(
+      owner = "pt",
+      name = "h",
+      desc = "(I)[Lpt;"
+   )
    public static class460[] method2268() {
       return new class460[]{field3808, field3810, field3814, field3807, field3811, field3812};
    }
 
+   @ObfInfo(
+      owner = "pt",
+      name = "m",
+      desc = "(I)V"
+   )
    static void method2266() {
       if (class359.field3066) {
          class119.field878 = null;
@@ -58,6 +116,11 @@ public class class460 {
       }
    }
 
+   @ObfInfo(
+      owner = "pt",
+      name = "ib",
+      desc = "(ZI)V"
+   )
    static final void method2267(boolean var0) {
       client.method189();
       ++client.field279.field4045;
@@ -77,6 +140,11 @@ public class class460 {
       }
    }
 
+   @ObfInfo(
+      owner = "pt",
+      name = "kr",
+      desc = "(II)Ljava/lang/String;"
+   )
    static final String method2269(int var0) {
       String var2 = Integer.toString(var0);
 

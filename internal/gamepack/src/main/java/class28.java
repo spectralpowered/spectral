@@ -1,4 +1,12 @@
+@ObfInfo(
+   name = "js"
+)
 public class class28 {
+   @ObfInfo(
+      owner = "js",
+      name = "h",
+      desc = "[I"
+   )
    static int[] field162;
 
    static {

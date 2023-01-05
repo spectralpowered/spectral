@@ -1,4 +1,12 @@
+@ObfInfo(
+   name = "cw"
+)
 public class class79 {
+   @ObfInfo(
+      owner = "cw",
+      name = "h",
+      desc = "([Ljava/lang/String;[SIIB)V"
+   )
    public static void method332(String[] var0, short[] var1, int var2, int var3) {
       if (var2 < var3) {
          int var5 = (var3 + var2) / 2;
@@ -31,6 +39,11 @@ public class class79 {
 
    }
 
+   @ObfInfo(
+      owner = "cw",
+      name = "al",
+      desc = "(ILbm;ZI)I"
+   )
    static int method331(int var0, class461 var1, boolean var2) {
       int var4;
       if (var0 == 5504) {

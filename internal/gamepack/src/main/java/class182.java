@@ -1,14 +1,52 @@
+@ObfInfo(
+   name = "em"
+)
 public class class182 {
+   @ObfInfo(
+      owner = "em",
+      name = "iv",
+      desc = "Lrx;"
+   )
    static class266 field1681;
+   @ObfInfo(
+      owner = "em",
+      name = "fu",
+      desc = "Ljava/lang/String;"
+   )
    static String field1677;
+   @ObfInfo(
+      owner = "em",
+      name = "v",
+      desc = "Lmv;"
+   )
    class395 field1679 = new class395();
+   @ObfInfo(
+      owner = "em",
+      name = "e",
+      desc = "I"
+   )
    int field1678 = -1;
+   @ObfInfo(
+      owner = "em",
+      name = "h",
+      desc = "J"
+   )
    long field1680;
 
+   @ObfInfo(
+      owner = "em",
+      name = "<init>",
+      desc = "(Lqy;)V"
+   )
    public class182(class127 var1) {
       this.method831(var1);
    }
 
+   @ObfInfo(
+      owner = "em",
+      name = "h",
+      desc = "(Lqy;I)V"
+   )
    void method831(class127 var1) {
       this.field1680 = var1.method598();
       this.field1678 = var1.method595();
@@ -57,6 +95,11 @@ public class class182 {
 
    }
 
+   @ObfInfo(
+      owner = "em",
+      name = "e",
+      desc = "(Lep;I)V"
+   )
    public void method832(class429 var1) {
       if (this.field1680 == var1.field3546 && var1.field3567 == this.field1678) {
          for(class480 var3 = (class480)this.field1679.method1941(); null != var3; var3 = (class480)this.field1679.method1935()) {
@@ -69,6 +112,11 @@ public class class182 {
       }
    }
 
+   @ObfInfo(
+      owner = "em",
+      name = "u",
+      desc = "([BIILhc;[Lgw;B)V"
+   )
    static final void method830(byte[] var0, int var1, int var2, class318 var3, class427[] var4) {
       class127 var6 = new class127(var0);
       int var7 = -1;

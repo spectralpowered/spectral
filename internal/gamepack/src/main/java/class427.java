@@ -1,11 +1,49 @@
+@ObfInfo(
+   name = "gw"
+)
 public class class427 {
+   @ObfInfo(
+      owner = "gw",
+      name = "p",
+      desc = "I"
+   )
    public static int field3529;
+   @ObfInfo(
+      owner = "gw",
+      name = "an",
+      desc = "I"
+   )
    int field3530;
+   @ObfInfo(
+      owner = "gw",
+      name = "at",
+      desc = "I"
+   )
    int field3531 = 0;
+   @ObfInfo(
+      owner = "gw",
+      name = "ay",
+      desc = "I"
+   )
    int field3532 = 0;
+   @ObfInfo(
+      owner = "gw",
+      name = "ab",
+      desc = "I"
+   )
    int field3533;
+   @ObfInfo(
+      owner = "gw",
+      name = "al",
+      desc = "[[I"
+   )
    public int[][] field3534;
 
+   @ObfInfo(
+      owner = "gw",
+      name = "<init>",
+      desc = "(II)V"
+   )
    public class427(int var1, int var2) {
       this.field3530 = var1;
       this.field3533 = var2;
@@ -13,6 +51,11 @@ public class class427 {
       this.method2082();
    }
 
+   @ObfInfo(
+      owner = "gw",
+      name = "h",
+      desc = "(I)V"
+   )
    public void method2082() {
       for(int var2 = 0; var2 < this.field3530; ++var2) {
          for(int var3 = 0; var3 < this.field3533; ++var3) {
@@ -26,6 +69,11 @@ public class class427 {
 
    }
 
+   @ObfInfo(
+      owner = "gw",
+      name = "e",
+      desc = "(IIIIZI)V"
+   )
    public void method2083(int var1, int var2, int var3, int var4, boolean var5) {
       var1 -= this.field3531;
       var2 -= this.field3532;
@@ -173,6 +221,11 @@ public class class427 {
 
    }
 
+   @ObfInfo(
+      owner = "gw",
+      name = "v",
+      desc = "(IIIIZI)V"
+   )
    public void method2093(int var1, int var2, int var3, int var4, boolean var5) {
       int var7 = 256;
       if (var5) {
@@ -194,22 +247,42 @@ public class class427 {
 
    }
 
+   @ObfInfo(
+      owner = "gw",
+      name = "x",
+      desc = "(IIB)V"
+   )
    public void method2084(int var1, int var2) {
       var1 -= this.field3531;
       var2 -= this.field3532;
       this.field3534[var1][var2] |= 2097152;
    }
 
+   @ObfInfo(
+      owner = "gw",
+      name = "m",
+      desc = "(III)V"
+   )
    public void method2085(int var1, int var2) {
       var1 -= this.field3531;
       var2 -= this.field3532;
       this.field3534[var1][var2] |= 262144;
    }
 
+   @ObfInfo(
+      owner = "gw",
+      name = "q",
+      desc = "(IIIB)V"
+   )
    void method2087(int var1, int var2, int var3) {
       this.field3534[var1][var2] |= var3;
    }
 
+   @ObfInfo(
+      owner = "gw",
+      name = "f",
+      desc = "(IIIIZB)V"
+   )
    public void method2086(int var1, int var2, int var3, int var4, boolean var5) {
       var1 -= this.field3531;
       var2 -= this.field3532;
@@ -357,6 +430,11 @@ public class class427 {
 
    }
 
+   @ObfInfo(
+      owner = "gw",
+      name = "r",
+      desc = "(IIIIIZB)V"
+   )
    public void method2089(int var1, int var2, int var3, int var4, int var5, boolean var6) {
       int var8 = 256;
       if (var6) {
@@ -384,16 +462,31 @@ public class class427 {
 
    }
 
+   @ObfInfo(
+      owner = "gw",
+      name = "u",
+      desc = "(IIII)V"
+   )
    void method2090(int var1, int var2, int var3) {
       this.field3534[var1][var2] &= ~var3;
    }
 
+   @ObfInfo(
+      owner = "gw",
+      name = "b",
+      desc = "(III)V"
+   )
    public void method2091(int var1, int var2) {
       var1 -= this.field3531;
       var2 -= this.field3532;
       this.field3534[var1][var2] &= -262145;
    }
 
+   @ObfInfo(
+      owner = "gw",
+      name = "if",
+      desc = "(B)V"
+   )
    static final void method2092(byte var0) {
       client.field404 = 0;
       int var1 = (class113.field846.field2672 >> 7) + class312.field2465;
@@ -468,6 +561,11 @@ public class class427 {
 
    }
 
+   @ObfInfo(
+      owner = "gw",
+      name = "nx",
+      desc = "(I)V"
+   )
    static void method2088() {
       if (client.field306 == 1) {
          client.field242 = true;

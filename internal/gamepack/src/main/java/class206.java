@@ -1,8 +1,31 @@
+@ObfInfo(
+   name = "mk"
+)
 public class class206 {
+   @ObfInfo(
+      owner = "mk",
+      name = "e",
+      desc = "Lmk;"
+   )
    static final class206 field1780 = new class206();
+   @ObfInfo(
+      owner = "mk",
+      name = "h",
+      desc = "Lmk;"
+   )
    static final class206 field1781 = new class206();
+   @ObfInfo(
+      owner = "mk",
+      name = "v",
+      desc = "Lmk;"
+   )
    static final class206 field1782 = new class206();
 
+   @ObfInfo(
+      owner = "mk",
+      name = "c",
+      desc = "(ZI)V"
+   )
    public static void method900(boolean var0) {
       if (class203.field1759 != var0) {
          class263.field2188.method395();
@@ -13,6 +36,11 @@ public class class206 {
 
    }
 
+   @ObfInfo(
+      owner = "mk",
+      name = "ms",
+      desc = "(S)V"
+   )
    static final void method899() {
       for(int var1 = 0; var1 < class268.field2221; ++var1) {
          class380 var2 = client.field347[class268.field2220[var1]];

@@ -1,6 +1,19 @@
+@ObfInfo(
+   name = "di"
+)
 public class class22 implements class178 {
+   @ObfInfo(
+      owner = "di",
+      name = "jp",
+      desc = "I"
+   )
    static int field105;
 
+   @ObfInfo(
+      owner = "di",
+      name = "in",
+      desc = "(Lct;IIIIIB)V"
+   )
    static final void method96(class334 var0, int var1, int var2, int var3, int var4, int var5) {
       if (var0 != null && var0.method1678()) {
          if (var0 instanceof class267) {

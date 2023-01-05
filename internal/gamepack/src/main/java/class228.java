@@ -3,18 +3,51 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.TimeZone;
 
+@ObfInfo(
+   name = "jg"
+)
 @class451
 public final class class228 {
+   @ObfInfo(
+      owner = "jg",
+      name = "m",
+      desc = "Ljava/io/File;"
+   )
    public static File field1934;
+   @ObfInfo(
+      owner = "jg",
+      name = "sa",
+      desc = "Z"
+   )
    static boolean field1932;
+   @ObfInfo(
+      owner = "jg",
+      name = "sf",
+      desc = "Lnc;"
+   )
    static class17 field1933;
+   @ObfInfo(
+      owner = "jg",
+      name = "jk",
+      desc = "[Lrx;"
+   )
    static class266[] field1935;
+   @ObfInfo(
+      owner = "jg",
+      name = "v",
+      desc = "Ljava/util/HashMap;"
+   )
    static final HashMap field1931 = new HashMap();
 
    static {
       Calendar.getInstance(method994("Europe/London"));
    }
 
+   @ObfInfo(
+      owner = "jg",
+      name = "h",
+      desc = "(Ljava/lang/String;I)Ljava/util/TimeZone;"
+   )
    static TimeZone method994(String var0) {
       HashMap var2 = field1931;
       synchronized(field1931) {
@@ -28,6 +61,11 @@ public final class class228 {
       }
    }
 
+   @ObfInfo(
+      owner = "jg",
+      name = "iq",
+      desc = "(B)V"
+   )
    static void method995() {
       int var1 = class268.field2221;
       int[] var2 = class268.field2220;
@@ -40,6 +78,11 @@ public final class class228 {
 
    }
 
+   @ObfInfo(
+      owner = "jg",
+      name = "iv",
+      desc = "(IIZI)V"
+   )
    static final void method992(int var0, int var1, boolean var2) {
       if (!var2 || var0 != class391.field3279 || var1 != class132.field1104) {
          class391.field3279 = var0;
@@ -147,6 +190,11 @@ public final class class228 {
       }
    }
 
+   @ObfInfo(
+      owner = "jg",
+      name = "jx",
+      desc = "(II)Z"
+   )
    static final boolean method996(int var0) {
       if (var0 < 0) {
          return false;
@@ -160,6 +208,11 @@ public final class class228 {
       }
    }
 
+   @ObfInfo(
+      owner = "jg",
+      name = "lk",
+      desc = "(II)Z"
+   )
    static boolean method993(int var0) {
       for(int var2 = 0; var2 < client.field423; ++var2) {
          if (var0 == client.field464[var2]) {

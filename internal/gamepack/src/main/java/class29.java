@@ -1,16 +1,79 @@
+@ObfInfo(
+   name = "hx"
+)
 public class class29 extends class139 {
+   @ObfInfo(
+      owner = "hx",
+      name = "n",
+      desc = "[I"
+   )
    static int[] field173;
+   @ObfInfo(
+      owner = "hx",
+      name = "q",
+      desc = "Z"
+   )
    boolean field170;
+   @ObfInfo(
+      owner = "hx",
+      name = "o",
+      desc = "Z"
+   )
    boolean field172 = false;
+   @ObfInfo(
+      owner = "hx",
+      name = "j",
+      desc = "I"
+   )
    int field164;
+   @ObfInfo(
+      owner = "hx",
+      name = "m",
+      desc = "I"
+   )
    int field165;
+   @ObfInfo(
+      owner = "hx",
+      name = "g",
+      desc = "I"
+   )
    int field171;
+   @ObfInfo(
+      owner = "hx",
+      name = "i",
+      desc = "[I"
+   )
    int[] field163;
+   @ObfInfo(
+      owner = "hx",
+      name = "f",
+      desc = "[I"
+   )
    int[] field166;
+   @ObfInfo(
+      owner = "hx",
+      name = "r",
+      desc = "[I"
+   )
    int[] field167;
+   @ObfInfo(
+      owner = "hx",
+      name = "u",
+      desc = "[I"
+   )
    int[] field168;
+   @ObfInfo(
+      owner = "hx",
+      name = "b",
+      desc = "[I"
+   )
    int[] field169;
 
+   @ObfInfo(
+      owner = "hx",
+      name = "<init>",
+      desc = "(Lqy;)V"
+   )
    class29(class127 var1) {
       this.field165 = var1.method549();
       this.field170 = var1.method547() == 1;
@@ -53,6 +116,11 @@ public class class29 extends class139 {
       }
    }
 
+   @ObfInfo(
+      owner = "hx",
+      name = "h",
+      desc = "(DILly;)Z"
+   )
    boolean method133(double var1, int var3, class274 var4) {
       int var5;
       for(var5 = 0; var5 < this.field166.length; ++var5) {
@@ -180,10 +248,20 @@ public class class29 extends class139 {
       return true;
    }
 
+   @ObfInfo(
+      owner = "hx",
+      name = "e",
+      desc = "()V"
+   )
    void method134() {
       this.field163 = null;
    }
 
+   @ObfInfo(
+      owner = "hx",
+      name = "v",
+      desc = "(I)V"
+   )
    void method132(int var1) {
       if (this.field163 != null) {
          short var2;

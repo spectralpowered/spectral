@@ -1,11 +1,49 @@
+@ObfInfo(
+   name = "my"
+)
 public class class471 {
+   @ObfInfo(
+      owner = "my",
+      name = "h",
+      desc = "[C"
+   )
    public static final char[] field3959 = new char[]{'€', '\u0000', '‚', 'ƒ', '„', '…', '†', '‡', 'ˆ', '‰', 'Š', '‹', 'Œ', '\u0000', 'Ž', '\u0000', '\u0000', '‘', '’', '“', '”', '•', '–', '—', '˜', '™', 'š', '›', 'œ', '\u0000', 'ž', 'Ÿ'};
+   @ObfInfo(
+      owner = "my",
+      name = "f",
+      desc = "[[[B"
+   )
    static byte[][][] field3958;
+   @ObfInfo(
+      owner = "my",
+      name = "iw",
+      desc = "[Lrx;"
+   )
    static class266[] field3962;
+   @ObfInfo(
+      owner = "my",
+      name = "eu",
+      desc = "Lln;"
+   )
    static class38 field3963;
+   @ObfInfo(
+      owner = "my",
+      name = "oe",
+      desc = "I"
+   )
    static int field3960;
+   @ObfInfo(
+      owner = "my",
+      name = "m",
+      desc = "I"
+   )
    static int field3961;
 
+   @ObfInfo(
+      owner = "my",
+      name = "au",
+      desc = "(ILbm;ZI)I"
+   )
    static int method2330(int var0, class461 var1, boolean var2) {
       int var4;
       if (var0 == 3903) {
@@ -147,6 +185,11 @@ public class class471 {
       }
    }
 
+   @ObfInfo(
+      owner = "my",
+      name = "jl",
+      desc = "(III)V"
+   )
    static final void method2329(int var0, int var1) {
       class141 var3 = client.field360[class347.field2878][var0][var1];
       if (var3 == null) {
@@ -194,6 +237,11 @@ public class class471 {
       }
    }
 
+   @ObfInfo(
+      owner = "my",
+      name = "kh",
+      desc = "(ZI)V"
+   )
    static void method2328(boolean var0) {
       client.field380 = var0;
    }

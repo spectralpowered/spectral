@@ -1,10 +1,10 @@
 package io.spectralpowered.injector.mixinstranslator.impl;
 
-import io.spectralpowered.injector.annotation.injection.*;
+import io.spectralpowered.injector.annotations.injection.*;
 import org.objectweb.asm.Type;
-import io.spectralpowered.injector.annotation.Mixin;
-import io.spectralpowered.injector.annotation.Overwrite;
-import io.spectralpowered.injector.annotation.Shadow;
+import io.spectralpowered.injector.annotations.Mixin;
+import io.spectralpowered.injector.annotations.Overwrite;
+import io.spectralpowered.injector.annotations.Shadow;
 
 import java.util.HashMap;
 import java.util.Map;

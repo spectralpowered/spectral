@@ -1,12 +1,55 @@
+@ObfInfo(
+   name = "ig"
+)
 public class class349 implements class360 {
+   @ObfInfo(
+      owner = "ig",
+      name = "bs",
+      desc = "I"
+   )
    static int field2890;
+   @ObfInfo(
+      owner = "ig",
+      name = "m",
+      desc = "I"
+   )
    int field2884;
+   @ObfInfo(
+      owner = "ig",
+      name = "e",
+      desc = "I"
+   )
    int field2885;
+   @ObfInfo(
+      owner = "ig",
+      name = "v",
+      desc = "I"
+   )
    int field2886;
+   @ObfInfo(
+      owner = "ig",
+      name = "x",
+      desc = "I"
+   )
    int field2887;
+   @ObfInfo(
+      owner = "ig",
+      name = "q",
+      desc = "I"
+   )
    int field2888;
+   @ObfInfo(
+      owner = "ig",
+      name = "h",
+      desc = "I"
+   )
    int field2889;
 
+   @ObfInfo(
+      owner = "ig",
+      name = "h",
+      desc = "(Lit;B)V"
+   )
    public void method1797(class46 var1) {
       if (var1.field552 > this.field2884) {
          var1.field552 = this.field2884;
@@ -26,6 +69,11 @@ public class class349 implements class360 {
 
    }
 
+   @ObfInfo(
+      owner = "ig",
+      name = "e",
+      desc = "(IIII)Z"
+   )
    public boolean method1793(int var1, int var2, int var3) {
       if (var1 >= this.field2889 && var1 < this.field2889 + this.field2885) {
          return this.field2886 == var2 >> 6 && var3 >> 6 == this.field2887;
@@ -34,10 +82,20 @@ public class class349 implements class360 {
       }
    }
 
+   @ObfInfo(
+      owner = "ig",
+      name = "v",
+      desc = "(IIS)Z"
+   )
    public boolean method1792(int var1, int var2) {
       return var1 >> 6 == this.field2884 && this.field2888 == var2 >> 6;
    }
 
+   @ObfInfo(
+      owner = "ig",
+      name = "x",
+      desc = "(IIIB)[I"
+   )
    public int[] method1794(int var1, int var2, int var3) {
       if (!this.method1793(var1, var2, var3)) {
          return null;
@@ -47,6 +105,11 @@ public class class349 implements class360 {
       }
    }
 
+   @ObfInfo(
+      owner = "ig",
+      name = "m",
+      desc = "(III)Lky;"
+   )
    public class464 method1796(int var1, int var2) {
       if (!this.method1792(var1, var2)) {
          return null;
@@ -57,6 +120,11 @@ public class class349 implements class360 {
       }
    }
 
+   @ObfInfo(
+      owner = "ig",
+      name = "q",
+      desc = "(Lqy;I)V"
+   )
    public void method1795(class127 var1) {
       this.field2889 = var1.method547();
       this.field2885 = var1.method547();
@@ -67,9 +135,19 @@ public class class349 implements class360 {
       this.method1764();
    }
 
+   @ObfInfo(
+      owner = "ig",
+      name = "f",
+      desc = "(I)V"
+   )
    void method1764() {
    }
 
+   @ObfInfo(
+      owner = "ig",
+      name = "m",
+      desc = "(IIIZIZI)V"
+   )
    static void method1758(int var0, int var1, int var2, boolean var3, int var4, boolean var5) {
       if (var0 < var1) {
          int var7 = (var0 + var1) / 2;

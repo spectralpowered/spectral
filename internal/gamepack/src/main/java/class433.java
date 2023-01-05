@@ -7,27 +7,75 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 
+@ObfInfo(
+   name = "as"
+)
 public class class433 implements KeyListener, FocusListener {
+   @ObfInfo(
+      owner = "as",
+      name = "m",
+      desc = "[Z"
+   )
    boolean[] field3595 = new boolean[112];
+   @ObfInfo(
+      owner = "as",
+      name = "x",
+      desc = "[Lav;"
+   )
    class310[] field3592 = new class310[3];
+   @ObfInfo(
+      owner = "as",
+      name = "e",
+      desc = "Ljava/util/Collection;"
+   )
    Collection field3593 = new ArrayList(100);
+   @ObfInfo(
+      owner = "as",
+      name = "v",
+      desc = "Ljava/util/Collection;"
+   )
    Collection field3594 = new ArrayList(100);
+   @ObfInfo(
+      owner = "as",
+      name = "q",
+      desc = "I"
+   )
    volatile int field3596 = 0;
 
+   @ObfInfo(
+      owner = "as",
+      name = "h",
+      desc = "(Lav;II)V"
+   )
    void method2139(class310 var1, int var2) {
       this.field3592[var2] = var1;
    }
 
+   @ObfInfo(
+      owner = "as",
+      name = "e",
+      desc = "(I)I"
+   )
    int method2140() {
       return this.field3596;
    }
 
+   @ObfInfo(
+      owner = "as",
+      name = "v",
+      desc = "(Ljava/awt/Component;I)V"
+   )
    void method2141(Component var1) {
       var1.setFocusTraversalKeysEnabled(false);
       var1.addKeyListener(this);
       var1.addFocusListener(this);
    }
 
+   @ObfInfo(
+      owner = "as",
+      name = "x",
+      desc = "(Ljava/awt/Component;I)V"
+   )
    synchronized void method2138(Component var1) {
       var1.removeKeyListener(this);
       var1.removeFocusListener(this);
@@ -36,6 +84,11 @@ public class class433 implements KeyListener, FocusListener {
       }
    }
 
+   @ObfInfo(
+      owner = "as",
+      name = "m",
+      desc = "(B)V"
+   )
    void method2143() {
       ++this.field3596;
       this.method2142();
@@ -52,6 +105,11 @@ public class class433 implements KeyListener, FocusListener {
       this.field3594.clear();
    }
 
+   @ObfInfo(
+      owner = "as",
+      name = "keyPressed",
+      desc = "(Ljava/awt/event/KeyEvent;)V"
+   )
    public final synchronized void keyPressed(KeyEvent var1) {
       int var2;
       label23: {
@@ -80,6 +138,11 @@ public class class433 implements KeyListener, FocusListener {
       var1.consume();
    }
 
+   @ObfInfo(
+      owner = "as",
+      name = "keyReleased",
+      desc = "(Ljava/awt/event/KeyEvent;)V"
+   )
    public final synchronized void keyReleased(KeyEvent var1) {
       int var2;
       label16: {
@@ -103,6 +166,11 @@ public class class433 implements KeyListener, FocusListener {
       var1.consume();
    }
 
+   @ObfInfo(
+      owner = "as",
+      name = "keyTyped",
+      desc = "(Ljava/awt/event/KeyEvent;)V"
+   )
    public final synchronized void keyTyped(KeyEvent var1) {
       char var2 = var1.getKeyChar();
       if (var2 != 0 && var2 != '\uffff') {
@@ -135,16 +203,31 @@ public class class433 implements KeyListener, FocusListener {
       var1.consume();
    }
 
+   @ObfInfo(
+      owner = "as",
+      name = "q",
+      desc = "(I)V"
+   )
    synchronized void method2142() {
       Collection var2 = this.field3594;
       this.field3594 = this.field3593;
       this.field3593 = var2;
    }
 
+   @ObfInfo(
+      owner = "as",
+      name = "focusGained",
+      desc = "(Ljava/awt/event/FocusEvent;)V"
+   )
    public final synchronized void focusGained(FocusEvent var1) {
       this.field3593.add(new class189(4, 1));
    }
 
+   @ObfInfo(
+      owner = "as",
+      name = "focusLost",
+      desc = "(Ljava/awt/event/FocusEvent;)V"
+   )
    public final synchronized void focusLost(FocusEvent var1) {
       for(int var2 = 0; var2 < 112; ++var2) {
          if (this.field3595[var2]) {
@@ -156,6 +239,11 @@ public class class433 implements KeyListener, FocusListener {
       this.field3593.add(new class189(4, 0));
    }
 
+   @ObfInfo(
+      owner = "as",
+      name = "f",
+      desc = "(B)V"
+   )
    static void method2146() {
       Iterator var1 = class100.field795.iterator();
 
@@ -166,6 +254,11 @@ public class class433 implements KeyListener, FocusListener {
 
    }
 
+   @ObfInfo(
+      owner = "as",
+      name = "m",
+      desc = "([BIIIIIIIII[Lgw;B)V"
+   )
    static final void method2144(byte[] var0, int var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8, int var9, class427[] var10) {
       int var13;
       for(int var12 = 0; var12 < 8; ++var12) {
@@ -210,6 +303,11 @@ public class class433 implements KeyListener, FocusListener {
 
    }
 
+   @ObfInfo(
+      owner = "as",
+      name = "ah",
+      desc = "(ILbm;ZB)I"
+   )
    static int method2145(int var0, class461 var1, boolean var2) {
       if (var0 == 6754) {
          int var6 = class386.field3248[--class161.field1227];
@@ -228,6 +326,11 @@ public class class433 implements KeyListener, FocusListener {
       }
    }
 
+   @ObfInfo(
+      owner = "as",
+      name = "kq",
+      desc = "(Lkd;I)Z"
+   )
    static final boolean method2147(class120 var0) {
       if (null == var0.field1021) {
          return false;

@@ -1,4 +1,12 @@
+@ObfInfo(
+   name = "lp"
+)
 public final class class116 {
+   @ObfInfo(
+      owner = "lp",
+      name = "o",
+      desc = "(Ljava/lang/String;I)V"
+   )
    static final void method453(String var0) {
       StringBuilder var10000 = (new StringBuilder()).append(var0);
       class177 var10001 = (class177)null;
@@ -6,6 +14,11 @@ public final class class116 {
       class164.method765(30, "", var2);
    }
 
+   @ObfInfo(
+      owner = "lp",
+      name = "kw",
+      desc = "(Lkd;Lgr;IIZS)V"
+   )
    static final void method452(class120 var0, class263 var1, int var2, int var3, boolean var4) {
       String[] var6 = var1.field2164;
       byte var7 = -1;

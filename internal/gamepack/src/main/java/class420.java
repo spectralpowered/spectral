@@ -1,29 +1,147 @@
 import java.util.Random;
 
+@ObfInfo(
+   name = "ne"
+)
 public abstract class class420 extends class162 {
+   @ObfInfo(
+      owner = "ne",
+      name = "b",
+      desc = "[Lra;"
+   )
    public static class344[] field3443;
+   @ObfInfo(
+      owner = "ne",
+      name = "t",
+      desc = "I"
+   )
    static int field3434 = 0;
+   @ObfInfo(
+      owner = "ne",
+      name = "o",
+      desc = "I"
+   )
    static int field3440 = -1;
+   @ObfInfo(
+      owner = "ne",
+      name = "g",
+      desc = "I"
+   )
    static int field3445 = -1;
+   @ObfInfo(
+      owner = "ne",
+      name = "s",
+      desc = "I"
+   )
    static int field3446 = 256;
+   @ObfInfo(
+      owner = "ne",
+      name = "a",
+      desc = "I"
+   )
    static int field3447 = 0;
+   @ObfInfo(
+      owner = "ne",
+      name = "n",
+      desc = "I"
+   )
    static int field3448 = -1;
+   @ObfInfo(
+      owner = "ne",
+      name = "k",
+      desc = "I"
+   )
    static int field3449 = 0;
+   @ObfInfo(
+      owner = "ne",
+      name = "i",
+      desc = "I"
+   )
    static int field3451 = -1;
+   @ObfInfo(
+      owner = "ne",
+      name = "l",
+      desc = "I"
+   )
    static int field3453 = 0;
+   @ObfInfo(
+      owner = "ne",
+      name = "p",
+      desc = "[Ljava/lang/String;"
+   )
    static String[] field3455 = new String[100];
+   @ObfInfo(
+      owner = "ne",
+      name = "c",
+      desc = "Ljava/util/Random;"
+   )
    static Random field3454 = new Random();
+   @ObfInfo(
+      owner = "ne",
+      name = "j",
+      desc = "[B"
+   )
    byte[] field3444;
+   @ObfInfo(
+      owner = "ne",
+      name = "h",
+      desc = "[[B"
+   )
    byte[][] field3435 = new byte[256][];
+   @ObfInfo(
+      owner = "ne",
+      name = "v",
+      desc = "[I"
+   )
    int[] field3436;
+   @ObfInfo(
+      owner = "ne",
+      name = "x",
+      desc = "[I"
+   )
    int[] field3437;
+   @ObfInfo(
+      owner = "ne",
+      name = "m",
+      desc = "[I"
+   )
    int[] field3438;
+   @ObfInfo(
+      owner = "ne",
+      name = "q",
+      desc = "[I"
+   )
    int[] field3439;
+   @ObfInfo(
+      owner = "ne",
+      name = "e",
+      desc = "[I"
+   )
    int[] field3450;
+   @ObfInfo(
+      owner = "ne",
+      name = "r",
+      desc = "I"
+   )
    public int field3441;
+   @ObfInfo(
+      owner = "ne",
+      name = "f",
+      desc = "I"
+   )
    public int field3442 = 0;
+   @ObfInfo(
+      owner = "ne",
+      name = "u",
+      desc = "I"
+   )
    public int field3452;
 
+   @ObfInfo(
+      owner = "ne",
+      name = "<init>",
+      desc = "([B[I[I[I[I[I[[B)V"
+   )
    class420(byte[] var1, int[] var2, int[] var3, int[] var4, int[] var5, int[] var6, byte[][] var7) {
       this.field3438 = var2;
       this.field3439 = var3;
@@ -48,14 +166,34 @@ public abstract class class420 extends class162 {
       this.field3452 = var9 - this.field3442;
    }
 
+   @ObfInfo(
+      owner = "ne",
+      name = "<init>",
+      desc = "([B)V"
+   )
    class420(byte[] var1) {
       this.method2019(var1);
    }
 
+   @ObfInfo(
+      owner = "ne",
+      name = "h",
+      desc = "([BIIIII)V"
+   )
    abstract void method2035(byte[] var1, int var2, int var3, int var4, int var5, int var6);
 
+   @ObfInfo(
+      owner = "ne",
+      name = "e",
+      desc = "([BIIIIII)V"
+   )
    abstract void method2036(byte[] var1, int var2, int var3, int var4, int var5, int var6, int var7);
 
+   @ObfInfo(
+      owner = "ne",
+      name = "m",
+      desc = "([B)V"
+   )
    void method2019(byte[] var1) {
       this.field3450 = new int[256];
       int var2;
@@ -127,6 +265,11 @@ public abstract class class420 extends class162 {
 
    }
 
+   @ObfInfo(
+      owner = "ne",
+      name = "f",
+      desc = "(C)I"
+   )
    public int method2020(char var1) {
       if (var1 == 160) {
          var1 = ' ';
@@ -135,6 +278,11 @@ public abstract class class420 extends class162 {
       return this.field3450[class72.method315(var1) & 255];
    }
 
+   @ObfInfo(
+      owner = "ne",
+      name = "r",
+      desc = "(Ljava/lang/String;)I"
+   )
    public int method2045(String var1) {
       if (var1 == null) {
          return 0;
@@ -190,6 +338,11 @@ public abstract class class420 extends class162 {
       }
    }
 
+   @ObfInfo(
+      owner = "ne",
+      name = "u",
+      desc = "(Ljava/lang/String;[I[Ljava/lang/String;)I"
+   )
    public int method2022(String var1, int[] var2, String[] var3) {
       if (var1 == null) {
          return 0;
@@ -294,6 +447,11 @@ public abstract class class420 extends class162 {
       }
    }
 
+   @ObfInfo(
+      owner = "ne",
+      name = "b",
+      desc = "(Ljava/lang/String;I)I"
+   )
    public int method2023(String var1, int var2) {
       int var3 = this.method2022(var1, new int[]{var2}, field3455);
       int var4 = 0;
@@ -308,10 +466,20 @@ public abstract class class420 extends class162 {
       return var4;
    }
 
+   @ObfInfo(
+      owner = "ne",
+      name = "j",
+      desc = "(Ljava/lang/String;I)I"
+   )
    public int method2024(String var1, int var2) {
       return this.method2022(var1, new int[]{var2}, field3455);
    }
 
+   @ObfInfo(
+      owner = "ne",
+      name = "i",
+      desc = "(IILjava/lang/String;II)Lok;"
+   )
    public class376 method2030(int var1, int var2, String var3, int var4, int var5) {
       if (var3 != null && var3.length() >= var1 + var2) {
          int var6 = var4 - this.method2045(var3) / 2;
@@ -325,6 +493,11 @@ public abstract class class420 extends class162 {
       }
    }
 
+   @ObfInfo(
+      owner = "ne",
+      name = "o",
+      desc = "(Ljava/lang/String;IIII)V"
+   )
    public void method2025(String var1, int var2, int var3, int var4, int var5) {
       if (var1 != null) {
          this.method2032(var4, var5);
@@ -332,6 +505,11 @@ public abstract class class420 extends class162 {
       }
    }
 
+   @ObfInfo(
+      owner = "ne",
+      name = "n",
+      desc = "(Ljava/lang/String;IIIII)V"
+   )
    public void method2046(String var1, int var2, int var3, int var4, int var5, int var6) {
       if (var1 != null) {
          this.method2032(var4, var5);
@@ -340,6 +518,11 @@ public abstract class class420 extends class162 {
       }
    }
 
+   @ObfInfo(
+      owner = "ne",
+      name = "k",
+      desc = "(Ljava/lang/String;IIII)V"
+   )
    public void method2026(String var1, int var2, int var3, int var4, int var5) {
       if (var1 != null) {
          this.method2032(var4, var5);
@@ -347,6 +530,11 @@ public abstract class class420 extends class162 {
       }
    }
 
+   @ObfInfo(
+      owner = "ne",
+      name = "a",
+      desc = "(Ljava/lang/String;IIII)V"
+   )
    public void method2027(String var1, int var2, int var3, int var4, int var5) {
       if (var1 != null) {
          this.method2032(var4, var5);
@@ -354,6 +542,11 @@ public abstract class class420 extends class162 {
       }
    }
 
+   @ObfInfo(
+      owner = "ne",
+      name = "s",
+      desc = "(Ljava/lang/String;IIIIIIIII)I"
+   )
    public int method2028(String var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8, int var9, int var10) {
       if (var1 == null) {
          return 0;
@@ -413,6 +606,11 @@ public abstract class class420 extends class162 {
       }
    }
 
+   @ObfInfo(
+      owner = "ne",
+      name = "l",
+      desc = "(Lna;IIIII)Lpg;"
+   )
    public class296 method2029(class239 var1, int var2, int var3, int var4, int var5, int var6) {
       if (!var1.method1035()) {
          this.method2032(var4, var5);
@@ -452,6 +650,11 @@ public abstract class class420 extends class162 {
       return var1.method1037();
    }
 
+   @ObfInfo(
+      owner = "ne",
+      name = "t",
+      desc = "(Ljava/lang/String;IIIII)V"
+   )
    public void method2021(String var1, int var2, int var3, int var4, int var5, int var6) {
       if (var1 != null) {
          this.method2032(var4, var5);
@@ -465,6 +668,11 @@ public abstract class class420 extends class162 {
       }
    }
 
+   @ObfInfo(
+      owner = "ne",
+      name = "c",
+      desc = "(Ljava/lang/String;IIIII)V"
+   )
    public void method2047(String var1, int var2, int var3, int var4, int var5, int var6) {
       if (var1 != null) {
          this.method2032(var4, var5);
@@ -480,6 +688,11 @@ public abstract class class420 extends class162 {
       }
    }
 
+   @ObfInfo(
+      owner = "ne",
+      name = "p",
+      desc = "(Ljava/lang/String;IIIIII)V"
+   )
    public void method2044(String var1, int var2, int var3, int var4, int var5, int var6, int var7) {
       if (var1 != null) {
          this.method2032(var4, var5);
@@ -498,6 +711,11 @@ public abstract class class420 extends class162 {
       }
    }
 
+   @ObfInfo(
+      owner = "ne",
+      name = "d",
+      desc = "(Ljava/lang/String;IIIII)V"
+   )
    public void method2031(String var1, int var2, int var3, int var4, int var5, int var6) {
       if (var1 != null) {
          this.method2032(var4, var5);
@@ -517,6 +735,11 @@ public abstract class class420 extends class162 {
       }
    }
 
+   @ObfInfo(
+      owner = "ne",
+      name = "y",
+      desc = "(II)V"
+   )
    void method2032(int var1, int var2) {
       field3445 = -1;
       field3451 = -1;
@@ -529,6 +752,11 @@ public abstract class class420 extends class162 {
       field3434 = 0;
    }
 
+   @ObfInfo(
+      owner = "ne",
+      name = "z",
+      desc = "(Ljava/lang/String;)V"
+   )
    void method2033(String var1) {
       try {
          if (var1.startsWith("col=")) {
@@ -562,6 +790,11 @@ public abstract class class420 extends class162 {
 
    }
 
+   @ObfInfo(
+      owner = "ne",
+      name = "w",
+      desc = "(Ljava/lang/String;I)V"
+   )
    void method2048(String var1, int var2) {
       int var3 = 0;
       boolean var4 = false;
@@ -583,6 +816,11 @@ public abstract class class420 extends class162 {
 
    }
 
+   @ObfInfo(
+      owner = "ne",
+      name = "as",
+      desc = "(Ljava/lang/String;II)V"
+   )
    void method2037(String var1, int var2, int var3) {
       var3 -= this.field3442;
       int var4 = -1;
@@ -671,6 +909,11 @@ public abstract class class420 extends class162 {
 
    }
 
+   @ObfInfo(
+      owner = "ne",
+      name = "ad",
+      desc = "(Ljava/lang/String;II[I[I)V"
+   )
    void method2034(String var1, int var2, int var3, int[] var4, int[] var5) {
       var3 -= this.field3442;
       int var6 = -1;
@@ -788,6 +1031,11 @@ public abstract class class420 extends class162 {
 
    }
 
+   @ObfInfo(
+      owner = "ne",
+      name = "q",
+      desc = "([[B[[B[I[I[III)I"
+   )
    static int method2040(byte[][] var0, byte[][] var1, int[] var2, int[] var3, int[] var4, int var5, int var6) {
       int var7 = var2[var5];
       int var8 = var7 + var4[var5];
@@ -823,6 +1071,11 @@ public abstract class class420 extends class162 {
       return -var13;
    }
 
+   @ObfInfo(
+      owner = "ne",
+      name = "g",
+      desc = "(Ljava/lang/String;)Ljava/lang/String;"
+   )
    public static String method2042(String var0) {
       int var1 = var0.length();
       int var2 = 0;
@@ -850,6 +1103,11 @@ public abstract class class420 extends class162 {
       return var6.toString();
    }
 
+   @ObfInfo(
+      owner = "ne",
+      name = "ao",
+      desc = "([BIIIII)V"
+   )
    static void method2041(byte[] var0, int var1, int var2, int var3, int var4, int var5) {
       int var6 = var1 + var2 * class162.field1232;
       int var7 = class162.field1232 - var3;
@@ -890,6 +1148,11 @@ public abstract class class420 extends class162 {
       }
    }
 
+   @ObfInfo(
+      owner = "ne",
+      name = "am",
+      desc = "([I[BIIIIIII)V"
+   )
    static void method2038(int[] var0, byte[] var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8) {
       int var9 = -(var5 >> 2);
       var5 = -(var5 & 3);
@@ -936,6 +1199,11 @@ public abstract class class420 extends class162 {
 
    }
 
+   @ObfInfo(
+      owner = "ne",
+      name = "av",
+      desc = "([BIIIIII)V"
+   )
    static void method2039(byte[] var0, int var1, int var2, int var3, int var4, int var5, int var6) {
       int var7 = var1 + var2 * class162.field1232;
       int var8 = class162.field1232 - var3;
@@ -976,6 +1244,11 @@ public abstract class class420 extends class162 {
       }
    }
 
+   @ObfInfo(
+      owner = "ne",
+      name = "au",
+      desc = "([I[BIIIIIIII)V"
+   )
    static void method2043(int[] var0, byte[] var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8, int var9) {
       var2 = ((var2 & 16711935) * var9 & -16711936) + ((var2 & '\uff00') * var9 & 16711680) >> 8;
       var9 = 256 - var9;

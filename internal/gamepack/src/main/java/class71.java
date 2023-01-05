@@ -1,21 +1,109 @@
+@ObfInfo(
+   name = "cf"
+)
 public final class class71 {
+   @ObfInfo(
+      owner = "cf",
+      name = "q",
+      desc = "[[[B"
+   )
    static byte[][][] field643;
+   @ObfInfo(
+      owner = "cf",
+      name = "e",
+      desc = "[[[B"
+   )
    static byte[][][] field644 = new byte[4][104][104];
+   @ObfInfo(
+      owner = "cf",
+      name = "v",
+      desc = "I"
+   )
    static int field637 = 99;
+   @ObfInfo(
+      owner = "cf",
+      name = "z",
+      desc = "I"
+   )
    static int field649 = (int)(Math.random() * 17.0D) - 8;
+   @ObfInfo(
+      owner = "cf",
+      name = "w",
+      desc = "I"
+   )
    static int field650 = (int)(Math.random() * 33.0D) - 16;
+   @ObfInfo(
+      owner = "cf",
+      name = "b",
+      desc = "[I"
+   )
    static int[] field641;
+   @ObfInfo(
+      owner = "cf",
+      name = "g",
+      desc = "[I"
+   )
    static int[] field648;
+   @ObfInfo(
+      owner = "cf",
+      name = "u",
+      desc = "[[I"
+   )
    static int[][] field640;
+   @ObfInfo(
+      owner = "cf",
+      name = "h",
+      desc = "[[[I"
+   )
    static int[][][] field636 = new int[4][105][105];
+   @ObfInfo(
+      owner = "cf",
+      name = "x",
+      desc = "[[[S"
+   )
    static short[][][] field638;
+   @ObfInfo(
+      owner = "cf",
+      name = "y",
+      desc = "[I"
+   )
    static final int[] field635 = new int[]{-1, -1, 1, 1};
+   @ObfInfo(
+      owner = "cf",
+      name = "p",
+      desc = "[I"
+   )
    static final int[] field639 = new int[]{0, -1, 0, 1};
+   @ObfInfo(
+      owner = "cf",
+      name = "l",
+      desc = "[I"
+   )
    static final int[] field642 = new int[]{1, 2, 4, 8};
+   @ObfInfo(
+      owner = "cf",
+      name = "c",
+      desc = "[I"
+   )
    static final int[] field645 = new int[]{1, 0, -1, 0};
+   @ObfInfo(
+      owner = "cf",
+      name = "t",
+      desc = "[I"
+   )
    static final int[] field646 = new int[]{16, 32, 64, 128};
+   @ObfInfo(
+      owner = "cf",
+      name = "d",
+      desc = "[I"
+   )
    static final int[] field647 = new int[]{1, -1, -1, 1};
 
+   @ObfInfo(
+      owner = "cf",
+      name = "r",
+      desc = "([BIIB)Z"
+   )
    static final boolean method313(byte[] var0, int var1, int var2) {
       boolean var4 = true;
       class127 var5 = new class127(var0);
@@ -69,6 +157,11 @@ public final class class71 {
       }
    }
 
+   @ObfInfo(
+      owner = "cf",
+      name = "b",
+      desc = "([BIIIIIIILhc;[Lgw;)V"
+   )
    static final void method312(byte[] var0, int var1, int var2, int var3, int var4, int var5, int var6, int var7, class318 var8, class427[] var9) {
       class127 var10 = new class127(var0);
       int var11 = -1;
@@ -140,6 +233,11 @@ public final class class71 {
       }
    }
 
+   @ObfInfo(
+      owner = "cf",
+      name = "gv",
+      desc = "(I)V"
+   )
    static void method311() {
       int var14;
       if (client.field248 == 0) {

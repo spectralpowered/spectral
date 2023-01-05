@@ -12,16 +12,64 @@ import java.util.Map;
 import java.util.Map.Entry;
 import javax.net.ssl.HttpsURLConnection;
 
+@ObfInfo(
+   name = "j"
+)
 public class class192 {
+   @ObfInfo(
+      owner = "j",
+      name = "q",
+      desc = "Z"
+   )
    boolean field1716 = false;
+   @ObfInfo(
+      owner = "j",
+      name = "f",
+      desc = "Z"
+   )
    boolean field1718 = false;
+   @ObfInfo(
+      owner = "j",
+      name = "v",
+      desc = "Lpu;"
+   )
    class373 field1715;
+   @ObfInfo(
+      owner = "j",
+      name = "r",
+      desc = "I"
+   )
    int field1719 = 300000;
+   @ObfInfo(
+      owner = "j",
+      name = "x",
+      desc = "Ljava/util/Map;"
+   )
    Map field1720;
+   @ObfInfo(
+      owner = "j",
+      name = "h",
+      desc = "Ljavax/net/ssl/HttpsURLConnection;"
+   )
    HttpsURLConnection field1717;
+   @ObfInfo(
+      owner = "j",
+      name = "m",
+      desc = "Lb;"
+   )
    final class374 field1713;
+   @ObfInfo(
+      owner = "j",
+      name = "e",
+      desc = "Ljava/util/Map;"
+   )
    final Map field1714;
 
+   @ObfInfo(
+      owner = "j",
+      name = "<init>",
+      desc = "(Ljava/net/URL;Lb;Z)V"
+   )
    public class192(URL var1, class374 var2, boolean var3) throws IOException {
       if (!var2.method1842()) {
          throw new UnsupportedEncodingException("Unsupported request method used " + var2.method1843());
@@ -43,12 +91,22 @@ public class class192 {
       }
    }
 
+   @ObfInfo(
+      owner = "j",
+      name = "h",
+      desc = "(Ljava/lang/String;Ljava/lang/String;I)V"
+   )
    public void method862(String var1, String var2) {
       if (!this.field1716) {
          this.field1714.put(var1, var2);
       }
    }
 
+   @ObfInfo(
+      owner = "j",
+      name = "e",
+      desc = "(I)Ljava/lang/String;"
+   )
    String method861() {
       ArrayList var2 = new ArrayList(this.field1720.entrySet());
       Collections.sort(var2, new class362(this));
@@ -72,6 +130,11 @@ public class class192 {
       return var3.toString();
    }
 
+   @ObfInfo(
+      owner = "j",
+      name = "v",
+      desc = "(I)V"
+   )
    void method863() throws ProtocolException {
       if (!this.field1716) {
          this.field1717.setRequestMethod(this.field1713.method1843());
@@ -113,6 +176,11 @@ public class class192 {
       }
    }
 
+   @ObfInfo(
+      owner = "j",
+      name = "x",
+      desc = "(I)Z"
+   )
    boolean method864() throws IOException, SocketTimeoutException {
       if (!this.field1716) {
          this.method863();
@@ -122,6 +190,11 @@ public class class192 {
       return this.field1717.getResponseCode() == -1;
    }
 
+   @ObfInfo(
+      owner = "j",
+      name = "m",
+      desc = "(B)Lp;"
+   )
    class32 method865() {
       try {
          if (!this.field1716 || this.field1717.getResponseCode() == -1) {
@@ -147,6 +220,11 @@ public class class192 {
       return var4;
    }
 
+   @ObfInfo(
+      owner = "j",
+      name = "af",
+      desc = "(ILbm;ZI)I"
+   )
    static int method866(int var0, class461 var1, boolean var2) {
       if (var0 == 6200) {
          class161.field1227 -= 2;

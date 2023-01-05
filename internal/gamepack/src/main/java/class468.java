@@ -1,9 +1,37 @@
+@ObfInfo(
+   name = "ij"
+)
 public class class468 extends class400 {
+   @ObfInfo(
+      owner = "ij",
+      name = "e",
+      desc = "I"
+   )
    int field3883;
+   @ObfInfo(
+      owner = "ij",
+      name = "h",
+      desc = "I"
+   )
    int field3884;
+   @ObfInfo(
+      owner = "ij",
+      name = "v",
+      desc = "I"
+   )
    int field3885;
+   @ObfInfo(
+      owner = "ij",
+      name = "x",
+      desc = "I"
+   )
    int field3886;
 
+   @ObfInfo(
+      owner = "ij",
+      name = "h",
+      desc = "(Lqy;B)V"
+   )
    void method2288(class127 var1) {
       int var3 = var1.method547();
       if (var3 != class167.field1258.field1260) {
@@ -24,6 +52,11 @@ public class class468 extends class400 {
       }
    }
 
+   @ObfInfo(
+      owner = "ij",
+      name = "e",
+      desc = "(Lqy;I)V"
+   )
    void method1978(class127 var1) {
       super.field3365 = Math.min(super.field3365, 4);
       super.field3369 = new short[1][64][64];
@@ -52,6 +85,11 @@ public class class468 extends class400 {
       }
    }
 
+   @ObfInfo(
+      owner = "ij",
+      name = "equals",
+      desc = "(Ljava/lang/Object;)Z"
+   )
    public boolean equals(Object var1) {
       if (!(var1 instanceof class468)) {
          return false;
@@ -65,26 +103,56 @@ public class class468 extends class400 {
       }
    }
 
+   @ObfInfo(
+      owner = "ij",
+      name = "hashCode",
+      desc = "()I"
+   )
    public int hashCode() {
       return super.field3362 | super.field3368 << 8 | this.field3885 << 16 | this.field3886 << 24;
    }
 
+   @ObfInfo(
+      owner = "ij",
+      name = "v",
+      desc = "(I)I"
+   )
    int method2285() {
       return this.field3884;
    }
 
+   @ObfInfo(
+      owner = "ij",
+      name = "x",
+      desc = "(I)I"
+   )
    int method2286() {
       return this.field3883;
    }
 
+   @ObfInfo(
+      owner = "ij",
+      name = "m",
+      desc = "(I)I"
+   )
    int method2287() {
       return this.field3885;
    }
 
+   @ObfInfo(
+      owner = "ij",
+      name = "g",
+      desc = "(I)I"
+   )
    int method2284() {
       return this.field3886;
    }
 
+   @ObfInfo(
+      owner = "ij",
+      name = "m",
+      desc = "(ILbm;ZB)I"
+   )
    static int method2289(int var0, class461 var1, boolean var2) {
       int var4 = -1;
       class120 var5;

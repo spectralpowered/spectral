@@ -1,12 +1,55 @@
+@ObfInfo(
+   name = "ip"
+)
 public class class166 extends class389 {
+   @ObfInfo(
+      owner = "ip",
+      name = "eq",
+      desc = "Lou;"
+   )
    static class160 field1254;
+   @ObfInfo(
+      owner = "ip",
+      name = "x",
+      desc = "Lii;"
+   )
    class23 field1253;
+   @ObfInfo(
+      owner = "ip",
+      name = "m",
+      desc = "I"
+   )
    int field1250;
+   @ObfInfo(
+      owner = "ip",
+      name = "v",
+      desc = "I"
+   )
    int field1252;
+   @ObfInfo(
+      owner = "ip",
+      name = "q",
+      desc = "I"
+   )
    int field1255;
+   @ObfInfo(
+      owner = "ip",
+      name = "e",
+      desc = "Liy;"
+   )
    final class144 field1251;
+   @ObfInfo(
+      owner = "ip",
+      name = "h",
+      desc = "I"
+   )
    final int field1256;
 
+   @ObfInfo(
+      owner = "ip",
+      name = "<init>",
+      desc = "(Lky;Lky;ILiy;)V"
+   )
    class166(class464 var1, class464 var2, int var3, class144 var4) {
       super(var1, var2);
       this.field1256 = var3;
@@ -14,6 +57,11 @@ public class class166 extends class389 {
       this.method773();
    }
 
+   @ObfInfo(
+      owner = "ip",
+      name = "h",
+      desc = "(B)V"
+   )
    void method773() {
       this.field1252 = class85.method356(this.field1256).method372().field733;
       this.field1253 = this.field1251.method689(class25.method100(this.field1252));
@@ -29,32 +77,67 @@ public class class166 extends class389 {
 
    }
 
+   @ObfInfo(
+      owner = "ip",
+      name = "e",
+      desc = "(I)I"
+   )
    public int method1910() {
       return this.field1252;
    }
 
+   @ObfInfo(
+      owner = "ip",
+      name = "v",
+      desc = "(I)Lii;"
+   )
    class23 method1911() {
       return this.field1253;
    }
 
+   @ObfInfo(
+      owner = "ip",
+      name = "x",
+      desc = "(I)I"
+   )
    int method1906() {
       return this.field1250;
    }
 
+   @ObfInfo(
+      owner = "ip",
+      name = "m",
+      desc = "(I)I"
+   )
    int method1912() {
       return this.field1255;
    }
 
+   @ObfInfo(
+      owner = "ip",
+      name = "h",
+      desc = "(Lly;I)V"
+   )
    public static void method780(class274 var0) {
       class209.field1815 = var0;
    }
 
+   @ObfInfo(
+      owner = "ip",
+      name = "h",
+      desc = "(Lly;Lly;Lly;I)V"
+   )
    public static void method781(class274 var0, class274 var1, class274 var2) {
       class242.field2027 = var0;
       class242.field2028 = var1;
       class309.field2462 = var2;
    }
 
+   @ObfInfo(
+      owner = "ip",
+      name = "v",
+      desc = "(CI)C"
+   )
    static char method778(char var0) {
       if (var0 == 198) {
          return 'E';
@@ -69,6 +152,11 @@ public class class166 extends class389 {
       }
    }
 
+   @ObfInfo(
+      owner = "ip",
+      name = "g",
+      desc = "(Lhc;[Lgw;I)V"
+   )
    static final void method779(class318 var0, class427[] var1) {
       int var3;
       int var4;

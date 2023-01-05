@@ -1,26 +1,139 @@
+@ObfInfo(
+   name = "kx"
+)
 public class class458 extends class139 {
+   @ObfInfo(
+      owner = "kx",
+      name = "x",
+      desc = "Ljy;"
+   )
    class132 field3798;
+   @ObfInfo(
+      owner = "kx",
+      name = "l",
+      desc = "Lap;"
+   )
    class316 field3802;
+   @ObfInfo(
+      owner = "kx",
+      name = "e",
+      desc = "Lkl;"
+   )
    class401 field3787;
+   @ObfInfo(
+      owner = "kx",
+      name = "v",
+      desc = "Laf;"
+   )
    class82 field3796;
+   @ObfInfo(
+      owner = "kx",
+      name = "b",
+      desc = "I"
+   )
    int field3784;
+   @ObfInfo(
+      owner = "kx",
+      name = "n",
+      desc = "I"
+   )
    int field3785;
+   @ObfInfo(
+      owner = "kx",
+      name = "o",
+      desc = "I"
+   )
    int field3786;
+   @ObfInfo(
+      owner = "kx",
+      name = "m",
+      desc = "I"
+   )
    int field3788;
+   @ObfInfo(
+      owner = "kx",
+      name = "q",
+      desc = "I"
+   )
    int field3789;
+   @ObfInfo(
+      owner = "kx",
+      name = "i",
+      desc = "I"
+   )
    int field3790;
+   @ObfInfo(
+      owner = "kx",
+      name = "r",
+      desc = "I"
+   )
    int field3791;
+   @ObfInfo(
+      owner = "kx",
+      name = "u",
+      desc = "I"
+   )
    int field3792;
+   @ObfInfo(
+      owner = "kx",
+      name = "f",
+      desc = "I"
+   )
    int field3793;
+   @ObfInfo(
+      owner = "kx",
+      name = "j",
+      desc = "I"
+   )
    int field3794;
+   @ObfInfo(
+      owner = "kx",
+      name = "g",
+      desc = "I"
+   )
    int field3795;
+   @ObfInfo(
+      owner = "kx",
+      name = "h",
+      desc = "I"
+   )
    int field3797;
+   @ObfInfo(
+      owner = "kx",
+      name = "k",
+      desc = "I"
+   )
    int field3799;
+   @ObfInfo(
+      owner = "kx",
+      name = "a",
+      desc = "I"
+   )
    int field3800;
+   @ObfInfo(
+      owner = "kx",
+      name = "s",
+      desc = "I"
+   )
    int field3801;
+   @ObfInfo(
+      owner = "kx",
+      name = "t",
+      desc = "I"
+   )
    int field3803;
+   @ObfInfo(
+      owner = "kx",
+      name = "p",
+      desc = "I"
+   )
    int field3804;
 
+   @ObfInfo(
+      owner = "kx",
+      name = "h",
+      desc = "(I)V"
+   )
    void method2260() {
       this.field3787 = null;
       this.field3796 = null;
@@ -28,6 +141,11 @@ public class class458 extends class139 {
       this.field3802 = null;
    }
 
+   @ObfInfo(
+      owner = "kx",
+      name = "g",
+      desc = "(ILbm;ZS)I"
+   )
    static int method2261(int var0, class461 var1, boolean var2) {
       class120 var4;
       if (var0 >= 2000) {
@@ -160,6 +278,11 @@ public class class458 extends class139 {
       return 1;
    }
 
+   @ObfInfo(
+      owner = "kx",
+      name = "gd",
+      desc = "(IZZZZI)Lln;"
+   )
    static class38 method2262(int var0, boolean var1, boolean var2, boolean var3, boolean var4) {
       class20 var6 = null;
       if (class25.field112 != null) {

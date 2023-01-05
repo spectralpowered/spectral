@@ -8,18 +8,76 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+@ObfInfo(
+   name = "fk"
+)
 public class class277 {
+   @ObfInfo(
+      owner = "fk",
+      name = "j",
+      desc = "Ldm;"
+   )
    class140 field2325;
+   @ObfInfo(
+      owner = "fk",
+      name = "i",
+      desc = "[F"
+   )
    float[] field2321 = new float[4];
+   @ObfInfo(
+      owner = "fk",
+      name = "u",
+      desc = "I"
+   )
    int field2322 = -1;
+   @ObfInfo(
+      owner = "fk",
+      name = "g",
+      desc = "Ljava/lang/String;"
+   )
    String field2320 = null;
+   @ObfInfo(
+      owner = "fk",
+      name = "b",
+      desc = "Ljava/lang/String;"
+   )
    String field2323;
+   @ObfInfo(
+      owner = "fk",
+      name = "k",
+      desc = "Ljava/util/ArrayList;"
+   )
    ArrayList field2324 = new ArrayList();
+   @ObfInfo(
+      owner = "fk",
+      name = "o",
+      desc = "Ljava/util/ArrayList;"
+   )
    ArrayList field2326 = new ArrayList();
+   @ObfInfo(
+      owner = "fk",
+      name = "n",
+      desc = "Ljava/util/ArrayList;"
+   )
    ArrayList field2327 = new ArrayList();
+   @ObfInfo(
+      owner = "fk",
+      name = "a",
+      desc = "Ljava/util/Map;"
+   )
    Map field2328 = new HashMap();
+   @ObfInfo(
+      owner = "fk",
+      name = "s",
+      desc = "Ljava/util/Map;"
+   )
    Map field2329 = new HashMap();
 
+   @ObfInfo(
+      owner = "fk",
+      name = "h",
+      desc = "(Ljava/lang/String;Ldl;I)Z"
+   )
    public boolean method1369(String var1, class434 var2) {
       if (null != var1 && !var1.isEmpty()) {
          if (var2 == null) {
@@ -43,6 +101,11 @@ public class class277 {
       }
    }
 
+   @ObfInfo(
+      owner = "fk",
+      name = "e",
+      desc = "(Ldl;S)V"
+   )
    public void method1370(class434 var1) {
       switch(this.field2322) {
       case 0:
@@ -57,34 +120,74 @@ public class class277 {
 
    }
 
+   @ObfInfo(
+      owner = "fk",
+      name = "v",
+      desc = "(I)I"
+   )
    public int method1371() {
       return this.field2322;
    }
 
+   @ObfInfo(
+      owner = "fk",
+      name = "x",
+      desc = "(Ljava/lang/String;I)I"
+   )
    public int method1372(String var1) {
       return this.field2328.containsKey(var1) ? ((Integer)this.field2328.get(var1)).intValue() : -1;
    }
 
+   @ObfInfo(
+      owner = "fk",
+      name = "m",
+      desc = "(Ljava/lang/String;I)Ljava/lang/String;"
+   )
    public String method1373(String var1) {
       return (String)((String)(this.field2329.containsKey(var1) ? this.field2329.get(var1) : null));
    }
 
+   @ObfInfo(
+      owner = "fk",
+      name = "q",
+      desc = "(B)Ljava/util/ArrayList;"
+   )
    public ArrayList method1380() {
       return this.field2327;
    }
 
+   @ObfInfo(
+      owner = "fk",
+      name = "f",
+      desc = "(B)Ljava/util/ArrayList;"
+   )
    public ArrayList method1374() {
       return this.field2324;
    }
 
+   @ObfInfo(
+      owner = "fk",
+      name = "r",
+      desc = "(B)Ljava/lang/String;"
+   )
    public String method1375() {
       return this.field2320;
    }
 
+   @ObfInfo(
+      owner = "fk",
+      name = "u",
+      desc = "(I)Ljava/util/ArrayList;"
+   )
    public ArrayList method1376() {
       return this.field2326;
    }
 
+   @ObfInfo(
+      owner = "fk",
+      name = "b",
+      desc = "(I)V"
+   )
    void method1381() {
       this.field2325 = null;
       this.field2320 = null;
@@ -99,6 +202,11 @@ public class class277 {
       this.field2329.clear();
    }
 
+   @ObfInfo(
+      owner = "fk",
+      name = "j",
+      desc = "(Ldl;B)V"
+   )
    void method1377(class434 var1) {
       if (this.field2325 != null && this.field2325.method640()) {
          byte[] var3 = this.field2325.method638();
@@ -153,6 +261,11 @@ public class class277 {
       }
    }
 
+   @ObfInfo(
+      owner = "fk",
+      name = "g",
+      desc = "(B)V"
+   )
    void method1378() {
       Iterator var2 = this.field2327.iterator();
 
@@ -182,6 +295,11 @@ public class class277 {
 
    }
 
+   @ObfInfo(
+      owner = "fk",
+      name = "i",
+      desc = "(Lorg/json/JSONArray;Ldl;I)V"
+   )
    void method1379(JSONArray var1, class434 var2) throws JSONException {
       if (var1 != null) {
          for(int var4 = 0; var4 < var1.length(); ++var4) {
@@ -199,6 +317,11 @@ public class class277 {
       }
    }
 
+   @ObfInfo(
+      owner = "fk",
+      name = "o",
+      desc = "(Lorg/json/JSONArray;B)V"
+   )
    void method1383(JSONArray var1) throws JSONException {
       if (null != var1) {
          for(int var3 = 0; var3 < var1.length(); ++var3) {
@@ -225,6 +348,11 @@ public class class277 {
       }
    }
 
+   @ObfInfo(
+      owner = "fk",
+      name = "n",
+      desc = "(Lorg/json/JSONObject;B)V"
+   )
    void method1384(JSONObject var1) throws JSONException {
       if (null != var1) {
          this.field2321 = class359.method1790(var1, "clickbounds");
@@ -256,6 +384,11 @@ public class class277 {
       }
    }
 
+   @ObfInfo(
+      owner = "fk",
+      name = "k",
+      desc = "(Lorg/json/JSONObject;S)V"
+   )
    void method1382(JSONObject var1) throws JSONException {
       String[] var3 = JSONObject.getNames(var1);
 
@@ -281,18 +414,38 @@ public class class277 {
 
    }
 
+   @ObfInfo(
+      owner = "fk",
+      name = "h",
+      desc = "(I)[Lcp;"
+   )
    static class161[] method1388() {
       return new class161[]{class161.field1221, class161.field1222, class161.field1223, class161.field1224, class161.field1228, class161.field1230};
    }
 
+   @ObfInfo(
+      owner = "fk",
+      name = "v",
+      desc = "(II)I"
+   )
    public static int method1386(int var0) {
       return (var0 & class227.field1929) - 1;
    }
 
+   @ObfInfo(
+      owner = "fk",
+      name = "e",
+      desc = "(II)I"
+   )
    public static int method1385(int var0) {
       return class83.field672[var0 & 16383];
    }
 
+   @ObfInfo(
+      owner = "fk",
+      name = "iy",
+      desc = "(B)I"
+   )
    static final int method1387() {
       if (class50.field574.method2202()) {
          return class347.field2878;

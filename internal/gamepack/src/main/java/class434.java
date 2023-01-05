@@ -5,20 +5,58 @@ import java.net.URLConnection;
 import java.util.LinkedList;
 import java.util.Queue;
 
+@ObfInfo(
+   name = "dl"
+)
 public abstract class class434 implements Runnable {
+   @ObfInfo(
+      owner = "dl",
+      name = "x",
+      desc = "I"
+   )
    int field3597;
+   @ObfInfo(
+      owner = "dl",
+      name = "v",
+      desc = "Ljava/util/Queue;"
+   )
    Queue field3599 = new LinkedList();
+   @ObfInfo(
+      owner = "dl",
+      name = "h",
+      desc = "Ljava/lang/Thread;"
+   )
    final Thread field3600 = new Thread(this);
+   @ObfInfo(
+      owner = "dl",
+      name = "e",
+      desc = "Z"
+   )
    volatile boolean field3598;
 
+   @ObfInfo(
+      owner = "dl",
+      name = "<init>",
+      desc = "(I)V"
+   )
    class434(int var1) {
       this.field3600.setPriority(1);
       this.field3600.start();
       this.field3597 = var1;
    }
 
+   @ObfInfo(
+      owner = "dl",
+      name = "h",
+      desc = "(Ldm;I)V"
+   )
    abstract void method2148(class140 var1) throws IOException;
 
+   @ObfInfo(
+      owner = "dl",
+      name = "run",
+      desc = "()V"
+   )
    public void run() {
       while(!this.field3598) {
          try {
@@ -43,6 +81,11 @@ public abstract class class434 implements Runnable {
 
    }
 
+   @ObfInfo(
+      owner = "dl",
+      name = "e",
+      desc = "(Ljava/net/URLConnection;I)V"
+   )
    void method2149(URLConnection var1) {
       var1.setConnectTimeout(5000);
       var1.setReadTimeout(5000);
@@ -51,6 +94,11 @@ public abstract class class434 implements Runnable {
       var1.setRequestProperty("User-Agent", "OldSchoolRuneScape/" + this.field3597);
    }
 
+   @ObfInfo(
+      owner = "dl",
+      name = "v",
+      desc = "(Ljava/net/URLConnection;Ldm;B)V"
+   )
    void method2152(URLConnection var1, class140 var2) {
       DataInputStream var4 = null;
 
@@ -90,6 +138,11 @@ public abstract class class434 implements Runnable {
 
    }
 
+   @ObfInfo(
+      owner = "dl",
+      name = "x",
+      desc = "(Ljava/net/URL;B)Ldm;"
+   )
    public class140 method2151(URL var1) {
       class140 var3 = new class140(var1);
       synchronized(this) {
@@ -99,6 +152,11 @@ public abstract class class434 implements Runnable {
       }
    }
 
+   @ObfInfo(
+      owner = "dl",
+      name = "m",
+      desc = "(I)V"
+   )
    public void method2153() {
       this.field3598 = true;
 
@@ -114,6 +172,11 @@ public abstract class class434 implements Runnable {
 
    }
 
+   @ObfInfo(
+      owner = "dl",
+      name = "h",
+      desc = "(B)V"
+   )
    static void method2154() {
       for(class156 var1 = (class156)class156.field1200.method646(); var1 != null; var1 = (class156)class156.field1200.method648()) {
          if (var1.field1198 != null) {
@@ -130,12 +193,22 @@ public abstract class class434 implements Runnable {
       class156.field1200.method649();
    }
 
+   @ObfInfo(
+      owner = "dl",
+      name = "h",
+      desc = "(Lly;Lly;ZI)V"
+   )
    public static void method2155(class274 var0, class274 var1, boolean var2) {
       class87.field706 = var0;
       class492.field4109 = var1;
       class87.field718 = var2;
    }
 
+   @ObfInfo(
+      owner = "dl",
+      name = "j",
+      desc = "(IIIIIILhc;Lgw;I)V"
+   )
    static final void method2156(int var0, int var1, int var2, int var3, int var4, int var5, class318 var6, class427 var7) {
       if (!client.field274 || 0 != (class71.field644[0][var1][var2] & 2) || 0 == (class71.field644[var0][var1][var2] & 16)) {
          if (var0 < class71.field637) {
@@ -506,6 +579,11 @@ public abstract class class434 implements Runnable {
       }
    }
 
+   @ObfInfo(
+      owner = "dl",
+      name = "my",
+      desc = "(Ljava/lang/String;B)V"
+   )
    static void method2150(String var0) {
       class467.field3879 = var0;
 

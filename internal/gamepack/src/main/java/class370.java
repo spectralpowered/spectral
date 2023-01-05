@@ -1,43 +1,226 @@
+@ObfInfo(
+   name = "be"
+)
 public class class370 extends class139 {
+   @ObfInfo(
+      owner = "be",
+      name = "s",
+      desc = "Z"
+   )
    static boolean field3147 = false;
+   @ObfInfo(
+      owner = "be",
+      name = "k",
+      desc = "[Z"
+   )
    static boolean[] field3145;
+   @ObfInfo(
+      owner = "be",
+      name = "f",
+      desc = "[B"
+   )
    static byte[] field3136;
+   @ObfInfo(
+      owner = "be",
+      name = "n",
+      desc = "[Lae;"
+   )
    static class124[] field3144;
+   @ObfInfo(
+      owner = "be",
+      name = "g",
+      desc = "[Lbh;"
+   )
    static class136[] field3141;
+   @ObfInfo(
+      owner = "be",
+      name = "o",
+      desc = "[Laq;"
+   )
    static class275[] field3143;
+   @ObfInfo(
+      owner = "be",
+      name = "i",
+      desc = "[Lai;"
+   )
    static class62[] field3142;
+   @ObfInfo(
+      owner = "be",
+      name = "ao",
+      desc = "[F"
+   )
    static float[] field3134;
+   @ObfInfo(
+      owner = "be",
+      name = "d",
+      desc = "[F"
+   )
    static float[] field3152;
+   @ObfInfo(
+      owner = "be",
+      name = "y",
+      desc = "[F"
+   )
    static float[] field3153;
+   @ObfInfo(
+      owner = "be",
+      name = "z",
+      desc = "[F"
+   )
    static float[] field3154;
+   @ObfInfo(
+      owner = "be",
+      name = "w",
+      desc = "[F"
+   )
    static float[] field3155;
+   @ObfInfo(
+      owner = "be",
+      name = "as",
+      desc = "[F"
+   )
    static float[] field3156;
+   @ObfInfo(
+      owner = "be",
+      name = "ad",
+      desc = "[F"
+   )
    static float[] field3158;
+   @ObfInfo(
+      owner = "be",
+      name = "r",
+      desc = "I"
+   )
    static int field3133;
+   @ObfInfo(
+      owner = "be",
+      name = "u",
+      desc = "I"
+   )
    static int field3138;
+   @ObfInfo(
+      owner = "be",
+      name = "b",
+      desc = "I"
+   )
    static int field3139;
+   @ObfInfo(
+      owner = "be",
+      name = "j",
+      desc = "I"
+   )
    static int field3140;
+   @ObfInfo(
+      owner = "be",
+      name = "a",
+      desc = "[I"
+   )
    static int[] field3131;
+   @ObfInfo(
+      owner = "be",
+      name = "am",
+      desc = "[I"
+   )
    static int[] field3149;
+   @ObfInfo(
+      owner = "be",
+      name = "av",
+      desc = "[I"
+   )
    static int[] field3160;
+   @ObfInfo(
+      owner = "be",
+      name = "q",
+      desc = "Z"
+   )
    boolean field3135;
+   @ObfInfo(
+      owner = "be",
+      name = "p",
+      desc = "Z"
+   )
    boolean field3151;
+   @ObfInfo(
+      owner = "be",
+      name = "au",
+      desc = "[B"
+   )
    byte[] field3157;
+   @ObfInfo(
+      owner = "be",
+      name = "h",
+      desc = "[[B"
+   )
    byte[][] field3159;
+   @ObfInfo(
+      owner = "be",
+      name = "l",
+      desc = "[F"
+   )
    float[] field3148;
+   @ObfInfo(
+      owner = "be",
+      name = "m",
+      desc = "I"
+   )
    int field3130;
+   @ObfInfo(
+      owner = "be",
+      name = "v",
+      desc = "I"
+   )
    int field3132;
+   @ObfInfo(
+      owner = "be",
+      name = "e",
+      desc = "I"
+   )
    int field3137;
+   @ObfInfo(
+      owner = "be",
+      name = "ar",
+      desc = "I"
+   )
    int field3146;
+   @ObfInfo(
+      owner = "be",
+      name = "c",
+      desc = "I"
+   )
    int field3150;
+   @ObfInfo(
+      owner = "be",
+      name = "at",
+      desc = "I"
+   )
    int field3161;
+   @ObfInfo(
+      owner = "be",
+      name = "x",
+      desc = "I"
+   )
    int field3162;
+   @ObfInfo(
+      owner = "be",
+      name = "t",
+      desc = "I"
+   )
    int field3163;
 
+   @ObfInfo(
+      owner = "be",
+      name = "<init>",
+      desc = "([B)V"
+   )
    class370(byte[] var1) {
       this.method1827(var1);
    }
 
+   @ObfInfo(
+      owner = "be",
+      name = "m",
+      desc = "([B)V"
+   )
    void method1827(byte[] var1) {
       class127 var2 = new class127(var1);
       this.field3137 = var2.method595();
@@ -68,6 +251,11 @@ public class class370 extends class139 {
 
    }
 
+   @ObfInfo(
+      owner = "be",
+      name = "f",
+      desc = "(I)[F"
+   )
    float[] method1833(int var1) {
       method1824(this.field3159[var1], 0);
       method1832();
@@ -318,6 +506,11 @@ public class class370 extends class139 {
       return var43;
    }
 
+   @ObfInfo(
+      owner = "be",
+      name = "b",
+      desc = "([I)Laf;"
+   )
    class82 method1831(int[] var1) {
       if (var1 != null && var1[0] <= 0) {
          return null;
@@ -367,6 +560,11 @@ public class class370 extends class139 {
       }
    }
 
+   @ObfInfo(
+      owner = "be",
+      name = "h",
+      desc = "(I)F"
+   )
    static float method1825(int var0) {
       int var1 = var0 & 2097151;
       int var2 = var0 & Integer.MIN_VALUE;
@@ -378,12 +576,22 @@ public class class370 extends class139 {
       return (float)((double)var1 * Math.pow(2.0D, (double)(var3 - 788)));
    }
 
+   @ObfInfo(
+      owner = "be",
+      name = "e",
+      desc = "([BI)V"
+   )
    static void method1824(byte[] var0, int var1) {
       field3136 = var0;
       field3133 = var1;
       field3138 = 0;
    }
 
+   @ObfInfo(
+      owner = "be",
+      name = "v",
+      desc = "()I"
+   )
    static int method1832() {
       int var0 = field3136[field3133] >> field3138 & 1;
       ++field3138;
@@ -392,6 +600,11 @@ public class class370 extends class139 {
       return var0;
    }
 
+   @ObfInfo(
+      owner = "be",
+      name = "x",
+      desc = "(I)I"
+   )
    static int method1826(int var0) {
       int var1 = 0;
 
@@ -415,6 +628,11 @@ public class class370 extends class139 {
       return var1;
    }
 
+   @ObfInfo(
+      owner = "be",
+      name = "q",
+      desc = "([B)V"
+   )
    static void method1828(byte[] var0) {
       method1824(var0, 0);
       field3139 = 1 << method1826(4);
@@ -519,6 +737,11 @@ public class class370 extends class139 {
 
    }
 
+   @ObfInfo(
+      owner = "be",
+      name = "r",
+      desc = "(Lly;)Z"
+   )
    static boolean method1829(class274 var0) {
       if (!field3147) {
          byte[] var1 = var0.method1365(0, 0);
@@ -533,6 +756,11 @@ public class class370 extends class139 {
       return true;
    }
 
+   @ObfInfo(
+      owner = "be",
+      name = "u",
+      desc = "(Lly;II)Lbe;"
+   )
    static class370 method1830(class274 var0, int var1, int var2) {
       if (!method1829(var0)) {
          var0.method1363(var1, var2);

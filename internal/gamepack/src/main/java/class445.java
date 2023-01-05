@@ -5,24 +5,77 @@ import java.io.StringReader;
 import java.io.StringWriter;
 import java.net.URL;
 
+@ObfInfo(
+   name = "et"
+)
 public class class445 implements class78 {
+   @ObfInfo(
+      owner = "et",
+      name = "h",
+      desc = "Let;"
+   )
    public static final class445 field3671 = new class445(2, 0);
+   @ObfInfo(
+      owner = "et",
+      name = "v",
+      desc = "Let;"
+   )
    public static final class445 field3672 = new class445(0, 2);
+   @ObfInfo(
+      owner = "et",
+      name = "x",
+      desc = "Let;"
+   )
    public static final class445 field3673 = new class445(3, 3);
+   @ObfInfo(
+      owner = "et",
+      name = "m",
+      desc = "Let;"
+   )
    public static final class445 field3675 = new class445(1, 4);
+   @ObfInfo(
+      owner = "et",
+      name = "e",
+      desc = "Let;"
+   )
    public static final class445 field3676 = new class445(4, 1);
+   @ObfInfo(
+      owner = "et",
+      name = "f",
+      desc = "I"
+   )
    final int field3670;
+   @ObfInfo(
+      owner = "et",
+      name = "q",
+      desc = "I"
+   )
    public final int field3674;
 
+   @ObfInfo(
+      owner = "et",
+      name = "<init>",
+      desc = "(II)V"
+   )
    class445(int var1, int var2) {
       this.field3674 = var1;
       this.field3670 = var2;
    }
 
+   @ObfInfo(
+      owner = "et",
+      name = "e",
+      desc = "(B)I"
+   )
    public int method330() {
       return this.field3670;
    }
 
+   @ObfInfo(
+      owner = "et",
+      name = "h",
+      desc = "(Ljava/lang/String;Ljava/lang/Throwable;I)V"
+   )
    public static void method2199(String var0, Throwable var1) {
       try {
          String var3 = "";

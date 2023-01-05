@@ -1,12 +1,55 @@
+@ObfInfo(
+   name = "qr"
+)
 public class class185 implements class78 {
+   @ObfInfo(
+      owner = "qr",
+      name = "e",
+      desc = "Lqr;"
+   )
    public static final class185 field1687 = new class185(2, 1, Long.class, new class80());
+   @ObfInfo(
+      owner = "qr",
+      name = "v",
+      desc = "Lqr;"
+   )
    public static final class185 field1688 = new class185(1, 2, String.class, new class5());
+   @ObfInfo(
+      owner = "qr",
+      name = "h",
+      desc = "Lqr;"
+   )
    public static final class185 field1690 = new class185(0, 0, Integer.class, new class31());
+   @ObfInfo(
+      owner = "qr",
+      name = "f",
+      desc = "Lqu;"
+   )
    final class250 field1686;
+   @ObfInfo(
+      owner = "qr",
+      name = "x",
+      desc = "I"
+   )
    public final int field1689;
+   @ObfInfo(
+      owner = "qr",
+      name = "m",
+      desc = "I"
+   )
    public final int field1692;
+   @ObfInfo(
+      owner = "qr",
+      name = "q",
+      desc = "Ljava/lang/Class;"
+   )
    public final Class field1691;
 
+   @ObfInfo(
+      owner = "qr",
+      name = "<init>",
+      desc = "(IILjava/lang/Class;Lqu;)V"
+   )
    class185(int var1, int var2, Class var3, class250 var4) {
       this.field1689 = var1;
       this.field1692 = var2;
@@ -14,22 +57,47 @@ public class class185 implements class78 {
       this.field1686 = var4;
    }
 
+   @ObfInfo(
+      owner = "qr",
+      name = "e",
+      desc = "(B)I"
+   )
    public int method330() {
       return this.field1692;
    }
 
+   @ObfInfo(
+      owner = "qr",
+      name = "u",
+      desc = "(Lqy;I)Ljava/lang/Object;"
+   )
    public Object method840(class127 var1) {
       return this.field1686.method1082(var1);
    }
 
+   @ObfInfo(
+      owner = "qr",
+      name = "h",
+      desc = "(IB)Ljava/lang/String;"
+   )
    static String method843(int var0) {
       return "<img=" + var0 + ">";
    }
 
+   @ObfInfo(
+      owner = "qr",
+      name = "h",
+      desc = "(S)[Lqr;"
+   )
    public static class185[] method841() {
       return new class185[]{field1690, field1687, field1688};
    }
 
+   @ObfInfo(
+      owner = "qr",
+      name = "v",
+      desc = "(Ljava/lang/Class;B)Lqr;"
+   )
    public static class185 method838(Class var0) {
       class185[] var2 = method841();
 
@@ -43,11 +111,21 @@ public class class185 implements class78 {
       return null;
    }
 
+   @ObfInfo(
+      owner = "qr",
+      name = "x",
+      desc = "(Ljava/lang/Object;Lqy;I)V"
+   )
    public static void method839(Object var0, class127 var1) {
       class250 var3 = method842(var0.getClass());
       var3.method1081(var0, var1);
    }
 
+   @ObfInfo(
+      owner = "qr",
+      name = "m",
+      desc = "(Ljava/lang/Class;B)Lqu;"
+   )
    static class250 method842(Class var0) {
       class185 var2 = method838(var0);
       if (var2 == null) {
@@ -57,6 +135,11 @@ public class class185 implements class78 {
       }
    }
 
+   @ObfInfo(
+      owner = "qr",
+      name = "e",
+      desc = "(IILgg;Lgw;I)Z"
+   )
    static final boolean method844(int var0, int var1, class39 var2, class427 var3) {
       int var5 = var0;
       int var6 = var1;

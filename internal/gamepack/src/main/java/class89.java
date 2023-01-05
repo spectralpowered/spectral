@@ -1,14 +1,67 @@
+@ObfInfo(
+   name = "bk"
+)
 public class class89 extends class295 {
+   @ObfInfo(
+      owner = "bk",
+      name = "f",
+      desc = "Lga;"
+   )
    class242 field763;
+   @ObfInfo(
+      owner = "bk",
+      name = "m",
+      desc = "I"
+   )
    int field757;
+   @ObfInfo(
+      owner = "bk",
+      name = "e",
+      desc = "I"
+   )
    int field758;
+   @ObfInfo(
+      owner = "bk",
+      name = "v",
+      desc = "I"
+   )
    int field759;
+   @ObfInfo(
+      owner = "bk",
+      name = "x",
+      desc = "I"
+   )
    int field760;
+   @ObfInfo(
+      owner = "bk",
+      name = "q",
+      desc = "I"
+   )
    int field761;
+   @ObfInfo(
+      owner = "bk",
+      name = "h",
+      desc = "I"
+   )
    int field762;
+   @ObfInfo(
+      owner = "bk",
+      name = "u",
+      desc = "I"
+   )
    int field764;
+   @ObfInfo(
+      owner = "bk",
+      name = "r",
+      desc = "I"
+   )
    int field765;
 
+   @ObfInfo(
+      owner = "bk",
+      name = "<init>",
+      desc = "(IIIIIIIZLhr;)V"
+   )
    class89(int var1, int var2, int var3, int var4, int var5, int var6, int var7, boolean var8, class295 var9) {
       this.field762 = var1;
       this.field758 = var2;
@@ -41,6 +94,11 @@ public class class89 extends class295 {
 
    }
 
+   @ObfInfo(
+      owner = "bk",
+      name = "e",
+      desc = "(I)Lhh;"
+   )
    protected final class470 method1438() {
       int var3;
       if (null != this.field763) {
@@ -110,6 +168,11 @@ public class class89 extends class295 {
       }
    }
 
+   @ObfInfo(
+      owner = "bk",
+      name = "h",
+      desc = "(Lqy;Lql;I)Lql;"
+   )
    static final class385 method380(class127 var0, class385 var1) {
       int var3 = var0.method547();
       int var4;
@@ -134,6 +197,11 @@ public class class89 extends class295 {
       return var1;
    }
 
+   @ObfInfo(
+      owner = "bk",
+      name = "r",
+      desc = "(II)I"
+   )
    static int method381(int var0) {
       class152 var2 = (class152)class100.field795.method1897((long)var0);
       if (null == var2) {
@@ -143,6 +211,11 @@ public class class89 extends class295 {
       }
    }
 
+   @ObfInfo(
+      owner = "bk",
+      name = "q",
+      desc = "(IB)V"
+   )
    static void method379(int var0) {
       class201 var2 = (class201)class201.field1755.method791((long)var0);
       if (null != var2) {
@@ -150,6 +223,11 @@ public class class89 extends class295 {
       }
    }
 
+   @ObfInfo(
+      owner = "bk",
+      name = "an",
+      desc = "(ILkd;IIIII[FB)Lkd;"
+   )
    static class120 method378(int var0, class120 var1, int var2, int var3, int var4, int var5, int var6, float[] var7) {
       class120 var9 = new class120();
       var9.field1026 = var0;

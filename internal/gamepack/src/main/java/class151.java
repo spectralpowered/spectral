@@ -1,14 +1,67 @@
+@ObfInfo(
+   name = "hj"
+)
 public final class class151 {
+   @ObfInfo(
+      owner = "hj",
+      name = "l",
+      desc = "[[[B"
+   )
    public static byte[][][] field1173;
+   @ObfInfo(
+      owner = "hj",
+      name = "db",
+      desc = "Z"
+   )
    static boolean field1180;
+   @ObfInfo(
+      owner = "hj",
+      name = "q",
+      desc = "Z"
+   )
    boolean field1177 = true;
+   @ObfInfo(
+      owner = "hj",
+      name = "f",
+      desc = "I"
+   )
    int field1172;
+   @ObfInfo(
+      owner = "hj",
+      name = "v",
+      desc = "I"
+   )
    int field1174;
+   @ObfInfo(
+      owner = "hj",
+      name = "x",
+      desc = "I"
+   )
    int field1175;
+   @ObfInfo(
+      owner = "hj",
+      name = "m",
+      desc = "I"
+   )
    int field1176;
+   @ObfInfo(
+      owner = "hj",
+      name = "e",
+      desc = "I"
+   )
    int field1178;
+   @ObfInfo(
+      owner = "hj",
+      name = "h",
+      desc = "I"
+   )
    int field1179;
 
+   @ObfInfo(
+      owner = "hj",
+      name = "<init>",
+      desc = "(IIIIIIZ)V"
+   )
    class151(int var1, int var2, int var3, int var4, int var5, int var6, boolean var7) {
       this.field1179 = var1;
       this.field1178 = var2;
@@ -19,6 +72,11 @@ public final class class151 {
       this.field1177 = var7;
    }
 
+   @ObfInfo(
+      owner = "hj",
+      name = "h",
+      desc = "(II)Lrt;"
+   )
    public static class352 method702(int var0) {
       class352[] var2 = new class352[]{class352.field2895, class352.field2897, class352.field2894};
       class352[] var3 = var2;
@@ -33,6 +91,11 @@ public final class class151 {
       return null;
    }
 
+   @ObfInfo(
+      owner = "hj",
+      name = "av",
+      desc = "(ILbm;ZB)I"
+   )
    static int method701(int var0, class461 var1, boolean var2) {
       if (var0 == 3800) {
          if (null != class91.field770) {

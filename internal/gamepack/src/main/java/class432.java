@@ -1,22 +1,105 @@
 import java.util.Arrays;
 
+@ObfInfo(
+   name = "gc"
+)
 public class class432 implements class310 {
+   @ObfInfo(
+      owner = "gc",
+      name = "is",
+      desc = "Lrx;"
+   )
    static class266 field3591;
+   @ObfInfo(
+      owner = "gc",
+      name = "g",
+      desc = "[Z"
+   )
    boolean[] field3580 = new boolean[112];
+   @ObfInfo(
+      owner = "gc",
+      name = "b",
+      desc = "[Z"
+   )
    boolean[] field3586 = new boolean[112];
+   @ObfInfo(
+      owner = "gc",
+      name = "j",
+      desc = "[Z"
+   )
    boolean[] field3587 = new boolean[112];
+   @ObfInfo(
+      owner = "gc",
+      name = "h",
+      desc = "[C"
+   )
    char[] field3589 = new char[128];
+   @ObfInfo(
+      owner = "gc",
+      name = "u",
+      desc = "I"
+   )
    int field3579 = 0;
+   @ObfInfo(
+      owner = "gc",
+      name = "q",
+      desc = "I"
+   )
    int field3582 = 0;
+   @ObfInfo(
+      owner = "gc",
+      name = "f",
+      desc = "I"
+   )
    int field3583 = 0;
+   @ObfInfo(
+      owner = "gc",
+      name = "r",
+      desc = "I"
+   )
    int field3584 = 0;
+   @ObfInfo(
+      owner = "gc",
+      name = "e",
+      desc = "[I"
+   )
    int[] field3578 = new int[128];
+   @ObfInfo(
+      owner = "gc",
+      name = "m",
+      desc = "[I"
+   )
    int[] field3581 = new int[128];
+   @ObfInfo(
+      owner = "gc",
+      name = "i",
+      desc = "C"
+   )
    public char field3577;
+   @ObfInfo(
+      owner = "gc",
+      name = "x",
+      desc = "I"
+   )
    public int field3588 = 0;
+   @ObfInfo(
+      owner = "gc",
+      name = "o",
+      desc = "I"
+   )
    public int field3590;
+   @ObfInfo(
+      owner = "gc",
+      name = "v",
+      desc = "[I"
+   )
    public int[] field3585 = new int[128];
 
+   @ObfInfo(
+      owner = "gc",
+      name = "h",
+      desc = "(II)Z"
+   )
    public boolean method1501(int var1) {
       this.method2129(var1);
       this.field3586[var1] = true;
@@ -26,6 +109,11 @@ public class class432 implements class310 {
       return true;
    }
 
+   @ObfInfo(
+      owner = "gc",
+      name = "e",
+      desc = "(II)Z"
+   )
    public boolean method1502(int var1) {
       this.field3586[var1] = false;
       this.field3587[var1] = false;
@@ -34,6 +122,11 @@ public class class432 implements class310 {
       return true;
    }
 
+   @ObfInfo(
+      owner = "gc",
+      name = "v",
+      desc = "(CI)Z"
+   )
    public boolean method1499(char var1) {
       int var3 = 1 + this.field3584 & 127;
       if (this.field3583 != var3) {
@@ -45,6 +138,11 @@ public class class432 implements class310 {
       return false;
    }
 
+   @ObfInfo(
+      owner = "gc",
+      name = "a",
+      desc = "(IB)V"
+   )
    void method2129(int var1) {
       int var3 = 1 + this.field3584 & 127;
       if (var3 != this.field3583) {
@@ -55,10 +153,20 @@ public class class432 implements class310 {
 
    }
 
+   @ObfInfo(
+      owner = "gc",
+      name = "x",
+      desc = "(ZI)Z"
+   )
    public boolean method1500(boolean var1) {
       return false;
    }
 
+   @ObfInfo(
+      owner = "gc",
+      name = "s",
+      desc = "(B)V"
+   )
    public void method2130() {
       this.field3583 = this.field3579;
       this.field3579 = this.field3584;
@@ -68,6 +176,11 @@ public class class432 implements class310 {
       Arrays.fill(this.field3580, false);
    }
 
+   @ObfInfo(
+      owner = "gc",
+      name = "l",
+      desc = "(B)Z"
+   )
    public final boolean method2136() {
       if (this.field3579 == this.field3583) {
          return false;
@@ -79,18 +192,38 @@ public class class432 implements class310 {
       }
    }
 
+   @ObfInfo(
+      owner = "gc",
+      name = "t",
+      desc = "(II)Z"
+   )
    public boolean method2137(int var1) {
       return var1 >= 0 && var1 < 112 ? this.field3587[var1] : false;
    }
 
+   @ObfInfo(
+      owner = "gc",
+      name = "c",
+      desc = "(IB)Z"
+   )
    public boolean method2132(int var1) {
       return var1 >= 0 && var1 < 112 ? this.field3586[var1] : false;
    }
 
+   @ObfInfo(
+      owner = "gc",
+      name = "p",
+      desc = "(II)Z"
+   )
    public boolean method2131(int var1) {
       return var1 >= 0 && var1 < 112 ? this.field3580[var1] : false;
    }
 
+   @ObfInfo(
+      owner = "gc",
+      name = "d",
+      desc = "(B)[I"
+   )
    public int[] method2133() {
       int[] var2 = new int[this.field3588];
 
@@ -101,6 +234,11 @@ public class class432 implements class310 {
       return var2;
    }
 
+   @ObfInfo(
+      owner = "gc",
+      name = "y",
+      desc = "(I)[I"
+   )
    public int[] method2134() {
       int[] var2 = new int[this.field3582];
 
@@ -111,6 +249,11 @@ public class class432 implements class310 {
       return var2;
    }
 
+   @ObfInfo(
+      owner = "gc",
+      name = "h",
+      desc = "(DDD)I"
+   )
    public static final int method2135(double var0, double var2, double var4) {
       double var6 = var4;
       double var8 = var4;

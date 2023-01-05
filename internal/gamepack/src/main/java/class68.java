@@ -1,4 +1,12 @@
+@ObfInfo(
+   name = "lh"
+)
 public class class68 {
+   @ObfInfo(
+      owner = "lh",
+      name = "x",
+      desc = "(Lqx;I)I"
+   )
    static int method302(class6 var0) {
       int var2 = var0.method35(2);
       int var3;

@@ -1,13 +1,17 @@
-package io.spectralpowered.injector.annotation;
+package io.spectralpowered.injector.annotations;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-@Target({ElementType.METHOD, ElementType.FIELD})
-@Retention(RetentionPolicy.RUNTIME)
-public @interface Shadow {
+@Target(ElementType.TYPE)
+@Retention(RetentionPolicy.CLASS)
+public @interface Mixin {
+
+    Class<?>[] value() default {};
+
+    String[] targets() default {};
 
     @Deprecated
     boolean remap() default true;

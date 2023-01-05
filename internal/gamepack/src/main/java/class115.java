@@ -1,27 +1,145 @@
+@ObfInfo(
+   name = "hy"
+)
 public final class class115 {
+   @ObfInfo(
+      owner = "hy",
+      name = "s",
+      desc = "[I"
+   )
    static int[] field860 = new int[6];
+   @ObfInfo(
+      owner = "hy",
+      name = "l",
+      desc = "[I"
+   )
    static int[] field864 = new int[6];
+   @ObfInfo(
+      owner = "hy",
+      name = "k",
+      desc = "[I"
+   )
    static int[] field865 = new int[6];
+   @ObfInfo(
+      owner = "hy",
+      name = "a",
+      desc = "[I"
+   )
    static int[] field868 = new int[6];
+   @ObfInfo(
+      owner = "hy",
+      name = "t",
+      desc = "[I"
+   )
    static int[] field871 = new int[6];
+   @ObfInfo(
+      owner = "hy",
+      name = "p",
+      desc = "[[I"
+   )
    static final int[][] field867 = new int[][]{{0, 1, 2, 3, 0, 0, 1, 3}, {1, 1, 2, 3, 1, 0, 1, 3}, {0, 1, 2, 3, 1, 0, 1, 3}, {0, 0, 1, 2, 0, 0, 2, 4, 1, 0, 4, 3}, {0, 0, 1, 4, 0, 0, 4, 3, 1, 1, 2, 4}, {0, 0, 4, 3, 1, 0, 1, 2, 1, 0, 2, 4}, {0, 1, 2, 4, 1, 0, 1, 4, 1, 0, 4, 3}, {0, 4, 1, 2, 0, 4, 2, 5, 1, 0, 4, 5, 1, 0, 5, 3}, {0, 4, 1, 2, 0, 4, 2, 3, 0, 4, 3, 5, 1, 0, 4, 5}, {0, 0, 4, 5, 1, 4, 1, 2, 1, 4, 2, 3, 1, 4, 3, 5}, {0, 0, 1, 5, 0, 1, 4, 5, 0, 1, 2, 4, 1, 0, 5, 3, 1, 5, 4, 3, 1, 4, 2, 3}, {1, 0, 1, 5, 1, 1, 4, 5, 1, 1, 2, 4, 0, 0, 5, 3, 0, 5, 4, 3, 0, 4, 2, 3}, {1, 0, 5, 4, 1, 0, 1, 5, 0, 0, 4, 3, 0, 4, 5, 3, 0, 5, 2, 3, 0, 1, 2, 5}};
+   @ObfInfo(
+      owner = "hy",
+      name = "c",
+      desc = "[[I"
+   )
    static final int[][] field872 = new int[][]{{1, 3, 5, 7}, {1, 3, 5, 7}, {1, 3, 5, 7}, {1, 3, 5, 7, 6}, {1, 3, 5, 7, 6}, {1, 3, 5, 7, 6}, {1, 3, 5, 7, 6}, {1, 3, 5, 7, 2, 6}, {1, 3, 5, 7, 2, 8}, {1, 3, 5, 7, 2, 8}, {1, 3, 5, 7, 11, 12}, {1, 3, 5, 7, 11, 12}, {1, 3, 5, 7, 13, 14}};
+   @ObfInfo(
+      owner = "hy",
+      name = "j",
+      desc = "Z"
+   )
    boolean field863 = true;
+   @ObfInfo(
+      owner = "hy",
+      name = "g",
+      desc = "I"
+   )
    int field852;
+   @ObfInfo(
+      owner = "hy",
+      name = "o",
+      desc = "I"
+   )
    int field859;
+   @ObfInfo(
+      owner = "hy",
+      name = "n",
+      desc = "I"
+   )
    int field869;
+   @ObfInfo(
+      owner = "hy",
+      name = "i",
+      desc = "I"
+   )
    int field873;
+   @ObfInfo(
+      owner = "hy",
+      name = "e",
+      desc = "[I"
+   )
    int[] field853;
+   @ObfInfo(
+      owner = "hy",
+      name = "v",
+      desc = "[I"
+   )
    int[] field854;
+   @ObfInfo(
+      owner = "hy",
+      name = "x",
+      desc = "[I"
+   )
    int[] field855;
+   @ObfInfo(
+      owner = "hy",
+      name = "m",
+      desc = "[I"
+   )
    int[] field856;
+   @ObfInfo(
+      owner = "hy",
+      name = "q",
+      desc = "[I"
+   )
    int[] field857;
+   @ObfInfo(
+      owner = "hy",
+      name = "f",
+      desc = "[I"
+   )
    int[] field858;
+   @ObfInfo(
+      owner = "hy",
+      name = "b",
+      desc = "[I"
+   )
    int[] field861;
+   @ObfInfo(
+      owner = "hy",
+      name = "u",
+      desc = "[I"
+   )
    int[] field862;
+   @ObfInfo(
+      owner = "hy",
+      name = "h",
+      desc = "[I"
+   )
    int[] field866;
+   @ObfInfo(
+      owner = "hy",
+      name = "r",
+      desc = "[I"
+   )
    int[] field870;
 
+   @ObfInfo(
+      owner = "hy",
+      name = "<init>",
+      desc = "(IIIIIIIIIIIIIIIIIII)V"
+   )
    class115(int var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8, int var9, int var10, int var11, int var12, int var13, int var14, int var15, int var16, int var17, int var18, int var19) {
       if (var6 != var7 || var6 != var8 || var6 != var9) {
          this.field863 = false;

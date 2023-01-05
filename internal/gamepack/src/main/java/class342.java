@@ -3,17 +3,50 @@ import java.net.HttpURLConnection;
 import java.net.URLConnection;
 import javax.net.ssl.HttpsURLConnection;
 
+@ObfInfo(
+   name = "dw"
+)
 public class class342 extends class434 {
+   @ObfInfo(
+      owner = "dw",
+      name = "f",
+      desc = "I"
+   )
    public static int field2747;
+   @ObfInfo(
+      owner = "dw",
+      name = "g",
+      desc = "[Lra;"
+   )
    static class344[] field2746;
+   @ObfInfo(
+      owner = "dw",
+      name = "tc",
+      desc = "I"
+   )
    static int field2745;
+   @ObfInfo(
+      owner = "dw",
+      name = "m",
+      desc = "Z"
+   )
    final boolean field2748;
 
+   @ObfInfo(
+      owner = "dw",
+      name = "<init>",
+      desc = "(ZI)V"
+   )
    public class342(boolean var1, int var2) {
       super(var2);
       this.field2748 = var1;
    }
 
+   @ObfInfo(
+      owner = "dw",
+      name = "h",
+      desc = "(Ldm;I)V"
+   )
    void method2148(class140 var1) throws IOException {
       URLConnection var3 = null;
 
@@ -49,12 +82,22 @@ public class class342 extends class434 {
       }
    }
 
+   @ObfInfo(
+      owner = "dw",
+      name = "c",
+      desc = "(Ldm;B)Ljava/net/URLConnection;"
+   )
    URLConnection method1737(class140 var1) throws IOException {
       URLConnection var3 = var1.field1137.openConnection();
       this.method2149(var3);
       return var3;
    }
 
+   @ObfInfo(
+      owner = "dw",
+      name = "p",
+      desc = "(Ldm;B)Ljava/net/URLConnection;"
+   )
    URLConnection method1736(class140 var1) throws IOException {
       HttpsURLConnection var3 = (HttpsURLConnection)var1.field1137.openConnection();
       if (!this.field2748) {
@@ -70,6 +113,11 @@ public class class342 extends class434 {
       return var3;
    }
 
+   @ObfInfo(
+      owner = "dw",
+      name = "h",
+      desc = "(II)Lfi;"
+   )
    public static class85 method1738(int var0) {
       class85 var2 = (class85)class85.field700.method394((long)var0);
       if (var2 != null) {
@@ -86,10 +134,20 @@ public class class342 extends class434 {
       }
    }
 
+   @ObfInfo(
+      owner = "dw",
+      name = "h",
+      desc = "(B)Ljx;"
+   )
    public static class299 method1739() {
       return class299.field2404 == 0 ? new class299() : class299.field2401[--class299.field2404];
    }
 
+   @ObfInfo(
+      owner = "dw",
+      name = "i",
+      desc = "(Ljava/lang/String;I)Ljava/lang/String;"
+   )
    public static String method1740(String var0) {
       StringBuilder var2 = new StringBuilder(var0.length());
       int var3 = 0;
@@ -122,6 +180,11 @@ public class class342 extends class434 {
       return var2.toString();
    }
 
+   @ObfInfo(
+      owner = "dw",
+      name = "f",
+      desc = "(Lbz;Lbz;IZI)I"
+   )
    static int method1741(class2 var0, class2 var1, int var2, boolean var3) {
       if (var2 == 1) {
          int var5 = var0.field17;

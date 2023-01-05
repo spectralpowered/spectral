@@ -1,8 +1,31 @@
+@ObfInfo(
+   name = "qz"
+)
 public class class489 {
+   @ObfInfo(
+      owner = "qz",
+      name = "u",
+      desc = "I"
+   )
    public static int field4078;
+   @ObfInfo(
+      owner = "qz",
+      name = "h",
+      desc = "[I"
+   )
    int[] field4080 = new int[8];
+   @ObfInfo(
+      owner = "qz",
+      name = "e",
+      desc = "[S"
+   )
    short[] field4079 = new short[8];
 
+   @ObfInfo(
+      owner = "qz",
+      name = "<init>",
+      desc = "(Lgz;)V"
+   )
    public class489(class423 var1) {
       int var2 = 0;
       if (var1.method2058()) {
@@ -18,24 +41,49 @@ public class class489 {
 
    }
 
+   @ObfInfo(
+      owner = "qz",
+      name = "h",
+      desc = "(I)[I"
+   )
    public int[] method2397() {
       return this.field4080;
    }
 
+   @ObfInfo(
+      owner = "qz",
+      name = "e",
+      desc = "(I)[S"
+   )
    public short[] method2398() {
       return this.field4079;
    }
 
+   @ObfInfo(
+      owner = "qz",
+      name = "v",
+      desc = "(IISI)V"
+   )
    public void method2399(int var1, int var2, short var3) {
       this.field4080[var1] = var2;
       this.field4079[var1] = var3;
    }
 
+   @ObfInfo(
+      owner = "qz",
+      name = "x",
+      desc = "([I[SI)V"
+   )
    public void method2400(int[] var1, short[] var2) {
       this.field4080 = var1;
       this.field4079 = var2;
    }
 
+   @ObfInfo(
+      owner = "qz",
+      name = "h",
+      desc = "(ILjava/lang/String;Lmb;II)Ljx;"
+   )
    public static class299 method2401(int var0, String var1, class476 var2, int var3) {
       class299 var5 = class480.method2370(class356.field2948, client.field279.field4042);
       var5.field2403.method544(0);

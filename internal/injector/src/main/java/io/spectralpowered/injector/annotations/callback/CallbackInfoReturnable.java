@@ -1,4 +1,4 @@
-package io.spectralpowered.injector.annotation.injection.callback;
+package io.spectralpowered.injector.annotations.callback;
 
 public class CallbackInfoReturnable<R> extends CallbackInfo {
 

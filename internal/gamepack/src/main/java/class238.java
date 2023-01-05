@@ -1,12 +1,55 @@
+@ObfInfo(
+   name = "cs"
+)
 public class class238 implements Runnable {
+   @ObfInfo(
+      owner = "cs",
+      name = "hv",
+      desc = "Lpz;"
+   )
    static class180 field2014;
+   @ObfInfo(
+      owner = "cs",
+      name = "h",
+      desc = "Z"
+   )
    boolean field2010 = true;
+   @ObfInfo(
+      owner = "cs",
+      name = "v",
+      desc = "I"
+   )
    int field2015 = 0;
+   @ObfInfo(
+      owner = "cs",
+      name = "x",
+      desc = "[I"
+   )
    int[] field2011 = new int[500];
+   @ObfInfo(
+      owner = "cs",
+      name = "m",
+      desc = "[I"
+   )
    int[] field2012 = new int[500];
+   @ObfInfo(
+      owner = "cs",
+      name = "e",
+      desc = "Ljava/lang/Object;"
+   )
    Object field2009 = new Object();
+   @ObfInfo(
+      owner = "cs",
+      name = "q",
+      desc = "[J"
+   )
    long[] field2013 = new long[500];
 
+   @ObfInfo(
+      owner = "cs",
+      name = "run",
+      desc = "()V"
+   )
    public void run() {
       for(; this.field2010; class286.method1421(50L)) {
          Object var1 = this.field2009;
@@ -22,10 +65,20 @@ public class class238 implements Runnable {
 
    }
 
+   @ObfInfo(
+      owner = "cs",
+      name = "e",
+      desc = "(IB)Ljava/lang/String;"
+   )
    static String method1032(int var0) {
       return "<col=" + Integer.toHexString(var0) + ">";
    }
 
+   @ObfInfo(
+      owner = "cs",
+      name = "p",
+      desc = "(ILbm;ZI)I"
+   )
    static int method1031(int var0, class461 var1, boolean var2) {
       class120 var4;
       if (var0 == 2700) {
@@ -69,6 +122,11 @@ public class class238 implements Runnable {
       }
    }
 
+   @ObfInfo(
+      owner = "cs",
+      name = "lv",
+      desc = "(IB)V"
+   )
    static final void method1033(int var0) {
       class480.method2369();
       class431.method2127();

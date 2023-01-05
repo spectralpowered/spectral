@@ -1,31 +1,144 @@
 import java.util.List;
 
+@ObfInfo(
+   name = "ax"
+)
 public class class233 {
+   @ObfInfo(
+      owner = "ax",
+      name = "m",
+      desc = "I"
+   )
    public static int field1985;
+   @ObfInfo(
+      owner = "ax",
+      name = "b",
+      desc = "Law;"
+   )
    static class492 field1974;
+   @ObfInfo(
+      owner = "ax",
+      name = "j",
+      desc = "[I"
+   )
    static int[] field1986;
+   @ObfInfo(
+      owner = "ax",
+      name = "vd",
+      desc = "Ljava/util/List;"
+   )
    static List field1992;
+   @ObfInfo(
+      owner = "ax",
+      name = "w",
+      desc = "Z"
+   )
    boolean field1987 = true;
+   @ObfInfo(
+      owner = "ax",
+      name = "n",
+      desc = "Laa;"
+   )
    class437 field1976;
+   @ObfInfo(
+      owner = "ax",
+      name = "ar",
+      desc = "[Laa;"
+   )
    class437[] field1981 = new class437[8];
+   @ObfInfo(
+      owner = "ax",
+      name = "at",
+      desc = "[Laa;"
+   )
    class437[] field1990 = new class437[8];
+   @ObfInfo(
+      owner = "ax",
+      name = "t",
+      desc = "I"
+   )
    int field1973;
+   @ObfInfo(
+      owner = "ax",
+      name = "k",
+      desc = "I"
+   )
    int field1977 = 32;
+   @ObfInfo(
+      owner = "ax",
+      name = "s",
+      desc = "I"
+   )
    int field1979;
+   @ObfInfo(
+      owner = "ax",
+      name = "l",
+      desc = "I"
+   )
    int field1980;
+   @ObfInfo(
+      owner = "ax",
+      name = "p",
+      desc = "I"
+   )
    int field1983 = 0;
+   @ObfInfo(
+      owner = "ax",
+      name = "d",
+      desc = "I"
+   )
    int field1984 = 0;
+   @ObfInfo(
+      owner = "ax",
+      name = "au",
+      desc = "I"
+   )
    int field1988 = 0;
+   @ObfInfo(
+      owner = "ax",
+      name = "y",
+      desc = "I"
+   )
    int field1989 = 0;
+   @ObfInfo(
+      owner = "ax",
+      name = "a",
+      desc = "J"
+   )
    long field1975 = class152.method711();
+   @ObfInfo(
+      owner = "ax",
+      name = "z",
+      desc = "J"
+   )
    long field1978 = 0L;
+   @ObfInfo(
+      owner = "ax",
+      name = "c",
+      desc = "J"
+   )
    long field1982 = 0L;
+   @ObfInfo(
+      owner = "ax",
+      name = "o",
+      desc = "[I"
+   )
    protected int[] field1991;
 
+   @ObfInfo(
+      owner = "ax",
+      name = "am",
+      desc = "(Laa;I)V"
+   )
    public final synchronized void method1006(class437 var1) {
       this.field1976 = var1;
    }
 
+   @ObfInfo(
+      owner = "ax",
+      name = "av",
+      desc = "(I)V"
+   )
    public final synchronized void method1018() {
       if (this.field1991 != null) {
          long var2 = class152.method711();
@@ -113,10 +226,20 @@ public class class233 {
       }
    }
 
+   @ObfInfo(
+      owner = "ax",
+      name = "au",
+      desc = "(I)V"
+   )
    public final void method1017() {
       this.field1987 = true;
    }
 
+   @ObfInfo(
+      owner = "ax",
+      name = "ar",
+      desc = "(B)V"
+   )
    public final synchronized void method1007() {
       this.field1987 = true;
 
@@ -129,6 +252,11 @@ public class class233 {
 
    }
 
+   @ObfInfo(
+      owner = "ax",
+      name = "at",
+      desc = "(I)V"
+   )
    public final synchronized void method1008() {
       if (null != field1974) {
          boolean var2 = true;
@@ -154,6 +282,11 @@ public class class233 {
       this.field1991 = null;
    }
 
+   @ObfInfo(
+      owner = "ax",
+      name = "ay",
+      desc = "(II)V"
+   )
    final void method1009(int var1) {
       this.field1988 -= var1;
       if (this.field1988 < 0) {
@@ -166,6 +299,11 @@ public class class233 {
 
    }
 
+   @ObfInfo(
+      owner = "ax",
+      name = "an",
+      desc = "([II)V"
+   )
    final void method1010(int[] var1, int var2) {
       int var3 = var2;
       if (class40.field207) {
@@ -278,6 +416,11 @@ public class class233 {
       this.field1975 = class152.method711();
    }
 
+   @ObfInfo(
+      owner = "ax",
+      name = "al",
+      desc = "(Laa;II)V"
+   )
    final void method1011(class437 var1, int var2) {
       int var4 = var2 >> 5;
       class437 var5 = this.field1990[var4];
@@ -291,25 +434,60 @@ public class class233 {
       var1.field3621 = var2;
    }
 
+   @ObfInfo(
+      owner = "ax",
+      name = "h",
+      desc = "(I)V"
+   )
    protected void method1012() throws Exception {
    }
 
+   @ObfInfo(
+      owner = "ax",
+      name = "e",
+      desc = "(IB)V"
+   )
    protected void method1019(int var1) throws Exception {
    }
 
+   @ObfInfo(
+      owner = "ax",
+      name = "v",
+      desc = "(B)I"
+   )
    protected int method1013() throws Exception {
       return this.field1979;
    }
 
+   @ObfInfo(
+      owner = "ax",
+      name = "x",
+      desc = "()V"
+   )
    protected void method1014() throws Exception {
    }
 
+   @ObfInfo(
+      owner = "ax",
+      name = "m",
+      desc = "(B)V"
+   )
    protected void method1015() {
    }
 
+   @ObfInfo(
+      owner = "ax",
+      name = "q",
+      desc = "(I)V"
+   )
    protected void method1016() throws Exception {
    }
 
+   @ObfInfo(
+      owner = "ax",
+      name = "jo",
+      desc = "(ILjava/lang/String;B)V"
+   )
    static void method1020(int var0, String var1) {
       int var3 = class268.field2221;
       int[] var4 = class268.field2220;

@@ -1,35 +1,118 @@
+@ObfInfo(
+   name = "dj"
+)
 public class class223 implements class78 {
+   @ObfInfo(
+      owner = "dj",
+      name = "k",
+      desc = "Lep;"
+   )
    static class429 field1922;
+   @ObfInfo(
+      owner = "dj",
+      name = "ba",
+      desc = "I"
+   )
    static int field1919;
+   @ObfInfo(
+      owner = "dj",
+      name = "q",
+      desc = "Ldj;"
+   )
    static final class223 field1912 = new class223(5, 5, (String)null, 3);
+   @ObfInfo(
+      owner = "dj",
+      name = "e",
+      desc = "Ldj;"
+   )
    static final class223 field1913 = new class223(1, 1, (String)null, 9);
+   @ObfInfo(
+      owner = "dj",
+      name = "x",
+      desc = "Ldj;"
+   )
    static final class223 field1914 = new class223(3, 3, (String)null, 6);
+   @ObfInfo(
+      owner = "dj",
+      name = "h",
+      desc = "Ldj;"
+   )
    static final class223 field1915 = new class223(0, 0, (String)null, 0);
+   @ObfInfo(
+      owner = "dj",
+      name = "m",
+      desc = "Ldj;"
+   )
    static final class223 field1916 = new class223(4, 4, (String)null, 1);
+   @ObfInfo(
+      owner = "dj",
+      name = "v",
+      desc = "Ldj;"
+   )
    static final class223 field1917 = new class223(2, 2, (String)null, 3);
+   @ObfInfo(
+      owner = "dj",
+      name = "f",
+      desc = "I"
+   )
    final int field1918;
+   @ObfInfo(
+      owner = "dj",
+      name = "r",
+      desc = "I"
+   )
    final int field1920;
+   @ObfInfo(
+      owner = "dj",
+      name = "u",
+      desc = "I"
+   )
    final int field1921;
 
+   @ObfInfo(
+      owner = "dj",
+      name = "<init>",
+      desc = "(IILjava/lang/String;I)V"
+   )
    class223(int var1, int var2, String var3, int var4) {
       this.field1918 = var1;
       this.field1920 = var2;
       this.field1921 = var4;
    }
 
+   @ObfInfo(
+      owner = "dj",
+      name = "v",
+      desc = "(I)I"
+   )
    int method987() {
       return this.field1921;
    }
 
+   @ObfInfo(
+      owner = "dj",
+      name = "e",
+      desc = "(B)I"
+   )
    public int method330() {
       return this.field1920;
    }
 
+   @ObfInfo(
+      owner = "dj",
+      name = "h",
+      desc = "(Lly;Lly;I)V"
+   )
    public static void method988(class274 var0, class274 var1) {
       class406.field3401 = var0;
       class406.field3393 = var1;
    }
 
+   @ObfInfo(
+      owner = "dj",
+      name = "ax",
+      desc = "(ILbm;ZI)I"
+   )
    static int method989(int var0, class461 var1, boolean var2) {
       int var4;
       if (var0 == 6600) {

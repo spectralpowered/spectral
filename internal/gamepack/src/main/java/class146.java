@@ -1,8 +1,31 @@
+@ObfInfo(
+   name = "kb"
+)
 public class class146 {
+   @ObfInfo(
+      owner = "kb",
+      name = "h",
+      desc = "I"
+   )
    public int field1160;
+   @ObfInfo(
+      owner = "kb",
+      name = "v",
+      desc = "I"
+   )
    public int field1161;
+   @ObfInfo(
+      owner = "kb",
+      name = "e",
+      desc = "I"
+   )
    public int field1162;
 
+   @ObfInfo(
+      owner = "kb",
+      name = "mp",
+      desc = "(Ljava/lang/String;ZI)V"
+   )
    static void method693(String var0, boolean var1) {
       var0 = var0.toLowerCase();
       short[] var3 = new short[16];

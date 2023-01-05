@@ -1,9 +1,37 @@
+@ObfInfo(
+   name = "ae"
+)
 public class class124 {
+   @ObfInfo(
+      owner = "ae",
+      name = "e",
+      desc = "I"
+   )
    int field1063;
+   @ObfInfo(
+      owner = "ae",
+      name = "h",
+      desc = "I"
+   )
    int field1064;
+   @ObfInfo(
+      owner = "ae",
+      name = "x",
+      desc = "[I"
+   )
    int[] field1062;
+   @ObfInfo(
+      owner = "ae",
+      name = "v",
+      desc = "[I"
+   )
    int[] field1065;
 
+   @ObfInfo(
+      owner = "ae",
+      name = "<init>",
+      desc = "()V"
+   )
    class124() {
       class370.method1826(16);
       this.field1064 = class370.method1832() != 0 ? class370.method1826(4) + 1 : 1;

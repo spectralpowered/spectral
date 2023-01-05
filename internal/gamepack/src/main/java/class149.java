@@ -1,12 +1,40 @@
+@ObfInfo(
+   name = "hz"
+)
 public class class149 {
+   @ObfInfo(
+      owner = "hz",
+      name = "e",
+      desc = "I"
+   )
    int field1167;
+   @ObfInfo(
+      owner = "hz",
+      name = "h",
+      desc = "I"
+   )
    int field1168;
+   @ObfInfo(
+      owner = "hz",
+      name = "v",
+      desc = "I"
+   )
    int field1169;
 
+   @ObfInfo(
+      owner = "hz",
+      name = "ae",
+      desc = "(Ljava/lang/String;B)I"
+   )
    public static int method697(String var0) {
       return var0.length() + 2;
    }
 
+   @ObfInfo(
+      owner = "hz",
+      name = "gc",
+      desc = "(I)V"
+   )
    static final void method698() {
       if (client.field280 > 0) {
          class380.method1887();
@@ -18,6 +46,11 @@ public class class149 {
       }
    }
 
+   @ObfInfo(
+      owner = "hz",
+      name = "mu",
+      desc = "(IIZI)V"
+   )
    static final void method699(int var0, int var1, boolean var2) {
       if (client.field345[var0] != null) {
          if (var1 >= 0 && var1 < client.field345[var0].method270()) {

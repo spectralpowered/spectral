@@ -1,13 +1,56 @@
+@ObfInfo(
+   name = "fh"
+)
 public class class378 {
+   @ObfInfo(
+      owner = "fh",
+      name = "t",
+      desc = "Lqy;"
+   )
    static class127 field3191;
    // $FF: synthetic field
+   @ObfInfo(
+      owner = "fh",
+      name = "this$0",
+      desc = "Lfk;"
+   )
    final class277 this$0;
+   @ObfInfo(
+      owner = "fh",
+      name = "m",
+      desc = "[F"
+   )
    public float[] field3187;
+   @ObfInfo(
+      owner = "fh",
+      name = "r",
+      desc = "I"
+   )
    public int field3188;
+   @ObfInfo(
+      owner = "fh",
+      name = "q",
+      desc = "I"
+   )
    public int field3189;
+   @ObfInfo(
+      owner = "fh",
+      name = "f",
+      desc = "I"
+   )
    public int field3190;
+   @ObfInfo(
+      owner = "fh",
+      name = "x",
+      desc = "Ljava/lang/String;"
+   )
    public String field3186;
 
+   @ObfInfo(
+      owner = "fh",
+      name = "<init>",
+      desc = "(Lfk;)V"
+   )
    class378(class277 var1) {
       this.this$0 = var1;
       this.field3187 = new float[4];
@@ -16,6 +59,11 @@ public class class378 {
       this.field3188 = 0;
    }
 
+   @ObfInfo(
+      owner = "fh",
+      name = "hx",
+      desc = "(IB)V"
+   )
    static void method1863(int var0) {
       if (var0 == -1 && !client.field477) {
          class403.method1988();
@@ -34,6 +82,11 @@ public class class378 {
       client.field476 = var0;
    }
 
+   @ObfInfo(
+      owner = "fh",
+      name = "ku",
+      desc = "([Lkd;Lkd;ZI)V"
+   )
    static void method1862(class120[] var0, class120 var1, boolean var2) {
       int var4 = var1.field915 != 0 ? var1.field915 : var1.field908;
       int var5 = var1.field916 != 0 ? var1.field916 : var1.field967;
@@ -53,6 +106,11 @@ public class class378 {
 
    }
 
+   @ObfInfo(
+      owner = "fh",
+      name = "me",
+      desc = "(B)V"
+   )
    static final void method1861() {
       for(int var1 = 0; var1 < class268.field2221; ++var1) {
          class380 var2 = client.field347[class268.field2220[var1]];

@@ -1,12 +1,45 @@
 import java.util.Iterator;
 
+@ObfInfo(
+   name = "ql"
+)
 public final class class385 implements Iterable {
+   @ObfInfo(
+      owner = "ql",
+      name = "v",
+      desc = "Lpl;"
+   )
    class139 field3242;
+   @ObfInfo(
+      owner = "ql",
+      name = "x",
+      desc = "Lpl;"
+   )
    class139 field3243;
+   @ObfInfo(
+      owner = "ql",
+      name = "e",
+      desc = "[Lpl;"
+   )
    class139[] field3241;
+   @ObfInfo(
+      owner = "ql",
+      name = "m",
+      desc = "I"
+   )
    int field3240 = 0;
+   @ObfInfo(
+      owner = "ql",
+      name = "h",
+      desc = "I"
+   )
    int field3244;
 
+   @ObfInfo(
+      owner = "ql",
+      name = "<init>",
+      desc = "(I)V"
+   )
    public class385(int var1) {
       this.field3244 = var1;
       this.field3241 = new class139[var1];
@@ -19,6 +52,11 @@ public final class class385 implements Iterable {
 
    }
 
+   @ObfInfo(
+      owner = "ql",
+      name = "h",
+      desc = "(J)Lpl;"
+   )
    public class139 method1897(long var1) {
       class139 var3 = this.field3241[(int)(var1 & (long)(this.field3244 - 1))];
 
@@ -34,6 +72,11 @@ public final class class385 implements Iterable {
       return null;
    }
 
+   @ObfInfo(
+      owner = "ql",
+      name = "e",
+      desc = "(Lpl;J)V"
+   )
    public void method1896(class139 var1, long var2) {
       if (var1.field1133 != null) {
          var1.method637();
@@ -47,6 +90,11 @@ public final class class385 implements Iterable {
       var1.field1134 = var2;
    }
 
+   @ObfInfo(
+      owner = "ql",
+      name = "v",
+      desc = "()V"
+   )
    public void method1894() {
       for(int var1 = 0; var1 < this.field3244; ++var1) {
          class139 var2 = this.field3241[var1];
@@ -65,11 +113,21 @@ public final class class385 implements Iterable {
       this.field3243 = null;
    }
 
+   @ObfInfo(
+      owner = "ql",
+      name = "x",
+      desc = "()Lpl;"
+   )
    public class139 method1895() {
       this.field3240 = 0;
       return this.method1898();
    }
 
+   @ObfInfo(
+      owner = "ql",
+      name = "m",
+      desc = "()Lpl;"
+   )
    public class139 method1898() {
       class139 var1;
       if (this.field3240 > 0 && this.field3243 != this.field3241[this.field3240 - 1]) {
@@ -90,6 +148,11 @@ public final class class385 implements Iterable {
       }
    }
 
+   @ObfInfo(
+      owner = "ql",
+      name = "iterator",
+      desc = "()Ljava/util/Iterator;"
+   )
    public Iterator iterator() {
       return new class358(this);
    }

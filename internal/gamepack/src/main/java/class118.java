@@ -1,6 +1,19 @@
+@ObfInfo(
+   name = "rq"
+)
 public final class class118 {
+   @ObfInfo(
+      owner = "rq",
+      name = "r",
+      desc = "Lrf;"
+   )
    static class448 field877 = new class448();
 
+   @ObfInfo(
+      owner = "rq",
+      name = "h",
+      desc = "([BI[BII)I"
+   )
    public static int method464(byte[] var0, int var1, byte[] var2, int var3, int var4) {
       class448 var5 = field877;
       synchronized(field877) {
@@ -21,6 +34,11 @@ public final class class118 {
       }
    }
 
+   @ObfInfo(
+      owner = "rq",
+      name = "e",
+      desc = "(Lrf;)V"
+   )
    static void method466(class448 var0) {
       byte var2 = var0.field3720;
       int var3 = var0.field3713;
@@ -144,6 +162,11 @@ public final class class118 {
       var0.field3710 = var10;
    }
 
+   @ObfInfo(
+      owner = "rq",
+      name = "v",
+      desc = "(Lrf;)V"
+   )
    static void method465(class448 var0) {
       boolean var4 = false;
       boolean var5 = false;
@@ -512,14 +535,29 @@ public final class class118 {
       }
    }
 
+   @ObfInfo(
+      owner = "rq",
+      name = "x",
+      desc = "(Lrf;)B"
+   )
    static byte method471(class448 var0) {
       return (byte)method470(8, var0);
    }
 
+   @ObfInfo(
+      owner = "rq",
+      name = "m",
+      desc = "(Lrf;)B"
+   )
    static byte method467(class448 var0) {
       return (byte)method470(1, var0);
    }
 
+   @ObfInfo(
+      owner = "rq",
+      name = "q",
+      desc = "(ILrf;)I"
+   )
    static int method470(int var0, class448 var1) {
       while(var1.field3715 < var0) {
          var1.field3730 = var1.field3730 << 8 | var1.field3712[var1.field3706] & 255;
@@ -536,6 +574,11 @@ public final class class118 {
       return var2;
    }
 
+   @ObfInfo(
+      owner = "rq",
+      name = "f",
+      desc = "(Lrf;)V"
+   )
    static void method468(class448 var0) {
       var0.field3716 = 0;
 
@@ -548,6 +591,11 @@ public final class class118 {
 
    }
 
+   @ObfInfo(
+      owner = "rq",
+      name = "r",
+      desc = "([I[I[I[BIII)V"
+   )
    static void method469(int[] var0, int[] var1, int[] var2, byte[] var3, int var4, int var5, int var6) {
       int var7 = 0;
 

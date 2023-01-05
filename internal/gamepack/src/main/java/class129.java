@@ -1,9 +1,37 @@
+@ObfInfo(
+   name = "by"
+)
 public class class129 {
+   @ObfInfo(
+      owner = "by",
+      name = "c",
+      desc = "Ljava/lang/String;"
+   )
    public static String field1079;
+   @ObfInfo(
+      owner = "by",
+      name = "m",
+      desc = "I"
+   )
    int field1078;
+   @ObfInfo(
+      owner = "by",
+      name = "x",
+      desc = "I"
+   )
    int field1080;
+   @ObfInfo(
+      owner = "by",
+      name = "q",
+      desc = "[[I"
+   )
    int[][] field1077;
 
+   @ObfInfo(
+      owner = "by",
+      name = "<init>",
+      desc = "(II)V"
+   )
    public class129(int var1, int var2) {
       if (var2 != var1) {
          int var4 = var1;
@@ -53,6 +81,11 @@ public class class129 {
       }
    }
 
+   @ObfInfo(
+      owner = "by",
+      name = "h",
+      desc = "([BB)[B"
+   )
    byte[] method614(byte[] var1) {
       if (this.field1077 != null) {
          int var3 = (int)((long)var1.length * (long)this.field1078 / (long)this.field1080) + 14;
@@ -93,6 +126,11 @@ public class class129 {
       return var1;
    }
 
+   @ObfInfo(
+      owner = "by",
+      name = "e",
+      desc = "(II)I"
+   )
    int method613(int var1) {
       if (this.field1077 != null) {
          var1 = (int)((long)var1 * (long)this.field1078 / (long)this.field1080);
@@ -101,6 +139,11 @@ public class class129 {
       return var1;
    }
 
+   @ObfInfo(
+      owner = "by",
+      name = "v",
+      desc = "(IS)I"
+   )
    int method612(int var1) {
       if (this.field1077 != null) {
          var1 = (int)((long)this.field1078 * (long)var1 / (long)this.field1080) + 6;

@@ -3,6 +3,7 @@ plugins {
 }
 
 dependencies {
+    implementation(kotlin("stdlib-jdk8"))
     implementation("org.bouncycastle:bcprov-jdk15on:_")
     implementation("org.json:json:_")
 }

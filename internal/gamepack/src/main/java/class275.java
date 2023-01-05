@@ -1,12 +1,55 @@
+@ObfInfo(
+   name = "aq"
+)
 public class class275 {
+   @ObfInfo(
+      owner = "aq",
+      name = "e",
+      desc = "I"
+   )
    int field2312 = class370.method1826(24);
+   @ObfInfo(
+      owner = "aq",
+      name = "v",
+      desc = "I"
+   )
    int field2313 = class370.method1826(24);
+   @ObfInfo(
+      owner = "aq",
+      name = "h",
+      desc = "I"
+   )
    int field2314 = class370.method1826(16);
+   @ObfInfo(
+      owner = "aq",
+      name = "x",
+      desc = "I"
+   )
    int field2315 = class370.method1826(24) + 1;
+   @ObfInfo(
+      owner = "aq",
+      name = "m",
+      desc = "I"
+   )
    int field2316 = class370.method1826(6) + 1;
+   @ObfInfo(
+      owner = "aq",
+      name = "q",
+      desc = "I"
+   )
    int field2317 = class370.method1826(8);
+   @ObfInfo(
+      owner = "aq",
+      name = "f",
+      desc = "[I"
+   )
    int[] field2318;
 
+   @ObfInfo(
+      owner = "aq",
+      name = "<init>",
+      desc = "()V"
+   )
    class275() {
       int[] var1 = new int[this.field2316];
 
@@ -30,6 +73,11 @@ public class class275 {
 
    }
 
+   @ObfInfo(
+      owner = "aq",
+      name = "h",
+      desc = "([FIZ)V"
+   )
    void method1368(float[] var1, int var2, boolean var3) {
       int var4;
       for(var4 = 0; var4 < var2; ++var4) {

@@ -1,13 +1,46 @@
+@ObfInfo(
+   name = "cn"
+)
 public class class306 {
+   @ObfInfo(
+      owner = "cn",
+      name = "s",
+      desc = "[Ljava/lang/String;"
+   )
    public static String[] field2457;
+   @ObfInfo(
+      owner = "cn",
+      name = "n",
+      desc = "Lra;"
+   )
    static class344 field2455;
+   @ObfInfo(
+      owner = "cn",
+      name = "je",
+      desc = "[Lra;"
+   )
    static class344[] field2458;
+   @ObfInfo(
+      owner = "cn",
+      name = "fn",
+      desc = "Lln;"
+   )
    static class38 field2456;
 
+   @ObfInfo(
+      owner = "cn",
+      name = "h",
+      desc = "(II)I"
+   )
    public static int method1492(int var0) {
       return class49.method251(class105.field814[var0]);
    }
 
+   @ObfInfo(
+      owner = "cn",
+      name = "kz",
+      desc = "(Lkd;IIB)V"
+   )
    static void method1491(class120 var0, int var1, int var2) {
       if (var0.field940 == 0) {
          var0.field906 = var0.field902;

@@ -1,12 +1,40 @@
+@ObfInfo(
+   name = "oo"
+)
 public class class240 {
+   @ObfInfo(
+      owner = "oo",
+      name = "uw",
+      desc = "Lbi;"
+   )
    public static class9 field2021;
+   @ObfInfo(
+      owner = "oo",
+      name = "h",
+      desc = "Loo;"
+   )
    static final class240 field2019 = new class240(3);
+   @ObfInfo(
+      owner = "oo",
+      name = "e",
+      desc = "I"
+   )
    final int field2020;
 
+   @ObfInfo(
+      owner = "oo",
+      name = "<init>",
+      desc = "(I)V"
+   )
    class240(int var1) {
       this.field2020 = var1;
    }
 
+   @ObfInfo(
+      owner = "oo",
+      name = "v",
+      desc = "(Loz;FFFI)F"
+   )
    static float method1042(class322 var0, float var1, float var2, float var3) {
       float var5 = class63.method295(var0.field2563, var0.field2564, var1);
       if (Math.abs(var5) < class186.field1694) {

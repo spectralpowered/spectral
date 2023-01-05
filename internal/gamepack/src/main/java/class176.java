@@ -1,11 +1,49 @@
+@ObfInfo(
+   name = "hn"
+)
 public class class176 extends class139 {
+   @ObfInfo(
+      owner = "hn",
+      name = "lf",
+      desc = "Lht;"
+   )
    static class251 field1322;
+   @ObfInfo(
+      owner = "hn",
+      name = "b",
+      desc = "Lhi;"
+   )
    class372 field1321;
+   @ObfInfo(
+      owner = "hn",
+      name = "q",
+      desc = "I"
+   )
    int field1317;
+   @ObfInfo(
+      owner = "hn",
+      name = "f",
+      desc = "I"
+   )
    int field1318;
+   @ObfInfo(
+      owner = "hn",
+      name = "r",
+      desc = "[I"
+   )
    int[] field1319;
+   @ObfInfo(
+      owner = "hn",
+      name = "u",
+      desc = "[[I"
+   )
    int[][] field1320;
 
+   @ObfInfo(
+      owner = "hn",
+      name = "<init>",
+      desc = "(I[B)V"
+   )
    public class176(int var1, byte[] var2) {
       this.field1317 = var1;
       class127 var3 = new class127(var2);
@@ -37,14 +75,29 @@ public class class176 extends class139 {
 
    }
 
+   @ObfInfo(
+      owner = "hn",
+      name = "h",
+      desc = "(I)I"
+   )
    public int method811() {
       return this.field1318;
    }
 
+   @ObfInfo(
+      owner = "hn",
+      name = "e",
+      desc = "(I)Lhi;"
+   )
    public class372 method810() {
       return this.field1321;
    }
 
+   @ObfInfo(
+      owner = "hn",
+      name = "j",
+      desc = "(B)V"
+   )
    static final void method812() {
       class177 var10000 = (class177)null;
       String var1 = class177.field1506;

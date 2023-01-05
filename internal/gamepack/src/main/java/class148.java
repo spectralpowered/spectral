@@ -1,14 +1,37 @@
 import javax.imageio.ImageIO;
 
+@ObfInfo(
+   name = "au"
+)
 public class class148 {
+   @ObfInfo(
+      owner = "au",
+      name = "fv",
+      desc = "I"
+   )
    static int field1164;
+   @ObfInfo(
+      owner = "au",
+      name = "tz",
+      desc = "I"
+   )
    static int field1166;
+   @ObfInfo(
+      owner = "au",
+      name = "h",
+      desc = "J"
+   )
    static long field1165;
 
    static {
       ImageIO.setUseCache(false);
    }
 
+   @ObfInfo(
+      owner = "au",
+      name = "hc",
+      desc = "(I)V"
+   )
    static final void method694() {
       class247.method1078(class292.field2376, class298.field2398, class132.field1105);
       class381.method1892(class423.field3502, class249.field2060);
@@ -29,6 +52,11 @@ public class class148 {
 
    }
 
+   @ObfInfo(
+      owner = "au",
+      name = "it",
+      desc = "(I)V"
+   )
    static final void method695() {
       for(class208 var1 = (class208)client.field362.method646(); var1 != null; var1 = (class208)client.field362.method648()) {
          if (class347.field2878 == var1.field1812 && client.field231 <= var1.field1796) {
@@ -64,6 +92,11 @@ public class class148 {
 
    }
 
+   @ObfInfo(
+      owner = "au",
+      name = "by",
+      desc = "(IB)V"
+   )
    static void method696(int var0) {
       if (var0 != -1) {
          if (class268.method1275(var0)) {

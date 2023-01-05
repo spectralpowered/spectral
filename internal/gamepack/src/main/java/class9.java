@@ -1,29 +1,77 @@
+@ObfInfo(
+   name = "bi"
+)
 public class class9 {
+   @ObfInfo(
+      owner = "bi",
+      name = "f",
+      desc = "I"
+   )
    int field40 = 0;
+   @ObfInfo(
+      owner = "bi",
+      name = "x",
+      desc = "Lqi;"
+   )
    final class194 field37;
+   @ObfInfo(
+      owner = "bi",
+      name = "m",
+      desc = "Lng;"
+   )
    public final class27 field38;
+   @ObfInfo(
+      owner = "bi",
+      name = "q",
+      desc = "Lnj;"
+   )
    public final class314 field39;
 
+   @ObfInfo(
+      owner = "bi",
+      name = "<init>",
+      desc = "(Lqi;)V"
+   )
    class9(class194 var1) {
       this.field37 = var1;
       this.field38 = new class27(var1);
       this.field39 = new class314(var1);
    }
 
+   @ObfInfo(
+      owner = "bi",
+      name = "h",
+      desc = "(I)Z"
+   )
    boolean method52() {
       return 2 == this.field40;
    }
 
+   @ObfInfo(
+      owner = "bi",
+      name = "e",
+      desc = "(B)V"
+   )
    final void method50() {
       this.field40 = 1;
    }
 
+   @ObfInfo(
+      owner = "bi",
+      name = "v",
+      desc = "(Lqy;IB)V"
+   )
    final void method42(class127 var1, int var2) {
       this.field38.method129(var1, var2);
       this.field40 = 2;
       class206.method899();
    }
 
+   @ObfInfo(
+      owner = "bi",
+      name = "x",
+      desc = "(I)V"
+   )
    final void method43() {
       for(class326 var2 = (class326)this.field38.field159.method67(); var2 != null; var2 = (class326)this.field38.field159.method69()) {
          if ((long)var2.field2576 < class152.method711() / 1000L - 5L) {
@@ -41,12 +89,22 @@ public class class9 {
 
    }
 
+   @ObfInfo(
+      owner = "bi",
+      name = "m",
+      desc = "(B)V"
+   )
    final void method44() {
       this.field40 = 0;
       this.field38.method1466();
       this.field39.method1466();
    }
 
+   @ObfInfo(
+      owner = "bi",
+      name = "q",
+      desc = "(Lrp;ZI)Z"
+   )
    final boolean method45(class257 var1, boolean var2) {
       if (var1 == null) {
          return false;
@@ -57,6 +115,11 @@ public class class9 {
       }
    }
 
+   @ObfInfo(
+      owner = "bi",
+      name = "f",
+      desc = "(Lrp;B)Z"
+   )
    final boolean method41(class257 var1) {
       if (var1 == null) {
          return false;
@@ -65,6 +128,11 @@ public class class9 {
       }
    }
 
+   @ObfInfo(
+      owner = "bi",
+      name = "r",
+      desc = "(Ljava/lang/String;I)V"
+   )
    final void method46(String var1) {
       if (var1 != null) {
          class257 var3 = new class257(var1, this.field37);
@@ -89,10 +157,20 @@ public class class9 {
       }
    }
 
+   @ObfInfo(
+      owner = "bi",
+      name = "g",
+      desc = "(I)Z"
+   )
    final boolean method51() {
       return this.field38.method1468() || this.field38.method1467() >= 200 && 1 != client.field405;
    }
 
+   @ObfInfo(
+      owner = "bi",
+      name = "i",
+      desc = "(Ljava/lang/String;B)V"
+   )
    final void method55(String var1) {
       if (null != var1) {
          class257 var3 = new class257(var1, this.field37);
@@ -123,10 +201,20 @@ public class class9 {
       }
    }
 
+   @ObfInfo(
+      owner = "bi",
+      name = "k",
+      desc = "(I)Z"
+   )
    final boolean method48() {
       return this.field39.method1468() || this.field39.method1467() >= 100 && 1 != client.field405;
    }
 
+   @ObfInfo(
+      owner = "bi",
+      name = "a",
+      desc = "(Ljava/lang/String;I)V"
+   )
    final void method49(String var1) {
       if (var1 != null) {
          class257 var3 = new class257(var1, this.field37);
@@ -144,6 +232,11 @@ public class class9 {
       }
    }
 
+   @ObfInfo(
+      owner = "bi",
+      name = "s",
+      desc = "(Ljava/lang/String;I)V"
+   )
    final void method40(String var1) {
       if (var1 != null) {
          class257 var3 = new class257(var1, this.field37);
@@ -161,11 +254,21 @@ public class class9 {
       }
    }
 
+   @ObfInfo(
+      owner = "bi",
+      name = "t",
+      desc = "(Lrp;I)Z"
+   )
    final boolean method54(class257 var1) {
       class336 var3 = (class336)this.field38.method1484(var1);
       return null != var3 && var3.method304();
    }
 
+   @ObfInfo(
+      owner = "bi",
+      name = "v",
+      desc = "(Lqx;I)V"
+   )
    static final void method57(class6 var0) {
       int var2 = 0;
       var0.method33();
@@ -286,6 +389,11 @@ public class class9 {
       }
    }
 
+   @ObfInfo(
+      owner = "bi",
+      name = "v",
+      desc = "([BI)Lbm;"
+   )
    static class461 method56(byte[] var0) {
       class461 var2 = new class461();
       class127 var3 = new class127(var0);
@@ -337,6 +445,11 @@ public class class9 {
       return var2;
    }
 
+   @ObfInfo(
+      owner = "bi",
+      name = "x",
+      desc = "(Ldu;FZI)F"
+   )
    static float method53(class84 var0, float var1, boolean var2) {
       float var4 = 0.0F;
       if (var0 != null && var0.method347() != 0) {
@@ -423,6 +536,11 @@ public class class9 {
       }
    }
 
+   @ObfInfo(
+      owner = "bi",
+      name = "hy",
+      desc = "(Lct;I)V"
+   )
    static final void method58(class334 var0) {
       if (var0.field2679 != 0) {
          if (-1 != var0.field2641) {
@@ -501,6 +619,11 @@ public class class9 {
       }
    }
 
+   @ObfInfo(
+      owner = "bi",
+      name = "mo",
+      desc = "(Lkd;I)Z"
+   )
    static boolean method47(class120 var0) {
       return var0.field945;
    }

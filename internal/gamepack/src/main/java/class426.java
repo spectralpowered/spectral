@@ -1,16 +1,54 @@
 import java.util.HashMap;
 
+@ObfInfo(
+   name = "ms"
+)
 public class class426 {
+   @ObfInfo(
+      owner = "ms",
+      name = "e",
+      desc = "Lok;"
+   )
    class376 field3524 = new class376(0, 0);
+   @ObfInfo(
+      owner = "ms",
+      name = "m",
+      desc = "I"
+   )
    int field3527 = 0;
+   @ObfInfo(
+      owner = "ms",
+      name = "v",
+      desc = "[I"
+   )
    int[] field3525 = new int[2048];
+   @ObfInfo(
+      owner = "ms",
+      name = "x",
+      desc = "[I"
+   )
    int[] field3526 = new int[2048];
+   @ObfInfo(
+      owner = "ms",
+      name = "h",
+      desc = "Ljava/util/HashMap;"
+   )
    final HashMap field3528 = new HashMap();
 
+   @ObfInfo(
+      owner = "ms",
+      name = "<init>",
+      desc = "()V"
+   )
    public class426() {
       class327.method1665();
    }
 
+   @ObfInfo(
+      owner = "ms",
+      name = "e",
+      desc = "(IB)V"
+   )
    void method2072(int var1) {
       int var3 = 1 + var1 * 2;
       double var5 = (double)((float)var1 / 3.0F);
@@ -41,6 +79,11 @@ public class class426 {
       this.field3528.put(var1, var18);
    }
 
+   @ObfInfo(
+      owner = "ms",
+      name = "v",
+      desc = "(II)Lrx;"
+   )
    class266 method2073(int var1) {
       if (!this.field3528.containsKey(var1)) {
          this.method2072(var1);
@@ -49,6 +92,11 @@ public class class426 {
       return (class266)this.field3528.get(var1);
    }
 
+   @ObfInfo(
+      owner = "ms",
+      name = "x",
+      desc = "(III)V"
+   )
    public final void method2074(int var1, int var2) {
       if (this.field3527 < this.field3525.length) {
          this.field3525[this.field3527] = var1;
@@ -57,10 +105,20 @@ public class class426 {
       }
    }
 
+   @ObfInfo(
+      owner = "ms",
+      name = "m",
+      desc = "(I)V"
+   )
    public final void method2077() {
       this.field3527 = 0;
    }
 
+   @ObfInfo(
+      owner = "ms",
+      name = "q",
+      desc = "(IILrx;FI)V"
+   )
    public final void method2078(int var1, int var2, class266 var3, float var4) {
       int var6 = (int)(var4 * 18.0F);
       class266 var7 = this.method2073(var6);
@@ -107,6 +165,11 @@ public class class426 {
       System.nanoTime();
    }
 
+   @ObfInfo(
+      owner = "ms",
+      name = "f",
+      desc = "(Lrx;Lrx;Lok;I)V"
+   )
    void method2075(class266 var1, class266 var2, class376 var3) {
       if (0 != var3.field3185 && var3.field3182 != 0) {
          int var5 = 0;
@@ -135,6 +198,11 @@ public class class426 {
       }
    }
 
+   @ObfInfo(
+      owner = "ms",
+      name = "h",
+      desc = "(II)Ldj;"
+   )
    static class223 method2076(int var0) {
       class223[] var2 = new class223[]{class223.field1915, class223.field1913, class223.field1917, class223.field1914, class223.field1916, class223.field1912};
       class223 var3 = (class223)class2.method10(var2, var0);
@@ -145,6 +213,11 @@ public class class426 {
       return var3;
    }
 
+   @ObfInfo(
+      owner = "ms",
+      name = "az",
+      desc = "([BII)I"
+   )
    public static int method2081(byte[] var0, int var1) {
       int var4 = -1;
 
@@ -156,6 +229,11 @@ public class class426 {
       return var4;
    }
 
+   @ObfInfo(
+      owner = "ms",
+      name = "o",
+      desc = "(ILbm;ZI)I"
+   )
    static int method2079(int var0, class461 var1, boolean var2) {
       class120 var4 = var2 ? class108.field822 : class37.field183;
       if (var0 == 1600) {
@@ -303,6 +381,11 @@ public class class426 {
       }
    }
 
+   @ObfInfo(
+      owner = "ms",
+      name = "g",
+      desc = "(ZI)V"
+   )
    static void method2080(boolean var0) {
       if (!class309.field2461.method169() && !class309.field2461.method170()) {
          class359.field3051 = class177.field1330;

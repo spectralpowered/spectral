@@ -1,27 +1,125 @@
+@ObfInfo(
+   name = "ly"
+)
 public abstract class class274 {
+   @ObfInfo(
+      owner = "ly",
+      name = "am",
+      desc = "Lrr;"
+   )
    static class94 field2311 = new class94();
+   @ObfInfo(
+      owner = "ly",
+      name = "at",
+      desc = "I"
+   )
    static int field2309 = 0;
+   @ObfInfo(
+      owner = "ly",
+      name = "au",
+      desc = "Z"
+   )
    boolean field2307;
+   @ObfInfo(
+      owner = "ly",
+      name = "ar",
+      desc = "Z"
+   )
    boolean field2308;
+   @ObfInfo(
+      owner = "ly",
+      name = "c",
+      desc = "Lrc;"
+   )
    class479 field2298;
+   @ObfInfo(
+      owner = "ly",
+      name = "as",
+      desc = "[Lrc;"
+   )
    class479[] field2302;
+   @ObfInfo(
+      owner = "ly",
+      name = "s",
+      desc = "I"
+   )
    int field2299;
+   @ObfInfo(
+      owner = "ly",
+      name = "l",
+      desc = "[I"
+   )
    int[] field2295;
+   @ObfInfo(
+      owner = "ly",
+      name = "d",
+      desc = "[I"
+   )
    int[] field2296;
+   @ObfInfo(
+      owner = "ly",
+      name = "t",
+      desc = "[I"
+   )
    int[] field2297;
+   @ObfInfo(
+      owner = "ly",
+      name = "p",
+      desc = "[I"
+   )
    int[] field2301;
+   @ObfInfo(
+      owner = "ly",
+      name = "y",
+      desc = "[I"
+   )
    int[] field2305;
+   @ObfInfo(
+      owner = "ly",
+      name = "z",
+      desc = "[[I"
+   )
    int[][] field2300;
+   @ObfInfo(
+      owner = "ly",
+      name = "w",
+      desc = "[[I"
+   )
    int[][] field2310;
+   @ObfInfo(
+      owner = "ly",
+      name = "ad",
+      desc = "[Ljava/lang/Object;"
+   )
    Object[] field2303;
+   @ObfInfo(
+      owner = "ly",
+      name = "ao",
+      desc = "[[Ljava/lang/Object;"
+   )
    Object[][] field2304;
+   @ObfInfo(
+      owner = "ly",
+      name = "av",
+      desc = "I"
+   )
    public int field2306;
 
+   @ObfInfo(
+      owner = "ly",
+      name = "<init>",
+      desc = "(ZZ)V"
+   )
    class274(boolean var1, boolean var2) {
       this.field2307 = var1;
       this.field2308 = var2;
    }
 
+   @ObfInfo(
+      owner = "ly",
+      name = "af",
+      desc = "([BI)V"
+   )
    void method1340(byte[] var1) {
       this.field2306 = class426.method2081(var1, var1.length);
       class127 var3 = new class127(class430.method2120(var1));
@@ -149,13 +247,28 @@ public abstract class class274 {
       }
    }
 
+   @ObfInfo(
+      owner = "ly",
+      name = "v",
+      desc = "(IB)V"
+   )
    void method1341(int var1) {
    }
 
+   @ObfInfo(
+      owner = "ly",
+      name = "ai",
+      desc = "(IIB)[B"
+   )
    public byte[] method1365(int var1, int var2) {
       return this.method1342(var1, var2, (int[])null);
    }
 
+   @ObfInfo(
+      owner = "ly",
+      name = "ax",
+      desc = "(II[II)[B"
+   )
    public byte[] method1342(int var1, int var2, int[] var3) {
       if (var1 >= 0 && var1 < this.field2304.length && null != this.field2304[var1] && var2 >= 0 && var2 < this.field2304[var1].length) {
          if (this.field2304[var1][var2] == null) {
@@ -180,6 +293,11 @@ public abstract class class274 {
       }
    }
 
+   @ObfInfo(
+      owner = "ly",
+      name = "ah",
+      desc = "(IIB)Z"
+   )
    public boolean method1363(int var1, int var2) {
       if (var1 >= 0 && var1 < this.field2304.length && null != this.field2304[var1] && var2 >= 0 && var2 < this.field2304[var1].length) {
          if (null != this.field2304[var1][var2]) {
@@ -195,6 +313,11 @@ public abstract class class274 {
       }
    }
 
+   @ObfInfo(
+      owner = "ly",
+      name = "aw",
+      desc = "(II)Z"
+   )
    public boolean method1361(int var1) {
       if (1 == this.field2304.length) {
          return this.method1363(0, var1);
@@ -205,6 +328,11 @@ public abstract class class274 {
       }
    }
 
+   @ObfInfo(
+      owner = "ly",
+      name = "aj",
+      desc = "(II)Z"
+   )
    public boolean method1344(int var1) {
       if (null != this.field2303[var1]) {
          return true;
@@ -214,6 +342,11 @@ public abstract class class274 {
       }
    }
 
+   @ObfInfo(
+      owner = "ly",
+      name = "aq",
+      desc = "(I)Z"
+   )
    public boolean method1345() {
       boolean var2 = true;
 
@@ -230,10 +363,20 @@ public abstract class class274 {
       return var2;
    }
 
+   @ObfInfo(
+      owner = "ly",
+      name = "b",
+      desc = "(II)I"
+   )
    int method1346(int var1) {
       return null != this.field2303[var1] ? 100 : 0;
    }
 
+   @ObfInfo(
+      owner = "ly",
+      name = "ap",
+      desc = "(II)[B"
+   )
    public byte[] method1347(int var1) {
       if (this.field2304.length == 1) {
          return this.method1365(0, var1);
@@ -244,6 +387,11 @@ public abstract class class274 {
       }
    }
 
+   @ObfInfo(
+      owner = "ly",
+      name = "aa",
+      desc = "(III)[B"
+   )
    public byte[] method1348(int var1, int var2) {
       if (var1 >= 0 && var1 < this.field2304.length && null != this.field2304[var1] && var2 >= 0 && var2 < this.field2304[var1].length) {
          if (this.field2304[var1][var2] == null) {
@@ -264,6 +412,11 @@ public abstract class class274 {
       }
    }
 
+   @ObfInfo(
+      owner = "ly",
+      name = "ae",
+      desc = "(IB)[B"
+   )
    public byte[] method1349(int var1) {
       if (this.field2304.length == 1) {
          return this.method1348(0, var1);
@@ -274,21 +427,46 @@ public abstract class class274 {
       }
    }
 
+   @ObfInfo(
+      owner = "ly",
+      name = "x",
+      desc = "(IB)V"
+   )
    void method1350(int var1) {
    }
 
+   @ObfInfo(
+      owner = "ly",
+      name = "ac",
+      desc = "(II)[I"
+   )
    public int[] method1351(int var1) {
       return var1 >= 0 && var1 < this.field2300.length ? this.field2300[var1] : null;
    }
 
+   @ObfInfo(
+      owner = "ly",
+      name = "bh",
+      desc = "(IB)I"
+   )
    public int method1360(int var1) {
       return this.field2304[var1].length;
    }
 
+   @ObfInfo(
+      owner = "ly",
+      name = "by",
+      desc = "(I)I"
+   )
    public int method1353() {
       return this.field2304.length;
    }
 
+   @ObfInfo(
+      owner = "ly",
+      name = "bw",
+      desc = "(B)V"
+   )
    public void method1352() {
       for(int var2 = 0; var2 < this.field2303.length; ++var2) {
          this.field2303[var2] = null;
@@ -296,6 +474,11 @@ public abstract class class274 {
 
    }
 
+   @ObfInfo(
+      owner = "ly",
+      name = "bp",
+      desc = "(IB)V"
+   )
    public void method1354(int var1) {
       for(int var3 = 0; var3 < this.field2304[var1].length; ++var3) {
          this.field2304[var1][var3] = null;
@@ -303,6 +486,11 @@ public abstract class class274 {
 
    }
 
+   @ObfInfo(
+      owner = "ly",
+      name = "bc",
+      desc = "(I)V"
+   )
    public void method1366() {
       for(int var2 = 0; var2 < this.field2304.length; ++var2) {
          if (null != this.field2304[var2]) {
@@ -314,6 +502,11 @@ public abstract class class274 {
 
    }
 
+   @ObfInfo(
+      owner = "ly",
+      name = "bl",
+      desc = "(I[IB)Z"
+   )
    boolean method1355(int var1, int[] var2) {
       if (null == this.field2303[var1]) {
          return false;
@@ -433,16 +626,31 @@ public abstract class class274 {
       }
    }
 
+   @ObfInfo(
+      owner = "ly",
+      name = "bv",
+      desc = "(Ljava/lang/String;B)I"
+   )
    public int method1356(String var1) {
       var1 = var1.toLowerCase();
       return this.field2298.method2366(class25.method102(var1));
    }
 
+   @ObfInfo(
+      owner = "ly",
+      name = "bx",
+      desc = "(ILjava/lang/String;I)I"
+   )
    public int method1359(int var1, String var2) {
       var2 = var2.toLowerCase();
       return this.field2302[var1].method2366(class25.method102(var2));
    }
 
+   @ObfInfo(
+      owner = "ly",
+      name = "bg",
+      desc = "(Ljava/lang/String;Ljava/lang/String;S)Z"
+   )
    public boolean method1362(String var1, String var2) {
       var1 = var1.toLowerCase();
       var2 = var2.toLowerCase();
@@ -455,6 +663,11 @@ public abstract class class274 {
       }
    }
 
+   @ObfInfo(
+      owner = "ly",
+      name = "bz",
+      desc = "(Ljava/lang/String;Ljava/lang/String;I)[B"
+   )
    public byte[] method1357(String var1, String var2) {
       var1 = var1.toLowerCase();
       var2 = var2.toLowerCase();
@@ -463,6 +676,11 @@ public abstract class class274 {
       return this.method1365(var4, var5);
    }
 
+   @ObfInfo(
+      owner = "ly",
+      name = "bi",
+      desc = "(Ljava/lang/String;Ljava/lang/String;I)Z"
+   )
    public boolean method1358(String var1, String var2) {
       var1 = var1.toLowerCase();
       var2 = var2.toLowerCase();
@@ -471,12 +689,22 @@ public abstract class class274 {
       return this.method1363(var4, var5);
    }
 
+   @ObfInfo(
+      owner = "ly",
+      name = "br",
+      desc = "(Ljava/lang/String;I)Z"
+   )
    public boolean method1364(String var1) {
       var1 = var1.toLowerCase();
       int var3 = this.field2298.method2366(class25.method102(var1));
       return this.method1344(var3);
    }
 
+   @ObfInfo(
+      owner = "ly",
+      name = "bq",
+      desc = "(Ljava/lang/String;I)V"
+   )
    public void method1367(String var1) {
       var1 = var1.toLowerCase();
       int var3 = this.field2298.method2366(class25.method102(var1));
@@ -485,6 +713,11 @@ public abstract class class274 {
       }
    }
 
+   @ObfInfo(
+      owner = "ly",
+      name = "bn",
+      desc = "(Ljava/lang/String;B)I"
+   )
    public int method1343(String var1) {
       var1 = var1.toLowerCase();
       int var3 = this.field2298.method2366(class25.method102(var1));

@@ -1,21 +1,84 @@
+@ObfInfo(
+   name = "km"
+)
 public class class441 {
+   @ObfInfo(
+      owner = "km",
+      name = "b",
+      desc = "[B"
+   )
    static final byte[] field3651 = new byte[]{2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 1, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+   @ObfInfo(
+      owner = "km",
+      name = "h",
+      desc = "Lqy;"
+   )
    class127 field3656 = new class127((byte[])null);
+   @ObfInfo(
+      owner = "km",
+      name = "f",
+      desc = "I"
+   )
    int field3649;
+   @ObfInfo(
+      owner = "km",
+      name = "e",
+      desc = "I"
+   )
    int field3650;
+   @ObfInfo(
+      owner = "km",
+      name = "v",
+      desc = "[I"
+   )
    int[] field3652;
+   @ObfInfo(
+      owner = "km",
+      name = "q",
+      desc = "[I"
+   )
    int[] field3653;
+   @ObfInfo(
+      owner = "km",
+      name = "m",
+      desc = "[I"
+   )
    int[] field3655;
+   @ObfInfo(
+      owner = "km",
+      name = "x",
+      desc = "[I"
+   )
    int[] field3657;
+   @ObfInfo(
+      owner = "km",
+      name = "u",
+      desc = "J"
+   )
    long field3654;
 
+   @ObfInfo(
+      owner = "km",
+      name = "<init>",
+      desc = "()V"
+   )
    class441() {
    }
 
+   @ObfInfo(
+      owner = "km",
+      name = "<init>",
+      desc = "([B)V"
+   )
    class441(byte[] var1) {
       this.method2181(var1);
    }
 
+   @ObfInfo(
+      owner = "km",
+      name = "h",
+      desc = "([B)V"
+   )
    void method2181(byte[] var1) {
       this.field3656.field1072 = var1;
       this.field3656.field1070 = 10;
@@ -46,6 +109,11 @@ public class class441 {
       this.field3653 = new int[var2];
    }
 
+   @ObfInfo(
+      owner = "km",
+      name = "e",
+      desc = "()V"
+   )
    void method2182() {
       this.field3656.field1072 = null;
       this.field3652 = null;
@@ -54,36 +122,76 @@ public class class441 {
       this.field3653 = null;
    }
 
+   @ObfInfo(
+      owner = "km",
+      name = "v",
+      desc = "()Z"
+   )
    boolean method2183() {
       return this.field3656.field1072 != null;
    }
 
+   @ObfInfo(
+      owner = "km",
+      name = "x",
+      desc = "()I"
+   )
    int method2184() {
       return this.field3657.length;
    }
 
+   @ObfInfo(
+      owner = "km",
+      name = "m",
+      desc = "(I)V"
+   )
    void method2185(int var1) {
       this.field3656.field1070 = this.field3657[var1];
    }
 
+   @ObfInfo(
+      owner = "km",
+      name = "q",
+      desc = "(I)V"
+   )
    void method2186(int var1) {
       this.field3657[var1] = this.field3656.field1070;
    }
 
+   @ObfInfo(
+      owner = "km",
+      name = "f",
+      desc = "()V"
+   )
    void method2187() {
       this.field3656.field1070 = -1;
    }
 
+   @ObfInfo(
+      owner = "km",
+      name = "r",
+      desc = "(I)V"
+   )
    void method2192(int var1) {
       int var2 = this.field3656.method588();
       this.field3655[var1] += var2;
    }
 
+   @ObfInfo(
+      owner = "km",
+      name = "u",
+      desc = "(I)I"
+   )
    int method2188(int var1) {
       int var2 = this.method2189(var1);
       return var2;
    }
 
+   @ObfInfo(
+      owner = "km",
+      name = "b",
+      desc = "(I)I"
+   )
    int method2189(int var1) {
       byte var2 = this.field3656.field1072[this.field3656.field1070];
       int var5;
@@ -113,6 +221,11 @@ public class class441 {
       }
    }
 
+   @ObfInfo(
+      owner = "km",
+      name = "j",
+      desc = "(II)I"
+   )
    int method2194(int var1, int var2) {
       int var4;
       if (var2 == 255) {
@@ -148,10 +261,20 @@ public class class441 {
       }
    }
 
+   @ObfInfo(
+      owner = "km",
+      name = "g",
+      desc = "(I)J"
+   )
    long method2193(int var1) {
       return this.field3654 + (long)var1 * (long)this.field3649;
    }
 
+   @ObfInfo(
+      owner = "km",
+      name = "i",
+      desc = "()I"
+   )
    int method2190() {
       int var1 = this.field3657.length;
       int var2 = -1;
@@ -167,6 +290,11 @@ public class class441 {
       return var2;
    }
 
+   @ObfInfo(
+      owner = "km",
+      name = "o",
+      desc = "()Z"
+   )
    boolean method2195() {
       int var1 = this.field3657.length;
 
@@ -179,6 +307,11 @@ public class class441 {
       return true;
    }
 
+   @ObfInfo(
+      owner = "km",
+      name = "n",
+      desc = "(J)V"
+   )
    void method2191(long var1) {
       this.field3654 = var1;
       int var3 = this.field3657.length;

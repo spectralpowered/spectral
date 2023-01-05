@@ -1,13 +1,46 @@
 import java.util.Calendar;
 import java.util.Date;
 
+@ObfInfo(
+   name = "gt"
+)
 public class class70 extends class139 {
+   @ObfInfo(
+      owner = "gt",
+      name = "dj",
+      desc = "Z"
+   )
    static boolean field634;
+   @ObfInfo(
+      owner = "gt",
+      name = "q",
+      desc = "Lkd;"
+   )
    public class120 field633;
+   @ObfInfo(
+      owner = "gt",
+      name = "m",
+      desc = "I"
+   )
    public int field630;
+   @ObfInfo(
+      owner = "gt",
+      name = "x",
+      desc = "I"
+   )
    public int field631;
+   @ObfInfo(
+      owner = "gt",
+      name = "v",
+      desc = "I"
+   )
    public int field632;
 
+   @ObfInfo(
+      owner = "gt",
+      name = "<init>",
+      desc = "(IIILkd;)V"
+   )
    public class70(int var1, int var2, int var3, class120 var4) {
       this.field630 = var1;
       this.field632 = var2;
@@ -15,6 +48,11 @@ public class class70 extends class139 {
       this.field633 = var4;
    }
 
+   @ObfInfo(
+      owner = "gt",
+      name = "v",
+      desc = "(III)I"
+   )
    static int method309(int var0, int var1) {
       class201 var3 = (class201)class201.field1755.method791((long)var0);
       if (var3 == null) {
@@ -34,6 +72,11 @@ public class class70 extends class139 {
       }
    }
 
+   @ObfInfo(
+      owner = "gt",
+      name = "v",
+      desc = "([BI)V"
+   )
    public static synchronized void method308(byte[] var0) {
       if (100 == var0.length && class355.field2927 < class355.field2922) {
          class355.field2925[++class355.field2927 - 1] = var0;
@@ -56,6 +99,11 @@ public class class70 extends class139 {
       }
    }
 
+   @ObfInfo(
+      owner = "gt",
+      name = "g",
+      desc = "(IIIIIZB)Lrx;"
+   )
    public static final class266 method310(int var0, int var1, int var2, int var3, int var4, boolean var5) {
       if (var1 == -1) {
          var4 = 0;
@@ -172,6 +220,11 @@ public class class70 extends class139 {
       }
    }
 
+   @ObfInfo(
+      owner = "gt",
+      name = "u",
+      desc = "(I)Ljava/util/Date;"
+   )
    static Date method307() {
       Calendar var1 = Calendar.getInstance();
       var1.set(2, 0);

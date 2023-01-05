@@ -1,16 +1,44 @@
+@ObfInfo(
+   name = "pg"
+)
 public class class296 {
+   @ObfInfo(
+      owner = "pg",
+      name = "e",
+      desc = "Ljava/lang/Object;"
+   )
    public final Object field2391;
+   @ObfInfo(
+      owner = "pg",
+      name = "h",
+      desc = "Ljava/lang/Object;"
+   )
    public final Object field2392;
 
+   @ObfInfo(
+      owner = "pg",
+      name = "<init>",
+      desc = "(Ljava/lang/Object;Ljava/lang/Object;)V"
+   )
    public class296(Object var1, Object var2) {
       this.field2392 = var1;
       this.field2391 = var2;
    }
 
+   @ObfInfo(
+      owner = "pg",
+      name = "toString",
+      desc = "()Ljava/lang/String;"
+   )
    public String toString() {
       return this.field2392 + ", " + this.field2391;
    }
 
+   @ObfInfo(
+      owner = "pg",
+      name = "equals",
+      desc = "(Ljava/lang/Object;)Z"
+   )
    public boolean equals(Object var1) {
       if (null != var1 && var1 instanceof class296) {
          class296 var2 = (class296)var1;
@@ -36,6 +64,11 @@ public class class296 {
       }
    }
 
+   @ObfInfo(
+      owner = "pg",
+      name = "hashCode",
+      desc = "()I"
+   )
    public int hashCode() {
       int var1 = 0;
       if (this.field2392 != null) {

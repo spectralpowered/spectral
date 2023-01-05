@@ -1,13 +1,61 @@
+@ObfInfo(
+   name = "hs"
+)
 public final class class340 {
+   @ObfInfo(
+      owner = "hs",
+      name = "u",
+      desc = "[[B"
+   )
    public static byte[][] field2723;
+   @ObfInfo(
+      owner = "hs",
+      name = "cx",
+      desc = "[Lra;"
+   )
    static class344[] field2721;
+   @ObfInfo(
+      owner = "hs",
+      name = "v",
+      desc = "I"
+   )
    int field2716;
+   @ObfInfo(
+      owner = "hs",
+      name = "e",
+      desc = "I"
+   )
    int field2717;
+   @ObfInfo(
+      owner = "hs",
+      name = "q",
+      desc = "I"
+   )
    int field2720;
+   @ObfInfo(
+      owner = "hs",
+      name = "h",
+      desc = "I"
+   )
    int field2722;
+   @ObfInfo(
+      owner = "hs",
+      name = "x",
+      desc = "Lhr;"
+   )
    public class295 field2718;
+   @ObfInfo(
+      owner = "hs",
+      name = "m",
+      desc = "J"
+   )
    public long field2719;
 
+   @ObfInfo(
+      owner = "hs",
+      name = "hv",
+      desc = "(Lct;IB)V"
+   )
    static final void method1707(class334 var0, int var1) {
       class242 var4;
       int var5;
@@ -401,6 +449,11 @@ public final class class340 {
 
    }
 
+   @ObfInfo(
+      owner = "hs",
+      name = "jv",
+      desc = "(III)Lgg;"
+   )
    static class39 method1706(int var0, int var1) {
       client.field518.field195 = var0;
       client.field518.field198 = var1;

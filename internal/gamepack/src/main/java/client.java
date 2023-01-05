@@ -16,310 +16,1833 @@ import java.util.Map.Entry;
 import java.util.concurrent.Future;
 import netscape.js.JSObject;
 
+@ObfInfo(
+   name = "client"
+)
 public final class client extends class214 implements class234, OAuthApi {
+   @ObfInfo(
+      owner = "client",
+      name = "bc",
+      desc = "Z"
+   )
    public static boolean field222 = false;
+   @ObfInfo(
+      owner = "client",
+      name = "rc",
+      desc = "Lgc;"
+   )
    public static class432 field460;
+   @ObfInfo(
+      owner = "client",
+      name = "ba",
+      desc = "I"
+   )
    public static int field228 = 210;
+   @ObfInfo(
+      owner = "client",
+      name = "be",
+      desc = "I"
+   )
    public static int field395 = 1;
+   @ObfInfo(
+      owner = "client",
+      name = "ke",
+      desc = "I"
+   )
    public static int field502;
+   @ObfInfo(
+      owner = "client",
+      name = "vw",
+      desc = "I"
+   )
    public static int field514;
+   @ObfInfo(
+      owner = "client",
+      name = "hn",
+      desc = "Lde;"
+   )
    public static final class486 field279;
+   @ObfInfo(
+      owner = "client",
+      name = "dn",
+      desc = "Z"
+   )
    static boolean field230 = true;
+   @ObfInfo(
+      owner = "client",
+      name = "kv",
+      desc = "Z"
+   )
    static boolean field242;
+   @ObfInfo(
+      owner = "client",
+      name = "lu",
+      desc = "Z"
+   )
    static boolean field252;
+   @ObfInfo(
+      owner = "client",
+      name = "mn",
+      desc = "Z"
+   )
    static boolean field258;
+   @ObfInfo(
+      owner = "client",
+      name = "gr",
+      desc = "Z"
+   )
    static boolean field268;
+   @ObfInfo(
+      owner = "client",
+      name = "bl",
+      desc = "Z"
+   )
    static boolean field274 = false;
+   @ObfInfo(
+      owner = "client",
+      name = "hr",
+      desc = "Z"
+   )
    static boolean field281;
+   @ObfInfo(
+      owner = "client",
+      name = "ia",
+      desc = "Z"
+   )
    static boolean field290;
+   @ObfInfo(
+      owner = "client",
+      name = "ds",
+      desc = "Z"
+   )
    static boolean field298 = true;
+   @ObfInfo(
+      owner = "client",
+      name = "mp",
+      desc = "Z"
+   )
    static boolean field311;
+   @ObfInfo(
+      owner = "client",
+      name = "ky",
+      desc = "Z"
+   )
    static boolean field316;
+   @ObfInfo(
+      owner = "client",
+      name = "le",
+      desc = "Z"
+   )
    static boolean field343;
+   @ObfInfo(
+      owner = "client",
+      name = "ln",
+      desc = "Z"
+   )
    static boolean field346;
+   @ObfInfo(
+      owner = "client",
+      name = "mc",
+      desc = "Z"
+   )
    static boolean field368;
+   @ObfInfo(
+      owner = "client",
+      name = "nf",
+      desc = "Z"
+   )
    static boolean field378;
+   @ObfInfo(
+      owner = "client",
+      name = "nr",
+      desc = "Z"
+   )
    static boolean field380;
+   @ObfInfo(
+      owner = "client",
+      name = "nd",
+      desc = "Z"
+   )
    static boolean field381;
+   @ObfInfo(
+      owner = "client",
+      name = "nh",
+      desc = "Z"
+   )
    static boolean field384;
+   @ObfInfo(
+      owner = "client",
+      name = "bh",
+      desc = "Z"
+   )
    static boolean field387 = true;
+   @ObfInfo(
+      owner = "client",
+      name = "nc",
+      desc = "Z"
+   )
    static boolean field388;
+   @ObfInfo(
+      owner = "client",
+      name = "jt",
+      desc = "Z"
+   )
    static boolean field402;
+   @ObfInfo(
+      owner = "client",
+      name = "pu",
+      desc = "Z"
+   )
    static boolean field414;
+   @ObfInfo(
+      owner = "client",
+      name = "px",
+      desc = "Z"
+   )
    static boolean field417;
+   @ObfInfo(
+      owner = "client",
+      name = "oc",
+      desc = "Z"
+   )
    static boolean field441;
+   @ObfInfo(
+      owner = "client",
+      name = "rl",
+      desc = "Z"
+   )
    static boolean field453;
+   @ObfInfo(
+      owner = "client",
+      name = "pa",
+      desc = "Z"
+   )
    static boolean field458;
+   @ObfInfo(
+      owner = "client",
+      name = "bn",
+      desc = "Z"
+   )
    static boolean field461 = false;
+   @ObfInfo(
+      owner = "client",
+      name = "sw",
+      desc = "Z"
+   )
    static boolean field477;
+   @ObfInfo(
+      owner = "client",
+      name = "ts",
+      desc = "Z"
+   )
    static boolean field484;
+   @ObfInfo(
+      owner = "client",
+      name = "th",
+      desc = "Z"
+   )
    static boolean field485;
+   @ObfInfo(
+      owner = "client",
+      name = "mi",
+      desc = "[Z"
+   )
    static boolean[] field357;
+   @ObfInfo(
+      owner = "client",
+      name = "nk",
+      desc = "[Z"
+   )
    static boolean[] field377;
+   @ObfInfo(
+      owner = "client",
+      name = "qw",
+      desc = "[Z"
+   )
    static boolean[] field444;
+   @ObfInfo(
+      owner = "client",
+      name = "qe",
+      desc = "[Z"
+   )
    static boolean[] field445;
+   @ObfInfo(
+      owner = "client",
+      name = "qx",
+      desc = "[Z"
+   )
    static boolean[] field446;
+   @ObfInfo(
+      owner = "client",
+      name = "ut",
+      desc = "[Z"
+   )
    static boolean[] field486;
+   @ObfInfo(
+      owner = "client",
+      name = "gg",
+      desc = "[B"
+   )
    static byte[] field273;
+   @ObfInfo(
+      owner = "client",
+      name = "re",
+      desc = "Lgb;"
+   )
    static class117 field285;
+   @ObfInfo(
+      owner = "client",
+      name = "ok",
+      desc = "Lkd;"
+   )
    static class120 field399;
+   @ObfInfo(
+      owner = "client",
+      name = "om",
+      desc = "Lkd;"
+   )
    static class120 field406;
+   @ObfInfo(
+      owner = "client",
+      name = "ob",
+      desc = "Lkd;"
+   )
    static class120 field407;
+   @ObfInfo(
+      owner = "client",
+      name = "pv",
+      desc = "Lkd;"
+   )
    static class120 field410;
+   @ObfInfo(
+      owner = "client",
+      name = "oz",
+      desc = "Lkd;"
+   )
    static class120 field482;
+   @ObfInfo(
+      owner = "client",
+      name = "qh",
+      desc = "Lmq;"
+   )
    static class141 field295;
+   @ObfInfo(
+      owner = "client",
+      name = "mo",
+      desc = "Lmq;"
+   )
    static class141 field352;
+   @ObfInfo(
+      owner = "client",
+      name = "ma",
+      desc = "Lmq;"
+   )
    static class141 field362;
+   @ObfInfo(
+      owner = "client",
+      name = "qr",
+      desc = "Lmq;"
+   )
    static class141 field438;
+   @ObfInfo(
+      owner = "client",
+      name = "qg",
+      desc = "Lmq;"
+   )
    static class141 field439;
+   @ObfInfo(
+      owner = "client",
+      name = "qo",
+      desc = "Lmq;"
+   )
    static class141 field440;
+   @ObfInfo(
+      owner = "client",
+      name = "mv",
+      desc = "Lmq;"
+   )
    static class141 field450;
+   @ObfInfo(
+      owner = "client",
+      name = "mu",
+      desc = "[[[Lmq;"
+   )
    static class141[][][] field360;
+   @ObfInfo(
+      owner = "client",
+      name = "qs",
+      desc = "Lqp;"
+   )
    static class170 field271;
+   @ObfInfo(
+      owner = "client",
+      name = "oa",
+      desc = "Lqp;"
+   )
    static class170 field394;
+   @ObfInfo(
+      owner = "client",
+      name = "fh",
+      desc = "Lrh;"
+   )
    static class218 field353;
+   @ObfInfo(
+      owner = "client",
+      name = "vq",
+      desc = "Lni;"
+   )
    static class255 field284;
+   @ObfInfo(
+      owner = "client",
+      name = "sq",
+      desc = "[Lrx;"
+   )
    static class266[] field472;
+   @ObfInfo(
+      owner = "client",
+      name = "gi",
+      desc = "[Lcg;"
+   )
    static class267[] field465;
+   @ObfInfo(
+      owner = "client",
+      name = "ur",
+      desc = "Lko;"
+   )
    static class284 field264;
+   @ObfInfo(
+      owner = "client",
+      name = "ve",
+      desc = "Lbg;"
+   )
    static class290 field509;
+   @ObfInfo(
+      owner = "client",
+      name = "vg",
+      desc = "[Lmz;"
+   )
    static class324[] field429;
+   @ObfInfo(
+      owner = "client",
+      name = "hz",
+      desc = "Lnh;"
+   )
    static class337 field225;
+   @ObfInfo(
+      owner = "client",
+      name = "tr",
+      desc = "[Lak;"
+   )
    static class351[] field288;
+   @ObfInfo(
+      owner = "client",
+      name = "qj",
+      desc = "Lrd;"
+   )
    static class354 field218;
+   @ObfInfo(
+      owner = "client",
+      name = "ly",
+      desc = "[Lcj;"
+   )
    static class380[] field347;
+   @ObfInfo(
+      owner = "client",
+      name = "w",
+      desc = "[Lgw;"
+   )
    static class427[] field289;
+   @ObfInfo(
+      owner = "client",
+      name = "st",
+      desc = "[Lep;"
+   )
    static class429[] field466;
+   @ObfInfo(
+      owner = "client",
+      name = "fs",
+      desc = "Let;"
+   )
    static class445 field253;
+   @ObfInfo(
+      owner = "client",
+      name = "dt",
+      desc = "Lcz;"
+   )
    static class483 field246;
+   @ObfInfo(
+      owner = "client",
+      name = "dp",
+      desc = "Lcz;"
+   )
    static class483 field467;
+   @ObfInfo(
+      owner = "client",
+      name = "sj",
+      desc = "[Lfn;"
+   )
    static class57[] field345;
+   @ObfInfo(
+      owner = "client",
+      name = "gk",
+      desc = "Lbb;"
+   )
    static class63 field269;
+   @ObfInfo(
+      owner = "client",
+      name = "ud",
+      desc = "Lpd;"
+   )
    static class8 field255;
+   @ObfInfo(
+      owner = "client",
+      name = "vh",
+      desc = "Ljv;"
+   )
    static class99 field437;
+   @ObfInfo(
+      owner = "client",
+      name = "vp",
+      desc = "Ljv;"
+   )
    static class99 field512;
+   @ObfInfo(
+      owner = "client",
+      name = "su",
+      desc = "I"
+   )
    static int field219;
+   @ObfInfo(
+      owner = "client",
+      name = "fp",
+      desc = "I"
+   )
    static int field220;
+   @ObfInfo(
+      owner = "client",
+      name = "by",
+      desc = "I"
+   )
    static int field221 = 0;
+   @ObfInfo(
+      owner = "client",
+      name = "bi",
+      desc = "I"
+   )
    static int field224 = -1;
+   @ObfInfo(
+      owner = "client",
+      name = "qn",
+      desc = "I"
+   )
    static int field226;
+   @ObfInfo(
+      owner = "client",
+      name = "lc",
+      desc = "I"
+   )
    static int field227;
+   @ObfInfo(
+      owner = "client",
+      name = "cc",
+      desc = "I"
+   )
    static int field229 = 0;
+   @ObfInfo(
+      owner = "client",
+      name = "da",
+      desc = "I"
+   )
    static int field231 = 0;
+   @ObfInfo(
+      owner = "client",
+      name = "pf",
+      desc = "I"
+   )
    static int field232;
+   @ObfInfo(
+      owner = "client",
+      name = "dw",
+      desc = "I"
+   )
    static int field233 = -1;
+   @ObfInfo(
+      owner = "client",
+      name = "nj",
+      desc = "I"
+   )
    static int field234;
+   @ObfInfo(
+      owner = "client",
+      name = "dc",
+      desc = "I"
+   )
    static int field237 = 0;
+   @ObfInfo(
+      owner = "client",
+      name = "dk",
+      desc = "I"
+   )
    static int field238 = 0;
+   @ObfInfo(
+      owner = "client",
+      name = "df",
+      desc = "I"
+   )
    static int field239 = 0;
+   @ObfInfo(
+      owner = "client",
+      name = "ft",
+      desc = "I"
+   )
    static int field240;
+   @ObfInfo(
+      owner = "client",
+      name = "dx",
+      desc = "I"
+   )
    static int field241 = 0;
+   @ObfInfo(
+      owner = "client",
+      name = "dd",
+      desc = "I"
+   )
    static int field243 = 0;
+   @ObfInfo(
+      owner = "client",
+      name = "dg",
+      desc = "I"
+   )
    static int field244 = 0;
+   @ObfInfo(
+      owner = "client",
+      name = "jq",
+      desc = "I"
+   )
    static int field245;
+   @ObfInfo(
+      owner = "client",
+      name = "eh",
+      desc = "I"
+   )
    static int field248;
+   @ObfInfo(
+      owner = "client",
+      name = "ee",
+      desc = "I"
+   )
    static int field249;
+   @ObfInfo(
+      owner = "client",
+      name = "em",
+      desc = "I"
+   )
    static int field250;
+   @ObfInfo(
+      owner = "client",
+      name = "fr",
+      desc = "I"
+   )
    static int field251;
+   @ObfInfo(
+      owner = "client",
+      name = "ff",
+      desc = "I"
+   )
    static int field254;
+   @ObfInfo(
+      owner = "client",
+      name = "kh",
+      desc = "I"
+   )
    static int field257;
+   @ObfInfo(
+      owner = "client",
+      name = "dm",
+      desc = "I"
+   )
    static int field265 = -1;
+   @ObfInfo(
+      owner = "client",
+      name = "nz",
+      desc = "I"
+   )
    static int field266;
+   @ObfInfo(
+      owner = "client",
+      name = "hs",
+      desc = "I"
+   )
    static int field275;
+   @ObfInfo(
+      owner = "client",
+      name = "ii",
+      desc = "I"
+   )
    static int field276;
+   @ObfInfo(
+      owner = "client",
+      name = "ho",
+      desc = "I"
+   )
    static int field277;
+   @ObfInfo(
+      owner = "client",
+      name = "hf",
+      desc = "I"
+   )
    static int field280;
+   @ObfInfo(
+      owner = "client",
+      name = "dr",
+      desc = "I"
+   )
    static int field282 = 0;
+   @ObfInfo(
+      owner = "client",
+      name = "iq",
+      desc = "I"
+   )
    static int field287;
+   @ObfInfo(
+      owner = "client",
+      name = "lb",
+      desc = "I"
+   )
    static int field294;
+   @ObfInfo(
+      owner = "client",
+      name = "sh",
+      desc = "I"
+   )
    static int field296;
+   @ObfInfo(
+      owner = "client",
+      name = "jj",
+      desc = "I"
+   )
    static int field297;
+   @ObfInfo(
+      owner = "client",
+      name = "jv",
+      desc = "I"
+   )
    static int field299;
+   @ObfInfo(
+      owner = "client",
+      name = "jn",
+      desc = "I"
+   )
    static int field300;
+   @ObfInfo(
+      owner = "client",
+      name = "jx",
+      desc = "I"
+   )
    static int field301;
+   @ObfInfo(
+      owner = "client",
+      name = "jf",
+      desc = "I"
+   )
    static int field302;
+   @ObfInfo(
+      owner = "client",
+      name = "jo",
+      desc = "I"
+   )
    static int field304;
+   @ObfInfo(
+      owner = "client",
+      name = "jg",
+      desc = "I"
+   )
    static int field305;
+   @ObfInfo(
+      owner = "client",
+      name = "jc",
+      desc = "I"
+   )
    static int field306;
+   @ObfInfo(
+      owner = "client",
+      name = "dy",
+      desc = "I"
+   )
    static int field307 = 0;
+   @ObfInfo(
+      owner = "client",
+      name = "bf",
+      desc = "I"
+   )
    static int field308 = 0;
+   @ObfInfo(
+      owner = "client",
+      name = "km",
+      desc = "I"
+   )
    static int field309;
+   @ObfInfo(
+      owner = "client",
+      name = "kl",
+      desc = "I"
+   )
    static int field310;
+   @ObfInfo(
+      owner = "client",
+      name = "kx",
+      desc = "I"
+   )
    static int field312;
+   @ObfInfo(
+      owner = "client",
+      name = "ll",
+      desc = "I"
+   )
    static int field313;
+   @ObfInfo(
+      owner = "client",
+      name = "hp",
+      desc = "I"
+   )
    static int field314;
+   @ObfInfo(
+      owner = "client",
+      name = "br",
+      desc = "I"
+   )
    static int field315 = -1;
+   @ObfInfo(
+      owner = "client",
+      name = "kr",
+      desc = "I"
+   )
    static int field317;
+   @ObfInfo(
+      owner = "client",
+      name = "kp",
+      desc = "I"
+   )
    static int field319;
+   @ObfInfo(
+      owner = "client",
+      name = "ql",
+      desc = "I"
+   )
    static int field323;
+   @ObfInfo(
+      owner = "client",
+      name = "ph",
+      desc = "I"
+   )
    static int field326;
+   @ObfInfo(
+      owner = "client",
+      name = "qd",
+      desc = "I"
+   )
    static int field327;
+   @ObfInfo(
+      owner = "client",
+      name = "kw",
+      desc = "I"
+   )
    static int field329;
+   @ObfInfo(
+      owner = "client",
+      name = "lm",
+      desc = "I"
+   )
    static int field331;
+   @ObfInfo(
+      owner = "client",
+      name = "sd",
+      desc = "I"
+   )
    static int field332;
+   @ObfInfo(
+      owner = "client",
+      name = "lk",
+      desc = "I"
+   )
    static int field335;
+   @ObfInfo(
+      owner = "client",
+      name = "lg",
+      desc = "I"
+   )
    static int field337;
+   @ObfInfo(
+      owner = "client",
+      name = "ls",
+      desc = "I"
+   )
    static int field338;
+   @ObfInfo(
+      owner = "client",
+      name = "dq",
+      desc = "I"
+   )
    static int field339 = 0;
+   @ObfInfo(
+      owner = "client",
+      name = "lh",
+      desc = "I"
+   )
    static int field340;
+   @ObfInfo(
+      owner = "client",
+      name = "lj",
+      desc = "I"
+   )
    static int field341;
+   @ObfInfo(
+      owner = "client",
+      name = "of",
+      desc = "I"
+   )
    static int field342;
+   @ObfInfo(
+      owner = "client",
+      name = "lq",
+      desc = "I"
+   )
    static int field344;
+   @ObfInfo(
+      owner = "client",
+      name = "lr",
+      desc = "I"
+   )
    static int field348;
+   @ObfInfo(
+      owner = "client",
+      name = "ka",
+      desc = "I"
+   )
    static int field351;
+   @ObfInfo(
+      owner = "client",
+      name = "mq",
+      desc = "I"
+   )
    static int field359;
+   @ObfInfo(
+      owner = "client",
+      name = "fg",
+      desc = "I"
+   )
    static int field361;
+   @ObfInfo(
+      owner = "client",
+      name = "jl",
+      desc = "I"
+   )
    static int field364;
+   @ObfInfo(
+      owner = "client",
+      name = "nm",
+      desc = "I"
+   )
    static int field369;
+   @ObfInfo(
+      owner = "client",
+      name = "ip",
+      desc = "I"
+   )
    static int field371;
+   @ObfInfo(
+      owner = "client",
+      name = "uj",
+      desc = "I"
+   )
    static int field372;
+   @ObfInfo(
+      owner = "client",
+      name = "kc",
+      desc = "I"
+   )
    static int field373;
+   @ObfInfo(
+      owner = "client",
+      name = "jh",
+      desc = "I"
+   )
    static int field376;
+   @ObfInfo(
+      owner = "client",
+      name = "no",
+      desc = "I"
+   )
    static int field382;
+   @ObfInfo(
+      owner = "client",
+      name = "nq",
+      desc = "I"
+   )
    static int field383;
+   @ObfInfo(
+      owner = "client",
+      name = "nn",
+      desc = "I"
+   )
    static int field386;
+   @ObfInfo(
+      owner = "client",
+      name = "oy",
+      desc = "I"
+   )
    static int field389;
+   @ObfInfo(
+      owner = "client",
+      name = "og",
+      desc = "I"
+   )
    static int field390;
+   @ObfInfo(
+      owner = "client",
+      name = "oq",
+      desc = "I"
+   )
    static int field393;
+   @ObfInfo(
+      owner = "client",
+      name = "oi",
+      desc = "I"
+   )
    static int field396;
+   @ObfInfo(
+      owner = "client",
+      name = "oo",
+      desc = "I"
+   )
    static int field397;
+   @ObfInfo(
+      owner = "client",
+      name = "on",
+      desc = "I"
+   )
    static int field398;
+   @ObfInfo(
+      owner = "client",
+      name = "uq",
+      desc = "I"
+   )
    static int field400;
+   @ObfInfo(
+      owner = "client",
+      name = "ow",
+      desc = "I"
+   )
    static int field401;
+   @ObfInfo(
+      owner = "client",
+      name = "lt",
+      desc = "I"
+   )
    static int field404;
+   @ObfInfo(
+      owner = "client",
+      name = "lx",
+      desc = "I"
+   )
    static int field405;
+   @ObfInfo(
+      owner = "client",
+      name = "or",
+      desc = "I"
+   )
    static int field408;
+   @ObfInfo(
+      owner = "client",
+      name = "pe",
+      desc = "I"
+   )
    static int field409;
+   @ObfInfo(
+      owner = "client",
+      name = "bq",
+      desc = "I"
+   )
    static int field411 = -1;
+   @ObfInfo(
+      owner = "client",
+      name = "ps",
+      desc = "I"
+   )
    static int field412;
+   @ObfInfo(
+      owner = "client",
+      name = "oj",
+      desc = "I"
+   )
    static int field413;
+   @ObfInfo(
+      owner = "client",
+      name = "pn",
+      desc = "I"
+   )
    static int field416;
+   @ObfInfo(
+      owner = "client",
+      name = "po",
+      desc = "I"
+   )
    static int field418;
+   @ObfInfo(
+      owner = "client",
+      name = "pq",
+      desc = "I"
+   )
    static int field420;
+   @ObfInfo(
+      owner = "client",
+      name = "pd",
+      desc = "I"
+   )
    static int field422;
+   @ObfInfo(
+      owner = "client",
+      name = "rn",
+      desc = "I"
+   )
    static int field423;
+   @ObfInfo(
+      owner = "client",
+      name = "pb",
+      desc = "I"
+   )
    static int field424;
+   @ObfInfo(
+      owner = "client",
+      name = "pt",
+      desc = "I"
+   )
    static int field426;
+   @ObfInfo(
+      owner = "client",
+      name = "pg",
+      desc = "I"
+   )
    static int field427;
+   @ObfInfo(
+      owner = "client",
+      name = "pi",
+      desc = "I"
+   )
    static int field428;
+   @ObfInfo(
+      owner = "client",
+      name = "qp",
+      desc = "I"
+   )
    static int field430;
+   @ObfInfo(
+      owner = "client",
+      name = "jm",
+      desc = "I"
+   )
    static int field432;
+   @ObfInfo(
+      owner = "client",
+      name = "qi",
+      desc = "I"
+   )
    static int field433;
+   @ObfInfo(
+      owner = "client",
+      name = "qt",
+      desc = "I"
+   )
    static int field434;
+   @ObfInfo(
+      owner = "client",
+      name = "kj",
+      desc = "I"
+   )
    static int field436;
+   @ObfInfo(
+      owner = "client",
+      name = "qm",
+      desc = "I"
+   )
    static int field442;
+   @ObfInfo(
+      owner = "client",
+      name = "vt",
+      desc = "I"
+   )
    static int field443;
+   @ObfInfo(
+      owner = "client",
+      name = "ms",
+      desc = "I"
+   )
    static int field449;
+   @ObfInfo(
+      owner = "client",
+      name = "rx",
+      desc = "I"
+   )
    static int field455;
+   @ObfInfo(
+      owner = "client",
+      name = "rs",
+      desc = "I"
+   )
    static int field456;
+   @ObfInfo(
+      owner = "client",
+      name = "rr",
+      desc = "I"
+   )
    static int field459;
+   @ObfInfo(
+      owner = "client",
+      name = "ja",
+      desc = "I"
+   )
    static int field462;
+   @ObfInfo(
+      owner = "client",
+      name = "hd",
+      desc = "I"
+   )
    static int field468;
+   @ObfInfo(
+      owner = "client",
+      name = "sg",
+      desc = "I"
+   )
    static int field469;
+   @ObfInfo(
+      owner = "client",
+      name = "sx",
+      desc = "I"
+   )
    static int field473;
+   @ObfInfo(
+      owner = "client",
+      name = "kb",
+      desc = "I"
+   )
    static int field474;
+   @ObfInfo(
+      owner = "client",
+      name = "rk",
+      desc = "I"
+   )
    static int field475;
+   @ObfInfo(
+      owner = "client",
+      name = "sz",
+      desc = "I"
+   )
    static int field476;
+   @ObfInfo(
+      owner = "client",
+      name = "tw",
+      desc = "I"
+   )
    static int field478;
+   @ObfInfo(
+      owner = "client",
+      name = "op",
+      desc = "I"
+   )
    static int field481;
+   @ObfInfo(
+      owner = "client",
+      name = "qc",
+      desc = "I"
+   )
    static int field490;
+   @ObfInfo(
+      owner = "client",
+      name = "mk",
+      desc = "I"
+   )
    static int field492;
+   @ObfInfo(
+      owner = "client",
+      name = "hu",
+      desc = "I"
+   )
    static int field499;
+   @ObfInfo(
+      owner = "client",
+      name = "ui",
+      desc = "I"
+   )
    static int field500;
+   @ObfInfo(
+      owner = "client",
+      name = "us",
+      desc = "I"
+   )
    static int field501;
+   @ObfInfo(
+      owner = "client",
+      name = "uu",
+      desc = "I"
+   )
    static int field503;
+   @ObfInfo(
+      owner = "client",
+      name = "ox",
+      desc = "I"
+   )
    static int field504;
+   @ObfInfo(
+      owner = "client",
+      name = "uc",
+      desc = "I"
+   )
    static int field505;
+   @ObfInfo(
+      owner = "client",
+      name = "ub",
+      desc = "I"
+   )
    static int field506;
+   @ObfInfo(
+      owner = "client",
+      name = "li",
+      desc = "I"
+   )
    static int field511;
+   @ObfInfo(
+      owner = "client",
+      name = "vr",
+      desc = "I"
+   )
    static int field513;
+   @ObfInfo(
+      owner = "client",
+      name = "vv",
+      desc = "I"
+   )
    static int field517;
+   @ObfInfo(
+      owner = "client",
+      name = "ks",
+      desc = "I"
+   )
    static int field520;
+   @ObfInfo(
+      owner = "client",
+      name = "qb",
+      desc = "I"
+   )
    static int field521;
+   @ObfInfo(
+      owner = "client",
+      name = "rq",
+      desc = "[I"
+   )
    static int[] field247;
+   @ObfInfo(
+      owner = "client",
+      name = "he",
+      desc = "[I"
+   )
    static int[] field278;
+   @ObfInfo(
+      owner = "client",
+      name = "mm",
+      desc = "[I"
+   )
    static int[] field293;
+   @ObfInfo(
+      owner = "client",
+      name = "ku",
+      desc = "[I"
+   )
    static int[] field320;
+   @ObfInfo(
+      owner = "client",
+      name = "kt",
+      desc = "[I"
+   )
    static int[] field321;
+   @ObfInfo(
+      owner = "client",
+      name = "ko",
+      desc = "[I"
+   )
    static int[] field322;
+   @ObfInfo(
+      owner = "client",
+      name = "kz",
+      desc = "[I"
+   )
    static int[] field324;
+   @ObfInfo(
+      owner = "client",
+      name = "kd",
+      desc = "[I"
+   )
    static int[] field325;
+   @ObfInfo(
+      owner = "client",
+      name = "un",
+      desc = "[I"
+   )
    static int[] field330;
+   @ObfInfo(
+      owner = "client",
+      name = "np",
+      desc = "[I"
+   )
    static int[] field333;
+   @ObfInfo(
+      owner = "client",
+      name = "ta",
+      desc = "[I"
+   )
    static int[] field334;
+   @ObfInfo(
+      owner = "client",
+      name = "pc",
+      desc = "[I"
+   )
    static int[] field349;
+   @ObfInfo(
+      owner = "client",
+      name = "me",
+      desc = "[I"
+   )
    static int[] field354;
+   @ObfInfo(
+      owner = "client",
+      name = "md",
+      desc = "[I"
+   )
    static int[] field358;
+   @ObfInfo(
+      owner = "client",
+      name = "nu",
+      desc = "[I"
+   )
    static int[] field363;
+   @ObfInfo(
+      owner = "client",
+      name = "mj",
+      desc = "[I"
+   )
    static int[] field365;
+   @ObfInfo(
+      owner = "client",
+      name = "my",
+      desc = "[I"
+   )
    static int[] field366;
+   @ObfInfo(
+      owner = "client",
+      name = "nv",
+      desc = "[I"
+   )
    static int[] field370;
+   @ObfInfo(
+      owner = "client",
+      name = "ne",
+      desc = "[I"
+   )
    static int[] field374;
+   @ObfInfo(
+      owner = "client",
+      name = "kf",
+      desc = "[I"
+   )
    static int[] field415;
+   @ObfInfo(
+      owner = "client",
+      name = "pl",
+      desc = "[I"
+   )
    static int[] field419;
+   @ObfInfo(
+      owner = "client",
+      name = "pk",
+      desc = "[I"
+   )
    static int[] field421;
+   @ObfInfo(
+      owner = "client",
+      name = "pz",
+      desc = "[I"
+   )
    static int[] field425;
+   @ObfInfo(
+      owner = "client",
+      name = "hx",
+      desc = "[I"
+   )
    static int[] field431;
+   @ObfInfo(
+      owner = "client",
+      name = "rf",
+      desc = "[I"
+   )
    static int[] field435;
+   @ObfInfo(
+      owner = "client",
+      name = "qy",
+      desc = "[I"
+   )
    static int[] field447;
+   @ObfInfo(
+      owner = "client",
+      name = "qz",
+      desc = "[I"
+   )
    static int[] field448;
+   @ObfInfo(
+      owner = "client",
+      name = "ra",
+      desc = "[I"
+   )
    static int[] field454;
+   @ObfInfo(
+      owner = "client",
+      name = "ny",
+      desc = "[I"
+   )
    static int[] field463;
+   @ObfInfo(
+      owner = "client",
+      name = "rw",
+      desc = "[I"
+   )
    static int[] field464;
+   @ObfInfo(
+      owner = "client",
+      name = "sl",
+      desc = "[I"
+   )
    static int[] field470;
+   @ObfInfo(
+      owner = "client",
+      name = "sv",
+      desc = "[I"
+   )
    static int[] field471;
+   @ObfInfo(
+      owner = "client",
+      name = "to",
+      desc = "[I"
+   )
    static int[] field479;
+   @ObfInfo(
+      owner = "client",
+      name = "tj",
+      desc = "[I"
+   )
    static int[] field480;
+   @ObfInfo(
+      owner = "client",
+      name = "rb",
+      desc = "[I"
+   )
    static int[] field487;
+   @ObfInfo(
+      owner = "client",
+      name = "ux",
+      desc = "[I"
+   )
    static int[] field488;
+   @ObfInfo(
+      owner = "client",
+      name = "uv",
+      desc = "[I"
+   )
    static int[] field489;
+   @ObfInfo(
+      owner = "client",
+      name = "iy",
+      desc = "[I"
+   )
    static int[] field495;
+   @ObfInfo(
+      owner = "client",
+      name = "wt",
+      desc = "[I"
+   )
    static int[] field498;
+   @ObfInfo(
+      owner = "client",
+      name = "ki",
+      desc = "[I"
+   )
    static int[] field507;
+   @ObfInfo(
+      owner = "client",
+      name = "tf",
+      desc = "[I"
+   )
    static int[] field508;
+   @ObfInfo(
+      owner = "client",
+      name = "uo",
+      desc = "[I"
+   )
    static int[] field516;
+   @ObfInfo(
+      owner = "client",
+      name = "ws",
+      desc = "[I"
+   )
    static int[] field519;
+   @ObfInfo(
+      owner = "client",
+      name = "kk",
+      desc = "[[I"
+   )
    static int[][] field328;
+   @ObfInfo(
+      owner = "client",
+      name = "im",
+      desc = "[[[I"
+   )
    static int[][][] field291;
+   @ObfInfo(
+      owner = "client",
+      name = "os",
+      desc = "Ljava/lang/String;"
+   )
    static String field391;
+   @ObfInfo(
+      owner = "client",
+      name = "rg",
+      desc = "Ljava/lang/String;"
+   )
    static String field457;
+   @ObfInfo(
+      owner = "client",
+      name = "it",
+      desc = "Ljava/lang/String;"
+   )
    static String field483;
+   @ObfInfo(
+      owner = "client",
+      name = "od",
+      desc = "Ljava/lang/String;"
+   )
    static String field510;
+   @ObfInfo(
+      owner = "client",
+      name = "nl",
+      desc = "[Ljava/lang/String;"
+   )
    static String[] field256;
+   @ObfInfo(
+      owner = "client",
+      name = "kq",
+      desc = "[Ljava/lang/String;"
+   )
    static String[] field318;
+   @ObfInfo(
+      owner = "client",
+      name = "mr",
+      desc = "[Ljava/lang/String;"
+   )
    static String[] field356;
+   @ObfInfo(
+      owner = "client",
+      name = "na",
+      desc = "[Ljava/lang/String;"
+   )
    static String[] field375;
+   @ObfInfo(
+      owner = "client",
+      name = "vj",
+      desc = "Ljava/util/ArrayList;"
+   )
    static ArrayList field515;
+   @ObfInfo(
+      owner = "client",
+      name = "hg",
+      desc = "Ljava/util/HashMap;"
+   )
    static HashMap field283;
+   @ObfInfo(
+      owner = "client",
+      name = "dv",
+      desc = "J"
+   )
    static long field235 = -1L;
+   @ObfInfo(
+      owner = "client",
+      name = "la",
+      desc = "J"
+   )
    static long field350;
+   @ObfInfo(
+      owner = "client",
+      name = "ro",
+      desc = "J"
+   )
    static long field392;
+   @ObfInfo(
+      owner = "client",
+      name = "de",
+      desc = "J"
+   )
    static long field451 = -1L;
+   @ObfInfo(
+      owner = "client",
+      name = "rh",
+      desc = "J"
+   )
    static long field452;
+   @ObfInfo(
+      owner = "client",
+      name = "rt",
+      desc = "[J"
+   )
    static long[] field236;
+   @ObfInfo(
+      owner = "client",
+      name = "uy",
+      desc = "S"
+   )
    static short field223;
+   @ObfInfo(
+      owner = "client",
+      name = "uz",
+      desc = "S"
+   )
    static short field263;
+   @ObfInfo(
+      owner = "client",
+      name = "ug",
+      desc = "S"
+   )
    static short field385;
+   @ObfInfo(
+      owner = "client",
+      name = "ua",
+      desc = "S"
+   )
    static short field403;
+   @ObfInfo(
+      owner = "client",
+      name = "ul",
+      desc = "S"
+   )
    static short field491;
+   @ObfInfo(
+      owner = "client",
+      name = "ue",
+      desc = "S"
+   )
    static short field493;
+   @ObfInfo(
+      owner = "client",
+      name = "up",
+      desc = "S"
+   )
    static short field496;
+   @ObfInfo(
+      owner = "client",
+      name = "uh",
+      desc = "S"
+   )
    static short field497;
+   @ObfInfo(
+      owner = "client",
+      name = "wd",
+      desc = "Lbx;"
+   )
    static final class197 field518;
+   @ObfInfo(
+      owner = "client",
+      name = "in",
+      desc = "[I"
+   )
    static final int[] field292;
+   @ObfInfo(
+      owner = "client",
+      name = "mb",
+      desc = "[I"
+   )
    static final int[] field355;
+   @ObfInfo(
+      owner = "client",
+      name = "gh",
+      desc = "Ljava/lang/String;"
+   )
    static final String field267;
+   @ObfInfo(
+      owner = "client",
+      name = "gp",
+      desc = "Z"
+   )
    boolean field303 = false;
+   @ObfInfo(
+      owner = "client",
+      name = "gt",
+      desc = "Lqy;"
+   )
    class127 field270;
+   @ObfInfo(
+      owner = "client",
+      name = "fw",
+      desc = "Ln;"
+   )
    class19 field259;
+   @ObfInfo(
+      owner = "client",
+      name = "gf",
+      desc = "Lt;"
+   )
    class3 field260;
+   @ObfInfo(
+      owner = "client",
+      name = "gz",
+      desc = "Lt;"
+   )
    class3 field367;
+   @ObfInfo(
+      owner = "client",
+      name = "gc",
+      desc = "Lr;"
+   )
    class472 field286;
+   @ObfInfo(
+      owner = "client",
+      name = "go",
+      desc = "Lcom/jagex/oldscape/pub/OtlTokenRequester;"
+   )
    OtlTokenRequester field261;
+   @ObfInfo(
+      owner = "client",
+      name = "gl",
+      desc = "Lcom/jagex/oldscape/pub/RefreshAccessTokenRequester;"
+   )
    RefreshAccessTokenRequester field379;
+   @ObfInfo(
+      owner = "client",
+      name = "fj",
+      desc = "Ljava/lang/String;"
+   )
    String field494;
+   @ObfInfo(
+      owner = "client",
+      name = "gj",
+      desc = "Ljava/util/concurrent/Future;"
+   )
    Future field262;
+   @ObfInfo(
+      owner = "client",
+      name = "gq",
+      desc = "Ljava/util/concurrent/Future;"
+   )
    Future field336;
+   @ObfInfo(
+      owner = "client",
+      name = "gw",
+      desc = "J"
+   )
    long field272 = -1L;
 
    static {
@@ -600,9 +2123,19 @@ public final class client extends class214 implements class234, OAuthApi {
       field498 = new int[50];
    }
 
+   @ObfInfo(
+      owner = "client",
+      name = "aw",
+      desc = "(I)V"
+   )
    protected final void method946() {
    }
 
+   @ObfInfo(
+      owner = "client",
+      name = "init",
+      desc = "()V"
+   )
    public final void init() {
       if (this.method935()) {
          int var3;
@@ -802,6 +2335,11 @@ public final class client extends class214 implements class234, OAuthApi {
       }
    }
 
+   @ObfInfo(
+      owner = "client",
+      name = "setOtlTokenRequester",
+      desc = "(Lcom/jagex/oldscape/pub/OtlTokenRequester;)V"
+   )
    public void setOtlTokenRequester(OtlTokenRequester var1) {
       if (var1 != null) {
          this.field261 = var1;
@@ -814,12 +2352,22 @@ public final class client extends class214 implements class234, OAuthApi {
       return false;
    }
 
+   @ObfInfo(
+      owner = "client",
+      name = "setRefreshTokenRequester",
+      desc = "(Lcom/jagex/oldscape/pub/RefreshAccessTokenRequester;)V"
+   )
    public void setRefreshTokenRequester(RefreshAccessTokenRequester var1) {
       if (null != var1) {
          this.field379 = var1;
       }
    }
 
+   @ObfInfo(
+      owner = "client",
+      name = "isOnLoginScreen",
+      desc = "()Z"
+   )
    public boolean isOnLoginScreen() {
       return 10 == field229;
    }
@@ -854,18 +2402,38 @@ public final class client extends class214 implements class234, OAuthApi {
       return false;
    }
 
+   @ObfInfo(
+      owner = "client",
+      name = "getAccountHash",
+      desc = "()J"
+   )
    public long getAccountHash() {
       return this.field272;
    }
 
+   @ObfInfo(
+      owner = "client",
+      name = "fw",
+      desc = "(I)Z"
+   )
    boolean method169() {
       return null != class114.field849 && !class114.field849.trim().isEmpty() && null != class236.field2005 && !class236.field2005.trim().isEmpty();
    }
 
+   @ObfInfo(
+      owner = "client",
+      name = "gf",
+      desc = "(I)Z"
+   )
    boolean method170() {
       return null != this.field261;
    }
 
+   @ObfInfo(
+      owner = "client",
+      name = "go",
+      desc = "(Ljava/lang/String;I)V"
+   )
    void method191(String var1) throws IOException {
       HashMap var3 = new HashMap();
       var3.put("grant_type", "refresh_token");
@@ -893,6 +2461,11 @@ public final class client extends class214 implements class234, OAuthApi {
       }
    }
 
+   @ObfInfo(
+      owner = "client",
+      name = "gj",
+      desc = "(Ljava/lang/String;I)V"
+   )
    void method171(String var1) throws MalformedURLException, IOException {
       URL var3 = new URL(class391.field3280 + "public/v1/games/YCfdbvr2pM1zUYMxJRexZY/play");
       HashMap var4 = new HashMap();
@@ -914,6 +2487,11 @@ public final class client extends class214 implements class234, OAuthApi {
       }
    }
 
+   @ObfInfo(
+      owner = "client",
+      name = "ay",
+      desc = "(B)V"
+   )
    protected final void method951() {
       int[] var2 = new int[]{20, 260, 10000};
       int[] var3 = new int[]{1000, 100, 500};
@@ -966,6 +2544,11 @@ public final class client extends class214 implements class234, OAuthApi {
       this.field259 = new class19("tokenRequest", 1, 1);
    }
 
+   @ObfInfo(
+      owner = "client",
+      name = "an",
+      desc = "(B)V"
+   )
    protected final void method941() {
       ++field231;
       this.method174();
@@ -1034,6 +2617,11 @@ public final class client extends class214 implements class234, OAuthApi {
       }
    }
 
+   @ObfInfo(
+      owner = "client",
+      name = "ab",
+      desc = "(ZI)V"
+   )
    protected final void method942(boolean var1) {
       boolean var3 = class323.method1652();
       if (var3 && field477 && class402.field3388 != null) {
@@ -1106,6 +2694,11 @@ public final class client extends class214 implements class234, OAuthApi {
 
    }
 
+   @ObfInfo(
+      owner = "client",
+      name = "al",
+      desc = "(I)V"
+   )
    protected final void method955() {
       if (class46.field560.method964()) {
          class46.field560.method971();
@@ -1156,6 +2749,11 @@ public final class client extends class214 implements class234, OAuthApi {
       this.field259.method91();
    }
 
+   @ObfInfo(
+      owner = "client",
+      name = "gz",
+      desc = "(I)V"
+   )
    void method174() {
       if (1000 != field229) {
          boolean var2 = class173.method802();
@@ -1166,6 +2764,11 @@ public final class client extends class214 implements class234, OAuthApi {
       }
    }
 
+   @ObfInfo(
+      owner = "client",
+      name = "gl",
+      desc = "(I)V"
+   )
    void method175() {
       if (class462.field3846 >= 4) {
          this.method959("js5crc");
@@ -1319,6 +2922,11 @@ public final class client extends class214 implements class234, OAuthApi {
       }
    }
 
+   @ObfInfo(
+      owner = "client",
+      name = "gq",
+      desc = "(II)V"
+   )
    void method176(int var1) {
       class13.field66 = null;
       class166.field1254 = null;
@@ -1351,6 +2959,11 @@ public final class client extends class214 implements class234, OAuthApi {
 
    }
 
+   @ObfInfo(
+      owner = "client",
+      name = "gm",
+      desc = "(B)V"
+   )
    final void method177(byte var1) {
       Object var2 = field279.method2384();
       class6 var3 = field279.field4043;
@@ -2549,6 +4162,11 @@ public final class client extends class214 implements class234, OAuthApi {
       }
    }
 
+   @ObfInfo(
+      owner = "client",
+      name = "gg",
+      desc = "(I)V"
+   )
    final void method178() {
       if (field237 > 1) {
          --field237;
@@ -3250,6 +4868,11 @@ public final class client extends class214 implements class234, OAuthApi {
       }
    }
 
+   @ObfInfo(
+      owner = "client",
+      name = "k",
+      desc = "(B)V"
+   )
    protected final void method950() {
       field452 = class152.method711() + 500L;
       this.method180();
@@ -3259,6 +4882,11 @@ public final class client extends class214 implements class234, OAuthApi {
 
    }
 
+   @ObfInfo(
+      owner = "client",
+      name = "hk",
+      desc = "(I)V"
+   )
    void method180() {
       int var2 = class427.field3529;
       int var3 = class476.field4003;
@@ -3274,7 +4902,7 @@ public final class client extends class214 implements class234, OAuthApi {
          try {
             client var4 = class309.field2461;
             Object[] var5 = new Object[]{class152.method713()};
-            JSObject.getWindow(var4).call("resize", var5);
+            JSObject.Companion.getWindow(var4).call("resize", var5);
          } catch (Throwable var6) {
             ;
          }
@@ -3282,6 +4910,11 @@ public final class client extends class214 implements class234, OAuthApi {
 
    }
 
+   @ObfInfo(
+      owner = "client",
+      name = "hq",
+      desc = "(S)V"
+   )
    final void method181() {
       int var2;
       if (field393 != -1) {
@@ -3448,6 +5081,11 @@ public final class client extends class214 implements class234, OAuthApi {
       field276 = 0;
    }
 
+   @ObfInfo(
+      owner = "client",
+      name = "ic",
+      desc = "(Lde;II)Z"
+   )
    boolean method187(class486 var1, int var2) {
       if (var1.field4047 == 0) {
          class228.field1933 = null;
@@ -3465,6 +5103,11 @@ public final class client extends class214 implements class234, OAuthApi {
       return true;
    }
 
+   @ObfInfo(
+      owner = "client",
+      name = "iw",
+      desc = "(Lde;I)Z"
+   )
    boolean method186(class486 var1) {
       if (class228.field1933 != null) {
          class228.field1933.method79(var1.field4043);
@@ -3476,6 +5119,11 @@ public final class client extends class214 implements class234, OAuthApi {
       return true;
    }
 
+   @ObfInfo(
+      owner = "client",
+      name = "il",
+      desc = "(Lde;I)Z"
+   )
    final boolean method193(class486 var1) {
       class160 var3 = var1.method2384();
       class6 var4 = var1.field4043;
@@ -3640,33 +5288,33 @@ public final class client extends class214 implements class234, OAuthApi {
             int var16;
             int var17;
             byte var27;
-            String var61;
-            class211 var63;
+            class211 var62;
+            String var63;
             if (var1.field4044 == class346.field2861) {
                var27 = var4.method548();
                var6 = var4.method555();
                long var83 = (long)var4.method549();
-               long var62 = (long)var4.method551();
+               long var61 = (long)var4.method551();
                class425 var69 = (class425)class2.method10(class283.method1394(), var4.method547());
-               long var58 = var62 + (var83 << 32);
-               boolean var65 = false;
-               var63 = null;
+               long var59 = var61 + (var83 << 32);
+               boolean var64 = false;
+               var62 = null;
                class57 var79 = var27 >= 0 ? field345[var27] : class198.field1746;
                if (var79 == null) {
-                  var65 = true;
+                  var64 = true;
                } else {
                   var16 = 0;
 
                   while(true) {
                      if (var16 >= 100) {
                         if (var69.field3523 && class240.field2021.method41(new class257(var6, class63.field619))) {
-                           var65 = true;
+                           var64 = true;
                         }
                         break;
                      }
 
-                     if (var58 == field236[var16]) {
-                        var65 = true;
+                     if (var59 == field236[var16]) {
+                        var64 = true;
                         break;
                      }
 
@@ -3674,15 +5322,15 @@ public final class client extends class214 implements class234, OAuthApi {
                   }
                }
 
-               if (!var65) {
-                  field236[field459] = var58;
+               if (!var64) {
+                  field236[field459] = var59;
                   field459 = (field459 + 1) % 100;
-                  var61 = class420.method2042(class302.method1456(var4));
+                  var63 = class420.method2042(class302.method1456(var4));
                   var17 = var27 >= 0 ? 41 : 44;
                   if (-1 != var69.field3521) {
-                     class65.method296(var17, class185.method843(var69.field3521) + var6, var61, var79.field592);
+                     class65.method296(var17, class185.method843(var69.field3521) + var6, var63, var79.field592);
                   } else {
-                     class65.method296(var17, var6, var61, var79.field592);
+                     class65.method296(var17, var6, var63, var79.field592);
                   }
                }
 
@@ -3867,12 +5515,12 @@ public final class client extends class214 implements class234, OAuthApi {
                var25 = var4.method555();
                var38 = (long)var4.method549();
                var28 = (long)var4.method551();
-               class425 var59 = (class425)class2.method10(class283.method1394(), var4.method547());
-               long var64 = var28 + (var38 << 32);
+               class425 var58 = (class425)class2.method10(class283.method1394(), var4.method547());
+               long var65 = var28 + (var38 << 32);
                boolean var55 = false;
 
                for(var14 = 0; var14 < 100; ++var14) {
-                  if (field236[var14] == var64) {
+                  if (field236[var14] == var65) {
                      var55 = true;
                      break;
                   }
@@ -3883,18 +5531,18 @@ public final class client extends class214 implements class234, OAuthApi {
                }
 
                if (!var55 && 0 == field404) {
-                  field236[field459] = var64;
+                  field236[field459] = var65;
                   field459 = (1 + field459) % 100;
                   var52 = class420.method2042(class457.method2258(class302.method1456(var4)));
                   byte var73;
-                  if (var59.field3509) {
+                  if (var58.field3509) {
                      var73 = 7;
                   } else {
                      var73 = 3;
                   }
 
-                  if (-1 != var59.field3521) {
-                     class164.method765(var73, class185.method843(var59.field3521) + var25, var52);
+                  if (-1 != var58.field3521) {
+                     class164.method765(var73, class185.method843(var58.field3521) + var25, var52);
                   } else {
                      class164.method765(var73, var25, var52);
                   }
@@ -3909,7 +5557,7 @@ public final class client extends class214 implements class234, OAuthApi {
             int var18;
             int var19;
             class208 var20;
-            int var43;
+            int var44;
             byte var46;
             int var47;
             byte var53;
@@ -3920,7 +5568,7 @@ public final class client extends class214 implements class234, OAuthApi {
                var24 = var7 >> 8 & 255;
                var8 = (var7 >> 4 & 7) + var23;
                var9 = (var7 & 7) + var24;
-               var43 = var4.method550();
+               var44 = var4.method550();
                var16 = var4.method575();
                var53 = var4.method599();
                var18 = var4.method592();
@@ -3936,7 +5584,7 @@ public final class client extends class214 implements class234, OAuthApi {
                   var9 = 64 + var9 * 128;
                   var37 = 64 + var37 * 128;
                   var11 = var11 * 128 + 64;
-                  var20 = new class208(var47, class347.field2878, var8, var9, class327.method1666(var8, var9, class347.field2878) - var14, field231 + var16, var17 + field231, var18, var19, var43, var15);
+                  var20 = new class208(var47, class347.field2878, var8, var9, class327.method1666(var8, var9, class347.field2878) - var14, field231 + var16, var17 + field231, var18, var19, var44, var15);
                   var20.method901(var37, var11, class327.method1666(var37, var11, class347.field2878) - var15, field231 + var16);
                   field362.method642(var20);
                }
@@ -3951,7 +5599,7 @@ public final class client extends class214 implements class234, OAuthApi {
                var18 = var4.method547();
                var46 = var4.method599();
                var47 = var4.method575();
-               var43 = var4.method590();
+               var44 = var4.method590();
                var7 = var4.method577();
                var23 = var7 >> 16;
                var24 = var7 >> 8 & 255;
@@ -3968,7 +5616,7 @@ public final class client extends class214 implements class234, OAuthApi {
                   var9 = 64 + var9 * 128;
                   var37 = 64 + var37 * 128;
                   var11 = 64 + var11 * 128;
-                  var20 = new class208(var47, class347.field2878, var8, var9, class327.method1666(var8, var9, class347.field2878) - var14, var16 + field231, var17 + field231, var18, var19, var43, var15);
+                  var20 = new class208(var47, class347.field2878, var8, var9, class327.method1666(var8, var9, class347.field2878) - var14, var16 + field231, var17 + field231, var18, var19, var44, var15);
                   var20.method901(var37, var11, class327.method1666(var37, var11, class347.field2878) - var15, var16 + field231);
                   field362.method642(var20);
                }
@@ -4292,7 +5940,7 @@ public final class client extends class214 implements class234, OAuthApi {
                var9 = (var7 & 7) + var24;
                var37 = var4.method594();
                var11 = var37 >> 2;
-               var43 = var37 & 3;
+               var44 = var37 & 3;
                var47 = field292[var11];
                var14 = var4.method531();
                if (var8 >= 0 && var9 >= 0 && var8 < 103 && var9 < 103) {
@@ -4301,10 +5949,10 @@ public final class client extends class214 implements class234, OAuthApi {
                      if (var70 != null) {
                         var16 = class174.method803(var70.field3237);
                         if (var11 == 2) {
-                           var70.field3230 = new class89(var16, 2, var43 + 4, class347.field2878, var8, var9, var14, false, var70.field3230);
-                           var70.field3236 = new class89(var16, 2, var43 + 1 & 3, class347.field2878, var8, var9, var14, false, var70.field3236);
+                           var70.field3230 = new class89(var16, 2, var44 + 4, class347.field2878, var8, var9, var14, false, var70.field3230);
+                           var70.field3236 = new class89(var16, 2, var44 + 1 & 3, class347.field2878, var8, var9, var14, false, var70.field3236);
                         } else {
-                           var70.field3230 = new class89(var16, var11, var43, class347.field2878, var8, var9, var14, false, var70.field3230);
+                           var70.field3230 = new class89(var16, var11, var44, class347.field2878, var8, var9, var14, false, var70.field3230);
                         }
                      }
                   } else if (var47 == 1) {
@@ -4313,30 +5961,30 @@ public final class client extends class214 implements class234, OAuthApi {
                         var16 = class174.method803(var68.field1280);
                         if (var11 != 4 && var11 != 5) {
                            if (var11 == 6) {
-                              var68.field1286 = new class89(var16, 4, var43 + 4, class347.field2878, var8, var9, var14, false, var68.field1286);
+                              var68.field1286 = new class89(var16, 4, var44 + 4, class347.field2878, var8, var9, var14, false, var68.field1286);
                            } else if (var11 == 7) {
-                              var68.field1286 = new class89(var16, 4, (var43 + 2 & 3) + 4, class347.field2878, var8, var9, var14, false, var68.field1286);
+                              var68.field1286 = new class89(var16, 4, (var44 + 2 & 3) + 4, class347.field2878, var8, var9, var14, false, var68.field1286);
                            } else if (var11 == 8) {
-                              var68.field1286 = new class89(var16, 4, var43 + 4, class347.field2878, var8, var9, var14, false, var68.field1286);
-                              var68.field1287 = new class89(var16, 4, 4 + (var43 + 2 & 3), class347.field2878, var8, var9, var14, false, var68.field1287);
+                              var68.field1286 = new class89(var16, 4, var44 + 4, class347.field2878, var8, var9, var14, false, var68.field1286);
+                              var68.field1287 = new class89(var16, 4, 4 + (var44 + 2 & 3), class347.field2878, var8, var9, var14, false, var68.field1287);
                            }
                         } else {
-                           var68.field1286 = new class89(var16, 4, var43, class347.field2878, var8, var9, var14, false, var68.field1286);
+                           var68.field1286 = new class89(var16, 4, var44, class347.field2878, var8, var9, var14, false, var68.field1286);
                         }
                      }
                   } else if (var47 == 2) {
-                     var63 = class408.field3415.method1580(class347.field2878, var8, var9);
+                     var62 = class408.field3415.method1580(class347.field2878, var8, var9);
                      if (var11 == 11) {
                         var11 = 10;
                      }
 
-                     if (null != var63) {
-                        var63.field1822 = new class89(class174.method803(var63.field1831), var11, var43, class347.field2878, var8, var9, var14, false, var63.field1822);
+                     if (null != var62) {
+                        var62.field1822 = new class89(class174.method803(var62.field1831), var11, var44, class347.field2878, var8, var9, var14, false, var62.field1822);
                      }
                   } else if (var47 == 3) {
                      class340 var66 = class408.field3415.method1602(class347.field2878, var8, var9);
                      if (null != var66) {
-                        var66.field2718 = new class89(class174.method803(var66.field2719), 22, var43, class347.field2878, var8, var9, var14, false, var66.field2718);
+                        var66.field2718 = new class89(class174.method803(var66.field2719), 22, var44, class347.field2878, var8, var9, var14, false, var66.field2718);
                      }
                   }
                }
@@ -4461,9 +6109,9 @@ public final class client extends class214 implements class234, OAuthApi {
                   }
                }
 
-               String var42 = var4.method555();
+               String var43 = var4.method555();
                if (!var57) {
-                  class164.method765(var23, var60, var42);
+                  class164.method765(var23, var60, var43);
                }
 
                var1.field4044 = null;
@@ -4599,18 +6247,18 @@ public final class client extends class214 implements class234, OAuthApi {
             }
 
             long var10;
-            long var44;
+            long var42;
             if (class346.field2775 == var1.field4044) {
                var25 = var4.method555();
                var38 = var4.method598();
                var28 = (long)var4.method549();
                var10 = (long)var4.method551();
                class425 var51 = (class425)class2.method10(class283.method1394(), var4.method547());
-               var44 = (var28 << 32) + var10;
+               var42 = (var28 << 32) + var10;
                boolean var56 = false;
 
                for(var16 = 0; var16 < 100; ++var16) {
-                  if (var44 == field236[var16]) {
+                  if (var42 == field236[var16]) {
                      var56 = true;
                      break;
                   }
@@ -4621,13 +6269,13 @@ public final class client extends class214 implements class234, OAuthApi {
                }
 
                if (!var56 && 0 == field404) {
-                  field236[field459] = var44;
+                  field236[field459] = var42;
                   field459 = (1 + field459) % 100;
-                  var61 = class420.method2042(class457.method2258(class302.method1456(var4)));
+                  var63 = class420.method2042(class457.method2258(class302.method1456(var4)));
                   if (-1 != var51.field3521) {
-                     class65.method296(9, class185.method843(var51.field3521) + var25, var61, class10.method61(var38));
+                     class65.method296(9, class185.method843(var51.field3521) + var25, var63, class10.method61(var38));
                   } else {
-                     class65.method296(9, var25, var61, class10.method61(var38));
+                     class65.method296(9, var25, var63, class10.method61(var38));
                   }
                }
 
@@ -4732,11 +6380,11 @@ public final class client extends class214 implements class234, OAuthApi {
                var8 = var23 + (var7 >> 4 & 7);
                var9 = (var7 & 7) + var24;
                var11 = var4.method594();
-               var43 = var4.method575();
+               var44 = var4.method575();
                if (var8 >= 0 && var9 >= 0 && var8 < 104 && var9 < 104) {
                   var8 = 64 + var8 * 128;
                   var9 = var9 * 128 + 64;
-                  class339 var45 = new class339(var37, class347.field2878, var8, var9, class327.method1666(var8, var9, class347.field2878) - var11, var43, field231);
+                  class339 var45 = new class339(var37, class347.field2878, var8, var9, class327.method1666(var8, var9, class347.field2878) - var11, var44, field231);
                   field352.method642(var45);
                }
 
@@ -5056,9 +6704,9 @@ public final class client extends class214 implements class234, OAuthApi {
                   var37 = var4.method549();
                   var11 = var4.method595();
 
-                  for(var43 = var9; var43 <= var37; ++var43) {
-                     var44 = ((long)var8 << 32) + (long)var43;
-                     field271.method788(new class245(var11), var44);
+                  for(var44 = var9; var44 <= var37; ++var44) {
+                     var42 = ((long)var8 << 32) + (long)var44;
+                     field271.method788(new class245(var11), var42);
                   }
                }
 
@@ -5367,6 +7015,11 @@ public final class client extends class214 implements class234, OAuthApi {
       }
    }
 
+   @ObfInfo(
+      owner = "client",
+      name = "jr",
+      desc = "(I)V"
+   )
    final void method190() {
       boolean var2 = false;
 
@@ -5524,11 +7177,21 @@ public final class client extends class214 implements class234, OAuthApi {
       }
    }
 
+   @ObfInfo(
+      owner = "client",
+      name = "jp",
+      desc = "(I)Z"
+   )
    final boolean method182() {
       int var2 = field369 - 1;
       return (field311 && field369 > 2 || class228.method996(var2)) && !field377[var2];
    }
 
+   @ObfInfo(
+      owner = "client",
+      name = "jn",
+      desc = "(III)V"
+   )
    final void method183(int var1, int var2) {
       int var4 = class114.field848.method2045(class177.field1539);
 
@@ -5571,10 +7234,20 @@ public final class client extends class214 implements class234, OAuthApi {
       field368 = true;
    }
 
+   @ObfInfo(
+      owner = "client",
+      name = "kb",
+      desc = "(ZI)V"
+   )
    final void method195(boolean var1) {
       class355.method1774(field393, class427.field3529, class476.field4003, var1);
    }
 
+   @ObfInfo(
+      owner = "client",
+      name = "kp",
+      desc = "(Lkd;I)V"
+   )
    void method194(class120 var1) {
       class120 var3 = var1.field912 == -1 ? null : class67.method299(var1.field912);
       int var4;
@@ -5591,6 +7264,11 @@ public final class client extends class214 implements class234, OAuthApi {
       class306.method1491(var1, var4, var5);
    }
 
+   @ObfInfo(
+      owner = "client",
+      name = "ls",
+      desc = "(I)V"
+   )
    final void method185() {
       class184.method836(field406);
       ++class161.field1220;
@@ -5705,14 +7383,29 @@ public final class client extends class214 implements class234, OAuthApi {
       }
    }
 
+   @ObfInfo(
+      owner = "client",
+      name = "mw",
+      desc = "(B)Lrp;"
+   )
    public class257 method1021() {
       return null != class113.field846 ? class113.field846.field3207 : null;
    }
 
+   @ObfInfo(
+      owner = "client",
+      name = "fm",
+      desc = "(B)Lpb;"
+   )
    static class272 method197() {
       return class164.field1249;
    }
 
+   @ObfInfo(
+      owner = "client",
+      name = "z",
+      desc = "(ILbm;ZI)I"
+   )
    static int method196(int var0, class461 var1, boolean var2) {
       if (var0 == 3200) {
          class161.field1227 -= 3;
@@ -5915,6 +7608,11 @@ public final class client extends class214 implements class234, OAuthApi {
       }
    }
 
+   @ObfInfo(
+      owner = "client",
+      name = "gs",
+      desc = "(S)V"
+   )
    static final void method189() {
       if (null != class288.field2367) {
          class288.field2367.method1018();

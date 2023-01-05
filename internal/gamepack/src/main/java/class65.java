@@ -1,4 +1,12 @@
+@ObfInfo(
+   name = "nq"
+)
 public class class65 {
+   @ObfInfo(
+      owner = "nq",
+      name = "e",
+      desc = "(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V"
+   )
    static void method296(int var0, String var1, String var2, String var3) {
       class34 var5 = (class34)class100.field792.get(var0);
       if (var5 == null) {

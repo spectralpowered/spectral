@@ -1,24 +1,132 @@
+@ObfInfo(
+   name = "hm"
+)
 public class class341 extends class162 {
+   @ObfInfo(
+      owner = "hm",
+      name = "x",
+      desc = "Z"
+   )
    public static boolean field2732 = true;
+   @ObfInfo(
+      owner = "hm",
+      name = "d",
+      desc = "Lhw;"
+   )
    public static class308 field2728;
+   @ObfInfo(
+      owner = "hm",
+      name = "g",
+      desc = "I"
+   )
    public static int field2730 = 512;
+   @ObfInfo(
+      owner = "hm",
+      name = "w",
+      desc = "[I"
+   )
    public static int[] field2726 = new int[2048];
+   @ObfInfo(
+      owner = "hm",
+      name = "p",
+      desc = "[I"
+   )
    public static int[] field2740 = new int[65536];
+   @ObfInfo(
+      owner = "hm",
+      name = "as",
+      desc = "[I"
+   )
    public static int[] field2744 = new int[2048];
+   @ObfInfo(
+      owner = "hm",
+      name = "v",
+      desc = "Z"
+   )
    static boolean field2725 = false;
+   @ObfInfo(
+      owner = "hm",
+      name = "h",
+      desc = "Z"
+   )
    static boolean field2739 = false;
+   @ObfInfo(
+      owner = "hm",
+      name = "e",
+      desc = "Z"
+   )
    static boolean field2741 = false;
+   @ObfInfo(
+      owner = "hm",
+      name = "a",
+      desc = "I"
+   )
    static int field2724;
+   @ObfInfo(
+      owner = "hm",
+      name = "m",
+      desc = "I"
+   )
    static int field2727 = 0;
+   @ObfInfo(
+      owner = "hm",
+      name = "i",
+      desc = "I"
+   )
    static int field2731;
+   @ObfInfo(
+      owner = "hm",
+      name = "n",
+      desc = "I"
+   )
    static int field2733;
+   @ObfInfo(
+      owner = "hm",
+      name = "k",
+      desc = "I"
+   )
    static int field2734;
+   @ObfInfo(
+      owner = "hm",
+      name = "s",
+      desc = "I"
+   )
    static int field2736;
+   @ObfInfo(
+      owner = "hm",
+      name = "l",
+      desc = "I"
+   )
    static int field2737;
+   @ObfInfo(
+      owner = "hm",
+      name = "t",
+      desc = "I"
+   )
    static int field2738;
+   @ObfInfo(
+      owner = "hm",
+      name = "o",
+      desc = "I"
+   )
    static int field2743;
+   @ObfInfo(
+      owner = "hm",
+      name = "c",
+      desc = "[I"
+   )
    static int[] field2729 = new int[1024];
+   @ObfInfo(
+      owner = "hm",
+      name = "y",
+      desc = "[I"
+   )
    static int[] field2735 = new int[512];
+   @ObfInfo(
+      owner = "hm",
+      name = "z",
+      desc = "[I"
+   )
    static int[] field2742 = new int[2048];
 
    static {
@@ -38,10 +146,20 @@ public class class341 extends class162 {
 
    }
 
+   @ObfInfo(
+      owner = "hm",
+      name = "h",
+      desc = "()V"
+   )
    public static final void method1709() {
       method1710(class162.field1236, class162.field1234, class162.field1237, class162.field1235);
    }
 
+   @ObfInfo(
+      owner = "hm",
+      name = "e",
+      desc = "(IIII)V"
+   )
    static final void method1710(int var0, int var1, int var2, int var3) {
       field2733 = var2 - var0;
       field2734 = var3 - var1;
@@ -59,6 +177,11 @@ public class class341 extends class162 {
 
    }
 
+   @ObfInfo(
+      owner = "hm",
+      name = "v",
+      desc = "()V"
+   )
    public static final void method1711() {
       field2731 = field2733 / 2;
       field2743 = field2734 / 2;
@@ -68,6 +191,11 @@ public class class341 extends class162 {
       field2738 = field2734 - field2743;
    }
 
+   @ObfInfo(
+      owner = "hm",
+      name = "x",
+      desc = "(II)V"
+   )
    public static final void method1734(int var0, int var1) {
       int var2 = field2729[0];
       int var3 = var2 / class162.field1232;
@@ -80,14 +208,29 @@ public class class341 extends class162 {
       field2738 = field2734 - field2743;
    }
 
+   @ObfInfo(
+      owner = "hm",
+      name = "m",
+      desc = "(Lhw;)V"
+   )
    public static final void method1712(class308 var0) {
       field2728 = var0;
    }
 
+   @ObfInfo(
+      owner = "hm",
+      name = "q",
+      desc = "(D)V"
+   )
    public static final void method1708(double var0) {
       method1713(var0, 0, 512);
    }
 
+   @ObfInfo(
+      owner = "hm",
+      name = "f",
+      desc = "(DII)V"
+   )
    static final void method1713(double var0, int var2, int var3) {
       int var4 = var2 * 128;
 
@@ -165,6 +308,11 @@ public class class341 extends class162 {
 
    }
 
+   @ObfInfo(
+      owner = "hm",
+      name = "r",
+      desc = "(ID)I"
+   )
    static int method1714(int var0, double var1) {
       double var3 = (double)(var0 >> 16) / 256.0D;
       double var5 = (double)(var0 >> 8 & 255) / 256.0D;
@@ -178,10 +326,20 @@ public class class341 extends class162 {
       return (var9 << 16) + (var10 << 8) + var11;
    }
 
+   @ObfInfo(
+      owner = "hm",
+      name = "u",
+      desc = "(III)V"
+   )
    public static void method1715(int var0, int var1, int var2) {
       field2739 = var0 < 0 || var0 > field2733 || var1 < 0 || var1 > field2733 || var2 < 0 || var2 > field2733;
    }
 
+   @ObfInfo(
+      owner = "hm",
+      name = "b",
+      desc = "(IIIIIIIII)V"
+   )
    static final void method1730(int var0, int var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8) {
       int var9 = var4 - var3;
       int var10 = var1 - var0;
@@ -687,6 +845,11 @@ public class class341 extends class162 {
       }
    }
 
+   @ObfInfo(
+      owner = "hm",
+      name = "j",
+      desc = "(IIIIIIIIIBBBB)V"
+   )
    static final void method1717(int var0, int var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8, byte var9, byte var10, byte var11, byte var12) {
       var6 = method1731(var6, var9, var10, var11, var12);
       var7 = method1731(var7, var9, var10, var11, var12);
@@ -694,6 +857,11 @@ public class class341 extends class162 {
       method1730(var0, var1, var2, var3, var4, var5, var6, var7, var8);
    }
 
+   @ObfInfo(
+      owner = "hm",
+      name = "g",
+      desc = "(IBBBB)I"
+   )
    static int method1731(int var0, byte var1, byte var2, byte var3, byte var4) {
       int var5 = var0 >> 10 & 63;
       int var6 = var0 >> 7 & 7;
@@ -714,6 +882,11 @@ public class class341 extends class162 {
       return (var5 << 10 | var6 << 7 | var7) & '\uffff';
    }
 
+   @ObfInfo(
+      owner = "hm",
+      name = "i",
+      desc = "([IIIIIIII)V"
+   )
    static final void method1718(int[] var0, int var1, int var2, int var3, int var4, int var5, int var6, int var7) {
       if (field2739) {
          if (var5 > field2733) {
@@ -822,6 +995,11 @@ public class class341 extends class162 {
       }
    }
 
+   @ObfInfo(
+      owner = "hm",
+      name = "o",
+      desc = "(IIIIIII)V"
+   )
    public static final void method1719(int var0, int var1, int var2, int var3, int var4, int var5, int var6) {
       int var7 = 0;
       if (var1 != var0) {
@@ -1277,12 +1455,22 @@ public class class341 extends class162 {
       }
    }
 
+   @ObfInfo(
+      owner = "hm",
+      name = "n",
+      desc = "(IIIIIIIBBBB)V"
+   )
    static final void method1720(int var0, int var1, int var2, int var3, int var4, int var5, int var6, byte var7, byte var8, byte var9, byte var10) {
       int var11 = method1731(var6, var7, var8, var9, var10);
       var6 = field2740[var11];
       method1719(var0, var1, var2, var3, var4, var5, var6);
    }
 
+   @ObfInfo(
+      owner = "hm",
+      name = "k",
+      desc = "([IIIIII)V"
+   )
    static final void method1721(int[] var0, int var1, int var2, int var3, int var4, int var5) {
       if (field2739) {
          if (var5 > field2733) {
@@ -1376,6 +1564,11 @@ public class class341 extends class162 {
       }
    }
 
+   @ObfInfo(
+      owner = "hm",
+      name = "a",
+      desc = "(IIIIIIIIIIIIIIIIIII)V"
+   )
    static final void method1722(int var0, int var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8, int var9, int var10, int var11, int var12, int var13, int var14, int var15, int var16, int var17, int var18) {
       int[] var19 = field2728.method1495(var18);
       int var20;
@@ -1996,6 +2189,11 @@ public class class341 extends class162 {
       }
    }
 
+   @ObfInfo(
+      owner = "hm",
+      name = "s",
+      desc = "([I[IIIIIIIIIIIIII)V"
+   )
    static final void method1723(int[] var0, int[] var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8, int var9, int var10, int var11, int var12, int var13, int var14) {
       if (field2739) {
          if (var6 > field2733) {
@@ -2415,6 +2613,11 @@ public class class341 extends class162 {
       }
    }
 
+   @ObfInfo(
+      owner = "hm",
+      name = "l",
+      desc = "(IIIIIIIIIIIIIIIIIII)V"
+   )
    static final void method1733(int var0, int var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8, int var9, int var10, int var11, int var12, int var13, int var14, int var15, int var16, int var17, int var18) {
       int[] var19 = field2728.method1495(var18);
       int var20;
@@ -3035,6 +3238,11 @@ public class class341 extends class162 {
       }
    }
 
+   @ObfInfo(
+      owner = "hm",
+      name = "t",
+      desc = "([I[IIIIIIIIIIIIII)V"
+   )
    static final void method1724(int[] var0, int[] var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8, int var9, int var10, int var11, int var12, int var13, int var14) {
       if (field2739) {
          if (var6 > field2733) {
@@ -3349,6 +3557,11 @@ public class class341 extends class162 {
       }
    }
 
+   @ObfInfo(
+      owner = "hm",
+      name = "c",
+      desc = "(II)I"
+   )
    static final int method1732(int var0, int var1) {
       var1 = var1 * (var0 & 127) >> 7;
       if (var1 < 2) {
@@ -3360,26 +3573,56 @@ public class class341 extends class162 {
       return (var0 & 'ﾀ') + var1;
    }
 
+   @ObfInfo(
+      owner = "hm",
+      name = "p",
+      desc = "(IIII)I"
+   )
    static final int method1716(int var0, int var1, int var2, int var3) {
       return var0 * var2 + var1 * var3 >> 16;
    }
 
+   @ObfInfo(
+      owner = "hm",
+      name = "d",
+      desc = "(IIII)I"
+   )
    static final int method1726(int var0, int var1, int var2, int var3) {
       return var1 * var2 - var0 * var3 >> 16;
    }
 
+   @ObfInfo(
+      owner = "hm",
+      name = "y",
+      desc = "(IIII)I"
+   )
    static final int method1727(int var0, int var1, int var2, int var3) {
       return var0 * var2 - var1 * var3 >> 16;
    }
 
+   @ObfInfo(
+      owner = "hm",
+      name = "z",
+      desc = "(IIII)I"
+   )
    static final int method1728(int var0, int var1, int var2, int var3) {
       return var0 * var3 + var1 * var2 >> 16;
    }
 
+   @ObfInfo(
+      owner = "hm",
+      name = "w",
+      desc = "(IIII)I"
+   )
    static final int method1725(int var0, int var1, int var2, int var3) {
       return var0 * var2 + var1 * var3 >> 16;
    }
 
+   @ObfInfo(
+      owner = "hm",
+      name = "as",
+      desc = "(IIII)I"
+   )
    static final int method1729(int var0, int var1, int var2, int var3) {
       return var1 * var2 - var0 * var3 >> 16;
    }

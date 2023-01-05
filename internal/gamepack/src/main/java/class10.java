@@ -4,24 +4,117 @@ import java.net.URI;
 import java.util.HashSet;
 import java.util.Set;
 
+@ObfInfo(
+   name = "mr"
+)
 public class class10 implements class78 {
+   @ObfInfo(
+      owner = "mr",
+      name = "k",
+      desc = "Lqy;"
+   )
    public static class127 field44;
+   @ObfInfo(
+      owner = "mr",
+      name = "bo",
+      desc = "Llz;"
+   )
    static class353 field56;
+   @ObfInfo(
+      owner = "mr",
+      name = "ix",
+      desc = "I"
+   )
    static int field52;
+   @ObfInfo(
+      owner = "mr",
+      name = "e",
+      desc = "Lmr;"
+   )
    static final class10 field41;
+   @ObfInfo(
+      owner = "mr",
+      name = "x",
+      desc = "Lmr;"
+   )
    static final class10 field42;
+   @ObfInfo(
+      owner = "mr",
+      name = "v",
+      desc = "Lmr;"
+   )
    static final class10 field43;
+   @ObfInfo(
+      owner = "mr",
+      name = "m",
+      desc = "Lmr;"
+   )
    static final class10 field45;
+   @ObfInfo(
+      owner = "mr",
+      name = "q",
+      desc = "Lmr;"
+   )
    static final class10 field46;
+   @ObfInfo(
+      owner = "mr",
+      name = "i",
+      desc = "Lmr;"
+   )
    static final class10 field47;
+   @ObfInfo(
+      owner = "mr",
+      name = "r",
+      desc = "Lmr;"
+   )
    static final class10 field48;
+   @ObfInfo(
+      owner = "mr",
+      name = "u",
+      desc = "Lmr;"
+   )
    static final class10 field49;
+   @ObfInfo(
+      owner = "mr",
+      name = "b",
+      desc = "Lmr;"
+   )
    static final class10 field50;
+   @ObfInfo(
+      owner = "mr",
+      name = "j",
+      desc = "Lmr;"
+   )
    static final class10 field51;
+   @ObfInfo(
+      owner = "mr",
+      name = "f",
+      desc = "Lmr;"
+   )
    static final class10 field55;
+   @ObfInfo(
+      owner = "mr",
+      name = "g",
+      desc = "Lmr;"
+   )
    static final class10 field57;
+   @ObfInfo(
+      owner = "mr",
+      name = "h",
+      desc = "Lmr;"
+   )
    static final class10 field58;
+   @ObfInfo(
+      owner = "mr",
+      name = "o",
+      desc = "I"
+   )
    final int field53;
+   @ObfInfo(
+      owner = "mr",
+      name = "n",
+      desc = "Ljava/util/Set;"
+   )
    final Set field54 = new HashSet();
 
    static {
@@ -40,10 +133,20 @@ public class class10 implements class78 {
       field47 = new class10("", 13, new class206[]{class206.field1780});
    }
 
+   @ObfInfo(
+      owner = "mr",
+      name = "<init>",
+      desc = "(Ljava/lang/String;I)V"
+   )
    class10(String var1, int var2) {
       this.field53 = var2;
    }
 
+   @ObfInfo(
+      owner = "mr",
+      name = "<init>",
+      desc = "(Ljava/lang/String;I[Lmk;)V"
+   )
    class10(String var1, int var2, class206[] var3) {
       this.field53 = var2;
       class206[] var4 = var3;
@@ -55,10 +158,20 @@ public class class10 implements class78 {
 
    }
 
+   @ObfInfo(
+      owner = "mr",
+      name = "e",
+      desc = "(B)I"
+   )
    public int method330() {
       return this.field53;
    }
 
+   @ObfInfo(
+      owner = "mr",
+      name = "h",
+      desc = "(Ljava/lang/String;ZZB)V"
+   )
    public static void method62(String var0, boolean var1, boolean var2) {
       if (var1) {
          if (!var2 && Desktop.isDesktopSupported() && Desktop.getDesktop().isSupported(Action.BROWSE)) {
@@ -83,6 +196,11 @@ public class class10 implements class78 {
 
    }
 
+   @ObfInfo(
+      owner = "mr",
+      name = "e",
+      desc = "(J)Ljava/lang/String;"
+   )
    public static String method61(long var0) {
       if (var0 > 0L && var0 < 6582952005840035281L) {
          if (var0 % 37L == 0L) {
@@ -116,6 +234,11 @@ public class class10 implements class78 {
       }
    }
 
+   @ObfInfo(
+      owner = "mr",
+      name = "gt",
+      desc = "(I)V"
+   )
    static final void method60() {
       class312.method1505();
       class313.field2470.method395();

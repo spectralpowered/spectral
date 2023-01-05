@@ -1,8 +1,31 @@
+@ObfInfo(
+   name = "pq"
+)
 public class class171 implements class8 {
+   @ObfInfo(
+      owner = "pq",
+      name = "m",
+      desc = "I"
+   )
    int field1275;
+   @ObfInfo(
+      owner = "pq",
+      name = "q",
+      desc = "I"
+   )
    int field1276;
+   @ObfInfo(
+      owner = "pq",
+      name = "x",
+      desc = "I"
+   )
    int field1277;
 
+   @ObfInfo(
+      owner = "pq",
+      name = "h",
+      desc = "(B)Lpk;"
+   )
    public class367 method39() {
       byte var2;
       if (class129.field1079.startsWith("win")) {
@@ -137,6 +160,11 @@ public class class171 implements class8 {
       return new class367(var2, var7, var8, var9, this.field1277, this.field1275, this.field1276, false, var11, var12, var13, 0, var14, var15, var16, var17, 0, 0, 0, 0, var18, var19, var24, 0, "", "");
    }
 
+   @ObfInfo(
+      owner = "pq",
+      name = "e",
+      desc = "(Ljava/lang/String;I)V"
+   )
    void method792(String var1) {
       if (var1.startsWith("1.")) {
          this.method793(var1);
@@ -146,6 +174,11 @@ public class class171 implements class8 {
 
    }
 
+   @ObfInfo(
+      owner = "pq",
+      name = "v",
+      desc = "(Ljava/lang/String;I)V"
+   )
    void method793(String var1) {
       String[] var3 = var1.split("\\.");
 
@@ -160,6 +193,11 @@ public class class171 implements class8 {
 
    }
 
+   @ObfInfo(
+      owner = "pq",
+      name = "x",
+      desc = "(Ljava/lang/String;I)V"
+   )
    void method794(String var1) {
       String[] var3 = var1.split("\\.");
 

@@ -1,14 +1,42 @@
+@ObfInfo(
+   name = "eb"
+)
 public class class409 extends class410 {
+   @ObfInfo(
+      owner = "eb",
+      name = "il",
+      desc = "[Lrx;"
+   )
    static class266[] field3416;
+   @ObfInfo(
+      owner = "eb",
+      name = "h",
+      desc = "I"
+   )
    int field3417;
    // $FF: synthetic field
+   @ObfInfo(
+      owner = "eb",
+      name = "this$0",
+      desc = "Led;"
+   )
    final class302 this$0;
 
+   @ObfInfo(
+      owner = "eb",
+      name = "<init>",
+      desc = "(Led;)V"
+   )
    class409(class302 var1) {
       this.this$0 = var1;
       this.field3417 = -1;
    }
 
+   @ObfInfo(
+      owner = "eb",
+      name = "h",
+      desc = "(Lqy;I)V"
+   )
    void method2007(class127 var1) {
       this.field3417 = var1.method549();
       var1.method547();
@@ -19,10 +47,20 @@ public class class409 extends class410 {
 
    }
 
+   @ObfInfo(
+      owner = "eb",
+      name = "e",
+      desc = "(Lfn;I)V"
+   )
    void method2008(class57 var1) {
       var1.method269(this.field3417);
    }
 
+   @ObfInfo(
+      owner = "eb",
+      name = "s",
+      desc = "(Ljava/lang/String;I)I"
+   )
    static int method2006(String var0) {
       if (var0.equals("centre")) {
          return 1;
@@ -31,6 +69,11 @@ public class class409 extends class410 {
       }
    }
 
+   @ObfInfo(
+      owner = "eb",
+      name = "an",
+      desc = "(ILbm;ZB)I"
+   )
    static int method2005(int var0, class461 var1, boolean var2) {
       if (var0 == 5000) {
          class386.field3248[++class161.field1227 - 1] = client.field455;
@@ -249,6 +292,11 @@ public class class409 extends class410 {
       }
    }
 
+   @ObfInfo(
+      owner = "eb",
+      name = "ll",
+      desc = "([Lkd;IIIIIIII)V"
+   )
    static final void method2004(class120[] var0, int var1, int var2, int var3, int var4, int var5, int var6, int var7) {
       for(int var9 = 0; var9 < var0.length; ++var9) {
          class120 var10 = var0[var9];

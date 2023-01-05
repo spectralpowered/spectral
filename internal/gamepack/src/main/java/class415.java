@@ -1,8 +1,31 @@
+@ObfInfo(
+   name = "cx"
+)
 public class class415 extends class139 {
+   @ObfInfo(
+      owner = "cx",
+      name = "v",
+      desc = "Z"
+   )
    boolean field3425 = false;
+   @ObfInfo(
+      owner = "cx",
+      name = "e",
+      desc = "I"
+   )
    int field3424;
+   @ObfInfo(
+      owner = "cx",
+      name = "h",
+      desc = "I"
+   )
    int field3426;
 
+   @ObfInfo(
+      owner = "cx",
+      name = "gw",
+      desc = "(ZB)V"
+   )
    static final void method2014(boolean var0) {
       if (var0) {
          client.field253 = class359.field3061 ? class445.field3676 : class445.field3673;
@@ -12,6 +35,11 @@ public class class415 extends class139 {
 
    }
 
+   @ObfInfo(
+      owner = "cx",
+      name = "is",
+      desc = "(ZLqx;I)V"
+   )
    static final void method2013(boolean var0, class6 var1) {
       client.field290 = var0;
       int var3;

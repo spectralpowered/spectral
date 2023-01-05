@@ -1,17 +1,85 @@
+@ObfInfo(
+   name = "b"
+)
 public class class374 implements class78 {
+   @ObfInfo(
+      owner = "b",
+      name = "e",
+      desc = "Lb;"
+   )
    public static final class374 field3168 = new class374(1, "GET", true, false);
+   @ObfInfo(
+      owner = "b",
+      name = "h",
+      desc = "Lb;"
+   )
    public static final class374 field3177 = new class374(0, "POST", true, true);
+   @ObfInfo(
+      owner = "b",
+      name = "b",
+      desc = "Lrx;"
+   )
    static class266 field3173;
+   @ObfInfo(
+      owner = "b",
+      name = "er",
+      desc = "Lln;"
+   )
    static class38 field3179;
+   @ObfInfo(
+      owner = "b",
+      name = "bx",
+      desc = "Ljava/lang/String;"
+   )
    static String field3175;
+   @ObfInfo(
+      owner = "b",
+      name = "x",
+      desc = "Lb;"
+   )
    static final class374 field3170 = new class374(3, "PATCH", false, true);
+   @ObfInfo(
+      owner = "b",
+      name = "m",
+      desc = "Lb;"
+   )
    static final class374 field3171 = new class374(4, "DELETE", false, true);
+   @ObfInfo(
+      owner = "b",
+      name = "v",
+      desc = "Lb;"
+   )
    static final class374 field3176 = new class374(2, "PUT", false, true);
+   @ObfInfo(
+      owner = "b",
+      name = "r",
+      desc = "Z"
+   )
    boolean field3169;
+   @ObfInfo(
+      owner = "b",
+      name = "u",
+      desc = "Z"
+   )
    boolean field3174;
+   @ObfInfo(
+      owner = "b",
+      name = "q",
+      desc = "I"
+   )
    int field3178;
+   @ObfInfo(
+      owner = "b",
+      name = "f",
+      desc = "Ljava/lang/String;"
+   )
    String field3172;
 
+   @ObfInfo(
+      owner = "b",
+      name = "<init>",
+      desc = "(ILjava/lang/String;ZZ)V"
+   )
    class374(int var1, String var2, boolean var3, boolean var4) {
       this.field3178 = var1;
       this.field3172 = var2;
@@ -19,22 +87,47 @@ public class class374 implements class78 {
       this.field3174 = var4;
    }
 
+   @ObfInfo(
+      owner = "b",
+      name = "h",
+      desc = "(I)Z"
+   )
    boolean method1842() {
       return this.field3169;
    }
 
+   @ObfInfo(
+      owner = "b",
+      name = "v",
+      desc = "(I)Ljava/lang/String;"
+   )
    public String method1843() {
       return this.field3172;
    }
 
+   @ObfInfo(
+      owner = "b",
+      name = "x",
+      desc = "(B)Z"
+   )
    boolean method1844() {
       return this.field3174;
    }
 
+   @ObfInfo(
+      owner = "b",
+      name = "e",
+      desc = "(B)I"
+   )
    public int method330() {
       return this.field3178;
    }
 
+   @ObfInfo(
+      owner = "b",
+      name = "e",
+      desc = "(II)Lqr;"
+   )
    public static class185 method1849(int var0) {
       int var2 = class147.field1163[var0];
       if (var2 == 1) {
@@ -46,6 +139,11 @@ public class class374 implements class78 {
       }
    }
 
+   @ObfInfo(
+      owner = "b",
+      name = "e",
+      desc = "(IIB)V"
+   )
    static void method1845(int var0, int var1) {
       int[] var3 = new int[4];
       int[] var4 = new int[4];
@@ -66,6 +164,11 @@ public class class374 implements class78 {
       class14.method72(class2.field12, 0, class2.field12.length - 1, class2.field14, class2.field15);
    }
 
+   @ObfInfo(
+      owner = "b",
+      name = "b",
+      desc = "(Lkd;IIIB)V"
+   )
    static final void method1846(class120 var0, int var1, int var2, int var3) {
       if (null == var0.field981) {
          throw new RuntimeException();
@@ -75,6 +178,11 @@ public class class374 implements class78 {
       }
    }
 
+   @ObfInfo(
+      owner = "b",
+      name = "hz",
+      desc = "(I)V"
+   )
    static final void method1847() {
       int var1;
       int var2;
@@ -267,6 +375,11 @@ public class class374 implements class78 {
 
    }
 
+   @ObfInfo(
+      owner = "b",
+      name = "lo",
+      desc = "(Lcx;ZB)V"
+   )
    static final void method1848(class415 var0, boolean var1, byte var2) {
       int var3 = var0.field3426;
       int var4 = (int)var0.field1134;

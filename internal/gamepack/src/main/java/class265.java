@@ -1,30 +1,83 @@
+@ObfInfo(
+   name = "gj"
+)
 public class class265 implements class78 {
+   @ObfInfo(
+      owner = "gj",
+      name = "e",
+      desc = "Lgj;"
+   )
    static final class265 field2194 = new class265(1, 1);
+   @ObfInfo(
+      owner = "gj",
+      name = "h",
+      desc = "Lgj;"
+   )
    static final class265 field2195 = new class265(2, 0);
+   @ObfInfo(
+      owner = "gj",
+      name = "v",
+      desc = "Lgj;"
+   )
    static final class265 field2197 = new class265(0, 2);
+   @ObfInfo(
+      owner = "gj",
+      name = "m",
+      desc = "I"
+   )
    final int field2198;
+   @ObfInfo(
+      owner = "gj",
+      name = "x",
+      desc = "I"
+   )
    public final int field2196;
 
+   @ObfInfo(
+      owner = "gj",
+      name = "<init>",
+      desc = "(II)V"
+   )
    class265(int var1, int var2) {
       this.field2196 = var1;
       this.field2198 = var2;
    }
 
+   @ObfInfo(
+      owner = "gj",
+      name = "e",
+      desc = "(B)I"
+   )
    public int method330() {
       return this.field2198;
    }
 
+   @ObfInfo(
+      owner = "gj",
+      name = "r",
+      desc = "(IIS)I"
+   )
    public static int method1219(int var0, int var1) {
       int var3 = var0 >>> 31;
       return (var0 + var3) / var1 - var3;
    }
 
+   @ObfInfo(
+      owner = "gj",
+      name = "j",
+      desc = "(I)V"
+   )
    public static void method1218() {
       class473.field3981.method395();
       class473.field3971.method395();
       class473.field3986.method395();
    }
 
+   @ObfInfo(
+      owner = "gj",
+      name = "r",
+      desc = "(Lqx;ILcj;II)V"
+   )
    static final void method1220(class6 var0, int var1, class380 var2, int var3) {
       byte var5 = class294.field2385.field2389;
       if (0 != (var3 & 8192)) {
@@ -256,6 +309,11 @@ public class class265 implements class78 {
 
    }
 
+   @ObfInfo(
+      owner = "gj",
+      name = "t",
+      desc = "(I)V"
+   )
    public static void method1217() {
       class120.field943.method395();
       class120.field1020.method395();

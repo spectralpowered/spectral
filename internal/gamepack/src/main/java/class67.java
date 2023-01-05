@@ -16,10 +16,28 @@ import java.util.Date;
 import java.util.Locale;
 import java.util.Random;
 
+@ObfInfo(
+   name = "fx"
+)
 public class class67 {
+   @ObfInfo(
+      owner = "fx",
+      name = "v",
+      desc = "[S"
+   )
    public short[] field625;
+   @ObfInfo(
+      owner = "fx",
+      name = "x",
+      desc = "[S"
+   )
    public short[] field626;
 
+   @ObfInfo(
+      owner = "fx",
+      name = "<init>",
+      desc = "(I)V"
+   )
    public class67(int var1) {
       class263 var2 = class423.method2062(var1);
       if (var2.method1211()) {
@@ -34,6 +52,11 @@ public class class67 {
 
    }
 
+   @ObfInfo(
+      owner = "fx",
+      name = "h",
+      desc = "(II)I"
+   )
    public static int method300(int var0) {
       class457 var3 = (class457)class457.field3779.method394((long)var0);
       class457 var2;
@@ -57,6 +80,11 @@ public class class67 {
       return class291.field2373[var8] >> var5 & var7;
    }
 
+   @ObfInfo(
+      owner = "fx",
+      name = "e",
+      desc = "(II)Lkd;"
+   )
    public static class120 method299(int var0) {
       int var2 = var0 >> 16;
       int var3 = var0 & '\uffff';
@@ -70,6 +98,11 @@ public class class67 {
       return class329.field2600[var2][var3];
    }
 
+   @ObfInfo(
+      owner = "fx",
+      name = "f",
+      desc = "(Lan;Lnv;B)V"
+   )
    static void method301(class214 var0, class58 var1) {
       int var5;
       int var51;

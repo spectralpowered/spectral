@@ -1,23 +1,106 @@
 import java.util.Iterator;
 import java.util.LinkedList;
 
+@ObfInfo(
+   name = "it"
+)
 public class class46 {
+   @ObfInfo(
+      owner = "it",
+      name = "vl",
+      desc = "Loi;"
+   )
    static class20 field561;
+   @ObfInfo(
+      owner = "it",
+      name = "qq",
+      desc = "Ldn;"
+   )
    static class220 field560;
+   @ObfInfo(
+      owner = "it",
+      name = "fo",
+      desc = "Lln;"
+   )
    static class38 field549;
+   @ObfInfo(
+      owner = "it",
+      name = "j",
+      desc = "Z"
+   )
    boolean field556 = false;
+   @ObfInfo(
+      owner = "it",
+      name = "q",
+      desc = "Lky;"
+   )
    class464 field551 = null;
+   @ObfInfo(
+      owner = "it",
+      name = "u",
+      desc = "I"
+   )
    int field548 = Integer.MAX_VALUE;
+   @ObfInfo(
+      owner = "it",
+      name = "m",
+      desc = "I"
+   )
    int field550 = -1;
+   @ObfInfo(
+      owner = "it",
+      name = "f",
+      desc = "I"
+   )
    int field552 = Integer.MAX_VALUE;
+   @ObfInfo(
+      owner = "it",
+      name = "r",
+      desc = "I"
+   )
    int field553 = 0;
+   @ObfInfo(
+      owner = "it",
+      name = "x",
+      desc = "I"
+   )
    int field554 = -1;
+   @ObfInfo(
+      owner = "it",
+      name = "b",
+      desc = "I"
+   )
    int field555 = 0;
+   @ObfInfo(
+      owner = "it",
+      name = "h",
+      desc = "I"
+   )
    int field559 = -1;
+   @ObfInfo(
+      owner = "it",
+      name = "e",
+      desc = "Ljava/lang/String;"
+   )
    String field547;
+   @ObfInfo(
+      owner = "it",
+      name = "v",
+      desc = "Ljava/lang/String;"
+   )
    String field558;
+   @ObfInfo(
+      owner = "it",
+      name = "g",
+      desc = "Ljava/util/LinkedList;"
+   )
    LinkedList field557;
 
+   @ObfInfo(
+      owner = "it",
+      name = "h",
+      desc = "(Lqy;IB)V"
+   )
    public void method221(class127 var1, int var2) {
       this.field559 = var2;
       this.field547 = var1.method555();
@@ -37,6 +120,11 @@ public class class46 {
       this.method224();
    }
 
+   @ObfInfo(
+      owner = "it",
+      name = "e",
+      desc = "(Lqy;I)Liw;"
+   )
    class360 method222(class127 var1) {
       int var3 = var1.method547();
       class212[] var4 = new class212[]{class212.field1840, class212.field1835, class212.field1837, class212.field1836};
@@ -63,6 +151,11 @@ public class class46 {
       return (class360)var6;
    }
 
+   @ObfInfo(
+      owner = "it",
+      name = "v",
+      desc = "(IIIB)Z"
+   )
    public boolean method240(int var1, int var2, int var3) {
       Iterator var5 = this.field557.iterator();
 
@@ -78,6 +171,11 @@ public class class46 {
       return true;
    }
 
+   @ObfInfo(
+      owner = "it",
+      name = "x",
+      desc = "(III)Z"
+   )
    public boolean method226(int var1, int var2) {
       int var4 = var1 / 64;
       int var5 = var2 / 64;
@@ -103,6 +201,11 @@ public class class46 {
       }
    }
 
+   @ObfInfo(
+      owner = "it",
+      name = "m",
+      desc = "(IIII)[I"
+   )
    public int[] method237(int var1, int var2, int var3) {
       Iterator var5 = this.field557.iterator();
 
@@ -118,6 +221,11 @@ public class class46 {
       return var6.method1794(var1, var2, var3);
    }
 
+   @ObfInfo(
+      owner = "it",
+      name = "q",
+      desc = "(IIB)Lky;"
+   )
    public class464 method223(int var1, int var2) {
       Iterator var4 = this.field557.iterator();
 
@@ -133,6 +241,11 @@ public class class46 {
       return var5.method1796(var1, var2);
    }
 
+   @ObfInfo(
+      owner = "it",
+      name = "f",
+      desc = "(I)V"
+   )
    void method224() {
       Iterator var2 = this.field557.iterator();
 
@@ -143,62 +256,137 @@ public class class46 {
 
    }
 
+   @ObfInfo(
+      owner = "it",
+      name = "r",
+      desc = "(I)I"
+   )
    public int method225() {
       return this.field559;
    }
 
+   @ObfInfo(
+      owner = "it",
+      name = "u",
+      desc = "(I)Z"
+   )
    public boolean method238() {
       return this.field556;
    }
 
+   @ObfInfo(
+      owner = "it",
+      name = "b",
+      desc = "(I)Ljava/lang/String;"
+   )
    public String method227() {
       return this.field547;
    }
 
+   @ObfInfo(
+      owner = "it",
+      name = "j",
+      desc = "(B)Ljava/lang/String;"
+   )
    public String method239() {
       return this.field558;
    }
 
+   @ObfInfo(
+      owner = "it",
+      name = "g",
+      desc = "(B)I"
+   )
    int method234() {
       return this.field554;
    }
 
+   @ObfInfo(
+      owner = "it",
+      name = "i",
+      desc = "(I)I"
+   )
    public int method229() {
       return this.field550;
    }
 
+   @ObfInfo(
+      owner = "it",
+      name = "o",
+      desc = "(B)I"
+   )
    public int method236() {
       return this.field552;
    }
 
+   @ObfInfo(
+      owner = "it",
+      name = "n",
+      desc = "(B)I"
+   )
    public int method230() {
       return this.field553;
    }
 
+   @ObfInfo(
+      owner = "it",
+      name = "k",
+      desc = "(I)I"
+   )
    public int method231() {
       return this.field548;
    }
 
+   @ObfInfo(
+      owner = "it",
+      name = "a",
+      desc = "(I)I"
+   )
    public int method232() {
       return this.field555;
    }
 
+   @ObfInfo(
+      owner = "it",
+      name = "s",
+      desc = "(I)I"
+   )
    public int method233() {
       return this.field551.field3852;
    }
 
+   @ObfInfo(
+      owner = "it",
+      name = "l",
+      desc = "(B)I"
+   )
    public int method242() {
       return this.field551.field3851;
    }
 
+   @ObfInfo(
+      owner = "it",
+      name = "t",
+      desc = "(B)I"
+   )
    public int method235() {
       return this.field551.field3853;
    }
 
+   @ObfInfo(
+      owner = "it",
+      name = "c",
+      desc = "(I)Lky;"
+   )
    public class464 method228() {
       return new class464(this.field551);
    }
 
+   @ObfInfo(
+      owner = "it",
+      name = "s",
+      desc = "(ILbm;ZI)I"
+   )
    static int method241(int var0, class461 var1, boolean var2) {
       class120 var4 = var2 ? class108.field822 : class37.field183;
       if (var0 == 1800) {

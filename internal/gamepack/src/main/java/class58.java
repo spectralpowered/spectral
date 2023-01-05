@@ -1,12 +1,30 @@
+@ObfInfo(
+   name = "nv"
+)
 public final class class58 extends class420 {
+   @ObfInfo(
+      owner = "nv",
+      name = "<init>",
+      desc = "([B[I[I[I[I[I[[B)V"
+   )
    public class58(byte[] var1, int[] var2, int[] var3, int[] var4, int[] var5, int[] var6, byte[][] var7) {
       super(var1, var2, var3, var4, var5, var6, var7);
    }
 
+   @ObfInfo(
+      owner = "nv",
+      name = "<init>",
+      desc = "([B)V"
+   )
    public class58(byte[] var1) {
       super(var1);
    }
 
+   @ObfInfo(
+      owner = "nv",
+      name = "h",
+      desc = "([BIIIII)V"
+   )
    final void method2035(byte[] var1, int var2, int var3, int var4, int var5, int var6) {
       int var7 = var2 + var3 * class162.field1232;
       int var8 = class162.field1232 - var4;
@@ -47,6 +65,11 @@ public final class class58 extends class420 {
       }
    }
 
+   @ObfInfo(
+      owner = "nv",
+      name = "e",
+      desc = "([BIIIIII)V"
+   )
    final void method2036(byte[] var1, int var2, int var3, int var4, int var5, int var6, int var7) {
       int var8 = var2 + var3 * class162.field1232;
       int var9 = class162.field1232 - var4;

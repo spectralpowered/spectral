@@ -5,21 +5,88 @@ import java.io.IOException;
 import java.util.Locale;
 import javax.imageio.ImageIO;
 
-@class137
+@ObfInfo(
+   name = "mb"
+)
 @class451
 public class class476 implements class78 {
+   @ObfInfo(
+      owner = "mb",
+      name = "d",
+      desc = "I"
+   )
    public static int field4003;
+   @ObfInfo(
+      owner = "mb",
+      name = "h",
+      desc = "Lmb;"
+   )
    public static final class476 field3997;
+   @ObfInfo(
+      owner = "mb",
+      name = "v",
+      desc = "Lmb;"
+   )
    public static final class476 field3999;
+   @ObfInfo(
+      owner = "mb",
+      name = "q",
+      desc = "Lmb;"
+   )
    public static final class476 field4002;
+   @ObfInfo(
+      owner = "mb",
+      name = "j",
+      desc = "[Lmb;"
+   )
    public static final class476[] field4008;
+   @ObfInfo(
+      owner = "mb",
+      name = "ad",
+      desc = "[Z"
+   )
    static boolean[] field4009;
+   @ObfInfo(
+      owner = "mb",
+      name = "f",
+      desc = "Lmb;"
+   )
    static final class476 field3998;
+   @ObfInfo(
+      owner = "mb",
+      name = "x",
+      desc = "Lmb;"
+   )
    static final class476 field4000;
+   @ObfInfo(
+      owner = "mb",
+      name = "m",
+      desc = "Lmb;"
+   )
    static final class476 field4001;
+   @ObfInfo(
+      owner = "mb",
+      name = "e",
+      desc = "Lmb;"
+   )
    static final class476 field4006;
+   @ObfInfo(
+      owner = "mb",
+      name = "b",
+      desc = "I"
+   )
    final int field4007;
+   @ObfInfo(
+      owner = "mb",
+      name = "r",
+      desc = "Ljava/lang/String;"
+   )
    final String field4004;
+   @ObfInfo(
+      owner = "mb",
+      name = "u",
+      desc = "Ljava/lang/String;"
+   )
    final String field4005;
 
    static {
@@ -45,6 +112,11 @@ public class class476 implements class78 {
 
    }
 
+   @ObfInfo(
+      owner = "mb",
+      name = "<init>",
+      desc = "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmr;ILjava/lang/String;)V"
+   )
    class476(String var1, String var2, String var3, class10 var4, int var5, String var6) {
       this.field4004 = var1;
       this.field4005 = var2;
@@ -57,18 +129,38 @@ public class class476 implements class78 {
 
    }
 
+   @ObfInfo(
+      owner = "mb",
+      name = "h",
+      desc = "(B)Ljava/lang/String;"
+   )
    String method2356() {
       return this.field4005;
    }
 
+   @ObfInfo(
+      owner = "mb",
+      name = "e",
+      desc = "(B)I"
+   )
    public int method330() {
       return this.field4007;
    }
 
+   @ObfInfo(
+      owner = "mb",
+      name = "toString",
+      desc = "()Ljava/lang/String;"
+   )
    public String toString() {
       return this.method2356().toLowerCase(Locale.ENGLISH);
    }
 
+   @ObfInfo(
+      owner = "mb",
+      name = "h",
+      desc = "([BB)Lrx;"
+   )
    public static final class266 method2357(byte[] var0) {
       BufferedImage var2 = null;
 
@@ -93,6 +185,11 @@ public class class476 implements class78 {
       return new class266(0, 0);
    }
 
+   @ObfInfo(
+      owner = "mb",
+      name = "u",
+      desc = "(I)V"
+   )
    static void method2358() {
       class268.field2221 = 0;
 

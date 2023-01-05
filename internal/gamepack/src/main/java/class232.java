@@ -1,9 +1,37 @@
+@ObfInfo(
+   name = "nk"
+)
 public class class232 {
+   @ObfInfo(
+      owner = "nk",
+      name = "e",
+      desc = "I"
+   )
    int field1969;
+   @ObfInfo(
+      owner = "nk",
+      name = "h",
+      desc = "I"
+   )
    int field1970;
+   @ObfInfo(
+      owner = "nk",
+      name = "v",
+      desc = "I"
+   )
    int field1971;
+   @ObfInfo(
+      owner = "nk",
+      name = "x",
+      desc = "I"
+   )
    int field1972;
 
+   @ObfInfo(
+      owner = "nk",
+      name = "toString",
+      desc = "()Ljava/lang/String;"
+   )
    public String toString() {
       boolean var1 = true;
       int var2 = 10 - Integer.toString(this.field1970).length();
@@ -15,6 +43,11 @@ public class class232 {
       return "    Size: " + this.field1970 + var5 + "Created: " + this.field1969 + var7 + "Total used: " + this.field1971 + var6 + "Max-In-Use: " + this.field1972;
    }
 
+   @ObfInfo(
+      owner = "nk",
+      name = "u",
+      desc = "(II)J"
+   )
    public static long method1003(int var0) {
       if (var0 > 63) {
          throw new class276("Cannot generate max unsigned value for more than 63 bits as this is greater than the boundaries of a java long. Value provided: %d", new Object[]{var0});
@@ -23,6 +56,11 @@ public class class232 {
       }
    }
 
+   @ObfInfo(
+      owner = "nk",
+      name = "f",
+      desc = "(I)[Lrx;"
+   )
    static class266[] method1005() {
       class266[] var1 = new class266[class18.field91];
 
@@ -52,6 +90,11 @@ public class class232 {
       return var1;
    }
 
+   @ObfInfo(
+      owner = "nk",
+      name = "t",
+      desc = "(IIII)I"
+   )
    static final int method1004(int var0, int var1, int var2) {
       if (var2 > 179) {
          var1 /= 2;

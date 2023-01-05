@@ -1,13 +1,41 @@
+@ObfInfo(
+   name = "cd"
+)
 final class class249 implements class366 {
+   @ObfInfo(
+      owner = "cd",
+      name = "ng",
+      desc = "I"
+   )
    static int field2059;
+   @ObfInfo(
+      owner = "cd",
+      name = "tt",
+      desc = "I"
+   )
    static int field2060;
    // $FF: synthetic field
+   @ObfInfo(
+      owner = "cd",
+      name = "val$cc",
+      desc = "Lkd;"
+   )
    final class120 val$cc;
 
+   @ObfInfo(
+      owner = "cd",
+      name = "<init>",
+      desc = "(Lkd;)V"
+   )
    class249(class120 var1) {
       this.val$cc = var1;
    }
 
+   @ObfInfo(
+      owner = "cd",
+      name = "h",
+      desc = "(I)V"
+   )
    public void method1811() {
       if (null != this.val$cc && this.val$cc.method496().field80 != null) {
          class488 var2 = new class488();
@@ -18,6 +46,11 @@ final class class249 implements class366 {
 
    }
 
+   @ObfInfo(
+      owner = "cd",
+      name = "hl",
+      desc = "(II)V"
+   )
    static void method1080(int var0) {
       client.field452 = 0L;
       if (var0 >= 2) {

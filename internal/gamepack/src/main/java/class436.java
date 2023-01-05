@@ -1,20 +1,68 @@
+@ObfInfo(
+   name = "om"
+)
 public class class436 implements class78 {
+   @ObfInfo(
+      owner = "om",
+      name = "e",
+      desc = "Lom;"
+   )
    static final class436 field3612 = new class436(0, 2);
+   @ObfInfo(
+      owner = "om",
+      name = "v",
+      desc = "Lom;"
+   )
    static final class436 field3613 = new class436(1, 3);
+   @ObfInfo(
+      owner = "om",
+      name = "x",
+      desc = "Lom;"
+   )
    static final class436 field3614 = new class436(3, 10);
+   @ObfInfo(
+      owner = "om",
+      name = "h",
+      desc = "Lom;"
+   )
    static final class436 field3616 = new class436(2, 1);
+   @ObfInfo(
+      owner = "om",
+      name = "m",
+      desc = "I"
+   )
    final int field3615;
+   @ObfInfo(
+      owner = "om",
+      name = "q",
+      desc = "I"
+   )
    final int field3617;
 
+   @ObfInfo(
+      owner = "om",
+      name = "<init>",
+      desc = "(II)V"
+   )
    class436(int var1, int var2) {
       this.field3615 = var1;
       this.field3617 = var2;
    }
 
+   @ObfInfo(
+      owner = "om",
+      name = "e",
+      desc = "(B)I"
+   )
    public int method330() {
       return this.field3617;
    }
 
+   @ObfInfo(
+      owner = "om",
+      name = "y",
+      desc = "(ILbm;ZB)I"
+   )
    static int method2166(int var0, class461 var1, boolean var2) {
       String var11;
       if (var0 == 3100) {
@@ -380,6 +428,11 @@ public class class436 implements class78 {
       }
    }
 
+   @ObfInfo(
+      owner = "om",
+      name = "lr",
+      desc = "(Lkd;I)V"
+   )
    static final void method2165(class120 var0) {
       int var2 = var0.field993;
       if (var2 == 324) {

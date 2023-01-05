@@ -1,13 +1,61 @@
+@ObfInfo(
+   name = "kl"
+)
 public class class401 extends class139 {
+   @ObfInfo(
+      owner = "kl",
+      name = "x",
+      desc = "[B"
+   )
    byte[] field3381 = new byte[128];
+   @ObfInfo(
+      owner = "kl",
+      name = "f",
+      desc = "[B"
+   )
    byte[] field3382 = new byte[128];
+   @ObfInfo(
+      owner = "kl",
+      name = "m",
+      desc = "[B"
+   )
    byte[] field3384 = new byte[128];
+   @ObfInfo(
+      owner = "kl",
+      name = "q",
+      desc = "[Ljy;"
+   )
    class132[] field3379 = new class132[128];
+   @ObfInfo(
+      owner = "kl",
+      name = "e",
+      desc = "[Laf;"
+   )
    class82[] field3377 = new class82[128];
+   @ObfInfo(
+      owner = "kl",
+      name = "h",
+      desc = "I"
+   )
    int field3380;
+   @ObfInfo(
+      owner = "kl",
+      name = "r",
+      desc = "[I"
+   )
    int[] field3383 = new int[128];
+   @ObfInfo(
+      owner = "kl",
+      name = "v",
+      desc = "[S"
+   )
    short[] field3378 = new short[128];
 
+   @ObfInfo(
+      owner = "kl",
+      name = "<init>",
+      desc = "([B)V"
+   )
    class401(byte[] var1) {
       class127 var2 = new class127(var1);
 
@@ -446,6 +494,11 @@ public class class401 extends class139 {
 
    }
 
+   @ObfInfo(
+      owner = "kl",
+      name = "e",
+      desc = "(Laj;[B[II)Z"
+   )
    boolean method1983(class73 var1, byte[] var2, int[] var3) {
       boolean var5 = true;
       int var6 = 0;
@@ -479,6 +532,11 @@ public class class401 extends class139 {
       return var5;
    }
 
+   @ObfInfo(
+      owner = "kl",
+      name = "v",
+      desc = "(I)V"
+   )
    void method1984() {
       this.field3383 = null;
    }

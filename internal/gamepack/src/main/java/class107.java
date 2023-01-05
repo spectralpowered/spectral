@@ -1,10 +1,28 @@
+@ObfInfo(
+   name = "fd"
+)
 public class class107 extends class203 {
+   @ObfInfo(
+      owner = "fd",
+      name = "h",
+      desc = "J"
+   )
    long field821 = System.nanoTime();
 
+   @ObfInfo(
+      owner = "fd",
+      name = "h",
+      desc = "(I)V"
+   )
    public void method889() {
       this.field821 = System.nanoTime();
    }
 
+   @ObfInfo(
+      owner = "fd",
+      name = "e",
+      desc = "(III)I"
+   )
    public int method890(int var1, int var2) {
       long var4 = 1000000L * (long)var2;
       long var6 = this.field821 - System.nanoTime();

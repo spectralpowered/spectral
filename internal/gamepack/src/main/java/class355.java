@@ -1,19 +1,87 @@
 import java.util.ArrayList;
 import java.util.HashMap;
 
+@ObfInfo(
+   name = "nf"
+)
 public class class355 {
+   @ObfInfo(
+      owner = "nf",
+      name = "t",
+      desc = "Ljava/util/ArrayList;"
+   )
    public static ArrayList field2929 = new ArrayList();
+   @ObfInfo(
+      owner = "nf",
+      name = "n",
+      desc = "[[B"
+   )
    static byte[][] field2918 = new byte[100][];
+   @ObfInfo(
+      owner = "nf",
+      name = "i",
+      desc = "[[B"
+   )
    static byte[][] field2925 = new byte[1000][];
+   @ObfInfo(
+      owner = "nf",
+      name = "o",
+      desc = "[[B"
+   )
    static byte[][] field2926 = new byte[250][];
+   @ObfInfo(
+      owner = "nf",
+      name = "k",
+      desc = "[[B"
+   )
    static byte[][] field2928 = new byte[50][];
+   @ObfInfo(
+      owner = "nf",
+      name = "b",
+      desc = "I"
+   )
    static int field2917 = 250;
+   @ObfInfo(
+      owner = "nf",
+      name = "q",
+      desc = "I"
+   )
    static int field2919 = 0;
+   @ObfInfo(
+      owner = "nf",
+      name = "f",
+      desc = "I"
+   )
    static int field2920 = 0;
+   @ObfInfo(
+      owner = "nf",
+      name = "r",
+      desc = "I"
+   )
    static int field2921 = 0;
+   @ObfInfo(
+      owner = "nf",
+      name = "u",
+      desc = "I"
+   )
    static int field2922 = 1000;
+   @ObfInfo(
+      owner = "nf",
+      name = "g",
+      desc = "I"
+   )
    static int field2923 = 50;
+   @ObfInfo(
+      owner = "nf",
+      name = "j",
+      desc = "I"
+   )
    static int field2924 = 100;
+   @ObfInfo(
+      owner = "nf",
+      name = "m",
+      desc = "I"
+   )
    static int field2927 = 0;
 
    static {
@@ -25,6 +93,11 @@ public class class355 {
       new HashMap();
    }
 
+   @ObfInfo(
+      owner = "nf",
+      name = "h",
+      desc = "(IZB)[B"
+   )
    public static synchronized byte[] method1775(int var0, boolean var1) {
       byte[] var5;
       if ((var0 == 100 || var0 < 100 && var1) && field2927 > 0) {
@@ -67,6 +140,11 @@ public class class355 {
       }
    }
 
+   @ObfInfo(
+      owner = "nf",
+      name = "kt",
+      desc = "(IIIZB)V"
+   )
    static final void method1774(int var0, int var1, int var2, boolean var3) {
       if (class268.method1275(var0)) {
          class201.method886(class329.field2600[var0], -1, var1, var2, var3);

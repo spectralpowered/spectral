@@ -1,7 +1,25 @@
+@ObfInfo(
+   name = "aw"
+)
 public class class492 implements Runnable {
+   @ObfInfo(
+      owner = "aw",
+      name = "v",
+      desc = "Lly;"
+   )
    static class274 field4109;
+   @ObfInfo(
+      owner = "aw",
+      name = "h",
+      desc = "[Lax;"
+   )
    volatile class233[] field4110 = new class233[2];
 
+   @ObfInfo(
+      owner = "aw",
+      name = "run",
+      desc = "()V"
+   )
    public void run() {
       try {
          for(int var1 = 0; var1 < 2; ++var1) {
@@ -16,6 +34,11 @@ public class class492 implements Runnable {
 
    }
 
+   @ObfInfo(
+      owner = "aw",
+      name = "h",
+      desc = "(Ljava/lang/CharSequence;I)I"
+   )
    public static int method2435(CharSequence var0) {
       int var2 = var0.length();
       int var3 = 0;
@@ -34,10 +57,20 @@ public class class492 implements Runnable {
       return var3;
    }
 
+   @ObfInfo(
+      owner = "aw",
+      name = "v",
+      desc = "(II)I"
+   )
    public static int method2438(int var0) {
       return class83.field673[var0 & 16383];
    }
 
+   @ObfInfo(
+      owner = "aw",
+      name = "q",
+      desc = "(I)V"
+   )
    static void method2437() {
       if (client.field268 && null != class359.field3071 && class359.field3071.length() > 0) {
          class359.field3073 = 1;
@@ -47,6 +80,11 @@ public class class492 implements Runnable {
 
    }
 
+   @ObfInfo(
+      owner = "aw",
+      name = "hw",
+      desc = "(Ljava/lang/String;ZI)V"
+   )
    static final void method2436(String var0, boolean var1) {
       if (client.field346) {
          byte var3 = 4;
@@ -76,6 +114,11 @@ public class class492 implements Runnable {
       }
    }
 
+   @ObfInfo(
+      owner = "aw",
+      name = "kd",
+      desc = "(Lkd;IIIIIII)V"
+   )
    static final void method2434(class120 var0, int var1, int var2, int var3, int var4, int var5, int var6) {
       if (client.field402) {
          client.field299 = 32;

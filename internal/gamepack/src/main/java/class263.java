@@ -1,61 +1,349 @@
+@ObfInfo(
+   name = "gr"
+)
 public class class263 extends class195 {
+   @ObfInfo(
+      owner = "gr",
+      name = "j",
+      desc = "Ljv;"
+   )
    public static class99 field2143 = new class99(50);
+   @ObfInfo(
+      owner = "gr",
+      name = "g",
+      desc = "Ljv;"
+   )
    public static class99 field2144 = new class99(200);
+   @ObfInfo(
+      owner = "gr",
+      name = "b",
+      desc = "Ljv;"
+   )
    public static class99 field2188 = new class99(64);
+   @ObfInfo(
+      owner = "gr",
+      name = "u",
+      desc = "I"
+   )
    public static int field2179;
+   @ObfInfo(
+      owner = "gr",
+      name = "q",
+      desc = "Lly;"
+   )
    static class274 field2140;
+   @ObfInfo(
+      owner = "gr",
+      name = "bc",
+      desc = "Lql;"
+   )
    class385 field2171;
+   @ObfInfo(
+      owner = "gr",
+      name = "af",
+      desc = "I"
+   )
    int field2138;
+   @ObfInfo(
+      owner = "gr",
+      name = "az",
+      desc = "I"
+   )
    int field2146;
+   @ObfInfo(
+      owner = "gr",
+      name = "ak",
+      desc = "I"
+   )
    int field2161;
+   @ObfInfo(
+      owner = "gr",
+      name = "bv",
+      desc = "I"
+   )
    int field2163;
+   @ObfInfo(
+      owner = "gr",
+      name = "an",
+      desc = "I"
+   )
    int field2165;
+   @ObfInfo(
+      owner = "gr",
+      name = "ab",
+      desc = "I"
+   )
    int field2166;
+   @ObfInfo(
+      owner = "gr",
+      name = "al",
+      desc = "I"
+   )
    int field2167;
+   @ObfInfo(
+      owner = "gr",
+      name = "bx",
+      desc = "I"
+   )
    int field2169;
+   @ObfInfo(
+      owner = "gr",
+      name = "ai",
+      desc = "I"
+   )
    int field2172;
+   @ObfInfo(
+      owner = "gr",
+      name = "ax",
+      desc = "I"
+   )
    int field2173;
+   @ObfInfo(
+      owner = "gr",
+      name = "ah",
+      desc = "I"
+   )
    int field2174;
+   @ObfInfo(
+      owner = "gr",
+      name = "aw",
+      desc = "I"
+   )
    int field2175;
+   @ObfInfo(
+      owner = "gr",
+      name = "aj",
+      desc = "I"
+   )
    int field2176;
+   @ObfInfo(
+      owner = "gr",
+      name = "aq",
+      desc = "I"
+   )
    int field2177;
+   @ObfInfo(
+      owner = "gr",
+      name = "bh",
+      desc = "I"
+   )
    int field2182;
+   @ObfInfo(
+      owner = "gr",
+      name = "be",
+      desc = "I"
+   )
    int field2183;
+   @ObfInfo(
+      owner = "gr",
+      name = "bf",
+      desc = "I"
+   )
    int field2184;
+   @ObfInfo(
+      owner = "gr",
+      name = "ag",
+      desc = "I"
+   )
    int field2189;
+   @ObfInfo(
+      owner = "gr",
+      name = "n",
+      desc = "I"
+   )
    int field2191;
+   @ObfInfo(
+      owner = "gr",
+      name = "aa",
+      desc = "[I"
+   )
    int[] field2139;
+   @ObfInfo(
+      owner = "gr",
+      name = "ap",
+      desc = "[I"
+   )
    int[] field2178;
+   @ObfInfo(
+      owner = "gr",
+      name = "au",
+      desc = "Z"
+   )
    public boolean field2162;
+   @ObfInfo(
+      owner = "gr",
+      name = "bl",
+      desc = "Z"
+   )
    public boolean field2190;
+   @ObfInfo(
+      owner = "gr",
+      name = "w",
+      desc = "I"
+   )
    public int field2141;
+   @ObfInfo(
+      owner = "gr",
+      name = "bo",
+      desc = "I"
+   )
    public int field2142;
+   @ObfInfo(
+      owner = "gr",
+      name = "av",
+      desc = "I"
+   )
    public int field2150;
+   @ObfInfo(
+      owner = "gr",
+      name = "c",
+      desc = "I"
+   )
    public int field2151;
+   @ObfInfo(
+      owner = "gr",
+      name = "p",
+      desc = "I"
+   )
    public int field2152;
+   @ObfInfo(
+      owner = "gr",
+      name = "d",
+      desc = "I"
+   )
    public int field2153;
+   @ObfInfo(
+      owner = "gr",
+      name = "by",
+      desc = "I"
+   )
    public int field2154;
+   @ObfInfo(
+      owner = "gr",
+      name = "z",
+      desc = "I"
+   )
    public int field2155;
+   @ObfInfo(
+      owner = "gr",
+      name = "bp",
+      desc = "I"
+   )
    public int field2156;
+   @ObfInfo(
+      owner = "gr",
+      name = "as",
+      desc = "I"
+   )
    public int field2157;
+   @ObfInfo(
+      owner = "gr",
+      name = "ad",
+      desc = "I"
+   )
    public int field2158;
+   @ObfInfo(
+      owner = "gr",
+      name = "ao",
+      desc = "I"
+   )
    public int field2159;
+   @ObfInfo(
+      owner = "gr",
+      name = "y",
+      desc = "I"
+   )
    public int field2160;
+   @ObfInfo(
+      owner = "gr",
+      name = "o",
+      desc = "I"
+   )
    public int field2168;
+   @ObfInfo(
+      owner = "gr",
+      name = "bg",
+      desc = "I"
+   )
    public int field2170;
+   @ObfInfo(
+      owner = "gr",
+      name = "am",
+      desc = "I"
+   )
    public int field2180;
+   @ObfInfo(
+      owner = "gr",
+      name = "ac",
+      desc = "I"
+   )
    public int field2181;
+   @ObfInfo(
+      owner = "gr",
+      name = "ae",
+      desc = "I"
+   )
    public int field2185;
+   @ObfInfo(
+      owner = "gr",
+      name = "bw",
+      desc = "I"
+   )
    public int field2187;
+   @ObfInfo(
+      owner = "gr",
+      name = "bz",
+      desc = "I"
+   )
    public int field2193;
+   @ObfInfo(
+      owner = "gr",
+      name = "k",
+      desc = "Ljava/lang/String;"
+   )
    public String field2147;
+   @ObfInfo(
+      owner = "gr",
+      name = "ar",
+      desc = "[Ljava/lang/String;"
+   )
    public String[] field2145;
+   @ObfInfo(
+      owner = "gr",
+      name = "at",
+      desc = "[Ljava/lang/String;"
+   )
    public String[] field2164;
+   @ObfInfo(
+      owner = "gr",
+      name = "s",
+      desc = "[S"
+   )
    public short[] field2148;
+   @ObfInfo(
+      owner = "gr",
+      name = "l",
+      desc = "[S"
+   )
    public short[] field2149;
+   @ObfInfo(
+      owner = "gr",
+      name = "a",
+      desc = "[S"
+   )
    public short[] field2186;
+   @ObfInfo(
+      owner = "gr",
+      name = "t",
+      desc = "[S"
+   )
    public short[] field2192;
 
+   @ObfInfo(
+      owner = "gr",
+      name = "<init>",
+      desc = "()V"
+   )
    class263() {
       this.field2147 = class177.field1325;
       this.field2151 = 2000;
@@ -101,6 +389,11 @@ public class class263 extends class195 {
       this.field2193 = -1;
    }
 
+   @ObfInfo(
+      owner = "gr",
+      name = "v",
+      desc = "(I)V"
+   )
    void method1197() {
       if (1 == this.field2157) {
          this.field2156 = 0;
@@ -108,6 +401,11 @@ public class class263 extends class195 {
 
    }
 
+   @ObfInfo(
+      owner = "gr",
+      name = "x",
+      desc = "(Lqy;I)V"
+   )
    void method1198(class127 var1) {
       while(true) {
          int var3 = var1.method547();
@@ -119,6 +417,11 @@ public class class263 extends class195 {
       }
    }
 
+   @ObfInfo(
+      owner = "gr",
+      name = "m",
+      desc = "(Lqy;II)V"
+   )
    void method1199(class127 var1, int var2) {
       if (var2 == 1) {
          this.field2191 = var1.method549();
@@ -253,6 +556,11 @@ public class class263 extends class195 {
 
    }
 
+   @ObfInfo(
+      owner = "gr",
+      name = "q",
+      desc = "(Lgr;Lgr;B)V"
+   )
    void method1213(class263 var1, class263 var2) {
       this.field2191 = var1.field2191;
       this.field2151 = var1.field2151;
@@ -271,6 +579,11 @@ public class class263 extends class195 {
       this.field2157 = 1;
    }
 
+   @ObfInfo(
+      owner = "gr",
+      name = "f",
+      desc = "(Lgr;Lgr;I)V"
+   )
    void method1196(class263 var1, class263 var2) {
       this.field2191 = var1.field2191;
       this.field2151 = var1.field2151;
@@ -313,6 +626,11 @@ public class class263 extends class195 {
       this.field2158 = 0;
    }
 
+   @ObfInfo(
+      owner = "gr",
+      name = "r",
+      desc = "(Lgr;Lgr;B)V"
+   )
    void method1212(class263 var1, class263 var2) {
       this.field2191 = var1.field2191;
       this.field2151 = var1.field2151;
@@ -332,6 +650,11 @@ public class class263 extends class195 {
       this.field2190 = false;
    }
 
+   @ObfInfo(
+      owner = "gr",
+      name = "u",
+      desc = "(IB)Lgi;"
+   )
    public final class26 method1200(int var1) {
       int var4;
       if (this.field2178 != null && var1 > 1) {
@@ -372,6 +695,11 @@ public class class263 extends class195 {
       }
    }
 
+   @ObfInfo(
+      owner = "gr",
+      name = "b",
+      desc = "(II)Lhh;"
+   )
    public final class470 method1201(int var1) {
       if (null != this.field2178 && var1 > 1) {
          int var3 = -1;
@@ -420,6 +748,11 @@ public class class263 extends class195 {
       }
    }
 
+   @ObfInfo(
+      owner = "gr",
+      name = "j",
+      desc = "(II)Lgr;"
+   )
    public class263 method1202(int var1) {
       if (null != this.field2178 && var1 > 1) {
          int var3 = -1;
@@ -438,6 +771,11 @@ public class class263 extends class195 {
       return this;
    }
 
+   @ObfInfo(
+      owner = "gr",
+      name = "o",
+      desc = "(II)Z"
+   )
    public final boolean method1203(int var1) {
       int var3 = this.field2166;
       int var4 = this.field2167;
@@ -468,6 +806,11 @@ public class class263 extends class195 {
       }
    }
 
+   @ObfInfo(
+      owner = "gr",
+      name = "n",
+      desc = "(II)Lgi;"
+   )
    public final class26 method1204(int var1) {
       int var3 = this.field2166;
       int var4 = this.field2167;
@@ -519,6 +862,11 @@ public class class263 extends class195 {
       }
    }
 
+   @ObfInfo(
+      owner = "gr",
+      name = "k",
+      desc = "(IB)Z"
+   )
    public final boolean method1205(int var1) {
       int var3 = this.field2174;
       int var4 = this.field2175;
@@ -543,6 +891,11 @@ public class class263 extends class195 {
       }
    }
 
+   @ObfInfo(
+      owner = "gr",
+      name = "a",
+      desc = "(IB)Lgi;"
+   )
    public final class26 method1206(int var1) {
       int var3 = this.field2174;
       int var4 = this.field2175;
@@ -578,10 +931,20 @@ public class class263 extends class195 {
       }
    }
 
+   @ObfInfo(
+      owner = "gr",
+      name = "s",
+      desc = "(III)I"
+   )
    public int method1207(int var1, int var2) {
       return class288.method1424(this.field2171, var1, var2);
    }
 
+   @ObfInfo(
+      owner = "gr",
+      name = "l",
+      desc = "(ILjava/lang/String;I)Ljava/lang/String;"
+   )
    public String method1208(int var1, String var2) {
       class385 var5 = this.field2171;
       String var4;
@@ -599,6 +962,11 @@ public class class263 extends class195 {
       return var4;
    }
 
+   @ObfInfo(
+      owner = "gr",
+      name = "t",
+      desc = "(B)I"
+   )
    public int method1210() {
       if (this.field2165 != -1 && null != this.field2164) {
          if (this.field2165 >= 0) {
@@ -611,14 +979,29 @@ public class class263 extends class195 {
       }
    }
 
+   @ObfInfo(
+      owner = "gr",
+      name = "p",
+      desc = "(B)Z"
+   )
    boolean method1211() {
       return null != this.field2148;
    }
 
+   @ObfInfo(
+      owner = "gr",
+      name = "d",
+      desc = "(I)Z"
+   )
    boolean method1209() {
       return this.field2192 != null;
    }
 
+   @ObfInfo(
+      owner = "gr",
+      name = "e",
+      desc = "(IIIIIIB)I"
+   )
    public static int method1214(int var0, int var1, int var2, int var3, int var4, int var5) {
       if (1 == (var5 & 1)) {
          int var7 = var3;

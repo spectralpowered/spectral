@@ -2,28 +2,81 @@ import java.io.File;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 
+@ObfInfo(
+   name = "im"
+)
 public class class212 implements class78 {
+   @ObfInfo(
+      owner = "im",
+      name = "v",
+      desc = "Lim;"
+   )
    static final class212 field1835 = new class212(0, (byte)2);
+   @ObfInfo(
+      owner = "im",
+      name = "e",
+      desc = "Lim;"
+   )
    static final class212 field1836 = new class212(3, (byte)1);
+   @ObfInfo(
+      owner = "im",
+      name = "h",
+      desc = "Lim;"
+   )
    static final class212 field1837 = new class212(2, (byte)0);
+   @ObfInfo(
+      owner = "im",
+      name = "x",
+      desc = "Lim;"
+   )
    static final class212 field1840 = new class212(1, (byte)3);
+   @ObfInfo(
+      owner = "im",
+      name = "q",
+      desc = "B"
+   )
    final byte field1839;
+   @ObfInfo(
+      owner = "im",
+      name = "m",
+      desc = "I"
+   )
    final int field1838;
 
+   @ObfInfo(
+      owner = "im",
+      name = "<init>",
+      desc = "(IB)V"
+   )
    class212(int var1, byte var2) {
       this.field1838 = var1;
       this.field1839 = var2;
    }
 
+   @ObfInfo(
+      owner = "im",
+      name = "e",
+      desc = "(B)I"
+   )
    public int method330() {
       return this.field1839;
    }
 
+   @ObfInfo(
+      owner = "im",
+      name = "h",
+      desc = "(Lly;Lly;I)V"
+   )
    public static void method916(class274 var0, class274 var1) {
       class327.field2580 = var0;
       class327.field2591 = var1;
    }
 
+   @ObfInfo(
+      owner = "im",
+      name = "m",
+      desc = "(I)V"
+   )
    public static void method919() {
       try {
          File var1 = new File(class134.field1109, "random.dat");
@@ -58,6 +111,11 @@ public class class212 implements class78 {
 
    }
 
+   @ObfInfo(
+      owner = "im",
+      name = "l",
+      desc = "(III)I"
+   )
    static final int method917(int var0, int var1) {
       if (var0 == -2) {
          return 12345678;
@@ -81,11 +139,21 @@ public class class212 implements class78 {
       }
    }
 
+   @ObfInfo(
+      owner = "im",
+      name = "ji",
+      desc = "(I)V"
+   )
    static void method915() {
       client.field369 = 0;
       client.field368 = false;
    }
 
+   @ObfInfo(
+      owner = "im",
+      name = "lx",
+      desc = "(I)V"
+   )
    static final void method918() {
       class299 var1 = class480.method2370(class356.field2982, client.field279.field4042);
       client.field279.method2389(var1);
