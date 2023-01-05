@@ -9,7 +9,6 @@ import java.net.URL
 
 plugins {
     `java-library`
-    `maven-publish`
     kotlin("jvm")
     id("com.github.gmazzo.buildconfig") version "3.1.0"
     id("com.google.devtools.ksp") version "1.7.20-1.0.8"
@@ -22,7 +21,6 @@ tasks.wrapper {
 
 allprojects {
     apply(plugin = "org.jetbrains.kotlin.jvm")
-    apply(plugin = "maven-publish")
 
     group = "io.spectralpowered"
     version = "0.1.0"
@@ -31,6 +29,7 @@ allprojects {
         mavenLocal()
         mavenCentral()
         maven(url = "https://jitpack.io")
+        maven(url = "https://maven.spectralpowered.io")
     }
 
     dependencies {
@@ -41,25 +40,6 @@ allprojects {
 
     tasks.test {
         useJUnitPlatform()
-    }
-
-    publishing {
-        repositories {
-            mavenLocal()
-        }
-
-        publications {
-            create<MavenPublication>("maven") {
-                groupId = project.group.toString()
-                artifactId = project.name
-                version = project.version.toString()
-                from(components["java"])
-            }
-        }
-    }
-
-    artifacts {
-        add("archives", tasks.jar)
     }
 }
 
