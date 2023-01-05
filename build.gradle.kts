@@ -1,5 +1,6 @@
 @file:Suppress("UNUSED_VARIABLE")
 
+import org.gradle.api.tasks.wrapper.Wrapper.DistributionType
 import kotlin.io.readLine
 import org.gradle.kotlin.dsl.support.unzipTo
 import org.jetbrains.java.decompiler.main.decompiler.ConsoleDecompiler
@@ -16,6 +17,7 @@ plugins {
 
 tasks.wrapper {
     gradleVersion = "7.6"
+    distributionType = DistributionType.ALL
 }
 
 allprojects {
@@ -41,23 +43,6 @@ allprojects {
         useJUnitPlatform()
     }
 
-    val sourcesJar by tasks.register<Jar>("sourcesJar") {
-        from(sourceSets["main"].allJava)
-        archiveClassifier.set("sources")
-    }
-
-    val javadocJar by tasks.register<Jar>("javadocJar") {
-        dependsOn(tasks.javadoc)
-        from(tasks.javadoc.get().destinationDir)
-        archiveClassifier.set("javadoc")
-    }
-
-    artifacts {
-        add("archives", tasks.jar)
-        add("archives", sourcesJar)
-        add("archives", javadocJar)
-    }
-
     publishing {
         repositories {
             mavenLocal()
@@ -71,6 +56,10 @@ allprojects {
                 from(components["java"])
             }
         }
+    }
+
+    artifacts {
+        add("archives", tasks.jar)
     }
 }
 
