@@ -8,6 +8,7 @@ import java.net.URL
 
 plugins {
     `java-library`
+    `maven-publish`
     kotlin("jvm")
     id("com.github.gmazzo.buildconfig") version "3.1.0"
     id("com.google.devtools.ksp") version "1.7.20-1.0.8"
@@ -19,6 +20,7 @@ tasks.wrapper {
 
 allprojects {
     apply(plugin = "org.jetbrains.kotlin.jvm")
+    apply(plugin = "maven-publish")
 
     group = "io.spectralpowered"
     version = "0.1.0"
@@ -37,6 +39,38 @@ allprojects {
 
     tasks.test {
         useJUnitPlatform()
+    }
+
+    val sourcesJar by tasks.register<Jar>("sourcesJar") {
+        from(sourceSets["main"].allJava)
+        archiveClassifier.set("sources")
+    }
+
+    val javadocJar by tasks.register<Jar>("javadocJar") {
+        dependsOn(tasks.javadoc)
+        from(tasks.javadoc.get().destinationDir)
+        archiveClassifier.set("javadoc")
+    }
+
+    artifacts {
+        add("archives", tasks.jar)
+        add("archives", sourcesJar)
+        add("archives", javadocJar)
+    }
+
+    publishing {
+        repositories {
+            mavenLocal()
+        }
+
+        publications {
+            create<MavenPublication>("maven") {
+                groupId = project.group.toString()
+                artifactId = project.name
+                version = project.version.toString()
+                from(components["java"])
+            }
+        }
     }
 }
 
