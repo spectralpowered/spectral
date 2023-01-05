@@ -1,0 +1,2 @@
+public class class249 {
+}

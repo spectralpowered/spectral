@@ -23,6 +23,7 @@ import com.google.common.collect.MultimapBuilder
 import io.spectralpowered.asm.ClassPool
 import io.spectralpowered.asm.identifier
 import io.spectralpowered.asm.owner
+import io.spectralpowered.deobfuscator.Deobfuscator.Companion.isObfuscatedName
 import io.spectralpowered.deobfuscator.Transformer
 import org.objectweb.asm.Type
 import org.objectweb.asm.tree.ClassNode
@@ -79,6 +80,7 @@ class UnusedMethodRemover : Transformer() {
 
     private fun MethodNode.isUsed(usedMethods: Set<String>, superClasses: Multimap<ClassNode, String>, subClasses: Multimap<ClassNode, String>, classNames: Map<String, ClassNode>): Boolean {
         if(name == "<init>" || name == "<clinit>") return true
+        if(!name.isObfuscatedName()) return true
         if(usedMethods.contains(identifier)) return true
         var supers = superClasses[owner]
         while(supers.isNotEmpty()) {

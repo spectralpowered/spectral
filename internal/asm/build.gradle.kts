@@ -1,3 +1,7 @@
+plugins {
+    `maven-publish`
+}
+
 dependencies {
     api(project(":spectral-util"))
     api("org.ow2.asm:asm:_")
@@ -7,4 +11,24 @@ dependencies {
     api("com.google.guava:guava:_")
     api("com.github.spectralpowered:maple-ir:63e94212fd")
     api("org.jgrapht:jgrapht-core:_")
+}
+
+java {
+    withSourcesJar()
+    withJavadocJar()
+}
+
+publishing {
+    repositories {
+        mavenLocal()
+    }
+
+    publications {
+        create<MavenPublication>("maven") {
+            groupId = project.group.toString()
+            artifactId = project.name
+            version = project.version.toString()
+            from(components["java"])
+        }
+    }
 }

@@ -11,7 +11,8 @@ module("api")
 module("util")
 module("internal:asm")
 module("internal:deobfuscator")
-module("runescape")
+module("internal:gamepack")
+module("internal:mapper")
 
 fun module(path: String) {
     val split = path.split(":")
@@ -25,4 +26,8 @@ fun module(path: String) {
     }
 
     project(":$moduleName").name = "spectral-$moduleName"
+}
+
+fun gradleModule(path: String) {
+    includeBuild(path.replace(":", "/"))
 }
