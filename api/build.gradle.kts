@@ -2,6 +2,12 @@ plugins {
     `maven-publish`
 }
 
+dependencies {
+    api(project(":spectral-commons"))
+    api(project(":spectral-util"))
+    api(project(":spectral-logger"))
+}
+
 publishing {
     repositories {
         mavenLocal()

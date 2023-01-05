@@ -18,8 +18,11 @@
 
 package io.spectralpowered.client
 
+import ClientMixin
+import io.spectralpowered.api.rs.Client
 import io.spectralpowered.commons.get
 import io.spectralpowered.commons.inject
+import io.spectralpowered.injector.Injector
 import org.koin.core.context.startKoin
 import org.tinylog.kotlin.Logger
 
@@ -51,6 +54,11 @@ class Spectral {
         Logger.info("Starting Spectral client.")
 
         /*
+         * Run Spectral injector.
+         */
+        injectGamepack()
+
+        /*
          * Run Spectral client bootstrapper.
          */
         bootstrap.run()
@@ -63,5 +71,24 @@ class Spectral {
 
     fun stop() {
 
+    }
+
+    private fun injectGamepack() {
+        Logger.info("Injecting Old School RuneScape with Spectral API and mixins.")
+
+        Injector.init()
+        Injector.addMixin<ClientMixin>()
+        Injector.inject()
+
+        Thread.currentThread().contextClassLoader = Injector.classLoader
+
+        val cls = Injector.classLoader.loadClass("client")
+        val method = cls.getMethod("isOnLoginScreen")
+        method.isAccessible = true
+
+        val inst = cls.getDeclaredConstructor().newInstance()
+        val result = method.invoke(inst) as Boolean
+
+        Logger.info("Successfully injected gamepack. Result=$result")
     }
 }

@@ -14,6 +14,7 @@ module("internal:deobfuscator")
 module("internal:gamepack")
 module("internal:mapper")
 module("internal:injector")
+module("mixins")
 
 fun module(path: String) {
     val split = path.split(":")
