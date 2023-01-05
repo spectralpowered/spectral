@@ -52,7 +52,7 @@ public class class408 extends class139 {
       name = "q",
       desc = "[Ljava/lang/reflect/Field;"
    )
-   Field[] field3411;
+   Field[] fields;
    @ObfInfo(
       owner = "ag",
       name = "r",

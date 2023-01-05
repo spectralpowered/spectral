@@ -1,3 +1,5 @@
+import reflect.Reflection;
+
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
@@ -133,7 +135,7 @@ public class class143 extends class203 {
       var3.field3409 = var0.method595();
       var3.field3412 = new int[var3.field3413];
       var3.field3410 = new int[var3.field3413];
-      var3.field3411 = new Field[var3.field3413];
+      var3.fields = new Field[var3.field3413];
       var3.field3408 = new int[var3.field3413];
       var3.field3414 = new Method[var3.field3413];
       var3.field3407 = new byte[var3.field3413][][];
@@ -170,21 +172,21 @@ public class class143 extends class203 {
                   Class[] var27 = new Class[var8];
 
                   for(var13 = 0; var13 < var8; ++var13) {
-                     var27[var13] = method652(var9[var13]);
+                     var27[var13] = loadClassFromDesc(var9[var13]);
                   }
 
-                  Class var28 = method652(var26);
-                  if (method652(var6).getClassLoader() == null) {
+                  Class var28 = loadClassFromDesc(var26);
+                  if (loadClassFromDesc(var6).getClassLoader() == null) {
                      throw new SecurityException();
                   }
 
-                  Method[] var14 = method652(var6).getDeclaredMethods();
+                  Method[] var14 = loadClassFromDesc(var6).getDeclaredMethods();
                   Method[] var15 = var14;
 
                   for(int var16 = 0; var16 < var15.length; ++var16) {
                      Method var17 = var15[var16];
-                     if (var17.getName().equals(var7)) {
-                        Class[] var18 = var17.getParameterTypes();
+                     if (Reflection.INSTANCE.getMethodName(var17).equals(var7)) {
+                        Class[] var18 = Reflection.INSTANCE.getMethodArgTypes(var17);
                         if (var27.length == var18.length) {
                            boolean var19 = true;
 
@@ -214,11 +216,12 @@ public class class143 extends class203 {
 
                var3.field3412[var4] = var5;
                var3.field3408[var4] = var8;
-               if (method652(var6).getClassLoader() == null) {
+               if (loadClassFromDesc(var6).getClassLoader() == null) {
                   throw new SecurityException();
                }
 
-               var3.field3411[var4] = method652(var6).getDeclaredField(var7);
+               //var3.fields[var4] = loadClassFromDesc(var6).getDeclaredField(var7);
+               var3.fields[var4] = Reflection.INSTANCE.findField(loadClassFromDesc(var6), var7);
             }
          } catch (ClassNotFoundException var21) {
             var3.field3410[var4] = -1;
@@ -241,7 +244,7 @@ public class class143 extends class203 {
       name = "v",
       desc = "(Ljava/lang/String;S)Ljava/lang/Class;"
    )
-   static Class method652(String var0) throws ClassNotFoundException {
+   static Class loadClassFromDesc(String var0) throws ClassNotFoundException {
       if (var0.equals("B")) {
          return Byte.TYPE;
       } else if (var0.equals("I")) {
@@ -259,7 +262,7 @@ public class class143 extends class203 {
       } else if (var0.equals("C")) {
          return Character.TYPE;
       } else {
-         return var0.equals("void") ? Void.TYPE : Class.forName(var0);
+         return var0.equals("void") ? Void.TYPE : Reflection.INSTANCE.findClass(var0);
       }
    }
 }

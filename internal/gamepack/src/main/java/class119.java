@@ -1,3 +1,5 @@
+import reflect.Reflection;
+
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InvalidClassException;
@@ -45,16 +47,16 @@ public class class119 {
                   Field var6;
                   int var7;
                   if (var5 == 0) {
-                     var6 = var2.field3411[var4];
-                     var7 = var6.getInt((Object)null);
+                     var6 = var2.fields[var4];
+                     var7 = Reflection.INSTANCE.getInt(var6, null);
                      var0.method544(0);
                      var0.method534(var7);
                   } else if (var5 == 1) {
-                     var6 = var2.field3411[var4];
-                     var6.setInt((Object)null, var2.field3408[var4]);
+                     var6 = var2.fields[var4];
+                     Reflection.INSTANCE.setInt(var6, null, var2.field3408[var4]);
                      var0.method544(0);
                   } else if (var5 == 2) {
-                     var6 = var2.field3411[var4];
+                     var6 = var2.fields[var4];
                      var7 = var6.getModifiers();
                      var0.method544(0);
                      var0.method534(var7);
@@ -78,7 +80,7 @@ public class class119 {
                         var8[var9] = var10.readObject();
                      }
 
-                     Object var25 = var23.invoke((Object)null, var8);
+                     Object var25 = Reflection.INSTANCE.invoke(var23, (Object)null, var8);
                      if (var25 == null) {
                         var0.method544(0);
                      } else if (var25 instanceof Number) {
@@ -99,12 +101,8 @@ public class class119 {
                   var0.method544(-12);
                } catch (OptionalDataException var14) {
                   var0.method544(-13);
-               } catch (IllegalAccessException var15) {
-                  var0.method544(-14);
                } catch (IllegalArgumentException var16) {
                   var0.method544(-15);
-               } catch (InvocationTargetException var17) {
-                  var0.method544(-16);
                } catch (SecurityException var18) {
                   var0.method544(-17);
                } catch (IOException var19) {
