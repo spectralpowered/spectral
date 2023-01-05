@@ -1,141 +1,163 @@
-import java.io.File;
-import java.io.IOException;
+import java.text.DecimalFormat;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
-public class class359 extends class108 {
-   public static class164 field3206;
-   static class112 field3207;
-   static class112 field3209;
-   static class31 field3204 = new class31(64);
-   static int field3208;
-   public boolean field3205 = false;
+public class class359 {
+   static boolean field3061;
+   static boolean field3066;
+   static boolean field3070;
+   static boolean field3076;
+   static boolean field3085;
+   static class344 field3054;
+   static class344 field3058;
+   static class344 field3080;
+   static class344[] field3053;
+   static int field3052 = 0;
+   static int field3055;
+   static int field3056;
+   static int field3059;
+   static int field3069;
+   static int field3072;
+   static int field3073;
+   static int field3075;
+   static int field3077;
+   static int field3078;
+   static int field3079;
+   static String field3051;
+   static String field3057;
+   static String field3060;
+   static String field3062;
+   static String field3064;
+   static String field3067;
+   static String field3071;
+   static String field3074;
+   static String field3082;
+   static String field3084;
+   static String[] field3050;
+   static String[] field3063;
+   static String[] field3065;
+   static String[] field3083;
+   static long field3068;
+   static long field3081;
 
-   void method1711(class134 var1) {
-      while(true) {
-         int var3 = var1.method669();
-         if (var3 == 0) {
-            return;
+   static {
+      field3072 = field3052 + 202;
+      field3056 = 10;
+      field3057 = "";
+      field3055 = -1;
+      field3059 = 1;
+      field3075 = 0;
+      field3062 = "";
+      field3051 = "";
+      field3064 = "";
+      field3084 = "";
+      field3071 = "";
+      field3067 = "";
+      field3069 = 0;
+      field3050 = new String[8];
+      field3070 = false;
+      field3085 = false;
+      field3061 = true;
+      field3073 = 0;
+      field3074 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!\"ï¿½$%^&*()-_=+[{]};:'@#~,<.>/?\\| ";
+      field3082 = "1234567890";
+      field3076 = false;
+      field3077 = -1;
+      field3078 = 0;
+      field3079 = 0;
+      new DecimalFormat("##0.00");
+      new class22();
+      field3068 = -1L;
+      field3081 = -1L;
+      field3065 = new String[]{"title.jpg"};
+      field3063 = new String[]{"logo", "logo_deadman_mode", "logo_seasonal_mode", "titlebox", "titlebutton", "titlebutton_large", "play_now_text", "titlebutton_wide42,1", "runes", "title_mute", "options_radio_buttons,0", "options_radio_buttons,2", "options_radio_buttons,4", "options_radio_buttons,6", "sl_back", "sl_flags", "sl_arrows", "sl_stars", "sl_button"};
+      field3083 = new String[]{"logo_speedrunning"};
+   }
+
+   public static void method1789(int var0, int var1) {
+      class457 var4 = (class457)class457.field3779.method394((long)var0);
+      class457 var3;
+      if (null != var4) {
+         var3 = var4;
+      } else {
+         byte[] var5 = class457.field3778.method1365(14, var0);
+         var4 = new class457();
+         if (null != var5) {
+            var4.method2256(new class127(var5));
          }
 
-         this.method1712(var1, var3);
-      }
-   }
-
-   void method1712(class134 var1, int var2) {
-      if (var2 == 2) {
-         this.field3205 = true;
+         class457.field3779.method396(var4, (long)var0);
+         var3 = var4;
       }
 
+      int var9 = var3.field3780;
+      int var6 = var3.field3781;
+      int var7 = var3.field3782;
+      int var8 = class291.field2375[var7 - var6];
+      if (var1 < 0 || var1 > var8) {
+         var1 = 0;
+      }
+
+      var8 <<= var6;
+      class291.field2373[var9] = class291.field2373[var9] & ~var8 | var1 << var6 & var8;
    }
 
-   public static File method1710(String var0, String var1, int var2) {
-      String var4 = var2 == 0 ? "" : "" + var2;
-      class143.field1547 = new File(class131.field1474, "jagex_cl_" + var0 + "_" + var1 + var4 + ".dat");
-      String var5 = null;
-      String var6 = null;
-      boolean var7 = false;
-      File var20;
-      if (class143.field1547.exists()) {
-         try {
-            class476 var8 = new class476(class143.field1547, "rw", 10000L);
+   static float[] method1790(JSONObject var0, String var1) throws JSONException {
+      float[] var3 = new float[4];
 
-            class134 var9;
-            int var10;
-            for(var9 = new class134((int)var8.method2305()); var9.field1487 < var9.field1489.length; var9.field1487 += var10) {
-               var10 = var8.method2304(var9.field1489, var9.field1487, var9.field1489.length - var9.field1487);
-               if (var10 == -1) {
-                  throw new IOException();
-               }
+      try {
+         JSONArray var4 = var0.getJSONArray(var1);
+         var3[0] = (float)var4.optDouble(0, 0.0D);
+         var3[1] = (float)var4.optDouble(1, 0.0D);
+         var3[2] = (float)var4.optDouble(2, 1.0D);
+         var3[3] = (float)var4.optDouble(3, 1.0D);
+      } catch (JSONException var5) {
+         var3[0] = 0.0F;
+         var3[1] = 0.0F;
+         var3[2] = 1.0F;
+         var3[3] = 1.0F;
+      }
+
+      return var3;
+   }
+
+   public static class357 method1791(int var0) {
+      class357 var2 = (class357)class242.field2042.method394((long)var0);
+      if (null != var2) {
+         return var2;
+      } else {
+         class274 var4 = class242.field2028;
+         class274 var5 = class309.field2462;
+         boolean var6 = true;
+         byte[] var7 = var4.method1348(var0 >> 16 & '\uffff', var0 & '\uffff');
+         class357 var3;
+         if (var7 == null) {
+            var6 = false;
+            var3 = null;
+         } else {
+            int var8 = (var7[1] & 255) << 8 | var7[2] & 255;
+            byte[] var9 = var5.method1348(var8, 0);
+            if (null == var9) {
+               var6 = false;
             }
 
-            var9.field1487 = 0;
-            var10 = var9.method669();
-            if (var10 < 1 || var10 > 3) {
-               throw new IOException("" + var10);
-            }
-
-            int var11 = 0;
-            if (var10 > 1) {
-               var11 = var9.method669();
-            }
-
-            if (var10 <= 2) {
-               var5 = var9.method678();
-               if (var11 == 1) {
-                  var6 = var9.method678();
-               }
+            if (!var6) {
+               var3 = null;
             } else {
-               var5 = var9.method718();
-               if (var11 == 1) {
-                  var6 = var9.method718();
-               }
-            }
-
-            var8.method2302();
-         } catch (IOException var17) {
-            var17.printStackTrace();
-         }
-
-         if (null != var5) {
-            var20 = new File(var5);
-            if (!var20.exists()) {
-               var5 = null;
-            }
-         }
-
-         if (null != var5) {
-            var20 = new File(var5, "test.dat");
-            if (!class2.method7(var20, true)) {
-               var5 = null;
-            }
-         }
-      }
-
-      if (null == var5 && var2 == 0) {
-         label103:
-         for(int var18 = 0; var18 < class137.field1497.length; ++var18) {
-            for(int var21 = 0; var21 < class109.field1379.length; ++var21) {
-               File var22 = new File(class109.field1379[var21] + class137.field1497[var18] + File.separatorChar + var0 + File.separatorChar);
-               if (var22.exists() && class2.method7(new File(var22, "test.dat"), true)) {
-                  var5 = var22.toString();
-                  var7 = true;
-                  break label103;
+               try {
+                  var3 = new class357(var4, var5, var0, false);
+               } catch (Exception var11) {
+                  var3 = null;
                }
             }
          }
-      }
 
-      if (var5 == null) {
-         var5 = class131.field1474 + File.separatorChar + "jagexcache" + var4 + File.separatorChar + var0 + File.separatorChar + var1 + File.separatorChar;
-         var7 = true;
-      }
-
-      if (var6 != null) {
-         File var19 = new File(var6);
-         var20 = new File(var5);
-
-         try {
-            File[] var23 = var19.listFiles();
-            File[] var24 = var23;
-
-            for(int var12 = 0; var12 < var24.length; ++var12) {
-               File var13 = var24[var12];
-               File var14 = new File(var20, var13.getName());
-               boolean var15 = var13.renameTo(var14);
-               if (!var15) {
-                  throw new IOException();
-               }
-            }
-         } catch (Exception var16) {
-            var16.printStackTrace();
+         if (null != var3) {
+            class242.field2042.method396(var3, (long)var0);
          }
 
-         var7 = true;
+         return var3;
       }
-
-      if (var7) {
-         class264.method1261(new File(var5), (File)null);
-      }
-
-      return new File(var5);
    }
 }

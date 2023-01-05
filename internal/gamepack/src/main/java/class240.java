@@ -1,124 +1,106 @@
-public class class240 extends class106 {
-   boolean field2579 = false;
-   int field2578;
-   int field2580;
+public class class240 {
+   public static class9 field2021;
+   static final class240 field2019 = new class240(3);
+   final int field2020;
 
-   static final void method1215(boolean var0) {
-      if (var0) {
-         client.field457 = class52.field766 ? class23.field174 : class23.field171;
-      } else {
-         client.field457 = class111.field1385.method1335(class52.field776) ? class23.field169 : class23.field170;
-      }
-
+   class240(int var1) {
+      this.field2020 = var1;
    }
 
-   static final void method1214(boolean var0, class421 var1) {
-      client.field494 = var0;
-      int var3;
-      int var4;
-      int var6;
-      int var7;
-      int var8;
-      if (!client.field494) {
-         var3 = var1.method653();
-         var4 = var1.method697();
-         int var5 = var1.method671();
-         class297.field2858 = new int[var5][4];
-
-         for(var6 = 0; var6 < var5; ++var6) {
-            for(var7 = 0; var7 < 4; ++var7) {
-               class297.field2858[var6][var7] = var1.method717();
-            }
-         }
-
-         class63.field833 = new int[var5];
-         client.field699 = new int[var5];
-         class270.field2704 = new int[var5];
-         class243.field2596 = new byte[var5][];
-         class315.field2995 = new byte[var5][];
-         var5 = 0;
-
-         for(var6 = (var3 - 6) / 8; var6 <= (var3 + 6) / 8; ++var6) {
-            for(var7 = (var4 - 6) / 8; var7 <= (var4 + 6) / 8; ++var7) {
-               var8 = (var6 << 8) + var7;
-               class63.field833[var5] = var8;
-               client.field699[var5] = class42.field375.method883("m" + var6 + "_" + var7);
-               class270.field2704[var5] = class42.field375.method883("l" + var6 + "_" + var7);
-               ++var5;
-            }
-         }
-
-         class103.method556(var3, var4, true);
+   static float method1042(class322 var0, float var1, float var2, float var3) {
+      float var5 = class63.method295(var0.field2563, var0.field2564, var1);
+      if (Math.abs(var5) < class186.field1694) {
+         return var1;
       } else {
-         var3 = var1.method697();
-         var4 = var1.method697();
-         boolean var16 = var1.method691() == 1;
-         var6 = var1.method671();
-         var1.method2022();
+         float var6 = class63.method295(var0.field2563, var0.field2564, var2);
+         if (Math.abs(var6) < class186.field1694) {
+            return var2;
+         } else {
+            float var7 = 0.0F;
+            float var8 = 0.0F;
+            float var9 = 0.0F;
+            float var14 = 0.0F;
+            boolean var15 = true;
+            boolean var16 = false;
 
-         int var9;
-         int var10;
-         for(var7 = 0; var7 < 4; ++var7) {
-            for(var8 = 0; var8 < 13; ++var8) {
-               for(var9 = 0; var9 < 13; ++var9) {
-                  var10 = var1.method2024(1);
-                  if (var10 == 1) {
-                     client.field495[var7][var8][var9] = var1.method2024(26);
+            do {
+               var16 = false;
+               if (var15) {
+                  var7 = var1;
+                  var14 = var5;
+                  var8 = var2 - var1;
+                  var9 = var8;
+                  var15 = false;
+               }
+
+               if (Math.abs(var14) < Math.abs(var6)) {
+                  var1 = var2;
+                  var2 = var7;
+                  var7 = var1;
+                  var5 = var6;
+                  var6 = var14;
+                  var14 = var5;
+               }
+
+               float var17 = class186.field1695 * Math.abs(var2) + var3 * 0.5F;
+               float var18 = 0.5F * (var7 - var2);
+               boolean var19 = Math.abs(var18) > var17 && 0.0F != var6;
+               if (var19) {
+                  if (Math.abs(var9) >= var17 && Math.abs(var5) > Math.abs(var6)) {
+                     float var13 = var6 / var5;
+                     float var10;
+                     float var11;
+                     if (var7 == var1) {
+                        var10 = var18 * 2.0F * var13;
+                        var11 = 1.0F - var13;
+                     } else {
+                        var11 = var5 / var14;
+                        float var12 = var6 / var14;
+                        var10 = var13 * (var18 * 2.0F * var11 * (var11 - var12) - (var2 - var1) * (var12 - 1.0F));
+                        var11 = (var13 - 1.0F) * (var11 - 1.0F) * (var12 - 1.0F);
+                     }
+
+                     if ((double)var10 > 0.0D) {
+                        var11 = -var11;
+                     } else {
+                        var10 = -var10;
+                     }
+
+                     var13 = var9;
+                     var9 = var8;
+                     if (var10 * 2.0F < var18 * 3.0F * var11 - Math.abs(var17 * var11) && var10 < Math.abs(var13 * 0.5F * var11)) {
+                        var8 = var10 / var11;
+                     } else {
+                        var8 = var18;
+                        var9 = var18;
+                     }
                   } else {
-                     client.field495[var7][var8][var9] = -1;
+                     var8 = var18;
+                     var9 = var18;
+                  }
+
+                  var1 = var2;
+                  var5 = var6;
+                  if (Math.abs(var8) > var17) {
+                     var2 += var8;
+                  } else if ((double)var18 > 0.0D) {
+                     var2 += var17;
+                  } else {
+                     var2 -= var17;
+                  }
+
+                  var6 = class63.method295(var0.field2563, var0.field2564, var2);
+                  if ((double)(var6 * (var14 / Math.abs(var14))) > 0.0D) {
+                     var15 = true;
+                     var16 = true;
+                  } else {
+                     var16 = true;
                   }
                }
-            }
+            } while(var16);
+
+            return var2;
          }
-
-         var1.method2023();
-         class297.field2858 = new int[var6][4];
-
-         for(var7 = 0; var7 < var6; ++var7) {
-            for(var8 = 0; var8 < 4; ++var8) {
-               class297.field2858[var7][var8] = var1.method717();
-            }
-         }
-
-         class63.field833 = new int[var6];
-         client.field699 = new int[var6];
-         class270.field2704 = new int[var6];
-         class243.field2596 = new byte[var6][];
-         class315.field2995 = new byte[var6][];
-         var6 = 0;
-
-         for(var7 = 0; var7 < 4; ++var7) {
-            for(var8 = 0; var8 < 13; ++var8) {
-               for(var9 = 0; var9 < 13; ++var9) {
-                  var10 = client.field495[var7][var8][var9];
-                  if (var10 != -1) {
-                     int var11 = var10 >> 14 & 1023;
-                     int var12 = var10 >> 3 & 2047;
-                     int var13 = var12 / 8 + (var11 / 8 << 8);
-
-                     int var14;
-                     for(var14 = 0; var14 < var6; ++var14) {
-                        if (class63.field833[var14] == var13) {
-                           var13 = -1;
-                           break;
-                        }
-                     }
-
-                     if (var13 != -1) {
-                        class63.field833[var6] = var13;
-                        var14 = var13 >> 8 & 255;
-                        int var15 = var13 & 255;
-                        client.field699[var6] = class42.field375.method883("m" + var14 + "_" + var15);
-                        class270.field2704[var6] = class42.field375.method883("l" + var14 + "_" + var15);
-                        ++var6;
-                     }
-                  }
-               }
-            }
-         }
-
-         class103.method556(var3, var4, !var16);
       }
-
    }
 }

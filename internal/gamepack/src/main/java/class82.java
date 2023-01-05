@@ -1,64 +1,38 @@
-public final class class82 extends class106 {
-   static class397 field946 = new class397();
-   class173 field950;
-   class310 field944;
-   class310 field949;
-   int field936;
-   int field937;
-   int field938;
-   int field939;
-   int field940;
-   int field941;
-   int field942;
-   int field943;
-   int field945;
-   int field948;
-   int[] field947;
+public class class82 extends class490 {
+   int field667;
+   public boolean field671;
+   public byte[] field668;
+   public int field669;
+   public int field670;
 
-   void method440() {
-      int var2 = this.field943;
-      class173 var3 = this.field950.method925();
-      if (null != var3) {
-         this.field943 = var3.field1910;
-         this.field945 = var3.field1892 * 128;
-         this.field940 = var3.field1908;
-         this.field937 = var3.field1909;
-         this.field947 = var3.field1871;
-      } else {
-         this.field943 = -1;
-         this.field945 = 0;
-         this.field940 = 0;
-         this.field937 = 0;
-         this.field947 = null;
-      }
-
-      if (var2 != this.field943 && this.field944 != null) {
-         class488.field4008.method1924(this.field944);
-         this.field944 = null;
-      }
-
+   class82(int var1, byte[] var2, int var3, int var4) {
+      this.field670 = var1;
+      this.field668 = var2;
+      this.field669 = var3;
+      this.field667 = var4;
    }
 
-   public static boolean method441(char var0) {
-      if ((var0 < ' ' || var0 >= 127) && (var0 <= 127 || var0 >= 160) && (var0 <= 160 || var0 > 255)) {
-         if (var0 != 0) {
-            char[] var2 = class307.field2898;
+   class82(int var1, byte[] var2, int var3, int var4, boolean var5) {
+      this.field670 = var1;
+      this.field668 = var2;
+      this.field669 = var3;
+      this.field667 = var4;
+      this.field671 = var5;
+   }
 
-            for(int var3 = 0; var3 < var2.length; ++var3) {
-               char var4 = var2[var3];
-               if (var0 == var4) {
-                  return true;
-               }
-            }
+   public class82 method339(class129 var1) {
+      this.field668 = var1.method614(this.field668);
+      this.field670 = var1.method613(this.field670);
+      if (this.field669 == this.field667) {
+         this.field669 = this.field667 = var1.method612(this.field669);
+      } else {
+         this.field669 = var1.method612(this.field669);
+         this.field667 = var1.method612(this.field667);
+         if (this.field669 == this.field667) {
+            --this.field669;
          }
-
-         return false;
-      } else {
-         return true;
       }
-   }
 
-   public static final void method442(String var0, String var1, int var2, int var3, int var4, int var5) {
-      class384.method1821(var0, var1, var2, var3, var4, var5, -1, false);
+      return this;
    }
 }

@@ -1,23 +1,36 @@
-public class class116 extends class108 {
-   static class164 field1414;
-   static class31 field1413 = new class31(64);
-   static int field1415;
-   public int field1412 = 0;
-
-   void method600(class134 var1) {
-      while(true) {
-         int var3 = var1.method669();
-         if (var3 == 0) {
-            return;
-         }
-
-         this.method601(var1, var3);
-      }
+public final class class116 {
+   static final void method453(String var0) {
+      StringBuilder var10000 = (new StringBuilder()).append(var0);
+      class177 var10001 = (class177)null;
+      String var2 = var10000.append(class177.field1505).toString();
+      class164.method765(30, "", var2);
    }
 
-   void method601(class134 var1, int var2) {
-      if (var2 == 2) {
-         this.field1412 = var1.method671();
+   static final void method452(class120 var0, class263 var1, int var2, int var3, boolean var4) {
+      String[] var6 = var1.field2164;
+      byte var7 = -1;
+      String var8 = null;
+      if (null != var6 && null != var6[var3]) {
+         if (var3 == 0) {
+            var7 = 33;
+         } else if (var3 == 1) {
+            var7 = 34;
+         } else if (var3 == 2) {
+            var7 = 35;
+         } else if (var3 == 3) {
+            var7 = 36;
+         } else {
+            var7 = 37;
+         }
+
+         var8 = var6[var3];
+      } else if (var3 == 4) {
+         var7 = 37;
+         var8 = class177.field1638;
+      }
+
+      if (var7 != -1 && null != var8) {
+         class323.method1653(var8, class238.method1032(16748608) + var1.field2147, var7, 0, var2, var0.field985, var1.field2168, var4);
       }
 
    }

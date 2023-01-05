@@ -1,34 +1,477 @@
-import java.util.HashMap;
-
 public class class427 {
-   static {
-      new HashMap();
+   public static int field3529;
+   int field3530;
+   int field3531 = 0;
+   int field3532 = 0;
+   int field3533;
+   public int[][] field3534;
+
+   public class427(int var1, int var2) {
+      this.field3530 = var1;
+      this.field3533 = var2;
+      this.field3534 = new int[this.field3530][this.field3533];
+      this.method2082();
    }
 
-   public static boolean method2039(CharSequence var0) {
-      return class142.method775(var0, 10, true);
-   }
-
-   public static void method2041(class164 var0, class164 var1, boolean var2, class394 var3) {
-      class458.field3757 = var0;
-      class61.field819 = var1;
-      class172.field1862 = var2;
-      class458.field3796 = class458.field3757.method887(10);
-      class115.field1411 = var3;
-   }
-
-   static Object method2040(class180 var0) {
-      if (null == var0) {
-         throw new IllegalStateException("popValueOfType() failure - null baseVarType");
-      } else {
-         switch(var0.field1933) {
-         case 0:
-            return class150.field1580[--class188.field1989];
-         case 1:
-            return class150.field1581[--class150.field1582];
-         default:
-            throw new IllegalStateException("popValueOfType() failure - unsupported type");
+   public void method2082() {
+      for(int var2 = 0; var2 < this.field3530; ++var2) {
+         for(int var3 = 0; var3 < this.field3533; ++var3) {
+            if (var2 != 0 && var3 != 0 && var2 < this.field3530 - 5 && var3 < this.field3533 - 5) {
+               this.field3534[var2][var3] = 16777216;
+            } else {
+               this.field3534[var2][var3] = 16777215;
+            }
          }
       }
+
+   }
+
+   public void method2083(int var1, int var2, int var3, int var4, boolean var5) {
+      var1 -= this.field3531;
+      var2 -= this.field3532;
+      if (var3 == 0) {
+         if (var4 == 0) {
+            this.method2087(var1, var2, 128);
+            this.method2087(var1 - 1, var2, 8);
+         }
+
+         if (var4 == 1) {
+            this.method2087(var1, var2, 2);
+            this.method2087(var1, var2 + 1, 32);
+         }
+
+         if (var4 == 2) {
+            this.method2087(var1, var2, 8);
+            this.method2087(var1 + 1, var2, 128);
+         }
+
+         if (var4 == 3) {
+            this.method2087(var1, var2, 32);
+            this.method2087(var1, var2 - 1, 2);
+         }
+      }
+
+      if (var3 == 1 || var3 == 3) {
+         if (var4 == 0) {
+            this.method2087(var1, var2, 1);
+            this.method2087(var1 - 1, var2 + 1, 16);
+         }
+
+         if (var4 == 1) {
+            this.method2087(var1, var2, 4);
+            this.method2087(var1 + 1, var2 + 1, 64);
+         }
+
+         if (var4 == 2) {
+            this.method2087(var1, var2, 16);
+            this.method2087(var1 + 1, var2 - 1, 1);
+         }
+
+         if (var4 == 3) {
+            this.method2087(var1, var2, 64);
+            this.method2087(var1 - 1, var2 - 1, 4);
+         }
+      }
+
+      if (var3 == 2) {
+         if (var4 == 0) {
+            this.method2087(var1, var2, 130);
+            this.method2087(var1 - 1, var2, 8);
+            this.method2087(var1, var2 + 1, 32);
+         }
+
+         if (var4 == 1) {
+            this.method2087(var1, var2, 10);
+            this.method2087(var1, var2 + 1, 32);
+            this.method2087(var1 + 1, var2, 128);
+         }
+
+         if (var4 == 2) {
+            this.method2087(var1, var2, 40);
+            this.method2087(var1 + 1, var2, 128);
+            this.method2087(var1, var2 - 1, 2);
+         }
+
+         if (var4 == 3) {
+            this.method2087(var1, var2, 160);
+            this.method2087(var1, var2 - 1, 2);
+            this.method2087(var1 - 1, var2, 8);
+         }
+      }
+
+      if (var5) {
+         if (var3 == 0) {
+            if (var4 == 0) {
+               this.method2087(var1, var2, 65536);
+               this.method2087(var1 - 1, var2, 4096);
+            }
+
+            if (var4 == 1) {
+               this.method2087(var1, var2, 1024);
+               this.method2087(var1, var2 + 1, 16384);
+            }
+
+            if (var4 == 2) {
+               this.method2087(var1, var2, 4096);
+               this.method2087(var1 + 1, var2, 65536);
+            }
+
+            if (var4 == 3) {
+               this.method2087(var1, var2, 16384);
+               this.method2087(var1, var2 - 1, 1024);
+            }
+         }
+
+         if (var3 == 1 || var3 == 3) {
+            if (var4 == 0) {
+               this.method2087(var1, var2, 512);
+               this.method2087(var1 - 1, var2 + 1, 8192);
+            }
+
+            if (var4 == 1) {
+               this.method2087(var1, var2, 2048);
+               this.method2087(var1 + 1, var2 + 1, 32768);
+            }
+
+            if (var4 == 2) {
+               this.method2087(var1, var2, 8192);
+               this.method2087(var1 + 1, var2 - 1, 512);
+            }
+
+            if (var4 == 3) {
+               this.method2087(var1, var2, 32768);
+               this.method2087(var1 - 1, var2 - 1, 2048);
+            }
+         }
+
+         if (var3 == 2) {
+            if (var4 == 0) {
+               this.method2087(var1, var2, 66560);
+               this.method2087(var1 - 1, var2, 4096);
+               this.method2087(var1, var2 + 1, 16384);
+            }
+
+            if (var4 == 1) {
+               this.method2087(var1, var2, 5120);
+               this.method2087(var1, var2 + 1, 16384);
+               this.method2087(var1 + 1, var2, 65536);
+            }
+
+            if (var4 == 2) {
+               this.method2087(var1, var2, 20480);
+               this.method2087(var1 + 1, var2, 65536);
+               this.method2087(var1, var2 - 1, 1024);
+            }
+
+            if (var4 == 3) {
+               this.method2087(var1, var2, 81920);
+               this.method2087(var1, var2 - 1, 1024);
+               this.method2087(var1 - 1, var2, 4096);
+            }
+         }
+      }
+
+   }
+
+   public void method2093(int var1, int var2, int var3, int var4, boolean var5) {
+      int var7 = 256;
+      if (var5) {
+         var7 += 131072;
+      }
+
+      var1 -= this.field3531;
+      var2 -= this.field3532;
+
+      for(int var8 = var1; var8 < var1 + var3; ++var8) {
+         if (var8 >= 0 && var8 < this.field3530) {
+            for(int var9 = var2; var9 < var2 + var4; ++var9) {
+               if (var9 >= 0 && var9 < this.field3533) {
+                  this.method2087(var8, var9, var7);
+               }
+            }
+         }
+      }
+
+   }
+
+   public void method2084(int var1, int var2) {
+      var1 -= this.field3531;
+      var2 -= this.field3532;
+      this.field3534[var1][var2] |= 2097152;
+   }
+
+   public void method2085(int var1, int var2) {
+      var1 -= this.field3531;
+      var2 -= this.field3532;
+      this.field3534[var1][var2] |= 262144;
+   }
+
+   void method2087(int var1, int var2, int var3) {
+      this.field3534[var1][var2] |= var3;
+   }
+
+   public void method2086(int var1, int var2, int var3, int var4, boolean var5) {
+      var1 -= this.field3531;
+      var2 -= this.field3532;
+      if (var3 == 0) {
+         if (var4 == 0) {
+            this.method2090(var1, var2, 128);
+            this.method2090(var1 - 1, var2, 8);
+         }
+
+         if (var4 == 1) {
+            this.method2090(var1, var2, 2);
+            this.method2090(var1, var2 + 1, 32);
+         }
+
+         if (var4 == 2) {
+            this.method2090(var1, var2, 8);
+            this.method2090(var1 + 1, var2, 128);
+         }
+
+         if (var4 == 3) {
+            this.method2090(var1, var2, 32);
+            this.method2090(var1, var2 - 1, 2);
+         }
+      }
+
+      if (var3 == 1 || var3 == 3) {
+         if (var4 == 0) {
+            this.method2090(var1, var2, 1);
+            this.method2090(var1 - 1, var2 + 1, 16);
+         }
+
+         if (var4 == 1) {
+            this.method2090(var1, var2, 4);
+            this.method2090(var1 + 1, var2 + 1, 64);
+         }
+
+         if (var4 == 2) {
+            this.method2090(var1, var2, 16);
+            this.method2090(var1 + 1, var2 - 1, 1);
+         }
+
+         if (var4 == 3) {
+            this.method2090(var1, var2, 64);
+            this.method2090(var1 - 1, var2 - 1, 4);
+         }
+      }
+
+      if (var3 == 2) {
+         if (var4 == 0) {
+            this.method2090(var1, var2, 130);
+            this.method2090(var1 - 1, var2, 8);
+            this.method2090(var1, var2 + 1, 32);
+         }
+
+         if (var4 == 1) {
+            this.method2090(var1, var2, 10);
+            this.method2090(var1, var2 + 1, 32);
+            this.method2090(var1 + 1, var2, 128);
+         }
+
+         if (var4 == 2) {
+            this.method2090(var1, var2, 40);
+            this.method2090(var1 + 1, var2, 128);
+            this.method2090(var1, var2 - 1, 2);
+         }
+
+         if (var4 == 3) {
+            this.method2090(var1, var2, 160);
+            this.method2090(var1, var2 - 1, 2);
+            this.method2090(var1 - 1, var2, 8);
+         }
+      }
+
+      if (var5) {
+         if (var3 == 0) {
+            if (var4 == 0) {
+               this.method2090(var1, var2, 65536);
+               this.method2090(var1 - 1, var2, 4096);
+            }
+
+            if (var4 == 1) {
+               this.method2090(var1, var2, 1024);
+               this.method2090(var1, var2 + 1, 16384);
+            }
+
+            if (var4 == 2) {
+               this.method2090(var1, var2, 4096);
+               this.method2090(var1 + 1, var2, 65536);
+            }
+
+            if (var4 == 3) {
+               this.method2090(var1, var2, 16384);
+               this.method2090(var1, var2 - 1, 1024);
+            }
+         }
+
+         if (var3 == 1 || var3 == 3) {
+            if (var4 == 0) {
+               this.method2090(var1, var2, 512);
+               this.method2090(var1 - 1, var2 + 1, 8192);
+            }
+
+            if (var4 == 1) {
+               this.method2090(var1, var2, 2048);
+               this.method2090(var1 + 1, var2 + 1, 32768);
+            }
+
+            if (var4 == 2) {
+               this.method2090(var1, var2, 8192);
+               this.method2090(var1 + 1, var2 - 1, 512);
+            }
+
+            if (var4 == 3) {
+               this.method2090(var1, var2, 32768);
+               this.method2090(var1 - 1, var2 - 1, 2048);
+            }
+         }
+
+         if (var3 == 2) {
+            if (var4 == 0) {
+               this.method2090(var1, var2, 66560);
+               this.method2090(var1 - 1, var2, 4096);
+               this.method2090(var1, var2 + 1, 16384);
+            }
+
+            if (var4 == 1) {
+               this.method2090(var1, var2, 5120);
+               this.method2090(var1, var2 + 1, 16384);
+               this.method2090(var1 + 1, var2, 65536);
+            }
+
+            if (var4 == 2) {
+               this.method2090(var1, var2, 20480);
+               this.method2090(var1 + 1, var2, 65536);
+               this.method2090(var1, var2 - 1, 1024);
+            }
+
+            if (var4 == 3) {
+               this.method2090(var1, var2, 81920);
+               this.method2090(var1, var2 - 1, 1024);
+               this.method2090(var1 - 1, var2, 4096);
+            }
+         }
+      }
+
+   }
+
+   public void method2089(int var1, int var2, int var3, int var4, int var5, boolean var6) {
+      int var8 = 256;
+      if (var6) {
+         var8 += 131072;
+      }
+
+      var1 -= this.field3531;
+      var2 -= this.field3532;
+      int var9;
+      if (var5 == 1 || var5 == 3) {
+         var9 = var3;
+         var3 = var4;
+         var4 = var9;
+      }
+
+      for(var9 = var1; var9 < var1 + var3; ++var9) {
+         if (var9 >= 0 && var9 < this.field3530) {
+            for(int var10 = var2; var10 < var4 + var2; ++var10) {
+               if (var10 >= 0 && var10 < this.field3533) {
+                  this.method2090(var9, var10, var8);
+               }
+            }
+         }
+      }
+
+   }
+
+   void method2090(int var1, int var2, int var3) {
+      this.field3534[var1][var2] &= ~var3;
+   }
+
+   public void method2091(int var1, int var2) {
+      var1 -= this.field3531;
+      var2 -= this.field3532;
+      this.field3534[var1][var2] &= -262145;
+   }
+
+   static final void method2092(byte var0) {
+      client.field404 = 0;
+      int var1 = (class113.field846.field2672 >> 7) + class312.field2465;
+      int var2 = class325.field2575 + (class113.field846.field2608 >> 7);
+      if (var1 >= 3053) {
+         if (var0 >= -1) {
+            throw new IllegalStateException();
+         }
+
+         if (var1 <= 3156 && var2 >= 3056) {
+            if (var0 >= -1) {
+               throw new IllegalStateException();
+            }
+
+            if (var2 <= 3136) {
+               client.field404 = 1;
+            }
+         }
+      }
+
+      if (var1 >= 3072 && var1 <= 3118) {
+         if (var0 >= -1) {
+            throw new IllegalStateException();
+         }
+
+         if (var2 >= 9492) {
+            if (var0 >= -1) {
+               throw new IllegalStateException();
+            }
+
+            if (var2 <= 9535) {
+               if (var0 >= -1) {
+                  return;
+               }
+
+               client.field404 = 1;
+            }
+         }
+      }
+
+      if (client.field404 == 1) {
+         if (var0 >= -1) {
+            throw new IllegalStateException();
+         }
+
+         if (var1 >= 3139) {
+            if (var0 >= -1) {
+               throw new IllegalStateException();
+            }
+
+            if (var1 <= 3199) {
+               if (var0 >= -1) {
+                  throw new IllegalStateException();
+               }
+
+               if (var2 >= 3008) {
+                  if (var0 >= -1) {
+                     throw new IllegalStateException();
+                  }
+
+                  if (var2 <= 3062) {
+                     if (var0 >= -1) {
+                        throw new IllegalStateException();
+                     }
+
+                     client.field404 = 0;
+                  }
+               }
+            }
+         }
+      }
+
+   }
+
+   static void method2088() {
+      if (client.field306 == 1) {
+         client.field242 = true;
+      }
+
    }
 }

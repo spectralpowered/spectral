@@ -1,13 +1,21 @@
-final class class24 implements class73 {
-   void method123(Long var1, class134 var2) {
-      var2.method658(var1.longValue());
+import java.util.Comparator;
+
+public class class24 implements Comparator {
+   final boolean field111;
+
+   public class24(boolean var1) {
+      this.field111 = var1;
    }
 
-   public Object method406(class134 var1) {
-      return var1.method720();
+   int method99(class368 var1, class368 var2) {
+      return this.field111 ? var1.method1816(var2) : var2.method1816(var1);
    }
 
-   public void method405(Object var1, class134 var2) {
-      this.method123((Long)var1, var2);
+   public int compare(Object var1, Object var2) {
+      return this.method99((class368)var1, (class368)var2);
+   }
+
+   public boolean equals(Object var1) {
+      return super.equals(var1);
    }
 }

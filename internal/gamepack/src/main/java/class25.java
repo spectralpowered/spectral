@@ -1,51 +1,37 @@
+import java.io.File;
+import java.util.Date;
+
 public class class25 {
-   static byte[] field176 = new byte[2048];
-   static class134 field187 = new class134(new byte[5000]);
-   static class134[] field177 = new class134[2048];
-   static class156[] field184 = new class156[2048];
-   static int field175 = 0;
-   static int field180 = 0;
-   static int field182 = 0;
-   static int[] field178 = new int[2048];
-   static int[] field179 = new int[2048];
-   static int[] field181 = new int[2048];
-   static int[] field183 = new int[2048];
-   static int[] field185 = new int[2048];
-   static int[] field186 = new int[2048];
+   public static class435 field112 = null;
+   public static class435 field113 = null;
+   public static class435 field115 = null;
+   public static class435[] field116;
+   static File field114;
 
-   public static boolean method126(int var0) {
-      if (class22.field167[var0]) {
-         return true;
-      } else if (!class477.field3968.method871(var0)) {
-         return false;
-      } else {
-         int var2 = class477.field3968.method887(var0);
-         if (var2 == 0) {
-            class22.field167[var0] = true;
-            return true;
-         } else {
-            if (null == class71.field853[var0]) {
-               class71.field853[var0] = new class210[var2];
-            }
+   public static String method101(long var0) {
+      class482.field4019.setTime(new Date(var0));
+      int var2 = class482.field4019.get(7);
+      int var3 = class482.field4019.get(5);
+      int var4 = class482.field4019.get(2);
+      int var5 = class482.field4019.get(1);
+      int var6 = class482.field4019.get(11);
+      int var7 = class482.field4019.get(12);
+      int var8 = class482.field4019.get(13);
+      return class482.field4021[var2 - 1] + ", " + var3 / 10 + var3 % 10 + "-" + class482.field4020[0][var4] + "-" + var5 + " " + var6 / 10 + var6 % 10 + ":" + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + " GMT";
+   }
 
-            for(int var3 = 0; var3 < var2; ++var3) {
-               if (null == class71.field853[var0][var3]) {
-                  byte[] var4 = class477.field3968.method892(var0, var3);
-                  if (null != var4) {
-                     class71.field853[var0][var3] = new class210();
-                     class71.field853[var0][var3].field2307 = (var0 << 16) + var3;
-                     if (-1 == var4[0]) {
-                        class71.field853[var0][var3].method1085(new class134(var4));
-                     } else {
-                        class71.field853[var0][var3].method1066(new class134(var4));
-                     }
-                  }
-               }
-            }
+   public static class396 method100(int var0) {
+      return var0 >= 0 && var0 < class396.field3312.length && class396.field3312[var0] != null ? class396.field3312[var0] : new class396(var0);
+   }
 
-            class22.field167[var0] = true;
-            return true;
-         }
+   public static int method102(CharSequence var0) {
+      int var2 = var0.length();
+      int var3 = 0;
+
+      for(int var4 = 0; var4 < var2; ++var4) {
+         var3 = (var3 << 5) - var3 + class72.method315(var0.charAt(var4));
       }
+
+      return var3;
    }
 }

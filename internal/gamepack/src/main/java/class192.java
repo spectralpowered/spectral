@@ -1,185 +1,239 @@
-public class class192 extends class108 {
-   static class164 field1994;
-   static class164 field2005;
-   static class31 field1995 = new class31(64);
-   static class31 field1996 = new class31(30);
-   int field1997 = 128;
-   int field1998;
-   int field2001 = 0;
-   int field2004 = 128;
-   int field2006;
-   int field2007 = 0;
-   int field2008 = 0;
-   short[] field1993;
-   short[] field2000;
-   short[] field2002;
-   short[] field2003;
-   public int field1999 = -1;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.net.ProtocolException;
+import java.net.SocketTimeoutException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Map.Entry;
+import javax.net.ssl.HttpsURLConnection;
 
-   void method989(class134 var1) {
-      while(true) {
-         int var3 = var1.method669();
-         if (var3 == 0) {
-            return;
-         }
+public class class192 {
+   boolean field1716 = false;
+   boolean field1718 = false;
+   class373 field1715;
+   int field1719 = 300000;
+   Map field1720;
+   HttpsURLConnection field1717;
+   final class374 field1713;
+   final Map field1714;
 
-         this.method986(var1, var3);
-      }
-   }
-
-   void method986(class134 var1, int var2) {
-      if (var2 == 1) {
-         this.field1998 = var1.method671();
-      } else if (var2 == 2) {
-         this.field1999 = var1.method671();
-      } else if (var2 == 4) {
-         this.field1997 = var1.method671();
-      } else if (var2 == 5) {
-         this.field2004 = var1.method671();
-      } else if (var2 == 6) {
-         this.field2007 = var1.method671();
-      } else if (var2 == 7) {
-         this.field2001 = var1.method669();
-      } else if (var2 == 8) {
-         this.field2008 = var1.method669();
+   public class192(URL var1, class374 var2, boolean var3) throws IOException {
+      if (!var2.method1842()) {
+         throw new UnsupportedEncodingException("Unsupported request method used " + var2.method1843());
       } else {
-         int var4;
-         int var5;
-         if (var2 == 40) {
-            var4 = var1.method669();
-            this.field2000 = new short[var4];
-            this.field1993 = new short[var4];
-
-            for(var5 = 0; var5 < var4; ++var5) {
-               this.field2000[var5] = (short)var1.method671();
-               this.field1993[var5] = (short)var1.method671();
+         this.field1717 = (HttpsURLConnection)var1.openConnection();
+         if (!var3) {
+            HttpsURLConnection var4 = this.field1717;
+            if (class225.field1924 == null) {
+               class225.field1924 = new class225();
             }
-         } else if (var2 == 41) {
-            var4 = var1.method669();
-            this.field2002 = new short[var4];
-            this.field2003 = new short[var4];
 
-            for(var5 = 0; var5 < var4; ++var5) {
-               this.field2002[var5] = (short)var1.method671();
-               this.field2003[var5] = (short)var1.method671();
-            }
+            class225 var5 = class225.field1924;
+            var4.setSSLSocketFactory(var5);
          }
-      }
 
+         this.field1713 = var2;
+         this.field1714 = new HashMap();
+         this.field1720 = new HashMap();
+      }
    }
 
-   public final class491 method988(int var1) {
-      class491 var3 = (class491)field1996.method161((long)this.field2006);
-      if (var3 == null) {
-         class311 var4 = class311.method1489(field2005, this.field1998, 0);
-         if (null == var4) {
-            return null;
+   public void method862(String var1, String var2) {
+      if (!this.field1716) {
+         this.field1714.put(var1, var2);
+      }
+   }
+
+   String method861() {
+      ArrayList var2 = new ArrayList(this.field1720.entrySet());
+      Collections.sort(var2, new class362(this));
+      StringBuilder var3 = new StringBuilder();
+      Iterator var4 = var2.iterator();
+
+      while(var4.hasNext()) {
+         Entry var5 = (Entry)var4.next();
+         if (var3.length() > 0) {
+            var3.append(",");
          }
 
-         int var5;
-         if (null != this.field2000) {
-            for(var5 = 0; var5 < this.field2000.length; ++var5) {
-               var4.method1499(this.field2000[var5], this.field1993[var5]);
+         var3.append(((class14)var5.getKey()).method71());
+         float var6 = ((Float)var5.getValue()).floatValue();
+         if (var6 < 1.0F) {
+            String var7 = Float.toString(var6).substring(0, 4);
+            var3.append(";q=" + var7);
+         }
+      }
+
+      return var3.toString();
+   }
+
+   void method863() throws ProtocolException {
+      if (!this.field1716) {
+         this.field1717.setRequestMethod(this.field1713.method1843());
+         if (!this.field1720.isEmpty()) {
+            this.field1714.put("Accept", this.method861());
+         }
+
+         Iterator var2 = this.field1714.entrySet().iterator();
+
+         while(var2.hasNext()) {
+            Entry var3 = (Entry)var2.next();
+            this.field1717.setRequestProperty((String)var3.getKey(), (String)var3.getValue());
+         }
+
+         if (this.field1713.method1844() && null != this.field1715) {
+            this.field1717.setDoOutput(true);
+            ByteArrayOutputStream var14 = new ByteArrayOutputStream();
+
+            try {
+               var14.write(this.field1715.method1841());
+               var14.writeTo(this.field1717.getOutputStream());
+            } catch (IOException var12) {
+               var12.printStackTrace();
+            } finally {
+               if (null != var14) {
+                  try {
+                     var14.close();
+                  } catch (IOException var11) {
+                     var11.printStackTrace();
+                  }
+               }
+
             }
          }
 
-         if (null != this.field2002) {
-            for(var5 = 0; var5 < this.field2002.length; ++var5) {
-               var4.method1500(this.field2002[var5], this.field2003[var5]);
-            }
-         }
-
-         var3 = var4.method1507(64 + this.field2001, 850 + this.field2008, -30, -50, -30);
-         field1996.method163(var3, (long)this.field2006);
+         this.field1717.setConnectTimeout(this.field1719);
+         this.field1717.setInstanceFollowRedirects(this.field1718);
+         this.field1716 = true;
       }
-
-      class491 var6;
-      if (this.field1999 != -1 && var1 != -1) {
-         var6 = class242.method1218(this.field1999).method425(var3, var1);
-      } else {
-         var6 = var3.method2358(true);
-      }
-
-      if (this.field1997 != 128 || 128 != this.field2004) {
-         var6.method2379(this.field1997, this.field2004, this.field1997);
-      }
-
-      if (0 != this.field2007) {
-         if (this.field2007 == 90) {
-            var6.method2366();
-         }
-
-         if (180 == this.field2007) {
-            var6.method2366();
-            var6.method2366();
-         }
-
-         if (this.field2007 == 270) {
-            var6.method2366();
-            var6.method2366();
-            var6.method2366();
-         }
-      }
-
-      return var6;
    }
 
-   public static class167[] method987() {
-      return new class167[]{class167.field1840, class167.field1829, class167.field1830, class167.field1841, class167.field1832, class167.field1836, class167.field1838, class167.field1834, class167.field1835, class167.field1828, class167.field1837, class167.field1831, class167.field1839, class167.field1833};
-   }
-
-   static void method990() {
-      class111.field1382 = new int[2000];
-      int var1 = 0;
-      int var2 = 240;
-
-      int var4;
-      for(byte var3 = 12; var1 < 16; var2 -= var3) {
-         var4 = class463.method2275((double)((float)var2 / 360.0F), 0.9998999834060669D, (double)(0.425F * (float)var1 / 16.0F + 0.075F));
-         class111.field1382[var1] = var4;
-         ++var1;
+   boolean method864() throws IOException, SocketTimeoutException {
+      if (!this.field1716) {
+         this.method863();
       }
 
-      var2 = 48;
+      this.field1717.connect();
+      return this.field1717.getResponseCode() == -1;
+   }
 
-      for(int var6 = var2 / 6; var1 < class111.field1382.length; var2 -= var6) {
-         var4 = var1 * 2;
-
-         for(int var5 = class463.method2275((double)((float)var2 / 360.0F), 0.9998999834060669D, 0.5D); var1 < var4 && var1 < class111.field1382.length; ++var1) {
-            class111.field1382[var1] = var5;
+   class32 method865() {
+      try {
+         if (!this.field1716 || this.field1717.getResponseCode() == -1) {
+            return new class32("No REST response has been received yet.");
          }
+      } catch (IOException var11) {
+         this.field1717.disconnect();
+         return new class32("Error decoding REST response code: " + var11.getMessage());
       }
 
+      class32 var2 = null;
+
+      class32 var4;
+      try {
+         var2 = new class32(this.field1717);
+         return var2;
+      } catch (IOException var9) {
+         var4 = new class32("Error decoding REST response: " + var9.getMessage());
+      } finally {
+         this.field1717.disconnect();
+      }
+
+      return var4;
    }
 
-   public static class336 method992() {
-      class336[] var1 = class336.field3109;
-      synchronized(class336.field3109) {
-         if (class336.field3112 == 0) {
-            return new class336();
+   static int method866(int var0, class461 var1, boolean var2) {
+      if (var0 == 6200) {
+         class161.field1227 -= 2;
+         client.field491 = (short)class483.method2377(class386.field3248[class161.field1227]);
+         if (client.field491 <= 0) {
+            client.field491 = 256;
+         }
+
+         client.field263 = (short)class483.method2377(class386.field3248[class161.field1227 + 1]);
+         if (client.field263 <= 0) {
+            client.field263 = 256;
+         }
+
+         return 1;
+      } else if (var0 == 6201) {
+         class161.field1227 -= 2;
+         client.field493 = (short)class386.field3248[class161.field1227];
+         if (client.field493 <= 0) {
+            client.field493 = 256;
+         }
+
+         client.field385 = (short)class386.field3248[1 + class161.field1227];
+         if (client.field385 <= 0) {
+            client.field385 = 320;
+         }
+
+         return 1;
+      } else if (var0 == 6202) {
+         class161.field1227 -= 4;
+         client.field403 = (short)class386.field3248[class161.field1227];
+         if (client.field403 <= 0) {
+            client.field403 = 1;
+         }
+
+         client.field496 = (short)class386.field3248[class161.field1227 + 1];
+         if (client.field496 <= 0) {
+            client.field496 = 32767;
+         } else if (client.field496 < client.field403) {
+            client.field496 = client.field403;
+         }
+
+         client.field497 = (short)class386.field3248[class161.field1227 + 2];
+         if (client.field497 <= 0) {
+            client.field497 = 1;
+         }
+
+         client.field223 = (short)class386.field3248[class161.field1227 + 3];
+         if (client.field223 <= 0) {
+            client.field223 = 32767;
+         } else if (client.field223 < client.field497) {
+            client.field223 = client.field497;
+         }
+
+         return 1;
+      } else if (var0 == 6203) {
+         if (null != client.field482) {
+            class398.method1970(0, 0, client.field482.field908, client.field482.field967, false);
+            class386.field3248[++class161.field1227 - 1] = client.field501;
+            class386.field3248[++class161.field1227 - 1] = client.field400;
          } else {
-            class336.field3109[--class336.field3112].method1622();
-            return class336.field3109[class336.field3112];
-         }
-      }
-   }
-
-   static final int method991(int var0, int var1, int var2) {
-      int var4 = var0 >> 7;
-      int var5 = var1 >> 7;
-      if (var4 >= 0 && var5 >= 0 && var4 <= 103 && var5 <= 103) {
-         int var6 = var2;
-         if (var2 < 3 && 2 == (class74.field866[1][var4][var5] & 2)) {
-            var6 = var2 + 1;
+            class386.field3248[++class161.field1227 - 1] = -1;
+            class386.field3248[++class161.field1227 - 1] = -1;
          }
 
-         int var7 = var0 & 127;
-         int var8 = var1 & 127;
-         int var9 = var7 * class74.field858[var6][var4 + 1][var5] + (128 - var7) * class74.field858[var6][var4][var5] >> 7;
-         int var10 = class74.field858[var6][var4][var5 + 1] * (128 - var7) + var7 * class74.field858[var6][var4 + 1][var5 + 1] >> 7;
-         return var9 * (128 - var8) + var8 * var10 >> 7;
+         return 1;
+      } else if (var0 == 6204) {
+         class386.field3248[++class161.field1227 - 1] = client.field493;
+         class386.field3248[++class161.field1227 - 1] = client.field385;
+         return 1;
+      } else if (var0 == 6205) {
+         class386.field3248[++class161.field1227 - 1] = class348.method1757(client.field491);
+         class386.field3248[++class161.field1227 - 1] = class348.method1757(client.field263);
+         return 1;
+      } else if (var0 == 6220) {
+         class386.field3248[++class161.field1227 - 1] = 0;
+         return 1;
+      } else if (var0 == 6221) {
+         class386.field3248[++class161.field1227 - 1] = 0;
+         return 1;
+      } else if (var0 == 6222) {
+         class386.field3248[++class161.field1227 - 1] = class427.field3529;
+         return 1;
+      } else if (var0 == 6223) {
+         class386.field3248[++class161.field1227 - 1] = class476.field4003;
+         return 1;
       } else {
-         return 0;
+         return 2;
       }
    }
 }

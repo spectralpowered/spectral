@@ -1,28 +1,37 @@
-final class class59 implements class290 {
-   static int field817;
-   // $FF: synthetic field
-   final class210 val$cc;
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Map.Entry;
 
-   class59(class210 var1) {
-      this.val$cc = var1;
+public class class59 implements class373 {
+   final Map field598;
+
+   public class59(Map var1) {
+      this.field598 = var1;
    }
 
-   public void method1367() {
-      if (this.val$cc != null && this.val$cc.method1087().field2633 != null) {
-         class169 var2 = new class169();
-         var2.method902(this.val$cc);
-         var2.method900(this.val$cc.method1087().field2633);
-         class242.method1219().method1930(var2);
+   public byte[] method1841() throws UnsupportedEncodingException {
+      return this.method277().getBytes("UTF-8");
+   }
+
+   public String method277() throws UnsupportedEncodingException {
+      StringBuilder var2 = new StringBuilder();
+      Iterator var3 = this.field598.entrySet().iterator();
+
+      while(var3.hasNext()) {
+         Entry var4 = (Entry)var3.next();
+         String var5 = URLEncoder.encode((String)var4.getKey(), "UTF-8");
+         String var6 = URLEncoder.encode((String)var4.getValue(), "UTF-8");
+         var2.append(var5).append("=").append(var6).append("&");
       }
 
-   }
-
-   static float method338(class360 var0, float var1) {
-      if (var0 == null) {
-         return 0.0F;
+      if (var2.length() == 0) {
+         return "";
       } else {
-         float var3 = var1 - var0.field3216;
-         return (var0.field3210 + var3 * (var0.field3218 * var3 + var0.field3232)) * var3 + var0.field3221;
+         var2.deleteCharAt(var2.length() - 1);
+         var2.insert(0, "?");
+         return var2.toString();
       }
    }
 }

@@ -1,13 +1,18 @@
-public class class139 extends RuntimeException {
-   public static int field1502;
-   public static int field1503;
-   public static int field1504;
-   public static String field1505;
-   String field1506;
-   Throwable field1507;
+public class class139 {
+   public class139 field1132;
+   public class139 field1133;
+   public long field1134;
 
-   class139(Throwable var1, String var2) {
-      this.field1506 = var2;
-      this.field1507 = var1;
+   public void method637() {
+      if (this.field1133 != null) {
+         this.field1133.field1132 = this.field1132;
+         this.field1132.field1133 = this.field1133;
+         this.field1132 = null;
+         this.field1133 = null;
+      }
+   }
+
+   public boolean method636() {
+      return this.field1133 != null;
    }
 }

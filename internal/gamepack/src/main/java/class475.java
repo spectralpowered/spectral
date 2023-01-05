@@ -1,34 +1,185 @@
-import java.util.zip.CRC32;
-
 public class class475 {
-   public static byte field3959 = 0;
-   public static class134 field3956 = new class134(8);
-   public static class429 field3962;
-   public static class9 field3947 = new class9();
-   public static class95 field3949 = new class95(32);
-   public static class95 field3952 = new class95(4096);
-   public static class95 field3954 = new class95(4096);
-   public static class95 field3955 = new class95(4096);
-   public static int field3944 = 0;
-   public static int field3948 = 0;
-   public static int field3950 = 0;
-   public static int field3951 = 0;
-   public static int field3953 = 0;
-   public static int field3960 = 0;
-   public static int field3961 = 0;
-   public static int field3964 = 0;
-   public static long field3946;
-   static class230[] field3958 = new class230[256];
-   static int field3945 = 255;
-   static int field3963 = -1;
-   static CRC32 field3957 = new CRC32();
+   public static void method2351(class274 var0) {
+      class457.field3778 = var0;
+   }
 
-   public static class347 method2299(class91 var0) {
-      switch(var0.field983) {
-      case 0:
-         return new class78();
-      default:
-         throw new IllegalArgumentException();
+   static class453[] method2355() {
+      return new class453[]{class453.field3759, class453.field3762, class453.field3747, class453.field3751, class453.field3749, class453.field3750, class453.field3746, class453.field3752, class453.field3753, class453.field3754, class453.field3755, class453.field3756, class453.field3757, class453.field3748, class453.field3758, class453.field3760, class453.field3761};
+   }
+
+   public static void method2353() {
+      Object var1 = class254.field2093;
+      synchronized(class254.field2093) {
+         if (class254.field2092 != 0) {
+            class254.field2092 = 1;
+
+            try {
+               class254.field2093.wait();
+            } catch (InterruptedException var4) {
+               ;
+            }
+         }
+
       }
+   }
+
+   static final int method2354(int var0, int var1) {
+      if (var0 == -1) {
+         return 12345678;
+      } else {
+         var1 = (var0 & 127) * var1 / 128;
+         if (var1 < 2) {
+            var1 = 2;
+         } else if (var1 > 126) {
+            var1 = 126;
+         }
+
+         return (var0 & 'ﾀ') + var1;
+      }
+   }
+
+   static final void method2352(int var0, int var1, int var2, int var3, int var4) {
+      long var6 = class408.field3415.method1613(var0, var1, var2);
+      int var8;
+      int var9;
+      int var10;
+      int var11;
+      int var14;
+      int var15;
+      if (var6 != 0L) {
+         var8 = class408.field3415.method1607(var0, var1, var2, var6);
+         var9 = var8 >> 6 & 3;
+         var10 = var8 & 31;
+         var11 = var3;
+         boolean var12 = 0L != var6 && !class405.method1989(var6);
+         if (var12) {
+            var11 = var4;
+         }
+
+         int[] var13 = class211.field1833.field2205;
+         var14 = var1 * 4 + 24624 + 2048 * (103 - var2);
+         var15 = class174.method803(var6);
+         class87 var16 = class85.method356(var15);
+         if (var16.field725 != -1) {
+            class344 var17 = class128.field1075[var16.field725];
+            if (var17 != null) {
+               int var18 = (var16.field720 * 4 - var17.field2758) / 2;
+               int var19 = (var16.field721 * 4 - var17.field2755) / 2;
+               var17.method1745(48 + var1 * 4 + var18, 4 * (104 - var2 - var16.field721) + 48 + var19);
+            }
+         } else {
+            if (var10 == 0 || var10 == 2) {
+               if (var9 == 0) {
+                  var13[var14] = var11;
+                  var13[var14 + 512] = var11;
+                  var13[var14 + 1024] = var11;
+                  var13[var14 + 1536] = var11;
+               } else if (var9 == 1) {
+                  var13[var14] = var11;
+                  var13[var14 + 1] = var11;
+                  var13[var14 + 2] = var11;
+                  var13[var14 + 3] = var11;
+               } else if (var9 == 2) {
+                  var13[var14 + 3] = var11;
+                  var13[var14 + 3 + 512] = var11;
+                  var13[1024 + var14 + 3] = var11;
+                  var13[var14 + 3 + 1536] = var11;
+               } else if (var9 == 3) {
+                  var13[var14 + 1536] = var11;
+                  var13[var14 + 1536 + 1] = var11;
+                  var13[var14 + 1536 + 2] = var11;
+                  var13[var14 + 1536 + 3] = var11;
+               }
+            }
+
+            if (var10 == 3) {
+               if (var9 == 0) {
+                  var13[var14] = var11;
+               } else if (var9 == 1) {
+                  var13[var14 + 3] = var11;
+               } else if (var9 == 2) {
+                  var13[var14 + 3 + 1536] = var11;
+               } else if (var9 == 3) {
+                  var13[var14 + 1536] = var11;
+               }
+            }
+
+            if (var10 == 2) {
+               if (var9 == 3) {
+                  var13[var14] = var11;
+                  var13[var14 + 512] = var11;
+                  var13[var14 + 1024] = var11;
+                  var13[var14 + 1536] = var11;
+               } else if (var9 == 0) {
+                  var13[var14] = var11;
+                  var13[var14 + 1] = var11;
+                  var13[var14 + 2] = var11;
+                  var13[var14 + 3] = var11;
+               } else if (var9 == 1) {
+                  var13[var14 + 3] = var11;
+                  var13[512 + var14 + 3] = var11;
+                  var13[1024 + var14 + 3] = var11;
+                  var13[1536 + var14 + 3] = var11;
+               } else if (var9 == 2) {
+                  var13[var14 + 1536] = var11;
+                  var13[var14 + 1536 + 1] = var11;
+                  var13[2 + var14 + 1536] = var11;
+                  var13[3 + var14 + 1536] = var11;
+               }
+            }
+         }
+      }
+
+      var6 = class408.field3415.method1611(var0, var1, var2);
+      if (var6 != 0L) {
+         var8 = class408.field3415.method1607(var0, var1, var2, var6);
+         var9 = var8 >> 6 & 3;
+         var10 = var8 & 31;
+         var11 = class174.method803(var6);
+         class87 var22 = class85.method356(var11);
+         if (var22.field725 != -1) {
+            class344 var24 = class128.field1075[var22.field725];
+            if (null != var24) {
+               var14 = (var22.field720 * 4 - var24.field2758) / 2;
+               var15 = (var22.field721 * 4 - var24.field2755) / 2;
+               var24.method1745(48 + var1 * 4 + var14, var15 + 48 + 4 * (104 - var2 - var22.field721));
+            }
+         } else if (var10 == 9) {
+            int var25 = 15658734;
+            boolean var26 = var6 != 0L && !class405.method1989(var6);
+            if (var26) {
+               var25 = 15597568;
+            }
+
+            int[] var27 = class211.field1833.field2205;
+            int var28 = var1 * 4 + 24624 + 2048 * (103 - var2);
+            if (var9 != 0 && var9 != 2) {
+               var27[var28] = var25;
+               var27[1 + var28 + 512] = var25;
+               var27[2 + var28 + 1024] = var25;
+               var27[var28 + 1536 + 3] = var25;
+            } else {
+               var27[var28 + 1536] = var25;
+               var27[1 + var28 + 1024] = var25;
+               var27[var28 + 512 + 2] = var25;
+               var27[var28 + 3] = var25;
+            }
+         }
+      }
+
+      var6 = class408.field3415.method1581(var0, var1, var2);
+      if (0L != var6) {
+         var8 = class174.method803(var6);
+         class87 var20 = class85.method356(var8);
+         if (-1 != var20.field725) {
+            class344 var21 = class128.field1075[var20.field725];
+            if (null != var21) {
+               var11 = (var20.field720 * 4 - var21.field2758) / 2;
+               int var23 = (var20.field721 * 4 - var21.field2755) / 2;
+               var21.method1745(var1 * 4 + 48 + var11, var23 + (104 - var2 - var20.field721) * 4 + 48);
+            }
+         }
+      }
+
    }
 }

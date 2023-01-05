@@ -1,21 +1,91 @@
-import java.util.Comparator;
+import java.awt.FontMetrics;
+import java.util.HashMap;
+import java.util.Map;
 
-final class class100 implements Comparator {
-   int method553(class87 var1, class87 var2) {
-      return var1.field970 < var2.field970 ? -1 : (var2.field970 == var1.field970 ? 0 : 1);
+public class class100 {
+   static int field794 = 0;
+   static FontMetrics field796;
+   static final class385 field795 = new class385(1024);
+   static final class477 field793 = new class477();
+   static final Map field792 = new HashMap();
+
+   public static void method398(class274 var0) {
+      class169.field1268 = var0;
    }
 
-   public int compare(Object var1, Object var2) {
-      return this.method553((class87)var1, (class87)var2);
-   }
+   static final void method397(class127 var0, int var1, int var2, int var3, int var4, int var5, int var6) {
+      boolean var8 = var1 >= 0 && var1 < 4 && var2 >= 0 && var2 < 104 && var3 >= 0 && var3 < 104;
+      int var9;
+      if (var8) {
+         class71.field644[var1][var2][var3] = 0;
 
-   public boolean equals(Object var1) {
-      return super.equals(var1);
-   }
+         while(true) {
+            var9 = client.field228 < 209 ? var0.method547() : var0.method549();
+            if (var9 == 0) {
+               if (var1 == 0) {
+                  int[] var16 = class71.field636[0][var2];
+                  int var13 = var4 + 932731;
+                  int var14 = var5 + 556238;
+                  int var15 = class2.method11(var13 + '넵', var14 + 91923, 4) - 128 + (class2.method11(var13 + 10294, var14 + '鎽', 2) - 128 >> 1) + (class2.method11(var13, var14, 1) - 128 >> 2);
+                  var15 = (int)((double)var15 * 0.3D) + 35;
+                  if (var15 < 10) {
+                     var15 = 10;
+                  } else if (var15 > 60) {
+                     var15 = 60;
+                  }
 
-   static final void method552(int var0, int var1) {
-      if (class25.method126(var0)) {
-         class133.method652(class71.field853[var0], var1);
+                  var16[var3] = -var15 * 8;
+               } else {
+                  class71.field636[var1][var2][var3] = class71.field636[var1 - 1][var2][var3] - 240;
+               }
+               break;
+            }
+
+            if (var9 == 1) {
+               int var10 = var0.method547();
+               if (var10 == 1) {
+                  var10 = 0;
+               }
+
+               if (var1 == 0) {
+                  class71.field636[0][var2][var3] = 8 * -var10;
+               } else {
+                  class71.field636[var1][var2][var3] = class71.field636[var1 - 1][var2][var3] - var10 * 8;
+               }
+               break;
+            }
+
+            if (var9 <= 49) {
+               class419.field3433[var1][var2][var3] = client.field228 < 209 ? (short)var0.method548() : (short)var0.method550();
+               class71.field643[var1][var2][var3] = (byte)((var9 - 2) / 4);
+               class471.field3958[var1][var2][var3] = (byte)(var9 - 2 + var6 & 3);
+            } else if (var9 <= 81) {
+               class71.field644[var1][var2][var3] = (byte)(var9 - 49);
+            } else {
+               class71.field638[var1][var2][var3] = (short)(var9 - 81);
+            }
+         }
+      } else {
+         while(true) {
+            var9 = client.field228 < 209 ? var0.method547() : var0.method549();
+            if (var9 == 0) {
+               break;
+            }
+
+            if (var9 == 1) {
+               var0.method547();
+               break;
+            }
+
+            if (var9 <= 49) {
+               if (client.field228 < 209) {
+                  var0.method548();
+               } else {
+                  var0.method550();
+               }
+            }
+         }
       }
+
    }
 }

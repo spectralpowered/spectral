@@ -1,27 +1,64 @@
-public class class156 implements class445 {
-   public static final class156 field1619 = new class156((byte)-1);
-   public static final class156 field1620 = new class156((byte)1);
-   public static final class156 field1621 = new class156((byte)0);
-   public static final class156 field1622 = new class156((byte)2);
-   public byte field1623;
+public final class class156 extends class139 {
+   static class141 field1200 = new class141();
+   class316 field1198;
+   class316 field1203;
+   class87 field1204;
+   int field1190;
+   int field1191;
+   int field1192;
+   int field1193;
+   int field1194;
+   int field1195;
+   int field1196;
+   int field1197;
+   int field1199;
+   int field1202;
+   int[] field1201;
 
-   class156(byte var1) {
-      this.field1623 = var1;
-   }
-
-   public int method2118() {
-      return this.field1623;
-   }
-
-   static final void method819() {
-      for(class474 var1 = (class474)client.field654.method1934(); var1 != null; var1 = (class474)client.field654.method1936()) {
-         if (var1.field3942 == -1) {
-            var1.field3932 = 0;
-            class265.method1264(var1);
-         } else {
-            var1.method567();
-         }
+   void method719() {
+      int var2 = this.field1197;
+      class87 var3 = this.field1204.method372();
+      if (null != var3) {
+         this.field1197 = var3.field752;
+         this.field1199 = var3.field734 * 128;
+         this.field1194 = var3.field750;
+         this.field1191 = var3.field751;
+         this.field1201 = var3.field713;
+      } else {
+         this.field1197 = -1;
+         this.field1199 = 0;
+         this.field1194 = 0;
+         this.field1191 = 0;
+         this.field1201 = null;
       }
 
+      if (var2 != this.field1197 && this.field1198 != null) {
+         class197.field1739.method1066(this.field1198);
+         this.field1198 = null;
+      }
+
+   }
+
+   public static boolean method720(char var0) {
+      if ((var0 < ' ' || var0 >= 127) && (var0 <= 127 || var0 >= 160) && (var0 <= 160 || var0 > 255)) {
+         if (var0 != 0) {
+            char[] var2 = class471.field3959;
+
+            for(int var3 = 0; var3 < var2.length; ++var3) {
+               char var4 = var2[var3];
+               if (var0 == var4) {
+                  return true;
+               }
+            }
+         }
+
+         return false;
+      } else {
+         return true;
+      }
+   }
+
+   public static final void method721(String var0, String var1, int var2, int var3, int var4, int var5) {
+      class323.method1653(var0, var1, var2, var3, var4, var5, -1, false);
    }
 }

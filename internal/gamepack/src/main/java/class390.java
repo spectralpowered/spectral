@@ -1,21 +1,25 @@
-import java.util.Comparator;
+import java.awt.Component;
+import java.awt.event.MouseWheelEvent;
+import java.awt.event.MouseWheelListener;
 
-public class class390 implements Comparator {
-   final boolean field3439;
+public final class class390 implements class217, MouseWheelListener {
+   int field3278 = 0;
 
-   public class390(boolean var1) {
-      this.field3439 = var1;
+   void method1913(Component var1) {
+      var1.addMouseWheelListener(this);
    }
 
-   int method1885(class209 var1, class209 var2) {
-      return this.field3439 ? var1.method1062(var2) : var2.method1062(var1);
+   void method1914(Component var1) {
+      var1.removeMouseWheelListener(this);
    }
 
-   public int compare(Object var1, Object var2) {
-      return this.method1885((class209)var1, (class209)var2);
+   public synchronized void mouseWheelMoved(MouseWheelEvent var1) {
+      this.field3278 += var1.getWheelRotation();
    }
 
-   public boolean equals(Object var1) {
-      return super.equals(var1);
+   public synchronized int method962() {
+      int var2 = this.field3278;
+      this.field3278 = 0;
+      return var2;
    }
 }

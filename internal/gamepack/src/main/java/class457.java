@@ -1,44 +1,94 @@
-import java.util.concurrent.ThreadFactory;
-import java.util.concurrent.atomic.AtomicInteger;
+public class class457 extends class195 {
+   public static class274 field3778;
+   public static class99 field3779 = new class99(64);
+   static final int[] field3783 = new int[32];
+   public int field3780;
+   public int field3781;
+   public int field3782;
 
-public class class457 implements ThreadFactory {
-   // $FF: synthetic field
-   final class18 this$0;
-   final ThreadGroup field3754;
-   final AtomicInteger field3753;
+   static {
+      int var0 = 2;
 
-   class457(class18 var1) {
-      this.this$0 = var1;
-      this.field3753 = new AtomicInteger(1);
-      SecurityManager var2 = System.getSecurityManager();
-      this.field3754 = null != var2 ? var2.getThreadGroup() : Thread.currentThread().getThreadGroup();
+      for(int var1 = 0; var1 < 32; ++var1) {
+         field3783[var1] = var0 - 1;
+         var0 += var0;
+      }
+
    }
 
-   public Thread newThread(Runnable var1) {
-      Thread var2 = new Thread(this.field3754, var1, this.this$0.field141 + "-rest-request-" + this.field3753.getAndIncrement(), 0L);
-      var2.setDaemon(true);
-      var2.setPriority(5);
-      return var2;
+   public void method2256(class127 var1) {
+      while(true) {
+         int var3 = var1.method547();
+         if (var3 == 0) {
+            return;
+         }
+
+         this.method2257(var1, var3);
+      }
    }
 
-   public static class121 method2164(int var0) {
-      class121[] var2 = class54.method317();
+   void method2257(class127 var1, int var2) {
+      if (var2 == 1) {
+         this.field3780 = var1.method549();
+         this.field3781 = var1.method547();
+         this.field3782 = var1.method547();
+      }
 
-      for(int var3 = 0; var3 < var2.length; ++var3) {
-         class121 var4 = var2[var3];
-         if (var4.field1443 == var0) {
-            return var4;
+   }
+
+   static class461 method2259(int var0) {
+      class461 var2 = (class461)class461.field3821.method394((long)var0);
+      if (null != var2) {
+         return var2;
+      } else {
+         byte[] var3 = class329.field2596.method1365(var0, 0);
+         if (null == var3) {
+            return null;
+         } else {
+            var2 = class9.method56(var3);
+            class461.field3821.method396(var2, (long)var0);
+            return var2;
          }
       }
-
-      return null;
    }
 
-   static void method2163(int var0, int var1) {
-      if (class111.field1385.method1325() != 0 && var0 != -1) {
-         class377.method1796(class269.field2702, var0, 0, class111.field1385.method1325(), false);
-         client.field681 = true;
+   public static String method2258(String var0) {
+      int var2 = var0.length();
+      char[] var3 = new char[var2];
+      byte var4 = 2;
+
+      for(int var5 = 0; var5 < var2; ++var5) {
+         char var6 = var0.charAt(var5);
+         if (var4 == 0) {
+            var6 = Character.toLowerCase(var6);
+         } else if (var4 == 2 || Character.isUpperCase(var6)) {
+            char var7;
+            if (var6 != 181 && var6 != 402) {
+               var7 = Character.toTitleCase(var6);
+            } else {
+               var7 = var6;
+            }
+
+            var6 = var7;
+         }
+
+         if (Character.isLetter(var6)) {
+            var4 = 0;
+         } else if (var6 != '.' && var6 != '?' && var6 != '!') {
+            if (Character.isSpaceChar(var6)) {
+               if (var4 != 2) {
+                  var4 = 1;
+               }
+            } else {
+               var4 = 1;
+            }
+         } else {
+            var4 = 2;
+         }
+
+         var3[var5] = var6;
       }
 
+      return new String(var3);
    }
 }

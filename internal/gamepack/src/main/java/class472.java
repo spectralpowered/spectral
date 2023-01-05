@@ -1,32 +1,209 @@
-public class class472 extends class108 {
-   static class31 field3918 = new class31(128);
-   static int field3922;
-   class376[] field3920;
-   int field3915;
-   int field3916;
-   int field3917;
-   int field3921;
-   int[] field3913;
-   int[] field3914;
-   String field3912;
-   String[] field3919;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 
-   class376[] method2286(int var1) {
-      return new class376[var1];
+public class class472 {
+   ExecutorService field3964 = Executors.newSingleThreadExecutor();
+   Future field3965;
+   final class127 field3966;
+   final class269 field3967;
+
+   public class472(class127 var1, class269 var2) {
+      this.field3966 = var1;
+      this.field3967 = var2;
+      this.method2334();
    }
 
-   static class154 method2288(int var0) {
-      return (class154)class58.field815.method1794((long)var0);
+   public boolean method2337() {
+      return this.field3965.isDone();
    }
 
-   static void method2287(int var0) {
-      class233 var2 = (class233)class233.field2522.method545((long)var0);
-      if (var2 != null) {
-         for(int var3 = 0; var3 < var2.field2520.length; ++var3) {
-            var2.field2520[var3] = -1;
-            var2.field2521[var3] = 0;
+   public void method2333() {
+      this.field3964.shutdown();
+      this.field3964 = null;
+   }
+
+   public class127 method2336() {
+      try {
+         return (class127)this.field3965.get();
+      } catch (Exception var3) {
+         return null;
+      }
+   }
+
+   void method2334() {
+      this.field3965 = this.field3964.submit(new class338(this, this.field3966, this.field3967));
+   }
+
+   static int method2335(int var0, class461 var1, boolean var2) {
+      class120 var4 = class67.method299(class386.field3248[--class161.field1227]);
+      if (var0 == 2600) {
+         class386.field3248[++class161.field1227 - 1] = var4.field920;
+         return 1;
+      } else if (var0 == 2601) {
+         class386.field3248[++class161.field1227 - 1] = var4.field914;
+         return 1;
+      } else if (var0 == 2602) {
+         class386.field3249[++class386.field3250 - 1] = var4.field954;
+         return 1;
+      } else if (var0 == 2603) {
+         class386.field3248[++class161.field1227 - 1] = var4.field915;
+         return 1;
+      } else if (var0 == 2604) {
+         class386.field3248[++class161.field1227 - 1] = var4.field916;
+         return 1;
+      } else if (var0 == 2605) {
+         class386.field3248[++class161.field1227 - 1] = var4.field882;
+         return 1;
+      } else if (var0 == 2606) {
+         class386.field3248[++class161.field1227 - 1] = var4.field960;
+         return 1;
+      } else if (var0 == 2607) {
+         class386.field3248[++class161.field1227 - 1] = var4.field946;
+         return 1;
+      } else if (var0 == 2608) {
+         class386.field3248[++class161.field1227 - 1] = var4.field947;
+         return 1;
+      } else if (var0 == 2609) {
+         class386.field3248[++class161.field1227 - 1] = var4.field1024;
+         return 1;
+      } else if (var0 == 2610) {
+         class386.field3248[++class161.field1227 - 1] = var4.field924;
+         return 1;
+      } else if (var0 == 2611) {
+         class386.field3248[++class161.field1227 - 1] = var4.field917;
+         return 1;
+      } else if (var0 == 2612) {
+         class386.field3248[++class161.field1227 - 1] = var4.field1035;
+         return 1;
+      } else if (var0 == 2613) {
+         class386.field3248[++class161.field1227 - 1] = var4.field939.method330();
+         return 1;
+      } else if (var0 == 2614) {
+         class386.field3248[++class161.field1227 - 1] = var4.field951 ? 1 : 0;
+         return 1;
+      } else {
+         class146 var5;
+         if (var0 == 2617) {
+            var5 = var4.method509();
+            class386.field3248[++class161.field1227 - 1] = null != var5 ? var5.field1160 : 0;
          }
 
+         if (var0 == 2618) {
+            var5 = var4.method509();
+            class386.field3248[++class161.field1227 - 1] = var5 != null ? var5.field1162 : 0;
+            return 1;
+         } else {
+            class262 var8;
+            if (var0 == 2619) {
+               var8 = var4.method485();
+               class386.field3249[++class386.field3250 - 1] = var8 != null ? var8.method1130().method1640() : "";
+               return 1;
+            } else if (var0 == 2620) {
+               var5 = var4.method509();
+               class386.field3248[++class161.field1227 - 1] = var5 != null ? var5.field1161 : 0;
+               return 1;
+            } else if (var0 == 2621) {
+               var8 = var4.method485();
+               class386.field3248[++class161.field1227 - 1] = var8 != null ? var8.method1165() : 0;
+               return 1;
+            } else if (var0 == 2622) {
+               var8 = var4.method485();
+               class386.field3248[++class161.field1227 - 1] = var8 != null ? var8.method1166() : 0;
+               return 1;
+            } else if (var0 == 2623) {
+               var8 = var4.method485();
+               class386.field3248[++class161.field1227 - 1] = var8 != null ? var8.method1191() : 0;
+               return 1;
+            } else if (var0 == 2624) {
+               var8 = var4.method485();
+               class386.field3248[++class161.field1227 - 1] = null != var8 && var8.method1177() ? 1 : 0;
+               return 1;
+            } else if (var0 != 2625) {
+               if (var0 == 2626) {
+                  var8 = var4.method485();
+                  class386.field3249[++class386.field3250 - 1] = null != var8 ? var8.method1159().method1041() : "";
+                  return 1;
+               } else if (var0 == 2627) {
+                  var8 = var4.method485();
+                  int var6 = null != var8 ? var8.method1146() : 0;
+                  int var7 = null != var8 ? var8.method1161() : 0;
+                  class386.field3248[++class161.field1227 - 1] = Math.min(var6, var7);
+                  class386.field3248[++class161.field1227 - 1] = Math.max(var6, var7);
+                  return 1;
+               } else if (var0 == 2628) {
+                  var8 = var4.method485();
+                  class386.field3248[++class161.field1227 - 1] = var8 != null ? var8.method1161() : 0;
+                  return 1;
+               } else if (var0 == 2629) {
+                  var8 = var4.method485();
+                  class386.field3248[++class161.field1227 - 1] = null != var8 ? var8.method1187() : 0;
+                  return 1;
+               } else if (var0 == 2630) {
+                  var8 = var4.method485();
+                  class386.field3248[++class161.field1227 - 1] = null != var8 ? var8.method1168() : 0;
+                  return 1;
+               } else if (var0 == 2631) {
+                  var8 = var4.method485();
+                  class386.field3248[++class161.field1227 - 1] = var8 != null ? var8.method1169() : 0;
+                  return 1;
+               } else if (var0 == 2632) {
+                  var8 = var4.method485();
+                  class386.field3248[++class161.field1227 - 1] = var8 != null ? var8.method1181() : 0;
+                  return 1;
+               } else {
+                  class109 var9;
+                  if (var0 == 2633) {
+                     var9 = var4.method498();
+                     class386.field3248[class161.field1227 - 1] = null != var9 ? var9.method427(class386.field3248[class161.field1227 - 1]) : 0;
+                     return 1;
+                  } else if (var0 == 2634) {
+                     var9 = var4.method498();
+                     class386.field3248[class161.field1227 - 1] = null != var9 ? var9.method429((char)class386.field3248[class161.field1227 - 1]) : 0;
+                     return 1;
+                  } else {
+                     return 2;
+                  }
+               }
+            } else {
+               var8 = var4.method485();
+               class386.field3248[++class161.field1227 - 1] = null != var8 && var8.method1116() ? 1 : 0;
+               return 1;
+            }
+         }
       }
+   }
+
+   static final void method2331(int var0) {
+      var0 = Math.min(Math.max(var0, 0), 127);
+      class50.field574.method2227(var0);
+   }
+
+   static final class415 method2332(int var0, int var1, int var2) {
+      class415 var4 = new class415();
+      var4.field3426 = var1;
+      var4.field3424 = var2;
+      client.field394.method788(var4, (long)var0);
+      class184.method835(var1);
+      class120 var5 = class67.method299(var0);
+      class184.method836(var5);
+      if (null != client.field399) {
+         class184.method836(client.field399);
+         client.field399 = null;
+      }
+
+      class378.method1862(class329.field2600[var0 >> 16], var5, false);
+      class148.method696(var1);
+      if (client.field393 != -1) {
+         class452.method2240(client.field393, 1);
+      }
+
+      return var4;
+   }
+
+   static final void method2338() {
+      class299 var1 = class480.method2370(class356.field3028, client.field279.field4042);
+      var1.field2403.method544(0);
+      client.field279.method2389(var1);
    }
 }

@@ -1,29 +1,68 @@
-public class class3 extends class172 {
-   long field14 = System.nanoTime();
+import java.util.concurrent.Future;
 
-   public void method910() {
-      this.field14 = System.nanoTime();
+public class class3 {
+   static class92 field21;
+   static short[] field22;
+   String field23;
+   Future field24;
+
+   class3(Future var1) {
+      this.field24 = var1;
    }
 
-   public int method911(int var1, int var2) {
-      long var4 = 1000000L * (long)var2;
-      long var6 = this.field14 - System.nanoTime();
-      if (var6 < var4) {
-         var6 = var4;
+   class3(String var1) {
+      this.method14(var1);
+   }
+
+   void method14(String var1) {
+      if (null == var1) {
+         var1 = "";
       }
 
-      class324.method1571(var6 / 1000000L);
-      long var8 = System.nanoTime();
-
-      int var10;
-      for(var10 = 0; var10 < 10 && (var10 < 1 || this.field14 < var8); this.field14 += (long)var1 * 1000000L) {
-         ++var10;
+      this.field23 = var1;
+      if (null != this.field24) {
+         this.field24.cancel(true);
+         this.field24 = null;
       }
 
-      if (this.field14 < var8) {
-         this.field14 = var8;
-      }
+   }
 
-      return var10;
+   public final String method15() {
+      return this.field23;
+   }
+
+   public boolean method17() {
+      return null != this.field23 || this.field24 == null;
+   }
+
+   public final boolean method16() {
+      return this.method17() ? true : this.field24.isDone();
+   }
+
+   public final class32 method18() {
+      if (this.method17()) {
+         return new class32(this.field23);
+      } else if (!this.method16()) {
+         return null;
+      } else {
+         try {
+            return (class32)this.field24.get();
+         } catch (Exception var4) {
+            String var3 = "Error retrieving REST request reply";
+            System.err.println(var3 + "\r\n" + var4);
+            this.method14(var3);
+            return new class32(var3);
+         }
+      }
+   }
+
+   static final void method19(class6 var0, int var1) {
+      int var3 = var0.field1070;
+      class268.field2223 = 0;
+      class9.method57(var0);
+      class102.method409(var0);
+      if (var0.field1070 - var3 != var1) {
+         throw new RuntimeException(var0.field1070 - var3 + " " + var1);
+      }
    }
 }

@@ -1,108 +1,89 @@
-public class class72 extends class189 {
-   static class161 field856;
-   byte field855;
-   int field854;
-   // $FF: synthetic field
-   final class105 this$0;
+public class class72 {
+   static class344 field651;
+   static int field652;
 
-   class72(class105 var1) {
-      this.this$0 = var1;
-      this.field854 = -1;
-   }
-
-   void method979(class134 var1) {
-      this.field854 = var1.method671();
-      this.field855 = var1.method670();
-   }
-
-   void method980(class27 var1) {
-      var1.method136(this.field854, this.field855);
-   }
-
-   public static void method401(class164 var0) {
-      class218.field2419 = var0;
-   }
-
-   static int method403(int var0, int var1, int var2) {
-      return var0 << 28 | var1 << 14 | var2;
-   }
-
-   static final boolean method398(int var0, int var1, int var2, int var3, int var4, int var5, int var6) {
-      int var8 = class245.field2607 + var6;
-      if (var8 < var0 && var8 < var1 && var8 < var2) {
-         return false;
+   public static byte method315(char var0) {
+      byte var2;
+      if ((var0 <= 0 || var0 >= 128) && (var0 < 160 || var0 > 255)) {
+         if (var0 == 8364) {
+            var2 = -128;
+         } else if (var0 == 8218) {
+            var2 = -126;
+         } else if (var0 == 402) {
+            var2 = -125;
+         } else if (var0 == 8222) {
+            var2 = -124;
+         } else if (var0 == 8230) {
+            var2 = -123;
+         } else if (var0 == 8224) {
+            var2 = -122;
+         } else if (var0 == 8225) {
+            var2 = -121;
+         } else if (var0 == 710) {
+            var2 = -120;
+         } else if (var0 == 8240) {
+            var2 = -119;
+         } else if (var0 == 352) {
+            var2 = -118;
+         } else if (var0 == 8249) {
+            var2 = -117;
+         } else if (var0 == 338) {
+            var2 = -116;
+         } else if (var0 == 381) {
+            var2 = -114;
+         } else if (var0 == 8216) {
+            var2 = -111;
+         } else if (var0 == 8217) {
+            var2 = -110;
+         } else if (var0 == 8220) {
+            var2 = -109;
+         } else if (var0 == 8221) {
+            var2 = -108;
+         } else if (var0 == 8226) {
+            var2 = -107;
+         } else if (var0 == 8211) {
+            var2 = -106;
+         } else if (var0 == 8212) {
+            var2 = -105;
+         } else if (var0 == 732) {
+            var2 = -104;
+         } else if (var0 == 8482) {
+            var2 = -103;
+         } else if (var0 == 353) {
+            var2 = -102;
+         } else if (var0 == 8250) {
+            var2 = -101;
+         } else if (var0 == 339) {
+            var2 = -100;
+         } else if (var0 == 382) {
+            var2 = -98;
+         } else if (var0 == 376) {
+            var2 = -97;
+         } else {
+            var2 = 63;
+         }
       } else {
-         var8 = class245.field2607 - var6;
-         if (var8 > var0 && var8 > var1 && var8 > var2) {
-            return false;
-         } else {
-            var8 = var6 + class245.field2600;
-            if (var8 < var3 && var8 < var4 && var8 < var5) {
-               return false;
-            } else {
-               var8 = class245.field2600 - var6;
-               return var8 <= var3 || var8 <= var4 || var8 <= var5;
-            }
-         }
+         var2 = (byte)var0;
       }
+
+      return var2;
    }
 
-   static int method404(int var0) {
-      return class377.field3310[var0];
-   }
-
-   static void method402(int var0) {
-      if (var0 != client.field433) {
-         if (30 == client.field433) {
-            client.field489.method1942();
-         }
-
-         if (0 == client.field433) {
-            class140.field1508.method759();
-         }
-
-         if (var0 == 20 || var0 == 40 || var0 == 45 || var0 == 50) {
-            class384.method1822(0);
-            client.field565 = 0;
-            client.field458 = 0;
-            client.field429.method1205(var0);
-            if (var0 != 20) {
-               class240.method1215(false);
-            }
-         }
-
-         if (var0 != 20 && var0 != 40 && class18.field139 != null) {
-            class18.field139.method2054();
-            class18.field139 = null;
-         }
-
-         if (25 == client.field433) {
-            client.field575 = 0;
-            client.field518 = 0;
-            client.field672 = 1;
-            client.field703 = 0;
-            client.field491 = 1;
-         }
-
-         if (var0 != 5 && var0 != 10) {
-            if (var0 == 20) {
-               int var4 = 11 == client.field433 ? 4 : 0;
-               class254.method1237(class278.field2760, class280.field2767, false, var4);
-            } else if (var0 == 11) {
-               class254.method1237(class278.field2760, class280.field2767, false, 4);
-            } else if (var0 == 50) {
-               class20.method113("", "Updating date of birth...", "");
-               class254.method1237(class278.field2760, class280.field2767, false, 7);
-            } else {
-               class39.method215();
-            }
+   static final void method314(int var0) {
+      var0 = Math.min(Math.max(var0, 0), 255);
+      if (var0 != class50.field574.method2210()) {
+         if (class50.field574.method2210() == 0 && client.field476 != -1) {
+            class74.method323(class317.field2494, client.field476, 0, var0, false);
+            client.field477 = false;
+         } else if (var0 == 0) {
+            class403.method1988();
+            client.field477 = false;
          } else {
-            boolean var2 = class111.field1385.method1324() >= client.field428;
-            int var3 = var2 ? 0 : 12;
-            class254.method1237(class278.field2760, class280.field2767, true, var3);
+            class128.method610(var0);
          }
 
-         client.field433 = var0;
+         class50.field574.method2204(var0);
       }
+
    }
 }

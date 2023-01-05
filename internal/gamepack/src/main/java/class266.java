@@ -1,592 +1,1593 @@
-public final class class266 {
-   static class229 field2689 = new class229();
+public final class class266 extends class162 {
+   int field2202;
+   public int field2199;
+   public int field2200;
+   public int field2201;
+   public int field2203;
+   public int field2204;
+   public int[] field2205;
 
-   public static int method1265(byte[] var0, int var1, byte[] var2, int var3, int var4) {
-      class229 var5 = field2689;
-      synchronized(field2689) {
-         field2689.field2476 = var2;
-         field2689.field2470 = var4;
-         field2689.field2472 = var0;
-         field2689.field2473 = 0;
-         field2689.field2474 = var1;
-         field2689.field2479 = 0;
-         field2689.field2494 = 0;
-         field2689.field2471 = 0;
-         field2689.field2478 = 0;
-         method1266(field2689);
-         var1 -= field2689.field2474;
-         field2689.field2476 = null;
-         field2689.field2472 = null;
-         return var1;
+   class266() {
+   }
+
+   public class266(int var1, int var2) {
+      this(new int[var1 * var2], var1, var2);
+   }
+
+   public class266(int[] var1, int var2, int var3) {
+      this.field2205 = var1;
+      this.field2200 = this.field2203 = var2;
+      this.field2199 = this.field2204 = var3;
+      this.field2202 = 0;
+      this.field2201 = 0;
+   }
+
+   public class266 method1222() {
+      class266 var1 = new class266(this.field2200, this.field2199);
+      var1.field2203 = this.field2203;
+      var1.field2204 = this.field2204;
+      var1.field2201 = this.field2203 - this.field2200 - this.field2201;
+      var1.field2202 = this.field2202;
+
+      for(int var2 = 0; var2 < this.field2199; ++var2) {
+         for(int var3 = 0; var3 < this.field2200; ++var3) {
+            var1.field2205[var2 * this.field2200 + var3] = this.field2205[var2 * this.field2200 + this.field2200 - 1 - var3];
+         }
+      }
+
+      return var1;
+   }
+
+   public class266 method1223() {
+      class266 var1 = new class266(this.field2200, this.field2199);
+      var1.field2203 = this.field2203;
+      var1.field2204 = this.field2204;
+      var1.field2201 = this.field2201;
+      var1.field2202 = this.field2202;
+      int var2 = this.field2205.length;
+
+      for(int var3 = 0; var3 < var2; ++var3) {
+         var1.field2205[var3] = this.field2205[var3];
+      }
+
+      return var1;
+   }
+
+   public class266 method1254() {
+      class266 var1 = new class266(this.field2203, this.field2204);
+
+      for(int var2 = 0; var2 < this.field2199; ++var2) {
+         for(int var3 = 0; var3 < this.field2200; ++var3) {
+            var1.field2205[(var2 + this.field2202) * this.field2203 + var3 + this.field2201] = this.field2205[var2 * this.field2200 + var3];
+         }
+      }
+
+      return var1;
+   }
+
+   public void method1233() {
+      method748(this.field2205, this.field2200, this.field2199);
+   }
+
+   public void method1225() {
+      if (this.field2200 != this.field2203 || this.field2199 != this.field2204) {
+         int[] var1 = new int[this.field2203 * this.field2204];
+
+         for(int var2 = 0; var2 < this.field2199; ++var2) {
+            for(int var3 = 0; var3 < this.field2200; ++var3) {
+               var1[(var2 + this.field2202) * this.field2203 + var3 + this.field2201] = this.field2205[var2 * this.field2200 + var3];
+            }
+         }
+
+         this.field2205 = var1;
+         this.field2200 = this.field2203;
+         this.field2199 = this.field2204;
+         this.field2201 = 0;
+         this.field2202 = 0;
       }
    }
 
-   static void method1267(class229 var0) {
-      byte var2 = var0.field2484;
-      int var3 = var0.field2477;
-      int var4 = var0.field2485;
-      int var5 = var0.field2483;
-      int[] var6 = class229.field2487;
-      int var7 = var0.field2482;
-      byte[] var8 = var0.field2472;
-      int var9 = var0.field2473;
-      int var10 = var0.field2474;
-      int var12 = var0.field2501 + 1;
+   public void method1226(int var1) {
+      if (this.field2200 != this.field2203 || this.field2199 != this.field2204) {
+         int var2 = var1;
+         if (var1 > this.field2201) {
+            var2 = this.field2201;
+         }
 
-      label61:
-      while(true) {
-         if (var3 > 0) {
-            while(true) {
-               if (var10 == 0) {
-                  break label61;
-               }
+         int var3 = var1;
+         if (var1 + this.field2201 + this.field2200 > this.field2203) {
+            var3 = this.field2203 - this.field2201 - this.field2200;
+         }
 
-               if (var3 == 1) {
-                  if (var10 == 0) {
-                     var3 = 1;
-                     break label61;
-                  }
+         int var4 = var1;
+         if (var1 > this.field2202) {
+            var4 = this.field2202;
+         }
 
-                  var8[var9] = var2;
-                  ++var9;
-                  --var10;
-                  break;
-               }
+         int var5 = var1;
+         if (var1 + this.field2202 + this.field2199 > this.field2204) {
+            var5 = this.field2204 - this.field2202 - this.field2199;
+         }
 
-               var8[var9] = var2;
-               --var3;
-               ++var9;
-               --var10;
+         int var6 = this.field2200 + var2 + var3;
+         int var7 = this.field2199 + var4 + var5;
+         int[] var8 = new int[var6 * var7];
+
+         for(int var9 = 0; var9 < this.field2199; ++var9) {
+            for(int var10 = 0; var10 < this.field2200; ++var10) {
+               var8[(var9 + var4) * var6 + var10 + var2] = this.field2205[var9 * this.field2200 + var10];
             }
          }
 
-         while(var4 != var12) {
-            var2 = (byte)var5;
-            var7 = var6[var7];
-            byte var1 = (byte)var7;
-            var7 >>= 8;
-            ++var4;
-            if (var1 != var5) {
-               var5 = var1;
-               if (var10 == 0) {
-                  var3 = 1;
-                  break label61;
-               }
+         this.field2205 = var8;
+         this.field2200 = var6;
+         this.field2199 = var7;
+         this.field2201 -= var2;
+         this.field2202 -= var4;
+      }
+   }
 
-               var8[var9] = var2;
-               ++var9;
-               --var10;
-            } else {
-               if (var4 != var12) {
-                  var3 = 2;
-                  var7 = var6[var7];
-                  var1 = (byte)var7;
-                  var7 >>= 8;
-                  ++var4;
-                  if (var4 != var12) {
-                     if (var1 != var5) {
-                        var5 = var1;
-                     } else {
-                        var3 = 3;
-                        var7 = var6[var7];
-                        var1 = (byte)var7;
-                        var7 >>= 8;
-                        ++var4;
-                        if (var4 != var12) {
-                           if (var1 != var5) {
-                              var5 = var1;
-                           } else {
-                              var7 = var6[var7];
-                              var1 = (byte)var7;
-                              var7 >>= 8;
-                              ++var4;
-                              var3 = (var1 & 255) + 4;
-                              var7 = var6[var7];
-                              var5 = (byte)var7;
-                              var7 >>= 8;
-                              ++var4;
-                           }
-                        }
-                     }
-                  }
-                  continue label61;
-               }
+   public void method1227() {
+      int[] var1 = new int[this.field2200 * this.field2199];
+      int var2 = 0;
 
-               if (var10 == 0) {
-                  var3 = 1;
-                  break label61;
-               }
-
-               var8[var9] = var2;
-               ++var9;
-               --var10;
-            }
+      for(int var3 = 0; var3 < this.field2199; ++var3) {
+         for(int var4 = this.field2200 - 1; var4 >= 0; --var4) {
+            var1[var2++] = this.field2205[var4 + var3 * this.field2200];
          }
-
-         var3 = 0;
-         break;
       }
 
-      int var13 = var0.field2478;
-      var0.field2478 += var10 - var10;
-      if (var0.field2478 < var13) {
+      this.field2205 = var1;
+      this.field2201 = this.field2203 - this.field2200 - this.field2201;
+   }
+
+   public void method1251() {
+      int[] var1 = new int[this.field2200 * this.field2199];
+      int var2 = 0;
+
+      for(int var3 = this.field2199 - 1; var3 >= 0; --var3) {
+         for(int var4 = 0; var4 < this.field2200; ++var4) {
+            var1[var2++] = this.field2205[var4 + var3 * this.field2200];
+         }
+      }
+
+      this.field2205 = var1;
+      this.field2202 = this.field2204 - this.field2199 - this.field2202;
+   }
+
+   public void method1228(int var1) {
+      int[] var2 = new int[this.field2200 * this.field2199];
+      int var3 = 0;
+
+      for(int var4 = 0; var4 < this.field2199; ++var4) {
+         for(int var5 = 0; var5 < this.field2200; ++var5) {
+            int var6 = this.field2205[var3];
+            if (var6 == 0) {
+               if (var5 > 0 && this.field2205[var3 - 1] != 0) {
+                  var6 = var1;
+               } else if (var4 > 0 && this.field2205[var3 - this.field2200] != 0) {
+                  var6 = var1;
+               } else if (var5 < this.field2200 - 1 && this.field2205[var3 + 1] != 0) {
+                  var6 = var1;
+               } else if (var4 < this.field2199 - 1 && this.field2205[var3 + this.field2200] != 0) {
+                  var6 = var1;
+               }
+            }
+
+            var2[var3++] = var6;
+         }
+      }
+
+      this.field2205 = var2;
+   }
+
+   public void method1253(int var1) {
+      for(int var2 = this.field2199 - 1; var2 > 0; --var2) {
+         int var3 = var2 * this.field2200;
+
+         for(int var4 = this.field2200 - 1; var4 > 0; --var4) {
+            if (this.field2205[var4 + var3] == 0 && this.field2205[var4 + var3 - 1 - this.field2200] != 0) {
+               this.field2205[var4 + var3] = var1;
+            }
+         }
+      }
+
+   }
+
+   public void method1229(int var1, int var2) {
+      var1 += this.field2201;
+      var2 += this.field2202;
+      int var3 = var1 + var2 * class162.field1232;
+      int var4 = 0;
+      int var5 = this.field2199;
+      int var6 = this.field2200;
+      int var7 = class162.field1232 - var6;
+      int var8 = 0;
+      int var9;
+      if (var2 < class162.field1234) {
+         var9 = class162.field1234 - var2;
+         var5 -= var9;
+         var2 = class162.field1234;
+         var4 += var9 * var6;
+         var3 += var9 * class162.field1232;
+      }
+
+      if (var2 + var5 > class162.field1235) {
+         var5 -= var2 + var5 - class162.field1235;
+      }
+
+      if (var1 < class162.field1236) {
+         var9 = class162.field1236 - var1;
+         var6 -= var9;
+         var1 = class162.field1236;
+         var4 += var9;
+         var3 += var9;
+         var8 += var9;
+         var7 += var9;
+      }
+
+      if (var1 + var6 > class162.field1237) {
+         var9 = var1 + var6 - class162.field1237;
+         var6 -= var9;
+         var8 += var9;
+         var7 += var9;
+      }
+
+      if (var6 > 0 && var5 > 0) {
+         method1252(class162.field1233, this.field2205, var4, var3, var6, var5, var7, var8);
+      }
+   }
+
+   public void method1240(int var1, int var2) {
+      var1 += this.field2201;
+      var2 += this.field2202;
+      int var3 = var1 + var2 * class162.field1232;
+      int var4 = 0;
+      int var5 = this.field2199;
+      int var6 = this.field2200;
+      int var7 = class162.field1232 - var6;
+      int var8 = 0;
+      int var9;
+      if (var2 < class162.field1234) {
+         var9 = class162.field1234 - var2;
+         var5 -= var9;
+         var2 = class162.field1234;
+         var4 += var9 * var6;
+         var3 += var9 * class162.field1232;
+      }
+
+      if (var2 + var5 > class162.field1235) {
+         var5 -= var2 + var5 - class162.field1235;
+      }
+
+      if (var1 < class162.field1236) {
+         var9 = class162.field1236 - var1;
+         var6 -= var9;
+         var1 = class162.field1236;
+         var4 += var9;
+         var3 += var9;
+         var8 += var9;
+         var7 += var9;
+      }
+
+      if (var1 + var6 > class162.field1237) {
+         var9 = var1 + var6 - class162.field1237;
+         var6 -= var9;
+         var8 += var9;
+         var7 += var9;
+      }
+
+      if (var6 > 0 && var5 > 0) {
+         method1249(class162.field1233, this.field2205, 0, var4, var3, var6, var5, var7, var8);
+      }
+   }
+
+   public void method1231(int var1, int var2, int var3, int var4) {
+      if (var3 > 0 && var4 > 0) {
+         int var5 = this.field2200;
+         int var6 = this.field2199;
+         int var7 = 0;
+         int var8 = 0;
+         int var9 = this.field2203;
+         int var10 = this.field2204;
+         int var11 = (var9 << 16) / var3;
+         int var12 = (var10 << 16) / var4;
+         int var13;
+         if (this.field2201 > 0) {
+            var13 = ((this.field2201 << 16) + var11 - 1) / var11;
+            var1 += var13;
+            var7 += var13 * var11 - (this.field2201 << 16);
+         }
+
+         if (this.field2202 > 0) {
+            var13 = ((this.field2202 << 16) + var12 - 1) / var12;
+            var2 += var13;
+            var8 += var13 * var12 - (this.field2202 << 16);
+         }
+
+         if (var5 < var9) {
+            var3 = ((var5 << 16) - var7 + var11 - 1) / var11;
+         }
+
+         if (var6 < var10) {
+            var4 = ((var6 << 16) - var8 + var12 - 1) / var12;
+         }
+
+         var13 = var1 + var2 * class162.field1232;
+         int var14 = class162.field1232 - var3;
+         if (var2 + var4 > class162.field1235) {
+            var4 -= var2 + var4 - class162.field1235;
+         }
+
+         int var15;
+         if (var2 < class162.field1234) {
+            var15 = class162.field1234 - var2;
+            var4 -= var15;
+            var13 += var15 * class162.field1232;
+            var8 += var12 * var15;
+         }
+
+         if (var1 + var3 > class162.field1237) {
+            var15 = var1 + var3 - class162.field1237;
+            var3 -= var15;
+            var14 += var15;
+         }
+
+         if (var1 < class162.field1236) {
+            var15 = class162.field1236 - var1;
+            var3 -= var15;
+            var13 += var15;
+            var7 += var11 * var15;
+            var14 += var15;
+         }
+
+         method1224(class162.field1233, this.field2205, 0, var7, var8, var13, var14, var3, var4, var11, var12, var5);
+      }
+   }
+
+   public void method1221(int var1, int var2, int var3, int var4) {
+      if (var3 == 256) {
+         this.method1240(var1, var2);
+      } else {
+         var1 += this.field2201;
+         var2 += this.field2202;
+         int var5 = var1 + var2 * class162.field1232;
+         int var6 = 0;
+         int var7 = this.field2199;
+         int var8 = this.field2200;
+         int var9 = class162.field1232 - var8;
+         int var10 = 0;
+         int var11;
+         if (var2 < class162.field1234) {
+            var11 = class162.field1234 - var2;
+            var7 -= var11;
+            var2 = class162.field1234;
+            var6 += var11 * var8;
+            var5 += var11 * class162.field1232;
+         }
+
+         if (var2 + var7 > class162.field1235) {
+            var7 -= var2 + var7 - class162.field1235;
+         }
+
+         if (var1 < class162.field1236) {
+            var11 = class162.field1236 - var1;
+            var8 -= var11;
+            var1 = class162.field1236;
+            var6 += var11;
+            var5 += var11;
+            var10 += var11;
+            var9 += var11;
+         }
+
+         if (var1 + var8 > class162.field1237) {
+            var11 = var1 + var8 - class162.field1237;
+            var8 -= var11;
+            var10 += var11;
+            var9 += var11;
+         }
+
+         if (var8 > 0 && var7 > 0) {
+            method1247(class162.field1233, this.field2205, 0, var6, var5, var8, var7, var9, var10, var3, var4);
+         }
+      }
+   }
+
+   public void method1245(int var1, int var2, int var3) {
+      var1 += this.field2201;
+      var2 += this.field2202;
+      int var4 = var1 + var2 * class162.field1232;
+      int var5 = 0;
+      int var6 = this.field2199;
+      int var7 = this.field2200;
+      int var8 = class162.field1232 - var7;
+      int var9 = 0;
+      int var10;
+      if (var2 < class162.field1234) {
+         var10 = class162.field1234 - var2;
+         var6 -= var10;
+         var2 = class162.field1234;
+         var5 += var10 * var7;
+         var4 += var10 * class162.field1232;
+      }
+
+      if (var2 + var6 > class162.field1235) {
+         var6 -= var2 + var6 - class162.field1235;
+      }
+
+      if (var1 < class162.field1236) {
+         var10 = class162.field1236 - var1;
+         var7 -= var10;
+         var1 = class162.field1236;
+         var5 += var10;
+         var4 += var10;
+         var9 += var10;
+         var8 += var10;
+      }
+
+      if (var1 + var7 > class162.field1237) {
+         var10 = var1 + var7 - class162.field1237;
+         var7 -= var10;
+         var9 += var10;
+         var8 += var10;
+      }
+
+      if (var7 > 0 && var6 > 0) {
+         method1234(class162.field1233, this.field2205, 0, var5, var4, var7, var6, var8, var9, var3);
+      }
+   }
+
+   public void method1244(int var1, int var2, int var3, int var4, int var5) {
+      if (var3 > 0 && var4 > 0) {
+         int var6 = this.field2200;
+         int var7 = this.field2199;
+         int var8 = 0;
+         int var9 = 0;
+         int var10 = this.field2203;
+         int var11 = this.field2204;
+         int var12 = (var10 << 16) / var3;
+         int var13 = (var11 << 16) / var4;
+         int var14;
+         if (this.field2201 > 0) {
+            var14 = ((this.field2201 << 16) + var12 - 1) / var12;
+            var1 += var14;
+            var8 += var14 * var12 - (this.field2201 << 16);
+         }
+
+         if (this.field2202 > 0) {
+            var14 = ((this.field2202 << 16) + var13 - 1) / var13;
+            var2 += var14;
+            var9 += var14 * var13 - (this.field2202 << 16);
+         }
+
+         if (var6 < var10) {
+            var3 = ((var6 << 16) - var8 + var12 - 1) / var12;
+         }
+
+         if (var7 < var11) {
+            var4 = ((var7 << 16) - var9 + var13 - 1) / var13;
+         }
+
+         var14 = var1 + var2 * class162.field1232;
+         int var15 = class162.field1232 - var3;
+         if (var2 + var4 > class162.field1235) {
+            var4 -= var2 + var4 - class162.field1235;
+         }
+
+         int var16;
+         if (var2 < class162.field1234) {
+            var16 = class162.field1234 - var2;
+            var4 -= var16;
+            var14 += var16 * class162.field1232;
+            var9 += var13 * var16;
+         }
+
+         if (var1 + var3 > class162.field1237) {
+            var16 = var1 + var3 - class162.field1237;
+            var3 -= var16;
+            var15 += var16;
+         }
+
+         if (var1 < class162.field1236) {
+            var16 = class162.field1236 - var1;
+            var3 -= var16;
+            var14 += var16;
+            var8 += var12 * var16;
+            var15 += var16;
+         }
+
+         method1232(class162.field1233, this.field2205, 0, var8, var9, var14, var15, var3, var4, var12, var13, var6, var5);
+      }
+   }
+
+   public void method1235(int var1, int var2, int var3) {
+      var1 += this.field2201;
+      var2 += this.field2202;
+      int var4 = var1 + var2 * class162.field1232;
+      int var5 = 0;
+      int var6 = this.field2199;
+      int var7 = this.field2200;
+      int var8 = class162.field1232 - var7;
+      int var9 = 0;
+      int var10;
+      if (var2 < class162.field1234) {
+         var10 = class162.field1234 - var2;
+         var6 -= var10;
+         var2 = class162.field1234;
+         var5 += var10 * var7;
+         var4 += var10 * class162.field1232;
+      }
+
+      if (var2 + var6 > class162.field1235) {
+         var6 -= var2 + var6 - class162.field1235;
+      }
+
+      if (var1 < class162.field1236) {
+         var10 = class162.field1236 - var1;
+         var7 -= var10;
+         var1 = class162.field1236;
+         var5 += var10;
+         var4 += var10;
+         var9 += var10;
+         var8 += var10;
+      }
+
+      if (var1 + var7 > class162.field1237) {
+         var10 = var1 + var7 - class162.field1237;
+         var7 -= var10;
+         var9 += var10;
+         var8 += var10;
+      }
+
+      if (var7 > 0 && var6 > 0) {
+         if (var3 == 256) {
+            method1250(0, 0, 0, class162.field1233, this.field2205, var5, 0, var4, 0, var7, var6, var8, var9);
+         } else {
+            method1230(0, 0, 0, class162.field1233, this.field2205, var5, 0, var4, 0, var7, var6, var8, var9, var3);
+         }
+
+      }
+   }
+
+   public void method1237(int var1, int var2, int var3, int var4, int var5) {
+      if (var3 > 0 && var4 > 0) {
+         int var6 = this.field2200;
+         int var7 = this.field2199;
+         int var8 = 0;
+         int var9 = 0;
+         int var10 = this.field2203;
+         int var11 = this.field2204;
+         int var12 = (var10 << 16) / var3;
+         int var13 = (var11 << 16) / var4;
+         int var14;
+         if (this.field2201 > 0) {
+            var14 = ((this.field2201 << 16) + var12 - 1) / var12;
+            var1 += var14;
+            var8 += var14 * var12 - (this.field2201 << 16);
+         }
+
+         if (this.field2202 > 0) {
+            var14 = ((this.field2202 << 16) + var13 - 1) / var13;
+            var2 += var14;
+            var9 += var14 * var13 - (this.field2202 << 16);
+         }
+
+         if (var6 < var10) {
+            var3 = ((var6 << 16) - var8 + var12 - 1) / var12;
+         }
+
+         if (var7 < var11) {
+            var4 = ((var7 << 16) - var9 + var13 - 1) / var13;
+         }
+
+         var14 = var1 + var2 * class162.field1232;
+         int var15 = class162.field1232 - var3;
+         if (var2 + var4 > class162.field1235) {
+            var4 -= var2 + var4 - class162.field1235;
+         }
+
+         int var16;
+         if (var2 < class162.field1234) {
+            var16 = class162.field1234 - var2;
+            var4 -= var16;
+            var14 += var16 * class162.field1232;
+            var9 += var13 * var16;
+         }
+
+         if (var1 + var3 > class162.field1237) {
+            var16 = var1 + var3 - class162.field1237;
+            var3 -= var16;
+            var15 += var16;
+         }
+
+         if (var1 < class162.field1236) {
+            var16 = class162.field1236 - var1;
+            var3 -= var16;
+            var14 += var16;
+            var8 += var12 * var16;
+            var15 += var16;
+         }
+
+         if (var5 == 256) {
+            method1248(0, 0, 0, var8, this.field2205, class162.field1233, 0, 0, -var4, var9, var14, var15, var3, var12, var13, var6);
+         } else {
+            method1238(0, 0, 0, var8, this.field2205, class162.field1233, 0, 0, -var4, var9, var14, var15, var3, var12, var13, var6, var5);
+         }
+
+      }
+   }
+
+   public void method1239(int var1, int var2, int var3, int var4, int var5, int var6, int[] var7, int[] var8) {
+      int var9 = var2 < 0 ? -var2 : 0;
+      int var10 = var2 + this.field2199 <= var6 ? this.field2199 : var6 - var2;
+      int var11 = var1 < 0 ? -var1 : 0;
+      int var10000;
+      if (var1 + this.field2200 <= var5) {
+         var10000 = this.field2200;
+      } else {
+         var10000 = var5 - var1;
+      }
+
+      int var13 = var3 + var1 + var11 + (var4 + var2 + var9) * class162.field1232;
+      int var14 = var2 + var9;
+
+      for(int var15 = var9; var15 < var10; ++var15) {
+         int var16 = var7[var14];
+         int var17 = var8[var14++];
+         int var18 = var13;
+         int var19;
+         if (var1 < var16) {
+            var19 = var16 - var1;
+            var18 = var13 + (var19 - var11);
+         } else {
+            var19 = var11;
+         }
+
+         int var12;
+         if (var1 + this.field2200 <= var16 + var17) {
+            var12 = this.field2200;
+         } else {
+            var12 = var16 + var17 - var1;
+         }
+
+         for(int var20 = var19; var20 < var12; ++var20) {
+            int var21 = this.field2205[var20 + var15 * this.field2200];
+            if (var21 != 0) {
+               class162.field1233[var18++] = var21;
+            } else {
+               ++var18;
+            }
+         }
+
+         var13 += class162.field1232;
+      }
+
+   }
+
+   public void method1236(int var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8, int[] var9, int[] var10) {
+      try {
+         int var11 = -var3 / 2;
+         int var12 = -var4 / 2;
+         int var13 = (int)(Math.sin((double)var7 / 326.11D) * 65536.0D);
+         int var14 = (int)(Math.cos((double)var7 / 326.11D) * 65536.0D);
+         var13 = var13 * var8 >> 8;
+         var14 = var14 * var8 >> 8;
+         int var15 = (var5 << 16) + var12 * var13 + var11 * var14;
+         int var16 = (var6 << 16) + (var12 * var14 - var11 * var13);
+         int var17 = var1 + var2 * class162.field1232;
+
+         for(var2 = 0; var2 < var4; ++var2) {
+            int var18 = var9[var2];
+            int var19 = var17 + var18;
+            int var20 = var15 + var14 * var18;
+            int var21 = var16 - var13 * var18;
+
+            for(var1 = -var10[var2]; var1 < 0; ++var1) {
+               class162.field1233[var19++] = this.field2205[(var20 >> 16) + (var21 >> 16) * this.field2200];
+               var20 += var14;
+               var21 -= var13;
+            }
+
+            var15 += var13;
+            var16 += var14;
+            var17 += class162.field1232;
+         }
+      } catch (Exception var22) {
          ;
       }
 
-      var0.field2484 = var2;
-      var0.field2477 = var3;
-      var0.field2485 = var4;
-      var0.field2483 = var5;
-      class229.field2487 = var6;
-      var0.field2482 = var7;
-      var0.field2472 = var8;
-      var0.field2473 = var9;
-      var0.field2474 = var10;
    }
 
-   static void method1266(class229 var0) {
-      boolean var4 = false;
-      boolean var5 = false;
-      boolean var6 = false;
-      boolean var7 = false;
-      boolean var8 = false;
-      boolean var9 = false;
-      boolean var10 = false;
-      boolean var11 = false;
-      boolean var12 = false;
-      boolean var13 = false;
-      boolean var14 = false;
-      boolean var15 = false;
-      boolean var16 = false;
-      boolean var17 = false;
-      boolean var18 = false;
-      boolean var19 = false;
-      boolean var20 = false;
-      boolean var21 = false;
-      int var22 = 0;
-      int[] var23 = null;
-      int[] var24 = null;
-      int[] var25 = null;
-      var0.field2469 = 2039955545;
-      if (class229.field2487 == null) {
-         class229.field2487 = new int[var0.field2469 * 881977248];
+   public void method1246(int var1, int var2, int var3, int var4, int var5, int var6, double var7, int var9) {
+      try {
+         int var10 = -var3 / 2;
+         int var11 = -var4 / 2;
+         int var12 = (int)(Math.sin(var7) * 65536.0D);
+         int var13 = (int)(Math.cos(var7) * 65536.0D);
+         var12 = var12 * var9 >> 8;
+         var13 = var13 * var9 >> 8;
+         int var14 = (var5 << 16) + var11 * var12 + var10 * var13;
+         int var15 = (var6 << 16) + (var11 * var13 - var10 * var12);
+         int var16 = var1 + var2 * class162.field1232;
+
+         for(var2 = 0; var2 < var4; ++var2) {
+            int var17 = var16;
+            int var18 = var14;
+            int var19 = var15;
+
+            for(var1 = -var3; var1 < 0; ++var1) {
+               int var20 = this.field2205[(var18 >> 16) + (var19 >> 16) * this.field2200];
+               if (var20 != 0) {
+                  class162.field1233[var17++] = var20;
+               } else {
+                  ++var17;
+               }
+
+               var18 += var13;
+               var19 -= var12;
+            }
+
+            var14 += var12;
+            var15 += var13;
+            var16 += class162.field1232;
+         }
+      } catch (Exception var21) {
+         ;
       }
 
-      boolean var26 = true;
+   }
 
-      while(true) {
-         while(var26) {
-            byte var1 = method1272(var0);
-            if (var1 == 23) {
-               return;
-            }
+   public void method1241(int var1, int var2, int var3, int var4) {
+      this.method1242(this.field2203 << 3, this.field2204 << 3, var1 << 4, var2 << 4, var3, var4);
+   }
 
-            var1 = method1272(var0);
-            var1 = method1272(var0);
-            var1 = method1272(var0);
-            var1 = method1272(var0);
-            var1 = method1272(var0);
-            var1 = method1272(var0);
-            var1 = method1272(var0);
-            var1 = method1272(var0);
-            var1 = method1272(var0);
-            var1 = method1268(var0);
-            if (var1 != 0) {
-               ;
-            }
+   void method1242(int var1, int var2, int var3, int var4, int var5, int var6) {
+      if (var6 != 0) {
+         var1 -= this.field2201 << 4;
+         var2 -= this.field2202 << 4;
+         double var7 = (double)(var5 & '\uffff') * 9.587379924285257E-5D;
+         int var9 = (int)Math.floor(Math.sin(var7) * (double)var6 + 0.5D);
+         int var10 = (int)Math.floor(Math.cos(var7) * (double)var6 + 0.5D);
+         int var11 = -var1 * var10 + -var2 * var9;
+         int var12 = -(-var1) * var9 + -var2 * var10;
+         int var13 = ((this.field2200 << 4) - var1) * var10 + -var2 * var9;
+         int var14 = -((this.field2200 << 4) - var1) * var9 + -var2 * var10;
+         int var15 = -var1 * var10 + ((this.field2199 << 4) - var2) * var9;
+         int var16 = -(-var1) * var9 + ((this.field2199 << 4) - var2) * var10;
+         int var17 = ((this.field2200 << 4) - var1) * var10 + ((this.field2199 << 4) - var2) * var9;
+         int var18 = -((this.field2200 << 4) - var1) * var9 + ((this.field2199 << 4) - var2) * var10;
+         int var19;
+         int var20;
+         if (var11 < var13) {
+            var19 = var11;
+            var20 = var13;
+         } else {
+            var19 = var13;
+            var20 = var11;
+         }
 
-            var0.field2481 = 0;
-            var1 = method1272(var0);
-            var0.field2481 = var0.field2481 << 8 | var1 & 255;
-            var1 = method1272(var0);
-            var0.field2481 = var0.field2481 << 8 | var1 & 255;
-            var1 = method1272(var0);
-            var0.field2481 = var0.field2481 << 8 | var1 & 255;
+         if (var15 < var19) {
+            var19 = var15;
+         }
 
-            int var35;
-            for(var35 = 0; var35 < 16; ++var35) {
-               var1 = method1268(var0);
-               if (var1 == 1) {
-                  var0.field2490[var35] = true;
-               } else {
-                  var0.field2490[var35] = false;
-               }
-            }
+         if (var17 < var19) {
+            var19 = var17;
+         }
 
-            for(var35 = 0; var35 < 256; ++var35) {
-               var0.field2489[var35] = false;
-            }
+         if (var15 > var20) {
+            var20 = var15;
+         }
 
-            int var36;
-            for(var35 = 0; var35 < 16; ++var35) {
-               if (var0.field2490[var35]) {
-                  for(var36 = 0; var36 < 16; ++var36) {
-                     var1 = method1268(var0);
-                     if (var1 == 1) {
-                        var0.field2489[var35 * 16 + var36] = true;
-                     }
-                  }
-               }
-            }
+         if (var17 > var20) {
+            var20 = var17;
+         }
 
-            method1269(var0);
-            int var38 = var0.field2480 + 2;
-            int var39 = method1271(3, var0);
-            int var40 = method1271(15, var0);
+         int var21;
+         int var22;
+         if (var12 < var14) {
+            var21 = var12;
+            var22 = var14;
+         } else {
+            var21 = var14;
+            var22 = var12;
+         }
 
-            for(var35 = 0; var35 < var40; ++var35) {
-               var36 = 0;
+         if (var16 < var21) {
+            var21 = var16;
+         }
 
-               while(true) {
-                  var1 = method1268(var0);
-                  if (var1 == 0) {
-                     var0.field2495[var35] = (byte)var36;
-                     break;
-                  }
+         if (var18 < var21) {
+            var21 = var18;
+         }
 
-                  ++var36;
-               }
-            }
+         if (var16 > var22) {
+            var22 = var16;
+         }
 
-            byte[] var27 = new byte[6];
+         if (var18 > var22) {
+            var22 = var18;
+         }
 
-            byte var29;
-            for(var29 = 0; var29 < var39; var27[var29] = var29++) {
-               ;
-            }
+         var19 >>= 12;
+         var20 = var20 + 4095 >> 12;
+         var21 >>= 12;
+         var22 = var22 + 4095 >> 12;
+         var19 += var3;
+         var20 += var3;
+         var21 += var4;
+         var22 += var4;
+         var19 >>= 4;
+         var20 = var20 + 15 >> 4;
+         var21 >>= 4;
+         var22 = var22 + 15 >> 4;
+         if (var19 < class162.field1236) {
+            var19 = class162.field1236;
+         }
 
-            for(var35 = 0; var35 < var40; ++var35) {
-               var29 = var0.field2495[var35];
+         if (var20 > class162.field1237) {
+            var20 = class162.field1237;
+         }
 
-               byte var28;
-               for(var28 = var27[var29]; var29 > 0; --var29) {
-                  var27[var29] = var27[var29 - 1];
-               }
+         if (var21 < class162.field1234) {
+            var21 = class162.field1234;
+         }
 
-               var27[0] = var28;
-               var0.field2475[var35] = var28;
-            }
+         if (var22 > class162.field1235) {
+            var22 = class162.field1235;
+         }
 
-            int var37;
-            for(var37 = 0; var37 < var39; ++var37) {
-               int var49 = method1271(5, var0);
-
-               for(var35 = 0; var35 < var38; ++var35) {
-                  while(true) {
-                     var1 = method1268(var0);
-                     if (var1 == 0) {
-                        var0.field2493[var37][var35] = (byte)var49;
-                        break;
-                     }
-
-                     var1 = method1268(var0);
-                     if (var1 == 0) {
-                        ++var49;
-                     } else {
-                        --var49;
-                     }
-                  }
-               }
-            }
-
-            for(var37 = 0; var37 < var39; ++var37) {
-               byte var2 = 32;
-               byte var3 = 0;
-
-               for(var35 = 0; var35 < var38; ++var35) {
-                  if (var0.field2493[var37][var35] > var3) {
-                     var3 = var0.field2493[var37][var35];
-                  }
-
-                  if (var0.field2493[var37][var35] < var2) {
-                     var2 = var0.field2493[var37][var35];
-                  }
-               }
-
-               method1270(var0.field2497[var37], var0.field2498[var37], var0.field2499[var37], var0.field2493[var37], var2, var3, var38);
-               var0.field2500[var37] = var2;
-            }
-
-            int var41 = var0.field2480 + 1;
-            int var42 = -1;
-            byte var43 = 0;
-
-            for(var35 = 0; var35 <= 255; ++var35) {
-               var0.field2464[var35] = 0;
-            }
-
-            int var56 = 4095;
-
-            int var54;
-            int var55;
-            for(var54 = 15; var54 >= 0; --var54) {
-               for(var55 = 15; var55 >= 0; --var55) {
-                  var0.field2463[var56] = (byte)(var54 * 16 + var55);
-                  --var56;
-               }
-
-               var0.field2492[var54] = var56 + 1;
-            }
-
-            int var46 = 0;
-            byte var53;
-            if (var43 == 0) {
-               ++var42;
-               var43 = 50;
-               var53 = var0.field2475[var42];
-               var22 = var0.field2500[var53];
-               var23 = var0.field2497[var53];
-               var25 = var0.field2499[var53];
-               var24 = var0.field2498[var53];
-            }
-
-            int var44 = var43 - 1;
-            int var50 = var22;
-
-            int var51;
-            byte var52;
-            for(var51 = method1271(var22, var0); var51 > var23[var50]; var51 = var51 << 1 | var52) {
-               ++var50;
-               var52 = method1268(var0);
-            }
-
-            int var45 = var25[var51 - var24[var50]];
-
-            while(true) {
-               while(var45 != var41) {
-                  if (var45 != 0 && var45 != 1) {
-                     int var33 = var45 - 1;
-                     int var30;
-                     if (var33 < 16) {
-                        var30 = var0.field2492[0];
-
-                        for(var1 = var0.field2463[var30 + var33]; var33 > 3; var33 -= 4) {
-                           int var34 = var30 + var33;
-                           var0.field2463[var34] = var0.field2463[var34 - 1];
-                           var0.field2463[var34 - 1] = var0.field2463[var34 - 2];
-                           var0.field2463[var34 - 2] = var0.field2463[var34 - 3];
-                           var0.field2463[var34 - 3] = var0.field2463[var34 - 4];
-                        }
-
-                        while(var33 > 0) {
-                           var0.field2463[var30 + var33] = var0.field2463[var30 + var33 - 1];
-                           --var33;
-                        }
-
-                        var0.field2463[var30] = var1;
-                     } else {
-                        int var31 = var33 / 16;
-                        int var32 = var33 % 16;
-                        var30 = var0.field2492[var31] + var32;
-
-                        for(var1 = var0.field2463[var30]; var30 > var0.field2492[var31]; --var30) {
-                           var0.field2463[var30] = var0.field2463[var30 - 1];
-                        }
-
-                        ++var0.field2492[var31];
-
-                        while(var31 > 0) {
-                           --var0.field2492[var31];
-                           var0.field2463[var0.field2492[var31]] = var0.field2463[var0.field2492[var31 - 1] + 16 - 1];
-                           --var31;
-                        }
-
-                        --var0.field2492[0];
-                        var0.field2463[var0.field2492[0]] = var1;
-                        if (var0.field2492[0] == 0) {
-                           var56 = 4095;
-
-                           for(var54 = 15; var54 >= 0; --var54) {
-                              for(var55 = 15; var55 >= 0; --var55) {
-                                 var0.field2463[var56] = var0.field2463[var0.field2492[var54] + var55];
-                                 --var56;
+         var20 = var19 - var20;
+         if (var20 < 0) {
+            var22 = var21 - var22;
+            if (var22 < 0) {
+               int var23 = var21 * class162.field1232 + var19;
+               double var24 = 1.6777216E7D / (double)var6;
+               int var26 = (int)Math.floor(Math.sin(var7) * var24 + 0.5D);
+               int var27 = (int)Math.floor(Math.cos(var7) * var24 + 0.5D);
+               int var28 = (var19 << 4) + 8 - var3;
+               int var29 = (var21 << 4) + 8 - var4;
+               int var30 = (var1 << 8) - (var29 * var26 >> 4);
+               int var31 = (var2 << 8) + (var29 * var27 >> 4);
+               int var32;
+               int var33;
+               int var34;
+               int var35;
+               int var36;
+               int var37;
+               int var38;
+               if (var27 == 0) {
+                  if (var26 == 0) {
+                     for(var33 = var22; var33 < 0; var23 += class162.field1232) {
+                        var34 = var23;
+                        var35 = var30;
+                        var36 = var31;
+                        var37 = var20;
+                        if (var30 >= 0 && var31 >= 0 && var30 - (this.field2200 << 12) < 0 && var31 - (this.field2199 << 12) < 0) {
+                           for(; var37 < 0; ++var37) {
+                              var38 = this.field2205[(var36 >> 12) * this.field2200 + (var35 >> 12)];
+                              if (var38 != 0) {
+                                 class162.field1233[var34++] = var38;
+                              } else {
+                                 ++var34;
                               }
-
-                              var0.field2492[var54] = var56 + 1;
                            }
                         }
+
+                        ++var33;
                      }
+                  } else if (var26 < 0) {
+                     for(var33 = var22; var33 < 0; var23 += class162.field1232) {
+                        var34 = var23;
+                        var35 = var30;
+                        var36 = var31 + (var28 * var26 >> 4);
+                        var37 = var20;
+                        if (var30 >= 0 && var30 - (this.field2200 << 12) < 0) {
+                           if ((var32 = var36 - (this.field2199 << 12)) >= 0) {
+                              var32 = (var26 - var32) / var26;
+                              var37 = var20 + var32;
+                              var36 += var26 * var32;
+                              var34 = var23 + var32;
+                           }
 
-                     ++var0.field2464[var0.field2488[var1 & 255] & 255];
-                     class229.field2487[var46] = var0.field2488[var1 & 255] & 255;
-                     ++var46;
-                     if (var44 == 0) {
-                        ++var42;
-                        var44 = 50;
-                        var53 = var0.field2475[var42];
-                        var22 = var0.field2500[var53];
-                        var23 = var0.field2497[var53];
-                        var25 = var0.field2499[var53];
-                        var24 = var0.field2498[var53];
+                           if ((var32 = (var36 - var26) / var26) > var37) {
+                              var37 = var32;
+                           }
+
+                           while(var37 < 0) {
+                              var38 = this.field2205[(var36 >> 12) * this.field2200 + (var35 >> 12)];
+                              if (var38 != 0) {
+                                 class162.field1233[var34++] = var38;
+                              } else {
+                                 ++var34;
+                              }
+
+                              var36 += var26;
+                              ++var37;
+                           }
+                        }
+
+                        ++var33;
+                        var30 -= var26;
                      }
-
-                     --var44;
-                     var50 = var22;
-
-                     for(var51 = method1271(var22, var0); var51 > var23[var50]; var51 = var51 << 1 | var52) {
-                        ++var50;
-                        var52 = method1268(var0);
-                     }
-
-                     var45 = var25[var51 - var24[var50]];
                   } else {
-                     int var47 = -1;
-                     int var48 = 1;
+                     for(var33 = var22; var33 < 0; var23 += class162.field1232) {
+                        var34 = var23;
+                        var35 = var30;
+                        var36 = var31 + (var28 * var26 >> 4);
+                        var37 = var20;
+                        if (var30 >= 0 && var30 - (this.field2200 << 12) < 0) {
+                           if (var36 < 0) {
+                              var32 = (var26 - 1 - var36) / var26;
+                              var37 = var20 + var32;
+                              var36 += var26 * var32;
+                              var34 = var23 + var32;
+                           }
 
-                     do {
-                        if (var45 == 0) {
-                           var47 += var48;
-                        } else if (var45 == 1) {
-                           var47 += var48 * 2;
+                           if ((var32 = (var36 + 1 - (this.field2199 << 12) - var26) / var26) > var37) {
+                              var37 = var32;
+                           }
+
+                           while(var37 < 0) {
+                              var38 = this.field2205[(var36 >> 12) * this.field2200 + (var35 >> 12)];
+                              if (var38 != 0) {
+                                 class162.field1233[var34++] = var38;
+                              } else {
+                                 ++var34;
+                              }
+
+                              var36 += var26;
+                              ++var37;
+                           }
                         }
 
-                        var48 *= 2;
-                        if (var44 == 0) {
-                           ++var42;
-                           var44 = 50;
-                           var53 = var0.field2475[var42];
-                           var22 = var0.field2500[var53];
-                           var23 = var0.field2497[var53];
-                           var25 = var0.field2499[var53];
-                           var24 = var0.field2498[var53];
-                        }
-
-                        --var44;
-                        var50 = var22;
-
-                        for(var51 = method1271(var22, var0); var51 > var23[var50]; var51 = var51 << 1 | var52) {
-                           ++var50;
-                           var52 = method1268(var0);
-                        }
-
-                        var45 = var25[var51 - var24[var50]];
-                     } while(var45 == 0 || var45 == 1);
-
-                     ++var47;
-                     var1 = var0.field2488[var0.field2463[var0.field2492[0]] & 255];
-
-                     for(var0.field2464[var1 & 255] += var47; var47 > 0; --var47) {
-                        class229.field2487[var46] = var1 & 255;
-                        ++var46;
+                        ++var33;
+                        var30 -= var26;
                      }
+                  }
+               } else if (var27 < 0) {
+                  if (var26 == 0) {
+                     for(var33 = var22; var33 < 0; var23 += class162.field1232) {
+                        var34 = var23;
+                        var35 = var30 + (var28 * var27 >> 4);
+                        var36 = var31;
+                        var37 = var20;
+                        if (var31 >= 0 && var31 - (this.field2199 << 12) < 0) {
+                           if ((var32 = var35 - (this.field2200 << 12)) >= 0) {
+                              var32 = (var27 - var32) / var27;
+                              var37 = var20 + var32;
+                              var35 += var27 * var32;
+                              var34 = var23 + var32;
+                           }
+
+                           if ((var32 = (var35 - var27) / var27) > var37) {
+                              var37 = var32;
+                           }
+
+                           while(var37 < 0) {
+                              var38 = this.field2205[(var36 >> 12) * this.field2200 + (var35 >> 12)];
+                              if (var38 != 0) {
+                                 class162.field1233[var34++] = var38;
+                              } else {
+                                 ++var34;
+                              }
+
+                              var35 += var27;
+                              ++var37;
+                           }
+                        }
+
+                        ++var33;
+                        var31 += var27;
+                     }
+                  } else if (var26 < 0) {
+                     for(var33 = var22; var33 < 0; var23 += class162.field1232) {
+                        var34 = var23;
+                        var35 = var30 + (var28 * var27 >> 4);
+                        var36 = var31 + (var28 * var26 >> 4);
+                        var37 = var20;
+                        if ((var32 = var35 - (this.field2200 << 12)) >= 0) {
+                           var32 = (var27 - var32) / var27;
+                           var37 = var20 + var32;
+                           var35 += var27 * var32;
+                           var36 += var26 * var32;
+                           var34 = var23 + var32;
+                        }
+
+                        if ((var32 = (var35 - var27) / var27) > var37) {
+                           var37 = var32;
+                        }
+
+                        if ((var32 = var36 - (this.field2199 << 12)) >= 0) {
+                           var32 = (var26 - var32) / var26;
+                           var37 += var32;
+                           var35 += var27 * var32;
+                           var36 += var26 * var32;
+                           var34 += var32;
+                        }
+
+                        if ((var32 = (var36 - var26) / var26) > var37) {
+                           var37 = var32;
+                        }
+
+                        while(var37 < 0) {
+                           var38 = this.field2205[(var36 >> 12) * this.field2200 + (var35 >> 12)];
+                           if (var38 != 0) {
+                              class162.field1233[var34++] = var38;
+                           } else {
+                              ++var34;
+                           }
+
+                           var35 += var27;
+                           var36 += var26;
+                           ++var37;
+                        }
+
+                        ++var33;
+                        var30 -= var26;
+                        var31 += var27;
+                     }
+                  } else {
+                     for(var33 = var22; var33 < 0; var23 += class162.field1232) {
+                        var34 = var23;
+                        var35 = var30 + (var28 * var27 >> 4);
+                        var36 = var31 + (var28 * var26 >> 4);
+                        var37 = var20;
+                        if ((var32 = var35 - (this.field2200 << 12)) >= 0) {
+                           var32 = (var27 - var32) / var27;
+                           var37 = var20 + var32;
+                           var35 += var27 * var32;
+                           var36 += var26 * var32;
+                           var34 = var23 + var32;
+                        }
+
+                        if ((var32 = (var35 - var27) / var27) > var37) {
+                           var37 = var32;
+                        }
+
+                        if (var36 < 0) {
+                           var32 = (var26 - 1 - var36) / var26;
+                           var37 += var32;
+                           var35 += var27 * var32;
+                           var36 += var26 * var32;
+                           var34 += var32;
+                        }
+
+                        if ((var32 = (var36 + 1 - (this.field2199 << 12) - var26) / var26) > var37) {
+                           var37 = var32;
+                        }
+
+                        while(var37 < 0) {
+                           var38 = this.field2205[(var36 >> 12) * this.field2200 + (var35 >> 12)];
+                           if (var38 != 0) {
+                              class162.field1233[var34++] = var38;
+                           } else {
+                              ++var34;
+                           }
+
+                           var35 += var27;
+                           var36 += var26;
+                           ++var37;
+                        }
+
+                        ++var33;
+                        var30 -= var26;
+                        var31 += var27;
+                     }
+                  }
+               } else if (var26 == 0) {
+                  for(var33 = var22; var33 < 0; var23 += class162.field1232) {
+                     var34 = var23;
+                     var35 = var30 + (var28 * var27 >> 4);
+                     var36 = var31;
+                     var37 = var20;
+                     if (var31 >= 0 && var31 - (this.field2199 << 12) < 0) {
+                        if (var35 < 0) {
+                           var32 = (var27 - 1 - var35) / var27;
+                           var37 = var20 + var32;
+                           var35 += var27 * var32;
+                           var34 = var23 + var32;
+                        }
+
+                        if ((var32 = (var35 + 1 - (this.field2200 << 12) - var27) / var27) > var37) {
+                           var37 = var32;
+                        }
+
+                        while(var37 < 0) {
+                           var38 = this.field2205[(var36 >> 12) * this.field2200 + (var35 >> 12)];
+                           if (var38 != 0) {
+                              class162.field1233[var34++] = var38;
+                           } else {
+                              ++var34;
+                           }
+
+                           var35 += var27;
+                           ++var37;
+                        }
+                     }
+
+                     ++var33;
+                     var31 += var27;
+                  }
+               } else if (var26 < 0) {
+                  for(var33 = var22; var33 < 0; var23 += class162.field1232) {
+                     var34 = var23;
+                     var35 = var30 + (var28 * var27 >> 4);
+                     var36 = var31 + (var28 * var26 >> 4);
+                     var37 = var20;
+                     if (var35 < 0) {
+                        var32 = (var27 - 1 - var35) / var27;
+                        var37 = var20 + var32;
+                        var35 += var27 * var32;
+                        var36 += var26 * var32;
+                        var34 = var23 + var32;
+                     }
+
+                     if ((var32 = (var35 + 1 - (this.field2200 << 12) - var27) / var27) > var37) {
+                        var37 = var32;
+                     }
+
+                     if ((var32 = var36 - (this.field2199 << 12)) >= 0) {
+                        var32 = (var26 - var32) / var26;
+                        var37 += var32;
+                        var35 += var27 * var32;
+                        var36 += var26 * var32;
+                        var34 += var32;
+                     }
+
+                     if ((var32 = (var36 - var26) / var26) > var37) {
+                        var37 = var32;
+                     }
+
+                     while(var37 < 0) {
+                        var38 = this.field2205[(var36 >> 12) * this.field2200 + (var35 >> 12)];
+                        if (var38 != 0) {
+                           class162.field1233[var34++] = var38;
+                        } else {
+                           ++var34;
+                        }
+
+                        var35 += var27;
+                        var36 += var26;
+                        ++var37;
+                     }
+
+                     ++var33;
+                     var30 -= var26;
+                     var31 += var27;
+                  }
+               } else {
+                  for(var33 = var22; var33 < 0; var23 += class162.field1232) {
+                     var34 = var23;
+                     var35 = var30 + (var28 * var27 >> 4);
+                     var36 = var31 + (var28 * var26 >> 4);
+                     var37 = var20;
+                     if (var35 < 0) {
+                        var32 = (var27 - 1 - var35) / var27;
+                        var37 = var20 + var32;
+                        var35 += var27 * var32;
+                        var36 += var26 * var32;
+                        var34 = var23 + var32;
+                     }
+
+                     if ((var32 = (var35 + 1 - (this.field2200 << 12) - var27) / var27) > var37) {
+                        var37 = var32;
+                     }
+
+                     if (var36 < 0) {
+                        var32 = (var26 - 1 - var36) / var26;
+                        var37 += var32;
+                        var35 += var27 * var32;
+                        var36 += var26 * var32;
+                        var34 += var32;
+                     }
+
+                     if ((var32 = (var36 + 1 - (this.field2199 << 12) - var26) / var26) > var37) {
+                        var37 = var32;
+                     }
+
+                     while(var37 < 0) {
+                        var38 = this.field2205[(var36 >> 12) * this.field2200 + (var35 >> 12)];
+                        if (var38 != 0) {
+                           class162.field1233[var34++] = var38;
+                        } else {
+                           ++var34;
+                        }
+
+                        var35 += var27;
+                        var36 += var26;
+                        ++var37;
+                     }
+
+                     ++var33;
+                     var30 -= var26;
+                     var31 += var27;
                   }
                }
 
-               var0.field2477 = 0;
-               var0.field2484 = 0;
-               var0.field2486[0] = 0;
+            }
+         }
+      }
+   }
 
-               for(var35 = 1; var35 <= 256; ++var35) {
-                  var0.field2486[var35] = var0.field2464[var35 - 1];
+   public void method1243(int var1, int var2, int var3, int var4) {
+      if (var3 <= this.field2203 && var4 <= this.field2204) {
+         int var5 = var1 + this.field2201 * var3 / this.field2203;
+         int var6 = var1 + ((this.field2201 + this.field2200) * var3 + this.field2203 - 1) / this.field2203;
+         int var7 = var2 + this.field2202 * var4 / this.field2204;
+         int var8 = var2 + ((this.field2202 + this.field2199) * var4 + this.field2204 - 1) / this.field2204;
+         if (var5 < class162.field1236) {
+            var5 = class162.field1236;
+         }
+
+         if (var6 > class162.field1237) {
+            var6 = class162.field1237;
+         }
+
+         if (var7 < class162.field1234) {
+            var7 = class162.field1234;
+         }
+
+         if (var8 > class162.field1235) {
+            var8 = class162.field1235;
+         }
+
+         if (var5 < var6 && var7 < var8) {
+            int var9 = var7 * class162.field1232 + var5;
+            int var10 = class162.field1232 - (var6 - var5);
+            if (var9 < class162.field1233.length) {
+               for(int var11 = var7; var11 < var8; ++var11) {
+                  for(int var12 = var5; var12 < var6; ++var12) {
+                     int var13 = var12 - var1 << 4;
+                     int var14 = var11 - var2 << 4;
+                     int var15 = var13 * this.field2203 / var3 - (this.field2201 << 4);
+                     int var16 = (var13 + 16) * this.field2203 / var3 - (this.field2201 << 4);
+                     int var17 = var14 * this.field2204 / var4 - (this.field2202 << 4);
+                     int var18 = (var14 + 16) * this.field2204 / var4 - (this.field2202 << 4);
+                     int var19 = (var16 - var15) * (var18 - var17) >> 1;
+                     if (var19 != 0) {
+                        if (var15 < 0) {
+                           var15 = 0;
+                        }
+
+                        if (var16 >= this.field2200 << 4) {
+                           var16 = this.field2200 << 4;
+                        }
+
+                        if (var17 < 0) {
+                           var17 = 0;
+                        }
+
+                        if (var18 >= this.field2199 << 4) {
+                           var18 = this.field2199 << 4;
+                        }
+
+                        --var16;
+                        --var18;
+                        int var20 = 16 - (var15 & 15);
+                        int var21 = (var16 & 15) + 1;
+                        int var22 = 16 - (var17 & 15);
+                        int var23 = (var18 & 15) + 1;
+                        var15 >>= 4;
+                        var16 >>= 4;
+                        var17 >>= 4;
+                        var18 >>= 4;
+                        int var24 = 0;
+                        int var25 = 0;
+                        int var26 = 0;
+                        int var27 = 0;
+
+                        int var28;
+                        for(var28 = var17; var28 <= var18; ++var28) {
+                           int var29 = 16;
+                           if (var28 == var17) {
+                              var29 = var22;
+                           }
+
+                           if (var28 == var18) {
+                              var29 = var23;
+                           }
+
+                           for(int var30 = var15; var30 <= var16; ++var30) {
+                              int var31 = this.field2205[var28 * this.field2200 + var30];
+                              if (var31 != 0) {
+                                 int var32;
+                                 if (var30 == var15) {
+                                    var32 = var29 * var20;
+                                 } else if (var30 == var16) {
+                                    var32 = var29 * var21;
+                                 } else {
+                                    var32 = var29 << 4;
+                                 }
+
+                                 var27 += var32;
+                                 var24 += (var31 >> 16 & 255) * var32;
+                                 var25 += (var31 >> 8 & 255) * var32;
+                                 var26 += (var31 & 255) * var32;
+                              }
+                           }
+                        }
+
+                        if (var27 >= var19) {
+                           var28 = (var24 / var27 << 16) + (var25 / var27 << 8) + var26 / var27;
+                           if (var28 == 0) {
+                              var28 = 1;
+                           }
+
+                           class162.field1233[var9] = var28;
+                        }
+
+                        ++var9;
+                     }
+                  }
+
+                  var9 += var10;
                }
 
-               for(var35 = 1; var35 <= 256; ++var35) {
-                  var0.field2486[var35] += var0.field2486[var35 - 1];
-               }
+            }
+         }
+      } else {
+         throw new IllegalArgumentException();
+      }
+   }
 
-               for(var35 = 0; var35 < var46; ++var35) {
-                  var1 = (byte)(class229.field2487[var35] & 255);
-                  class229.field2487[var0.field2486[var1 & 255]] |= var35 << 8;
-                  ++var0.field2486[var1 & 255];
-               }
+   static void method1252(int[] var0, int[] var1, int var2, int var3, int var4, int var5, int var6, int var7) {
+      for(int var8 = -var5; var8 < 0; ++var8) {
+         int var9;
+         for(var9 = var3 + var4 - 3; var3 < var9; var0[var3++] = var1[var2++]) {
+            var0[var3++] = var1[var2++];
+            var0[var3++] = var1[var2++];
+            var0[var3++] = var1[var2++];
+         }
 
-               var0.field2482 = class229.field2487[var0.field2481] >> 8;
-               var0.field2485 = 0;
-               var0.field2482 = class229.field2487[var0.field2482];
-               var0.field2483 = (byte)(var0.field2482 & 255);
-               var0.field2482 >>= 8;
-               ++var0.field2485;
-               var0.field2501 = var46;
-               method1267(var0);
-               if (var0.field2485 == var0.field2501 + 1 && var0.field2477 == 0) {
-                  var26 = true;
-                  break;
-               }
+         for(var9 += 3; var3 < var9; var0[var3++] = var1[var2++]) {
+            ;
+         }
 
-               var26 = false;
-               break;
+         var3 += var6;
+         var2 += var7;
+      }
+
+   }
+
+   static void method1249(int[] var0, int[] var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8) {
+      int var9 = -(var5 >> 2);
+      var5 = -(var5 & 3);
+
+      for(int var10 = -var6; var10 < 0; ++var10) {
+         int var11;
+         for(var11 = var9; var11 < 0; ++var11) {
+            var2 = var1[var3++];
+            if (var2 != 0) {
+               var0[var4++] = var2;
+            } else {
+               ++var4;
+            }
+
+            var2 = var1[var3++];
+            if (var2 != 0) {
+               var0[var4++] = var2;
+            } else {
+               ++var4;
+            }
+
+            var2 = var1[var3++];
+            if (var2 != 0) {
+               var0[var4++] = var2;
+            } else {
+               ++var4;
+            }
+
+            var2 = var1[var3++];
+            if (var2 != 0) {
+               var0[var4++] = var2;
+            } else {
+               ++var4;
             }
          }
 
-         return;
-      }
-   }
-
-   static byte method1272(class229 var0) {
-      return (byte)method1271(8, var0);
-   }
-
-   static byte method1268(class229 var0) {
-      return (byte)method1271(1, var0);
-   }
-
-   static int method1271(int var0, class229 var1) {
-      while(var1.field2479 < var0) {
-         var1.field2494 = var1.field2494 << 8 | var1.field2476[var1.field2470] & 255;
-         var1.field2479 += 8;
-         ++var1.field2470;
-         ++var1.field2471;
-         if (var1.field2471 == 0) {
-            ;
+         for(var11 = var5; var11 < 0; ++var11) {
+            var2 = var1[var3++];
+            if (var2 != 0) {
+               var0[var4++] = var2;
+            } else {
+               ++var4;
+            }
          }
+
+         var4 += var7;
+         var3 += var8;
       }
 
-      int var2 = var1.field2494 >> var1.field2479 - var0 & (1 << var0) - 1;
-      var1.field2479 -= var0;
-      return var2;
    }
 
-   static void method1269(class229 var0) {
-      var0.field2480 = 0;
+   static void method1224(int[] var0, int[] var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8, int var9, int var10, int var11) {
+      int var12 = var3;
 
-      for(int var1 = 0; var1 < 256; ++var1) {
-         if (var0.field2489[var1]) {
-            var0.field2488[var0.field2480] = (byte)var1;
-            ++var0.field2480;
+      for(int var13 = -var8; var13 < 0; ++var13) {
+         int var14 = (var4 >> 16) * var11;
+
+         for(int var15 = -var7; var15 < 0; ++var15) {
+            var2 = var1[(var3 >> 16) + var14];
+            if (var2 != 0) {
+               var0[var5++] = var2;
+            } else {
+               ++var5;
+            }
+
+            var3 += var9;
          }
+
+         var4 += var10;
+         var3 = var12;
+         var5 += var6;
       }
 
    }
 
-   static void method1270(int[] var0, int[] var1, int[] var2, byte[] var3, int var4, int var5, int var6) {
-      int var7 = 0;
+   static void method1247(int[] var0, int[] var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8, int var9, int var10) {
+      int var11 = 256 - var9;
+      int var12 = (var10 & 16711935) * var11 & -16711936;
+      int var13 = (var10 & '\uff00') * var11 & 16711680;
+      var10 = (var12 | var13) >>> 8;
 
-      int var8;
-      for(var8 = var4; var8 <= var5; ++var8) {
-         for(int var9 = 0; var9 < var6; ++var9) {
-            if (var3[var9] == var8) {
-               var2[var7] = var9;
+      for(int var14 = -var6; var14 < 0; ++var14) {
+         for(int var15 = -var5; var15 < 0; ++var15) {
+            var2 = var1[var3++];
+            if (var2 != 0) {
+               var12 = (var2 & 16711935) * var9 & -16711936;
+               var13 = (var2 & '\uff00') * var9 & 16711680;
+               var0[var4++] = ((var12 | var13) >>> 8) + var10;
+            } else {
+               ++var4;
+            }
+         }
+
+         var4 += var7;
+         var3 += var8;
+      }
+
+   }
+
+   static void method1234(int[] var0, int[] var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8, int var9) {
+      int var10 = 256 - var9;
+
+      for(int var11 = -var6; var11 < 0; ++var11) {
+         for(int var12 = -var5; var12 < 0; ++var12) {
+            var2 = var1[var3++];
+            if (var2 != 0) {
+               int var13 = var0[var4];
+               var0[var4++] = ((var2 & 16711935) * var9 + (var13 & 16711935) * var10 & -16711936) + ((var2 & '\uff00') * var9 + (var13 & '\uff00') * var10 & 16711680) >> 8;
+            } else {
+               ++var4;
+            }
+         }
+
+         var4 += var7;
+         var3 += var8;
+      }
+
+   }
+
+   static void method1232(int[] var0, int[] var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8, int var9, int var10, int var11, int var12) {
+      int var13 = 256 - var12;
+      int var14 = var3;
+
+      for(int var15 = -var8; var15 < 0; ++var15) {
+         int var16 = (var4 >> 16) * var11;
+
+         for(int var17 = -var7; var17 < 0; ++var17) {
+            var2 = var1[(var3 >> 16) + var16];
+            if (var2 != 0) {
+               int var18 = var0[var5];
+               var0[var5++] = ((var2 & 16711935) * var12 + (var18 & 16711935) * var13 & -16711936) + ((var2 & '\uff00') * var12 + (var18 & '\uff00') * var13 & 16711680) >> 8;
+            } else {
+               ++var5;
+            }
+
+            var3 += var9;
+         }
+
+         var4 += var10;
+         var3 = var14;
+         var5 += var6;
+      }
+
+   }
+
+   static void method1250(int var0, int var1, int var2, int[] var3, int[] var4, int var5, int var6, int var7, int var8, int var9, int var10, int var11, int var12) {
+      for(var8 = -var10; var8 < 0; ++var8) {
+         for(var6 = -var9; var6 < 0; ++var6) {
+            var0 = var4[var5++];
+            if (var0 != 0) {
+               var1 = var3[var7];
+               var2 = var0 + var1;
+               var0 = (var0 & 16711935) + (var1 & 16711935);
+               var1 = (var0 & 16777472) + (var2 - var0 & 65536);
+               var3[var7++] = var2 - var1 | var1 - (var1 >>> 8);
+            } else {
                ++var7;
             }
          }
+
+         var7 += var11;
+         var5 += var12;
       }
 
-      for(var8 = 0; var8 < 23; ++var8) {
-         var1[var8] = 0;
+   }
+
+   static void method1230(int var0, int var1, int var2, int[] var3, int[] var4, int var5, int var6, int var7, int var8, int var9, int var10, int var11, int var12, int var13) {
+      for(var8 = -var10; var8 < 0; ++var8) {
+         for(var6 = -var9; var6 < 0; ++var6) {
+            var0 = var4[var5++];
+            if (var0 != 0) {
+               var1 = (var0 & 16711935) * var13;
+               var0 = (var1 & -16711936) + (var0 * var13 - var1 & 16711680) >>> 8;
+               var1 = var3[var7];
+               var2 = var0 + var1;
+               var0 = (var0 & 16711935) + (var1 & 16711935);
+               var1 = (var0 & 16777472) + (var2 - var0 & 65536);
+               var3[var7++] = var2 - var1 | var1 - (var1 >>> 8);
+            } else {
+               ++var7;
+            }
+         }
+
+         var7 += var11;
+         var5 += var12;
       }
 
-      for(var8 = 0; var8 < var6; ++var8) {
-         ++var1[var3[var8] + 1];
+   }
+
+   static void method1248(int var0, int var1, int var2, int var3, int[] var4, int[] var5, int var6, int var7, int var8, int var9, int var10, int var11, int var12, int var13, int var14, int var15) {
+      for(int var16 = var3; var8 < 0; ++var8) {
+         var7 = (var9 >> 16) * var15;
+
+         for(var6 = -var12; var6 < 0; ++var6) {
+            var0 = var4[(var3 >> 16) + var7];
+            if (var0 != 0) {
+               var1 = var5[var10];
+               var2 = var0 + var1;
+               var0 = (var0 & 16711935) + (var1 & 16711935);
+               var1 = (var0 & 16777472) + (var2 - var0 & 65536);
+               var5[var10++] = var2 - var1 | var1 - (var1 >>> 8);
+            } else {
+               ++var10;
+            }
+
+            var3 += var13;
+         }
+
+         var9 += var14;
+         var3 = var16;
+         var10 += var11;
       }
 
-      for(var8 = 1; var8 < 23; ++var8) {
-         var1[var8] += var1[var8 - 1];
-      }
+   }
 
-      for(var8 = 0; var8 < 23; ++var8) {
-         var0[var8] = 0;
-      }
+   static void method1238(int var0, int var1, int var2, int var3, int[] var4, int[] var5, int var6, int var7, int var8, int var9, int var10, int var11, int var12, int var13, int var14, int var15, int var16) {
+      for(int var17 = var3; var8 < 0; ++var8) {
+         var7 = (var9 >> 16) * var15;
 
-      int var10 = 0;
+         for(var6 = -var12; var6 < 0; ++var6) {
+            var0 = var4[(var3 >> 16) + var7];
+            if (var0 != 0) {
+               var1 = (var0 & 16711935) * var16;
+               var0 = (var1 & -16711936) + (var0 * var16 - var1 & 16711680) >>> 8;
+               var1 = var5[var10];
+               var2 = var0 + var1;
+               var0 = (var0 & 16711935) + (var1 & 16711935);
+               var1 = (var0 & 16777472) + (var2 - var0 & 65536);
+               var5[var10++] = var2 - var1 | var1 - (var1 >>> 8);
+            } else {
+               ++var10;
+            }
 
-      for(var8 = var4; var8 <= var5; ++var8) {
-         var10 += var1[var8 + 1] - var1[var8];
-         var0[var8] = var10 - 1;
-         var10 <<= 1;
-      }
+            var3 += var13;
+         }
 
-      for(var8 = var4 + 1; var8 <= var5; ++var8) {
-         var1[var8] = (var0[var8 - 1] + 1 << 1) - var1[var8];
+         var9 += var14;
+         var3 = var17;
+         var10 += var11;
       }
 
    }

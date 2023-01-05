@@ -1,39 +1,75 @@
-import java.util.Iterator;
+import java.util.ArrayList;
+import java.util.HashMap;
 
-public class class355 implements Iterator {
-   class108 field3190;
-   class108 field3191 = null;
-   class148 field3189;
+public class class355 {
+   public static ArrayList field2929 = new ArrayList();
+   static byte[][] field2918 = new byte[100][];
+   static byte[][] field2925 = new byte[1000][];
+   static byte[][] field2926 = new byte[250][];
+   static byte[][] field2928 = new byte[50][];
+   static int field2917 = 250;
+   static int field2919 = 0;
+   static int field2920 = 0;
+   static int field2921 = 0;
+   static int field2922 = 1000;
+   static int field2923 = 50;
+   static int field2924 = 100;
+   static int field2927 = 0;
 
-   class355(class148 var1) {
-      this.field3189 = var1;
-      this.field3190 = this.field3189.field1564.field1371;
-      this.field3191 = null;
+   static {
+      field2929.clear();
+      field2929.add(Integer.valueOf(100));
+      field2929.add(Integer.valueOf(5000));
+      field2929.add(Integer.valueOf(10000));
+      field2929.add(Integer.valueOf(30000));
+      new HashMap();
    }
 
-   public Object next() {
-      class108 var1 = this.field3190;
-      if (var1 == this.field3189.field1564) {
-         var1 = null;
-         this.field3190 = null;
+   public static synchronized byte[] method1775(int var0, boolean var1) {
+      byte[] var5;
+      if ((var0 == 100 || var0 < 100 && var1) && field2927 > 0) {
+         var5 = field2925[--field2927];
+         field2925[field2927] = null;
+         return var5;
+      } else if ((var0 == 5000 || var0 < 5000 && var1) && field2919 > 0) {
+         var5 = field2926[--field2919];
+         field2926[field2919] = null;
+         return var5;
+      } else if ((var0 == 10000 || var0 < 10000 && var1) && field2920 > 0) {
+         var5 = field2918[--field2920];
+         field2918[field2920] = null;
+         return var5;
+      } else if ((var0 == 30000 || var0 < 30000 && var1) && field2921 > 0) {
+         var5 = field2928[--field2921];
+         field2928[field2921] = null;
+         return var5;
       } else {
-         this.field3190 = var1.field1371;
+         int var3;
+         if (null != class151.field1173) {
+            for(var3 = 0; var3 < class298.field2394.length; ++var3) {
+               if ((var0 == class298.field2394[var3] || var0 < class298.field2394[var3] && var1) && class119.field879[var3] > 0) {
+                  byte[] var4 = class151.field1173[var3][--class119.field879[var3]];
+                  class151.field1173[var3][class119.field879[var3]] = null;
+                  return var4;
+               }
+            }
+         }
+
+         if (var1 && null != class298.field2394) {
+            for(var3 = 0; var3 < class298.field2394.length; ++var3) {
+               if (var0 <= class298.field2394[var3] && class119.field879[var3] < class151.field1173[var3].length) {
+                  return new byte[class298.field2394[var3]];
+               }
+            }
+         }
+
+         return new byte[var0];
       }
-
-      this.field3191 = var1;
-      return var1;
    }
 
-   public boolean hasNext() {
-      return this.field3190 != this.field3189.field1564;
-   }
-
-   public void remove() {
-      if (this.field3191 == null) {
-         throw new IllegalStateException();
-      } else {
-         this.field3191.method574();
-         this.field3191 = null;
+   static final void method1774(int var0, int var1, int var2, boolean var3) {
+      if (class268.method1275(var0)) {
+         class201.method886(class329.field2600[var0], -1, var1, var2, var3);
       }
    }
 }

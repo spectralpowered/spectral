@@ -1,96 +1,82 @@
-import java.util.Iterator;
+public class class376 {
+   public int field3182;
+   public int field3183;
+   public int field3184;
+   public int field3185;
 
-public final class class376 implements Iterable {
-   class106 field3305;
-   class106 field3306;
-   class106[] field3304;
-   int field3303 = 0;
-   int field3307;
-
-   public class376(int var1) {
-      this.field3307 = var1;
-      this.field3304 = new class106[var1];
-
-      for(int var2 = 0; var2 < var1; ++var2) {
-         class106 var3 = this.field3304[var2] = new class106();
-         var3.field1359 = var3;
-         var3.field1360 = var3;
-      }
-
+   public class376(int var1, int var2) {
+      this(0, 0, var1, var2);
    }
 
-   public class106 method1794(long var1) {
-      class106 var3 = this.field3304[(int)(var1 & (long)(this.field3307 - 1))];
+   public class376(int var1, int var2, int var3, int var4) {
+      this.method1854(var1, var2);
+      this.method1853(var3, var4);
+   }
 
-      for(this.field3305 = var3.field1359; this.field3305 != var3; this.field3305 = this.field3305.field1359) {
-         if (this.field3305.field1361 == var1) {
-            class106 var4 = this.field3305;
-            this.field3305 = this.field3305.field1359;
-            return var4;
-         }
-      }
+   public void method1854(int var1, int var2) {
+      this.field3184 = var1;
+      this.field3183 = var2;
+   }
 
-      this.field3305 = null;
+   public void method1853(int var1, int var2) {
+      this.field3185 = var1;
+      this.field3182 = var2;
+   }
+
+   public boolean method1855(int var1, int var2) {
+      return var1 >= this.field3184 && var1 < this.field3185 + this.field3184 && var2 >= this.field3183 && var2 < this.field3183 + this.field3182;
+   }
+
+   public String toString() {
       return null;
    }
 
-   public void method1793(class106 var1, long var2) {
-      if (var1.field1360 != null) {
-         var1.method567();
+   public void method1860(class376 var1, class376 var2) {
+      this.method1856(var1, var2);
+      this.method1857(var1, var2);
+   }
+
+   void method1856(class376 var1, class376 var2) {
+      var2.field3184 = this.field3184;
+      var2.field3185 = this.field3185;
+      if (this.field3184 < var1.field3184) {
+         var2.field3185 = (var2.field3185 * 866368565 - (var1.field3184 * 866368565 - this.field3184 * 866368565)) * -1664174563;
+         var2.field3184 = var1.field3184;
       }
 
-      class106 var4 = this.field3304[(int)(var2 & (long)(this.field3307 - 1))];
-      var1.field1360 = var4.field1360;
-      var1.field1359 = var4;
-      var1.field1360.field1359 = var1;
-      var1.field1359.field1360 = var1;
-      var1.field1361 = var2;
-   }
-
-   public void method1791() {
-      for(int var1 = 0; var1 < this.field3307; ++var1) {
-         class106 var2 = this.field3304[var1];
-
-         while(true) {
-            class106 var3 = var2.field1359;
-            if (var3 == var2) {
-               break;
-            }
-
-            var3.method567();
-         }
+      if (var2.method1858() > var1.method1858()) {
+         var2.field3185 -= var2.method1858() - var1.method1858();
       }
 
-      this.field3305 = null;
-      this.field3306 = null;
-   }
-
-   public class106 method1792() {
-      this.field3303 = 0;
-      return this.method1795();
-   }
-
-   public class106 method1795() {
-      class106 var1;
-      if (this.field3303 > 0 && this.field3306 != this.field3304[this.field3303 - 1]) {
-         var1 = this.field3306;
-         this.field3306 = var1.field1359;
-         return var1;
-      } else {
-         do {
-            if (this.field3303 >= this.field3307) {
-               return null;
-            }
-
-            var1 = this.field3304[this.field3303++].field1359;
-         } while(var1 == this.field3304[this.field3303 - 1]);
-
-         this.field3306 = var1.field1359;
-         return var1;
+      if (var2.field3185 < 0) {
+         var2.field3185 = 0;
       }
+
    }
 
-   public Iterator iterator() {
-      return new class101(this);
+   void method1857(class376 var1, class376 var2) {
+      var2.field3183 = this.field3183;
+      var2.field3182 = this.field3182;
+      if (this.field3183 < var1.field3183) {
+         var2.field3182 = (var2.field3182 * 1582333657 - (var1.field3183 * 1582333657 - this.field3183 * 1582333657)) * -1804459671;
+         var2.field3183 = var1.field3183;
+      }
+
+      if (var2.method1859() > var1.method1859()) {
+         var2.field3182 -= var2.method1859() - var1.method1859();
+      }
+
+      if (var2.field3182 < 0) {
+         var2.field3182 = 0;
+      }
+
+   }
+
+   int method1858() {
+      return this.field3184 + this.field3185;
+   }
+
+   int method1859() {
+      return this.field3182 + this.field3183;
    }
 }

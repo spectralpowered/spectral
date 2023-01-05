@@ -1,43 +1,63 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+
 public class class32 {
-   public int field314 = -1;
-   public int field315 = -1;
-   public int field316 = -1;
-   public int field317 = -1;
-   public int field318 = -1;
-   public int field319 = -1;
-   public int field320 = -1;
-   public int field321 = -1;
-   public int field322 = -1;
-   public int field323 = -1;
-   public int field324 = -1;
+   static class38 field176;
+   static int field177;
+   final int field174;
+   final String field175;
 
-   public void method164(class164 var1) {
-      byte[] var3 = var1.method874(class321.field3024.field3025);
-      class134 var4 = new class134(var3);
+   class32(HttpURLConnection var1) throws IOException {
+      this.field174 = var1.getResponseCode();
+      var1.getResponseMessage();
+      var1.getHeaderFields();
+      StringBuilder var2 = new StringBuilder();
+      InputStream var3 = this.field174 >= 300 ? var1.getErrorStream() : var1.getInputStream();
+      if (null != var3) {
+         InputStreamReader var4 = new InputStreamReader(var3);
+         BufferedReader var5 = new BufferedReader(var4);
 
-      while(true) {
-         int var5 = var4.method669();
-         if (var5 == 0) {
-            return;
+         String var6;
+         while((var6 = var5.readLine()) != null) {
+            var2.append(var6);
          }
 
-         switch(var5) {
-         case 1:
-            var4.method673();
-            break;
-         case 2:
-            this.field315 = var4.method682();
-            this.field320 = var4.method682();
-            this.field316 = var4.method682();
-            this.field314 = var4.method682();
-            this.field317 = var4.method682();
-            this.field319 = var4.method682();
-            this.field323 = var4.method682();
-            this.field321 = var4.method682();
-            this.field322 = var4.method682();
-            this.field318 = var4.method682();
-            this.field324 = var4.method682();
+         var3.close();
+      }
+
+      this.field175 = var2.toString();
+   }
+
+   class32(String var1) {
+      this.field174 = 400;
+      this.field175 = "";
+   }
+
+   public int method138() {
+      return this.field174;
+   }
+
+   public String method139() {
+      return this.field175;
+   }
+
+   public static class313 method140(int var0) {
+      class313 var2 = (class313)class313.field2470.method394((long)var0);
+      if (null != var2) {
+         return var2;
+      } else {
+         byte[] var3 = class33.field178.method1365(1, var0);
+         var2 = new class313();
+         if (var3 != null) {
+            var2.method1511(new class127(var3), var0);
          }
+
+         var2.method1508();
+         class313.field2470.method396(var2, (long)var0);
+         return var2;
       }
    }
 }

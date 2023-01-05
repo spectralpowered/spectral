@@ -1,51 +1,86 @@
-import java.applet.Applet;
-import java.io.UnsupportedEncodingException;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
+import java.util.Iterator;
 
-public class class477 implements class464 {
-   public static Applet field3970;
-   static class164 field3968;
-   JSONObject field3969;
+public class class477 implements Iterable {
+   class195 field4011;
+   public class195 field4010 = new class195();
 
-   public class477(String var1) throws UnsupportedEncodingException {
-      this.method2307(var1);
+   public class477() {
+      this.field4010.field1737 = this.field4010;
+      this.field4010.field1735 = this.field4010;
    }
 
-   public class477(byte[] var1) throws UnsupportedEncodingException {
-      this.method2309(var1);
+   public void method2359() {
+      while(this.field4010.field1737 != this.field4010) {
+         this.field4010.field1737.method870();
+      }
+
    }
 
-   void method2309(byte[] var1) throws UnsupportedEncodingException {
-      String var3 = new String(var1, "UTF-8");
-      this.method2307(var3);
+   public void method2360(class195 var1) {
+      if (var1.field1735 != null) {
+         var1.method870();
+      }
+
+      var1.field1735 = this.field4010.field1735;
+      var1.field1737 = this.field4010;
+      var1.field1735.field1737 = var1;
+      var1.field1737.field1735 = var1;
    }
 
-   void method2307(String var1) throws UnsupportedEncodingException {
-      try {
-         if (var1.charAt(0) == '{') {
-            this.field3969 = new JSONObject(var1);
-         } else {
-            if (var1.charAt(0) != '[') {
-               throw new UnsupportedEncodingException("Invalid JSON passed to the JSON content builder.");
-            }
-
-            JSONArray var3 = new JSONArray(var1);
-            this.field3969 = new JSONObject();
-            this.field3969.put("arrayValues", (Object)var3);
-         }
-
-      } catch (JSONException var4) {
-         throw new UnsupportedEncodingException(var4.getMessage());
+   public class195 method2361() {
+      class195 var1 = this.field4010.field1737;
+      if (var1 == this.field4010) {
+         return null;
+      } else {
+         var1.method870();
+         return var1;
       }
    }
 
-   public JSONObject method2308() {
-      return this.field3969;
+   public class195 method2362() {
+      return this.method2363((class195)null);
    }
 
-   public byte[] method2278() throws UnsupportedEncodingException {
-      return this.field3969 == null ? new byte[0] : this.field3969.toString().getBytes("UTF-8");
+   class195 method2363(class195 var1) {
+      class195 var2;
+      if (var1 == null) {
+         var2 = this.field4010.field1737;
+      } else {
+         var2 = var1;
+      }
+
+      if (var2 == this.field4010) {
+         this.field4011 = null;
+         return null;
+      } else {
+         this.field4011 = var2.field1737;
+         return var2;
+      }
+   }
+
+   public class195 method2365() {
+      class195 var1 = this.field4011;
+      if (var1 == this.field4010) {
+         this.field4011 = null;
+         return null;
+      } else {
+         this.field4011 = var1.field1737;
+         return var1;
+      }
+   }
+
+   public Iterator iterator() {
+      return new class64(this);
+   }
+
+   public static void method2364(class195 var0, class195 var1) {
+      if (var0.field1735 != null) {
+         var0.method870();
+      }
+
+      var0.field1735 = var1;
+      var0.field1737 = var1.field1737;
+      var0.field1735.field1737 = var0;
+      var0.field1737.field1735 = var0;
    }
 }

@@ -1,22 +1,22 @@
-public class class484 {
-   public static int[] field3991;
-   public static int[] field3992;
-   public static short[][] field3993;
-   static int[] field3994 = new int[32];
+public class class484 implements class78 {
+   static final class484 field4030 = new class484(1, 1);
+   static final class484 field4031 = new class484(2, 2);
+   static final class484 field4032 = new class484(3, 3);
+   static final class484 field4033 = new class484(4, 4);
+   static final class484 field4034 = new class484(5, 5);
+   static final class484 field4036 = new class484(7, 7);
+   static final class484 field4037 = new class484(6, 6);
+   static final class484 field4038 = new class484(0, 0);
+   static final class484 field4039 = new class484(8, 8);
+   final int field4029;
+   final int field4035;
 
-   static {
-      int var0 = 2;
-
-      for(int var1 = 0; var1 < 32; ++var1) {
-         field3994[var1] = var0 - 1;
-         var0 += var0;
-      }
-
-      field3991 = new int[4000];
-      field3992 = new int[4000];
+   class484(int var1, int var2) {
+      this.field4035 = var1;
+      this.field4029 = var2;
    }
 
-   static int method2318(long var0) {
-      return (int)(var0 >>> 14 & 3L);
+   public int method330() {
+      return this.field4029;
    }
 }

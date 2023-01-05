@@ -1,89 +1,43 @@
-public final class class394 extends class93 {
-   public class394(byte[] var1, int[] var2, int[] var3, int[] var4, int[] var5, int[] var6, byte[][] var7) {
-      super(var1, var2, var3, var4, var5, var6, var7);
+public class class394 implements class78 {
+   public static final class394 field3285 = new class394(0);
+   public static final class394 field3287 = new class394(2);
+   public static final class394 field3293 = new class394(3);
+   public static final class394 field3299 = new class394(9);
+   public static final class394 field3304 = new class394(10);
+   public static final class394 field3305 = new class394(11);
+   static final class394 field3286 = new class394(1);
+   static final class394 field3288 = new class394(4);
+   static final class394 field3289 = new class394(8);
+   static final class394 field3290 = new class394(5);
+   static final class394 field3291 = new class394(6);
+   static final class394 field3292 = new class394(7);
+   static final class394 field3294 = new class394(12);
+   static final class394 field3295 = new class394(13);
+   static final class394 field3296 = new class394(14);
+   static final class394 field3297 = new class394(15);
+   static final class394 field3298 = new class394(16);
+   static final class394 field3300 = new class394(17);
+   static final class394 field3301 = new class394(19);
+   static final class394 field3302 = new class394(20);
+   static final class394 field3303 = new class394(21);
+   static final class394 field3306 = new class394(22);
+   static final class394 field3308 = new class394(18);
+   public final int field3307;
+
+   class394(int var1) {
+      this.field3307 = var1;
    }
 
-   public class394(byte[] var1) {
-      super(var1);
+   public int method330() {
+      return this.field3307;
    }
 
-   final void method528(byte[] var1, int var2, int var3, int var4, int var5, int var6) {
-      int var7 = var2 + var3 * class362.field3242;
-      int var8 = class362.field3242 - var4;
-      int var9 = 0;
-      int var10 = 0;
-      int var11;
-      if (var3 < class362.field3244) {
-         var11 = class362.field3244 - var3;
-         var5 -= var11;
-         var3 = class362.field3244;
-         var10 += var11 * var4;
-         var7 += var11 * class362.field3242;
-      }
-
-      if (var3 + var5 > class362.field3245) {
-         var5 -= var3 + var5 - class362.field3245;
-      }
-
-      if (var2 < class362.field3246) {
-         var11 = class362.field3246 - var2;
-         var4 -= var11;
-         var2 = class362.field3246;
-         var10 += var11;
-         var7 += var11;
-         var9 += var11;
-         var8 += var11;
-      }
-
-      if (var2 + var4 > class362.field3247) {
-         var11 = var2 + var4 - class362.field3247;
-         var4 -= var11;
-         var9 += var11;
-         var8 += var11;
-      }
-
-      if (var4 > 0 && var5 > 0) {
-         method531(class362.field3243, var1, var6, var10, var7, var4, var5, var8, var9);
-      }
-   }
-
-   final void method529(byte[] var1, int var2, int var3, int var4, int var5, int var6, int var7) {
-      int var8 = var2 + var3 * class362.field3242;
-      int var9 = class362.field3242 - var4;
-      int var10 = 0;
-      int var11 = 0;
-      int var12;
-      if (var3 < class362.field3244) {
-         var12 = class362.field3244 - var3;
-         var5 -= var12;
-         var3 = class362.field3244;
-         var11 += var12 * var4;
-         var8 += var12 * class362.field3242;
-      }
-
-      if (var3 + var5 > class362.field3245) {
-         var5 -= var3 + var5 - class362.field3245;
-      }
-
-      if (var2 < class362.field3246) {
-         var12 = class362.field3246 - var2;
-         var4 -= var12;
-         var2 = class362.field3246;
-         var11 += var12;
-         var8 += var12;
-         var10 += var12;
-         var9 += var12;
-      }
-
-      if (var2 + var4 > class362.field3247) {
-         var12 = var2 + var4 - class362.field3247;
-         var4 -= var12;
-         var10 += var12;
-         var9 += var12;
-      }
-
-      if (var4 > 0 && var5 > 0) {
-         method536(class362.field3243, var1, var6, var11, var8, var4, var5, var9, var10, var7);
-      }
+   static final void method1931(String var0) {
+      StringBuilder var10000 = new StringBuilder();
+      class177 var10001 = (class177)null;
+      var10000 = var10000.append(class177.field1508).append(var0);
+      var10001 = (class177)null;
+      String var2 = var10000.append(class177.field1509).toString();
+      class164.method765(30, "", var2);
    }
 }

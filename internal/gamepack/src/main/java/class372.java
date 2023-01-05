@@ -1,57 +1,65 @@
-public class class372 extends class37 {
-   final class468 field3295;
+public class class372 {
+   static class367 field3166;
+   class130[] field3165;
+   int field3167;
 
-   public class372(class468 var1) {
-      super(400);
-      this.field3295 = var1;
+   class372(class127 var1, int var2) {
+      this.field3165 = new class130[var2];
+      this.field3167 = var1.method547();
+
+      for(int var3 = 0; var3 < this.field3165.length; ++var3) {
+         class130 var4 = new class130(this.field3167, var1, false);
+         this.field3165[var3] = var4;
+      }
+
+      this.method1834();
    }
 
-   class209 method203() {
-      return new class423();
+   void method1834() {
+      class130[] var2 = this.field3165;
+
+      for(int var3 = 0; var3 < var2.length; ++var3) {
+         class130 var4 = var2[var3];
+         if (var4.field1085 >= 0) {
+            var4.field1082 = this.field3165[var4.field1085];
+         }
+      }
+
    }
 
-   class209[] method206(int var1) {
-      return new class423[var1];
+   public int method1835() {
+      return this.field3165.length;
    }
 
-   public void method1783(class134 var1, int var2) {
-      while(true) {
-         if (var1.field1487 < var2) {
-            int var4 = var1.method669();
-            boolean var5 = (var4 & 1) == 1;
-            class174 var6 = new class174(var1.method677(), this.field3295);
-            class174 var7 = new class174(var1.method677(), this.field3295);
-            var1.method677();
-            if (var6 != null && var6.method930()) {
-               class423 var8 = (class423)this.method204(var6);
-               if (var5) {
-                  class423 var9 = (class423)this.method204(var7);
-                  if (null != var9 && var8 != var9) {
-                     if (null != var8) {
-                        this.method193(var9);
-                     } else {
-                        var8 = var9;
-                     }
-                  }
-               }
+   class130 method1836(int var1) {
+      return var1 >= this.method1835() ? null : this.field3165[var1];
+   }
 
-               if (null != var8) {
-                  this.method197(var8, var6, var7);
-                  continue;
-               }
+   class130[] method1838() {
+      return this.field3165;
+   }
 
-               if (this.method188() < 400) {
-                  int var10 = this.method188();
-                  var8 = (class423)this.method195(var6, var7);
-                  var8.field3576 = var10;
-               }
-               continue;
-            }
+   void method1837(class357 var1, int var2) {
+      this.method1839(var1, var2, (boolean[])null, false);
+   }
 
-            throw new IllegalStateException();
+   void method1839(class357 var1, int var2, boolean[] var3, boolean var4) {
+      int var6 = var1.method1785();
+      int var7 = 0;
+      class130[] var8 = this.method1838();
+
+      for(int var9 = 0; var9 < var8.length; ++var9) {
+         class130 var10 = var8[var9];
+         if (var3 == null || var4 == var3[var7]) {
+            var1.method1778(var2, var10, var7, var6);
          }
 
-         return;
+         ++var7;
       }
+
+   }
+
+   public static boolean method1840() {
+      return client.field406 != null;
    }
 }

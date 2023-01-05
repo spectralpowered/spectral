@@ -15,9 +15,21 @@ application {
     tasks.run.get().workingDir = rootProject.projectDir
 }
 
-java {
-    withSourcesJar()
-    withJavadocJar()
+val sourcesJar by tasks.register<Jar>("sourcesJar") {
+    from(sourceSets["main"].allJava)
+    archiveClassifier.set("sources")
+}
+
+val javadocJar by tasks.register<Jar>("javadocJar") {
+    dependsOn(tasks.javadoc)
+    from(tasks.javadoc.get().destinationDir)
+    archiveClassifier.set("javadoc")
+}
+
+artifacts {
+    add("archives", tasks.jar)
+    add("archives", sourcesJar)
+    add("archives", javadocJar)
 }
 
 publishing {

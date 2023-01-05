@@ -1,10 +1,70 @@
-public class class418 {
-   static class220 method2009(class164 var0, int var1) {
-      byte[] var3 = var0.method874(var1);
-      return var3 == null ? null : new class220(var3);
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.security.cert.CertificateException;
+import java.security.cert.CertificateFactory;
+import java.util.LinkedList;
+import java.util.concurrent.ScheduledExecutorService;
+import org.bouncycastle.crypto.tls.Certificate;
+import org.bouncycastle.crypto.tls.CertificateRequest;
+import org.bouncycastle.crypto.tls.TlsAuthentication;
+import org.bouncycastle.crypto.tls.TlsCredentials;
+
+class class418 implements TlsAuthentication {
+   public static int[] field3431;
+   static ScheduledExecutorService field3432;
+   // $FF: synthetic field
+   final class319 this$2;
+
+   class418(class319 var1) {
+      this.this$2 = var1;
    }
 
-   static final void method2010(long var0) {
-      class245.field2606[++class245.field2608 - 1] = var0;
+   public void notifyServerCertificate(Certificate var1) throws IOException {
+      try {
+         CertificateFactory var2 = CertificateFactory.getInstance("X.509");
+         LinkedList var3 = new LinkedList();
+         org.bouncycastle.asn1.x509.Certificate[] var4 = var1.getCertificateList();
+
+         for(int var5 = 0; var5 < var4.length; ++var5) {
+            org.bouncycastle.asn1.x509.Certificate var6 = var4[var5];
+            var3.add(var2.generateCertificate(new ByteArrayInputStream(var6.getEncoded())));
+         }
+
+         this.this$2.this$1.field2365 = (java.security.cert.Certificate[])((java.security.cert.Certificate[])var3.toArray(new java.security.cert.Certificate[0]));
+      } catch (CertificateException var7) {
+         throw new IOException(var7);
+      }
+   }
+
+   public TlsCredentials getClientCredentials(CertificateRequest var1) throws IOException {
+      return null;
+   }
+
+   static final void method2018(int var0, int var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8, int var9) {
+      class138 var11 = null;
+
+      for(class138 var12 = (class138)client.field450.method646(); var12 != null; var12 = (class138)client.field450.method648()) {
+         if (var0 == var12.field1122 && var12.field1118 == var1 && var12.field1129 == var2 && var3 == var12.field1128) {
+            var11 = var12;
+            break;
+         }
+      }
+
+      if (var11 == null) {
+         var11 = new class138();
+         var11.field1122 = var0;
+         var11.field1128 = var3;
+         var11.field1118 = var1;
+         var11.field1129 = var2;
+         class443.method2197(var11);
+         client.field450.method642(var11);
+      }
+
+      var11.field1125 = var4;
+      var11.field1127 = var5;
+      var11.field1126 = var6;
+      var11.field1120 = var8;
+      var11.field1130 = var9;
+      var11.method634(var7);
    }
 }

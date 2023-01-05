@@ -34,6 +34,7 @@ import io.spectralpowered.deobfuscator.transformer.MultiplierRemover
 import io.spectralpowered.deobfuscator.transformer.RedundantGotoRemover
 import io.spectralpowered.deobfuscator.transformer.Renamer
 import io.spectralpowered.deobfuscator.transformer.RuntimeExceptionRemover
+import io.spectralpowered.deobfuscator.transformer.SpectralClassesAdder
 import io.spectralpowered.deobfuscator.transformer.StackFrameFixer
 import io.spectralpowered.deobfuscator.transformer.StaticFieldMover
 import io.spectralpowered.deobfuscator.transformer.StaticMethodMover
@@ -91,6 +92,7 @@ class Deobfuscator(
         register<StaticMethodMover>()
         register<GetPathFixer>()
         register<StackFrameFixer>()
+        register<SpectralClassesAdder>()
 
         Logger.info("Found ${transformers.size} registered transformers.")
     }

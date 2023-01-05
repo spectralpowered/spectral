@@ -1,625 +1,557 @@
-public class class177 implements class262 {
-   static int field1929;
-
-   static final void method935(class30 var0, int var1, int var2, int var3, int var4, int var5) {
-      if (var0 != null && var0.method156()) {
-         if (var0 instanceof class53) {
-            class272 var7 = ((class53)var0).field798;
-            if (var7.field2743 != null) {
-               var7 = var7.method1286();
-            }
-
-            if (null == var7) {
-               return;
-            }
-         }
-
-         int var76 = class25.field180;
-         int[] var8 = class25.field179;
-         byte var9 = 0;
-         class47 var11;
-         if (var1 < var76 && client.field435 == var0.field237) {
-            var11 = (class47)var0;
-            boolean var10;
-            if (client.field653 == 0) {
-               var10 = false;
-            } else if (var11 != class89.field982) {
-               boolean var12 = 0 != (client.field653 & 4);
-               var10 = var12 || class346.method1664((byte)-1) && var11.method237() || class109.method576() && var11.method252();
-            } else {
-               var10 = class378.method1804();
-            }
-
-            if (var10) {
-               class47 var79 = (class47)var0;
-               if (var1 < var76) {
-                  class280.method1346(var0, 15 + var0.field292);
-                  class93 var13 = (class93)client.field487.get(class39.field365);
-                  byte var14 = 9;
-                  var13.method520(var79.field401.method928(), var2 + client.field640, var3 + client.field461 - var14, 16777215, 0);
-                  var9 = 18;
-               }
-            }
-         }
-
-         int var77 = -2;
-         int var16;
-         int var23;
-         int var24;
-         if (!var0.field296.method323()) {
-            class280.method1346(var0, var0.field292 + 15);
-
-            for(class44 var78 = (class44)var0.field296.method327(); var78 != null; var78 = (class44)var0.field296.method321()) {
-               class132 var81 = var78.method224(client.field435);
-               if (var81 == null) {
-                  if (var78.method225()) {
-                     var78.method567();
-                  }
-               } else {
-                  class5 var84 = var78.field376;
-                  class319 var88 = var84.method16();
-                  class319 var15 = var84.method15();
-                  int var17 = 0;
-                  if (var88 != null && null != var15) {
-                     if (var84.field28 * 2 < var15.field3014) {
-                        var17 = var84.field28;
-                     }
-
-                     var16 = var15.field3014 - var17 * 2;
-                  } else {
-                     var16 = var84.field27;
-                  }
-
-                  int var18 = 255;
-                  boolean var19 = true;
-                  int var20 = client.field435 - var81.field1479;
-                  int var21 = var81.field1476 * var16 / var84.field27;
-                  int var22;
-                  int var95;
-                  if (var81.field1480 > var20) {
-                     var22 = var84.field17 == 0 ? 0 : var84.field17 * (var20 / var84.field17);
-                     var23 = var16 * var81.field1478 / var84.field27;
-                     var95 = (var21 - var23) * var22 / var81.field1480 + var23;
-                  } else {
-                     var95 = var21;
-                     var22 = var84.field15 + var81.field1480 - var20;
-                     if (var84.field22 >= 0) {
-                        var18 = (var22 << 8) / (var84.field15 - var84.field22);
-                     }
-                  }
-
-                  if (var81.field1476 > 0 && var95 < 1) {
-                     var95 = 1;
-                  }
-
-                  if (null != var88 && null != var15) {
-                     if (var95 == var16) {
-                        var95 += var17 * 2;
-                     } else {
-                        var95 += var17;
-                     }
-
-                     var22 = var88.field3013;
-                     var77 += var22;
-                     var23 = client.field640 + var2 - (var16 >> 1);
-                     var24 = client.field461 + var3 - var77;
-                     var23 -= var17;
-                     if (var18 >= 0 && var18 < 255) {
-                        var88.method1553(var23, var24, var18);
-                        class362.method1733(var23, var24, var23 + var95, var22 + var24);
-                        var15.method1553(var23, var24, var18);
-                     } else {
-                        var88.method1548(var23, var24);
-                        class362.method1733(var23, var24, var23 + var95, var22 + var24);
-                        var15.method1548(var23, var24);
-                     }
-
-                     class362.method1732(var2, var3, var2 + var4, var3 + var5);
-                     var77 += 2;
-                  } else {
-                     var77 += 5;
-                     if (client.field640 > -1) {
-                        var22 = client.field640 + var2 - (var16 >> 1);
-                        var23 = var3 + client.field461 - var77;
-                        class362.method1739(var22, var23, var95, 5, 65280);
-                        class362.method1739(var22 + var95, var23, var16 - var95, 5, 16711680);
-                     }
-
-                     var77 += 2;
-                  }
-               }
-            }
-         }
-
-         if (var77 == -2) {
-            var77 += 7;
-         }
-
-         var77 += var9;
-         if (var1 < var76) {
-            var11 = (class47)var0;
-            if (var11.field407) {
-               return;
-            }
-
-            if (var11.field389 != -1 || -1 != var11.field390) {
-               class280.method1346(var0, 15 + var0.field292);
-               if (client.field640 > -1) {
-                  if (-1 != var11.field389) {
-                     var77 += 25;
-                     class296.field2830[var11.field389].method1548(client.field640 + var2 - 12, client.field461 + var3 - var77);
-                  }
-
-                  if (-1 != var11.field390) {
-                     var77 += 25;
-                     class343.field3151[var11.field390].method1548(client.field640 + var2 - 12, client.field461 + var3 - var77);
-                  }
-               }
-            }
-
-            if (var1 >= 0 && 10 == client.field442 && var8[var1] == client.field511) {
-               class280.method1346(var0, var0.field292 + 15);
-               if (client.field640 > -1) {
-                  var77 += class307.field2901[1].field3013;
-                  class307.field2901[1].method1548(var2 + client.field640 - 12, client.field461 + var3 - var77);
-               }
-            }
-         } else {
-            class53 var80 = (class53)var0;
-            int[] var83 = var80.method308();
-            short[] var86 = var80.method301();
-            if (null != var86 && var83 != null) {
-               for(int var89 = 0; var89 < var86.length; ++var89) {
-                  if (var86[var89] >= 0 && var83[var89] >= 0) {
-                     long var90 = (long)var83[var89] << 8 | (long)var86[var89];
-                     class319 var93 = (class319)client.field488.method2294(var90);
-                     if (var93 == null) {
-                        class319[] var94 = class79.method434(class280.field2767, var83[var89], 0);
-                        if (null != var94 && var86[var89] < var94.length) {
-                           var93 = var94[var86[var89]];
-                           client.field488.method2292(var90, var93);
-                        }
-                     }
-
-                     if (null != var93) {
-                        class280.method1346(var0, 15 + var0.field292);
-                        if (client.field640 > -1) {
-                           var3 -= var93.field3013;
-                           var93.method1548(var2 + client.field640 - (var93.field3014 >> 1), client.field461 + var3);
-                           var3 -= 2;
-                        }
-                     }
-                  }
-               }
-            }
-
-            if (client.field442 == 1 && client.field635[var1 - var76] == client.field443 && client.field435 % 20 < 10) {
-               class280.method1346(var0, 15 + var0.field292);
-               if (client.field640 > -1) {
-                  class307.field2901[0].method1548(client.field640 + var2 - 12, client.field461 + var3 - 28);
-               }
-            }
-         }
-
-         if (var0.field253 != null && (var1 >= var76 || !var0.field242 && (4 == client.field659 || !var0.field254 && (client.field659 == 0 || 3 == client.field659 || 1 == client.field659 && ((class47)var0).method237())))) {
-            class280.method1346(var0, var0.field292 + 15);
-            if (client.field640 > -1 && client.field678 < client.field523) {
-               client.field711[client.field678] = class299.field2880.method538(var0.field253) / 2;
-               client.field526[client.field678] = class299.field2880.field999;
-               client.field524[client.field678] = client.field640;
-               client.field525[client.field678] = client.field461 - var77;
-               client.field528[client.field678] = var0.field257;
-               client.field529[client.field678] = var0.field284;
-               client.field619[client.field678] = var0.field303;
-               client.field522[client.field678] = var0.field253;
-               ++client.field678;
-               var77 += 12;
-            }
-         }
-
-         for(int var82 = 0; var82 < 4; ++var82) {
-            int var85 = var0.field262[var82];
-            int var87 = var0.field260[var82];
-            class399 var91 = null;
-            int var92 = 0;
-            if (var87 >= 0) {
-               if (var85 <= client.field435) {
-                  continue;
-               }
-
-               var91 = class246.method1223(var0.field260[var82]);
-               var92 = var91.field3492;
-               if (null != var91 && var91.field3497 != null) {
-                  var91 = var91.method1947();
-                  if (var91 == null) {
-                     var0.field262[var82] = -1;
-                     continue;
-                  }
-               }
-            } else if (var85 < 0) {
-               continue;
-            }
-
-            var16 = var0.field263[var82];
-            class399 var97 = null;
-            if (var16 >= 0) {
-               var97 = class246.method1223(var16);
-               if (var97 != null && null != var97.field3497) {
-                  var97 = var97.method1947();
-               }
-            }
-
-            if (var85 - var92 <= client.field435) {
-               if (null == var91) {
-                  var0.field262[var82] = -1;
-               } else {
-                  class280.method1346(var0, var0.field292 / 2);
-                  if (client.field640 > -1) {
-                     boolean var96 = true;
-                     if (var82 == 1) {
-                        client.field461 -= 20;
-                     }
-
-                     if (var82 == 2) {
-                        client.field640 -= 15;
-                        client.field461 -= 10;
-                     }
-
-                     if (var82 == 3) {
-                        client.field640 += 15;
-                        client.field461 -= 10;
-                     }
-
-                     class319 var100 = null;
-                     class319 var98 = null;
-                     class319 var99 = null;
-                     class319 var101 = null;
-                     var23 = 0;
-                     var24 = 0;
-                     int var25 = 0;
-                     int var26 = 0;
-                     int var27 = 0;
-                     int var28 = 0;
-                     int var29 = 0;
-                     int var30 = 0;
-                     class319 var31 = null;
-                     class319 var32 = null;
-                     class319 var33 = null;
-                     class319 var34 = null;
-                     int var35 = 0;
-                     int var36 = 0;
-                     int var37 = 0;
-                     int var38 = 0;
-                     int var39 = 0;
-                     int var40 = 0;
-                     int var41 = 0;
-                     int var42 = 0;
-                     int var43 = 0;
-                     var100 = var91.method1949();
-                     int var44;
-                     if (var100 != null) {
-                        var23 = var100.field3014;
-                        var44 = var100.field3013;
-                        if (var44 > var43) {
-                           var43 = var44;
-                        }
-
-                        var27 = var100.field3015;
-                     }
-
-                     var98 = var91.method1950();
-                     if (null != var98) {
-                        var24 = var98.field3014;
-                        var44 = var98.field3013;
-                        if (var44 > var43) {
-                           var43 = var44;
-                        }
-
-                        var28 = var98.field3015;
-                     }
-
-                     var99 = var91.method1957();
-                     if (null != var99) {
-                        var25 = var99.field3014;
-                        var44 = var99.field3013;
-                        if (var44 > var43) {
-                           var43 = var44;
-                        }
-
-                        var29 = var99.field3015;
-                     }
-
-                     var101 = var91.method1951();
-                     if (var101 != null) {
-                        var26 = var101.field3014;
-                        var44 = var101.field3013;
-                        if (var44 > var43) {
-                           var43 = var44;
-                        }
-
-                        var30 = var101.field3015;
-                     }
-
-                     if (var97 != null) {
-                        var31 = var97.method1949();
-                        if (var31 != null) {
-                           var35 = var31.field3014;
-                           var44 = var31.field3013;
-                           if (var44 > var43) {
-                              var43 = var44;
-                           }
-
-                           var39 = var31.field3015;
-                        }
-
-                        var32 = var97.method1950();
-                        if (var32 != null) {
-                           var36 = var32.field3014;
-                           var44 = var32.field3013;
-                           if (var44 > var43) {
-                              var43 = var44;
-                           }
-
-                           var40 = var32.field3015;
-                        }
-
-                        var33 = var97.method1957();
-                        if (null != var33) {
-                           var37 = var33.field3014;
-                           var44 = var33.field3013;
-                           if (var44 > var43) {
-                              var43 = var44;
-                           }
-
-                           var41 = var33.field3015;
-                        }
-
-                        var34 = var97.method1951();
-                        if (var34 != null) {
-                           var38 = var34.field3014;
-                           var44 = var34.field3013;
-                           if (var44 > var43) {
-                              var43 = var44;
-                           }
-
-                           var42 = var34.field3015;
-                        }
-                     }
-
-                     class394 var102 = var91.method1954();
-                     if (null == var102) {
-                        var102 = class248.field2615;
-                     }
-
-                     class394 var45;
-                     if (var97 != null) {
-                        var45 = var97.method1954();
-                        if (null == var45) {
-                           var45 = class248.field2615;
-                        }
-                     } else {
-                        var45 = class248.field2615;
-                     }
-
-                     String var46 = null;
-                     String var47 = null;
-                     boolean var48 = false;
-                     int var49 = 0;
-                     var46 = var91.method1948(var0.field261[var82]);
-                     int var103 = var102.method538(var46);
-                     if (null != var97) {
-                        var47 = var97.method1948(var0.field264[var82]);
-                        var49 = var45.method538(var47);
-                     }
-
-                     int var50 = 0;
-                     int var51 = 0;
-                     if (var24 > 0) {
-                        if (var99 == null && null == var101) {
-                           var50 = 1;
-                        } else {
-                           var50 = var103 / var24 + 1;
-                        }
-                     }
-
-                     if (null != var97 && var36 > 0) {
-                        if (var33 == null && var34 == null) {
-                           var51 = 1;
-                        } else {
-                           var51 = var49 / var36 + 1;
-                        }
-                     }
-
-                     int var52 = 0;
-                     int var53 = var52;
-                     if (var23 > 0) {
-                        var52 += var23;
-                     }
-
-                     var52 += 2;
-                     int var54 = var52;
-                     if (var25 > 0) {
-                        var52 += var25;
-                     }
-
-                     int var55 = var52;
-                     int var56 = var52;
-                     int var57;
-                     if (var24 > 0) {
-                        var57 = var50 * var24;
-                        var52 += var57;
-                        var56 += (var57 - var103) / 2;
-                     } else {
-                        var52 += var103;
-                     }
-
-                     var57 = var52;
-                     if (var26 > 0) {
-                        var52 += var26;
-                     }
-
-                     int var58 = 0;
-                     int var59 = 0;
-                     int var60 = 0;
-                     int var61 = 0;
-                     int var62 = 0;
-                     int var63;
-                     if (null != var97) {
-                        var52 += 2;
-                        var58 = var52;
-                        if (var35 > 0) {
-                           var52 += var35;
-                        }
-
-                        var52 += 2;
-                        var59 = var52;
-                        if (var37 > 0) {
-                           var52 += var37;
-                        }
-
-                        var60 = var52;
-                        var62 = var52;
-                        if (var36 > 0) {
-                           var63 = var51 * var36;
-                           var52 += var63;
-                           var62 += (var63 - var49) / 2;
-                        } else {
-                           var52 += var49;
-                        }
-
-                        var61 = var52;
-                        if (var38 > 0) {
-                           var52 += var38;
-                        }
-                     }
-
-                     var63 = var0.field262[var82] - client.field435;
-                     int var64 = var91.field3500 - var91.field3500 * var63 / var91.field3492;
-                     int var65 = -var91.field3495 + var63 * var91.field3495 / var91.field3492;
-                     int var66 = var2 + client.field640 - (var52 >> 1) + var64;
-                     int var67 = var65 + (client.field461 + var3 - 12);
-                     int var68 = var67;
-                     int var69 = var67 + var43;
-                     int var70 = var91.field3505 + var67 + 15;
-                     int var71 = var70 - var102.field998;
-                     int var72 = var70 + var102.field1009;
-                     if (var71 < var67) {
-                        var68 = var71;
-                     }
-
-                     if (var72 > var69) {
-                        var69 = var72;
-                     }
-
-                     int var73 = 0;
-                     int var74;
-                     int var75;
-                     if (var97 != null) {
-                        var73 = var67 + 15 + var97.field3505;
-                        var74 = var73 - var45.field998;
-                        var75 = var45.field1009 + var73;
-                        if (var74 < var68) {
-                           ;
-                        }
-
-                        if (var75 > var69) {
-                           ;
-                        }
-                     }
-
-                     var74 = 255;
-                     if (var91.field3502 >= 0) {
-                        var74 = (var63 << 8) / (var91.field3492 - var91.field3502);
-                     }
-
-                     if (var74 >= 0 && var74 < 255) {
-                        if (var100 != null) {
-                           var100.method1553(var66 + var53 - var27, var67, var74);
-                        }
-
-                        if (null != var99) {
-                           var99.method1553(var54 + var66 - var29, var67, var74);
-                        }
-
-                        if (var98 != null) {
-                           for(var75 = 0; var75 < var50; ++var75) {
-                              var98.method1553(var66 + var55 - var28 + var75 * var24, var67, var74);
-                           }
-                        }
-
-                        if (null != var101) {
-                           var101.method1553(var57 + var66 - var30, var67, var74);
-                        }
-
-                        var102.method539(var46, var56 + var66, var70, var91.field3490, 0, var74);
-                        if (var97 != null) {
-                           if (var31 != null) {
-                              var31.method1553(var58 + var66 - var39, var67, var74);
-                           }
-
-                           if (var33 != null) {
-                              var33.method1553(var59 + var66 - var41, var67, var74);
-                           }
-
-                           if (null != var32) {
-                              for(var75 = 0; var75 < var51; ++var75) {
-                                 var32.method1553(var66 + var60 - var40 + var75 * var36, var67, var74);
-                              }
-                           }
-
-                           if (var34 != null) {
-                              var34.method1553(var61 + var66 - var42, var67, var74);
-                           }
-
-                           var45.method539(var47, var62 + var66, var73, var97.field3490, 0, var74);
-                        }
-                     } else {
-                        if (null != var100) {
-                           var100.method1548(var66 + var53 - var27, var67);
-                        }
-
-                        if (null != var99) {
-                           var99.method1548(var54 + var66 - var29, var67);
-                        }
-
-                        if (null != var98) {
-                           for(var75 = 0; var75 < var50; ++var75) {
-                              var98.method1548(var55 + var66 - var28 + var75 * var24, var67);
-                           }
-                        }
-
-                        if (null != var101) {
-                           var101.method1548(var57 + var66 - var30, var67);
-                        }
-
-                        var102.method518(var46, var66 + var56, var70, var91.field3490 | -16777216, 0);
-                        if (var97 != null) {
-                           if (var31 != null) {
-                              var31.method1548(var58 + var66 - var39, var67);
-                           }
-
-                           if (null != var33) {
-                              var33.method1548(var66 + var59 - var41, var67);
-                           }
-
-                           if (var32 != null) {
-                              for(var75 = 0; var75 < var51; ++var75) {
-                                 var32.method1548(var36 * var75 + (var66 + var60 - var40), var67);
-                              }
-                           }
-
-                           if (null != var34) {
-                              var34.method1548(var61 + var66 - var42, var67);
-                           }
-
-                           var45.method518(var47, var66 + var62, var73, var97.field3490 | -16777216, 0);
-                        }
-                     }
-                  }
-               }
-            }
-         }
-
-      }
+public class class177 {
+   public static String field1323 = "Loading world map - ";
+   public static String field1324;
+   public static String field1325 = "null";
+   public static String field1326 = "Hidden";
+   public static String field1327 = "Ok";
+   public static String field1328 = "Select";
+   public static String field1329 = "Continue";
+   public static String field1330;
+   public static String field1331 = "Please try using a different world.";
+   public static String field1332;
+   public static String field1333 = "Please wait - attempting to reestablish";
+   public static String field1334;
+   public static String field1335;
+   public static String field1336;
+   public static String field1337 = "Starting game engine...";
+   public static String field1338 = "Prepared visibility map";
+   public static String field1339;
+   public static String field1340 = "Checking for updates - ";
+   public static String field1341 = "Loaded update list";
+   public static String field1342;
+   public static String field1343 = "in serious rule breaking.";
+   public static String field1344;
+   public static String field1345 = "Loading title screen - ";
+   public static String field1346 = "Loaded title screen";
+   public static String field1347 = "Loading config - ";
+   public static String field1348 = "Please use a different world.";
+   public static String field1349 = "Connection lost";
+   public static String field1350 = "Loaded sprites";
+   public static String field1351 = "Loading textures - ";
+   public static String field1352;
+   public static String field1353;
+   public static String field1354 = "Loading wordpack - ";
+   public static String field1355;
+   public static String field1356 = "Loading interfaces - ";
+   public static String field1357 = "Trust this computer";
+   public static String field1358 = "";
+   public static String field1359;
+   public static String field1361;
+   public static String field1362 = "";
+   public static String field1363 = "Please enter a 6-digit PIN.";
+   public static String field1364 = "";
+   public static String field1365 = "You have only just left another world.";
+   public static String field1366 = "Your profile will be transferred in:";
+   public static String field1367;
+   public static String field1368 = "Connection timed out.";
+   public static String field1369;
+   public static String field1370 = "";
+   public static String field1371 = "Error connecting to server.";
+   public static String field1372;
+   public static String field1373;
+   public static String field1374 = "No response from server.";
+   public static String field1375 = "Please try using a different world.";
+   public static String field1376 = "";
+   public static String field1377 = "Your account has been involved";
+   public static String field1378;
+   public static String field1379 = "";
+   public static String field1380 = "Either your account is still logged in, or the last";
+   public static String field1381;
+   public static String field1382 = "Please try again later.";
+   public static String field1383 = "RuneScape has been updated!";
+   public static String field1384 = "Please reload this page.";
+   public static String field1385 = "";
+   public static String field1386 = "This world is full.";
+   public static String field1387;
+   public static String field1388 = "";
+   public static String field1389 = "Unable to connect.";
+   public static String field1390 = "Login server offline.";
+   public static String field1391 = "";
+   public static String field1392 = "Login limit exceeded.";
+   public static String field1393 = "Too many connections from your address.";
+   public static String field1394 = "";
+   public static String field1395 = "Unable to connect.";
+   public static String field1396 = "Bad session id.";
+   public static String field1397 = "";
+   public static String field1398 = "We suspect someone knows your password.";
+   public static String field1399 = "Press 'change your password' on front page.";
+   public static String field1400 = "";
+   public static String field1401 = "You need a members account to login to this world.";
+   public static String field1402 = "Please subscribe, or use a different world.";
+   public static String field1403 = "";
+   public static String field1404 = "Could not complete login.";
+   public static String field1405;
+   public static String field1406;
+   public static String field1407 = "Loaded input handler";
+   public static String field1408 = "Please wait 1 minute and try again.";
+   public static String field1409;
+   public static String field1410 = "Loaded config";
+   public static String field1411 = "Please wait a few minutes before trying again.";
+   public static String field1412;
+   public static String field1413 = "Support Page";
+   public static String field1414 = "members world and move your character";
+   public static String field1415;
+   public static String field1416 = "Account locked as we suspect it has been stolen.";
+   public static String field1417;
+   public static String field1418;
+   public static String field1419;
+   public static String field1420;
+   public static String field1421;
+   public static String field1422;
+   public static String field1423 = " seconds.";
+   public static String field1424;
+   public static String field1425;
+   public static String field1426;
+   public static String field1427;
+   public static String field1428;
+   public static String field1429;
+   public static String field1430;
+   public static String field1431;
+   public static String field1432;
+   public static String field1433;
+   public static String field1434 = "";
+   public static String field1435 = "Members object";
+   public static String field1436;
+   public static String field1437;
+   public static String field1438;
+   public static String field1439;
+   public static String field1440;
+   public static String field1441;
+   public static String field1442;
+   public static String field1443;
+   public static String field1444 = "Loading sprites - ";
+   public static String field1445 = "Loaded interfaces";
+   public static String field1446;
+   public static String field1447;
+   public static String field1448;
+   public static String field1449;
+   public static String field1450;
+   public static String field1451;
+   public static String field1452;
+   public static String field1453;
+   public static String field1454;
+   public static String field1455 = "Loading - please wait.";
+   public static String field1456;
+   public static String field1457;
+   public static String field1458;
+   public static String field1459;
+   public static String field1460;
+   public static String field1461;
+   public static String field1462;
+   public static String field1463;
+   public static String field1464;
+   public static String field1465;
+   public static String field1466;
+   public static String field1467;
+   public static String field1468;
+   public static String field1469;
+   public static String field1470;
+   public static String field1471;
+   public static String field1472;
+   public static String field1473;
+   public static String field1474;
+   public static String field1475;
+   public static String field1476;
+   public static String field1477;
+   public static String field1478;
+   public static String field1479;
+   public static String field1480 = "Too many login attempts.";
+   public static String field1481;
+   public static String field1482;
+   public static String field1483 = "";
+   public static String field1484;
+   public static String field1485;
+   public static String field1486;
+   public static String field1487;
+   public static String field1488;
+   public static String field1489;
+   public static String field1490;
+   public static String field1491;
+   public static String field1492;
+   public static String field1493 = "world you were using has become unavailable.";
+   public static String field1494;
+   public static String field1495;
+   public static String field1496;
+   public static String field1497;
+   public static String field1498;
+   public static String field1499;
+   public static String field1500;
+   public static String field1501;
+   public static String field1502 = "Loaded fonts";
+   public static String field1503;
+   public static String field1504;
+   public static String field1505;
+   public static String field1506;
+   public static String field1507;
+   public static String field1508;
+   public static String field1509;
+   public static String field1510 = "for 30 days: ";
+   public static String field1511;
+   public static String field1512;
+   public static String field1513;
+   public static String field1514;
+   public static String field1515;
+   public static String field1516;
+   public static String field1517 = "Please try using a different world.";
+   public static String field1518;
+   public static String field1519;
+   public static String field1520 = "Loading fonts - ";
+   public static String field1521;
+   public static String field1522;
+   public static String field1523;
+   public static String field1524;
+   public static String field1525;
+   public static String field1526;
+   public static String field1527;
+   public static String field1528;
+   public static String field1529;
+   public static String field1530;
+   public static String field1531;
+   public static String field1532;
+   public static String field1533 = "Prepared sound engine";
+   public static String field1534;
+   public static String field1535;
+   public static String field1536;
+   public static String field1537;
+   public static String field1538;
+   public static String field1539;
+   public static String field1540;
+   public static String field1541;
+   public static String field1542;
+   public static String field1543;
+   public static String field1544;
+   public static String field1545;
+   public static String field1546;
+   public static String field1547 = "to a non-members area.";
+   public static String field1548;
+   public static String field1549;
+   public static String field1550;
+   public static String field1551;
+   public static String field1552;
+   public static String field1553;
+   public static String field1554;
+   public static String field1555;
+   public static String field1556 = "Please try using a different world.";
+   public static String field1557;
+   public static String field1558;
+   public static String field1559;
+   public static String field1560;
+   public static String field1561;
+   public static String field1562;
+   public static String field1563;
+   public static String field1564;
+   public static String field1565;
+   public static String field1566;
+   public static String field1567;
+   public static String field1568 = "Loaded wordpack";
+   public static String field1569;
+   public static String field1570;
+   public static String field1571 = "Take";
+   public static String field1572;
+   public static String field1573 = "Connecting to update server";
+   public static String field1574;
+   public static String field1575;
+   public static String field1576;
+   public static String field1577;
+   public static String field1578;
+   public static String field1579;
+   public static String field1580;
+   public static String field1581 = "Discard";
+   public static String field1582;
+   public static String field1583;
+   public static String field1584;
+   public static String field1585;
+   public static String field1586;
+   public static String field1587;
+   public static String field1588;
+   public static String field1589;
+   public static String field1590;
+   public static String field1591;
+   public static String field1592;
+   public static String field1593;
+   public static String field1594;
+   public static String field1595;
+   public static String field1596;
+   public static String field1597;
+   public static String field1598;
+   public static String field1599;
+   public static String field1600;
+   public static String field1601;
+   public static String field1602;
+   public static String field1603;
+   public static String field1604;
+   public static String field1605 = "";
+   public static String field1606;
+   public static String field1607;
+   public static String field1608;
+   public static String field1609;
+   public static String field1610;
+   public static String field1611 = "Loaded world map";
+   public static String field1612;
+   public static String field1613;
+   public static String field1614;
+   public static String field1615;
+   public static String field1616;
+   public static String field1617;
+   public static String field1618;
+   public static String field1619;
+   public static String field1620;
+   public static String field1621 = "To access this free world, log into a";
+   public static String field1622;
+   public static String field1623;
+   public static String field1624;
+   public static String field1625;
+   public static String field1626;
+   public static String field1627 = "Loaded textures";
+   public static String field1628 = "The server is being updated.";
+   public static String field1629;
+   public static String field1630;
+   public static String field1631;
+   public static String field1632;
+   public static String field1633;
+   public static String field1634;
+   public static String field1635;
+   public static String field1636;
+   public static String field1637;
+   public static String field1638 = "Drop";
+   public static String field1639;
+   public static String field1640;
+   public static String field1641;
+   public static String field1642;
+   public static String field1643;
+   public static String field1644;
+   public static String field1645;
+   static String field1360 = "Please visit the support page for assistance.";
+
+   static {
+      field1417 = field1360;
+      field1418 = "";
+      field1419 = "This world is running a closed Beta.";
+      field1469 = "Sorry invited players only.";
+      field1421 = "Please use a different world.";
+      field1422 = "Invalid loginserver requested.";
+      field1525 = "Please try using a different world.";
+      field1467 = "";
+      field1373 = "Malformed login packet.";
+      field1426 = "Please try again.";
+      field1427 = "";
+      field1515 = "No reply from loginserver.";
+      field1429 = "Please wait 1 minute and try again.";
+      field1430 = "";
+      field1424 = "Error loading your profile.";
+      field1432 = "Please contact customer support.";
+      field1433 = "";
+      field1487 = "Unexpected loginserver response.";
+      field1512 = "Please try using a different world.";
+      field1534 = "";
+      field1437 = "This computers address has been blocked";
+      field1438 = "as it was used to break our rules.";
+      field1439 = "";
+      field1440 = "";
+      field1441 = "Service unavailable.";
+      field1442 = "";
+      field1443 = "";
+      field1412 = "Please enter your username/email address.";
+      field1471 = "";
+      field1470 = "";
+      field1405 = "Please enter your password.";
+      field1448 = "";
+      field1361 = "Your account must have a displayname set";
+      field1562 = "in order to play the game.  Please set it";
+      field1552 = "via the website, or the main game.";
+      field1452 = "The unpaid balance on your account needs";
+      field1453 = "to be resolved before you can play.";
+      field1454 = field1360;
+      field1619 = "Your account is currently inaccessible.";
+      field1425 = "Please try again in a few minutes.";
+      field1457 = "";
+      field1458 = "You need to vote to play!";
+      field1415 = "Visit runescape.com and vote,";
+      field1460 = "and then come back here!";
+      field1461 = "Sorry, but your account is not eligible to play.";
+      field1462 = "For more information, please take a look at";
+      field1450 = "our privacy policy.";
+      field1576 = "Privacy Policy";
+      field1472 = "Enter the 6-digit code generated by your";
+      field1542 = "authenticator app.";
+      field1626 = "";
+      field1468 = "The code you entered was incorrect.";
+      field1336 = "Please try again.";
+      field1431 = "";
+      field1614 = "Login attempt timed out.";
+      field1342 = "Please try again.";
+      field1473 = "";
+      field1474 = "You were signed out.";
+      field1580 = "Please sign in again.";
+      field1476 = "";
+      field1477 = "Failed to login.";
+      field1478 = "Please try again.";
+      field1479 = "";
+      field1504 = "Unexpected server response";
+      field1481 = "Please try using a different world.";
+      field1451 = "";
+      field1601 = " has logged in.";
+      field1484 = " has logged out.";
+      field1485 = "Unable to find ";
+      field1486 = "Use";
+      field1538 = "Examine";
+      field1488 = "Attack";
+      field1539 = "Choose Option";
+      field1456 = " more options";
+      field1491 = "Walk here";
+      field1492 = "level-";
+      field1630 = "skill-";
+      field1465 = "Please wait...";
+      field1495 = "Close";
+      field1496 = " ";
+      field1497 = "M";
+      field1498 = "M";
+      field1499 = "K";
+      field1500 = "K";
+      field1501 = "World";
+      field1387 = "Your friend list is full. Max of 200 for free users, and 400 for members";
+      field1503 = " is already on your friend list";
+      field1335 = "Your ignore list is full. Max of 100 for free users, and 400 for members";
+      field1505 = " is already on your ignore list";
+      field1506 = "You can't add yourself to your own friend list";
+      field1507 = "You can't add yourself to your own ignore list";
+      field1508 = "Please remove ";
+      field1509 = " from your ignore list first";
+      field1604 = "Please remove ";
+      field1511 = " from your friend list first";
+      field1617 = "yellow:";
+      field1513 = "yellow:";
+      field1514 = "red:";
+      field1446 = "red:";
+      field1623 = "green:";
+      field1367 = "green:";
+      field1518 = "cyan:";
+      field1519 = "cyan:";
+      field1535 = "purple:";
+      field1521 = "purple:";
+      field1522 = "white:";
+      field1523 = "white:";
+      field1524 = "flash1:";
+      field1436 = "flash1:";
+      field1526 = "flash2:";
+      field1359 = "flash2:";
+      field1528 = "flash3:";
+      field1566 = "flash3:";
+      field1530 = "glow1:";
+      field1531 = "glow1:";
+      field1532 = "glow2:";
+      field1369 = "glow2:";
+      field1447 = "glow3:";
+      field1548 = "glow3:";
+      field1536 = "wave:";
+      field1537 = "wave:";
+      field1463 = "wave2:";
+      field1475 = "wave2:";
+      field1540 = "shake:";
+      field1516 = "shake:";
+      field1459 = "scroll:";
+      field1428 = "scroll:";
+      field1544 = "slide:";
+      field1545 = "slide:";
+      field1546 = "RuneScape is loading - please wait...";
+      field1330 = "";
+      field1494 = "Enter your username/email & password.";
+      field1549 = "";
+      field1550 = "Warning!";
+      field1551 = "This is a <col=ff0000>PvP<col=ffffff> world.";
+      field1541 = "Players can attack each other";
+      field1553 = "almost everywhere.";
+      field1554 = "This is a <col=ffff00>High Risk<col=ffffff> world.";
+      field1555 = "The Protect Item prayer will";
+      field1527 = "not work on this world.";
+      field1332 = "This is a <col=ffff00>High Risk <col=ff0000>PvP<col=ffffff> world.";
+      field1558 = "Players can attack each other almost everywhere";
+      field1559 = "and the Protect Item prayer won't work.";
+      field1543 = "This is a <col=00ffff>Beta<col=ffffff> world.";
+      field1561 = "Your normal account will not be affected.";
+      field1631 = "";
+      field1563 = "Authenticator";
+      field1564 = "<u=ff>Can't Log In?</u>";
+      field1565 = "";
+      field1420 = "Connecting to server...";
+      field1567 = "";
+      field1381 = "The game servers are currently being updated.";
+      field1569 = "Please wait a few minutes and try again.";
+      field1570 = "";
+      field1560 = "";
+      field1572 = "You were disconnected from the server.";
+      field1529 = "";
+      field1574 = "Login: ";
+      field1324 = "Password: ";
+      field1449 = "PIN: ";
+      field1577 = "Welcome to RuneScape";
+      field1578 = "New User";
+      field1579 = "Existing User";
+      field1632 = "Login";
+      field1406 = "Cancel";
+      field1582 = "Remember username";
+      field1583 = "Hide username";
+      field1584 = "Invalid credentials.";
+      field1585 = "For accounts created after 24th November 2010, please use your";
+      field1586 = "email address to login. Otherwise please login with your username.";
+      field1587 = "Try again";
+      field1588 = "Forgotten password?";
+      field1589 = "Forgotten your password?";
+      field1590 = "Username/email: ";
+      field1591 = "Recover";
+      field1592 = "Back";
+      field1593 = "Can't login? Click here.";
+      field1594 = "Still having trouble logging in?";
+      field1355 = "Having trouble logging in?";
+      field1596 = "";
+      field1597 = "Page has opened in a new window.";
+      field1598 = "(Please check your popup blocker.)";
+      field1599 = "Please enter your username.";
+      field1600 = "If you created your account after November";
+      field1595 = "2010, this will be the creation email address.";
+      field1602 = field1596;
+      field1603 = field1597;
+      field1339 = field1598;
+      field1466 = "";
+      field1606 = "Error connecting to server.";
+      field1607 = "";
+      field1608 = "The part of the website you are trying";
+      field1609 = "to connect to is offline at the moment.";
+      field1610 = "Please try again later.";
+      field1624 = "Sorry, there was an error trying to";
+      field1612 = "log you in to this part of the website.";
+      field1613 = "Please try again later.";
+      field1464 = "";
+      field1615 = "Error connecting to server.";
+      field1616 = "";
+      field1642 = "You must enter a valid login to proceed. For accounts";
+      field1618 = "created after 24th November 2010, please use your";
+      field1489 = "email address. Otherwise please use your username.";
+      field1620 = "Your date of birth isn't set.";
+      field1490 = "Please verify your account status by";
+      field1622 = "setting your date of birth.";
+      field1639 = "Set Date of Birth";
+      field1409 = "Your date of birth information is waiting";
+      field1625 = "to be reviewed by our staff.";
+      field1636 = "It will be processed shortly.";
+      field1334 = "Before using this app, please read and accept our";
+      field1353 = "<col=ffd200>terms of use</col>, <col=ffd200>privacy policy</col>, and <col=ffd200>end user licence</col>";
+      field1629 = "<col=ffd200>agreement (EULA)</col>.";
+      field1575 = "By accepting, you agree to these documents.";
+      field1482 = "You must accept our terms of use, privacy policy,";
+      field1378 = "and end user licence agreement to continue.";
+      field1633 = "Accept";
+      field1634 = "Decline";
+      field1635 = "Select a world";
+      field1557 = "Members only world";
+      field1637 = "Free world";
+      field1372 = "World";
+      field1352 = "Players";
+      field1640 = "Location";
+      field1641 = "Type";
+      field1344 = "OFF";
+      field1643 = "FULL";
+      field1644 = "Loading...";
+      field1645 = "Click to switch";
    }
 }

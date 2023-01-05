@@ -1,164 +1,107 @@
-public class class212 extends class108 {
-   public static class164 field2377;
-   public static int field2379;
-   static class230 field2380;
-   static class31 field2378 = new class31(64);
-   public int field2376 = 0;
+import java.io.File;
+import java.io.IOException;
+import java.io.RandomAccessFile;
 
-   void method1107(class134 var1) {
-      while(true) {
-         int var3 = var1.method669();
-         if (var3 == 0) {
-            return;
-         }
+public class class212 implements class78 {
+   static final class212 field1835 = new class212(0, (byte)2);
+   static final class212 field1836 = new class212(3, (byte)1);
+   static final class212 field1837 = new class212(2, (byte)0);
+   static final class212 field1840 = new class212(1, (byte)3);
+   final byte field1839;
+   final int field1838;
 
-         this.method1111(var1, var3);
-      }
+   class212(int var1, byte var2) {
+      this.field1838 = var1;
+      this.field1839 = var2;
    }
 
-   void method1111(class134 var1, int var2) {
-      if (var2 == 5) {
-         this.field2376 = var1.method671();
-      }
-
+   public int method330() {
+      return this.field1839;
    }
 
-   public static class173 method1110(int var0) {
-      class173 var2 = (class173)class173.field1865.method161((long)var0);
-      if (null != var2) {
-         return var2;
-      } else {
-         byte[] var3 = class173.field1864.method892(6, var0);
-         var2 = new class173();
-         var2.field1870 = var0;
-         if (var3 != null) {
-            var2.method915(new class134(var3));
-         }
-
-         var2.method918();
-         if (var2.field1898) {
-            var2.field1875 = 0;
-            var2.field1888 = false;
-         }
-
-         class173.field1865.method163(var2, (long)var0);
-         return var2;
-      }
+   public static void method916(class274 var0, class274 var1) {
+      class327.field2580 = var0;
+      class327.field2591 = var1;
    }
 
-   public static void method1108(byte[] var0) {
-      class134 var2 = new class134(var0);
-      var2.field1487 = var0.length - 2;
-      class207.field2197 = var2.method671();
-      class207.field2198 = new int[class207.field2197];
-      class318.field3011 = new int[class207.field2197];
-      class110.field1380 = new int[class207.field2197];
-      class111.field1387 = new int[class207.field2197];
-      class344.field3162 = new byte[class207.field2197][];
-      var2.field1487 = var0.length - 7 - class207.field2197 * 8;
-      class104.field1353 = var2.method671();
-      class207.field2196 = var2.method671();
-      int var3 = (var2.method669() & 255) + 1;
-
-      int var4;
-      for(var4 = 0; var4 < class207.field2197; ++var4) {
-         class207.field2198[var4] = var2.method671();
-      }
-
-      for(var4 = 0; var4 < class207.field2197; ++var4) {
-         class318.field3011[var4] = var2.method671();
-      }
-
-      for(var4 = 0; var4 < class207.field2197; ++var4) {
-         class110.field1380[var4] = var2.method671();
-      }
-
-      for(var4 = 0; var4 < class207.field2197; ++var4) {
-         class111.field1387[var4] = var2.method671();
-      }
-
-      var2.field1487 = var0.length - 7 - class207.field2197 * 8 - 3 * (var3 - 1);
-      class482.field3990 = new int[var3];
-
-      for(var4 = 1; var4 < var3; ++var4) {
-         class482.field3990[var4] = var2.method673();
-         if (0 == class482.field3990[var4]) {
-            class482.field3990[var4] = 1;
-         }
-      }
-
-      var2.field1487 = 0;
-
-      for(var4 = 0; var4 < class207.field2197; ++var4) {
-         int var5 = class110.field1380[var4];
-         int var6 = class111.field1387[var4];
-         int var7 = var6 * var5;
-         byte[] var8 = new byte[var7];
-         class344.field3162[var4] = var8;
-         int var9 = var2.method669();
-         int var10;
-         if (var9 == 0) {
-            for(var10 = 0; var10 < var7; ++var10) {
-               var8[var10] = var2.method670();
-            }
-         } else if (var9 == 1) {
-            for(var10 = 0; var10 < var5; ++var10) {
-               for(int var11 = 0; var11 < var6; ++var11) {
-                  var8[var10 + var5 * var11] = var2.method670();
-               }
-            }
-         }
-      }
-
-   }
-
-   static void method1106(class230 var0, int var1, int var2, int var3, byte var4, boolean var5) {
-      long var7 = (long)(var2 + (var1 << 16));
-      class289 var9 = (class289)class475.field3955.method545(var7);
-      if (var9 == null) {
-         var9 = (class289)class475.field3949.method545(var7);
-         if (null == var9) {
-            var9 = (class289)class475.field3952.method545(var7);
-            if (null != var9) {
-               if (var5) {
-                  var9.method574();
-                  class475.field3955.method542(var9, var7);
-                  --class475.field3953;
-                  ++class475.field3948;
-               }
-
-            } else {
-               if (!var5) {
-                  var9 = (class289)class475.field3954.method545(var7);
-                  if (null != var9) {
-                     return;
+   public static void method919() {
+      try {
+         File var1 = new File(class134.field1109, "random.dat");
+         int var3;
+         if (var1.exists()) {
+            class25.field115 = new class435(new class455(var1, "rw", 25L), 24, 0);
+         } else {
+            label34:
+            for(int var2 = 0; var2 < class306.field2457.length; ++var2) {
+               for(var3 = 0; var3 < class293.field2384.length; ++var3) {
+                  File var4 = new File(class293.field2384[var3] + class306.field2457[var2] + File.separatorChar + "random.dat");
+                  if (var4.exists()) {
+                     class25.field115 = new class435(new class455(var4, "rw", 25L), 24, 0);
+                     break label34;
                   }
                }
-
-               var9 = new class289();
-               var9.field2792 = var0;
-               var9.field2793 = var3;
-               var9.field2794 = var4;
-               if (var5) {
-                  class475.field3955.method542(var9, var7);
-                  ++class475.field3948;
-               } else {
-                  class475.field3947.method28(var9);
-                  class475.field3952.method542(var9, var7);
-                  ++class475.field3953;
-               }
-
             }
          }
+
+         if (null == class25.field115) {
+            RandomAccessFile var6 = new RandomAccessFile(var1, "rw");
+            var3 = var6.read();
+            var6.seek(0L);
+            var6.write(var3);
+            var6.seek(0L);
+            var6.close();
+            class25.field115 = new class435(new class455(var1, "rw", 25L), 24, 0);
+         }
+      } catch (IOException var5) {
+         ;
+      }
+
+   }
+
+   static final int method917(int var0, int var1) {
+      if (var0 == -2) {
+         return 12345678;
+      } else if (var0 == -1) {
+         if (var1 < 2) {
+            var1 = 2;
+         } else if (var1 > 126) {
+            var1 = 126;
+         }
+
+         return var1;
+      } else {
+         var1 = (var0 & 127) * var1 / 128;
+         if (var1 < 2) {
+            var1 = 2;
+         } else if (var1 > 126) {
+            var1 = 126;
+         }
+
+         return var1 + (var0 & 'ﾀ');
       }
    }
 
-   static void method1109(int var0) {
-      for(class258 var2 = (class258)client.field475.method543(); null != var2; var2 = (class258)client.field475.method544()) {
-         if ((var2.field1361 >> 48 & 65535L) == (long)var0) {
-            var2.method567();
+   static void method915() {
+      client.field369 = 0;
+      client.field368 = false;
+   }
+
+   static final void method918() {
+      class299 var1 = class480.method2370(class356.field2982, client.field279.field4042);
+      client.field279.method2389(var1);
+      class386.field3256 = true;
+
+      for(class415 var2 = (class415)client.field394.method789(); var2 != null; var2 = (class415)client.field394.method790()) {
+         if (0 == var2.field3424 || 3 == var2.field3424) {
+            class374.method1848(var2, true, (byte)87);
          }
       }
 
+      if (client.field399 != null) {
+         class184.method836(client.field399);
+         client.field399 = null;
+      }
+
+      class386.field3256 = false;
    }
 }

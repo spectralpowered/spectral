@@ -1,69 +1,93 @@
-import javax.sound.sampled.AudioFormat;
-import javax.sound.sampled.AudioSystem;
-import javax.sound.sampled.LineUnavailableException;
-import javax.sound.sampled.SourceDataLine;
-import javax.sound.sampled.DataLine.Info;
+import java.io.IOException;
 
-public class class460 extends class157 {
-   byte[] field3833;
-   int field3835;
-   AudioFormat field3834;
-   SourceDataLine field3836;
+public class class460 {
+   public static final class460 field3807 = new class460("verdana_15pt_regular");
+   public static final class460 field3808 = new class460("p12_full");
+   public static final class460 field3810 = new class460("verdana_11pt_regular");
+   public static final class460 field3811 = new class460("verdana_13pt_regular");
+   public static final class460 field3812 = new class460("p11_full");
+   public static final class460 field3814 = new class460("b12_full");
+   static class38 field3809;
+   String field3813;
 
-   protected void method827() {
-      this.field3834 = new AudioFormat((float)class157.field1636, 16, class126.field1464 ? 2 : 1, true, false);
-      this.field3833 = new byte[256 << (class126.field1464 ? 2 : 1)];
+   class460(String var1) {
+      this.field3813 = var1;
    }
 
-   protected void method834(int var1) throws LineUnavailableException {
-      try {
-         Info var3 = new Info(SourceDataLine.class, this.field3834, var1 << (class126.field1464 ? 2 : 1));
-         this.field3836 = (SourceDataLine)AudioSystem.getLine(var3);
-         this.field3836.open();
-         this.field3836.start();
-         this.field3835 = var1;
-      } catch (LineUnavailableException var4) {
-         if (class102.method555(var1) != 1) {
-            this.method834(class476.method2306(var1));
-         } else {
-            this.field3836 = null;
-            throw var4;
+   public static class460[] method2268() {
+      return new class460[]{field3808, field3810, field3814, field3807, field3811, field3812};
+   }
+
+   static void method2266() {
+      if (class359.field3066) {
+         class119.field878 = null;
+         class298.field2395 = null;
+         class359.field3053 = null;
+         class287.field2366 = null;
+         class374.field3173 = null;
+         class359.field3054 = null;
+         class342.field2746 = null;
+         class23.field110 = null;
+         class306.field2455 = null;
+         class290.field2370 = null;
+         class161.field1229 = null;
+         class340.field2721 = null;
+         class247.field2058 = null;
+         class122.field1054 = null;
+         class312.field2467.method1959();
+         class255.method1093(2);
+         if (class462.field3844 != null) {
+            try {
+               class127 var1 = new class127(4);
+               var1.method544(2);
+               var1.method602(0);
+               class462.field3844.method731(var1.field1072, 0, 4);
+            } catch (IOException var4) {
+               try {
+                  class462.field3844.method734();
+               } catch (Exception var3) {
+                  ;
+               }
+
+               ++class462.field3833;
+               class462.field3844 = null;
+            }
          }
+
+         class359.field3066 = false;
       }
    }
 
-   protected int method828() {
-      return this.field3835 - (this.field3836.available() >> (class126.field1464 ? 2 : 1));
-   }
+   static final void method2267(boolean var0) {
+      client.method189();
+      ++client.field279.field4045;
+      if (client.field279.field4045 >= 50 || var0) {
+         client.field279.field4045 = 0;
+         if (!client.field281 && client.field279.method2384() != null) {
+            class299 var2 = class480.method2370(class356.field3012, client.field279.field4042);
+            client.field279.method2389(var2);
 
-   protected void method829() {
-      int var1 = 256;
-      if (class126.field1464) {
-         var1 <<= 1;
-      }
-
-      for(int var2 = 0; var2 < var1; ++var2) {
-         int var3 = super.field1642[var2];
-         if ((var3 + 8388608 & -16777216) != 0) {
-            var3 = 8388607 ^ var3 >> 31;
+            try {
+               client.field279.method2386();
+            } catch (IOException var4) {
+               client.field281 = true;
+            }
          }
 
-         this.field3833[var2 * 2] = (byte)(var3 >> 8);
-         this.field3833[1 + var2 * 2] = (byte)(var3 >> 16);
       }
-
-      this.field3836.write(this.field3833, 0, var1 << 1);
    }
 
-   protected void method830() {
-      if (null != this.field3836) {
-         this.field3836.close();
-         this.field3836 = null;
+   static final String method2269(int var0) {
+      String var2 = Integer.toString(var0);
+
+      for(int var3 = var2.length() - 3; var3 > 0; var3 -= 3) {
+         var2 = var2.substring(0, var3) + class442.field3659 + var2.substring(var3);
       }
 
-   }
-
-   protected void method831() {
-      this.field3836.flush();
+      if (var2.length() > 9) {
+         return " " + class238.method1032(65408) + var2.substring(0, var2.length() - 8) + class177.field1497 + " " + class442.field3658 + var2 + class442.field3662 + class442.field3665;
+      } else {
+         return var2.length() > 6 ? " " + class238.method1032(16777215) + var2.substring(0, var2.length() - 4) + class177.field1499 + " " + class442.field3658 + var2 + class442.field3662 + class442.field3665 : " " + class238.method1032(16776960) + var2 + class442.field3665;
+      }
    }
 }

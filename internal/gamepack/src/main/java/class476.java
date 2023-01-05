@@ -1,99 +1,105 @@
-import java.io.EOFException;
-import java.io.File;
+import java.awt.image.BufferedImage;
+import java.awt.image.PixelGrabber;
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
-import java.io.RandomAccessFile;
-import java.io.SyncFailedException;
+import java.util.Locale;
+import javax.imageio.ImageIO;
 
-public final class class476 {
-   RandomAccessFile field3965;
-   long field3967;
-   final long field3966;
+@class137
+@class451
+public class class476 implements class78 {
+   public static int field4003;
+   public static final class476 field3997;
+   public static final class476 field3999;
+   public static final class476 field4002;
+   public static final class476[] field4008;
+   static boolean[] field4009;
+   static final class476 field3998;
+   static final class476 field4000;
+   static final class476 field4001;
+   static final class476 field4006;
+   final int field4007;
+   final String field4004;
+   final String field4005;
 
-   public class476(File var1, String var2, long var3) throws IOException {
-      if (-1L == var3) {
-         var3 = Long.MAX_VALUE;
-      }
+   static {
+      field3997 = new class476("EN", "en", "English", class10.field58, 0, "GB");
+      field4006 = new class476("DE", "de", "German", class10.field58, 1, "DE");
+      field3999 = new class476("FR", "fr", "French", class10.field58, 2, "FR");
+      field4000 = new class476("PT", "pt", "Portuguese", class10.field58, 3, "BR");
+      field4001 = new class476("NL", "nl", "Dutch", class10.field42, 4, "NL");
+      field4002 = new class476("ES", "es", "Spanish", class10.field42, 5, "ES");
+      field3998 = new class476("ES_MX", "es-mx", "Spanish (Latin American)", class10.field58, 6, "MX");
+      class476[] var0 = new class476[]{field4006, field4002, field3999, field4001, field3998, field4000, field3997};
+      field4008 = new class476[var0.length];
+      class476[] var2 = var0;
 
-      if (var1.length() > var3) {
-         var1.delete();
-      }
-
-      this.field3965 = new RandomAccessFile(var1, var2);
-      this.field3966 = var3;
-      this.field3967 = 0L;
-      int var5 = this.field3965.read();
-      if (var5 != -1 && !var2.equals("r")) {
-         this.field3965.seek(0L);
-         this.field3965.write(var5);
-      }
-
-      this.field3965.seek(0L);
-   }
-
-   final void method2300(long var1) throws IOException {
-      this.field3965.seek(var1);
-      this.field3967 = var1;
-   }
-
-   public final void method2301(byte[] var1, int var2, int var3) throws IOException {
-      if ((long)var3 + this.field3967 > this.field3966) {
-         this.field3965.seek(this.field3966);
-         this.field3965.write(1);
-         throw new EOFException();
-      } else {
-         this.field3965.write(var1, var2, var3);
-         this.field3967 += (long)var3;
-      }
-   }
-
-   public final void method2302() throws IOException {
-      this.method2303(false);
-   }
-
-   public final void method2303(boolean var1) throws IOException {
-      if (this.field3965 != null) {
-         if (var1) {
-            try {
-               this.field3965.getFD().sync();
-            } catch (SyncFailedException var4) {
-               ;
-            }
+      for(int var3 = 0; var3 < var2.length; ++var3) {
+         class476 var4 = var2[var3];
+         if (field4008[var4.field4007] != null) {
+            throw new IllegalStateException();
          }
 
-         this.field3965.close();
-         this.field3965 = null;
+         field4008[var4.field4007] = var4;
       }
 
    }
 
-   public final long method2305() throws IOException {
-      return this.field3965.length();
-   }
-
-   public final int method2304(byte[] var1, int var2, int var3) throws IOException {
-      int var5 = this.field3965.read(var1, var2, var3);
-      if (var5 > 0) {
-         this.field3967 += (long)var5;
-      }
-
-      return var5;
-   }
-
-   protected void finalize() throws Throwable {
-      if (null != this.field3965) {
-         System.out.println("");
-         this.method2302();
+   class476(String var1, String var2, String var3, class10 var4, int var5, String var6) {
+      this.field4004 = var1;
+      this.field4005 = var2;
+      this.field4007 = var5;
+      if (var6 != null) {
+         new Locale(var2.substring(0, 2), var6);
+      } else {
+         new Locale(var2.substring(0, 2));
       }
 
    }
 
-   public static int method2306(int var0) {
-      --var0;
-      var0 |= var0 >>> 1;
-      var0 |= var0 >>> 2;
-      var0 |= var0 >>> 4;
-      var0 |= var0 >>> 8;
-      var0 |= var0 >>> 16;
-      return var0 + 1;
+   String method2356() {
+      return this.field4005;
+   }
+
+   public int method330() {
+      return this.field4007;
+   }
+
+   public String toString() {
+      return this.method2356().toLowerCase(Locale.ENGLISH);
+   }
+
+   public static final class266 method2357(byte[] var0) {
+      BufferedImage var2 = null;
+
+      try {
+         Class var3 = ImageIO.class;
+         synchronized(ImageIO.class) {
+            var2 = ImageIO.read(new ByteArrayInputStream(var0));
+         }
+
+         int var10 = var2.getWidth();
+         int var4 = var2.getHeight();
+         int[] var5 = new int[var10 * var4];
+         PixelGrabber var6 = new PixelGrabber(var2, 0, 0, var10, var4, var5, 0, var10);
+         var6.grabPixels();
+         return new class266(var5, var10, var4);
+      } catch (IOException var8) {
+         ;
+      } catch (InterruptedException var9) {
+         ;
+      }
+
+      return new class266(0, 0);
+   }
+
+   static void method2358() {
+      class268.field2221 = 0;
+
+      for(int var1 = 0; var1 < 2048; ++var1) {
+         class268.field2218[var1] = null;
+         class268.field2225[var1] = class294.field2386;
+      }
+
    }
 }

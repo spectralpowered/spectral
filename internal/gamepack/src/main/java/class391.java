@@ -1,477 +1,320 @@
-public class class391 {
-   public static int field3440;
-   int field3441;
-   int field3442 = 0;
-   int field3443 = 0;
-   int field3444;
-   public int[][] field3445;
+import java.security.Principal;
+import java.security.cert.Certificate;
+import javax.net.ssl.SSLPeerUnverifiedException;
+import javax.net.ssl.SSLSession;
+import javax.net.ssl.SSLSessionContext;
+import javax.security.cert.X509Certificate;
 
-   public class391(int var1, int var2) {
-      this.field3441 = var1;
-      this.field3444 = var2;
-      this.field3445 = new int[this.field3441][this.field3444];
-      this.method1886();
+class class391 implements SSLSession {
+   static int field3279;
+   static String field3280;
+   // $FF: synthetic field
+   final class286 this$1;
+
+   class391(class286 var1) {
+      this.this$1 = var1;
    }
 
-   public void method1886() {
-      for(int var2 = 0; var2 < this.field3441; ++var2) {
-         for(int var3 = 0; var3 < this.field3444; ++var3) {
-            if (var2 != 0 && var3 != 0 && var2 < this.field3441 - 5 && var3 < this.field3444 - 5) {
-               this.field3445[var2][var3] = 16777216;
-            } else {
-               this.field3445[var2][var3] = 16777215;
-            }
-         }
-      }
-
+   public int getApplicationBufferSize() {
+      return 0;
    }
 
-   public void method1887(int var1, int var2, int var3, int var4, boolean var5) {
-      var1 -= this.field3442;
-      var2 -= this.field3443;
-      if (var3 == 0) {
-         if (var4 == 0) {
-            this.method1891(var1, var2, 128);
-            this.method1891(var1 - 1, var2, 8);
-         }
-
-         if (var4 == 1) {
-            this.method1891(var1, var2, 2);
-            this.method1891(var1, var2 + 1, 32);
-         }
-
-         if (var4 == 2) {
-            this.method1891(var1, var2, 8);
-            this.method1891(var1 + 1, var2, 128);
-         }
-
-         if (var4 == 3) {
-            this.method1891(var1, var2, 32);
-            this.method1891(var1, var2 - 1, 2);
-         }
-      }
-
-      if (var3 == 1 || var3 == 3) {
-         if (var4 == 0) {
-            this.method1891(var1, var2, 1);
-            this.method1891(var1 - 1, var2 + 1, 16);
-         }
-
-         if (var4 == 1) {
-            this.method1891(var1, var2, 4);
-            this.method1891(var1 + 1, var2 + 1, 64);
-         }
-
-         if (var4 == 2) {
-            this.method1891(var1, var2, 16);
-            this.method1891(var1 + 1, var2 - 1, 1);
-         }
-
-         if (var4 == 3) {
-            this.method1891(var1, var2, 64);
-            this.method1891(var1 - 1, var2 - 1, 4);
-         }
-      }
-
-      if (var3 == 2) {
-         if (var4 == 0) {
-            this.method1891(var1, var2, 130);
-            this.method1891(var1 - 1, var2, 8);
-            this.method1891(var1, var2 + 1, 32);
-         }
-
-         if (var4 == 1) {
-            this.method1891(var1, var2, 10);
-            this.method1891(var1, var2 + 1, 32);
-            this.method1891(var1 + 1, var2, 128);
-         }
-
-         if (var4 == 2) {
-            this.method1891(var1, var2, 40);
-            this.method1891(var1 + 1, var2, 128);
-            this.method1891(var1, var2 - 1, 2);
-         }
-
-         if (var4 == 3) {
-            this.method1891(var1, var2, 160);
-            this.method1891(var1, var2 - 1, 2);
-            this.method1891(var1 - 1, var2, 8);
-         }
-      }
-
-      if (var5) {
-         if (var3 == 0) {
-            if (var4 == 0) {
-               this.method1891(var1, var2, 65536);
-               this.method1891(var1 - 1, var2, 4096);
-            }
-
-            if (var4 == 1) {
-               this.method1891(var1, var2, 1024);
-               this.method1891(var1, var2 + 1, 16384);
-            }
-
-            if (var4 == 2) {
-               this.method1891(var1, var2, 4096);
-               this.method1891(var1 + 1, var2, 65536);
-            }
-
-            if (var4 == 3) {
-               this.method1891(var1, var2, 16384);
-               this.method1891(var1, var2 - 1, 1024);
-            }
-         }
-
-         if (var3 == 1 || var3 == 3) {
-            if (var4 == 0) {
-               this.method1891(var1, var2, 512);
-               this.method1891(var1 - 1, var2 + 1, 8192);
-            }
-
-            if (var4 == 1) {
-               this.method1891(var1, var2, 2048);
-               this.method1891(var1 + 1, var2 + 1, 32768);
-            }
-
-            if (var4 == 2) {
-               this.method1891(var1, var2, 8192);
-               this.method1891(var1 + 1, var2 - 1, 512);
-            }
-
-            if (var4 == 3) {
-               this.method1891(var1, var2, 32768);
-               this.method1891(var1 - 1, var2 - 1, 2048);
-            }
-         }
-
-         if (var3 == 2) {
-            if (var4 == 0) {
-               this.method1891(var1, var2, 66560);
-               this.method1891(var1 - 1, var2, 4096);
-               this.method1891(var1, var2 + 1, 16384);
-            }
-
-            if (var4 == 1) {
-               this.method1891(var1, var2, 5120);
-               this.method1891(var1, var2 + 1, 16384);
-               this.method1891(var1 + 1, var2, 65536);
-            }
-
-            if (var4 == 2) {
-               this.method1891(var1, var2, 20480);
-               this.method1891(var1 + 1, var2, 65536);
-               this.method1891(var1, var2 - 1, 1024);
-            }
-
-            if (var4 == 3) {
-               this.method1891(var1, var2, 81920);
-               this.method1891(var1, var2 - 1, 1024);
-               this.method1891(var1 - 1, var2, 4096);
-            }
-         }
-      }
-
+   public String getCipherSuite() {
+      throw new UnsupportedOperationException();
    }
 
-   public void method1897(int var1, int var2, int var3, int var4, boolean var5) {
-      int var7 = 256;
-      if (var5) {
-         var7 += 131072;
-      }
-
-      var1 -= this.field3442;
-      var2 -= this.field3443;
-
-      for(int var8 = var1; var8 < var1 + var3; ++var8) {
-         if (var8 >= 0 && var8 < this.field3441) {
-            for(int var9 = var2; var9 < var2 + var4; ++var9) {
-               if (var9 >= 0 && var9 < this.field3444) {
-                  this.method1891(var8, var9, var7);
-               }
-            }
-         }
-      }
-
+   public long getCreationTime() {
+      throw new UnsupportedOperationException();
    }
 
-   public void method1888(int var1, int var2) {
-      var1 -= this.field3442;
-      var2 -= this.field3443;
-      this.field3445[var1][var2] |= 2097152;
+   public byte[] getId() {
+      throw new UnsupportedOperationException();
    }
 
-   public void method1889(int var1, int var2) {
-      var1 -= this.field3442;
-      var2 -= this.field3443;
-      this.field3445[var1][var2] |= 262144;
+   public long getLastAccessedTime() {
+      throw new UnsupportedOperationException();
    }
 
-   void method1891(int var1, int var2, int var3) {
-      this.field3445[var1][var2] |= var3;
+   public Certificate[] getLocalCertificates() {
+      throw new UnsupportedOperationException();
    }
 
-   public void method1890(int var1, int var2, int var3, int var4, boolean var5) {
-      var1 -= this.field3442;
-      var2 -= this.field3443;
-      if (var3 == 0) {
-         if (var4 == 0) {
-            this.method1894(var1, var2, 128);
-            this.method1894(var1 - 1, var2, 8);
-         }
-
-         if (var4 == 1) {
-            this.method1894(var1, var2, 2);
-            this.method1894(var1, var2 + 1, 32);
-         }
-
-         if (var4 == 2) {
-            this.method1894(var1, var2, 8);
-            this.method1894(var1 + 1, var2, 128);
-         }
-
-         if (var4 == 3) {
-            this.method1894(var1, var2, 32);
-            this.method1894(var1, var2 - 1, 2);
-         }
-      }
-
-      if (var3 == 1 || var3 == 3) {
-         if (var4 == 0) {
-            this.method1894(var1, var2, 1);
-            this.method1894(var1 - 1, var2 + 1, 16);
-         }
-
-         if (var4 == 1) {
-            this.method1894(var1, var2, 4);
-            this.method1894(var1 + 1, var2 + 1, 64);
-         }
-
-         if (var4 == 2) {
-            this.method1894(var1, var2, 16);
-            this.method1894(var1 + 1, var2 - 1, 1);
-         }
-
-         if (var4 == 3) {
-            this.method1894(var1, var2, 64);
-            this.method1894(var1 - 1, var2 - 1, 4);
-         }
-      }
-
-      if (var3 == 2) {
-         if (var4 == 0) {
-            this.method1894(var1, var2, 130);
-            this.method1894(var1 - 1, var2, 8);
-            this.method1894(var1, var2 + 1, 32);
-         }
-
-         if (var4 == 1) {
-            this.method1894(var1, var2, 10);
-            this.method1894(var1, var2 + 1, 32);
-            this.method1894(var1 + 1, var2, 128);
-         }
-
-         if (var4 == 2) {
-            this.method1894(var1, var2, 40);
-            this.method1894(var1 + 1, var2, 128);
-            this.method1894(var1, var2 - 1, 2);
-         }
-
-         if (var4 == 3) {
-            this.method1894(var1, var2, 160);
-            this.method1894(var1, var2 - 1, 2);
-            this.method1894(var1 - 1, var2, 8);
-         }
-      }
-
-      if (var5) {
-         if (var3 == 0) {
-            if (var4 == 0) {
-               this.method1894(var1, var2, 65536);
-               this.method1894(var1 - 1, var2, 4096);
-            }
-
-            if (var4 == 1) {
-               this.method1894(var1, var2, 1024);
-               this.method1894(var1, var2 + 1, 16384);
-            }
-
-            if (var4 == 2) {
-               this.method1894(var1, var2, 4096);
-               this.method1894(var1 + 1, var2, 65536);
-            }
-
-            if (var4 == 3) {
-               this.method1894(var1, var2, 16384);
-               this.method1894(var1, var2 - 1, 1024);
-            }
-         }
-
-         if (var3 == 1 || var3 == 3) {
-            if (var4 == 0) {
-               this.method1894(var1, var2, 512);
-               this.method1894(var1 - 1, var2 + 1, 8192);
-            }
-
-            if (var4 == 1) {
-               this.method1894(var1, var2, 2048);
-               this.method1894(var1 + 1, var2 + 1, 32768);
-            }
-
-            if (var4 == 2) {
-               this.method1894(var1, var2, 8192);
-               this.method1894(var1 + 1, var2 - 1, 512);
-            }
-
-            if (var4 == 3) {
-               this.method1894(var1, var2, 32768);
-               this.method1894(var1 - 1, var2 - 1, 2048);
-            }
-         }
-
-         if (var3 == 2) {
-            if (var4 == 0) {
-               this.method1894(var1, var2, 66560);
-               this.method1894(var1 - 1, var2, 4096);
-               this.method1894(var1, var2 + 1, 16384);
-            }
-
-            if (var4 == 1) {
-               this.method1894(var1, var2, 5120);
-               this.method1894(var1, var2 + 1, 16384);
-               this.method1894(var1 + 1, var2, 65536);
-            }
-
-            if (var4 == 2) {
-               this.method1894(var1, var2, 20480);
-               this.method1894(var1 + 1, var2, 65536);
-               this.method1894(var1, var2 - 1, 1024);
-            }
-
-            if (var4 == 3) {
-               this.method1894(var1, var2, 81920);
-               this.method1894(var1, var2 - 1, 1024);
-               this.method1894(var1 - 1, var2, 4096);
-            }
-         }
-      }
-
+   public Principal getLocalPrincipal() {
+      throw new UnsupportedOperationException();
    }
 
-   public void method1893(int var1, int var2, int var3, int var4, int var5, boolean var6) {
-      int var8 = 256;
-      if (var6) {
-         var8 += 131072;
-      }
-
-      var1 -= this.field3442;
-      var2 -= this.field3443;
-      int var9;
-      if (var5 == 1 || var5 == 3) {
-         var9 = var3;
-         var3 = var4;
-         var4 = var9;
-      }
-
-      for(var9 = var1; var9 < var1 + var3; ++var9) {
-         if (var9 >= 0 && var9 < this.field3441) {
-            for(int var10 = var2; var10 < var4 + var2; ++var10) {
-               if (var10 >= 0 && var10 < this.field3444) {
-                  this.method1894(var9, var10, var8);
-               }
-            }
-         }
-      }
-
+   public int getPacketBufferSize() {
+      throw new UnsupportedOperationException();
    }
 
-   void method1894(int var1, int var2, int var3) {
-      this.field3445[var1][var2] &= ~var3;
+   public X509Certificate[] getPeerCertificateChain() throws SSLPeerUnverifiedException {
+      return null;
    }
 
-   public void method1895(int var1, int var2) {
-      var1 -= this.field3442;
-      var2 -= this.field3443;
-      this.field3445[var1][var2] &= -262145;
+   public Certificate[] getPeerCertificates() throws SSLPeerUnverifiedException {
+      return this.this$1.field2365;
    }
 
-   static final void method1896(byte var0) {
-      client.field608 = 0;
-      int var1 = (class89.field982.field297 >> 7) + class381.field3325;
-      int var2 = class345.field3166 + (class89.field982.field233 >> 7);
-      if (var1 >= 3053) {
-         if (var0 >= -1) {
-            throw new IllegalStateException();
-         }
+   public String getPeerHost() {
+      throw new UnsupportedOperationException();
+   }
 
-         if (var1 <= 3156 && var2 >= 3056) {
-            if (var0 >= -1) {
-               throw new IllegalStateException();
-            }
+   public int getPeerPort() {
+      return 0;
+   }
 
-            if (var2 <= 3136) {
-               client.field608 = 1;
-            }
-         }
+   public Principal getPeerPrincipal() throws SSLPeerUnverifiedException {
+      return null;
+   }
+
+   public String getProtocol() {
+      throw new UnsupportedOperationException();
+   }
+
+   public SSLSessionContext getSessionContext() {
+      throw new UnsupportedOperationException();
+   }
+
+   public Object getValue(String var1) {
+      throw new UnsupportedOperationException();
+   }
+
+   public String[] getValueNames() {
+      throw new UnsupportedOperationException();
+   }
+
+   public void invalidate() {
+      throw new UnsupportedOperationException();
+   }
+
+   public boolean isValid() {
+      throw new UnsupportedOperationException();
+   }
+
+   public void putValue(String var1, Object var2) {
+      throw new UnsupportedOperationException();
+   }
+
+   public void removeValue(String var1) {
+      throw new UnsupportedOperationException();
+   }
+
+   public static final void method1916() {
+      class105.field809 = false;
+      class105.field816 = 0;
+   }
+
+   static final void method1915(int var0, int var1, int var2, int var3) {
+      if (0 == client.field386 && !client.field388) {
+         class156.method721(class177.field1491, "", 23, 0, var0 - var2, var1 - var3);
       }
 
-      if (var1 >= 3072 && var1 <= 3118) {
-         if (var0 >= -1) {
-            throw new IllegalStateException();
-         }
+      long var5 = -1L;
+      long var7 = -1L;
+      int var9 = 0;
 
-         if (var2 >= 9492) {
-            if (var0 >= -1) {
-               throw new IllegalStateException();
+      while(true) {
+         int var11 = class105.field816;
+         if (var9 >= var11) {
+            if (-1L != var5) {
+               var9 = class49.method251(var5);
+               int var10 = (int)(var5 >>> 7 & 127L);
+               class380 var27 = client.field347[client.field359];
+               class346.method1753(var27, client.field359, var9, var10);
             }
 
-            if (var2 <= 9535) {
-               if (var0 >= -1) {
-                  return;
-               }
-
-               client.field608 = 1;
-            }
-         }
-      }
-
-      if (client.field608 == 1) {
-         if (var0 >= -1) {
-            throw new IllegalStateException();
+            return;
          }
 
-         if (var1 >= 3139) {
-            if (var0 >= -1) {
-               throw new IllegalStateException();
-            }
-
-            if (var1 <= 3199) {
-               if (var0 >= -1) {
-                  throw new IllegalStateException();
-               }
-
-               if (var2 >= 3008) {
-                  if (var0 >= -1) {
-                     throw new IllegalStateException();
+         long var12 = class105.field814[var9];
+         if (var7 != var12) {
+            label306: {
+               var7 = var12;
+               int var16 = class306.method1492(var9);
+               long var19 = class105.field814[var9];
+               int var18 = (int)(var19 >>> 7 & 127L);
+               var18 = var18;
+               int var28 = class104.method417(var9);
+               int var20 = class208.method905(var9);
+               int var24;
+               if (var28 == 2 && class408.field3415.method1607(class347.field2878, var16, var18, var12) >= 0) {
+                  class87 var21 = class85.method356(var20);
+                  if (var21.field745 != null) {
+                     var21 = var21.method372();
                   }
 
-                  if (var2 <= 3062) {
-                     if (var0 >= -1) {
-                        throw new IllegalStateException();
+                  if (null == var21) {
+                     break label306;
+                  }
+
+                  class138 var22 = null;
+
+                  for(class138 var23 = (class138)client.field450.method646(); var23 != null; var23 = (class138)client.field450.method648()) {
+                     if (class347.field2878 == var23.field1122 && var16 == var23.field1118 && var18 == var23.field1129 && var23.field1125 == var20) {
+                        var22 = var23;
+                        break;
+                     }
+                  }
+
+                  if (1 == client.field386) {
+                     class156.method721(class177.field1486, client.field483 + " " + class442.field3664 + " " + class238.method1032(65535) + var21.field715, 1, var20, var16, var18);
+                  } else if (client.field388) {
+                     if ((class32.field177 & 4) == 4) {
+                        class156.method721(client.field391, client.field510 + " " + class442.field3664 + " " + class238.method1032(65535) + var21.field715, 2, var20, var16, var18);
+                     }
+                  } else {
+                     String[] var33 = var21.field732;
+                     if (var33 != null) {
+                        for(var24 = 4; var24 >= 0; --var24) {
+                           if ((null == var22 || var22.method635(var24)) && var33[var24] != null) {
+                              short var25 = 0;
+                              if (var24 == 0) {
+                                 var25 = 3;
+                              }
+
+                              if (var24 == 1) {
+                                 var25 = 4;
+                              }
+
+                              if (var24 == 2) {
+                                 var25 = 5;
+                              }
+
+                              if (var24 == 3) {
+                                 var25 = 6;
+                              }
+
+                              if (var24 == 4) {
+                                 var25 = 1001;
+                              }
+
+                              class156.method721(var33[var24], class238.method1032(65535) + var21.field715, var25, var20, var16, var18);
+                           }
+                        }
                      }
 
-                     client.field608 = 0;
+                     class156.method721(class177.field1538, class238.method1032(65535) + var21.field715, 1002, var21.field712, var16, var18);
+                  }
+               }
+
+               int var32;
+               class267 var34;
+               int[] var35;
+               class380 var39;
+               if (var28 == 1) {
+                  class267 var29 = client.field465[var20];
+                  if (null == var29) {
+                     break label306;
+                  }
+
+                  if (1 == var29.field2213.field3470 && 64 == (var29.field2672 & 127) && (var29.field2608 & 127) == 64) {
+                     for(var32 = 0; var32 < client.field275; ++var32) {
+                        var34 = client.field465[client.field431[var32]];
+                        if (null != var34 && var34 != var29 && 1 == var34.field2213.field3470 && var34.field2672 == var29.field2672 && var29.field2608 == var34.field2608) {
+                           class408.method2000(var34, client.field431[var32], var16, var18);
+                        }
+                     }
+
+                     var32 = class268.field2221;
+                     var35 = class268.field2220;
+
+                     for(var24 = 0; var24 < var32; ++var24) {
+                        var39 = client.field347[var35[var24]];
+                        if (var39 != null && var39.field2672 == var29.field2672 && var29.field2608 == var39.field2608) {
+                           class346.method1753(var39, var35[var24], var16, var18);
+                        }
+                     }
+                  }
+
+                  class408.method2000(var29, var20, var16, var18);
+               }
+
+               if (var28 == 0) {
+                  class380 var30 = client.field347[var20];
+                  if (null == var30) {
+                     break label306;
+                  }
+
+                  if (64 == (var30.field2672 & 127) && (var30.field2608 & 127) == 64) {
+                     for(var32 = 0; var32 < client.field275; ++var32) {
+                        var34 = client.field465[client.field431[var32]];
+                        if (null != var34 && var34.field2213.field3470 == 1 && var30.field2672 == var34.field2672 && var30.field2608 == var34.field2608) {
+                           class408.method2000(var34, client.field431[var32], var16, var18);
+                        }
+                     }
+
+                     var32 = class268.field2221;
+                     var35 = class268.field2220;
+
+                     for(var24 = 0; var24 < var32; ++var24) {
+                        var39 = client.field347[var35[var24]];
+                        if (var39 != null && var39 != var30 && var30.field2672 == var39.field2672 && var39.field2608 == var30.field2608) {
+                           class346.method1753(var39, var35[var24], var16, var18);
+                        }
+                     }
+                  }
+
+                  if (client.field359 != var20) {
+                     class346.method1753(var30, var20, var16, var18);
+                  } else {
+                     var5 = var12;
+                  }
+               }
+
+               if (var28 == 3) {
+                  class141 var31 = client.field360[class347.field2878][var16][var18];
+                  if (null != var31) {
+                     for(class402 var36 = (class402)var31.method647(); var36 != null; var36 = (class402)var31.method650()) {
+                        class263 var37 = class423.method2062(var36.field3387);
+                        if (1 == client.field386) {
+                           class156.method721(class177.field1486, client.field483 + " " + class442.field3664 + " " + class238.method1032(16748608) + var37.field2147, 16, var36.field3387, var16, var18);
+                        } else if (client.field388) {
+                           if ((class32.field177 & 1) == 1) {
+                              class156.method721(client.field391, client.field510 + " " + class442.field3664 + " " + class238.method1032(16748608) + var37.field2147, 17, var36.field3387, var16, var18);
+                           }
+                        } else {
+                           String[] var38 = var37.field2145;
+
+                           for(int var40 = 4; var40 >= 0; --var40) {
+                              if (var36.method1986(var40)) {
+                                 if (var38 != null && null != var38[var40]) {
+                                    byte var26 = 0;
+                                    if (var40 == 0) {
+                                       var26 = 18;
+                                    }
+
+                                    if (var40 == 1) {
+                                       var26 = 19;
+                                    }
+
+                                    if (var40 == 2) {
+                                       var26 = 20;
+                                    }
+
+                                    if (var40 == 3) {
+                                       var26 = 21;
+                                    }
+
+                                    if (var40 == 4) {
+                                       var26 = 22;
+                                    }
+
+                                    class156.method721(var38[var40], class238.method1032(16748608) + var37.field2147, var26, var36.field3387, var16, var18);
+                                 } else if (var40 == 2) {
+                                    class156.method721(class177.field1571, class238.method1032(16748608) + var37.field2147, 20, var36.field3387, var16, var18);
+                                 }
+                              }
+                           }
+
+                           class156.method721(class177.field1538, class238.method1032(16748608) + var37.field2147, 1004, var36.field3387, var16, var18);
+                        }
+                     }
                   }
                }
             }
          }
+
+         ++var9;
       }
-
-   }
-
-   static void method1892() {
-      if (client.field510 == 1) {
-         client.field446 = true;
-      }
-
    }
 }

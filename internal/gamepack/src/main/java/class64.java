@@ -1,7 +1,39 @@
-public class class64 {
-   static final void method349(int var0, int var1, int var2, int var3, int var4, int var5, int var6) {
-      if (class25.method126(var0)) {
-         class493.method2388(class71.field853[var0], -1, var1, var2, var3, var4, var5, var6);
+import java.util.Iterator;
+
+public class class64 implements Iterator {
+   class195 field622;
+   class195 field623 = null;
+   class477 field621;
+
+   class64(class477 var1) {
+      this.field621 = var1;
+      this.field622 = this.field621.field4010.field1737;
+      this.field623 = null;
+   }
+
+   public Object next() {
+      class195 var1 = this.field622;
+      if (var1 == this.field621.field4010) {
+         var1 = null;
+         this.field622 = null;
+      } else {
+         this.field622 = var1.field1737;
+      }
+
+      this.field623 = var1;
+      return var1;
+   }
+
+   public boolean hasNext() {
+      return this.field622 != this.field621.field4010;
+   }
+
+   public void remove() {
+      if (this.field623 == null) {
+         throw new IllegalStateException();
+      } else {
+         this.field623.method870();
+         this.field623 = null;
       }
    }
 }

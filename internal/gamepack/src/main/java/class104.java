@@ -1,29 +1,19 @@
-import java.util.Comparator;
+public final class class104 {
+   final int[] field806;
 
-final class class104 implements Comparator {
-   public static int field1353;
-
-   int method561(class87 var1, class87 var2) {
-      return var1.field973.field229 < var2.field973.field229 ? -1 : (var2.field973.field229 == var1.field973.field229 ? 0 : 1);
+   class104() {
+      this.field806 = new int[4096];
    }
 
-   public int compare(Object var1, Object var2) {
-      return this.method561((class87)var1, (class87)var2);
+   class104(int[] var1) {
+      this.field806 = var1;
    }
 
-   public boolean equals(Object var1) {
-      return super.equals(var1);
+   final int method416(int var1, int var2) {
+      return this.field806[var2 * 64 + var1];
    }
 
-   static final void method562(class210 var0, int var1) {
-      if (null == var0.field2295) {
-         throw new RuntimeException();
-      } else {
-         if (var0.field2362 == null) {
-            var0.field2362 = new int[var0.field2295.length];
-         }
-
-         var0.field2362[var1] = Integer.MAX_VALUE;
-      }
+   public static int method417(int var0) {
+      return class291.method1432(class105.field814[var0]);
    }
 }

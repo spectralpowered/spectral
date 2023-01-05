@@ -140,7 +140,7 @@ tasks {
                 if(gamepackDir.exists()) gamepackDir.deleteRecursively()
                 gamepackDir.mkdirs()
                 decompDir.listFiles()!!.forEach { srcFile ->
-                    if(srcFile.name == "org" && srcFile.isDirectory) return@forEach
+                    if(srcFile.name.contains("bouncycastle")) return@forEach
                     srcFile.copyRecursively(gamepackDir.resolve(srcFile.name), overwrite = true)
                 }
                 println("Successfully copied gamepack sources.")

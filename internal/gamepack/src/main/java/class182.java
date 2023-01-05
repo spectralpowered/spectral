@@ -1,118 +1,116 @@
-import java.awt.event.FocusEvent;
-import java.awt.event.FocusListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.awt.event.MouseMotionListener;
+public class class182 {
+   static class266 field1681;
+   static String field1677;
+   class395 field1679 = new class395();
+   int field1678 = -1;
+   long field1680;
 
-public class class182 implements MouseListener, MouseMotionListener, FocusListener {
-   public static class182 field1951 = new class182();
-   public static int field1952 = 0;
-   public static int field1956 = 0;
-   public static int field1957 = 0;
-   public static int field1961 = 0;
-   public static int field1963 = 0;
-   public static int field1964 = 0;
-   public static long field1949 = 0L;
-   public static long field1959 = 0L;
-   public static volatile int field1950 = 0;
-   public static volatile int field1953 = -1;
-   public static volatile int field1954 = -1;
-   public static volatile int field1958 = 0;
-   public static volatile int field1960 = 0;
-   public static volatile int field1965 = 0;
-   public static volatile int field1967 = 0;
-   public static volatile long field1955 = -1L;
-   public static volatile long field1962 = 0L;
-   static class210[] field1969;
-   static class319[] field1968;
-   static int field1966;
+   public class182(class127 var1) {
+      this.method831(var1);
+   }
 
-   final int method952(MouseEvent var1) {
-      int var3 = var1.getButton();
-      if (!var1.isAltDown() && var3 != 2) {
-         return !var1.isMetaDown() && var3 != 3 ? 1 : 2;
+   void method831(class127 var1) {
+      this.field1680 = var1.method598();
+      this.field1678 = var1.method595();
+
+      for(int var3 = var1.method547(); var3 != 0; var3 = var1.method547()) {
+         Object var4;
+         if (var3 == 3) {
+            var4 = new class381(this);
+         } else if (var3 == 1) {
+            var4 = new class416(this);
+         } else if (var3 == 13) {
+            var4 = new class188(this);
+         } else if (var3 == 4) {
+            var4 = new class398(this);
+         } else if (var3 == 6) {
+            var4 = new class332(this);
+         } else if (var3 == 5) {
+            var4 = new class456(this);
+         } else if (var3 == 2) {
+            var4 = new class261(this);
+         } else if (var3 == 7) {
+            var4 = new class467(this);
+         } else if (var3 == 14) {
+            var4 = new class15(this);
+         } else if (var3 == 8) {
+            var4 = new class312(this);
+         } else if (var3 == 9) {
+            var4 = new class97(this);
+         } else if (var3 == 10) {
+            var4 = new class114(this);
+         } else if (var3 == 11) {
+            var4 = new class60(this);
+         } else if (var3 == 12) {
+            var4 = new class463(this);
+         } else {
+            if (var3 != 15) {
+               throw new RuntimeException("");
+            }
+
+            var4 = new class113(this);
+         }
+
+         ((class480)var4).method2367(var1);
+         this.field1679.method1939((class139)var4);
+      }
+
+   }
+
+   public void method832(class429 var1) {
+      if (this.field1680 == var1.field3546 && var1.field3567 == this.field1678) {
+         for(class480 var3 = (class480)this.field1679.method1941(); null != var3; var3 = (class480)this.field1679.method1935()) {
+            var3.method2368(var1);
+         }
+
+         ++var1.field3567;
       } else {
-         return 4;
+         throw new RuntimeException("");
       }
    }
 
-   public final synchronized void mousePressed(MouseEvent var1) {
-      if (null != field1951) {
-         field1965 = 0;
-         field1958 = var1.getX();
-         field1967 = var1.getY();
-         field1962 = class154.method814();
-         field1960 = this.method952(var1);
-         if (field1960 != 0) {
-            field1950 = field1960;
+   static final void method830(byte[] var0, int var1, int var2, class318 var3, class427[] var4) {
+      class127 var6 = new class127(var0);
+      int var7 = -1;
+
+      while(true) {
+         int var8 = var6.method601();
+         if (var8 == 0) {
+            return;
+         }
+
+         var7 += var8;
+         int var9 = 0;
+
+         while(true) {
+            int var10 = var6.method559();
+            if (var10 == 0) {
+               break;
+            }
+
+            var9 += var10 - 1;
+            int var11 = var9 & 63;
+            int var12 = var9 >> 6 & 63;
+            int var13 = var9 >> 12;
+            int var14 = var6.method547();
+            int var15 = var14 >> 2;
+            int var16 = var14 & 3;
+            int var17 = var1 + var12;
+            int var18 = var11 + var2;
+            if (var17 > 0 && var18 > 0 && var17 < 103 && var18 < 103) {
+               int var19 = var13;
+               if (2 == (class71.field644[1][var17][var18] & 2)) {
+                  var19 = var13 - 1;
+               }
+
+               class427 var20 = null;
+               if (var19 >= 0) {
+                  var20 = var4[var19];
+               }
+
+               class434.method2156(var13, var17, var18, var7, var16, var15, var3, var20);
+            }
          }
       }
-
-      if (var1.isPopupTrigger()) {
-         var1.consume();
-      }
-
-   }
-
-   public final synchronized void mouseReleased(MouseEvent var1) {
-      if (field1951 != null) {
-         field1965 = 0;
-         field1950 = 0;
-      }
-
-      if (var1.isPopupTrigger()) {
-         var1.consume();
-      }
-
-   }
-
-   public final void mouseClicked(MouseEvent var1) {
-      if (var1.isPopupTrigger()) {
-         var1.consume();
-      }
-
-   }
-
-   public final synchronized void mouseEntered(MouseEvent var1) {
-      this.mouseMoved(var1);
-   }
-
-   public final synchronized void mouseExited(MouseEvent var1) {
-      if (null != field1951) {
-         field1965 = 0;
-         field1953 = -1;
-         field1954 = -1;
-         field1955 = var1.getWhen();
-      }
-
-   }
-
-   public final synchronized void mouseDragged(MouseEvent var1) {
-      this.mouseMoved(var1);
-   }
-
-   public final synchronized void mouseMoved(MouseEvent var1) {
-      if (null != field1951) {
-         field1965 = 0;
-         field1953 = var1.getX();
-         field1954 = var1.getY();
-         field1955 = var1.getWhen();
-      }
-
-   }
-
-   public final void focusGained(FocusEvent var1) {
-   }
-
-   public final synchronized void focusLost(FocusEvent var1) {
-      if (field1951 != null) {
-         field1950 = 0;
-      }
-
-   }
-
-   static final int method953(int var0, int var1, int var2, int var3) {
-      int var5 = 65536 - class234.field2544[var2 * 1024 / var3] >> 1;
-      return (var0 * (65536 - var5) >> 16) + (var5 * var1 >> 16);
    }
 }

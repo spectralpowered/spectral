@@ -1,11 +1,24 @@
-public final class class413 {
-   public static final char[] field3553 = new char[]{'_', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
-   static long[] field3554 = new long[12];
+public class class413 {
+   public static int[] field3422;
+   static int[] field3421;
+   public class464 field3418;
+   public class464 field3419;
+   public int field3420;
 
-   static {
-      for(int var0 = 0; var0 < field3554.length; ++var0) {
-         field3554[var0] = (long)Math.pow(37.0D, (double)var0);
-      }
+   public class413(int var1, class464 var2, class464 var3) {
+      this.field3420 = var1;
+      this.field3418 = var2;
+      this.field3419 = var3;
+   }
 
+   static class112[] method2011() {
+      return new class112[]{class112.field836, class112.field834, class112.field841, class112.field837, class112.field833};
+   }
+
+   public static int method2012(int var0, int var1, int var2) {
+      int var4 = class334.method1681(1 + (var2 - var1));
+      var4 <<= var1;
+      var0 |= var4;
+      return var0;
    }
 }

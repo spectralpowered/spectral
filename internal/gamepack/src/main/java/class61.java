@@ -1,82 +1,48 @@
-import java.io.File;
-import java.io.RandomAccessFile;
+public class class61 extends class392 {
+   static int field605;
+   final boolean field604;
 
-public class class61 {
-   static class164 field819;
+   public class61(boolean var1) {
+      this.field604 = var1;
+   }
 
-   public static File method339(String var0) {
-      if (!class51.field751) {
-         throw new RuntimeException("");
+   int method281(class69 var1, class69 var2) {
+      if (var1.field627 != 0 && 0 != var2.field627) {
+         return this.field604 ? var1.method1817().method1104(var2.method1817()) : var2.method1817().method1104(var1.method1817());
       } else {
-         File var2 = (File)class51.field753.get(var0);
-         if (null != var2) {
-            return var2;
-         } else {
-            File var3 = new File(class51.field752, var0);
-            RandomAccessFile var4 = null;
-
-            try {
-               File var5 = new File(var3.getParent());
-               if (!var5.exists()) {
-                  throw new RuntimeException("");
-               } else {
-                  var4 = new RandomAccessFile(var3, "rw");
-                  int var6 = var4.read();
-                  var4.seek(0L);
-                  var4.write(var6);
-                  var4.seek(0L);
-                  var4.close();
-                  class51.field753.put(var0, var3);
-                  return var3;
-               }
-            } catch (Exception var8) {
-               try {
-                  if (null != var4) {
-                     var4.close();
-                     var4 = null;
-                  }
-               } catch (Exception var7) {
-                  ;
-               }
-
-               throw new RuntimeException();
-            }
-         }
+         return this.method1918(var1, var2);
       }
    }
 
-   static class210 method340(class210 var0) {
-      class210 var3 = var0;
-      int var5 = class172.method913(var0);
-      int var4 = var5 >> 17 & 7;
-      int var6 = var4;
-      class210 var2;
-      if (var4 == 0) {
-         var2 = null;
-      } else {
-         int var7 = 0;
+   public int compare(Object var1, Object var2) {
+      return this.method281((class69)var1, (class69)var2);
+   }
 
-         while(true) {
-            if (var7 >= var6) {
-               var2 = var3;
-               break;
-            }
+   static void method282(class2 var0) {
+      if (var0.method3() != client.field222) {
+         client.field222 = var0.method3();
+         class206.method900(var0.method3());
+      }
 
-            var3 = class274.method1301(var3.field2234);
-            if (null == var3) {
-               var2 = null;
-               break;
-            }
-
-            ++var7;
+      if (client.field308 != var0.field16) {
+         class38 var2 = class446.field3678;
+         int var3 = var0.field16;
+         if ((var3 & 536870912) != 0) {
+            class359.field3054 = class208.method906(var2, "logo_deadman_mode", "");
+         } else if ((var3 & 1073741824) != 0) {
+            class359.field3054 = class208.method906(var2, "logo_seasonal_mode", "");
+         } else if (0 != (var3 & 256)) {
+            class359.field3054 = class208.method906(var2, "logo_speedrunning", "");
+         } else {
+            class359.field3054 = class208.method906(var2, "logo", "");
          }
       }
 
-      class210 var8 = var2;
-      if (null == var2) {
-         var8 = var0.field2301;
-      }
-
-      return var8;
+      class182.field1677 = var0.field18;
+      client.field395 = var0.field10;
+      client.field308 = var0.field16;
+      class57.field589 = 0 == client.field221 ? 'ꩊ' : '鱀' + var0.field10;
+      class15.field72 = client.field221 == 0 ? 443 : var0.field10 + '썐';
+      class148.field1164 = class57.field589;
    }
 }

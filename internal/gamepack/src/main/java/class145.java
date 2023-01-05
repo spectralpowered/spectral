@@ -1,47 +1,45 @@
-import java.util.Iterator;
+import java.io.File;
+import java.io.IOException;
 
-public class class145 implements Iterator {
-   class106 field1556 = null;
-   class106 field1557;
-   class55 field1558;
+public class class145 extends class392 {
+   final boolean field1159;
 
-   class145(class55 var1) {
-      this.method779(var1);
+   public class145(boolean var1) {
+      this.field1159 = var1;
    }
 
-   void method779(class55 var1) {
-      this.field1558 = var1;
-      this.method780();
-   }
-
-   void method780() {
-      this.field1557 = this.field1558 != null ? this.field1558.field802.field1359 : null;
-      this.field1556 = null;
-   }
-
-   public Object next() {
-      class106 var1 = this.field1557;
-      if (var1 == this.field1558.field802) {
-         var1 = null;
-         this.field1557 = null;
+   int method690(class69 var1, class69 var2) {
+      if (0 != var1.field627 && 0 != var2.field627) {
+         return this.field1159 ? var1.field629 - var2.field629 : var2.field629 - var1.field629;
       } else {
-         this.field1557 = var1.field1359;
+         return this.method1918(var1, var2);
+      }
+   }
+
+   public int compare(Object var1, Object var2) {
+      return this.method690((class69)var1, (class69)var2);
+   }
+
+   static boolean method692(int var0, int var1) {
+      return var0 != 4 || var1 < 8;
+   }
+
+   static void method691(File var0, File var1) {
+      try {
+         class455 var3 = new class455(class25.field114, "rw", 10000L);
+         class127 var4 = new class127(500);
+         var4.method544(3);
+         var4.method544(null != var1 ? 1 : 0);
+         var4.method539(var0.getPath());
+         if (null != var1) {
+            var4.method539("");
+         }
+
+         var3.method2247(var4.field1072, 0, var4.field1070);
+         var3.method2248();
+      } catch (IOException var5) {
+         var5.printStackTrace();
       }
 
-      this.field1556 = var1;
-      return var1;
-   }
-
-   public boolean hasNext() {
-      return this.field1557 != this.field1558.field802 && this.field1557 != null;
-   }
-
-   public void remove() {
-      if (this.field1556 == null) {
-         throw new IllegalStateException();
-      } else {
-         this.field1556.method567();
-         this.field1556 = null;
-      }
    }
 }

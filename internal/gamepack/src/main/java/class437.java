@@ -1,104 +1,29 @@
-public class class437 {
-   int field3616 = class453.method2152(24);
-   int field3617 = class453.method2152(24);
-   int field3618 = class453.method2152(16);
-   int field3619 = class453.method2152(24) + 1;
-   int field3620 = class453.method2152(6) + 1;
-   int field3621 = class453.method2152(8);
-   int[] field3622;
+public abstract class class437 extends class139 {
+   class437 field3619;
+   class490 field3618;
+   int field3621;
+   volatile boolean field3620 = true;
 
-   class437() {
-      int[] var1 = new int[this.field3620];
+   protected abstract class437 method2168();
 
-      int var2;
-      for(var2 = 0; var2 < this.field3620; ++var2) {
-         int var3 = 0;
-         int var4 = class453.method2152(3);
-         boolean var5 = class453.method2158() != 0;
-         if (var5) {
-            var3 = class453.method2152(5);
-         }
+   protected abstract class437 method2171();
 
-         var1[var2] = var3 << 3 | var4;
-      }
+   protected abstract int method2173();
 
-      this.field3622 = new int[this.field3620 * 8];
+   protected abstract void method2169(int[] var1, int var2, int var3);
 
-      for(var2 = 0; var2 < this.field3620 * 8; ++var2) {
-         this.field3622[var2] = (var1[var2 >> 3] & 1 << (var2 & 7)) != 0 ? class453.method2152(8) : -1;
-      }
+   protected abstract void method2172(int var1);
 
+   int method2167() {
+      return 255;
    }
 
-   void method2089(float[] var1, int var2, boolean var3) {
-      int var4;
-      for(var4 = 0; var4 < var2; ++var4) {
-         var1[var4] = 0.0F;
+   final void method2170(int[] var1, int var2, int var3) {
+      if (this.field3620) {
+         this.method2169(var1, var2, var3);
+      } else {
+         this.method2172(var3);
       }
 
-      if (!var3) {
-         var4 = class453.field3729[this.field3621].field924;
-         int var5 = this.field3617 - this.field3616;
-         int var6 = var5 / this.field3619;
-         int[] var7 = new int[var6];
-
-         for(int var8 = 0; var8 < 8; ++var8) {
-            int var9 = 0;
-
-            while(var9 < var6) {
-               int var10;
-               int var11;
-               if (var8 == 0) {
-                  var10 = class453.field3729[this.field3621].method436();
-
-                  for(var11 = var4 - 1; var11 >= 0; --var11) {
-                     if (var9 + var11 < var6) {
-                        var7[var9 + var11] = var10 % this.field3620;
-                     }
-
-                     var10 /= this.field3620;
-                  }
-               }
-
-               for(var10 = 0; var10 < var4; ++var10) {
-                  var11 = var7[var9];
-                  int var12 = this.field3622[var11 * 8 + var8];
-                  if (var12 >= 0) {
-                     int var13 = this.field3616 + var9 * this.field3619;
-                     class80 var14 = class453.field3729[var12];
-                     int var15;
-                     if (this.field3618 == 0) {
-                        var15 = this.field3619 / var14.field924;
-
-                        for(int var19 = 0; var19 < var15; ++var19) {
-                           float[] var20 = var14.method437();
-
-                           for(int var18 = 0; var18 < var14.field924; ++var18) {
-                              var1[var13 + var19 + var18 * var15] += var20[var18];
-                           }
-                        }
-                     } else {
-                        var15 = 0;
-
-                        while(var15 < this.field3619) {
-                           float[] var16 = var14.method437();
-
-                           for(int var17 = 0; var17 < var14.field924; ++var17) {
-                              var1[var13 + var15] += var16[var17];
-                              ++var15;
-                           }
-                        }
-                     }
-                  }
-
-                  ++var9;
-                  if (var9 >= var6) {
-                     break;
-                  }
-               }
-            }
-         }
-
-      }
    }
 }

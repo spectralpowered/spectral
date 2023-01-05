@@ -1,59 +1,24 @@
-public abstract class class187 extends class106 {
-   abstract void method972(class134 var1);
+public class class187 extends class368 {
+   static class38 field1697;
+   int field1698;
 
-   abstract void method973(class112 var1);
+   int method845(class187 var1) {
+      return this.field1698 - var1.field1698;
+   }
 
-   static final void method974(String var0) {
-      if (var0.equalsIgnoreCase("toggleroof")) {
-         class111.field1385.method1344(!class111.field1385.method1317());
-         if (class111.field1385.method1317()) {
-            class237.method1197(99, "", "Roofs are now all hidden");
-         } else {
-            class237.method1197(99, "", "Roofs will only be removed selectively");
-         }
-      }
+   public int method1816(class368 var1) {
+      return this.method845((class187)var1);
+   }
 
-      if (var0.equalsIgnoreCase("displayfps")) {
-         class111.field1385.method1332();
-      }
+   public int compareTo(Object var1) {
+      return this.method845((class187)var1);
+   }
 
-      if (var0.equalsIgnoreCase("renderself")) {
-         client.field462 = !client.field462;
-      }
+   public static void method846(class274 var0) {
+      class106.field819 = var0;
+   }
 
-      if (var0.equalsIgnoreCase("mouseovertext")) {
-         client.field585 = !client.field585;
-      }
-
-      if (client.field685 >= 2) {
-         if (var0.equalsIgnoreCase("errortest")) {
-            throw new RuntimeException();
-         }
-
-         if (var0.equalsIgnoreCase("showcoord")) {
-            class237.field2566.field3412 = !class237.field2566.field3412;
-         }
-
-         if (var0.equalsIgnoreCase("fpson")) {
-            class111.field1385.method1341(true);
-         }
-
-         if (var0.equalsIgnoreCase("fpsoff")) {
-            class111.field1385.method1341(false);
-         }
-
-         if (var0.equalsIgnoreCase("gc")) {
-            System.gc();
-         }
-
-         if (var0.equalsIgnoreCase("clientdrop")) {
-            class380.method1808();
-         }
-      }
-
-      class81 var2 = class189.method982(class165.field1753, client.field483.field3459);
-      var2.field933.method666(var0.length() + 1);
-      var2.field933.method660(var0, (byte)3);
-      client.field483.method1920(var2);
+   public static int method847(int var0, int var1) {
+      return (int)Math.round(Math.atan2((double)var0, (double)var1) * 2607.5945876176133D) & 16383;
    }
 }

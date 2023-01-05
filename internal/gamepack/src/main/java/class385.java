@@ -1,104 +1,96 @@
-public class class385 extends class106 {
-   boolean field3348;
-   boolean field3354;
-   int field3337;
-   int field3338;
-   int field3339;
-   int field3341;
-   int field3342;
-   int field3343;
-   int field3345;
-   int field3346;
-   int field3347;
-   int field3349;
-   int field3350;
-   int field3351;
-   int field3355;
-   int field3358;
-   int field3359;
-   int[] field3357 = new int[3];
-   String field3335;
-   String field3336;
-   String field3340;
-   String field3344;
-   String field3352;
-   String field3353;
-   String field3356;
-   String field3360;
+import java.util.Iterator;
 
-   class385(int var1, boolean var2, int var3, int var4, int var5, int var6, int var7, boolean var8, int var9, int var10, int var11, int var12, String var13, String var14, String var15, String var16, int var17, int var18, int var19, int var20, String var21, String var22, int[] var23, int var24, String var25, String var26) {
-      this.field3337 = var1;
-      this.field3348 = var2;
-      this.field3339 = var3;
-      this.field3350 = var4;
-      this.field3341 = var5;
-      this.field3342 = var6;
-      this.field3343 = var7;
-      this.field3354 = var8;
-      this.field3345 = var9;
-      this.field3346 = var10;
-      this.field3347 = var11;
-      this.field3359 = var12;
-      this.field3352 = var13;
-      this.field3356 = var14;
-      this.field3336 = var15;
-      this.field3335 = var16;
-      this.field3351 = var17;
-      this.field3338 = var18;
-      this.field3355 = var19;
-      this.field3349 = var20;
-      this.field3340 = var21;
-      this.field3353 = var22;
-      this.field3357 = var23;
-      this.field3358 = var24;
-      this.field3344 = var25;
-      this.field3360 = var26;
-   }
+public final class class385 implements Iterable {
+   class139 field3242;
+   class139 field3243;
+   class139[] field3241;
+   int field3240 = 0;
+   int field3244;
 
-   public void method1823(class134 var1) {
-      var1.method666(9);
-      var1.method666(this.field3337);
-      var1.method666(this.field3348 ? 1 : 0);
-      var1.method655(this.field3339);
-      var1.method666(this.field3350);
-      var1.method666(this.field3341);
-      var1.method666(this.field3342);
-      var1.method666(this.field3343);
-      var1.method666(this.field3354 ? 1 : 0);
-      var1.method655(this.field3345);
-      var1.method666(this.field3346);
-      var1.method724(this.field3347);
-      var1.method655(this.field3359);
-      var1.method726(this.field3352);
-      var1.method726(this.field3356);
-      var1.method726(this.field3336);
-      var1.method726(this.field3335);
-      var1.method666(this.field3338);
-      var1.method655(this.field3351);
-      var1.method726(this.field3340);
-      var1.method726(this.field3353);
-      var1.method666(this.field3355);
-      var1.method666(this.field3349);
+   public class385(int var1) {
+      this.field3244 = var1;
+      this.field3241 = new class139[var1];
 
-      for(int var3 = 0; var3 < this.field3357.length; ++var3) {
-         var1.method656(this.field3357[var3]);
+      for(int var2 = 0; var2 < var1; ++var2) {
+         class139 var3 = this.field3241[var2] = new class139();
+         var3.field1132 = var3;
+         var3.field1133 = var3;
       }
 
-      var1.method656(this.field3358);
-      var1.method726(this.field3344);
-      var1.method726(this.field3360);
    }
 
-   public int method1824() {
-      byte var2 = 39;
-      int var3 = var2 + class380.method1807(this.field3352);
-      var3 += class380.method1807(this.field3356);
-      var3 += class380.method1807(this.field3336);
-      var3 += class380.method1807(this.field3335);
-      var3 += class380.method1807(this.field3340);
-      var3 += class380.method1807(this.field3353);
-      var3 += class380.method1807(this.field3344);
-      var3 += class380.method1807(this.field3360);
-      return var3;
+   public class139 method1897(long var1) {
+      class139 var3 = this.field3241[(int)(var1 & (long)(this.field3244 - 1))];
+
+      for(this.field3242 = var3.field1132; this.field3242 != var3; this.field3242 = this.field3242.field1132) {
+         if (this.field3242.field1134 == var1) {
+            class139 var4 = this.field3242;
+            this.field3242 = this.field3242.field1132;
+            return var4;
+         }
+      }
+
+      this.field3242 = null;
+      return null;
+   }
+
+   public void method1896(class139 var1, long var2) {
+      if (var1.field1133 != null) {
+         var1.method637();
+      }
+
+      class139 var4 = this.field3241[(int)(var2 & (long)(this.field3244 - 1))];
+      var1.field1133 = var4.field1133;
+      var1.field1132 = var4;
+      var1.field1133.field1132 = var1;
+      var1.field1132.field1133 = var1;
+      var1.field1134 = var2;
+   }
+
+   public void method1894() {
+      for(int var1 = 0; var1 < this.field3244; ++var1) {
+         class139 var2 = this.field3241[var1];
+
+         while(true) {
+            class139 var3 = var2.field1132;
+            if (var3 == var2) {
+               break;
+            }
+
+            var3.method637();
+         }
+      }
+
+      this.field3242 = null;
+      this.field3243 = null;
+   }
+
+   public class139 method1895() {
+      this.field3240 = 0;
+      return this.method1898();
+   }
+
+   public class139 method1898() {
+      class139 var1;
+      if (this.field3240 > 0 && this.field3243 != this.field3241[this.field3240 - 1]) {
+         var1 = this.field3243;
+         this.field3243 = var1.field1132;
+         return var1;
+      } else {
+         do {
+            if (this.field3240 >= this.field3244) {
+               return null;
+            }
+
+            var1 = this.field3241[this.field3240++].field1132;
+         } while(var1 == this.field3241[this.field3240 - 1]);
+
+         this.field3243 = var1.field1132;
+         return var1;
+      }
+   }
+
+   public Iterator iterator() {
+      return new class358(this);
    }
 }

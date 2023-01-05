@@ -1,49 +1,64 @@
-public abstract class class204 {
-   public static class206 field2184;
-   public int field2180;
-   public int field2181;
-   public int field2182;
-   public int field2183;
+import java.lang.management.GarbageCollectorMXBean;
+import java.lang.management.ManagementFactory;
+import java.util.Iterator;
 
-   protected abstract boolean method1050(int var1, int var2, int var3, class391 var4);
+public class class204 {
+   public static final class204 field1760 = new class204();
+   public static final class204 field1761 = new class204();
+   public static final class204 field1762 = new class204();
+   public static final class204 field1763 = new class204();
+   public static final class204 field1764 = new class204();
+   public static final class204 field1765 = new class204();
+   public static final class204 field1766 = new class204();
+   public static final class204 field1767 = new class204();
+   public static final class204 field1768 = new class204();
+   public static final class204 field1769 = new class204();
+   public static final class204 field1770 = new class204();
+   public static final class204 field1771 = new class204();
+   public static final class204 field1772 = new class204();
+   public static final class204 field1773 = new class204();
 
-   public static final boolean method1052(char var0) {
-      if (Character.isISOControl(var0)) {
-         return false;
-      } else if (class173.method927(var0)) {
-         return true;
-      } else {
-         char[] var2 = class288.field2791;
+   protected static int method894() {
+      int var1 = 0;
+      if (class208.field1814 == null || !class208.field1814.isValid()) {
+         try {
+            Iterator var2 = ManagementFactory.getGarbageCollectorMXBeans().iterator();
 
-         int var3;
-         char var4;
-         for(var3 = 0; var3 < var2.length; ++var3) {
-            var4 = var2[var3];
-            if (var4 == var0) {
-               return true;
+            while(var2.hasNext()) {
+               GarbageCollectorMXBean var3 = (GarbageCollectorMXBean)var2.next();
+               if (var3.isValid()) {
+                  class208.field1814 = var3;
+                  class214.field1873 = -1L;
+                  class214.field1871 = -1L;
+               }
             }
+         } catch (Throwable var10) {
+            ;
          }
-
-         var2 = class288.field2790;
-
-         for(var3 = 0; var3 < var2.length; ++var3) {
-            var4 = var2[var3];
-            if (var0 == var4) {
-               return true;
-            }
-         }
-
-         return false;
       }
+
+      if (class208.field1814 != null) {
+         long var11 = class152.method711();
+         long var4 = class208.field1814.getCollectionTime();
+         if (class214.field1871 != -1L) {
+            long var6 = var4 - class214.field1871;
+            long var8 = var11 - class214.field1873;
+            if (0L != var8) {
+               var1 = (int)(var6 * 100L / var8);
+            }
+         }
+
+         class214.field1871 = var4;
+         class214.field1873 = var11;
+      }
+
+      return var1;
    }
 
-   static final void method1051(int var0, int var1) {
-      if (client.field442 == 2) {
-         class69.method387((client.field445 - class381.field3325 << 7) + client.field448, (client.field486 - class345.field3166 << 7) + client.field543, client.field447 * 2);
-         if (client.field640 > -1 && client.field435 % 20 < 10) {
-            class307.field2901[0].method1548(var0 + client.field640 - 12, var1 + client.field461 - 28);
-         }
-
+   static final void method893(class365 var0, int var1, int var2) {
+      if (var0 != null) {
+         class35.method147(var0.field3100, var0.field3096, var0.field3094, var0.field3095, var0.field3098, var0.field3097, var0.field3093, var1, var2);
       }
+
    }
 }

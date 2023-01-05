@@ -1,24 +1,151 @@
-public class class400 extends class108 {
-   public final int field3511;
-   public final int field3512;
-   public final int[] field3510;
-   public final int[] field3513;
+import java.util.Iterator;
+import java.util.LinkedList;
 
-   class400(int var1, int var2, int[] var3, int[] var4, int var5) {
-      this.field3511 = var1;
-      this.field3512 = var2;
-      this.field3510 = var3;
-      this.field3513 = var4;
+public abstract class class400 {
+   public static boolean field3373 = true;
+   static class58 field3376;
+   boolean field3374;
+   boolean field3375;
+   byte[][][] field3370;
+   byte[][][] field3371;
+   class387[][][][] field3366;
+   int field3360 = -1;
+   int field3361;
+   int field3362;
+   int field3364;
+   int field3365;
+   int field3367 = -1;
+   int field3368;
+   int field3372;
+   short[][][] field3363;
+   short[][][] field3369;
+
+   class400() {
+      new LinkedList();
+      this.field3374 = false;
+      this.field3375 = false;
    }
 
-   public boolean method1958(int var1, int var2) {
-      if (var2 >= 0 && var2 < this.field3513.length) {
-         int var4 = this.field3513[var2];
-         if (var1 >= var4 && var1 <= this.field3510[var2] + var4) {
-            return true;
+   abstract void method1978(class127 var1);
+
+   boolean method1973() {
+      return this.field3374 && this.field3375;
+   }
+
+   void method1974(class274 var1) {
+      if (!this.method1973()) {
+         byte[] var3 = var1.method1365(this.field3360, this.field3367);
+         if (var3 != null) {
+            this.method1978(new class127(var3));
+            this.field3374 = true;
+            this.field3375 = true;
+         }
+
+      }
+   }
+
+   void method1980() {
+      this.field3369 = (short[][][])null;
+      this.field3363 = (short[][][])null;
+      this.field3370 = (byte[][][])null;
+      this.field3371 = (byte[][][])null;
+      this.field3366 = (class387[][][][])null;
+      this.field3374 = false;
+      this.field3375 = false;
+   }
+
+   void method1975(int var1, int var2, class127 var3) {
+      int var5 = var3.method547();
+      if (var5 != 0) {
+         if (0 != (var5 & 1)) {
+            this.method1976(var1, var2, var3, var5);
+         } else {
+            this.method1977(var1, var2, var3, var5);
+         }
+
+      }
+   }
+
+   void method1976(int var1, int var2, class127 var3, int var4) {
+      boolean var6 = (var4 & 2) != 0;
+      if (var6) {
+         this.field3363[0][var1][var2] = field3373 ? (short)var3.method549() : (short)var3.method547();
+      }
+
+      this.field3369[0][var1][var2] = field3373 ? (short)var3.method549() : (short)var3.method547();
+   }
+
+   void method1977(int var1, int var2, class127 var3, int var4) {
+      int var6 = ((var4 & 24) >> 3) + 1;
+      boolean var7 = (var4 & 2) != 0;
+      boolean var8 = 0 != (var4 & 4);
+      this.field3369[0][var1][var2] = field3373 ? (short)var3.method549() : (short)var3.method547();
+      int var9;
+      int var10;
+      int var12;
+      if (var7) {
+         var9 = var3.method547();
+
+         for(var10 = 0; var10 < var9; ++var10) {
+            int var11 = field3373 ? var3.method549() : var3.method547();
+            if (var11 != 0) {
+               this.field3363[var10][var1][var2] = (short)var11;
+               var12 = var3.method547();
+               this.field3370[var10][var1][var2] = (byte)(var12 >> 2);
+               this.field3371[var10][var1][var2] = (byte)(var12 & 3);
+            }
          }
       }
 
-      return false;
+      if (var8) {
+         for(var9 = 0; var9 < var6; ++var9) {
+            var10 = var3.method547();
+            if (var10 != 0) {
+               class387[] var15 = this.field3366[var9][var1][var2] = new class387[var10];
+
+               for(var12 = 0; var12 < var10; ++var12) {
+                  int var13 = var3.method560();
+                  int var14 = var3.method547();
+                  var15[var12] = new class387(var13, var14 >> 2, var14 & 3);
+               }
+            }
+         }
+      }
+
+   }
+
+   int method1979() {
+      return this.field3362;
+   }
+
+   int method1981() {
+      return this.field3368;
+   }
+
+   public static class344[] method1972(class274 var0, int var1, int var2) {
+      byte[] var5 = var0.method1365(var1, var2);
+      boolean var4;
+      if (null == var5) {
+         var4 = false;
+      } else {
+         class85.method354(var5);
+         var4 = true;
+      }
+
+      return !var4 ? null : class196.method873();
+   }
+
+   static final void method1982() {
+      Iterator var1 = class100.field795.iterator();
+
+      while(var1.hasNext()) {
+         class152 var2 = (class152)var1.next();
+         var2.method705();
+      }
+
+      if (class228.field1933 != null) {
+         class228.field1933.method83();
+      }
+
    }
 }

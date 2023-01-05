@@ -1,106 +1,247 @@
+import java.util.Arrays;
 import java.util.Comparator;
-import java.util.Map.Entry;
+import java.util.HashMap;
 
-class class304 implements Comparator {
-   public static class164 field2893;
-   // $FF: synthetic field
-   final class201 this$0;
+public abstract class class304 {
+   class368[] field2441;
+   int field2439 = 0;
+   Comparator field2438 = null;
+   HashMap field2440;
+   HashMap field2443;
+   final int field2442;
 
-   class304(class201 var1) {
-      this.this$0 = var1;
+   class304(int var1) {
+      this.field2442 = var1;
+      this.field2441 = this.method1485(var1);
+      this.field2443 = new HashMap(var1 / 8);
+      this.field2440 = new HashMap(var1 / 8);
    }
 
-   int method1432(Entry var1, Entry var2) {
-      return ((Float)var2.getValue()).compareTo((Float)var1.getValue());
+   abstract class368 method1482();
+
+   abstract class368[] method1485(int var1);
+
+   public void method1466() {
+      this.field2439 = 0;
+      Arrays.fill(this.field2441, (Object)null);
+      this.field2443.clear();
+      this.field2440.clear();
    }
 
-   public int compare(Object var1, Object var2) {
-      return this.method1432((Entry)var1, (Entry)var2);
+   public int method1467() {
+      return this.field2439;
    }
 
-   public boolean equals(Object var1) {
-      return super.equals(var1);
+   public boolean method1468() {
+      return this.field2442 == this.field2439;
    }
 
-   public static int method1434(int var0, int var1, int var2) {
-      var2 &= 3;
-      if (var2 == 0) {
-         return var1;
-      } else if (var2 == 1) {
-         return 7 - var0;
+   public boolean method1469(class257 var1) {
+      if (!var1.method1103()) {
+         return false;
       } else {
-         return var2 == 2 ? 7 - var1 : var0;
+         return this.field2443.containsKey(var1) ? true : this.field2440.containsKey(var1);
       }
    }
 
-   public static int method1437(int var0) {
-      return var0 != 0 && var0 != 1 ? -1 : 0;
+   public class368 method1484(class257 var1) {
+      class368 var3 = this.method1483(var1);
+      return var3 != null ? var3 : this.method1471(var1);
    }
 
-   static int method1435(int var0, int var1) {
-      class233 var3 = (class233)class233.field2522.method545((long)var0);
+   class368 method1483(class257 var1) {
+      return !var1.method1103() ? null : (class368)this.field2443.get(var1);
+   }
+
+   class368 method1471(class257 var1) {
+      return !var1.method1103() ? null : (class368)this.field2440.get(var1);
+   }
+
+   public final boolean method1488(class257 var1) {
+      class368 var3 = this.method1483(var1);
       if (null == var3) {
-         return -1;
+         return false;
       } else {
-         return var1 >= 0 && var1 < var3.field2520.length ? var3.field2520[var1] : -1;
+         this.method1472(var3);
+         return true;
       }
    }
 
-   static final void method1436(class210 var0, int var1, byte[] var2, byte[] var3) {
-      if (null == var0.field2295) {
-         if (null == var2) {
-            return;
-         }
-
-         var0.field2295 = new byte[11][];
-         var0.field2296 = new byte[11][];
-         var0.field2303 = new int[11];
-         var0.field2298 = new int[11];
+   final void method1472(class368 var1) {
+      int var3 = this.method1477(var1);
+      if (var3 != -1) {
+         this.method1481(var3);
+         this.method1478(var1);
       }
+   }
 
-      var0.field2295[var1] = var2;
-      if (var2 != null) {
-         var0.field2294 = true;
+   class368 method1473(class257 var1) {
+      return this.method1474(var1, (class257)null);
+   }
+
+   class368 method1474(class257 var1, class257 var2) {
+      if (this.method1483(var1) != null) {
+         throw new IllegalStateException();
       } else {
-         var0.field2294 = false;
-
-         for(int var5 = 0; var5 < var0.field2295.length; ++var5) {
-            if (var0.field2295[var5] != null) {
-               var0.field2294 = true;
-               break;
-            }
-         }
-      }
-
-      var0.field2296[var1] = var3;
-   }
-
-   static void method1433(class230 var0, String var1) {
-      class97 var3 = new class97(var0, var1);
-      client.field719.add(var3);
-      client.field721 += var3.field1343;
-   }
-
-   static final void method1431(class210 var0, int var1, int var2) {
-      if (client.field610 == null && !client.field572) {
-         if (var0 != null && class61.method340(var0) != null) {
-            client.field610 = var0;
-            client.field611 = class61.method340(var0);
-            client.field612 = var1;
-            client.field613 = var2;
-            class188.field1982 = 0;
-            client.field621 = false;
-            int var4 = client.field573 - 1;
-            if (var4 != -1) {
-               class13.method84(var4);
-            }
-
-         }
+         class368 var4 = this.method1482();
+         var4.method1815(var1, var2);
+         this.method1479(var4);
+         this.method1480(var4);
+         return var4;
       }
    }
 
-   static final void method1438(int var0) {
-      var0 = Math.min(Math.max(var0, 0), 127);
-      class111.field1385.method1327(var0);
+   public final class368 method1475(int var1) {
+      if (var1 >= 0 && var1 < this.field2439) {
+         return this.field2441[var1];
+      } else {
+         throw new ArrayIndexOutOfBoundsException(var1);
+      }
+   }
+
+   public final void method1487() {
+      if (this.field2438 == null) {
+         Arrays.sort(this.field2441, 0, this.field2439);
+      } else {
+         Arrays.sort(this.field2441, 0, this.field2439, this.field2438);
+      }
+
+   }
+
+   final void method1476(class368 var1, class257 var2, class257 var3) {
+      this.method1478(var1);
+      var1.method1815(var2, var3);
+      this.method1480(var1);
+   }
+
+   final int method1477(class368 var1) {
+      for(int var3 = 0; var3 < this.field2439; ++var3) {
+         if (this.field2441[var3] == var1) {
+            return var3;
+         }
+      }
+
+      return -1;
+   }
+
+   final void method1478(class368 var1) {
+      if (this.field2443.remove(var1.field3127) == null) {
+         throw new IllegalStateException();
+      } else {
+         if (var1.field3128 != null) {
+            this.field2440.remove(var1.field3128);
+         }
+
+      }
+   }
+
+   final void method1479(class368 var1) {
+      this.field2441[++this.field2439 - 1] = var1;
+   }
+
+   final void method1480(class368 var1) {
+      this.field2443.put(var1.field3127, var1);
+      if (null != var1.field3128) {
+         class368 var3 = (class368)this.field2440.put(var1.field3128, var1);
+         if (var3 != null && var3 != var1) {
+            var3.field3128 = null;
+         }
+      }
+
+   }
+
+   final void method1481(int var1) {
+      --this.field2439;
+      if (var1 < this.field2439) {
+         System.arraycopy(this.field2441, var1 + 1, this.field2441, var1, this.field2439 - var1);
+      }
+
+   }
+
+   public final void method1470() {
+      this.field2438 = null;
+   }
+
+   public final void method1489(Comparator var1) {
+      if (null == this.field2438) {
+         this.field2438 = var1;
+      } else if (this.field2438 instanceof class392) {
+         ((class392)this.field2438).method1917(var1);
+      }
+
+   }
+
+   public static char method1486(char var0) {
+      switch(var0) {
+      case ' ':
+      case '-':
+      case '_':
+      case ' ':
+         return '_';
+      case '#':
+      case '[':
+      case ']':
+         return var0;
+      case 'À':
+      case 'Á':
+      case 'Â':
+      case 'Ã':
+      case 'Ä':
+      case 'à':
+      case 'á':
+      case 'â':
+      case 'ã':
+      case 'ä':
+         return 'a';
+      case 'Ç':
+      case 'ç':
+         return 'c';
+      case 'È':
+      case 'É':
+      case 'Ê':
+      case 'Ë':
+      case 'è':
+      case 'é':
+      case 'ê':
+      case 'ë':
+         return 'e';
+      case 'Í':
+      case 'Î':
+      case 'Ï':
+      case 'í':
+      case 'î':
+      case 'ï':
+         return 'i';
+      case 'Ñ':
+      case 'ñ':
+         return 'n';
+      case 'Ò':
+      case 'Ó':
+      case 'Ô':
+      case 'Õ':
+      case 'Ö':
+      case 'ò':
+      case 'ó':
+      case 'ô':
+      case 'õ':
+      case 'ö':
+         return 'o';
+      case 'Ù':
+      case 'Ú':
+      case 'Û':
+      case 'Ü':
+      case 'ù':
+      case 'ú':
+      case 'û':
+      case 'ü':
+         return 'u';
+      case 'ß':
+         return 'b';
+      case 'ÿ':
+      case 'Ÿ':
+         return 'y';
+      default:
+         return Character.toLowerCase(var0);
+      }
    }
 }

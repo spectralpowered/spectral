@@ -1,28 +1,175 @@
-public class class171 {
-   static void method909(class360 var0, float var1, float var2, float var3, float var4, float var5, float var6, float var7, float var8) {
-      if (null != var0) {
-         var0.field3216 = var1;
-         float var10 = var4 - var1;
-         float var11 = var8 - var5;
-         float var12 = var2 - var1;
-         float var13 = 0.0F;
-         float var14 = 0.0F;
-         if (0.0D != (double)var12) {
-            var13 = (var6 - var5) / var12;
-         }
+public class class171 implements class8 {
+   int field1275;
+   int field1276;
+   int field1277;
 
-         var12 = var4 - var3;
-         if ((double)var12 != 0.0D) {
-            var14 = (var8 - var7) / var12;
-         }
-
-         float var15 = 1.0F / (var10 * var10);
-         float var16 = var13 * var10;
-         float var17 = var14 * var10;
-         var0.field3218 = (var17 + var16 - var11 - var11) * var15 / var10;
-         var0.field3232 = var15 * (var11 + var11 + var11 - var16 - var16 - var17);
-         var0.field3210 = var13;
-         var0.field3221 = var5;
+   public class367 method39() {
+      byte var2;
+      if (class129.field1079.startsWith("win")) {
+         var2 = 1;
+      } else if (class129.field1079.startsWith("mac")) {
+         var2 = 2;
+      } else if (class129.field1079.startsWith("linux")) {
+         var2 = 3;
+      } else {
+         var2 = 4;
       }
+
+      String var3;
+      try {
+         var3 = System.getProperty("os.arch").toLowerCase();
+      } catch (Exception var31) {
+         var3 = "";
+      }
+
+      String var4;
+      try {
+         var4 = System.getProperty("os.version").toLowerCase();
+      } catch (Exception var30) {
+         var4 = "";
+      }
+
+      String var5 = "Unknown";
+      String var6 = "1.1";
+
+      try {
+         var5 = System.getProperty("java.vendor");
+         var6 = System.getProperty("java.version");
+      } catch (Exception var29) {
+         ;
+      }
+
+      boolean var7;
+      if (!var3.startsWith("amd64") && !var3.startsWith("x86_64")) {
+         var7 = false;
+      } else {
+         var7 = true;
+      }
+
+      byte var8 = 0;
+      if (var2 == 1) {
+         if (var4.indexOf("4.0") != -1) {
+            var8 = 1;
+         } else if (var4.indexOf("4.1") != -1) {
+            var8 = 2;
+         } else if (var4.indexOf("4.9") != -1) {
+            var8 = 3;
+         } else if (var4.indexOf("5.0") != -1) {
+            var8 = 4;
+         } else if (var4.indexOf("5.1") != -1) {
+            var8 = 5;
+         } else if (var4.indexOf("5.2") != -1) {
+            var8 = 8;
+         } else if (var4.indexOf("6.0") != -1) {
+            var8 = 6;
+         } else if (var4.indexOf("6.1") != -1) {
+            var8 = 7;
+         } else if (var4.indexOf("6.2") != -1) {
+            var8 = 9;
+         } else if (var4.indexOf("6.3") != -1) {
+            var8 = 10;
+         } else if (var4.indexOf("10.0") != -1) {
+            var8 = 11;
+         }
+      } else if (var2 == 2) {
+         if (var4.indexOf("10.4") != -1) {
+            var8 = 20;
+         } else if (var4.indexOf("10.5") != -1) {
+            var8 = 21;
+         } else if (var4.indexOf("10.6") != -1) {
+            var8 = 22;
+         } else if (var4.indexOf("10.7") != -1) {
+            var8 = 23;
+         } else if (var4.indexOf("10.8") != -1) {
+            var8 = 24;
+         } else if (var4.indexOf("10.9") != -1) {
+            var8 = 25;
+         } else if (var4.indexOf("10.10") != -1) {
+            var8 = 26;
+         } else if (var4.indexOf("10.11") != -1) {
+            var8 = 27;
+         } else if (var4.indexOf("10.12") != -1) {
+            var8 = 28;
+         } else if (var4.indexOf("10.13") != -1) {
+            var8 = 29;
+         }
+      }
+
+      byte var9;
+      if (var5.toLowerCase().indexOf("sun") != -1) {
+         var9 = 1;
+      } else if (var5.toLowerCase().indexOf("microsoft") != -1) {
+         var9 = 2;
+      } else if (var5.toLowerCase().indexOf("apple") != -1) {
+         var9 = 3;
+      } else if (var5.toLowerCase().indexOf("oracle") != -1) {
+         var9 = 5;
+      } else {
+         var9 = 4;
+      }
+
+      this.method792(var6);
+      boolean var10 = false;
+      int var11 = (int)(Runtime.getRuntime().maxMemory() / 1048576L) + 1;
+      int var12;
+      if (this.field1277 > 3) {
+         var12 = Runtime.getRuntime().availableProcessors();
+      } else {
+         var12 = 0;
+      }
+
+      byte var13 = 0;
+      String var14 = "";
+      String var15 = "";
+      String var16 = "";
+      String var17 = "";
+      String var18 = "";
+      String var19 = "";
+      boolean var20 = false;
+      boolean var21 = false;
+      boolean var22 = false;
+      boolean var23 = false;
+      int[] var24 = new int[3];
+      boolean var25 = false;
+      String var26 = "";
+      String var27 = "";
+      boolean var28 = false;
+      return new class367(var2, var7, var8, var9, this.field1277, this.field1275, this.field1276, false, var11, var12, var13, 0, var14, var15, var16, var17, 0, 0, 0, 0, var18, var19, var24, 0, "", "");
+   }
+
+   void method792(String var1) {
+      if (var1.startsWith("1.")) {
+         this.method793(var1);
+      } else {
+         this.method794(var1);
+      }
+
+   }
+
+   void method793(String var1) {
+      String[] var3 = var1.split("\\.");
+
+      try {
+         this.field1277 = Integer.parseInt(var3[1]);
+         var3 = var3[2].split("_");
+         this.field1275 = Integer.parseInt(var3[0]);
+         this.field1276 = Integer.parseInt(var3[1]);
+      } catch (Exception var5) {
+         ;
+      }
+
+   }
+
+   void method794(String var1) {
+      String[] var3 = var1.split("\\.");
+
+      try {
+         this.field1277 = Integer.parseInt(var3[0]);
+         this.field1275 = Integer.parseInt(var3[1]);
+         this.field1276 = Integer.parseInt(var3[2]);
+      } catch (Exception var5) {
+         ;
+      }
+
    }
 }

@@ -1,2 +1,3 @@
-public interface class217 extends Iterable {
+public interface class217 {
+   int method962();
 }

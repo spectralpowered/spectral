@@ -1,28 +1,38 @@
 public class class193 {
-   static final class193 field2009 = new class193();
-   static final class193 field2010 = new class193();
-   static final class193 field2011 = new class193();
+   int field1721 = 0;
+   final class38 field1722;
+   final int field1723;
 
-   public static void method994(boolean var0) {
-      if (class172.field1862 != var0) {
-         class458.field3805.method162();
-         class458.field3760.method162();
-         class458.field3761.method162();
-         class172.field1862 = var0;
-      }
-
+   class193(class38 var1, String var2) {
+      this.field1722 = var1;
+      this.field1723 = var1.method1353();
    }
 
-   static final void method993() {
-      for(int var1 = 0; var1 < class25.field180; ++var1) {
-         class47 var2 = client.field551[class25.field179[var1]];
-         var2.method238();
+   boolean method869() {
+      this.field1721 = 0;
+
+      for(int var2 = 0; var2 < this.field1723; ++var2) {
+         if (!this.field1722.method160(var2) || this.field1722.method157(var2)) {
+            ++this.field1721;
+         }
       }
 
-      class117.method610();
-      if (null != class103.field1350) {
-         class103.field1350.method463();
+      return this.field1721 >= this.field1723;
+   }
+
+   static String method868(class120 var0) {
+      if (class486.method2379(class203.method892(var0)) == 0) {
+         return null;
+      } else {
+         return var0.field983 != null && var0.field983.trim().length() != 0 ? var0.field983 : null;
+      }
+   }
+
+   static void method867(byte[] var0, int var1) {
+      if (client.field273 == null) {
+         client.field273 = new byte[24];
       }
 
+      class165.method771(var0, var1, client.field273, 0, 24);
    }
 }

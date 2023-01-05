@@ -1,124 +1,49 @@
-public class class450 {
-   public static final class450 field3694 = new class450("application/json");
-   static int field3697;
-   static final class450 field3695 = new class450("text/plain");
-   String field3696;
+public class class450 extends class389 {
+   final class23 field3741;
+   final int field3742;
+   final int field3743;
+   final int field3744;
 
-   class450(String var1) {
-      this.field3696 = var1;
-   }
-
-   public String method2128() {
-      return this.field3696;
-   }
-
-   static void method2129(class296[] var0, int var1, int var2, int[] var3, int[] var4) {
-      if (var1 < var2) {
-         int var6 = var1 - 1;
-         int var7 = var2 + 1;
-         int var8 = (var1 + var2) / 2;
-         class296 var9 = var0[var8];
-         var0[var8] = var0[var1];
-         var0[var1] = var9;
-
-         while(var6 < var7) {
-            boolean var10 = true;
-
-            int var11;
-            int var12;
-            int var13;
-            do {
-               --var7;
-
-               for(var11 = 0; var11 < 4; ++var11) {
-                  if (2 == var3[var11]) {
-                     var12 = var0[var7].field2842;
-                     var13 = var9.field2842;
-                  } else if (var3[var11] == 1) {
-                     var12 = var0[var7].field2839;
-                     var13 = var9.field2839;
-                     if (var12 == -1 && var4[var11] == 1) {
-                        var12 = 2001;
-                     }
-
-                     if (var13 == -1 && 1 == var4[var11]) {
-                        var13 = 2001;
-                     }
-                  } else if (3 == var3[var11]) {
-                     var12 = var0[var7].method1392() ? 1 : 0;
-                     var13 = var9.method1392() ? 1 : 0;
-                  } else {
-                     var12 = var0[var7].field2832;
-                     var13 = var9.field2832;
-                  }
-
-                  if (var12 != var13) {
-                     if ((1 != var4[var11] || var12 <= var13) && (var4[var11] != 0 || var12 >= var13)) {
-                        var10 = false;
-                     }
-                     break;
-                  }
-
-                  if (var11 == 3) {
-                     var10 = false;
-                  }
-               }
-            } while(var10);
-
-            var10 = true;
-
-            do {
-               ++var6;
-
-               for(var11 = 0; var11 < 4; ++var11) {
-                  if (2 == var3[var11]) {
-                     var12 = var0[var6].field2842;
-                     var13 = var9.field2842;
-                  } else if (1 == var3[var11]) {
-                     var12 = var0[var6].field2839;
-                     var13 = var9.field2839;
-                     if (var12 == -1 && var4[var11] == 1) {
-                        var12 = 2001;
-                     }
-
-                     if (var13 == -1 && var4[var11] == 1) {
-                        var13 = 2001;
-                     }
-                  } else if (var3[var11] == 3) {
-                     var12 = var0[var6].method1392() ? 1 : 0;
-                     var13 = var9.method1392() ? 1 : 0;
-                  } else {
-                     var12 = var0[var6].field2832;
-                     var13 = var9.field2832;
-                  }
-
-                  if (var12 != var13) {
-                     if ((var4[var11] != 1 || var12 >= var13) && (var4[var11] != 0 || var12 <= var13)) {
-                        var10 = false;
-                     }
-                     break;
-                  }
-
-                  if (var11 == 3) {
-                     var10 = false;
-                  }
-               }
-            } while(var10);
-
-            if (var6 < var7) {
-               class296 var14 = var0[var6];
-               var0[var6] = var0[var7];
-               var0[var7] = var14;
-            }
-         }
-
-         method2129(var0, var1, var7, var3, var4);
-         method2129(var0, var7 + 1, var2, var3, var4);
+   class450(class464 var1, class464 var2, int var3, class23 var4) {
+      super(var1, var2);
+      this.field3744 = var3;
+      this.field3741 = var4;
+      class396 var5 = class25.method100(this.method1910());
+      class266 var6 = var5.method1946(false);
+      if (null != var6) {
+         this.field3742 = var6.field2200;
+         this.field3743 = var6.field2199;
+      } else {
+         this.field3742 = 0;
+         this.field3743 = 0;
       }
 
    }
 
-   public static void method2127() {
-      class120.field1434.method162();
+   public int method1910() {
+      return this.field3744;
+   }
+
+   class23 method1911() {
+      return this.field3741;
+   }
+
+   int method1906() {
+      return this.field3742;
+   }
+
+   int method1912() {
+      return this.field3743;
+   }
+
+   static class159[] method2239() {
+      return new class159[]{class159.field1219, class159.field1216};
+   }
+
+   static final int method2238(int var0, int var1) {
+      int var3 = var1 * 57 + var0;
+      var3 ^= var3 << 13;
+      int var4 = (15731 * var3 * var3 + 789221) * var3 + 1376312589 & Integer.MAX_VALUE;
+      return var4 >> 19 & 255;
    }
 }

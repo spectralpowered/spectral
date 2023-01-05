@@ -1,63 +1,78 @@
-import java.io.File;
-import java.io.RandomAccessFile;
-
 public class class2 {
-   public static final class2 field10 = new class2(1, 2, 0);
-   public static final class2 field8 = new class2(0, 1, 2);
-   public static final class2 field9 = new class2(2, 0, 4);
-   static long field7;
-   final int field11;
-   final int field12;
-   final int field13;
+   static class266[] field8;
+   static class2[] field12;
+   static int field11 = 0;
+   static int field9 = 0;
+   static int[] field14 = new int[]{0, 1, 2, 3};
+   static int[] field15 = new int[]{1, 1, 1, 1};
+   int field10;
+   int field16;
+   int field17;
+   int field19;
+   int field20;
+   String field13;
+   String field18;
 
-   class2(int var1, int var2, int var3) {
-      this.field12 = var1;
-      this.field11 = var2;
-      this.field13 = var3;
+   boolean method3() {
+      return 0 != (1 & this.field16);
    }
 
-   boolean method8(float var1) {
-      return var1 >= (float)this.field13;
+   boolean method8() {
+      return 0 != (2 & this.field16);
    }
 
-   static class2[] method5() {
-      return new class2[]{field8, field10, field9};
+   boolean method4() {
+      return 0 != (4 & this.field16);
    }
 
-   public static boolean method9(char var0) {
-      return var0 >= '0' && var0 <= '9';
+   boolean method5() {
+      return 0 != (8 & this.field16);
    }
 
-   public static boolean method7(File var0, boolean var1) {
-      try {
-         RandomAccessFile var3 = new RandomAccessFile(var0, "rw");
-         int var4 = var3.read();
-         var3.seek(0L);
-         var3.write(var4);
-         var3.seek(0L);
-         var3.close();
-         if (var1) {
-            var0.delete();
+   boolean method9() {
+      return 0 != (536870912 & this.field16);
+   }
+
+   boolean method6() {
+      return 0 != (33554432 & this.field16);
+   }
+
+   boolean method13() {
+      return 0 != (1073741824 & this.field16);
+   }
+
+   boolean method12() {
+      return 0 != (256 & this.field16);
+   }
+
+   boolean method7() {
+      return (134217728 & this.field16) != 0;
+   }
+
+   public static class78 method10(class78[] var0, int var1) {
+      class78[] var3 = var0;
+
+      for(int var4 = 0; var4 < var3.length; ++var4) {
+         class78 var5 = var3[var4];
+         if (var1 == var5.method330()) {
+            return var5;
          }
-
-         return true;
-      } catch (Exception var5) {
-         return false;
       }
+
+      return null;
    }
 
-   static int method6(int var0, class472 var1, boolean var2) {
-      if (var0 == 7463) {
-         boolean var4 = class150.field1580[--class188.field1989] == 1;
-         class395.method1922(var4);
-         return 1;
-      } else {
-         return 2;
-      }
-   }
-
-   static void method10(int var0, int var1) {
-      class167.method898(class474.field3931, var0, var1);
-      class474.field3931 = null;
+   static final int method11(int var0, int var1, int var2) {
+      int var4 = var0 / var2;
+      int var5 = var0 & var2 - 1;
+      int var6 = var1 / var2;
+      int var7 = var1 & var2 - 1;
+      int var8 = class398.method1967(var4, var6);
+      int var9 = class398.method1967(var4 + 1, var6);
+      int var10 = class398.method1967(var4, var6 + 1);
+      int var11 = class398.method1967(var4 + 1, var6 + 1);
+      int var12 = class466.method2281(var8, var9, var5, var2);
+      int var13 = class466.method2281(var10, var11, var5, var2);
+      return class466.method2281(var12, var13, var7, var2);
    }
 }

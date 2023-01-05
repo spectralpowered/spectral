@@ -40,6 +40,7 @@ class Renamer : Transformer() {
     private val mappings = hashMapOf<String, String>()
 
     override fun preTransform(pool: ClassPool) {
+        addAnnotations(pool)
         generateMappings(pool)
         applyMappings(pool)
     }
@@ -48,6 +49,22 @@ class Renamer : Transformer() {
         Logger.info("Renamed $classCount classes.")
         Logger.info("Renamed $methodCount methods.")
         Logger.info("Renamed $fieldCount fields.")
+    }
+
+    private fun addAnnotations(pool: ClassPool) {
+        Logger.info("Adding ObfInfo annotations.")
+
+        pool.classes.forEach { cls ->
+            cls.visibleAnnotations = listOf(createClassAnnotation(cls.name))
+
+            cls.methods.forEach { method ->
+                method.visibleAnnotations = listOf(createMemberAnnotation(method.owner.name, method.name, method.desc))
+            }
+
+            cls.fields.forEach { field ->
+                field.visibleAnnotations = listOf(createMemberAnnotation(field.owner.name, field.name, field.desc))
+            }
+        }
     }
 
     private fun generateMappings(pool: ClassPool) {

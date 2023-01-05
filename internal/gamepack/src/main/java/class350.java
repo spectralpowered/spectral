@@ -1,13 +1,15 @@
-final class class350 implements class73 {
-   void method1683(Integer var1, class134 var2) {
-      var2.method656(var1.intValue());
+import java.util.Comparator;
+
+final class class350 implements Comparator {
+   int method1766(class258 var1, class258 var2) {
+      return var1.method1107().compareTo(var2.method1107());
    }
 
-   public Object method406(class134 var1) {
-      return var1.method717();
+   public int compare(Object var1, Object var2) {
+      return this.method1766((class258)var1, (class258)var2);
    }
 
-   public void method405(Object var1, class134 var2) {
-      this.method1683((Integer)var1, var2);
+   public boolean equals(Object var1) {
+      return super.equals(var1);
    }
 }

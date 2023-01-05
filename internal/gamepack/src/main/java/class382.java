@@ -1,23 +1,35 @@
-public class class382 extends class305 {
-   final boolean field3328;
+public final class class382 implements Comparable {
+   Object field3225;
+   Object field3226;
+   long field3224;
+   long field3227;
 
-   public class382(boolean var1) {
-      this.field3328 = var1;
+   class382(Object var1, Object var2) {
+      this.field3226 = var1;
+      this.field3225 = var2;
    }
 
-   int method1813(class185 var1, class185 var2) {
-      if (client.field599 == var1.field1978 && var2.field1978 == client.field599) {
-         return this.field3328 ? var1.method1063().method931(var2.method1063()) : var2.method1063().method931(var1.method1063());
+   int method1893(class382 var1) {
+      if (this.field3227 < var1.field3227) {
+         return -1;
       } else {
-         return this.method1440(var1, var2);
+         return this.field3227 > var1.field3227 ? 1 : 0;
       }
    }
 
-   public int compare(Object var1, Object var2) {
-      return this.method1813((class185)var1, (class185)var2);
+   public boolean equals(Object var1) {
+      if (var1 instanceof class382) {
+         return this.field3225.equals(((class382)var1).field3225);
+      } else {
+         throw new IllegalArgumentException();
+      }
    }
 
-   static class296 method1814() {
-      return class296.field2831 < class296.field2833 ? class296.field2834[++class296.field2831 - 1] : null;
+   public int hashCode() {
+      return this.field3225.hashCode();
+   }
+
+   public int compareTo(Object var1) {
+      return this.method1893((class382)var1);
    }
 }

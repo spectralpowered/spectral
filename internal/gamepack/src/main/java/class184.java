@@ -1,162 +1,37 @@
+import java.awt.Image;
+import java.math.BigInteger;
+import java.security.SecureRandom;
+
 public class class184 {
-   boolean field1974 = false;
-   class164 field1975;
-   int field1977 = 0;
-   String field1976;
+   static Image field1685;
+   static final BigInteger field1683 = new BigInteger("7237300117305667488707183861728052766358166655052137727439795191253340127955075499635575104901523446809299097934591732635674173519120047404024393881551683");
+   static final BigInteger field1684 = new BigInteger("80782894952180643741752986186714059433953886149239752893425047584684715842049");
 
-   class184(class164 var1) {
-      this.field1975 = var1;
+   static SecureRandom method837() {
+      SecureRandom var1 = new SecureRandom();
+      var1.nextInt();
+      return var1;
    }
 
-   void method962(String var1) {
-      if (null != var1 && !var1.isEmpty()) {
-         if (var1 != this.field1976) {
-            this.field1976 = var1;
-            this.field1977 = 0;
-            this.field1974 = false;
-            this.method964();
-         }
+   public static void method836(class120 var0) {
+      if (null != var0 && client.field521 == var0.field1039) {
+         client.field444[var0.field1038] = true;
       }
+
    }
 
-   int method964() {
-      if (this.field1977 < 33) {
-         if (!this.field1975.method885(class48.field417.field419, this.field1976)) {
-            return this.field1977;
-         }
+   static final void method835(int var0) {
+      if (class268.method1275(var0)) {
+         class120[] var2 = class329.field2600[var0];
 
-         this.field1977 = 33;
-      }
-
-      if (33 == this.field1977) {
-         if (this.field1975.method889(class48.field420.field419, this.field1976) && !this.field1975.method885(class48.field420.field419, this.field1976)) {
-            return this.field1977;
-         }
-
-         this.field1977 = 66;
-      }
-
-      if (66 == this.field1977) {
-         if (!this.field1975.method885(this.field1976, class48.field416.field419)) {
-            return this.field1977;
-         }
-
-         this.field1977 = 100;
-         this.field1974 = true;
-      }
-
-      return this.field1977;
-   }
-
-   boolean method963() {
-      return this.field1974;
-   }
-
-   int method961() {
-      return this.field1977;
-   }
-
-   public static int method965(float[] var0, int var1, float var2, boolean var3, float var4, boolean var5, float[] var6) {
-      float var8 = 0.0F;
-
-      for(int var9 = 0; var9 < var1 + 1; ++var9) {
-         var8 += Math.abs(var0[var9]);
-      }
-
-      float var22 = (Math.abs(var2) + Math.abs(var4)) * (float)(var1 + 1) * class257.field2642;
-      if (var8 <= var22) {
-         return -1;
-      } else {
-         float[] var10 = new float[var1 + 1];
-
-         int var11;
-         for(var11 = 0; var11 < var1 + 1; ++var11) {
-            var10[var11] = 1.0F / var8 * var0[var11];
-         }
-
-         while(Math.abs(var10[var1]) < var22) {
-            --var1;
-         }
-
-         var11 = 0;
-         if (var1 == 0) {
-            return var11;
-         } else if (var1 == 1) {
-            var6[0] = -var10[0] / var10[1];
-            boolean var23 = var3 ? var2 < var22 + var6[0] : var2 < var6[0] - var22;
-            boolean var24 = var5 ? var4 > var6[0] - var22 : var4 > var22 + var6[0];
-            var11 = var23 && var24 ? 1 : 0;
-            if (var11 > 0) {
-               if (var3 && var6[0] < var2) {
-                  var6[0] = var2;
-               } else if (var5 && var6[0] > var4) {
-                  var6[0] = var4;
-               }
-            }
-
-            return var11;
-         } else {
-            class244 var12 = new class244(var10, var1);
-            float[] var13 = new float[var1 + 1];
-
-            for(int var14 = 1; var14 <= var1; ++var14) {
-               var13[var14 - 1] = (float)var14 * var10[var14];
-            }
-
-            float[] var25 = new float[var1 + 1];
-            int var15 = method965(var13, var1 - 1, var2, false, var4, false, var25);
-            if (var15 == -1) {
-               return 0;
-            } else {
-               boolean var16 = false;
-               float var18 = 0.0F;
-               float var19 = 0.0F;
-               float var20 = 0.0F;
-
-               for(int var21 = 0; var21 <= var15; ++var21) {
-                  if (var11 > var1) {
-                     return var11;
-                  }
-
-                  float var17;
-                  if (var21 == 0) {
-                     var17 = var2;
-                     var19 = class170.method908(var10, var1, var2);
-                     if (Math.abs(var19) <= var22 && var3) {
-                        var6[var11++] = var2;
-                     }
-                  } else {
-                     var17 = var20;
-                     var19 = var18;
-                  }
-
-                  if (var21 == var15) {
-                     var20 = var4;
-                     var16 = false;
-                  } else {
-                     var20 = var25[var21];
-                  }
-
-                  var18 = class170.method908(var10, var1, var20);
-                  if (var16) {
-                     var16 = false;
-                  } else if (Math.abs(var18) < var22) {
-                     if (var21 != var15 || var5) {
-                        var6[var11++] = var20;
-                        var16 = true;
-                     }
-                  } else if (var19 < 0.0F && var18 > 0.0F || var19 > 0.0F && var18 < 0.0F) {
-                     var6[var11++] = class321.method1565(var12, var17, var20, 0.0F);
-                     if (var11 > 1 && var6[var11 - 2] >= var6[var11 - 1] - var22) {
-                        var6[var11 - 2] = (var6[var11 - 1] + var6[var11 - 2]) * 0.5F;
-                        --var11;
-                     }
-                  }
-               }
-
-               return var11;
+         for(int var3 = 0; var3 < var2.length; ++var3) {
+            class120 var4 = var2[var3];
+            if (null != var4) {
+               var4.field1029 = 0;
+               var4.field1030 = 0;
             }
          }
+
       }
    }
 }

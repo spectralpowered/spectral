@@ -1,53 +1,51 @@
-public class class268 extends class106 {
-   static class118 field2699;
-   class348 field2698;
-   int field2694;
-   int field2695;
-   int[] field2696;
-   int[][] field2697;
+public class class268 {
+   static byte[] field2217 = new byte[2048];
+   static class127 field2228 = new class127(new byte[5000]);
+   static class127[] field2218 = new class127[2048];
+   static class294[] field2225 = new class294[2048];
+   static int field2216 = 0;
+   static int field2221 = 0;
+   static int field2223 = 0;
+   static int[] field2219 = new int[2048];
+   static int[] field2220 = new int[2048];
+   static int[] field2222 = new int[2048];
+   static int[] field2224 = new int[2048];
+   static int[] field2226 = new int[2048];
+   static int[] field2227 = new int[2048];
 
-   public class268(int var1, byte[] var2) {
-      this.field2694 = var1;
-      class134 var3 = new class134(var2);
-      this.field2695 = var3.method669();
-      this.field2696 = new int[this.field2695];
-      this.field2697 = new int[this.field2695][];
+   public static boolean method1275(int var0) {
+      if (class476.field4009[var0]) {
+         return true;
+      } else if (!class126.field1066.method1344(var0)) {
+         return false;
+      } else {
+         int var2 = class126.field1066.method1360(var0);
+         if (var2 == 0) {
+            class476.field4009[var0] = true;
+            return true;
+         } else {
+            if (null == class329.field2600[var0]) {
+               class329.field2600[var0] = new class120[var2];
+            }
 
-      int var4;
-      for(var4 = 0; var4 < this.field2695; ++var4) {
-         this.field2696[var4] = var3.method669();
-      }
+            for(int var3 = 0; var3 < var2; ++var3) {
+               if (null == class329.field2600[var0][var3]) {
+                  byte[] var4 = class126.field1066.method1365(var0, var3);
+                  if (null != var4) {
+                     class329.field2600[var0][var3] = new class120();
+                     class329.field2600[var0][var3].field985 = (var0 << 16) + var3;
+                     if (-1 == var4[0]) {
+                        class329.field2600[var0][var3].method494(new class127(var4));
+                     } else {
+                        class329.field2600[var0][var3].method475(new class127(var4));
+                     }
+                  }
+               }
+            }
 
-      for(var4 = 0; var4 < this.field2695; ++var4) {
-         this.field2697[var4] = new int[var3.method669()];
-      }
-
-      for(var4 = 0; var4 < this.field2695; ++var4) {
-         for(int var5 = 0; var5 < this.field2697[var4].length; ++var5) {
-            this.field2697[var4][var5] = var3.method669();
+            class476.field4009[var0] = true;
+            return true;
          }
       }
-
-      if (var3.field1487 < var3.field1489.length) {
-         var4 = var3.method671();
-         if (var4 > 0) {
-            this.field2698 = new class348(var3, var4);
-         }
-      }
-
-   }
-
-   public int method1274() {
-      return this.field2695;
-   }
-
-   public class348 method1273() {
-      return this.field2698;
-   }
-
-   static final void method1275() {
-      class96 var10000 = (class96)null;
-      String var1 = class96.field1201;
-      class237.method1197(30, "", var1);
    }
 }

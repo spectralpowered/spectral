@@ -1,14 +1,7 @@
-public class class135 {
-   static final int[] field1490 = new int[16384];
-   static final int[] field1491 = new int[16384];
+public class class135 extends class139 {
+   public final Object field1111;
 
-   static {
-      double var0 = 3.834951969714103E-4D;
-
-      for(int var2 = 0; var2 < 16384; ++var2) {
-         field1490[var2] = (int)(16384.0D * Math.sin(var0 * (double)var2));
-         field1491[var2] = (int)(16384.0D * Math.cos((double)var2 * var0));
-      }
-
+   public class135(Object var1) {
+      this.field1111 = var1;
    }
 }

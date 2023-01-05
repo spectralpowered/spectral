@@ -1,65 +1,63 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
 public class class348 {
-   static class385 field3173;
-   class292[] field3172;
-   int field3174;
+   public static Comparator field2879;
+   public static Comparator field2881;
+   public static Comparator field2882;
+   public static Comparator field2883 = new class452();
+   public final List field2880;
 
-   class348(class134 var1, int var2) {
-      this.field3172 = new class292[var2];
-      this.field3174 = var1.method669();
+   static {
+      new class209();
+      field2879 = new class375();
+      field2881 = new class350();
+      field2882 = new class183();
+   }
 
-      for(int var3 = 0; var3 < this.field3172.length; ++var3) {
-         class292 var4 = new class292(this.field3174, var1, false);
-         this.field3172[var3] = var4;
+   public class348(class127 var1, boolean var2) {
+      int var3 = var1.method549();
+      boolean var4 = var1.method547() == 1;
+      byte var5;
+      if (var4) {
+         var5 = 1;
+      } else {
+         var5 = 0;
       }
 
-      this.method1668();
-   }
+      int var6 = var1.method549();
+      this.field2880 = new ArrayList(var6);
 
-   void method1668() {
-      class292[] var2 = this.field3172;
-
-      for(int var3 = 0; var3 < var2.length; ++var3) {
-         class292 var4 = var2[var3];
-         if (var4.field2801 >= 0) {
-            var4.field2798 = this.field3172[var4.field2801];
-         }
-      }
-
-   }
-
-   public int method1669() {
-      return this.field3172.length;
-   }
-
-   class292 method1670(int var1) {
-      return var1 >= this.method1669() ? null : this.field3172[var1];
-   }
-
-   class292[] method1672() {
-      return this.field3172;
-   }
-
-   void method1671(class159 var1, int var2) {
-      this.method1673(var1, var2, (boolean[])null, false);
-   }
-
-   void method1673(class159 var1, int var2, boolean[] var3, boolean var4) {
-      int var6 = var1.method844();
-      int var7 = 0;
-      class292[] var8 = this.method1672();
-
-      for(int var9 = 0; var9 < var8.length; ++var9) {
-         class292 var10 = var8[var9];
-         if (var3 == null || var4 == var3[var7]) {
-            var1.method837(var2, var10, var7, var6);
-         }
-
-         ++var7;
+      for(int var7 = 0; var7 < var6; ++var7) {
+         this.field2880.add(new class258(var1, var5, var3));
       }
 
    }
 
-   public static boolean method1674() {
-      return client.field610 != null;
+   public void method1756(Comparator var1, boolean var2) {
+      if (var2) {
+         Collections.sort(this.field2880, var1);
+      } else {
+         Collections.sort(this.field2880, Collections.reverseOrder(var1));
+      }
+
+   }
+
+   static final void method1755(class437 var0) {
+      var0.field3620 = false;
+      if (var0.field3618 != null) {
+         var0.field3618.field4081 = 0;
+      }
+
+      for(class437 var2 = var0.method2168(); null != var2; var2 = var0.method2171()) {
+         method1755(var2);
+      }
+
+   }
+
+   static int method1757(int var0) {
+      return (int)((Math.log((double)var0) / class386.field3258 - 7.0D) * 256.0D);
    }
 }

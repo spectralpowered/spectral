@@ -1,23 +1,22 @@
-public class class456 {
-   static void method2162(int var0, class416 var1, class230 var2) {
-      class19 var4 = new class19();
-      var4.field146 = 1;
-      var4.field1361 = (long)var0;
-      var4.field145 = var1;
-      var4.field143 = var2;
-      class397 var5 = class267.field2693;
-      synchronized(class267.field2693) {
-         class267.field2693.method1930(var4);
-      }
+public class class456 extends class480 {
+   int field3777;
+   // $FF: synthetic field
+   final class182 this$0;
 
-      class381.method1811();
+   class456(class182 var1) {
+      this.this$0 = var1;
+      this.field3777 = -1;
    }
 
-   public static boolean method2160(long var0) {
-      return (int)(var0 >>> 16 & 1L) == 1;
+   void method2367(class127 var1) {
+      this.field3777 = var1.method549();
    }
 
-   static void method2161(int var0) {
-      client.field510 = var0;
+   void method2368(class429 var1) {
+      var1.method2104(this.field3777);
+   }
+
+   static class353[] method2255() {
+      return new class353[]{class353.field2900, class353.field2901, class353.field2899, class353.field2898};
    }
 }

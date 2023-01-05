@@ -1,24 +1,27 @@
-public class class488 extends class204 {
-   static class396 field4008;
-   static int field4009;
+public class class488 extends class139 {
+   static int field4076;
+   boolean field4066;
+   class120 field4067;
+   class120 field4077;
+   int field4065;
+   int field4068;
+   int field4070;
+   int field4071;
+   int field4072;
+   int field4074;
+   int field4075 = 76;
+   Object[] field4069;
+   String field4073;
 
-   protected boolean method1050(int var1, int var2, int var3, class391 var4) {
-      return super.field2180 == var2 && super.field2183 == var3;
+   public void method2394(Object[] var1) {
+      this.field4069 = var1;
    }
 
-   public static class359 method2322(int var0) {
-      class359 var2 = (class359)class359.field3204.method161((long)var0);
-      if (null != var2) {
-         return var2;
-      } else {
-         byte[] var3 = class359.field3206.method892(19, var0);
-         var2 = new class359();
-         if (var3 != null) {
-            var2.method1711(new class134(var3));
-         }
+   public void method2395(int var1) {
+      this.field4075 = var1;
+   }
 
-         class359.field3204.method163(var2, (long)var0);
-         return var2;
-      }
+   public void method2396(class120 var1) {
+      this.field4067 = var1;
    }
 }

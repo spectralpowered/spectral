@@ -1,91 +1,89 @@
-import java.awt.FontMetrics;
-import java.util.HashMap;
-import java.util.Map;
-
-public class class58 {
-   static int field814 = 0;
-   static FontMetrics field816;
-   static final class148 field813 = new class148();
-   static final class376 field815 = new class376(1024);
-   static final Map field812 = new HashMap();
-
-   public static void method336(class164 var0) {
-      class116.field1414 = var0;
+public final class class58 extends class420 {
+   public class58(byte[] var1, int[] var2, int[] var3, int[] var4, int[] var5, int[] var6, byte[][] var7) {
+      super(var1, var2, var3, var4, var5, var6, var7);
    }
 
-   static final void method335(class134 var0, int var1, int var2, int var3, int var4, int var5, int var6) {
-      boolean var8 = var1 >= 0 && var1 < 4 && var2 >= 0 && var2 < 104 && var3 >= 0 && var3 < 104;
-      int var9;
-      if (var8) {
-         class74.field866[var1][var2][var3] = 0;
+   public class58(byte[] var1) {
+      super(var1);
+   }
 
-         while(true) {
-            var9 = client.field432 < 209 ? var0.method669() : var0.method671();
-            if (var9 == 0) {
-               if (var1 == 0) {
-                  int[] var16 = class74.field858[0][var2];
-                  int var13 = var4 + 932731;
-                  int var14 = var5 + 556238;
-                  int var15 = class296.method1400(var13 + '넵', var14 + 91923, 4) - 128 + (class296.method1400(var13 + 10294, var14 + '鎽', 2) - 128 >> 1) + (class296.method1400(var13, var14, 1) - 128 >> 2);
-                  var15 = (int)((double)var15 * 0.3D) + 35;
-                  if (var15 < 10) {
-                     var15 = 10;
-                  } else if (var15 > 60) {
-                     var15 = 60;
-                  }
-
-                  var16[var3] = -var15 * 8;
-               } else {
-                  class74.field858[var1][var2][var3] = class74.field858[var1 - 1][var2][var3] - 240;
-               }
-               break;
-            }
-
-            if (var9 == 1) {
-               int var10 = var0.method669();
-               if (var10 == 1) {
-                  var10 = 0;
-               }
-
-               if (var1 == 0) {
-                  class74.field858[0][var2][var3] = 8 * -var10;
-               } else {
-                  class74.field858[var1][var2][var3] = class74.field858[var1 - 1][var2][var3] - var10 * 8;
-               }
-               break;
-            }
-
-            if (var9 <= 49) {
-               class151.field1592[var1][var2][var3] = client.field432 < 209 ? (short)var0.method670() : (short)var0.method672();
-               class74.field865[var1][var2][var3] = (byte)((var9 - 2) / 4);
-               class307.field2897[var1][var2][var3] = (byte)(var9 - 2 + var6 & 3);
-            } else if (var9 <= 81) {
-               class74.field866[var1][var2][var3] = (byte)(var9 - 49);
-            } else {
-               class74.field860[var1][var2][var3] = (short)(var9 - 81);
-            }
-         }
-      } else {
-         while(true) {
-            var9 = client.field432 < 209 ? var0.method669() : var0.method671();
-            if (var9 == 0) {
-               break;
-            }
-
-            if (var9 == 1) {
-               var0.method669();
-               break;
-            }
-
-            if (var9 <= 49) {
-               if (client.field432 < 209) {
-                  var0.method670();
-               } else {
-                  var0.method672();
-               }
-            }
-         }
+   final void method2035(byte[] var1, int var2, int var3, int var4, int var5, int var6) {
+      int var7 = var2 + var3 * class162.field1232;
+      int var8 = class162.field1232 - var4;
+      int var9 = 0;
+      int var10 = 0;
+      int var11;
+      if (var3 < class162.field1234) {
+         var11 = class162.field1234 - var3;
+         var5 -= var11;
+         var3 = class162.field1234;
+         var10 += var11 * var4;
+         var7 += var11 * class162.field1232;
       }
 
+      if (var3 + var5 > class162.field1235) {
+         var5 -= var3 + var5 - class162.field1235;
+      }
+
+      if (var2 < class162.field1236) {
+         var11 = class162.field1236 - var2;
+         var4 -= var11;
+         var2 = class162.field1236;
+         var10 += var11;
+         var7 += var11;
+         var9 += var11;
+         var8 += var11;
+      }
+
+      if (var2 + var4 > class162.field1237) {
+         var11 = var2 + var4 - class162.field1237;
+         var4 -= var11;
+         var9 += var11;
+         var8 += var11;
+      }
+
+      if (var4 > 0 && var5 > 0) {
+         method2038(class162.field1233, var1, var6, var10, var7, var4, var5, var8, var9);
+      }
+   }
+
+   final void method2036(byte[] var1, int var2, int var3, int var4, int var5, int var6, int var7) {
+      int var8 = var2 + var3 * class162.field1232;
+      int var9 = class162.field1232 - var4;
+      int var10 = 0;
+      int var11 = 0;
+      int var12;
+      if (var3 < class162.field1234) {
+         var12 = class162.field1234 - var3;
+         var5 -= var12;
+         var3 = class162.field1234;
+         var11 += var12 * var4;
+         var8 += var12 * class162.field1232;
+      }
+
+      if (var3 + var5 > class162.field1235) {
+         var5 -= var3 + var5 - class162.field1235;
+      }
+
+      if (var2 < class162.field1236) {
+         var12 = class162.field1236 - var2;
+         var4 -= var12;
+         var2 = class162.field1236;
+         var11 += var12;
+         var8 += var12;
+         var10 += var12;
+         var9 += var12;
+      }
+
+      if (var2 + var4 > class162.field1237) {
+         var12 = var2 + var4 - class162.field1237;
+         var4 -= var12;
+         var10 += var12;
+         var9 += var12;
+      }
+
+      if (var4 > 0 && var5 > 0) {
+         method2043(class162.field1233, var1, var6, var11, var8, var4, var5, var9, var10, var7);
+      }
    }
 }

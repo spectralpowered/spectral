@@ -1,22 +1,14 @@
-public class class54 extends class189 {
-   int field801;
-   // $FF: synthetic field
-   final class105 this$0;
+public abstract class class54 {
+   static int field581;
+   public int field579;
+   public int field580;
+   public int[] field578;
 
-   class54(class105 var1) {
-      this.this$0 = var1;
-      this.field801 = -1;
-   }
+   public abstract void method262(int var1, int var2, int var3, int var4);
 
-   void method979(class134 var1) {
-      this.field801 = var1.method671();
-   }
+   public abstract void method263(int var1, int var2);
 
-   void method980(class27 var1) {
-      var1.method133(this.field801);
-   }
-
-   static class121[] method317() {
-      return new class121[]{class121.field1440, class121.field1441, class121.field1439, class121.field1438};
+   public final void method264() {
+      class162.method748(this.field578, this.field579, this.field580);
    }
 }

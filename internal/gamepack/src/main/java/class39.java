@@ -1,93 +1,49 @@
-import java.io.IOException;
+public abstract class class39 {
+   public static class54 field199;
+   public int field195;
+   public int field196;
+   public int field197;
+   public int field198;
 
-public class class39 {
-   public static final class39 field364 = new class39("verdana_15pt_regular");
-   public static final class39 field365 = new class39("p12_full");
-   public static final class39 field367 = new class39("verdana_11pt_regular");
-   public static final class39 field368 = new class39("verdana_13pt_regular");
-   public static final class39 field369 = new class39("p11_full");
-   public static final class39 field371 = new class39("b12_full");
-   static class230 field366;
-   String field370;
+   protected abstract boolean method165(int var1, int var2, int var3, class427 var4);
 
-   class39(String var1) {
-      this.field370 = var1;
-   }
-
-   public static class39[] method217() {
-      return new class39[]{field365, field367, field371, field364, field368, field369};
-   }
-
-   static void method215() {
-      if (class52.field771) {
-         class83.field951 = null;
-         class405.field3530 = null;
-         class52.field758 = null;
-         class335.field3107 = null;
-         class328.field3060 = null;
-         class52.field759 = null;
-         class329.field3068 = null;
-         class133.field1485 = null;
-         class137.field1495 = null;
-         class302.field2891 = null;
-         class188.field1991 = null;
-         class344.field3160 = null;
-         class155.field1618 = null;
-         class356.field3196 = null;
-         class381.field3327.method1411();
-         class473.method2289(2);
-         if (class475.field3962 != null) {
-            try {
-               class134 var1 = new class134(4);
-               var1.method666(2);
-               var1.method724(0);
-               class475.field3962.method2051(var1.field1489, 0, 4);
-            } catch (IOException var4) {
-               try {
-                  class475.field3962.method2054();
-               } catch (Exception var3) {
-                  ;
-               }
-
-               ++class475.field3951;
-               class475.field3962 = null;
-            }
-         }
-
-         class52.field771 = false;
-      }
-   }
-
-   static final void method216(boolean var0) {
-      client.method281();
-      ++client.field483.field3462;
-      if (client.field483.field3462 >= 50 || var0) {
-         client.field483.field3462 = 0;
-         if (!client.field485 && client.field483.method1915() != null) {
-            class81 var2 = class189.method982(class165.field1798, client.field483.field3459);
-            client.field483.method1920(var2);
-
-            try {
-               client.field483.method1917();
-            } catch (IOException var4) {
-               client.field485 = true;
-            }
-         }
-
-      }
-   }
-
-   static final String method218(int var0) {
-      String var2 = Integer.toString(var0);
-
-      for(int var3 = var2.length() - 3; var3 > 0; var3 -= 3) {
-         var2 = var2.substring(0, var3) + class389.field3431 + var2.substring(var3);
-      }
-
-      if (var2.length() > 9) {
-         return " " + class334.method1616(65408) + var2.substring(0, var2.length() - 8) + class96.field1192 + " " + class389.field3430 + var2 + class389.field3434 + class389.field3437;
+   public static final boolean method167(char var0) {
+      if (Character.isISOControl(var0)) {
+         return false;
+      } else if (class87.method374(var0)) {
+         return true;
       } else {
-         return var2.length() > 6 ? " " + class334.method1616(16777215) + var2.substring(0, var2.length() - 4) + class96.field1194 + " " + class389.field3430 + var2 + class389.field3434 + class389.field3437 : " " + class334.method1616(16776960) + var2 + class389.field3437;
+         char[] var2 = class383.field3229;
+
+         int var3;
+         char var4;
+         for(var3 = 0; var3 < var2.length; ++var3) {
+            var4 = var2[var3];
+            if (var4 == var0) {
+               return true;
+            }
+         }
+
+         var2 = class383.field3228;
+
+         for(var3 = 0; var3 < var2.length; ++var3) {
+            var4 = var2[var3];
+            if (var0 == var4) {
+               return true;
+            }
+         }
+
+         return false;
+      }
+   }
+
+   static final void method166(int var0, int var1) {
+      if (client.field238 == 2) {
+         class241.method1043((client.field241 - class312.field2465 << 7) + client.field244, (client.field282 - class325.field2575 << 7) + client.field339, client.field243 * 2);
+         if (client.field436 > -1 && client.field231 % 20 < 10) {
+            class471.field3962[0].method1240(var0 + client.field436 - 12, var1 + client.field257 - 28);
+         }
+
       }
    }
 }

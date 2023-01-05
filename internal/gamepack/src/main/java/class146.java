@@ -1,38 +1,46 @@
-import java.util.HashMap;
-
 public class class146 {
-   class164 field1560;
-   class164 field1561;
-   HashMap field1559;
+   public int field1160;
+   public int field1161;
+   public int field1162;
 
-   public class146(class164 var1, class164 var2) {
-      this.field1561 = var1;
-      this.field1560 = var2;
-      this.field1559 = new HashMap();
-   }
+   static void method693(String var0, boolean var1) {
+      var0 = var0.toLowerCase();
+      short[] var3 = new short[16];
+      int var4 = 0;
 
-   public HashMap method781(class39[] var1) {
-      HashMap var3 = new HashMap();
-      class39[] var4 = var1;
-
-      for(int var5 = 0; var5 < var4.length; ++var5) {
-         class39 var6 = var4[var5];
-         if (this.field1559.containsKey(var6)) {
-            var3.put(var6, this.field1559.get(var6));
-         } else {
-            class164 var8 = this.field1561;
-            class164 var9 = this.field1560;
-            String var10 = var6.field370;
-            int var11 = var8.method883(var10);
-            int var12 = var8.method886(var11, "");
-            class394 var7 = class238.method1211(var8, var9, var11, var12);
-            if (var7 != null) {
-               this.field1559.put(var6, var7);
-               var3.put(var6, var7);
+      for(int var5 = 0; var5 < class263.field2179; ++var5) {
+         class263 var6 = class423.method2062(var5);
+         if ((!var1 || var6.field2190) && -1 == var6.field2181 && var6.field2147.toLowerCase().indexOf(var0) != -1) {
+            if (var4 >= 250) {
+               class488.field4076 = -1;
+               class3.field22 = null;
+               return;
             }
+
+            if (var4 >= var3.length) {
+               short[] var7 = new short[2 * var3.length];
+
+               for(int var8 = 0; var8 < var4; ++var8) {
+                  var7[var8] = var3[var8];
+               }
+
+               var3 = var7;
+            }
+
+            var3[var4++] = (short)var5;
          }
       }
 
-      return var3;
+      class3.field22 = var3;
+      class61.field605 = 0;
+      class488.field4076 = var4;
+      String[] var9 = new String[class488.field4076];
+
+      for(int var10 = 0; var10 < class488.field4076; ++var10) {
+         var9[var10] = class423.method2062(var3[var10]).field2147;
+      }
+
+      short[] var11 = class3.field22;
+      class79.method332(var9, var11, 0, var9.length - 1);
    }
 }

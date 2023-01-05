@@ -21,6 +21,5 @@ package io.spectralpowered.deobfuscator.include
 annotation class ObfInfo(
     val owner: String = "",
     val name: String = "",
-    val desc: String = "",
-    val opaque: Int = -1
+    val desc: String = ""
 )

@@ -11,3 +11,9 @@ tasks.compileJava {
     sourceCompatibility = "1.8"
     targetCompatibility = "1.8"
 }
+
+tasks.register<JavaExec>("run gamepack") {
+    group = "spectral"
+    mainClass.set("GamepackLauncher")
+    classpath = sourceSets["main"].runtimeClasspath
+}
