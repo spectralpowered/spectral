@@ -1,5 +1,7 @@
+import io.spectralpowered.ObfInfo;
+
 @ObfInfo(
-   name = "re"
+	name = "re"
 )
 public abstract class class30 {
 }

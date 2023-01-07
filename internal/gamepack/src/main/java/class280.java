@@ -1,5 +1,7 @@
+import io.spectralpowered.ObfInfo;
+
 @ObfInfo(
-   name = "of"
+	name = "of"
 )
 public class class280 {
 }

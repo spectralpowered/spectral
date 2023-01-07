@@ -1,5 +1,7 @@
+import io.spectralpowered.ObfInfo;
+
 @ObfInfo(
-   name = "v"
+	name = "v"
 )
 public interface class377 {
 }

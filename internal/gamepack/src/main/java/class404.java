@@ -1,5 +1,7 @@
+import io.spectralpowered.ObfInfo;
+
 @ObfInfo(
-   name = "rb"
+	name = "rb"
 )
 public class class404 {
 }

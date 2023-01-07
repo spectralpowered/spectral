@@ -23,11 +23,8 @@ import io.spectralpowered.asm.identifier
 import io.spectralpowered.asm.isInitializer
 import io.spectralpowered.asm.owner
 import io.spectralpowered.asm.util.InheritanceGraph
-import io.spectralpowered.deobfuscator.Deobfuscator
 import io.spectralpowered.deobfuscator.Deobfuscator.Companion.isObfuscatedName
 import io.spectralpowered.deobfuscator.Transformer
-import io.spectralpowered.deobfuscator.include.ObfInfo
-import org.objectweb.asm.Type
 import org.objectweb.asm.commons.SimpleRemapper
 import org.objectweb.asm.tree.AnnotationNode
 import org.tinylog.kotlin.Logger
@@ -116,7 +113,7 @@ class Renamer : Transformer() {
     }
 
     private fun createClassAnnotation(name: String): AnnotationNode {
-        val node = AnnotationNode("LObfInfo;")
+        val node = AnnotationNode("Lio/spectralpowered/ObfInfo;")
         node.values = listOf(
             "name", name
         )
@@ -124,7 +121,7 @@ class Renamer : Transformer() {
     }
 
     private fun createMemberAnnotation(owner: String, name: String, desc: String): AnnotationNode {
-        val node = AnnotationNode("LObfInfo;")
+        val node = AnnotationNode("Lio/spectralpowered/ObfInfo;")
         node.values = listOf(
             "owner", owner,
             "name", name,
@@ -134,7 +131,7 @@ class Renamer : Transformer() {
     }
 
     private fun createArgAnnotation(index: Int): AnnotationNode {
-        val node = AnnotationNode("LObfInfo;")
+        val node = AnnotationNode("Lio/spectralpowered/ObfInfo;")
         node.values = listOf(
             "arg", index
         )

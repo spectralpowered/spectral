@@ -105,7 +105,7 @@ tasks {
             println("Decompiling updated Old School RuneScape gamepack.")
             if(decompDir.exists()) decompDir.deleteRecursively()
             decompDir.mkdirs()
-            val args = listOf(gamepackDeobFile.toString(), "-asc=1", decompDir.toString())
+            val args = listOf(gamepackDeobFile.toString(), "-asc=1", "-dgs=1", "=hdc=0", decompDir.toString())
             ConsoleDecompiler.main(args.toTypedArray())
             val outFile = decompDir.resolve("gamepack.deob.jar")
             unzipTo(decompDir, outFile)
@@ -143,9 +143,11 @@ tasks {
                 if(gamepackDir.exists()) gamepackDir.deleteRecursively()
                 gamepackDir.mkdirs()
                 decompDir.listFiles()!!.forEach { srcFile ->
-                    if(srcFile.name.contains("bouncycastle")) return@forEach
                     srcFile.copyRecursively(gamepackDir.resolve(srcFile.name), overwrite = true)
                 }
+                gamepackDir.resolve("org/bouncycastle/").deleteRecursively()
+                gamepackDir.resolve("io/spectralpowered/Reflection.java").deleteRecursively()
+                gamepackDir.resolve("io/spectralpowered/ObfInfo.java").deleteRecursively()
                 println("Successfully copied gamepack sources.")
             }
         }

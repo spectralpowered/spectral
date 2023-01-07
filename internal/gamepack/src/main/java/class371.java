@@ -1,11 +1,13 @@
+import io.spectralpowered.ObfInfo;
+
 @ObfInfo(
-   name = "fb"
+	name = "fb"
 )
 public class class371 {
-   @ObfInfo(
-      owner = "fb",
-      name = "i",
-      desc = "Z"
-   )
-   static boolean field3164;
+	@ObfInfo(
+		owner = "fb",
+		name = "i",
+		desc = "Z"
+	)
+	static boolean field3164;
 }

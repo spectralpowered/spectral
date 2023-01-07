@@ -1,5 +1,7 @@
+import io.spectralpowered.ObfInfo;
+
 @ObfInfo(
-   name = "qw"
+	name = "qw"
 )
 public class class256 {
 }

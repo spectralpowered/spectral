@@ -71,6 +71,7 @@ abstract class JSObject protected constructor() {
     companion object {
 
         @Throws(JSException::class)
+        @JvmStatic
         fun getWindow(applet: Applet): JSObject? {
             return ProviderLoader.callGetWindow(applet)
         }

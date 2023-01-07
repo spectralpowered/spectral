@@ -1,25 +1,36 @@
 package com.jagex.oldscape.pub;
 
+import io.spectralpowered.ObfInfo;
+
+@ObfInfo(
+	name = "com/jagex/oldscape/pub/OAuthApi"
+)
 public interface OAuthApi {
-   void setOtlTokenRequester(OtlTokenRequester var1);
+	@ObfInfo(
+		owner = "com/jagex/oldscape/pub/OAuthApi",
+		name = "isOnLoginScreen",
+		desc = "()Z"
+	)
+	boolean isOnLoginScreen();
 
-   boolean nn();
+	@ObfInfo(
+		owner = "com/jagex/oldscape/pub/OAuthApi",
+		name = "getAccountHash",
+		desc = "()J"
+	)
+	long getAccountHash();
 
-   void setRefreshTokenRequester(RefreshAccessTokenRequester var1);
+	@ObfInfo(
+		owner = "com/jagex/oldscape/pub/OAuthApi",
+		name = "setOtlTokenRequester",
+		desc = "(Lcom/jagex/oldscape/pub/OtlTokenRequester;)V"
+	)
+	void setOtlTokenRequester(OtlTokenRequester var1);
 
-   long getAccountHash();
-
-   boolean isOnLoginScreen();
-
-   void ni(OtlTokenRequester var1);
-
-   void nz(RefreshAccessTokenRequester var1);
-
-   void nt(OtlTokenRequester var1);
-
-   void nj(RefreshAccessTokenRequester var1);
-
-   boolean ng();
-
-   boolean nc();
+	@ObfInfo(
+		owner = "com/jagex/oldscape/pub/OAuthApi",
+		name = "setRefreshTokenRequester",
+		desc = "(Lcom/jagex/oldscape/pub/RefreshAccessTokenRequester;)V"
+	)
+	void setRefreshTokenRequester(RefreshAccessTokenRequester var1);
 }

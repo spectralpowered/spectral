@@ -1,5 +1,7 @@
+import io.spectralpowered.ObfInfo;
+
 @ObfInfo(
-   name = "jl"
+	name = "jl"
 )
 public interface class76 extends Iterable {
 }

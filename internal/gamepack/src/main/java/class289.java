@@ -1,11 +1,13 @@
+import io.spectralpowered.ObfInfo;
+
 @ObfInfo(
-   name = "ac"
+	name = "ac"
 )
 public interface class289 {
-   @ObfInfo(
-      owner = "ac",
-      name = "h",
-      desc = "(I)Lax;"
-   )
-   class233 method1426();
+	@ObfInfo(
+		owner = "ac",
+		name = "h",
+		desc = "(I)Lax;"
+	)
+	class233 method1426();
 }

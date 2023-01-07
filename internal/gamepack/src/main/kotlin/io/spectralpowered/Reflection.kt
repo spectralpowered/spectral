@@ -16,25 +16,8 @@
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package reflect/*
- *     Spectral Powered
- *     Copyright (C) 2022 <Kyle Escobar>
- *
- *     This program is free software: you can redistribute it and/or modify
- *     it under the terms of the GNU General Public License as published by
- *     the Free Software Foundation, either version 3 of the License, or
- *     (at your option) any later version.
- *
- *     This program is distributed in the hope that it will be useful,
- *     but WITHOUT ANY WARRANTY; without even the implied warranty of
- *     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *     GNU General Public License for more details.
- *
- *     You should have received a copy of the GNU General Public License
- *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
- */
+package io.spectralpowered
 
-import ObfInfo
 import java.io.File
 import java.lang.reflect.Field
 import java.lang.reflect.Method
@@ -89,6 +72,7 @@ object Reflection {
         }
     }
 
+    @JvmStatic
     fun findClass(name: String): Class<*> {
         val klass = classes[name]
         if(klass != null) return klass
@@ -98,6 +82,7 @@ object Reflection {
         return Class.forName(name)
     }
 
+    @JvmStatic
     fun findField(cls: Class<*>, name: String): Field {
         if(DEBUG) {
             println("[ReflectionCheck] Field: ${cls.simpleName}.$name")
@@ -114,6 +99,7 @@ object Reflection {
         return cls.getDeclaredField(name)
     }
 
+    @JvmStatic
     fun getMethodName(method: Method): String {
         val annotation = method.getAnnotation(ObfInfo::class.java)
         if(annotation != null) {
@@ -122,6 +108,7 @@ object Reflection {
         return method.name
     }
 
+    @JvmStatic
     fun getMethodArgTypes(method: Method): Array<Class<*>?> {
         val annotation = method.getAnnotation(ObfInfo::class.java)
         val argTypes = method.parameterTypes
@@ -146,6 +133,7 @@ object Reflection {
         return newArgTypes
     }
 
+    @JvmStatic
     fun invoke(method: Method, instance: Any?, args: Array<Any?>): Any? {
         if(DEBUG) {
             println("[ReflectionCheck] Invoke: ${method.name}")
@@ -160,6 +148,7 @@ object Reflection {
         }
     }
 
+    @JvmStatic
     fun getInt(field: Field, instance: Any?): Int {
         if(DEBUG) {
             println("[ReflectionCheck] Getter: ${field.name}")
@@ -186,6 +175,7 @@ object Reflection {
         return value
     }
 
+    @JvmStatic
     fun setInt(field: Field, instance: Any?, value: Int) {
         if(DEBUG) {
             println("[ReflectionCheck] Setter: $field => $value")

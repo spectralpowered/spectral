@@ -1,5 +1,7 @@
+import io.spectralpowered.ObfInfo;
+
 @ObfInfo(
-   name = "lu"
+	name = "lu"
 )
 public class class125 {
 }

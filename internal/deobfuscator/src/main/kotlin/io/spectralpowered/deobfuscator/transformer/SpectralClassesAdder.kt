@@ -23,7 +23,6 @@ import io.spectralpowered.asm.build
 import io.spectralpowered.asm.fromByteArray
 import io.spectralpowered.asm.ignored
 import io.spectralpowered.deobfuscator.Transformer
-import io.spectralpowered.deobfuscator.include.ObfInfo
 import org.objectweb.asm.tree.ClassNode
 import org.tinylog.kotlin.Logger
 
@@ -31,6 +30,7 @@ class SpectralClassesAdder : Transformer() {
 
     override fun transformPool(pool: ClassPool) {
         pool.addObfInfoClass()
+        pool.addReflectionClass()
     }
 
     override fun postTransform(pool: ClassPool) {
@@ -38,9 +38,19 @@ class SpectralClassesAdder : Transformer() {
     }
 
     private fun ClassPool.addObfInfoClass() {
-        val cls = ObfInfo::class.java.getResourceAsStream("/io/spectralpowered/deobfuscator/include/ObfInfo.class")!!
+        val cls = SpectralClassesAdder::class.java.getResourceAsStream("/io/spectralpowered/ObfInfo.class")!!
             .readAllBytes().let { ClassNode().also { c -> c.fromByteArray(it) } }
-        cls.name = "ObfInfo"
+        cls.name = "io/spectralpowered/ObfInfo"
+        cls.ignored = true
+        cls.visibleAnnotations.clear()
+        addClass(cls)
+        cls.build()
+    }
+
+    private fun ClassPool.addReflectionClass() {
+        val cls = SpectralClassesAdder::class.java.getResourceAsStream("/io/spectralpowered//Reflection.class")!!
+            .readAllBytes().let { ClassNode().also { c -> c.fromByteArray(it) } }
+        cls.name = "io/spectralpowered/Reflection"
         cls.ignored = true
         cls.visibleAnnotations.clear()
         addClass(cls)

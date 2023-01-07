@@ -20,6 +20,7 @@ package io.spectralpowered.deobfuscator
 
 import io.spectralpowered.asm.ClassPool
 import io.spectralpowered.asm.ignored
+import io.spectralpowered.deobfuscator.transformer.ScriptInterpreterCleaner
 import io.spectralpowered.deobfuscator.transformer.ControlFlowFixer
 import io.spectralpowered.deobfuscator.transformer.CopyPropagationFixer
 import io.spectralpowered.deobfuscator.transformer.DeadCodeRemover
@@ -32,6 +33,8 @@ import io.spectralpowered.deobfuscator.transformer.IllegalStateExceptionRemover
 import io.spectralpowered.deobfuscator.transformer.MethodSorter
 import io.spectralpowered.deobfuscator.transformer.MultiplierRemover
 import io.spectralpowered.deobfuscator.transformer.RedundantGotoRemover
+import io.spectralpowered.deobfuscator.transformer.RedundantLocalVariableRemover
+import io.spectralpowered.deobfuscator.transformer.ReflectionCheckPatcher
 import io.spectralpowered.deobfuscator.transformer.Renamer
 import io.spectralpowered.deobfuscator.transformer.RuntimeExceptionRemover
 import io.spectralpowered.deobfuscator.transformer.SpectralClassesAdder
@@ -61,7 +64,7 @@ class Deobfuscator(
         pool.clear()
         pool.addJar(inputJar)
         pool.classes.forEach {
-            if(it.name.contains("/")) it.ignored = true
+            if(it.name.contains("org/")) it.ignored = true
         }
         pool.build()
         Logger.info("Successfully loaded ${pool.classes.size} classes from archive.")
@@ -72,9 +75,11 @@ class Deobfuscator(
         transformers.clear()
 
         register<RuntimeExceptionRemover>()
+        register<DeadCodeRemover>()
         register<IllegalStateExceptionRemover>()
         register<DeadCodeRemover>()
         register<ControlFlowFixer>()
+        register<ErrorConstructorRemover>()
         register<RedundantGotoRemover>()
         register<UnusedFieldRemover>()
         register<UnusedMethodRemover>()
@@ -86,11 +91,13 @@ class Deobfuscator(
         register<LocalVariableExprFixer>()
         register<MultiplierRemover>()
         register<StackFrameFixer>()
-        register<ErrorConstructorRemover>()
+        register<RedundantLocalVariableRemover>()
         register<FernflowerExceptionFixer>()
         register<StaticFieldMover>()
         register<StaticMethodMover>()
         register<GetPathFixer>()
+        register<ScriptInterpreterCleaner>()
+        register<ReflectionCheckPatcher>()
         register<StackFrameFixer>()
         register<SpectralClassesAdder>()
 

@@ -1,5 +1,7 @@
+import io.spectralpowered.ObfInfo;
+
 @ObfInfo(
-   name = "ps"
+	name = "ps"
 )
 public interface class311 extends class131 {
 }

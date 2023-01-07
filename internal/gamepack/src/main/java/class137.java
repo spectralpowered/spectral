@@ -1,5 +1,7 @@
+import io.spectralpowered.ObfInfo;
+
 @ObfInfo(
-   name = "mi"
+	name = "mi"
 )
 public @interface class137 {
 }

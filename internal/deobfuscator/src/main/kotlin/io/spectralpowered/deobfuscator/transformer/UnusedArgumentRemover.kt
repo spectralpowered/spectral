@@ -135,6 +135,7 @@ class UnusedArgumentRemover : Transformer() {
             if(insn !is VarInsnNode) return@forEach
             if(insn.`var` == lastArgIndex) return false
         }
+        if(!name.isObfuscatedName()) return false
         return true
     }
 

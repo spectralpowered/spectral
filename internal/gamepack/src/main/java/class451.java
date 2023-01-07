@@ -1,5 +1,7 @@
+import io.spectralpowered.ObfInfo;
+
 @ObfInfo(
-   name = "ke"
+	name = "ke"
 )
 public @interface class451 {
 }
