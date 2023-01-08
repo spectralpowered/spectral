@@ -7,11 +7,13 @@ rootProject.name = "spectral"
 module("logger")
 module("commons")
 module("util")
+module("api")
 module("internal:asm")
 module("internal:deobfuscator")
 module("internal:gamepack")
 module("internal:mapper")
 module("internal:injector")
+module("internal:mixin")
 
 fun module(path: String) {
     val split = path.split(":")
