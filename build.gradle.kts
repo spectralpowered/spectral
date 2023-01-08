@@ -30,6 +30,8 @@ allprojects {
         mavenCentral()
         maven(url = "https://jitpack.io")
         maven(url = "https://maven.spectralpowered.io")
+        maven(url = "https://repo.spongepowered.org/maven/")
+        maven(url = "https://maven.enaium.cn/")
     }
 
     dependencies {
@@ -45,7 +47,7 @@ allprojects {
 
 java {
     toolchain {
-        languageVersion.set(JavaLanguageVersion.of(17))
+        languageVersion.set(JavaLanguageVersion.of(11))
     }
 }
 

@@ -588,7 +588,7 @@ public final class class208 extends class295 {
 				}
 
 				if (client.field324[var26] == 8) {
-					var33 = client.field329 % 20 < 10 ? '뀀' : 8454016;
+					var33 = client.field329 % 20 < 10 ? '\uB000' : 8454016;
 				}
 
 				int var34;

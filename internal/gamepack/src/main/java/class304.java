@@ -337,69 +337,69 @@ public abstract class class304 {
 		case ' ':
 		case '-':
 		case '_':
-		case ' ':
+		case '\u00A0':
 			return '_';
 		case '#':
 		case '[':
 		case ']':
 			return var0;
-		case 'À':
-		case 'Á':
-		case 'Â':
-		case 'Ã':
-		case 'Ä':
-		case 'à':
-		case 'á':
-		case 'â':
-		case 'ã':
-		case 'ä':
+		case '\u00C0':
+		case '\u00C1':
+		case '\u00C2':
+		case '\u00C3':
+		case '\u00C4':
+		case '\u00E0':
+		case '\u00E1':
+		case '\u00E2':
+		case '\u00E3':
+		case '\u00E4':
 			return 'a';
-		case 'Ç':
-		case 'ç':
+		case '\u00C7':
+		case '\u00E7':
 			return 'c';
-		case 'È':
-		case 'É':
-		case 'Ê':
-		case 'Ë':
-		case 'è':
-		case 'é':
-		case 'ê':
-		case 'ë':
+		case '\u00C8':
+		case '\u00C9':
+		case '\u00CA':
+		case '\u00CB':
+		case '\u00E8':
+		case '\u00E9':
+		case '\u00EA':
+		case '\u00EB':
 			return 'e';
-		case 'Í':
-		case 'Î':
-		case 'Ï':
-		case 'í':
-		case 'î':
-		case 'ï':
+		case '\u00CD':
+		case '\u00CE':
+		case '\u00CF':
+		case '\u00ED':
+		case '\u00EE':
+		case '\u00EF':
 			return 'i';
-		case 'Ñ':
-		case 'ñ':
+		case '\u00D1':
+		case '\u00F1':
 			return 'n';
-		case 'Ò':
-		case 'Ó':
-		case 'Ô':
-		case 'Õ':
-		case 'Ö':
-		case 'ò':
-		case 'ó':
-		case 'ô':
-		case 'õ':
-		case 'ö':
+		case '\u00D2':
+		case '\u00D3':
+		case '\u00D4':
+		case '\u00D5':
+		case '\u00D6':
+		case '\u00F2':
+		case '\u00F3':
+		case '\u00F4':
+		case '\u00F5':
+		case '\u00F6':
 			return 'o';
-		case 'Ù':
-		case 'Ú':
-		case 'Û':
-		case 'Ü':
-		case 'ù':
-		case 'ú':
-		case 'û':
-		case 'ü':
+		case '\u00D9':
+		case '\u00DA':
+		case '\u00DB':
+		case '\u00DC':
+		case '\u00F9':
+		case '\u00FA':
+		case '\u00FB':
+		case '\u00FC':
 			return 'u';
-		case 'ß':
+		case '\u00DF':
 			return 'b';
-		case 'ÿ':
-		case 'Ÿ':
+		case '\u00FF':
+		case '\u0178':
 			return 'y';
 		default:
 			return Character.toLowerCase(var0);

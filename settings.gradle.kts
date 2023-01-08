@@ -4,17 +4,14 @@ plugins {
 
 rootProject.name = "spectral"
 
-module("client")
 module("logger")
 module("commons")
-module("api")
 module("util")
 module("internal:asm")
 module("internal:deobfuscator")
 module("internal:gamepack")
 module("internal:mapper")
 module("internal:injector")
-module("mixins")
 
 fun module(path: String) {
     val split = path.split(":")
