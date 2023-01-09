@@ -13,7 +13,7 @@ class ModifyConstantTranslator implements IAnnotationTranslator {
     public void translate(AnnotationNode annotation) {
         annotation.desc = Type.getDescriptor(CModifyConstant.class);
         Map<String, Object> values = AnnotationParser.listToMap(annotation.values);
-        if (values.containsKey("slice")) this.dynamicTranslate((AnnotationNode) values.get("slice"));
+        if (values.containsKey("slice")) dynamicTranslate((AnnotationNode) values.get("slice"));
         if (values.containsKey("constant")) {
             AnnotationNode constant = (AnnotationNode) values.remove("constant");
             Map<String, Object> constantValues = AnnotationParser.listToMap(constant.values);

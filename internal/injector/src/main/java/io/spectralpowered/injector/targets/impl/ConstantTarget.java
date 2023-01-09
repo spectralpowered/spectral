@@ -28,15 +28,15 @@ public class ConstantTarget implements IInjectionTarget {
     @Override
     public List<AbstractInsnNode> getTargets(Map<String, IInjectionTarget> injectionTargets, MethodNode method, CTarget target, CSlice slice) {
         List<AbstractInsnNode> targets = new ArrayList<>();
-        List<AbstractInsnNode> instructions = this.getSlice(injectionTargets, method, slice);
+        List<AbstractInsnNode> instructions = getSlice(injectionTargets, method, slice);
 
-        if (target.target().equalsIgnoreCase("null")) this.findNull(targets, instructions);
-        else if (target.target().toLowerCase(Locale.ROOT).startsWith("int")) this.findInt(targets, instructions, target.target());
-        else if (target.target().toLowerCase(Locale.ROOT).startsWith("long")) this.findLong(targets, instructions, target.target());
-        else if (target.target().toLowerCase(Locale.ROOT).startsWith("float")) this.findFloat(targets, instructions, target.target());
-        else if (target.target().toLowerCase(Locale.ROOT).startsWith("double")) this.findDouble(targets, instructions, target.target());
-        else if (target.target().toLowerCase(Locale.ROOT).startsWith("string")) this.findString(targets, instructions, target.target());
-        else if (target.target().toLowerCase(Locale.ROOT).startsWith("type")) this.findType(targets, instructions, target.target());
+        if (target.target().equalsIgnoreCase("null")) findNull(targets, instructions);
+        else if (target.target().toLowerCase(Locale.ROOT).startsWith("int")) findInt(targets, instructions, target.target());
+        else if (target.target().toLowerCase(Locale.ROOT).startsWith("long")) findLong(targets, instructions, target.target());
+        else if (target.target().toLowerCase(Locale.ROOT).startsWith("float")) findFloat(targets, instructions, target.target());
+        else if (target.target().toLowerCase(Locale.ROOT).startsWith("double")) findDouble(targets, instructions, target.target());
+        else if (target.target().toLowerCase(Locale.ROOT).startsWith("string")) findString(targets, instructions, target.target());
+        else if (target.target().toLowerCase(Locale.ROOT).startsWith("type")) findType(targets, instructions, target.target());
         else throw new IllegalArgumentException("Unknown constant type '" + target.target() + "'");
 
         if (target.ordinal() != -1) {
@@ -46,14 +46,14 @@ public class ConstantTarget implements IInjectionTarget {
         return targets;
     }
 
-    private void findNull(final List<AbstractInsnNode> targets, final List<AbstractInsnNode> instructions) {
+    private void findNull(List<AbstractInsnNode> targets, List<AbstractInsnNode> instructions) {
         for (AbstractInsnNode instruction : instructions) {
             if (instruction.getOpcode() == Opcodes.ACONST_NULL) targets.add(instruction);
         }
     }
 
-    private void findInt(final List<AbstractInsnNode> targets, final List<AbstractInsnNode> instructions, final String value) {
-        int val = this.parse(value, "int", len -> len == 2, Integer::parseInt);
+    private void findInt(List<AbstractInsnNode> targets, List<AbstractInsnNode> instructions, String value) {
+        int val = parse(value, "int", len -> len == 2, Integer::parseInt);
 
         for (AbstractInsnNode instruction : instructions) {
             Number number = ASMUtils.getNumber(instruction);
@@ -61,8 +61,8 @@ public class ConstantTarget implements IInjectionTarget {
         }
     }
 
-    private void findLong(final List<AbstractInsnNode> targets, final List<AbstractInsnNode> instructions, final String value) {
-        long val = this.parse(value, "long", len -> len == 2, Long::parseLong);
+    private void findLong(List<AbstractInsnNode> targets, List<AbstractInsnNode> instructions, String value) {
+        long val = parse(value, "long", len -> len == 2, Long::parseLong);
 
         for (AbstractInsnNode instruction : instructions) {
             Number number = ASMUtils.getNumber(instruction);
@@ -70,8 +70,8 @@ public class ConstantTarget implements IInjectionTarget {
         }
     }
 
-    private void findFloat(final List<AbstractInsnNode> targets, final List<AbstractInsnNode> instructions, final String value) {
-        float val = this.parse(value, "float", len -> len == 2, Float::parseFloat);
+    private void findFloat(List<AbstractInsnNode> targets, List<AbstractInsnNode> instructions, String value) {
+        float val = parse(value, "float", len -> len == 2, Float::parseFloat);
 
         for (AbstractInsnNode instruction : instructions) {
             Number number = ASMUtils.getNumber(instruction);
@@ -79,8 +79,8 @@ public class ConstantTarget implements IInjectionTarget {
         }
     }
 
-    private void findDouble(final List<AbstractInsnNode> targets, final List<AbstractInsnNode> instructions, final String value) {
-        double val = this.parse(value, "double", len -> len == 2, Double::parseDouble);
+    private void findDouble(List<AbstractInsnNode> targets, List<AbstractInsnNode> instructions, String value) {
+        double val = parse(value, "double", len -> len == 2, Double::parseDouble);
 
         for (AbstractInsnNode instruction : instructions) {
             Number number = ASMUtils.getNumber(instruction);
@@ -88,38 +88,38 @@ public class ConstantTarget implements IInjectionTarget {
         }
     }
 
-    private void findString(final List<AbstractInsnNode> targets, final List<AbstractInsnNode> instructions, final String value) {
-        String val = this.parse(value, "String", len -> len >= 2, s -> s);
+    private void findString(List<AbstractInsnNode> targets, List<AbstractInsnNode> instructions, String value) {
+        String val = parse(value, "String", len -> len >= 2, s -> s);
 
         for (AbstractInsnNode instruction : instructions) {
             if (instruction instanceof LdcInsnNode && val.equals(((LdcInsnNode) instruction).cst)) targets.add(instruction);
         }
     }
 
-    private void findType(final List<AbstractInsnNode> targets, final List<AbstractInsnNode> instructions, final String value) {
-        Type val = this.parse(value, "type", len -> len == 2, Type::getType);
+    private void findType(List<AbstractInsnNode> targets, List<AbstractInsnNode> instructions, String value) {
+        Type val = parse(value, "type", len -> len == 2, Type::getType);
 
         for (AbstractInsnNode instruction : instructions) {
             if (instruction instanceof LdcInsnNode && val.equals(((LdcInsnNode) instruction).cst)) targets.add(instruction);
         }
     }
 
-    private <T> T parse(final String value, final String constantName, final Function<Integer, Boolean> sizeChecker, final Function<String, T> parser) {
+    private <T> T parse(String value, String constantName, Function<Integer, Boolean> sizeChecker, Function<String, T> parser) {
         String[] parts = value.split(" ");
         if (!sizeChecker.apply(parts.length)) {
-            throw new IllegalArgumentException(constantName + " constant does not have " + this.getAorAN(constantName) + " " + constantName + " as argument");
+            throw new IllegalArgumentException(constantName + " constant does not have " + getAorAN(constantName) + " " + constantName + " as argument");
         }
         String unparsedVal = value.substring(parts[0].length() + 1);
         T val;
         try {
             val = parser.apply(unparsedVal);
         } catch (Throwable t) {
-            throw new IllegalArgumentException(constantName + " constant value can not be parsed as " + this.getAorAN(constantName) + " " + constantName);
+            throw new IllegalArgumentException(constantName + " constant value can not be parsed as " + getAorAN(constantName) + " " + constantName);
         }
         return val;
     }
 
-    private String getAorAN(final String s) {
+    private String getAorAN(String s) {
         char c = s.toUpperCase().charAt(0);
         if (c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U') return "an";
         return "a";

@@ -9,12 +9,12 @@ class BytesURLStreamHandler extends URLStreamHandler {
 
     private final byte[] bytes;
 
-    BytesURLStreamHandler(final byte[] bytes) {
+    BytesURLStreamHandler(byte[] bytes) {
         this.bytes = bytes;
     }
 
     @Override
-    protected URLConnection openConnection(final URL url) throws IOException {
+    protected URLConnection openConnection(URL url) throws IOException {
         return new BytesURLConnection(url, bytes);
     }
 

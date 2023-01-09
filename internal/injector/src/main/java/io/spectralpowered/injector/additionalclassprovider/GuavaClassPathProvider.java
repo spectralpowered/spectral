@@ -15,11 +15,11 @@ public class GuavaClassPathProvider extends BasicClassProvider {
         this(GuavaClassPathProvider.class.getClassLoader());
     }
 
-    public GuavaClassPathProvider(final ClassLoader classLoader) {
+    public GuavaClassPathProvider(ClassLoader classLoader) {
         super(classLoader);
 
         try {
-            this.classPath = ClassPath.from(classLoader);
+            classPath = ClassPath.from(classLoader);
         } catch (Throwable t) {
             throw new RuntimeException("Failed to initialize ClassPath", t);
         }
@@ -28,7 +28,7 @@ public class GuavaClassPathProvider extends BasicClassProvider {
     @Override
     public Map<String, Supplier<byte[]>> getAllClasses() {
         Map<String, Supplier<byte[]>> map = new HashMap<>();
-        for (ClassPath.ClassInfo classInfo : this.classPath.getAllClasses()) map.put(classInfo.getName(), () -> this.getClass(classInfo.getName()));
+        for (ClassPath.ClassInfo classInfo : classPath.getAllClasses()) map.put(classInfo.getName(), () -> getClass(classInfo.getName()));
         return map;
     }
 

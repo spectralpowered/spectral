@@ -19,14 +19,14 @@ public class BasicClassProvider implements IClassProvider {
         this(BasicClassProvider.class.getClassLoader());
     }
 
-    public BasicClassProvider(final ClassLoader classLoader) {
+    public BasicClassProvider(ClassLoader classLoader) {
         this.classLoader = classLoader;
     }
 
     @Override
     public byte[] getClass(String name) {
         try {
-            InputStream is = this.classLoader.getResourceAsStream(ASMUtils.slash(name) + ".class");
+            InputStream is = classLoader.getResourceAsStream(ASMUtils.slash(name) + ".class");
             if (is == null) throw new ClassNotFoundException(name);
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
             byte[] buf = new byte[1024];
@@ -34,7 +34,7 @@ public class BasicClassProvider implements IClassProvider {
             while ((len = is.read(buf)) > 0) baos.write(buf, 0, len);
             return baos.toByteArray();
         } catch (Throwable t) {
-            this.sneak(t);
+            sneak(t);
         }
         throw new RuntimeException("Unable to find class '" + name + "'");
     }
@@ -45,7 +45,7 @@ public class BasicClassProvider implements IClassProvider {
     }
 
 
-    private <T extends Throwable> void sneak(final Throwable t) throws T {
+    private <T extends Throwable> void sneak(Throwable t) throws T {
         throw (T) t;
     }
 

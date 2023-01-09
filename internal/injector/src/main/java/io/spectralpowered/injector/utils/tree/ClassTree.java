@@ -9,20 +9,20 @@ public class ClassTree {
 
     private static final Map<String, ClassTree> TREE = new HashMap<>();
 
-    public static ClassTree getTreePart(final IClassProvider classProvider, String className) {
+    public static ClassTree getTreePart(IClassProvider classProvider, String className) {
         className = ASMUtils.dot(className);
-        if (TREE.containsKey(className)) return TREE.get(className);
+        if (ClassTree.TREE.containsKey(className)) return ClassTree.TREE.get(className);
 
         byte[] bytecode = classProvider.getClass(className);
         ClassNode node = ASMUtils.fromBytes(bytecode);
         ClassTree tree = new ClassTree(node);
-        TREE.put(className, tree);
+        ClassTree.TREE.put(className, tree);
 
         int oldSize;
         do {
             oldSize = tree.superClasses.size();
             for (String superClass : tree.superClasses.toArray(new String[0])) {
-                ClassTree superTree = getTreePart(classProvider, superClass);
+                ClassTree superTree = ClassTree.getTreePart(classProvider, superClass);
                 if (superTree != null) tree.superClasses.addAll(superTree.superClasses);
             }
         } while (oldSize != tree.superClasses.size());
@@ -37,42 +37,42 @@ public class ClassTree {
     private final Set<String> superClasses;
     private final int modifiers;
 
-    public ClassTree(final ClassNode node) {
+    public ClassTree(ClassNode node) {
         this.node = node;
-        this.name = ASMUtils.dot(node.name);
-        this.superClass = node.superName;
-        this.superClasses = new HashSet<>();
-        if (this.superClass != null) this.superClasses.add(ASMUtils.dot(this.superClass));
+        name = ASMUtils.dot(node.name);
+        superClass = node.superName;
+        superClasses = new HashSet<>();
+        if (superClass != null) superClasses.add(ASMUtils.dot(superClass));
         if (node.interfaces != null) {
-            for (String inter : node.interfaces) this.superClasses.add(ASMUtils.dot(inter));
+            for (String inter : node.interfaces) superClasses.add(ASMUtils.dot(inter));
         }
-        this.modifiers = node.access;
+        modifiers = node.access;
     }
 
     public ClassNode getNode() {
-        return this.node;
+        return node;
     }
 
     public String getName() {
-        return this.name;
+        return name;
     }
 
-    public ClassTree parseSuperClass(final IClassProvider classProvider) {
-        if (this.superClass == null) return null;
-        return ClassTree.getTreePart(classProvider, this.superClass);
+    public ClassTree parseSuperClass(IClassProvider classProvider) {
+        if (superClass == null) return null;
+        return getTreePart(classProvider, superClass);
     }
 
     public Set<String> getSuperClasses() {
-        return Collections.unmodifiableSet(this.superClasses);
+        return Collections.unmodifiableSet(superClasses);
     }
 
-    public Set<ClassTree> getParsedSuperClasses(final IClassProvider classProvider) {
+    public Set<ClassTree> getParsedSuperClasses(IClassProvider classProvider) {
         Set<ClassTree> out = new HashSet<>();
-        for (String superClass : this.superClasses) out.add(ClassTree.getTreePart(classProvider, superClass));
+        for (String superClass : superClasses) out.add(getTreePart(classProvider, superClass));
         return out;
     }
 
-    public Set<ClassTree> walkSuperClasses(final Set<ClassTree> walkedSuperClasses, final IClassProvider classProvider, final boolean includeSelf) {
+    public Set<ClassTree> walkSuperClasses(Set<ClassTree> walkedSuperClasses, IClassProvider classProvider, boolean includeSelf) {
         if (walkedSuperClasses.contains(this)) return walkedSuperClasses;
         if (includeSelf) walkedSuperClasses.add(this);
         for (ClassTree superClass : getParsedSuperClasses(classProvider)) superClass.walkSuperClasses(walkedSuperClasses, classProvider, true);
@@ -80,11 +80,11 @@ public class ClassTree {
     }
 
     public int getModifiers() {
-        return this.modifiers;
+        return modifiers;
     }
 
     @Override
-    public boolean equals(final Object o) {
+    public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         ClassTree classTree = (ClassTree) o;

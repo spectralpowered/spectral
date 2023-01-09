@@ -22,21 +22,21 @@ public class MixinsTranslator implements ITransformerPreprocessor {
 
     @Override
     public void process(ClassNode node) {
-        this.transform(node.visibleAnnotations);
-        this.transform(node.invisibleAnnotations);
+        transform(node.visibleAnnotations);
+        transform(node.invisibleAnnotations);
         for (FieldNode field : node.fields) {
-            this.transform(field.visibleAnnotations);
-            this.transform(field.invisibleAnnotations);
+            transform(field.visibleAnnotations);
+            transform(field.invisibleAnnotations);
         }
         for (MethodNode method : node.methods) {
-            this.transform(method.visibleAnnotations);
-            this.transform(method.invisibleAnnotations);
+            transform(method.visibleAnnotations);
+            transform(method.invisibleAnnotations);
 
             CallbackRewriter.rewrite(method);
         }
     }
 
-    private void transform(final List<AnnotationNode> annotations) {
+    private void transform(List<AnnotationNode> annotations) {
         if (annotations == null) return;
         for (AnnotationNode annotation : annotations) {
             IAnnotationTranslator translator = AnnotationTranslatorManager.getTranslator(Type.getType(annotation.desc));

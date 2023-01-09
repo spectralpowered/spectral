@@ -47,7 +47,7 @@ public class CWrapCatchTransformer extends ARemovingTargetTransformer<CWrapCatch
             }
             boolean cast = !targetReturnType.equals(returnType);
             Type exceptionType = args[0];
-            this.renameAndCopy(transformerMethod, target, transformer, transformedClass, "CWrapCatch");
+            renameAndCopy(transformerMethod, target, transformer, transformedClass, "CWrapCatch");
 
             LabelNode start = new LabelNode();
             LabelNode end_handler = new LabelNode();
@@ -76,7 +76,7 @@ public class CWrapCatchTransformer extends ARemovingTargetTransformer<CWrapCatch
                 boolean cast = !instructionReturnType.equals(returnType);
                 Type exceptionType = args[0];
                 if (!copied) {
-                    this.renameAndCopy(transformerMethod, target, transformer, transformedClass, "CWrapCatch");
+                    renameAndCopy(transformerMethod, target, transformer, transformedClass, "CWrapCatch");
                     copied = true;
                 }
 
@@ -110,7 +110,7 @@ public class CWrapCatchTransformer extends ARemovingTargetTransformer<CWrapCatch
         private final String methodDeclaration;
         private final int ordinal;
 
-        private MethodCTarget(final String methodDeclaration, final int ordinal) {
+        private MethodCTarget(String methodDeclaration, int ordinal) {
             this.methodDeclaration = methodDeclaration;
             this.ordinal = ordinal;
         }
@@ -122,7 +122,7 @@ public class CWrapCatchTransformer extends ARemovingTargetTransformer<CWrapCatch
 
         @Override
         public String target() {
-            return this.methodDeclaration;
+            return methodDeclaration;
         }
 
         @Override
@@ -132,7 +132,7 @@ public class CWrapCatchTransformer extends ARemovingTargetTransformer<CWrapCatch
 
         @Override
         public int ordinal() {
-            return this.ordinal;
+            return ordinal;
         }
 
         @Override

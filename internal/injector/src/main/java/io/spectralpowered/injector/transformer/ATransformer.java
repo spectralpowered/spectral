@@ -30,28 +30,28 @@ public abstract class ATransformer {
      * @param transformedClass   The target {@link ClassNode}
      * @param transformer        The transformer {@link ClassNode}
      */
-    public abstract void transform(final InjectionManager injectionManager, final IClassProvider classProvider, final Map<String, IInjectionTarget> injectionTargets, final ClassNode transformedClass, final ClassNode transformer);
+    public abstract void transform(InjectionManager injectionManager, IClassProvider classProvider, Map<String, IInjectionTarget> injectionTargets, ClassNode transformedClass, ClassNode transformer);
 
 
-    protected <T extends Annotation> T getAnnotation(final Class<T> annotationClass, final ClassNode classNode, final IClassProvider classProvider) {
-        T annotation = this.getAnnotation(annotationClass, classNode.visibleAnnotations, classProvider);
-        if (annotation == null) annotation = this.getAnnotation(annotationClass, classNode.invisibleAnnotations, classProvider);
+    protected <T extends Annotation> T getAnnotation(Class<T> annotationClass, ClassNode classNode, IClassProvider classProvider) {
+        T annotation = getAnnotation(annotationClass, classNode.visibleAnnotations, classProvider);
+        if (annotation == null) annotation = getAnnotation(annotationClass, classNode.invisibleAnnotations, classProvider);
         return annotation;
     }
 
-    protected <T extends Annotation> T getAnnotation(final Class<T> annotationClass, final FieldNode field, final IClassProvider classProvider) {
-        T annotation = this.getAnnotation(annotationClass, field.visibleAnnotations, classProvider);
-        if (annotation == null) annotation = this.getAnnotation(annotationClass, field.invisibleAnnotations, classProvider);
+    protected <T extends Annotation> T getAnnotation(Class<T> annotationClass, FieldNode field, IClassProvider classProvider) {
+        T annotation = getAnnotation(annotationClass, field.visibleAnnotations, classProvider);
+        if (annotation == null) annotation = getAnnotation(annotationClass, field.invisibleAnnotations, classProvider);
         return annotation;
     }
 
-    protected <T extends Annotation> T getAnnotation(final Class<T> annotationClass, final MethodNode method, final IClassProvider classProvider) {
-        T annotation = this.getAnnotation(annotationClass, method.visibleAnnotations, classProvider);
-        if (annotation == null) annotation = this.getAnnotation(annotationClass, method.invisibleAnnotations, classProvider);
+    protected <T extends Annotation> T getAnnotation(Class<T> annotationClass, MethodNode method, IClassProvider classProvider) {
+        T annotation = getAnnotation(annotationClass, method.visibleAnnotations, classProvider);
+        if (annotation == null) annotation = getAnnotation(annotationClass, method.invisibleAnnotations, classProvider);
         return annotation;
     }
 
-    protected <T extends Annotation> T getAnnotation(final Class<T> annotationClass, final List<AnnotationNode> annotations, final IClassProvider classProvider) {
+    protected <T extends Annotation> T getAnnotation(Class<T> annotationClass, List<AnnotationNode> annotations, IClassProvider classProvider) {
         if (annotations != null) {
             for (AnnotationNode annotation : annotations) {
                 if (annotation.desc.equals(typeDescriptor(annotationClass))) {
@@ -62,7 +62,7 @@ public abstract class ATransformer {
         return null;
     }
 
-    protected void prepareForCopy(final ClassNode transformer, final MethodNode method) {
+    protected void prepareForCopy(ClassNode transformer, MethodNode method) {
         AnnotationNode injectionInfo = new AnnotationNode(typeDescriptor(InjectionInfo.class));
         injectionInfo.values = Arrays.asList(
                 "transformer", transformer.name,
@@ -72,18 +72,18 @@ public abstract class ATransformer {
         method.invisibleAnnotations.add(injectionInfo);
     }
 
-    protected void renameAndCopy(final MethodNode injectionMethod, final MethodNode targetMethod, final ClassNode transformer, final ClassNode transformedClass, final String extra) {
-        this.prepareForCopy(transformer, injectionMethod);
+    protected void renameAndCopy(MethodNode injectionMethod, MethodNode targetMethod, ClassNode transformer, ClassNode transformedClass, String extra) {
+        prepareForCopy(transformer, injectionMethod);
         int i = 0;
         String baseName = injectionMethod.name + "$" + targetMethod.name.replaceAll("[<>]", "") + "$" + extra;
         do {
             injectionMethod.name = baseName + i++;
-        } while (this.hasMethod(transformedClass, injectionMethod.name));
+        } while (hasMethod(transformedClass, injectionMethod.name));
         Remapper.remapAndAdd(transformer, transformedClass, injectionMethod);
     }
 
 
-    private boolean hasMethod(final ClassNode node, final String name) {
+    private boolean hasMethod(ClassNode node, String name) {
         for (MethodNode method : node.methods) {
             if (method.name.equals(name)) return true;
         }

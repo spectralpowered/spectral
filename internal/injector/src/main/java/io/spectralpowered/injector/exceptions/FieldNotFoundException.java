@@ -8,15 +8,15 @@ public class FieldNotFoundException extends RuntimeException {
     private final String transformerName;
     private final String methodNameAndDesc;
 
-    public FieldNotFoundException(final ClassNode targetClass, final ClassNode transformer, final String methodNameAndDesc) {
-        this.targetClassName = targetClass.name;
-        this.transformerName = transformer.name;
+    public FieldNotFoundException(ClassNode targetClass, ClassNode transformer, String methodNameAndDesc) {
+        targetClassName = targetClass.name;
+        transformerName = transformer.name;
         this.methodNameAndDesc = methodNameAndDesc;
     }
 
     @Override
     public String getMessage() {
-        return "Target class '" + this.targetClassName + "' does not have field '" + this.methodNameAndDesc + "' from transformer '" + this.transformerName + "'";
+        return "Target class '" + targetClassName + "' does not have field '" + methodNameAndDesc + "' from transformer '" + transformerName + "'";
     }
 
 }

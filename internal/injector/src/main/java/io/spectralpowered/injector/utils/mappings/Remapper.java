@@ -20,8 +20,8 @@ public class Remapper {
      * @param target     The new owner of the remapped {@link MethodNode}
      * @param methodNode The {@link MethodNode} to remap
      */
-    public static void remapAndAdd(final ClassNode source, final ClassNode target, final MethodNode methodNode) {
-        remapAndAdd(source.name, target.name, target, methodNode);
+    public static void remapAndAdd(ClassNode source, ClassNode target, MethodNode methodNode) {
+        Remapper.remapAndAdd(source.name, target.name, target, methodNode);
     }
 
     /**
@@ -32,8 +32,8 @@ public class Remapper {
      * @param target    The new owner of the remapped {@link MethodNode}
      * @param fieldNode The {@link MethodNode} to remap
      */
-    public static void remapAndAdd(final ClassNode source, final ClassNode target, final FieldNode fieldNode) {
-        remapAndAdd(source.name, target.name, target, fieldNode);
+    public static void remapAndAdd(ClassNode source, ClassNode target, FieldNode fieldNode) {
+        Remapper.remapAndAdd(source.name, target.name, target, fieldNode);
     }
 
     /**
@@ -44,7 +44,7 @@ public class Remapper {
      * @param holder     The {@link ClassNode} to which the new node gets added
      * @param methodNode The {@link MethodNode} to remap
      */
-    public static void remapAndAdd(final String sourceName, final String targetName, final ClassNode holder, final MethodNode methodNode) {
+    public static void remapAndAdd(String sourceName, String targetName, ClassNode holder, MethodNode methodNode) {
         MapRemapper remapper = new MapRemapper(sourceName, targetName);
         MethodVisitor newNode = holder.visitMethod(methodNode.access, remapper.mapMethodName(sourceName, methodNode.name, methodNode.desc), remapper.mapDesc(methodNode.desc), methodNode.signature, methodNode.exceptions == null ? null : remapper.mapTypes(methodNode.exceptions.toArray(new String[0])));
         MethodRemapper methodRemapper = new MethodRemapper(newNode, remapper);
@@ -59,7 +59,7 @@ public class Remapper {
      * @param holder     The {@link ClassNode} to which the new node gets added
      * @param fieldNode  The {@link FieldNode} to remap
      */
-    public static void remapAndAdd(final String sourceName, final String targetName, final ClassNode holder, final FieldNode fieldNode) {
+    public static void remapAndAdd(String sourceName, String targetName, ClassNode holder, FieldNode fieldNode) {
         MapRemapper remapper = new MapRemapper(sourceName, targetName);
         FieldVisitor newNode = holder.visitField(fieldNode.access, remapper.mapFieldName(sourceName, fieldNode.name, fieldNode.desc), remapper.mapDesc(fieldNode.desc), remapper.mapSignature(fieldNode.signature, true), fieldNode.value == null ? null : remapper.mapValue(fieldNode.value));
         FieldRemapper fieldRemapper = new FieldRemapper(newNode, remapper);
@@ -93,8 +93,8 @@ public class Remapper {
      * @param node       The {@link ClassNode} to remap
      * @return The remapped {@link ClassNode}
      */
-    public static ClassNode remap(final String sourceName, final String targetName, final ClassNode node) {
-        return remap(node, new MapRemapper(sourceName, targetName));
+    public static ClassNode remap(String sourceName, String targetName, ClassNode node) {
+        return Remapper.remap(node, new MapRemapper(sourceName, targetName));
     }
 
     /**
@@ -104,7 +104,7 @@ public class Remapper {
      * @param remapper The {@link MapRemapper} to use
      * @return The remapped {@link ClassNode}
      */
-    public static ClassNode remap(final ClassNode node, final MapRemapper remapper) {
+    public static ClassNode remap(ClassNode node, MapRemapper remapper) {
         ClassNode remappedNode = new ClassNode();
         ClassRemapper classRemapper = new ClassRemapper(remappedNode, remapper);
         node.accept(classRemapper);
@@ -118,7 +118,7 @@ public class Remapper {
      * @param original The original {@link ClassNode}
      * @param toMerge  The {@link ClassNode} to merge into the original
      */
-    public static void merge(final ClassNode original, final ClassNode toMerge) {
+    public static void merge(ClassNode original, ClassNode toMerge) {
         for (Field field : ClassNode.class.getDeclaredFields()) {
             if (Modifier.isStatic(field.getModifiers())) continue;
             if (Modifier.isFinal(field.getModifiers())) continue;

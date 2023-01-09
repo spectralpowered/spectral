@@ -54,7 +54,7 @@ public class CModifyConstantTransformer extends ARemovingTransformer<CModifyCons
                     throw new TransformerException(transformerMethod, transformer, "must have no arguments")
                             .help(Codifier.of(transformerMethod).param(null));
                 }
-                if (this.getTrueCount(hasNullValue, hasIntValue, hasLongValue, hasFloatValue, hasDoubleValue, hasStringValue, hasTypeValue) != 1) {
+                if (getTrueCount(hasNullValue, hasIntValue, hasLongValue, hasFloatValue, hasDoubleValue, hasStringValue, hasTypeValue) != 1) {
                     throw new TransformerException(transformerMethod, transformer, "must have exactly one target constant");
                 }
                 {
@@ -81,9 +81,9 @@ public class CModifyConstantTransformer extends ARemovingTransformer<CModifyCons
                     }
                 }
 
-                this.renameAndCopy(transformerMethod, target, transformer, transformedClass, "CModifyConstant");
+                renameAndCopy(transformerMethod, target, transformer, transformedClass, "CModifyConstant");
                 List<AbstractInsnNode> toReplace = new ArrayList<>();
-                for (AbstractInsnNode instruction : this.getSlice(injectionTargets, target, annotation.slice())) {
+                for (AbstractInsnNode instruction : getSlice(injectionTargets, target, annotation.slice())) {
                     if (hasNullValue) {
                         if (instruction.getOpcode() == Opcodes.ACONST_NULL && annotation.nullValue()) {
                             toReplace.add(instruction);
@@ -134,7 +134,7 @@ public class CModifyConstantTransformer extends ARemovingTransformer<CModifyCons
         }
     }
 
-    private int getTrueCount(final boolean... booleans) {
+    private int getTrueCount(boolean... booleans) {
         int count = 0;
         for (boolean b : booleans) if (b) count++;
         return count;

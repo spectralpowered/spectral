@@ -16,8 +16,13 @@
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package io.spectralpowered.injector
+package io.spectralpowered.injector.transformer
 
-object Injector {
+import org.tinylog.kotlin.Logger
 
+class DumpInjectedClassesTransformer : IPostTransformer {
+
+    override fun transform(className: String, bytecode: ByteArray) {
+        Logger.info("Dump: ${className}")
+    }
 }

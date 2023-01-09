@@ -9,7 +9,7 @@ class BytesURLConnection extends URLConnection {
 
     private final byte[] data;
 
-    BytesURLConnection(final URL url, final byte[] data) {
+    BytesURLConnection(URL url, byte[] data) {
         super(url);
 
         this.data = data;

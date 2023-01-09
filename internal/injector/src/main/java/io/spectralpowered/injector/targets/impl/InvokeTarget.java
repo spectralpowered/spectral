@@ -22,7 +22,7 @@ public class InvokeTarget implements IInjectionTarget {
         if (memberDeclaration == null) return null;
 
         int i = 0;
-        for (AbstractInsnNode instruction : this.getSlice(injectionTargets, method, slice)) {
+        for (AbstractInsnNode instruction : getSlice(injectionTargets, method, slice)) {
             if (!(instruction instanceof MethodInsnNode)) continue;
             MethodInsnNode methodInsnNode = (MethodInsnNode) instruction;
             if (methodInsnNode.owner.equals(memberDeclaration.getOwner()) && methodInsnNode.name.equals(memberDeclaration.getName()) && methodInsnNode.desc.equals(memberDeclaration.getDesc())) {

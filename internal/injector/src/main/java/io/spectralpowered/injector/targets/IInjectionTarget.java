@@ -9,13 +9,13 @@ import java.util.*;
 
 public interface IInjectionTarget {
 
-    List<AbstractInsnNode> getTargets(final Map<String, IInjectionTarget> injectionTargets, final MethodNode method, final CTarget target, final CSlice slice);
+    List<AbstractInsnNode> getTargets(Map<String, IInjectionTarget> injectionTargets, MethodNode method, CTarget target, CSlice slice);
 
-    default CTarget.Shift getShift(final CTarget target) {
+    default CTarget.Shift getShift(CTarget target) {
         return target.shift();
     }
 
-    default List<AbstractInsnNode> getSlice(final Map<String, IInjectionTarget> injectionTargets, final MethodNode method, final CSlice slice) {
+    default List<AbstractInsnNode> getSlice(Map<String, IInjectionTarget> injectionTargets, MethodNode method, CSlice slice) {
         if (slice == null) return Arrays.asList(method.instructions.toArray());
 
         int from;

@@ -40,7 +40,7 @@ public class COverrideTransformer extends ARemovingTargetTransformer<COverride> 
         transformerMethod.name = target.name;
         transformerMethod.desc = target.desc;
         transformedClass.methods.remove(target);
-        this.prepareForCopy(transformer, transformerMethod);
+        prepareForCopy(transformer, transformerMethod);
         Remapper.remapAndAdd(transformer, transformedClass, transformerMethod);
     }
 

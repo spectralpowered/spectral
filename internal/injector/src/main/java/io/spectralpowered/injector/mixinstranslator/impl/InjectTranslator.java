@@ -20,14 +20,14 @@ class InjectTranslator implements IAnnotationTranslator {
         if (values.containsKey("target")) {
             List<AnnotationNode> targets = (List<AnnotationNode>) values.get("target");
             for (AnnotationNode target : targets) {
-                this.dynamicTranslate(target);
+                dynamicTranslate(target);
                 if (optional != null) {
                     target.values.add("optional");
                     target.values.add(optional);
                 }
             }
         }
-        if (values.containsKey("slice")) this.dynamicTranslate((AnnotationNode) values.get("slice"));
+        if (values.containsKey("slice")) dynamicTranslate((AnnotationNode) values.get("slice"));
         annotation.values = AnnotationParser.mapToList(values);
     }
 

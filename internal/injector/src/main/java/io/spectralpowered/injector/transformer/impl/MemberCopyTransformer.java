@@ -18,7 +18,7 @@ public class MemberCopyTransformer extends ATransformer {
 
     @Override
     public void transform(InjectionManager injectionManager, IClassProvider classProvider, Map<String, IInjectionTarget> injectionTargets, ClassNode transformedClass, ClassNode transformer) {
-        this.mergeInitializers(transformedClass, transformer);
+        mergeInitializers(transformedClass, transformer);
         for (MethodNode method : transformer.methods) {
             if (method.name.startsWith("<")) continue;
             if (ASMUtils.getMethod(transformedClass, method.name, method.desc) != null) {
@@ -57,11 +57,11 @@ public class MemberCopyTransformer extends ATransformer {
             for (MethodNode unresolvedInitializer : unresolvedInitializers) initializers.put(emptyConstructor, unresolvedInitializer);
         }
         MethodNode staticBlock = ASMUtils.getMethod(transformer, MN_Clinit, MD_Void);
-        if (staticBlock != null) initializers.put(staticBlock, this.createStaticBlock(transformedClass));
-        for (Map.Entry<MethodNode, MethodNode> entry : initializers.entrySet()) this.copyInitializers(transformer, entry.getKey(), transformedClass, entry.getValue());
+        if (staticBlock != null) initializers.put(staticBlock, createStaticBlock(transformedClass));
+        for (Map.Entry<MethodNode, MethodNode> entry : initializers.entrySet()) copyInitializers(transformer, entry.getKey(), transformedClass, entry.getValue());
     }
 
-    private void copyInitializers(final ClassNode fromClass, final MethodNode from, final ClassNode toClass, final MethodNode to) {
+    private void copyInitializers(ClassNode fromClass, MethodNode from, ClassNode toClass, MethodNode to) {
         Map<String, InsnList> fieldInitializers = new LinkedHashMap<>();
         InsnList lastInstructions = new InsnList();
         Map<LabelNode, LabelNode> copiedLabels = new HashMap<>();
@@ -95,20 +95,20 @@ public class MemberCopyTransformer extends ATransformer {
                     InsnList insns = fieldInitializers.remove(fieldInsn.owner + ":" + fieldInsn.name + fieldInsn.desc);
                     if (insns == null) continue;
 
-                    to.instructions.insert(instruction, this.remapInstructions(insns, fromClass.name, toClass.name));
+                    to.instructions.insert(instruction, remapInstructions(insns, fromClass.name, toClass.name));
                 }
             }
             for (AbstractInsnNode instruction : to.instructions.toArray()) {
                 if (instruction.getOpcode() == Opcodes.RETURN) {
                     for (InsnList instructions : fieldInitializers.values()) {
-                        to.instructions.insertBefore(instruction, this.remapInstructions(instructions, fromClass.name, toClass.name));
+                        to.instructions.insertBefore(instruction, remapInstructions(instructions, fromClass.name, toClass.name));
                     }
                 }
             }
         }
     }
 
-    private InsnList remapInstructions(final InsnList instructions, final String fromName, final String toName) {
+    private InsnList remapInstructions(InsnList instructions, String fromName, String toName) {
         ClassNode tempClassHolder = new ClassNode();
         tempClassHolder.visit(0, 0, "temp", null, IN_Object, null);
         MethodNode tempMethodHolder = new MethodNode(0, "temp", MD_Void, null, null);
@@ -117,7 +117,7 @@ public class MemberCopyTransformer extends ATransformer {
         return tempClassHolder.methods.get(0).instructions;
     }
 
-    private MethodNode createStaticBlock(final ClassNode transformedClass) {
+    private MethodNode createStaticBlock(ClassNode transformedClass) {
         for (MethodNode method : transformedClass.methods) {
             if (method.name.equals("<clinit>")) return method;
         }

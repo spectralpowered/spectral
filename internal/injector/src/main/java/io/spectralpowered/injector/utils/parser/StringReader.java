@@ -15,250 +15,250 @@ public class StringReader {
     private final String string;
     private int cursor;
 
-    public StringReader(final String string) {
+    public StringReader(String string) {
         this(string, 0);
     }
 
-    public StringReader(final String string, final int cursor) {
+    public StringReader(String string, int cursor) {
         this.string = string;
         this.cursor = cursor;
     }
 
     public int getCursor() {
-        return this.cursor;
+        return cursor;
     }
 
-    public void setCursor(final int cursor) {
+    public void setCursor(int cursor) {
         this.cursor = cursor;
     }
 
     public boolean canRead() {
-        return this.canRead(1);
+        return canRead(1);
     }
 
-    public boolean canRead(final int amount) {
-        return this.cursor + amount <= this.string.length();
+    public boolean canRead(int amount) {
+        return cursor + amount <= string.length();
     }
 
     public char peek() {
-        return this.peek(0);
+        return peek(0);
     }
 
-    public char peek(final int offset) {
-        return this.string.charAt(this.cursor + offset);
+    public char peek(int offset) {
+        return string.charAt(cursor + offset);
     }
 
-    public String peekString(final int length) {
-        if (this.cursor + length > this.string.length()) throw new IllegalArgumentException("Cannot read " + length + " characters from cursor position");
-        return this.string.substring(this.cursor, this.cursor + length);
+    public String peekString(int length) {
+        if (cursor + length > string.length()) throw new IllegalArgumentException("Cannot read " + length + " characters from cursor position");
+        return string.substring(cursor, cursor + length);
     }
 
     public String peekString() {
-        int start = this.cursor;
-        String s = this.readString();
-        this.cursor = start;
+        int start = cursor;
+        String s = readString();
+        cursor = start;
         return s;
     }
 
     public void skip() {
-        this.skip(1);
+        skip(1);
     }
 
-    public void skip(final int amount) {
-        this.cursor += amount;
+    public void skip(int amount) {
+        cursor += amount;
     }
 
-    public void ensureNext(final char c, final boolean allowEnd) {
-        if (!this.canRead()) {
+    public void ensureNext(char c, boolean allowEnd) {
+        if (!canRead()) {
             if (!allowEnd) throw new IllegalStateException("Expected '" + c + "' but got end");
             else return;
         }
-        if (this.peek() != c) throw new IllegalStateException("Expected '" + c + "' but got '" + this.peek() + "'");
+        if (peek() != c) throw new IllegalStateException("Expected '" + c + "' but got '" + peek() + "'");
     }
 
     public char read() {
-        return this.string.charAt(this.cursor++);
+        return string.charAt(cursor++);
     }
 
     public String readAll() {
-        String all = this.string.substring(this.cursor);
-        this.cursor = this.string.length();
+        String all = string.substring(cursor);
+        cursor = string.length();
         return all;
     }
 
-    public String readUntil(final char c) {
+    public String readUntil(char c) {
         StringBuilder builder = new StringBuilder();
-        while (this.canRead() && this.peek() != c) builder.append(this.read());
-        this.skip();
+        while (canRead() && peek() != c) builder.append(read());
+        skip();
         return builder.toString();
     }
 
     public String readString() {
-        if (!this.canRead()) return "";
+        if (!canRead()) return "";
 
-        if (this.peek() == QUOTE_CHAR) return this.readQuotedString();
-        else return this.readUnquotedString();
+        if (peek() == StringReader.QUOTE_CHAR) return readQuotedString();
+        else return readUnquotedString();
     }
 
     public String readUnquotedString() {
-        return this.readUntil(' ');
+        return readUntil(' ');
     }
 
     public String readQuotedString() {
-        this.ensureNext(QUOTE_CHAR, false);
-        this.skip();
-        String s = this.readUntil(QUOTE_CHAR);
-        this.ensureNext(' ', true);
-        this.skip();
+        ensureNext(StringReader.QUOTE_CHAR, false);
+        skip();
+        String s = readUntil(StringReader.QUOTE_CHAR);
+        ensureNext(' ', true);
+        skip();
         return s;
     }
 
     public boolean readBoolean() {
-        int start = this.cursor;
-        String s = this.readString();
+        int start = cursor;
+        String s = readString();
         if (s.equalsIgnoreCase("true")) {
             return true;
         } else if (s.equalsIgnoreCase("false")) {
             return false;
         } else {
-            this.cursor = start;
+            cursor = start;
             throw new IllegalStateException("Expected boolean but got '" + s + "'");
         }
     }
 
     public byte readByte() {
-        int start = this.cursor;
-        String s = this.readString();
+        int start = cursor;
+        String s = readString();
         if (s.toLowerCase().endsWith("b")) s = s.substring(0, s.length() - 1);
         try {
             return Byte.parseByte(s);
         } catch (NumberFormatException e) {
-            this.cursor = start;
+            cursor = start;
             throw new IllegalStateException("Expected byte but got '" + s + "'");
         }
     }
 
-    public boolean canReadByte(final boolean requireSuffix) {
+    public boolean canReadByte(boolean requireSuffix) {
         try {
-            int start = this.cursor;
-            this.readByte();
-            this.cursor = start;
-            return !requireSuffix || this.peekString().toLowerCase(Locale.ROOT).endsWith("b");
+            int start = cursor;
+            readByte();
+            cursor = start;
+            return !requireSuffix || peekString().toLowerCase(Locale.ROOT).endsWith("b");
         } catch (Throwable ignored) {
         }
         return false;
     }
 
     public short readShort() {
-        int start = this.cursor;
-        String s = this.readString();
+        int start = cursor;
+        String s = readString();
         if (s.toLowerCase().endsWith("s")) s = s.substring(0, s.length() - 1);
         try {
             return Short.parseShort(s);
         } catch (NumberFormatException e) {
-            this.cursor = start;
+            cursor = start;
             throw new IllegalStateException("Expected short but got '" + s + "'");
         }
     }
 
-    public boolean canReadShort(final boolean requireSuffix) {
+    public boolean canReadShort(boolean requireSuffix) {
         try {
-            int start = this.cursor;
-            this.readShort();
-            this.cursor = start;
-            return !requireSuffix || this.peekString().toLowerCase(Locale.ROOT).endsWith("s");
+            int start = cursor;
+            readShort();
+            cursor = start;
+            return !requireSuffix || peekString().toLowerCase(Locale.ROOT).endsWith("s");
         } catch (Throwable ignored) {
         }
         return false;
     }
 
     public int readInt() {
-        int start = this.cursor;
-        String s = this.readString();
+        int start = cursor;
+        String s = readString();
         if (s.toLowerCase().endsWith("i")) s = s.substring(0, s.length() - 1);
         try {
             return Integer.parseInt(s);
         } catch (NumberFormatException e) {
-            this.cursor = start;
+            cursor = start;
             throw new IllegalStateException("Expected integer but got '" + s + "'");
         }
     }
 
-    public boolean canReadInt(final boolean requireSuffix) {
+    public boolean canReadInt(boolean requireSuffix) {
         try {
-            int start = this.cursor;
-            this.readInt();
-            this.cursor = start;
-            return !requireSuffix || this.peekString().toLowerCase(Locale.ROOT).endsWith("i");
+            int start = cursor;
+            readInt();
+            cursor = start;
+            return !requireSuffix || peekString().toLowerCase(Locale.ROOT).endsWith("i");
         } catch (Throwable ignored) {
         }
         return false;
     }
 
     public long readLong() {
-        int start = this.cursor;
-        String s = this.readString();
+        int start = cursor;
+        String s = readString();
         if (s.toLowerCase().endsWith("l")) s = s.substring(0, s.length() - 1);
         try {
             return Long.parseLong(s);
         } catch (NumberFormatException e) {
-            this.cursor = start;
+            cursor = start;
             throw new IllegalStateException("Expected long but got '" + s + "'");
         }
     }
 
-    public boolean canReadLong(final boolean requireSuffix) {
+    public boolean canReadLong(boolean requireSuffix) {
         try {
-            int start = this.cursor;
-            this.readLong();
-            this.cursor = start;
-            return !requireSuffix || this.peekString().toLowerCase(Locale.ROOT).endsWith("l");
+            int start = cursor;
+            readLong();
+            cursor = start;
+            return !requireSuffix || peekString().toLowerCase(Locale.ROOT).endsWith("l");
         } catch (Throwable ignored) {
         }
         return false;
     }
 
     public float readFloat() {
-        int start = this.cursor;
-        String s = this.readString();
+        int start = cursor;
+        String s = readString();
         if (s.toLowerCase().endsWith("f")) s = s.substring(0, s.length() - 1);
         try {
             return Float.parseFloat(s);
         } catch (NumberFormatException e) {
-            this.cursor = start;
+            cursor = start;
             throw new IllegalStateException("Expected float but got '" + s + "'");
         }
     }
 
-    public boolean canReadFloat(final boolean requireSuffix) {
+    public boolean canReadFloat(boolean requireSuffix) {
         try {
-            int start = this.cursor;
-            this.readFloat();
-            this.cursor = start;
-            return !requireSuffix || this.peekString().toLowerCase(Locale.ROOT).endsWith("f");
+            int start = cursor;
+            readFloat();
+            cursor = start;
+            return !requireSuffix || peekString().toLowerCase(Locale.ROOT).endsWith("f");
         } catch (Throwable ignored) {
         }
         return false;
     }
 
     public double readDouble() {
-        int start = this.cursor;
-        String s = this.readString();
+        int start = cursor;
+        String s = readString();
         if (s.toLowerCase().endsWith("d")) s = s.substring(0, s.length() - 1);
         try {
             return Double.parseDouble(s);
         } catch (NumberFormatException e) {
-            this.cursor = start;
+            cursor = start;
             throw new IllegalStateException("Expected double but got '" + s + "'");
         }
     }
 
-    public boolean canReadDouble(final boolean requireSuffix) {
+    public boolean canReadDouble(boolean requireSuffix) {
         try {
-            int start = this.cursor;
-            this.readDouble();
-            this.cursor = start;
-            return !requireSuffix || this.peekString().toLowerCase(Locale.ROOT).endsWith("d");
+            int start = cursor;
+            readDouble();
+            cursor = start;
+            return !requireSuffix || peekString().toLowerCase(Locale.ROOT).endsWith("d");
         } catch (Throwable ignored) {
         }
         return false;
@@ -266,62 +266,62 @@ public class StringReader {
 
     public int readOpcode() {
         try {
-            return this.readInt();
+            return readInt();
         } catch (Throwable t) {
-            return StringParser.OPCODES.get(this.readString().toUpperCase(Locale.ROOT));
+            return StringParser.OPCODES.get(readString().toUpperCase(Locale.ROOT));
         }
     }
 
     public Type readType() {
-        if (!this.peekString(5).equalsIgnoreCase("type(")) throw new IllegalStateException("Expected type but got '" + this.peekString(4) + "'");
-        this.skip(5);
-        String type = this.readString();
+        if (!peekString(5).equalsIgnoreCase("type(")) throw new IllegalStateException("Expected type but got '" + peekString(4) + "'");
+        skip(5);
+        String type = readString();
         if (type.charAt(type.length() - 1) != ')') throw new IllegalStateException("Expected ')' but got '" + type.charAt(type.length() - 1) + "'");
         return Type.getType(type.substring(0, type.length() - 1));
     }
 
     public Handle readHandle() {
-        if (!this.peekString(7).equalsIgnoreCase("handle(")) throw new IllegalStateException("Expected handle but got '" + this.peekString(6) + "'");
-        this.skip(7);
-        int opcode = this.readOpcode();
-        String owner = this.readString();
-        String name = this.readString();
-        String descriptor = this.readString();
-        String sIsInterface = this.readUntil(')');
+        if (!peekString(7).equalsIgnoreCase("handle(")) throw new IllegalStateException("Expected handle but got '" + peekString(6) + "'");
+        skip(7);
+        int opcode = readOpcode();
+        String owner = readString();
+        String name = readString();
+        String descriptor = readString();
+        String sIsInterface = readUntil(')');
         boolean isInterface;
         if (sIsInterface.equalsIgnoreCase("true")) isInterface = true;
         else if (sIsInterface.equalsIgnoreCase("false")) isInterface = false;
         else throw new IllegalStateException("Expected boolean but got '" + sIsInterface + "'");
-        this.skip();
+        skip();
 
         return new Handle(opcode, owner, name, descriptor, isInterface);
     }
 
     public ConstantDynamic readConstantDynamic() {
-        if (!this.peekString(9).equalsIgnoreCase("cdynamic(")) throw new IllegalStateException("Expected cdynamic but got '" + this.peekString(8) + "'");
-        this.skip(9);
-        String name = this.readString();
-        String descriptor = this.readString();
-        Handle handle = this.readHandle();
+        if (!peekString(9).equalsIgnoreCase("cdynamic(")) throw new IllegalStateException("Expected cdynamic but got '" + peekString(8) + "'");
+        skip(9);
+        String name = readString();
+        String descriptor = readString();
+        Handle handle = readHandle();
         List<Object> bootstrapMethodArguments = new ArrayList<>();
-        while (this.canRead()) bootstrapMethodArguments.add(this.readConstantPoolEntry());
+        while (canRead()) bootstrapMethodArguments.add(readConstantPoolEntry());
 
         return new ConstantDynamic(name, descriptor, handle, bootstrapMethodArguments.toArray(new Object[0]));
     }
 
     public Object readConstantPoolEntry() {
-        if (this.canReadInt(true)) return this.readInt();
-        else if (this.canReadFloat(true)) return this.readFloat();
-        else if (this.canReadLong(true)) return this.readLong();
-        else if (this.canReadDouble(true)) return this.readDouble();
-        else if (this.peekString().toLowerCase(Locale.ROOT).startsWith("type(")) return this.readType();
-        else if (this.peekString().toLowerCase(Locale.ROOT).startsWith("handle(")) return this.readHandle();
-        else if (this.peekString().toLowerCase(Locale.ROOT).startsWith("cdynamic(")) return this.readConstantDynamic();
+        if (canReadInt(true)) return readInt();
+        else if (canReadFloat(true)) return readFloat();
+        else if (canReadLong(true)) return readLong();
+        else if (canReadDouble(true)) return readDouble();
+        else if (peekString().toLowerCase(Locale.ROOT).startsWith("type(")) return readType();
+        else if (peekString().toLowerCase(Locale.ROOT).startsWith("handle(")) return readHandle();
+        else if (peekString().toLowerCase(Locale.ROOT).startsWith("cdynamic(")) return readConstantDynamic();
 
         try {
-            return this.readInt();
+            return readInt();
         } catch (Throwable t) {
-            return this.readString();
+            return readString();
         }
     }
 

@@ -12,7 +12,7 @@ public interface IClassProvider {
      * @param name The name of the class
      * @return The bytecode of the class
      */
-    byte[] getClass(final String name);
+    byte[] getClass(String name);
 
     /**
      * Only needed when registering transformer with wildcard<br>

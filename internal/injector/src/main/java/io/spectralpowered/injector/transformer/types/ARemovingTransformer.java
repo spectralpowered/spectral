@@ -16,7 +16,7 @@ public abstract class ARemovingTransformer<T extends Annotation> extends ATransf
 
     private final Class<? extends Annotation> annotationClass;
 
-    public ARemovingTransformer(final Class<T> annotationClass) {
+    public ARemovingTransformer(Class<T> annotationClass) {
         this.annotationClass = annotationClass;
     }
 
@@ -25,11 +25,11 @@ public abstract class ARemovingTransformer<T extends Annotation> extends ATransf
         Iterator<MethodNode> it = transformer.methods.iterator();
         while (it.hasNext()) {
             MethodNode transformerMethod = it.next();
-            T annotation = (T) this.getAnnotation(this.annotationClass, transformerMethod, classProvider);
+            T annotation = (T) getAnnotation(annotationClass, transformerMethod, classProvider);
             if (annotation == null) continue;
             it.remove();
 
-            this.transform(annotation, injectionManager, classProvider, injectionTargets, transformedClass, transformer, ASMUtils.cloneMethod(transformerMethod));
+            transform(annotation, injectionManager, classProvider, injectionTargets, transformedClass, transformer, ASMUtils.cloneMethod(transformerMethod));
         }
     }
 
@@ -44,6 +44,6 @@ public abstract class ARemovingTransformer<T extends Annotation> extends ATransf
      * @param transformer        The transformer {@link ClassNode}
      * @param transformerMethod  The current {@link MethodNode} of the transformer
      */
-    public abstract void transform(final T annotation, final InjectionManager injectionManager, final IClassProvider classProvider, final Map<String, IInjectionTarget> injectionTargets, final ClassNode transformedClass, final ClassNode transformer, final MethodNode transformerMethod);
+    public abstract void transform(T annotation, InjectionManager injectionManager, IClassProvider classProvider, Map<String, IInjectionTarget> injectionTargets, ClassNode transformedClass, ClassNode transformer, MethodNode transformerMethod);
 
 }

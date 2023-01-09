@@ -22,7 +22,7 @@ public class SuperMappingFiller {
      * @param remapper      The {@link MapRemapper} to use
      * @param classProvider The {@link IClassProvider} to use
      */
-    public static void fillTransformerSuperMembers(final ClassNode transformer, final MapRemapper remapper, final IClassProvider classProvider) {
+    public static void fillTransformerSuperMembers(ClassNode transformer, MapRemapper remapper, IClassProvider classProvider) {
         List<Object> annotation;
         if (transformer.invisibleAnnotations == null || (annotation = transformer.invisibleAnnotations.stream().filter(a -> a.desc.equals(Type.getDescriptor(CTransformer.class))).map(a -> a.values).findFirst().orElse(null)) == null) {
             throw new IllegalStateException("Transformer does not have CTransformer annotation");
@@ -36,14 +36,14 @@ public class SuperMappingFiller {
                 for (Type type : classesList) {
                     ClassTree treePart = ClassTree.getTreePart(classProvider, remapper.mapSafe(type.getInternalName()));
                     Set<ClassNode> superClasses = treePart.walkSuperClasses(new HashSet<>(), classProvider, false).stream().map(ClassTree::getNode).collect(Collectors.toSet());
-                    fillSuperMembers(treePart.getNode(), superClasses, remapper);
+                    SuperMappingFiller.fillSuperMembers(treePart.getNode(), superClasses, remapper);
                 }
             } else if (key.equals("name")) {
                 List<String> classesList = (List<String>) value;
                 for (String className : classesList) {
                     ClassTree treePart = ClassTree.getTreePart(classProvider, remapper.mapSafe(ASMUtils.slash(className)));
                     Set<ClassNode> superClasses = treePart.walkSuperClasses(new HashSet<>(), classProvider, false).stream().map(ClassTree::getNode).collect(Collectors.toSet());
-                    fillSuperMembers(treePart.getNode(), superClasses, remapper);
+                    SuperMappingFiller.fillSuperMembers(treePart.getNode(), superClasses, remapper);
                 }
             }
         }
@@ -57,7 +57,7 @@ public class SuperMappingFiller {
      * @param superClasses The {@link Set} of super classes to use
      * @param remapper     The {@link MapRemapper} to use
      */
-    public static void fillSuperMembers(final ClassNode node, final Set<ClassNode> superClasses, final MapRemapper remapper) {
+    public static void fillSuperMembers(ClassNode node, Set<ClassNode> superClasses, MapRemapper remapper) {
         MapRemapper reverseRemapper = remapper.reverse();
         for (ClassNode superClass : superClasses) {
             for (FieldNode field : superClass.fields) {
@@ -84,14 +84,14 @@ public class SuperMappingFiller {
      * @param remapper      The {@link MapRemapper} to use
      * @param classProvider The {@link IClassProvider} to use
      */
-    public static void fillAllSuperMembers(final MapRemapper remapper, final IClassProvider classProvider) {
+    public static void fillAllSuperMembers(MapRemapper remapper, IClassProvider classProvider) {
         for (Map.Entry<String, String> entry : new HashMap<>(remapper.getMappings()).entrySet()) {
             if (entry.getKey().contains(".")) continue;
             String obfClass = entry.getValue();
             try {
                 ClassTree treeNode = ClassTree.getTreePart(classProvider, obfClass);
                 Set<ClassNode> superClasses = treeNode.walkSuperClasses(new HashSet<>(), classProvider, false).stream().map(ClassTree::getNode).collect(Collectors.toSet());
-                SuperMappingFiller.fillSuperMembers(treeNode.getNode(), superClasses, remapper);
+                fillSuperMembers(treeNode.getNode(), superClasses, remapper);
             } catch (Throwable ignored) {
             }
         }

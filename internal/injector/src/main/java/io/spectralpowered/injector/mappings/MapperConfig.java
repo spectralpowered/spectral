@@ -7,18 +7,18 @@ public class MapperConfig {
     }
 
 
-    protected boolean fillSuperMappings = false;
-    protected boolean remapTransformer = false;
+    protected boolean fillSuperMappings;
+    protected boolean remapTransformer;
 
     private MapperConfig() {
     }
 
-    public MapperConfig fillSuperMappings(final boolean fillSuperMappings) {
+    public MapperConfig fillSuperMappings(boolean fillSuperMappings) {
         this.fillSuperMappings = fillSuperMappings;
         return this;
     }
 
-    public MapperConfig remapTransformer(final boolean remapTransformer) {
+    public MapperConfig remapTransformer(boolean remapTransformer) {
         this.remapTransformer = remapTransformer;
         return this;
     }

@@ -17,7 +17,7 @@ public class ProguardMapper extends AMapper {
 
     private final File mappingFile;
 
-    public ProguardMapper(final MapperConfig config, final File mappingFile) {
+    public ProguardMapper(MapperConfig config, File mappingFile) {
         super(config);
         this.mappingFile = mappingFile;
     }
@@ -25,50 +25,50 @@ public class ProguardMapper extends AMapper {
     @Override
     protected void init() throws Throwable {
         String currentClass = null;
-        for (String line : this.readLines(this.mappingFile)) {
+        for (String line : readLines(mappingFile)) {
             if (line.trim().isEmpty() || line.startsWith("#")) continue;
 
             String error = null;
-            if (line.matches(CLASS_LINE)) {
-                Matcher m = Pattern.compile(CLASS_LINE).matcher(line);
+            if (line.matches(ProguardMapper.CLASS_LINE)) {
+                Matcher m = Pattern.compile(ProguardMapper.CLASS_LINE).matcher(line);
                 if (m.find()) {
                     currentClass = slash(m.group(1));
                     String newName = slash(m.group(2));
 
                     if (currentClass.equals(newName)) continue;
-                    this.remapper.addClassMapping(currentClass, newName);
+                    remapper.addClassMapping(currentClass, newName);
                 } else {
                     error = "Could not parse class line: " + line;
                 }
-            } else if (line.matches(METHOD_LINE)) {
+            } else if (line.matches(ProguardMapper.METHOD_LINE)) {
                 if (currentClass == null) {
                     error = "Method line without class: " + line;
                 } else {
-                    Matcher m = Pattern.compile(METHOD_LINE).matcher(line);
+                    Matcher m = Pattern.compile(ProguardMapper.METHOD_LINE).matcher(line);
                     if (m.find()) {
-                        String returnType = this.typeToInternal(m.group(2));
+                        String returnType = typeToInternal(m.group(2));
                         String name = m.group(3);
-                        String descriptor = this.descriptorToInternal(m.group(4));
+                        String descriptor = descriptorToInternal(m.group(4));
                         String newName = m.group(6);
 
                         if (name.equals(newName)) continue;
-                        this.remapper.addMethodMapping(currentClass, name, descriptor + returnType, newName);
+                        remapper.addMethodMapping(currentClass, name, descriptor + returnType, newName);
                     } else {
                         error = "Could not parse method line: " + line;
                     }
                 }
-            } else if (line.matches(FIELD_LINE)) {
+            } else if (line.matches(ProguardMapper.FIELD_LINE)) {
                 if (currentClass == null) {
                     error = "Field line without class: " + line;
                 } else {
-                    Matcher m = Pattern.compile(FIELD_LINE).matcher(line);
+                    Matcher m = Pattern.compile(ProguardMapper.FIELD_LINE).matcher(line);
                     if (m.find()) {
-                        String descriptor = this.typeToInternal(m.group(1));
+                        String descriptor = typeToInternal(m.group(1));
                         String name = m.group(2);
                         String newName = m.group(3);
 
                         if (name.equals(newName)) continue;
-                        this.remapper.addFieldMapping(currentClass, name, descriptor, newName);
+                        remapper.addFieldMapping(currentClass, name, descriptor, newName);
                     } else {
                         error = "Could not parse field line: " + line;
                     }
@@ -124,7 +124,7 @@ public class ProguardMapper extends AMapper {
 
         String[] parts = descriptor.split(",");
         String out = "";
-        for (String part : parts) out += this.typeToInternal(part);
+        for (String part : parts) out += typeToInternal(part);
         return "(" + out + ")";
     }
 

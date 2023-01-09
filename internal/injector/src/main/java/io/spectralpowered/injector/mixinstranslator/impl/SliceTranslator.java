@@ -13,8 +13,8 @@ class SliceTranslator implements IAnnotationTranslator {
     public void translate(AnnotationNode annotation) {
         annotation.desc = Type.getDescriptor(CSlice.class);
         Map<String, Object> values = AnnotationParser.listToMap(annotation.values);
-        if (values.containsKey("from")) this.dynamicTranslate((AnnotationNode) values.get("from"));
-        if (values.containsKey("to")) this.dynamicTranslate((AnnotationNode) values.get("to"));
+        if (values.containsKey("from")) dynamicTranslate((AnnotationNode) values.get("from"));
+        if (values.containsKey("to")) dynamicTranslate((AnnotationNode) values.get("to"));
         annotation.values = AnnotationParser.mapToList(values);
     }
 

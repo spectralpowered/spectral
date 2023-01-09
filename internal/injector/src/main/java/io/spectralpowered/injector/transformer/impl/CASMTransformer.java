@@ -51,7 +51,7 @@ public class CASMTransformer extends ARemovingTransformer<CASM> {
                         .help(Codifier.of(transformerMethod).param(null).param(type(ClassNode.class)));
             }
 
-            ClassDefiner<?> classDefiner = this.isolateMethod(classProvider, transformer, transformerMethod);
+            ClassDefiner<?> classDefiner = isolateMethod(classProvider, transformer, transformerMethod);
             try {
                 Object instance = classDefiner.newInstance();
                 Method isolatedMethod = classDefiner.getClazz().getDeclaredMethod(transformerMethod.name, ClassNode.class);
@@ -66,7 +66,7 @@ public class CASMTransformer extends ARemovingTransformer<CASM> {
                         .help(Codifier.of(transformerMethod).param(null).param(type(MethodNode.class)));
             }
 
-            ClassDefiner<?> classDefiner = this.isolateMethod(classProvider, transformer, transformerMethod);
+            ClassDefiner<?> classDefiner = isolateMethod(classProvider, transformer, transformerMethod);
             for (String targetCombi : annotation.value()) {
                 List<MethodNode> targets = ASMUtils.getMethodsFromCombi(transformedClass, targetCombi);
                 if (targets.isEmpty()) throw new MethodNotFoundException(transformedClass, transformer, targetCombi);
@@ -84,7 +84,7 @@ public class CASMTransformer extends ARemovingTransformer<CASM> {
         }
     }
 
-    private ClassDefiner<?> isolateMethod(final IClassProvider classProvider, final ClassNode transformer, final MethodNode transformerMethod) {
+    private ClassDefiner<?> isolateMethod(IClassProvider classProvider, ClassNode transformer, MethodNode transformerMethod) {
         try {
             ClassNode classNode = new ClassNode();
             classNode.visit(transformer.version, Opcodes.ACC_PUBLIC, ClassDefiner.generateClassName("IsolatedASMTransformer"), null, "java/lang/Object", null);

@@ -18,8 +18,12 @@
 
 package io.spectralpowered.mixin
 
-import io.spectralpowered.injector.annotation.Mixin
+import class1
+import client
+import io.spectralpowered.injector.annotations.Mixin
 
-@Mixin("client")
+@Mixin(class1::class)
 abstract class ClientMixin {
+
+
 }

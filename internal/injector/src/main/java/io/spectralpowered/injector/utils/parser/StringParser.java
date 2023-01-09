@@ -19,18 +19,18 @@ public class StringParser {
                 if (!Modifier.isStatic(field.getModifiers())) continue;
                 if (!field.getType().equals(int.class)) continue;
 
-                OPCODES.put(field.getName(), field.getInt(null));
+                StringParser.OPCODES.put(field.getName(), field.getInt(null));
             }
         } catch (Throwable t) {
             throw new IllegalStateException("Unable to get all opcodes", t);
         }
     }
 
-    public static InsnList parse(final String s) {
-        return parse(s.split("\n"));
+    public static InsnList parse(String s) {
+        return StringParser.parse(s.split("\n"));
     }
 
-    public static InsnList parse(final String... s) {
+    public static InsnList parse(String... s) {
         InsnList list = new InsnList();
         Map<String, LabelNode> labels = new HashMap<>();
 
@@ -44,7 +44,7 @@ public class StringParser {
             } else {
                 int opcode = reader.readOpcode();
 
-                list.add(read(labels, opcode, reader));
+                list.add(StringParser.read(labels, opcode, reader));
                 if (reader.canRead()) throw new IllegalStateException("Line '" + line + "' has extra data '" + reader.readAll() + "'");
             }
         }
@@ -52,7 +52,7 @@ public class StringParser {
         return list;
     }
 
-    private static AbstractInsnNode read(final Map<String, LabelNode> labels, final int opcode, final StringReader reader) {
+    private static AbstractInsnNode read(Map<String, LabelNode> labels, int opcode, StringReader reader) {
         switch (opcode) {
             default:
                 return new InsnNode(opcode);

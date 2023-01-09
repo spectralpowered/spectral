@@ -15,7 +15,7 @@ public class SrgMapper extends AMapper {
 
     private final File mappingFile;
 
-    public SrgMapper(final MapperConfig config, final File mappingFile) {
+    public SrgMapper(MapperConfig config, File mappingFile) {
         super(config);
 
         this.mappingFile = mappingFile;
@@ -23,40 +23,40 @@ public class SrgMapper extends AMapper {
 
     @Override
     protected void init() throws Throwable {
-        for (String line : this.readLines(this.mappingFile)) {
+        for (String line : readLines(mappingFile)) {
             if (line.trim().isEmpty()) continue;
 
             String error = null;
-            if (line.matches(CLASS_LINE)) {
-                Matcher m = Pattern.compile(CLASS_LINE).matcher(line);
+            if (line.matches(SrgMapper.CLASS_LINE)) {
+                Matcher m = Pattern.compile(SrgMapper.CLASS_LINE).matcher(line);
                 if (m.find()) {
                     String obfName = m.group(1);
                     String deobfName = m.group(2);
 
-                    this.remapper.addClassMapping(obfName, deobfName);
+                    remapper.addClassMapping(obfName, deobfName);
                 } else {
                     error = "Could not parse class line: " + line;
                 }
-            } else if (line.matches(FIELD_LINE)) {
-                Matcher m = Pattern.compile(FIELD_LINE).matcher(line);
+            } else if (line.matches(SrgMapper.FIELD_LINE)) {
+                Matcher m = Pattern.compile(SrgMapper.FIELD_LINE).matcher(line);
                 if (m.find()) {
                     String obfOwner = m.group(1);
                     String obfName = m.group(2);
                     String deobfName = m.group(4);
 
-                    this.remapper.addFieldMapping(obfOwner, obfName, deobfName);
+                    remapper.addFieldMapping(obfOwner, obfName, deobfName);
                 } else {
                     error = "Could not parse field line: " + line;
                 }
-            } else if (line.matches(METHOD_LINE)) {
-                Matcher m = Pattern.compile(METHOD_LINE).matcher(line);
+            } else if (line.matches(SrgMapper.METHOD_LINE)) {
+                Matcher m = Pattern.compile(SrgMapper.METHOD_LINE).matcher(line);
                 if (m.find()) {
                     String obfOwner = m.group(1);
                     String obfName = m.group(2);
                     String obfDesc = m.group(3);
                     String deobfName = m.group(5);
 
-                    this.remapper.addMethodMapping(obfOwner, obfName, obfDesc, deobfName);
+                    remapper.addMethodMapping(obfOwner, obfName, obfDesc, deobfName);
                 } else {
                     error = "Could not parse method line: " + line;
                 }

@@ -6,6 +6,6 @@ public interface IParsedAnnotation {
 
     Map<String, Object> getValues();
 
-    boolean wasSet(final String name);
+    boolean wasSet(String name);
 
 }

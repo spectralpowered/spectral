@@ -8,42 +8,42 @@ public class InjectionCallback {
     private Object returnValue;
     private boolean returnValueSet;
 
-    public InjectionCallback(final boolean cancellable) {
+    public InjectionCallback(boolean cancellable) {
         this.cancellable = cancellable;
     }
 
-    public InjectionCallback(final boolean cancellable, final Object returnValue) {
+    public InjectionCallback(boolean cancellable, Object returnValue) {
         this.cancellable = cancellable;
         this.returnValue = returnValue;
-        this.returnValueSet = true;
+        returnValueSet = true;
     }
 
     public boolean isCancelled() {
-        return this.cancelled;
+        return cancelled;
     }
 
-    public void setCancelled(final boolean cancelled) {
-        if (cancelled && !this.cancellable) throw new IllegalArgumentException("Cannot cancel a non-cancellable callback");
+    public void setCancelled(boolean cancelled) {
+        if (cancelled && !cancellable) throw new IllegalArgumentException("Cannot cancel a non-cancellable callback");
         this.cancelled = cancelled;
     }
 
     public boolean isCancellable() {
-        return this.cancellable;
+        return cancellable;
     }
 
     public Object getReturnValue() {
-        if (!this.returnValueSet) throw new IllegalStateException("Return value not set");
+        if (!returnValueSet) throw new IllegalStateException("Return value not set");
         return returnValue;
     }
 
     public <T> T castReturnValue() {
-        return (T) this.getReturnValue();
+        return (T) getReturnValue();
     }
 
-    public void setReturnValue(final Object returnValue) {
+    public void setReturnValue(Object returnValue) {
         this.returnValue = returnValue;
-        this.setCancelled(true);
-        this.returnValueSet = true;
+        setCancelled(true);
+        returnValueSet = true;
     }
 
 }

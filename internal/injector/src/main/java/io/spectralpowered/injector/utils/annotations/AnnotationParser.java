@@ -21,17 +21,17 @@ import static io.spectralpowered.injector.utils.Types.*;
 
 public class AnnotationParser<T extends Annotation> {
 
-    public static <T extends Annotation> T parse(final Class<T> type, final IClassProvider classProvider, final Map<String, Object> values) {
+    public static <T extends Annotation> T parse(Class<T> type, IClassProvider classProvider, Map<String, Object> values) {
         return new AnnotationParser<>(type, classProvider).parse(values);
     }
 
-    public static Map<String, Object> listToMap(final List<Object> list) {
+    public static Map<String, Object> listToMap(List<Object> list) {
         Map<String, Object> map = new HashMap<>();
         if (list != null) for (int i = 0; i < list.size(); i += 2) map.put((String) list.get(i), list.get(i + 1));
         return map;
     }
 
-    public static List<Object> mapToList(final Map<String, Object> map) {
+    public static List<Object> mapToList(Map<String, Object> map) {
         List<Object> list = new ArrayList<>();
         for (Map.Entry<String, Object> entry : map.entrySet()) {
             list.add(entry.getKey());
@@ -48,99 +48,99 @@ public class AnnotationParser<T extends Annotation> {
     private List<String> initializedDefaultValues;
     private ClassNode node;
 
-    public AnnotationParser(final Class<T> type, final IClassProvider classProvider) {
+    public AnnotationParser(Class<T> type, IClassProvider classProvider) {
         this.type = type;
         this.classProvider = classProvider;
     }
 
-    public T parse(final Map<String, Object> values) {
-        this.initDefaults(values);
-        this.defineBase();
-        this.declareMethods();
+    public T parse(Map<String, Object> values) {
+        initDefaults(values);
+        defineBase();
+        declareMethods();
 
         try {
             return ClassDefiner.
-                    <T>defineAnonymousClass(ASMUtils.toBytes(this.node, this.classProvider))
-                    .newInstance(new Class[]{IClassProvider.class, Map.class}, new Object[]{this.classProvider, this.values});
+                    <T>defineAnonymousClass(ASMUtils.toBytes(node, classProvider))
+                    .newInstance(new Class[]{IClassProvider.class, Map.class}, new Object[]{classProvider, this.values});
         } catch (Throwable t) {
-            throw new IllegalStateException("Failed to create instance of '" + this.type.getName() + "'", t);
+            throw new IllegalStateException("Failed to create instance of '" + type.getName() + "'", t);
         }
     }
 
 
-    private void initDefaults(final Map<String, Object> values) {
-        this.initializedDefaultValues = new ArrayList<>();
-        for (Method method : this.type.getDeclaredMethods()) {
+    private void initDefaults(Map<String, Object> values) {
+        initializedDefaultValues = new ArrayList<>();
+        for (Method method : type.getDeclaredMethods()) {
             if (values.containsKey(method.getName())) continue;
             Object defaultValue = method.getDefaultValue();
             if (defaultValue == null) continue;
             values.put(method.getName(), defaultValue);
-            this.initializedDefaultValues.add(method.getName());
+            initializedDefaultValues.add(method.getName());
         }
 
         this.values = values;
     }
 
     private void defineBase() {
-        this.node = new ClassNode();
-        this.node.visit(Opcodes.V1_8, Opcodes.ACC_PUBLIC, ClassDefiner.generateClassName("AnnotationWrapper"), null, IN_Object, new String[]{internalName(this.type), internalName(IParsedAnnotation.class)});
+        node = new ClassNode();
+        node.visit(Opcodes.V1_8, Opcodes.ACC_PUBLIC, ClassDefiner.generateClassName("AnnotationWrapper"), null, IN_Object, new String[]{internalName(type), internalName(IParsedAnnotation.class)});
 
         { //fields
-            this.node.visitField(Opcodes.ACC_PRIVATE, "classProvider", typeDescriptor(IClassProvider.class), null, null).visitEnd();
-            this.node.visitField(Opcodes.ACC_PRIVATE, "values", typeDescriptor(Map.class), null, null).visitEnd();
+            node.visitField(Opcodes.ACC_PRIVATE, "classProvider", typeDescriptor(IClassProvider.class), null, null).visitEnd();
+            node.visitField(Opcodes.ACC_PRIVATE, "values", typeDescriptor(Map.class), null, null).visitEnd();
         }
 
         { //<init>
-            MethodVisitor constructor = this.node.visitMethod(Opcodes.ACC_PUBLIC, MN_Init, methodDescriptor(void.class, IClassProvider.class, Map.class), null, null);
+            MethodVisitor constructor = node.visitMethod(Opcodes.ACC_PUBLIC, MN_Init, methodDescriptor(void.class, IClassProvider.class, Map.class), null, null);
             constructor.visitVarInsn(Opcodes.ALOAD, 0);
             constructor.visitMethodInsn(Opcodes.INVOKESPECIAL, IN_Object, MN_Init, MD_Void, false);
 
             constructor.visitVarInsn(Opcodes.ALOAD, 0);
             constructor.visitVarInsn(Opcodes.ALOAD, 1);
-            constructor.visitFieldInsn(Opcodes.PUTFIELD, this.node.name, "classProvider", typeDescriptor(IClassProvider.class));
+            constructor.visitFieldInsn(Opcodes.PUTFIELD, node.name, "classProvider", typeDescriptor(IClassProvider.class));
 
             constructor.visitVarInsn(Opcodes.ALOAD, 0);
             constructor.visitVarInsn(Opcodes.ALOAD, 2);
-            constructor.visitFieldInsn(Opcodes.PUTFIELD, this.node.name, "values", typeDescriptor(Map.class));
+            constructor.visitFieldInsn(Opcodes.PUTFIELD, node.name, "values", typeDescriptor(Map.class));
 
             constructor.visitInsn(Opcodes.RETURN);
             constructor.visitEnd();
         }
         { //equals
-            MethodVisitor equals = this.node.visitMethod(Opcodes.ACC_PUBLIC, "equals", methodDescriptor(boolean.class, Object.class), null, null);
+            MethodVisitor equals = node.visitMethod(Opcodes.ACC_PUBLIC, "equals", methodDescriptor(boolean.class, Object.class), null, null);
             equals.visitInsn(Opcodes.ICONST_0);
             equals.visitInsn(Opcodes.IRETURN);
             equals.visitEnd();
         }
         { //hashCode
-            MethodVisitor hashCode = this.node.visitMethod(Opcodes.ACC_PUBLIC, "hashCode", methodDescriptor(int.class), null, null);
+            MethodVisitor hashCode = node.visitMethod(Opcodes.ACC_PUBLIC, "hashCode", methodDescriptor(int.class), null, null);
             hashCode.visitInsn(Opcodes.ICONST_0);
             hashCode.visitInsn(Opcodes.IRETURN);
             hashCode.visitEnd();
         }
         { //toString
-            MethodVisitor toString = this.node.visitMethod(Opcodes.ACC_PUBLIC, "toString", methodDescriptor(String.class), null, null);
+            MethodVisitor toString = node.visitMethod(Opcodes.ACC_PUBLIC, "toString", methodDescriptor(String.class), null, null);
             toString.visitLdcInsn("AnnotationWrapper");
             toString.visitInsn(Opcodes.ARETURN);
             toString.visitEnd();
         }
         { //annotationType
-            MethodVisitor annotationType = this.node.visitMethod(Opcodes.ACC_PUBLIC, "annotationType", methodDescriptor(Class.class), null, null);
-            annotationType.visitLdcInsn(type(this.type));
+            MethodVisitor annotationType = node.visitMethod(Opcodes.ACC_PUBLIC, "annotationType", methodDescriptor(Class.class), null, null);
+            annotationType.visitLdcInsn(type(type));
             annotationType.visitInsn(Opcodes.ARETURN);
             annotationType.visitEnd();
         }
         { //getValues
-            MethodVisitor getValues = this.node.visitMethod(Opcodes.ACC_PUBLIC, "getValues", methodDescriptor(Map.class), null, null);
+            MethodVisitor getValues = node.visitMethod(Opcodes.ACC_PUBLIC, "getValues", methodDescriptor(Map.class), null, null);
             getValues.visitVarInsn(Opcodes.ALOAD, 0);
-            getValues.visitFieldInsn(Opcodes.GETFIELD, this.node.name, "values", typeDescriptor(Map.class));
+            getValues.visitFieldInsn(Opcodes.GETFIELD, node.name, "values", typeDescriptor(Map.class));
             getValues.visitInsn(Opcodes.ARETURN);
             getValues.visitEnd();
         }
         { //wasSet
-            MethodVisitor wasSet = this.node.visitMethod(Opcodes.ACC_PUBLIC, "wasSet", methodDescriptor(boolean.class, String.class), null, null);
-            for (String value : this.values.keySet()) {
-                if (this.initializedDefaultValues.contains(value)) continue;
+            MethodVisitor wasSet = node.visitMethod(Opcodes.ACC_PUBLIC, "wasSet", methodDescriptor(boolean.class, String.class), null, null);
+            for (String value : values.keySet()) {
+                if (initializedDefaultValues.contains(value)) continue;
 
                 Label jumpAfter = new Label();
                 wasSet.visitVarInsn(Opcodes.ALOAD, 1);
@@ -158,78 +158,78 @@ public class AnnotationParser<T extends Annotation> {
     }
 
     private void declareMethods() {
-        for (Method method : this.type.getDeclaredMethods()) {
-            MethodVisitor methodVisitor = this.node.visitMethod(Opcodes.ACC_PUBLIC, method.getName(), methodDescriptor(method), null, null);
-            Object value = this.values.get(method.getName());
-            this.visit(methodVisitor, method.getReturnType(), value);
+        for (Method method : type.getDeclaredMethods()) {
+            MethodVisitor methodVisitor = node.visitMethod(Opcodes.ACC_PUBLIC, method.getName(), methodDescriptor(method), null, null);
+            Object value = values.get(method.getName());
+            visit(methodVisitor, method.getReturnType(), value);
             methodVisitor.visitInsn(ASMUtils.getReturnOpcode(returnType(method)));
             methodVisitor.visitEnd();
         }
     }
 
-    private void visit(final MethodVisitor methodVisitor, final Class<?> type, final Object value) {
-        if (type.equals(boolean.class) || type.equals(Boolean.class)) this.visitBoolean(methodVisitor, value);
-        else if (type.equals(byte.class) || type.equals(Byte.class)) this.visitByte(methodVisitor, value);
-        else if (type.equals(short.class) || type.equals(Short.class)) this.visitShort(methodVisitor, value);
-        else if (type.equals(char.class) || type.equals(Character.class)) this.visitChar(methodVisitor, value);
-        else if (type.equals(int.class) || type.equals(Integer.class)) this.visitInt(methodVisitor, value);
-        else if (type.equals(long.class) || type.equals(Long.class)) this.visitLong(methodVisitor, value);
-        else if (type.equals(float.class) || type.equals(Float.class)) this.visitFloat(methodVisitor, value);
-        else if (type.equals(double.class) || type.equals(Double.class)) this.visitDouble(methodVisitor, value);
-        else if (type.equals(String.class)) this.visitString(methodVisitor, value);
-        else if (type.equals(Class.class)) this.visitClass(methodVisitor, value);
-        else if (type.isEnum()) this.visitEnum(methodVisitor, value);
-        else if (type.isAnnotation() || type.equals(AnnotationNode.class)) this.visitAnnotation(methodVisitor, value);
-        else if (type.isArray()) this.visitArray(methodVisitor, type.getComponentType(), value);
+    private void visit(MethodVisitor methodVisitor, Class<?> type, Object value) {
+        if (type.equals(boolean.class) || type.equals(Boolean.class)) visitBoolean(methodVisitor, value);
+        else if (type.equals(byte.class) || type.equals(Byte.class)) visitByte(methodVisitor, value);
+        else if (type.equals(short.class) || type.equals(Short.class)) visitShort(methodVisitor, value);
+        else if (type.equals(char.class) || type.equals(Character.class)) visitChar(methodVisitor, value);
+        else if (type.equals(int.class) || type.equals(Integer.class)) visitInt(methodVisitor, value);
+        else if (type.equals(long.class) || type.equals(Long.class)) visitLong(methodVisitor, value);
+        else if (type.equals(float.class) || type.equals(Float.class)) visitFloat(methodVisitor, value);
+        else if (type.equals(double.class) || type.equals(Double.class)) visitDouble(methodVisitor, value);
+        else if (type.equals(String.class)) visitString(methodVisitor, value);
+        else if (type.equals(Class.class)) visitClass(methodVisitor, value);
+        else if (type.isEnum()) visitEnum(methodVisitor, value);
+        else if (type.isAnnotation() || type.equals(AnnotationNode.class)) visitAnnotation(methodVisitor, value);
+        else if (type.isArray()) visitArray(methodVisitor, type.getComponentType(), value);
         else throw new IllegalArgumentException("Unsupported type: " + type);
     }
 
-    private void visitBoolean(final MethodVisitor methodVisitor, final Object value) {
+    private void visitBoolean(MethodVisitor methodVisitor, Object value) {
         boolean b = (boolean) value;
         methodVisitor.visitInsn(b ? Opcodes.ICONST_1 : Opcodes.ICONST_0);
     }
 
-    private void visitByte(final MethodVisitor methodVisitor, final Object value) {
+    private void visitByte(MethodVisitor methodVisitor, Object value) {
         byte b = (byte) value;
         methodVisitor.visitIntInsn(Opcodes.BIPUSH, b);
     }
 
-    private void visitShort(final MethodVisitor methodVisitor, final Object value) {
+    private void visitShort(MethodVisitor methodVisitor, Object value) {
         short s = (short) value;
         methodVisitor.visitIntInsn(Opcodes.SIPUSH, s);
     }
 
-    private void visitChar(final MethodVisitor methodVisitor, final Object value) {
+    private void visitChar(MethodVisitor methodVisitor, Object value) {
         char c = (char) value;
         methodVisitor.visitIntInsn(Opcodes.SIPUSH, c);
     }
 
-    private void visitInt(final MethodVisitor methodVisitor, final Object value) {
+    private void visitInt(MethodVisitor methodVisitor, Object value) {
         int i = (int) value;
         methodVisitor.visitLdcInsn(i);
     }
 
-    private void visitLong(final MethodVisitor methodVisitor, final Object value) {
+    private void visitLong(MethodVisitor methodVisitor, Object value) {
         long l = (long) value;
         methodVisitor.visitLdcInsn(l);
     }
 
-    private void visitFloat(final MethodVisitor methodVisitor, final Object value) {
+    private void visitFloat(MethodVisitor methodVisitor, Object value) {
         float f = (float) value;
         methodVisitor.visitLdcInsn(f);
     }
 
-    private void visitDouble(final MethodVisitor methodVisitor, final Object value) {
+    private void visitDouble(MethodVisitor methodVisitor, Object value) {
         double d = (double) value;
         methodVisitor.visitLdcInsn(d);
     }
 
-    private void visitString(final MethodVisitor methodVisitor, final Object value) {
+    private void visitString(MethodVisitor methodVisitor, Object value) {
         String s = (String) value;
         methodVisitor.visitLdcInsn(s);
     }
 
-    private void visitClass(final MethodVisitor methodVisitor, final Object value) {
+    private void visitClass(MethodVisitor methodVisitor, Object value) {
         if (value instanceof Class<?>) {
             Class<?> c = (Class<?>) value;
             methodVisitor.visitLdcInsn(type(c));
@@ -241,7 +241,7 @@ public class AnnotationParser<T extends Annotation> {
         }
     }
 
-    private void visitEnum(final MethodVisitor methodVisitor, final Object value) {
+    private void visitEnum(MethodVisitor methodVisitor, Object value) {
         if (value instanceof Enum<?>) {
             Enum<?> e = (Enum<?>) value;
             methodVisitor.visitFieldInsn(Opcodes.GETSTATIC, internalName(e.getDeclaringClass()), e.name(), typeDescriptor(e.getDeclaringClass()));
@@ -253,7 +253,7 @@ public class AnnotationParser<T extends Annotation> {
         }
     }
 
-    private void visitAnnotation(final MethodVisitor methodVisitor, final Object value) {
+    private void visitAnnotation(MethodVisitor methodVisitor, Object value) {
         Type annotationType;
         if (value instanceof Annotation) annotationType = type(((Annotation) value).annotationType());
         else if (value instanceof AnnotationNode) annotationType = type(((AnnotationNode) value).desc);
@@ -261,7 +261,7 @@ public class AnnotationParser<T extends Annotation> {
 
         methodVisitor.visitLdcInsn(annotationType);
         methodVisitor.visitVarInsn(Opcodes.ALOAD, 0);
-        methodVisitor.visitFieldInsn(Opcodes.GETFIELD, this.node.name, "classProvider", typeDescriptor(IClassProvider.class));
+        methodVisitor.visitFieldInsn(Opcodes.GETFIELD, node.name, "classProvider", typeDescriptor(IClassProvider.class));
         methodVisitor.visitTypeInsn(Opcodes.NEW, internalName(HashMap.class));
         methodVisitor.visitInsn(Opcodes.DUP);
         methodVisitor.visitMethodInsn(Opcodes.INVOKESPECIAL, internalName(HashMap.class), MN_Init, MD_Void, false);
@@ -279,19 +279,19 @@ public class AnnotationParser<T extends Annotation> {
                 }
                 methodVisitor.visitInsn(Opcodes.DUP);
                 methodVisitor.visitLdcInsn(method.getName());
-                this.visit(methodVisitor, method.getReturnType(), returnValue);
-                this.visitPrimitiveWrap(methodVisitor, method.getReturnType());
+                visit(methodVisitor, method.getReturnType(), returnValue);
+                visitPrimitiveWrap(methodVisitor, method.getReturnType());
                 methodVisitor.visitMethodInsn(Opcodes.INVOKEINTERFACE, internalName(Map.class), "put", methodDescriptor(Object.class, Object.class, Object.class), true);
                 methodVisitor.visitInsn(Opcodes.POP);
             }
         } else {
             AnnotationNode a = (AnnotationNode) value;
-            Map<String, Object> map = listToMap(a.values);
+            Map<String, Object> map = AnnotationParser.listToMap(a.values);
             for (Map.Entry<String, Object> entry : map.entrySet()) {
                 methodVisitor.visitInsn(Opcodes.DUP);
                 methodVisitor.visitLdcInsn(entry.getKey());
-                this.visit(methodVisitor, entry.getValue().getClass(), entry.getValue());
-                this.visitPrimitiveWrap(methodVisitor, entry.getValue().getClass());
+                visit(methodVisitor, entry.getValue().getClass(), entry.getValue());
+                visitPrimitiveWrap(methodVisitor, entry.getValue().getClass());
                 methodVisitor.visitMethodInsn(Opcodes.INVOKEINTERFACE, internalName(Map.class), "put", methodDescriptor(Object.class, Object.class, Object.class), true);
                 methodVisitor.visitInsn(Opcodes.POP);
             }
@@ -300,7 +300,7 @@ public class AnnotationParser<T extends Annotation> {
         methodVisitor.visitTypeInsn(Opcodes.CHECKCAST, internalName(annotationType));
     }
 
-    private void visitArray(final MethodVisitor methodVisitor, final Class<?> arrayType, final Object value) {
+    private void visitArray(MethodVisitor methodVisitor, Class<?> arrayType, Object value) {
         if (value instanceof Object[]) {
             Object[] array = (Object[]) value;
             methodVisitor.visitIntInsn(Opcodes.BIPUSH, array.length);
@@ -308,7 +308,7 @@ public class AnnotationParser<T extends Annotation> {
             for (int i = 0; i < array.length; i++) {
                 methodVisitor.visitInsn(Opcodes.DUP);
                 methodVisitor.visitLdcInsn(i);
-                this.visit(methodVisitor, arrayType, array[i]);
+                visit(methodVisitor, arrayType, array[i]);
                 methodVisitor.visitInsn(Opcodes.AASTORE);
             }
         } else if (value instanceof List) {
@@ -318,7 +318,7 @@ public class AnnotationParser<T extends Annotation> {
             for (int i = 0; i < array.size(); i++) {
                 methodVisitor.visitInsn(Opcodes.DUP);
                 methodVisitor.visitLdcInsn(i);
-                this.visit(methodVisitor, arrayType, array.get(i));
+                visit(methodVisitor, arrayType, array.get(i));
                 methodVisitor.visitInsn(Opcodes.AASTORE);
             }
         } else {
@@ -326,7 +326,7 @@ public class AnnotationParser<T extends Annotation> {
         }
     }
 
-    private void visitPrimitiveWrap(final MethodVisitor methodVisitor, final Class<?> type) {
+    private void visitPrimitiveWrap(MethodVisitor methodVisitor, Class<?> type) {
         if (type.equals(boolean.class) || type.equals(Boolean.class)) {
             methodVisitor.visitMethodInsn(Opcodes.INVOKESTATIC, IN_Boolean, "valueOf", methodDescriptor(Boolean.class, boolean.class), false);
         } else if (type.equals(byte.class) || type.equals(Byte.class)) {

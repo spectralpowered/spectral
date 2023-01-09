@@ -8,15 +8,15 @@ public class MethodNotFoundException extends RuntimeException {
     private final String transformerName;
     private final String methodNameAndDesc;
 
-    public MethodNotFoundException(final ClassNode targetClass, final ClassNode transformer, final String methodNameAndDesc) {
-        this.targetClassName = targetClass.name;
-        this.transformerName = transformer.name;
+    public MethodNotFoundException(ClassNode targetClass, ClassNode transformer, String methodNameAndDesc) {
+        targetClassName = targetClass.name;
+        transformerName = transformer.name;
         this.methodNameAndDesc = methodNameAndDesc;
     }
 
     @Override
     public String getMessage() {
-        return "Target class '" + this.targetClassName + "' does not have method '" + this.methodNameAndDesc + "' from transformer '" + this.transformerName + "'";
+        return "Target class '" + targetClassName + "' does not have method '" + methodNameAndDesc + "' from transformer '" + transformerName + "'";
     }
 
 }

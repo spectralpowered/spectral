@@ -9,6 +9,6 @@ public interface IBytecodeTransformer {
      * @param bytecode  The raw bytecode of the {@link Class}
      * @return The transformed bytecode or null if not transformed
      */
-    byte[] transform(final String className, final byte[] bytecode);
+    byte[] transform(String className, byte[] bytecode);
 
 }

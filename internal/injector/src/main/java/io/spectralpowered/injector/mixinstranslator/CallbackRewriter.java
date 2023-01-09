@@ -17,20 +17,20 @@ class CallbackRewriter {
     private static final Type CALLBACK_INFO_RETURNABLE = Type.getType(CallbackInfoReturnable.class);
     private static final Type INJECTION_CALLBACK = Type.getType(InjectionCallback.class);
 
-    static void rewrite(final MethodNode methodNode) {
+    static void rewrite(MethodNode methodNode) {
         Type[] parameter = Type.getArgumentTypes(methodNode.desc);
         Type returnType = Type.getReturnType(methodNode.desc);
 
         boolean setDescriptor = false;
         for (int i = 0; i < parameter.length; i++) {
             Type type = parameter[i];
-            if (type.equals(CALLBACK_INFO) || type.equals(CALLBACK_INFO_RETURNABLE)) {
-                parameter[i] = INJECTION_CALLBACK;
+            if (type.equals(CallbackRewriter.CALLBACK_INFO) || type.equals(CallbackRewriter.CALLBACK_INFO_RETURNABLE)) {
+                parameter[i] = CallbackRewriter.INJECTION_CALLBACK;
                 setDescriptor = true;
             }
         }
-        if (returnType.equals(CALLBACK_INFO) || returnType.equals(CALLBACK_INFO_RETURNABLE)) {
-            returnType = INJECTION_CALLBACK;
+        if (returnType.equals(CallbackRewriter.CALLBACK_INFO) || returnType.equals(CallbackRewriter.CALLBACK_INFO_RETURNABLE)) {
+            returnType = CallbackRewriter.INJECTION_CALLBACK;
             setDescriptor = true;
         }
 
@@ -38,7 +38,7 @@ class CallbackRewriter {
             methodNode.desc = Type.getMethodDescriptor(returnType, parameter);
             if (methodNode.signature != null) {
                 while (true) {
-                    String cirStart = "L" + CALLBACK_INFO_RETURNABLE.getInternalName();
+                    String cirStart = "L" + CallbackRewriter.CALLBACK_INFO_RETURNABLE.getInternalName();
                     int start = methodNode.signature.indexOf(cirStart);
                     if (start == -1) break;
                     String rest = methodNode.signature.substring(start + cirStart.length());
@@ -49,25 +49,25 @@ class CallbackRewriter {
                         if (c == '<') open++;
                         else if (c == '>') open--;
                     }
-                    methodNode.signature = methodNode.signature.substring(0, start) + INJECTION_CALLBACK.getDescriptor() + methodNode.signature.substring(start + cirStart.length() + reader.getCursor());
+                    methodNode.signature = methodNode.signature.substring(0, start) + CallbackRewriter.INJECTION_CALLBACK.getDescriptor() + methodNode.signature.substring(start + cirStart.length() + reader.getCursor());
                 }
             }
         }
 
-        visitMethodInsn(methodNode);
+        CallbackRewriter.visitMethodInsn(methodNode);
 
     }
 
-    private static void visitMethodInsn(final MethodNode methodNode) {
+    private static void visitMethodInsn(MethodNode methodNode) {
         for (AbstractInsnNode insn : methodNode.instructions.toArray()) {
             if (insn instanceof MethodInsnNode) {
                 MethodInsnNode method = (MethodInsnNode) insn;
                 if (method.getOpcode() == Opcodes.INVOKEVIRTUAL) {
-                    boolean isCallbackInfo = method.owner.equals(CALLBACK_INFO.getInternalName());
-                    boolean isCallbackInfoReturnable = method.owner.equals(CALLBACK_INFO_RETURNABLE.getInternalName());
+                    boolean isCallbackInfo = method.owner.equals(CallbackRewriter.CALLBACK_INFO.getInternalName());
+                    boolean isCallbackInfoReturnable = method.owner.equals(CallbackRewriter.CALLBACK_INFO_RETURNABLE.getInternalName());
 
                     if (isCallbackInfo || isCallbackInfoReturnable) {
-                        method.owner = INJECTION_CALLBACK.getInternalName();
+                        method.owner = CallbackRewriter.INJECTION_CALLBACK.getInternalName();
 
                         if (method.name.equals("cancel") && method.desc.equals("()V")) { //cancel -> setCancelled(true)
                             method.name = "setCancelled";

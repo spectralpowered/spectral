@@ -18,13 +18,13 @@ class RedirectTranslator implements IAnnotationTranslator {
         if (values.containsKey("at")) values.put("target", values.remove("at"));
         if (values.containsKey("target")) {
             AnnotationNode target = (AnnotationNode) values.get("target");
-            this.dynamicTranslate(target);
+            dynamicTranslate(target);
             if (optional != null) {
                 target.values.add("optional");
                 target.values.add(optional);
             }
         }
-        if (values.containsKey("slice")) this.dynamicTranslate((AnnotationNode) values.get("slice"));
+        if (values.containsKey("slice")) dynamicTranslate((AnnotationNode) values.get("slice"));
         annotation.values = AnnotationParser.mapToList(values);
     }
 

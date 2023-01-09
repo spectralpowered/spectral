@@ -10,6 +10,6 @@ public interface ITransformerPreprocessor {
      *
      * @param node The {@link ClassNode} of the transformer
      */
-    void process(final ClassNode node);
+    void process(ClassNode node);
 
 }

@@ -18,7 +18,7 @@ import java.util.Map;
 
 class InfoFiller {
 
-    static void fillInfo(final MapRemapper remapper, final Object holder, final AnnotationRemap remap, final Method method, final Map<String, Object> values, final ClassNode target, final ClassNode transformer) {
+    static void fillInfo(MapRemapper remapper, Object holder, AnnotationRemap remap, Method method, Map<String, Object> values, ClassNode target, ClassNode transformer) {
         if (!remap.value().equals(RemapType.SHORT_MEMBER)) return;
         if (remap.fill().equals(FillType.SKIP)) return;
 
@@ -26,7 +26,7 @@ class InfoFiller {
         if (method.getReturnType().equals(String.class)) {
             String current = (String) value;
             if (!remap.fill().equals(FillType.KEEP_EMPTY)) {
-                List<String> names = getNames(remapper, holder, current, target, transformer);
+                List<String> names = InfoFiller.getNames(remapper, holder, current, target, transformer);
                 if (names.size() != 1) throw new MethodNotFoundException(target, transformer, current);
                 values.put(method.getName(), names.get(0));
             }
@@ -34,23 +34,23 @@ class InfoFiller {
             List<String> current = (List<String>) value;
             if (current == null) current = new ArrayList<>();
             if (current.isEmpty()) {
-                if (!remap.fill().equals(FillType.KEEP_EMPTY)) current.addAll(getMethodNames(remapper, holder, null, target, transformer));
+                if (!remap.fill().equals(FillType.KEEP_EMPTY)) current.addAll(InfoFiller.getMethodNames(remapper, holder, null, target, transformer));
             } else {
                 List<String> newValues = new ArrayList<>();
-                for (String name : current) newValues.addAll(getNames(remapper, holder, name, target, transformer));
+                for (String name : current) newValues.addAll(InfoFiller.getNames(remapper, holder, name, target, transformer));
                 current = newValues;
             }
             values.put(method.getName(), current);
         }
     }
 
-    private static List<String> getNames(final MapRemapper remapper, final Object holder, final String current, final ClassNode target, final ClassNode transformer) {
-        if (holder instanceof MethodNode) return getMethodNames(remapper, holder, current, target, transformer);
-        else if (holder instanceof FieldNode) return getFieldNames(remapper, holder, current, target, transformer);
+    private static List<String> getNames(MapRemapper remapper, Object holder, String current, ClassNode target, ClassNode transformer) {
+        if (holder instanceof MethodNode) return InfoFiller.getMethodNames(remapper, holder, current, target, transformer);
+        else if (holder instanceof FieldNode) return InfoFiller.getFieldNames(remapper, holder, current, target, transformer);
         else throw new IllegalArgumentException("Unknown holder type '" + holder.getClass().getName() + "' from transformer '" + transformer.name + "'");
     }
 
-    private static List<String> getMethodNames(final MapRemapper remapper, final Object holder, String current, final ClassNode target, final ClassNode transformer) {
+    private static List<String> getMethodNames(MapRemapper remapper, Object holder, String current, ClassNode target, ClassNode transformer) {
         List<String> names = new ArrayList<>();
         if (current == null) { //Copy the name and descriptor of the transformer method
             MethodNode methodNode = (MethodNode) holder;
@@ -93,7 +93,7 @@ class InfoFiller {
         return names;
     }
 
-    private static List<String> getFieldNames(final MapRemapper remapper, final Object holder, String current, final ClassNode target, final ClassNode transformer) {
+    private static List<String> getFieldNames(MapRemapper remapper, Object holder, String current, ClassNode target, ClassNode transformer) {
         List<String> names = new ArrayList<>();
         if (current == null) { //Copy the name of the transformer field
             FieldNode fieldNode = (FieldNode) holder;

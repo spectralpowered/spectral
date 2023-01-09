@@ -13,26 +13,26 @@ public class TransformerException extends RuntimeException {
 
     private String help;
 
-    public TransformerException(final MethodNode method, final ClassNode transformer, final String state) {
-        this.memberType = "Method";
-        this.memberNameAndDesc = method.name + method.desc;
-        this.transformerName = transformer.name;
+    public TransformerException(MethodNode method, ClassNode transformer, String state) {
+        memberType = "Method";
+        memberNameAndDesc = method.name + method.desc;
+        transformerName = transformer.name;
         this.state = state;
     }
 
-    public TransformerException help(final Codifier codifier) {
-        return this.help(codifier.build());
+    public TransformerException help(Codifier codifier) {
+        return help(codifier.build());
     }
 
-    public TransformerException help(final String help) {
+    public TransformerException help(String help) {
         this.help = help;
         return this;
     }
 
     @Override
     public String getMessage() {
-        String message = this.memberType + " '" + this.memberNameAndDesc + "' in transformer '" + this.transformerName + "' " + this.state;
-        if (this.help != null) message += ": " + this.help;
+        String message = memberType + " '" + memberNameAndDesc + "' in transformer '" + transformerName + "' " + state;
+        if (help != null) message += ": " + help;
         return message;
     }
 

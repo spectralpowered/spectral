@@ -13,20 +13,20 @@ public class InvalidTargetException extends RuntimeException {
     private final String target;
     private final Collection<String> targets;
 
-    public InvalidTargetException(final MethodNode method, final ClassNode transformer, final String target, final Collection<String> targets) {
-        this.memberType = "Method";
-        this.memberNameAndDesc = method.name + method.desc;
-        this.transformerName = transformer.name;
+    public InvalidTargetException(MethodNode method, ClassNode transformer, String target, Collection<String> targets) {
+        memberType = "Method";
+        memberNameAndDesc = method.name + method.desc;
+        transformerName = transformer.name;
         this.target = target;
         this.targets = targets;
     }
 
     @Override
     public String getMessage() {
-        String message = this.memberType + " '" + this.memberNameAndDesc + "' in transformer '" + this.transformerName + "' has invalid target '" + this.target + "'";
-        if (!this.targets.isEmpty()) {
+        String message = memberType + " '" + memberNameAndDesc + "' in transformer '" + transformerName + "' has invalid target '" + target + "'";
+        if (!targets.isEmpty()) {
             message += " (valid targets: ";
-            for (String validTarget : this.targets) message += validTarget + ", ";
+            for (String validTarget : targets) message += validTarget + ", ";
             message = message.substring(0, message.length() - 2);
             message += ")";
         }

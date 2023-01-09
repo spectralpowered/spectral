@@ -31,9 +31,9 @@ public class CInjectTransformer extends ARemovingTargetTransformer<CInject> {
     public CInjectTransformer() {
         super(CInject.class, CInject::method);
 
-        this.captureTargets.add("RETURN");
-        this.captureTargets.add("TAIL");
-        this.captureTargets.add("THROW");
+        captureTargets.add("RETURN");
+        captureTargets.add("TAIL");
+        captureTargets.add("THROW");
     }
 
     @Override
@@ -91,8 +91,8 @@ public class CInjectTransformer extends ARemovingTargetTransformer<CInject> {
                     .help(Codifier.of(target).returnType(Type.VOID_TYPE));
         }
 
-        this.copyBackLocalVars(transformerMethod, localVariables);
-        this.renameAndCopy(transformerMethod, target, transformer, transformedClass, "CInject");
+        copyBackLocalVars(transformerMethod, localVariables);
+        renameAndCopy(transformerMethod, target, transformer, transformedClass, "CInject");
         for (CTarget injectTarget : annotation.target()) {
             IInjectionTarget injectionTarget = injectionTargets.get(injectTarget.value().toUpperCase(Locale.ROOT));
             if (injectionTarget == null) throw new InvalidTargetException(transformerMethod, transformer, injectTarget.target(), injectionTargets.keySet());
@@ -110,10 +110,10 @@ public class CInjectTransformer extends ARemovingTargetTransformer<CInject> {
             for (AbstractInsnNode instruction : targetInstructions) {
                 InsnList instructions;
 
-                if (this.captureTargets.contains(injectTarget.value().toUpperCase(Locale.ROOT))) {
-                    instructions = this.getReturnInstructions(transformedClass, target, transformerMethod, localVariables, annotation.cancellable(), hasArgs, hasCallback);
+                if (captureTargets.contains(injectTarget.value().toUpperCase(Locale.ROOT))) {
+                    instructions = getReturnInstructions(transformedClass, target, transformerMethod, localVariables, annotation.cancellable(), hasArgs, hasCallback);
                 } else {
-                    instructions = this.getCallInstructions(transformedClass, target, transformerMethod, localVariables, annotation.cancellable(), hasArgs, hasCallback);
+                    instructions = getCallInstructions(transformedClass, target, transformerMethod, localVariables, annotation.cancellable(), hasArgs, hasCallback);
                 }
 
                 if (shift == CTarget.Shift.BEFORE) target.instructions.insertBefore(instruction, instructions);
@@ -122,8 +122,8 @@ public class CInjectTransformer extends ARemovingTargetTransformer<CInject> {
         }
     }
 
-    private void copyBackLocalVars(final MethodNode source, final List<CLocalVariable> localVariables) {
-        int modifiableVariableCount = this.getModifiableVariableCount(localVariables);
+    private void copyBackLocalVars(MethodNode source, List<CLocalVariable> localVariables) {
+        int modifiableVariableCount = getModifiableVariableCount(localVariables);
         if (modifiableVariableCount <= 0) return;
 
         //Add Object[] to the args which is used to store the new value of the local variables
@@ -164,7 +164,7 @@ public class CInjectTransformer extends ARemovingTargetTransformer<CInject> {
             createAndStore.add(new VarInsnNode(Opcodes.ALOAD, localVariableIndices.get(localVariableIndices.size() - 1)));
             createAndStore.add(ASMUtils.intPush(arrayIndex++));
             createAndStore.add(new VarInsnNode(ASMUtils.getLoadOpcode(localVariableType), localVariableIndex));
-            if (Types.isPrimitive(localVariableType)) createAndStore.add(ASMUtils.getPrimitiveToObject(localVariableType));
+            if (isPrimitive(localVariableType)) createAndStore.add(ASMUtils.getPrimitiveToObject(localVariableType));
             createAndStore.add(new InsnNode(Opcodes.AASTORE));
         }
 
@@ -175,28 +175,28 @@ public class CInjectTransformer extends ARemovingTargetTransformer<CInject> {
         }
     }
 
-    private InsnList getCallInstructions(final ClassNode classNode, final MethodNode target, final MethodNode source, final List<CLocalVariable> localVariables, final boolean cancellable, final boolean hasArgs, final boolean hasCallback) {
+    private InsnList getCallInstructions(ClassNode classNode, MethodNode target, MethodNode source, List<CLocalVariable> localVariables, boolean cancellable, boolean hasArgs, boolean hasCallback) {
         Type returnType = returnType(target.desc);
         int callbackVar = ASMUtils.getFreeVarIndex(target);
 
-        InsnList instructions = this.getLoadInstructions(target, hasArgs);
-        this.createCallback(instructions, cancellable, hasCallback, callbackVar, Type.VOID_TYPE, 0);
-        this.callInjectionMethod(instructions, classNode, target, source, localVariables);
-        this.getCancelInstructions(instructions, cancellable, hasCallback, callbackVar, returnType);
+        InsnList instructions = getLoadInstructions(target, hasArgs);
+        createCallback(instructions, cancellable, hasCallback, callbackVar, Type.VOID_TYPE, 0);
+        callInjectionMethod(instructions, classNode, target, source, localVariables);
+        getCancelInstructions(instructions, cancellable, hasCallback, callbackVar, returnType);
         return instructions;
     }
 
-    private InsnList getReturnInstructions(final ClassNode classNode, final MethodNode target, final MethodNode source, final List<CLocalVariable> localVariables, final boolean cancellable, final boolean hasArgs, final boolean hasCallback) {
+    private InsnList getReturnInstructions(ClassNode classNode, MethodNode target, MethodNode source, List<CLocalVariable> localVariables, boolean cancellable, boolean hasArgs, boolean hasCallback) {
         Type returnType = returnType(target.desc);
         boolean isVoid = returnType.equals(Type.VOID_TYPE);
         int callbackVar = ASMUtils.getFreeVarIndex(target);
         //The return value has to be stored locally. We just take the callbackVar + 1 since callbackVar is the last element on the variable table
         int returnVar = callbackVar + 1;
 
-        InsnList instructions = this.getLoadInstructions(target, hasArgs);
-        this.createCallback(instructions, cancellable, hasCallback, callbackVar, returnType, returnVar);
-        this.callInjectionMethod(instructions, classNode, target, source, localVariables);
-        this.getCancelInstructions(instructions, cancellable, hasCallback, callbackVar, returnType);
+        InsnList instructions = getLoadInstructions(target, hasArgs);
+        createCallback(instructions, cancellable, hasCallback, callbackVar, returnType, returnVar);
+        callInjectionMethod(instructions, classNode, target, source, localVariables);
+        getCancelInstructions(instructions, cancellable, hasCallback, callbackVar, returnType);
         if (!isVoid && hasCallback) {
             instructions.insert(new VarInsnNode(ASMUtils.getStoreOpcode(returnType), returnVar)); //If the method is not a void, store the return value
             instructions.add(new VarInsnNode(ASMUtils.getLoadOpcode(returnType), returnVar));
@@ -204,7 +204,7 @@ public class CInjectTransformer extends ARemovingTargetTransformer<CInject> {
         return instructions;
     }
 
-    private InsnList getLoadInstructions(final MethodNode methodNode, final boolean hasArgs) {
+    private InsnList getLoadInstructions(MethodNode methodNode, boolean hasArgs) {
         if (!hasArgs) return new InsnList();
         InsnList instructions = new InsnList();
         Type[] parameter = argumentTypes(methodNode.desc);
@@ -242,7 +242,7 @@ public class CInjectTransformer extends ARemovingTargetTransformer<CInject> {
         return instructions;
     }
 
-    private void createCallback(final InsnList instructions, final boolean cancellable, final boolean hasCallback, final int callbackVar, final Type returnType, final int returnVar) {
+    private void createCallback(InsnList instructions, boolean cancellable, boolean hasCallback, int callbackVar, Type returnType, int returnVar) {
         if (hasCallback) { //Create the callback instance
             instructions.add(new TypeInsnNode(Opcodes.NEW, internalName(InjectionCallback.class)));
             instructions.add(new InsnNode(Opcodes.DUP));
@@ -260,18 +260,18 @@ public class CInjectTransformer extends ARemovingTargetTransformer<CInject> {
         }
     }
 
-    private void callInjectionMethod(final InsnList instructions, final ClassNode classNode, final MethodNode target, final MethodNode source, final List<CLocalVariable> localVariables) {
+    private void callInjectionMethod(InsnList instructions, ClassNode classNode, MethodNode target, MethodNode source, List<CLocalVariable> localVariables) {
         boolean isInterface = Modifier.isInterface(classNode.access);
 
         InsnList loadLocals = new InsnList();
         InsnList postExecuteInstructions = new InsnList();
         if (!localVariables.isEmpty()) {
             List<Integer> storeBackVariableIndices = new ArrayList<>();
-            int modifiableVariableCount = this.getModifiableVariableCount(localVariables);
+            int modifiableVariableCount = getModifiableVariableCount(localVariables);
             int parameterOffset = modifiableVariableCount > 0 ? 1 : 0;
             Type[] parameter = argumentTypes(source.desc);
             for (int i = 0; i < localVariables.size(); i++) {
-                InsnList loadInsns = this.resolveLocalVariable(target, source, localVariables.get(i), parameter[parameter.length - parameterOffset - localVariables.size() + i], storeBackVariableIndices);
+                InsnList loadInsns = resolveLocalVariable(target, source, localVariables.get(i), parameter[parameter.length - parameterOffset - localVariables.size() + i], storeBackVariableIndices);
                 loadLocals.add(loadInsns);
             }
 
@@ -309,7 +309,7 @@ public class CInjectTransformer extends ARemovingTargetTransformer<CInject> {
         }
     }
 
-    private void getCancelInstructions(final InsnList instructions, final boolean cancellable, final boolean hasCallback, final int callbackVar, final Type returnType) {
+    private void getCancelInstructions(InsnList instructions, boolean cancellable, boolean hasCallback, int callbackVar, Type returnType) {
         if (cancellable && hasCallback) { //If the method is cancellable, check if the callback has been cancelled
             //Get if the callback is cancelled
             LabelNode jump = new LabelNode();
@@ -328,7 +328,7 @@ public class CInjectTransformer extends ARemovingTargetTransformer<CInject> {
         }
     }
 
-    private InsnList resolveLocalVariable(final MethodNode target, final MethodNode source, final CLocalVariable localVariable, final Type parameter, final List<Integer> storeBackVariableIndices) {
+    private InsnList resolveLocalVariable(MethodNode target, MethodNode source, CLocalVariable localVariable, Type parameter, List<Integer> storeBackVariableIndices) {
         IParsedAnnotation parsedAnnotation = (IParsedAnnotation) localVariable;
         if (parsedAnnotation.wasSet("name") == parsedAnnotation.wasSet("index")) throw new IllegalStateException("Local variable needs name or index");
         if (parsedAnnotation.wasSet("name") && target.localVariables == null) {
@@ -350,7 +350,7 @@ public class CInjectTransformer extends ARemovingTargetTransformer<CInject> {
         if (loadOpcode == null) {
             for (AbstractInsnNode instruction : target.instructions) {
                 if (instruction instanceof VarInsnNode && ((VarInsnNode) instruction).var == varIndex) {
-                    int newLoadOpcode = this.getLoadOpcode(instruction.getOpcode());
+                    int newLoadOpcode = getLoadOpcode(instruction.getOpcode());
                     if (loadOpcode == null) loadOpcode = newLoadOpcode;
                     else if (loadOpcode != newLoadOpcode) throw new IllegalStateException("Local variable index conflicts with another variable type. Please define a load opcode");
                 }
@@ -368,7 +368,7 @@ public class CInjectTransformer extends ARemovingTargetTransformer<CInject> {
         return instructions;
     }
 
-    private int getLoadOpcode(final int opcode) {
+    private int getLoadOpcode(int opcode) {
         switch (opcode) {
             case Opcodes.ISTORE:
                 return Opcodes.ILOAD;
@@ -390,7 +390,7 @@ public class CInjectTransformer extends ARemovingTargetTransformer<CInject> {
         throw new IllegalStateException("Unknown opcode " + opcode);
     }
 
-    private int getModifiableVariableCount(final List<CLocalVariable> localVariables) {
+    private int getModifiableVariableCount(List<CLocalVariable> localVariables) {
         int i = 0;
         for (CLocalVariable localVariable : localVariables) {
             if (localVariable.modifiable()) i++;

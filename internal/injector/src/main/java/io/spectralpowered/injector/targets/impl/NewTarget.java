@@ -18,7 +18,7 @@ public class NewTarget implements IInjectionTarget {
     public List<AbstractInsnNode> getTargets(Map<String, IInjectionTarget> injectionTargets, MethodNode method, CTarget target, CSlice slice) {
         List<AbstractInsnNode> targets = new ArrayList<>();
         int i = 0;
-        for (AbstractInsnNode instruction : this.getSlice(injectionTargets, method, slice)) {
+        for (AbstractInsnNode instruction : getSlice(injectionTargets, method, slice)) {
             if (instruction.getOpcode() != Opcodes.INVOKESPECIAL) continue;
             MethodInsnNode methodInsnNode = (MethodInsnNode) instruction;
             if (!methodInsnNode.owner.equals(target.target())) continue;

@@ -9,35 +9,35 @@ public class MemberDeclaration {
     private final String name;
     private final String desc;
 
-    public MemberDeclaration(final String owner, final String name, final String desc) {
+    public MemberDeclaration(String owner, String name, String desc) {
         this.owner = owner;
         this.name = name;
         this.desc = desc;
     }
 
     public String getOwner() {
-        return this.owner;
+        return owner;
     }
 
     public String getName() {
-        return this.name;
+        return name;
     }
 
     public String getDesc() {
-        return this.desc;
+        return desc;
     }
 
 
-    public boolean is(final FieldInsnNode fieldInsnNode) {
-        return this.owner.equals(fieldInsnNode.owner) && this.name.equals(fieldInsnNode.name) && this.desc.equals(fieldInsnNode.desc);
+    public boolean is(FieldInsnNode fieldInsnNode) {
+        return owner.equals(fieldInsnNode.owner) && name.equals(fieldInsnNode.name) && desc.equals(fieldInsnNode.desc);
     }
 
-    public boolean is(final MethodInsnNode methodInsnNode) {
-        return this.owner.equals(methodInsnNode.owner) && this.name.equals(methodInsnNode.name) && this.desc.equals(methodInsnNode.desc);
+    public boolean is(MethodInsnNode methodInsnNode) {
+        return owner.equals(methodInsnNode.owner) && name.equals(methodInsnNode.name) && desc.equals(methodInsnNode.desc);
     }
 
     public boolean isFieldMapping() {
-        return !this.desc.startsWith("(");
+        return !desc.startsWith("(");
     }
 
 }

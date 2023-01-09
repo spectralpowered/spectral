@@ -14,7 +14,7 @@ public class CUpgradeTransformer extends ATransformer {
 
     @Override
     public void transform(InjectionManager injectionManager, IClassProvider classProvider, Map<String, IInjectionTarget> injectionTargets, ClassNode transformedClass, ClassNode transformer) {
-        CUpgrade annotation = this.getAnnotation(CUpgrade.class, transformer, classProvider);
+        CUpgrade annotation = getAnnotation(CUpgrade.class, transformer, classProvider);
         if (annotation == null) return;
 
         int version;

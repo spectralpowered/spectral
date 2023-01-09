@@ -17,11 +17,11 @@ public class OpcodeTarget implements IInjectionTarget {
     @Override
     public List<AbstractInsnNode> getTargets(Map<String, IInjectionTarget> injectionTargets, MethodNode method, CTarget target, CSlice slice) {
         List<AbstractInsnNode> targets = new ArrayList<>();
-        int opcode = this.getOpcode(target.target());
+        int opcode = getOpcode(target.target());
         if (opcode == -1) return null;
 
         int i = 0;
-        for (AbstractInsnNode instruction : this.getSlice(injectionTargets, method, slice)) {
+        for (AbstractInsnNode instruction : getSlice(injectionTargets, method, slice)) {
             if (instruction.getOpcode() != opcode) continue;
             if (target.ordinal() == -1 || target.ordinal() == i) targets.add(instruction);
             i++;
@@ -29,7 +29,7 @@ public class OpcodeTarget implements IInjectionTarget {
         return targets;
     }
 
-    private int getOpcode(final String opcode) {
+    private int getOpcode(String opcode) {
         try {
             return Integer.parseInt(opcode);
         } catch (Throwable ignored) {

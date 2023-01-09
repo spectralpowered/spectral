@@ -21,7 +21,7 @@ public class TinyV2Mapper extends AMapper {
     private final File mappingFile;
     private final Type type;
 
-    public TinyV2Mapper(final MapperConfig config, final File mappingFile, final Type type) {
+    public TinyV2Mapper(MapperConfig config, File mappingFile, Type type) {
         super(config);
         this.mappingFile = mappingFile;
         this.type = type;
@@ -30,15 +30,15 @@ public class TinyV2Mapper extends AMapper {
     @Override
     protected void init() throws Throwable {
         MapRemapper descriptorRemapper = new MapRemapper();
-        List<String> lines = this.readLines(this.mappingFile);
+        List<String> lines = readLines(mappingFile);
         for (String line : lines) {
-            if (this.skipLine(line)) continue;
+            if (skipLine(line)) continue;
 
-            if (line.matches(CLASS_LINE)) {
-                Matcher m = Pattern.compile(CLASS_LINE).matcher(line);
+            if (line.matches(TinyV2Mapper.CLASS_LINE)) {
+                Matcher m = Pattern.compile(TinyV2Mapper.CLASS_LINE).matcher(line);
                 if (m.find()) {
                     String obfuscated = m.group(1);
-                    String targetName = m.group(1 + this.type.getFromIndex());
+                    String targetName = m.group(1 + type.getFromIndex());
 
                     descriptorRemapper.addClassMapping(obfuscated, targetName);
                 } else {
@@ -49,50 +49,50 @@ public class TinyV2Mapper extends AMapper {
 
         String currentClass = null;
         for (String line : lines) {
-            if (this.skipLine(line)) continue;
+            if (skipLine(line)) continue;
 
             String error = null;
-            if (line.matches(CLASS_LINE)) {
-                Matcher m = Pattern.compile(CLASS_LINE).matcher(line);
+            if (line.matches(TinyV2Mapper.CLASS_LINE)) {
+                Matcher m = Pattern.compile(TinyV2Mapper.CLASS_LINE).matcher(line);
                 if (m.find()) {
-                    currentClass = m.group(1 + this.type.getFromIndex());
-                    String newName = m.group(1 + this.type.getToIndex());
+                    currentClass = m.group(1 + type.getFromIndex());
+                    String newName = m.group(1 + type.getToIndex());
 
                     if (currentClass.equals(newName)) continue;
-                    this.remapper.addClassMapping(currentClass, newName);
+                    remapper.addClassMapping(currentClass, newName);
                 } else {
                     error = "Could not parse class line: " + line;
                 }
-            } else if (line.matches(METHOD_LINE)) {
+            } else if (line.matches(TinyV2Mapper.METHOD_LINE)) {
                 if (currentClass == null) {
                     error = "Method line without class: " + line;
                 } else {
-                    Matcher m = Pattern.compile(METHOD_LINE).matcher(line);
+                    Matcher m = Pattern.compile(TinyV2Mapper.METHOD_LINE).matcher(line);
                     if (m.find()) {
                         String descriptor = m.group(1);
-                        String name = m.group(2 + this.type.getFromIndex());
-                        String newName = m.group(2 + this.type.getToIndex());
+                        String name = m.group(2 + type.getFromIndex());
+                        String newName = m.group(2 + type.getToIndex());
 
                         if (name.equals(newName)) continue;
                         if (!descriptor.isEmpty()) descriptor = descriptorRemapper.mapMethodDesc(descriptor);
-                        this.remapper.addMethodMapping(currentClass, name, descriptor, newName);
+                        remapper.addMethodMapping(currentClass, name, descriptor, newName);
                     } else {
                         error = "Could not parse method line: " + line;
                     }
                 }
-            } else if (line.matches(FIELD_LINE)) {
+            } else if (line.matches(TinyV2Mapper.FIELD_LINE)) {
                 if (currentClass == null) {
                     error = "Field line without class: " + line;
                 } else {
-                    Matcher m = Pattern.compile(FIELD_LINE).matcher(line);
+                    Matcher m = Pattern.compile(TinyV2Mapper.FIELD_LINE).matcher(line);
                     if (m.find()) {
                         String descriptor = m.group(1);
-                        String name = m.group(2 + this.type.getFromIndex());
-                        String newName = m.group(2 + this.type.getToIndex());
+                        String name = m.group(2 + type.getFromIndex());
+                        String newName = m.group(2 + type.getToIndex());
 
                         if (name.equals(newName)) continue;
                         if (!descriptor.isEmpty()) descriptor = descriptorRemapper.mapDesc(descriptor);
-                        this.remapper.addFieldMapping(currentClass, name, descriptor, newName);
+                        remapper.addFieldMapping(currentClass, name, descriptor, newName);
                     } else {
                         error = "Could not parse field line: " + line;
                     }
@@ -105,8 +105,8 @@ public class TinyV2Mapper extends AMapper {
         }
     }
 
-    private boolean skipLine(final String line) {
-        return line.trim().isEmpty() || line.matches(HEADER_LINE) || line.matches(COMMENT_LINE) || line.matches(PARAMETER_LINE);
+    private boolean skipLine(String line) {
+        return line.trim().isEmpty() || line.matches(TinyV2Mapper.HEADER_LINE) || line.matches(TinyV2Mapper.COMMENT_LINE) || line.matches(TinyV2Mapper.PARAMETER_LINE);
     }
 
 
@@ -124,17 +124,17 @@ public class TinyV2Mapper extends AMapper {
         private final int fromIndex;
         private final int toIndex;
 
-        Type(final int fromIndex, final int toIndex) {
+        Type(int fromIndex, int toIndex) {
             this.fromIndex = fromIndex;
             this.toIndex = toIndex;
         }
 
         public int getFromIndex() {
-            return this.fromIndex;
+            return fromIndex;
         }
 
         public int getToIndex() {
-            return this.toIndex;
+            return toIndex;
         }
     }
 

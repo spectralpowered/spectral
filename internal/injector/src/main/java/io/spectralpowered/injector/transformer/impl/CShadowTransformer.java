@@ -14,28 +14,31 @@ import org.objectweb.asm.tree.ClassNode;
 import org.objectweb.asm.tree.FieldNode;
 import org.objectweb.asm.tree.MethodNode;
 
+import java.lang.reflect.Modifier;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+
+import static org.objectweb.asm.Opcodes.ACC_STATIC;
 
 public class CShadowTransformer extends ATransformer {
 
     @Override
     public void transform(InjectionManager injectionManager, IClassProvider classProvider, Map<String, IInjectionTarget> injectionTargets, ClassNode transformedClass, ClassNode transformer) {
         MapRemapper remapper = new MapRemapper();
-        this.checkFields(transformedClass, transformer, classProvider, remapper);
-        this.checkMethods(transformedClass, transformer, classProvider, remapper);
+        checkFields(transformedClass, transformer, classProvider, remapper);
+        checkMethods(transformedClass, transformer, classProvider, remapper);
 
         if (remapper.isEmpty()) return;
         ClassNode mappedNode = Remapper.remap(transformer, remapper);
         Remapper.merge(transformer, mappedNode);
     }
 
-    private void checkFields(final ClassNode target, final ClassNode transformer, final IClassProvider classProvider, final MapRemapper remapper) {
+    private void checkFields(ClassNode target, ClassNode transformer, IClassProvider classProvider, MapRemapper remapper) {
         Iterator<FieldNode> it = transformer.fields.iterator();
         while (it.hasNext()) {
             FieldNode field = it.next();
-            CShadow annotation = this.getAnnotation(CShadow.class, field, classProvider);
+            CShadow annotation = getAnnotation(CShadow.class, field, classProvider);
             if (annotation == null) continue;
             it.remove();
 
@@ -43,16 +46,19 @@ public class CShadowTransformer extends ATransformer {
             if (targets.isEmpty()) throw new FieldNotFoundException(target, transformer, annotation.value());
             for (FieldNode targetField : targets) {
                 if (field.name.equals(targetField.name) && field.desc.equals(targetField.desc)) continue;
+                if(Modifier.isStatic(targetField.access)) {
+                    field.access = field.access | ACC_STATIC;
+                }
                 remapper.addFieldMapping(transformer.name, field.name, field.desc, targetField.name);
             }
         }
     }
 
-    private void checkMethods(final ClassNode target, final ClassNode transformer, final IClassProvider classProvider, final MapRemapper remapper) {
+    private void checkMethods(ClassNode target, ClassNode transformer, IClassProvider classProvider, MapRemapper remapper) {
         Iterator<MethodNode> it = transformer.methods.iterator();
         while (it.hasNext()) {
             MethodNode method = it.next();
-            CShadow annotation = this.getAnnotation(CShadow.class, method, classProvider);
+            CShadow annotation = getAnnotation(CShadow.class, method, classProvider);
             if (annotation == null) continue;
             it.remove();
 
@@ -60,6 +66,9 @@ public class CShadowTransformer extends ATransformer {
             if (targets.isEmpty()) throw new MethodNotFoundException(target, transformer, annotation.value());
             for (MethodNode targetMethod : targets) {
                 if (method.name.equals(targetMethod.name) && method.desc.equals(targetMethod.desc)) continue;
+                if(Modifier.isStatic(targetMethod.access)) {
+                    method.access = method.access | ACC_STATIC;
+                }
                 remapper.addMethodMapping(transformer.name, method.name, method.desc, targetMethod.name);
             }
         }

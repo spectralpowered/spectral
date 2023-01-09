@@ -12,12 +12,12 @@ public class ClassDefiner<T> {
     private static Unsafe UNSAFE;
 
     private static Unsafe getUnsafe() {
-        if (UNSAFE == null) {
+        if (ClassDefiner.UNSAFE == null) {
             for (Field field : Unsafe.class.getDeclaredFields()) {
                 if (field.getType() == Unsafe.class) {
                     field.setAccessible(true);
                     try {
-                        UNSAFE = (Unsafe) field.get(null);
+                        ClassDefiner.UNSAFE = (Unsafe) field.get(null);
                         break;
                     } catch (Throwable t) {
                         throw new RuntimeException("Unable to get unsafe instance", t);
@@ -25,18 +25,18 @@ public class ClassDefiner<T> {
                 }
             }
         }
-        return UNSAFE;
+        return ClassDefiner.UNSAFE;
     }
 
-    public static String generateClassName(final String name) {
+    public static String generateClassName(String name) {
         return slash(ClassDefiner.class.getPackage().getName()) + "/" + name;
     }
 
-    public static <T> ClassDefiner<T> defineAnonymousClass(final byte[] bytecode) {
+    public static <T> ClassDefiner<T> defineAnonymousClass(byte[] bytecode) {
         Throwable error;
         try {
             Method defineAnonymousClass = Unsafe.class.getDeclaredMethod("defineAnonymousClass", Class.class, byte[].class, Object[].class);
-            return new ClassDefiner<>((Class<?>) defineAnonymousClass.invoke(getUnsafe(), ClassDefiner.class, bytecode, new Object[0]));
+            return new ClassDefiner<>((Class<?>) defineAnonymousClass.invoke(ClassDefiner.getUnsafe(), ClassDefiner.class, bytecode, new Object[0]));
         } catch (Throwable t) {
             error = t;
         }
@@ -56,7 +56,7 @@ public class ClassDefiner<T> {
 
     private final Class<T> clazz;
 
-    private ClassDefiner(final Class<?> clazz) {
+    private ClassDefiner(Class<?> clazz) {
         this.clazz = (Class<T>) clazz;
     }
 
@@ -65,17 +65,17 @@ public class ClassDefiner<T> {
     }
 
     public T newInstance() throws InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
-        return this.newInstance(new Object[0]);
+        return newInstance(new Object[0]);
     }
 
-    public T newInstance(final Object... args) throws InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
+    public T newInstance(Object... args) throws InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
         Class<?>[] types = new Class[args.length];
         for (int i = 0; i < args.length; i++) types[i] = args[i].getClass();
 
-        return this.newInstance(types, args);
+        return newInstance(types, args);
     }
 
-    public T newInstance(final Class<?>[] types, final Object[] values) throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
+    public T newInstance(Class<?>[] types, Object[] values) throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
         if (types.length != values.length) throw new IllegalArgumentException("Types and values must be of the same length");
         Constructor<T> constructor = clazz.getDeclaredConstructor(types);
         constructor.setAccessible(true);

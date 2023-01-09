@@ -10,7 +10,7 @@ public class TreeClassWriter extends ClassWriter {
 
     private final IClassProvider classProvider;
 
-    public TreeClassWriter(final IClassProvider classProvider) {
+    public TreeClassWriter(IClassProvider classProvider) {
         super(ClassWriter.COMPUTE_FRAMES);
 
         this.classProvider = classProvider;
@@ -20,9 +20,9 @@ public class TreeClassWriter extends ClassWriter {
     protected String getCommonSuperClass(String type1, String type2) {
         if (type1.equals(Types.IN_Object) || type2.equals(Types.IN_Object)) return Types.IN_Object;
 
-        ClassTree class1 = ClassTree.getTreePart(this.classProvider, type1);
+        ClassTree class1 = ClassTree.getTreePart(classProvider, type1);
         if (class1 == null) throw new TypeNotPresentException(type1, new NullPointerException());
-        ClassTree class2 = ClassTree.getTreePart(this.classProvider, type2);
+        ClassTree class2 = ClassTree.getTreePart(classProvider, type2);
         if (class2 == null) throw new TypeNotPresentException(type2, new NullPointerException());
 
         if (class2.getSuperClasses().contains(class1.getName())) {
@@ -31,7 +31,7 @@ public class TreeClassWriter extends ClassWriter {
             return type2;
         } else if (!Modifier.isInterface(class1.getModifiers()) && !Modifier.isInterface(class2.getModifiers())) {
             do {
-                class1 = class1.parseSuperClass(this.classProvider);
+                class1 = class1.parseSuperClass(classProvider);
                 if (class1 == null) return Types.IN_Object;
             } while (!class2.getSuperClasses().contains(class1.getName()));
 

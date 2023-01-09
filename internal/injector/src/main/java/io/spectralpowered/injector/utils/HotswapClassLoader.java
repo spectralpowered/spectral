@@ -12,26 +12,26 @@ public class HotswapClassLoader extends ClassLoader {
     private final ILogger logger;
     private final Map<String, byte[]> hotswapClasses;
 
-    public HotswapClassLoader(final IClassProvider classProvider, final ILogger logger) {
+    public HotswapClassLoader(IClassProvider classProvider, ILogger logger) {
         ClassLoader.registerAsParallelCapable();
 
         this.classProvider = classProvider;
         this.logger = logger;
-        this.hotswapClasses = new HashMap<>();
+        hotswapClasses = new HashMap<>();
     }
 
-    public byte[] getHotswapClass(final String name) {
-        return this.hotswapClasses.computeIfAbsent(name, n -> ASMUtils.toBytes(ASMUtils.createEmptyClass(n), this.classProvider));
+    public byte[] getHotswapClass(String name) {
+        return hotswapClasses.computeIfAbsent(name, n -> ASMUtils.toBytes(ASMUtils.createEmptyClass(n), classProvider));
     }
 
-    public void defineHotswapClass(final String name) {
-        if (this.hotswapClasses.containsKey(name)) return;
+    public void defineHotswapClass(String name) {
+        if (hotswapClasses.containsKey(name)) return;
         try {
-            byte[] classBytes = this.getHotswapClass(name);
-            Class<?> clazz = this.defineClass(name, classBytes, 0, classBytes.length);
+            byte[] classBytes = getHotswapClass(name);
+            Class<?> clazz = defineClass(name, classBytes, 0, classBytes.length);
             clazz.getDeclaredConstructor().newInstance(); //Initialize the class
         } catch (Throwable t) {
-            this.logger.warn("Failed to define hotswap class '%s'. Hotswapping will not work for this transformer", name, t);
+            logger.warn("Failed to define hotswap class '%s'. Hotswapping will not work for this transformer", name, t);
         }
     }
 

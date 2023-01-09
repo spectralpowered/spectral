@@ -11,9 +11,9 @@ import static io.spectralpowered.injector.utils.Types.type;
 
 public interface IRedirectTarget {
 
-    void inject(final ClassNode targetClass, final MethodNode targetMethod, final ClassNode transformer, final MethodNode transformerMethod, final List<AbstractInsnNode> targetNodes);
+    void inject(ClassNode targetClass, MethodNode targetMethod, ClassNode transformer, MethodNode transformerMethod, List<AbstractInsnNode> targetNodes);
 
-    default InsnList[] getLoadStoreOpcodes(final String owner, final String desc, int freeVarIndex) {
+    default InsnList[] getLoadStoreOpcodes(String owner, String desc, int freeVarIndex) {
         InsnList storeOpcodes = new InsnList();
         InsnList loadOpcodes = new InsnList();
 

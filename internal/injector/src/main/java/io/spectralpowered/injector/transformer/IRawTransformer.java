@@ -12,6 +12,6 @@ public interface IRawTransformer {
      * @param transformedClass   The target {@link ClassNode}
      * @return The transformed {@link ClassNode} or the same if nothing was changed
      */
-    ClassNode transformer(final InjectionManager injectionManager, final ClassNode transformedClass);
+    ClassNode transformer(InjectionManager injectionManager, ClassNode transformedClass);
 
 }

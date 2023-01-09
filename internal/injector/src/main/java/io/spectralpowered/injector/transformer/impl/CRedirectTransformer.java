@@ -31,19 +31,19 @@ public class CRedirectTransformer extends ARemovingTransformer<CRedirect> {
     public CRedirectTransformer() {
         super(CRedirect.class);
 
-        this.redirectTargets.put("INVOKE", new CRedirectInvoke());
-        this.redirectTargets.put("FIELD", new CRedirectField());
-        this.redirectTargets.put("GETFIELD", new CRedirectField());
-        this.redirectTargets.put("PUTFIELD", new CRedirectField());
-        this.redirectTargets.put("NEW", new CRedirectNew());
+        redirectTargets.put("INVOKE", new CRedirectInvoke());
+        redirectTargets.put("FIELD", new CRedirectField());
+        redirectTargets.put("GETFIELD", new CRedirectField());
+        redirectTargets.put("PUTFIELD", new CRedirectField());
+        redirectTargets.put("NEW", new CRedirectNew());
     }
 
     @Override
     public void transform(CRedirect annotation, InjectionManager injectionManager, IClassProvider classProvider, Map<String, IInjectionTarget> injectionTargets, ClassNode transformedClass, ClassNode transformer, MethodNode transformerMethod) {
         IInjectionTarget iInjectionTarget = injectionTargets.get(annotation.target().value().toUpperCase(Locale.ROOT));
-        IRedirectTarget iRedirectTarget = this.redirectTargets.get(annotation.target().value().toUpperCase(Locale.ROOT));
+        IRedirectTarget iRedirectTarget = redirectTargets.get(annotation.target().value().toUpperCase(Locale.ROOT));
         if (iInjectionTarget == null || iRedirectTarget == null) {
-            throw new InvalidTargetException(transformerMethod, transformer, annotation.target().value(), this.redirectTargets.keySet());
+            throw new InvalidTargetException(transformerMethod, transformer, annotation.target().value(), redirectTargets.keySet());
         }
 
         for (String targetCombi : annotation.method()) {
@@ -66,7 +66,7 @@ public class CRedirectTransformer extends ARemovingTransformer<CRedirect> {
                             .help("e.g. Ljava/lang/String;toString()V, Ljava/lang/Integer;MAX_VALUE:I");
                 }
 
-                this.renameAndCopy(transformerMethod, target, transformer, transformedClass, "CRedirect");
+                renameAndCopy(transformerMethod, target, transformer, transformedClass, "CRedirect");
                 iRedirectTarget.inject(transformedClass, target, transformer, transformerMethod, injectionInstructions);
             }
         }

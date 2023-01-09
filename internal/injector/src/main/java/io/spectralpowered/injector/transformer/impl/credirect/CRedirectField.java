@@ -18,9 +18,9 @@ public class CRedirectField implements IRedirectTarget {
     public void inject(ClassNode targetClass, MethodNode targetMethod, ClassNode transformer, MethodNode transformerMethod, List<AbstractInsnNode> targetNodes) {
         for (AbstractInsnNode instruction : targetNodes) {
             if (instruction.getOpcode() == Opcodes.GETSTATIC || instruction.getOpcode() == Opcodes.GETFIELD) {
-                this.redirectGetField(targetClass, targetMethod, transformer, transformerMethod, (FieldInsnNode) instruction);
+                redirectGetField(targetClass, targetMethod, transformer, transformerMethod, (FieldInsnNode) instruction);
             } else if (instruction.getOpcode() == Opcodes.PUTSTATIC || instruction.getOpcode() == Opcodes.PUTFIELD) {
-                this.redirectPutField(targetClass, targetMethod, transformer, transformerMethod, (FieldInsnNode) instruction);
+                redirectPutField(targetClass, targetMethod, transformer, transformerMethod, (FieldInsnNode) instruction);
             }
         }
     }
