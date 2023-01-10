@@ -16,14 +16,17 @@
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package io.spectralpowered.mixin
+package io.spectralpowered.client
 
-import class1
-import client
-import io.spectralpowered.injector.annotations.Mixin
+import org.tinylog.kotlin.Logger
 
-@Mixin(class1::class)
-abstract class ClientMixin {
+class SpectralClient {
 
+    fun start() {
+        Logger.info("Starting Spectral client.")
+    }
 
+    fun stop() {
+
+    }
 }

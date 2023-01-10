@@ -19,10 +19,14 @@
 package io.spectralpowered.launcher
 
 import io.github.classgraph.ClassGraph
+import io.spectralpowered.client.ClientModule
+import io.spectralpowered.client.SpectralClient
+import io.spectralpowered.commons.get
 import io.spectralpowered.injector.InjectionManager
 import io.spectralpowered.injector.annotations.Mixin
 import io.spectralpowered.injector.mixinstranslator.MixinsTranslator
 import io.spectralpowered.injector.utils.tree.BasicClassProvider
+import org.koin.core.context.startKoin
 import org.tinylog.kotlin.Logger
 import java.lang.instrument.Instrumentation
 
@@ -43,5 +47,15 @@ object Launcher {
     @JvmStatic
     fun main(args: Array<String>) {
        Logger.info("Launching Spectral client.")
+
+        /*
+         * Start dependency injector
+         */
+        startKoin { modules(ClientModule) }
+
+        /*
+         * Launch Spectral Client
+         */
+        get<SpectralClient>().start()
     }
 }

@@ -1,3 +1,12 @@
+pluginManagement {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        gradlePluginPortal()
+        maven(url = "https://maven.pkg.jetbrains.space/public/p/compose/dev")
+    }
+}
+
 plugins {
     id("de.fayard.refreshVersions") version "0.51.0"
 }
