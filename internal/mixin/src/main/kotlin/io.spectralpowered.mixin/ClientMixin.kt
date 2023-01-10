@@ -16,12 +16,14 @@
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package io.spectralpowered.launcher
+package io.spectralpowered.mixin
 
-object Launcher {
+import client
+import io.spectralpowered.api.rs.RSClient
+import io.spectralpowered.injector.annotation.Mixin
 
-    @JvmStatic
-    fun main(args: Array<String>) {
+@Mixin(client::class)
+abstract class ClientMixin : RSClient {
 
-    }
+
 }

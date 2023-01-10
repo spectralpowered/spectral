@@ -16,12 +16,10 @@
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package io.spectralpowered.launcher
+package io.spectralpowered.api.rs
 
-object Launcher {
+interface RSClient {
 
-    @JvmStatic
-    fun main(args: Array<String>) {
+    fun isOnLoginScreen(): Boolean
 
-    }
 }

@@ -16,12 +16,12 @@
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package io.spectralpowered.launcher
+package io.spectralpowered.injector.transformer
 
-object Launcher {
+import org.objectweb.asm.tree.ClassNode
 
-    @JvmStatic
-    fun main(args: Array<String>) {
+abstract class AbstractTransformer {
 
-    }
+    open fun run(mixinCls: ClassNode, targetCls: ClassNode) {}
+
 }

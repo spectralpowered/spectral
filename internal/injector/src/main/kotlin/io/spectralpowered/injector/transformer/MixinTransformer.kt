@@ -16,12 +16,14 @@
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package io.spectralpowered.launcher
+package io.spectralpowered.injector.transformer
 
-object Launcher {
+import org.objectweb.asm.tree.ClassNode
 
-    @JvmStatic
-    fun main(args: Array<String>) {
+class MixinTransformer : AbstractTransformer() {
 
+    override fun run(mixinCls: ClassNode, targetCls: ClassNode) {
+        targetCls.superName = mixinCls.superName
+        targetCls.interfaces.addAll(mixinCls.interfaces)
     }
 }

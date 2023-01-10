@@ -16,12 +16,7 @@
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package io.spectralpowered.launcher
+package io.spectralpowered.api
 
-object Launcher {
-
-    @JvmStatic
-    fun main(args: Array<String>) {
-
-    }
+object Client {
 }

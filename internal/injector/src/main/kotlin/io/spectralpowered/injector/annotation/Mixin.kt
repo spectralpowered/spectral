@@ -16,12 +16,8 @@
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package io.spectralpowered.launcher
+package io.spectralpowered.injector.annotation
 
-object Launcher {
+import kotlin.reflect.KClass
 
-    @JvmStatic
-    fun main(args: Array<String>) {
-
-    }
-}
+annotation class Mixin(val value: KClass<*>)
